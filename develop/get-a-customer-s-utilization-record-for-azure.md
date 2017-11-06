@@ -1,0 +1,261 @@
+---
+title: Get a customer's utilization records for Azure
+description: Gets the utilization records of a customer's Azure subscription for a specified time period.
+MSHAttr:
+- 'PreferredSiteName:MSDN'
+- 'PreferredLib:/library/PartnerCenter'
+ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
+---
+
+# Get a customer's utilization records for Azure
+
+
+**Applies To**
+
+-   Partner Center
+-   Partner Center for Microsoft Cloud Germany
+-   Partner Center for Microsoft Cloud for US Government
+
+Gets the utilization records of a customer's Azure subscription for a specified time period.
+
+This Azure utilization API provides access to utilization records for a time period that represents when the utilization was reported in the billing system. It provides access to the same utilization data that is used to create and calculate the reconciliation file, but it does not have knowledge of billing system reconciliation file logic. Consequently, you should not expect reconciliation file summary results to exactly match the result retrieved from this API for the same time period.
+
+For example, the billing system takes the same utilization data and then applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for, but in the next reconciliation file. The lateness rules of how the partner is billed are documented [here](https://msdn.microsoft.com/en-US/library/azure/mt219001).
+
+This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
+
+## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+
+
+-   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone app and App+User credentials.
+-   A customer identifier.
+-   A subscription identifier.
+
+## <span id="C_"></span><span id="c_"></span>C#
+
+
+To obtain the Azure Utilization Records, you first need a customer ID and a subscription ID. You then call the [**IAzureUtilizationCollection.Query**](pc_sdk_utilization.iazureutilizationcollection_query) method to return a [**ResourceCollection**](pc_sdk_models.resourcecollection) that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
+
+```
+// string customerId;
+// string subscriptionId;
+
+IPartner partner = PartnerService.Instance.CreatePartnerOperations(credentials);
+
+// Retrieve the utilization records for the last year in pages of 100 records.
+var utilizationRecords = partner.Customers[customerId].Subscriptions[subscriptionId].Utilization.Azure.Query(
+    DateTimeOffset.Now.AddYears(-1),
+    DateTimeOffset.Now,
+    size: 100);
+
+// Create an Azure utilization enumerator which will aid us in traversing the utilization pages.
+var utilizationRecordEnumerator = partner.Enumerators.Utilization.Azure.Create(utilizationRecords);
+int pageNumber = 1;
+
+while (utilizationRecordEnumerator.HasValue)
+{
+    // Get the next page.
+    utilizationRecordEnumerator.Next();
+ 
+    // 
+    // Insert code here to work with this page.
+    //
+    pageNumber++;
+}
+```
+
+**Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureSubscriptionUtilization.cs
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+
+
+**Request syntax**
+
+| Method  | Request URI                                                                                                                                                                                                          |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True|False}&size={page-size} |
+
+ 
+
+**URI parameters**
+
+Use the following path and query parameters to get the utilization records.
+
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>customer-tenant-id</td>
+<td>string</td>
+<td>Yes</td>
+<td>A GUID-formatted string that identifies the customer.</td>
+</tr>
+<tr class="even">
+<td>subscription-id</td>
+<td>string</td>
+<td>Yes</td>
+<td>A GUID-formatted string that identifies the subscription.</td>
+</tr>
+<tr class="odd">
+<td>start_time</td>
+<td>string in UTC date-time offset format</td>
+<td>Yes</td>
+<td>The start of the time range that represents when the utilization was reported in the billing system.</td>
+</tr>
+<tr class="even">
+<td>end_time</td>
+<td>string in UTC date-time offset format</td>
+<td>Yes</td>
+<td>The end of the time range that represents when the utilization was reported in the billing system.</td>
+</tr>
+<tr class="odd">
+<td>granularity</td>
+<td>string</td>
+<td>No</td>
+<td>Defines the granularity of usage aggregations. Available options are:
+<ul>
+<li>daily (default)</li>
+<li>hourly</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>show_details</td>
+<td>boolean</td>
+<td>No</td>
+<td>Specifies whether to get the instance-level usage details. The default is true.</td>
+</tr>
+<tr class="odd">
+<td>size</td>
+<td>number</td>
+<td>No</td>
+<td>Specifies the number of aggregations returned by a single API call. The default is 1000. The max is 1000.</td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+**Request headers**
+
+-   See [Partner Center REST headers](headers.md) for more information.
+
+**Request body**
+
+None
+
+**Request example - Attempting to reproduce reconciliation file results**
+
+The following example will produce results that are the closest to what the reconciliation file will show for the period 7/2 - 8/1. They may not match exactly for the reasons stated in the introduction to this topic. The request that follows returns utilization data reported in the billing system between 7/2 at 12 AM (UTC) and 8/2 at 12 AM (UTC).
+
+```
+GET https://api.partnercenter.microsoft.com/v1/customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-07-02T00:00:00-08:00&amp;end_time=2017-08-02T00:00:00-08:00 HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: e6a3b6b2-230a-4813-999d-57f883b60d38
+MS-CorrelationId: a687bc47-8d08-4b78-aff6-5a59aa2055c2
+X-Locale: en-US
+Host: api.partnercenter.microsoft.com
+```
+
+## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+
+
+If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record.md) resources in the response body.
+
+**Response success and error codes**
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+
+**Response example**
+
+```
+HTTP/1.1 200 OK
+Content-Length: 2630
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: a687bc47-8d08-4b78-aff6-5a59aa2055c2
+MS-RequestId: e6a3b6b2-230a-4813-999d-57f883b60d38
+MS-CV: PjuGoYrw806o6A3Y.0
+MS-ServerId: 030020525
+Date: Fri, 04 Aug 2017 23:48:28 GMT
+
+﻿{
+    "totalCount": 2,
+    "items": [{
+            "usageStartTime": "2017-07-08T17:00:00-07:00",
+            "usageEndTime": "2017-07-09T17:00:00-07:00",
+            "resource": {
+                "id": "cbb21f5a-b453-4101-b240-21772070da0b",
+                "name": "Compute Hours",
+                "category": "Virtual Machines",
+                "subcategory": "Standard_D1_v2 VM (Windows)",
+                "region": "US West"
+            },
+            "quantity": 8.0,
+            "unit": "Hours",
+            "infoFields": {},
+            "instanceData": {
+                "resourceUri": "/subscriptions/fc8f8908-f918-4406-af13-d5bc0fe41865/resourceGroups/RG1/providers/Microsoft.Compute/virtualMachines/testvm2",
+                "location": "westus",
+                "partNumber": "",
+                "orderNumber": ""
+            },
+            "attributes": {
+                "objectType": "AzureUtilizationRecord"
+            }
+        }, {
+            "usageStartTime": "2017-07-08T17:00:00-07:00",
+            "usageEndTime": "2017-07-09T17:00:00-07:00",
+            "resource": {
+                "id": "cbb21f5a-b453-4101-b240-21772070da0b",
+                "name": "Compute Hours",
+                "category": "Virtual Machines",
+                "subcategory": "Standard_D1_v2 VM (Windows)",
+                "region": "US West"
+            },
+            "quantity": 8.0,
+            "unit": "Hours",
+            "infoFields": {},
+            "instanceData": {
+                "resourceUri": "/subscriptions/fc8f8908-f918-4406-af13-d5bc0fe41865/resourceGroups/RG1/providers/Microsoft.Compute/virtualMachines/testvm12",
+                "location": "westus",
+                "partNumber": "",
+                "orderNumber": ""
+            },
+            "attributes": {
+                "objectType": "AzureUtilizationRecord"
+            }
+        } 
+    ],
+    "links": {
+        "self": {
+            "uri": "customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-06-10T00:00:00Z&amp;end_time=2017-07-09T00:00:00Z&amp;granularity=Daily&amp;show_details=True&amp;size=1000",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+```
+
+ 
+
+ 
+
+
+
+
