@@ -31,6 +31,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "ms-partner-header",
       "breadcrumb_path": "/partner-center/develop/breadcrumb/toc.json",
       "extendBreadcrumb": true
     },
