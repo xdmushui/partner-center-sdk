@@ -24,7 +24,7 @@ How to retrieve a list of the signed-in partner's indirect resellers.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve a list of indirect resellers with whom the signed-in partner has a relationship, first get an interface to relationship collection operations from the [**partnerOperations.Relationships**](pc_sdk.ipartner_relationships) property. Then call the [**Get**](pc_sdk_relationships.irelationshipcollection_get) or [**Get\_Async**](pc_sdk_relationships.irelationshipcollection_getasync) method, passing a member of the [**PartnerRelationshipType**](pc_sdk_models_relationships.partnerrelationshiptype) enumeration to identify the relationship type. To retrieve indirect resellers, you must use IsIndirectCloudSolutionProviderOf.
+To retrieve a list of indirect resellers with whom the signed-in partner has a relationship, first get an interface to relationship collection operations from the [**partnerOperations.Relationships**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property. Then call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.irelationshipcollection.get) or [**Get\_Async**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.irelationshipcollection.getasync) method, passing a member of the [**PartnerRelationshipType**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype) enumeration to identify the relationship type. To retrieve indirect resellers, you must use IsIndirectCloudSolutionProviderOf.
 
 ```
 // IAggregatePartner partnerOperations;
@@ -69,7 +69,7 @@ Use the following query parameter to identify the relationship type.
 <td>relationship_type</td>
 <td>string</td>
 <td>Yes</td>
-<td>The value is the string representation of one of the member names found in [<strong>PartnerRelationshipType</strong>](pc_sdk_models_relationships.partnerrelationshiptype).
+<td>The value is the string representation of one of the member names found in [<strong>PartnerRelationshipType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype).
 <p>If the partner is signed in as a provider and you want to get a list of the indirect resellers with whom they have established a relationship, use IsIndirectCloudSolutionProviderOf.</p>
 <p>If the partner is signed in as a reseller and you want to get a list of the indirect providers with whom they have established a relationship, use IsIndirectResellerOf.</p></td>
 </tr>

@@ -28,7 +28,7 @@ Gets a **Offer** resource that matches the offer ID.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country withe a call to **ByCountry()**, and then call the [**ByID()**](pc_sdk_offers.ioffercollectionoperations_byid) method. Then, then call the [**Get()**](pc_sdk_offers.ioffercollectionoperations_get) or [**Get Async()**](pc_sdk_offers.ioffercollectionoperations_getasync) method.
+To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country withe a call to **ByCountry()**, and then call the [**ByID()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollectionoperations.byid) method. Then, then call the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollectionoperations.get) or [**Get Async()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollectionoperations.getasync) method.
 
 ```
 // IAggretagePartner partnerOperations;

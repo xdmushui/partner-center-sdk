@@ -26,7 +26,7 @@ How to retrieve a relationship request URL to send to a customer.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve a relationship request URL, first use [**IAggregatePartner.Customers**](pc_sdk.ipartner_customers) to get an interface to the partner's customer operations. Next, use the [**RelationshipRequest**](pc_sdk_cust.icustomercollection_relationshiprequest) property to get an interface to customer relationship request operations. Finally, call the [**Get**](pc_sdk_relreq.icustomerrelationshiprequest_get) or [**GetAsync**](pc_sdk_relreq.icustomerrelationshiprequest_getasync) method to retrieve the URL.
+To retrieve a relationship request URL, first use [**IAggregatePartner.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Next, use the [**RelationshipRequest**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.relationshiprequest) property to get an interface to customer relationship request operations. Finally, call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.getasync) method to retrieve the URL.
 
 ```
 // IAggregatePartner partnerOperations;

@@ -28,7 +28,7 @@ Each device batch contains summary status information about devices that have be
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](pc_sdk_cust.icustomer_devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](pc_sdk_devicesdeployment.idevicesbatchcollection_get) or [**GetAsync**](pc_sdk_devicesdeployment.idevicesbatchcollection_getasync) method to retrieve the collection.
+To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.getasync) method to retrieve the collection.
 
 ```
 IAggregatePartner partnerOperations;

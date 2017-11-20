@@ -29,7 +29,7 @@ How to update the partner legal business profile.
 
 To update the partner legal business profile, first instantiate a **LegalBusinessProfile** object and populate it with the existing profile. For more information, see [Get the partner legal business profile](get-legal-business-profile.md). Then, update the properties that you need to change. The following code example illustrates changing the address and primary contact phone numbers.
 
-Next, get an interface to the partner profile operations collection from the **IAggregatePartner.Profiles** property. Then, retrieve the value of the **LegalBusinessProfile** property to get an interface to legal business profile operations. Finally, call the [**Update**](pc_sdk_genericops.ientityupdateoperations_update) or [**UpdateAsync**](pc_sdk_genericops.ientityupdateoperations_updateasync) method with the changed object to update the profile.
+Next, get an interface to the partner profile operations collection from the **IAggregatePartner.Profiles** property. Then, retrieve the value of the **LegalBusinessProfile** property to get an interface to legal business profile operations. Finally, call the [**Update**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientityupdateoperations.update) or [**UpdateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientityupdateoperations.updateasync) method with the changed object to update the profile.
 
 ```
 // IAggregatePartner partnerOperations;

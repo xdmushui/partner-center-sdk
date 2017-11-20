@@ -26,9 +26,9 @@ How an indirect provider can create a customer for an indirect reseller.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To add a new customer for an indirect reseller, start by instantiating a new [**Customer**](pc_sdk_models_cust.customer) object and then instantiate and populate the [**BillingProfile**](pc_sdk_models_cust.customerbillingprofile) and [**CompanyProfile**](pc_sdk_models_cust.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](pc_sdk_models_cust.customer_associatedpartnerid) property.
+To add a new customer for an indirect reseller, start by instantiating a new [**Customer**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer_associatedpartnerid) property.
 
-Then, use the [**IAggregatePartners.Customers**](pc_sdk.ipartner_customers) property to get an interface to customer collection operations. Finally, call the [**Create**](pc_sdk_genericops.ientitycreateoperations_create) or [**CreateAsync**](pc_sdk_genericops.ientitycreateoperations_createasync) method to create the customer.
+Then, use the [**IAggregatePartners.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. Finally, call the [**Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations.create) or [**CreateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations.createasync) method to create the customer.
 
 ```
 // IAggregatePartner partnerOperations;

@@ -28,7 +28,7 @@ How to determine if a domain is available for use.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To verify if a domain is available, first call [**IAggregatePartner.Domains**](pc_sdk.ipartner_domains) to obtain an interface to domain operations. Then call the [**ByDomain**](pc_sdk_domains.idomaincollection_bydomain) method with the domain to check. This retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](pc_sdk_domains.idomain_exists) method to see if the domain already exists.
+To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
 ```
 // IAggregatePartner partnerOperations;

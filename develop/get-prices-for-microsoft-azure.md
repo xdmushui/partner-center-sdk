@@ -25,7 +25,7 @@ Prices differ by market and currency, and this API takes location into considera
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](pc_sdk_ratecards.iazureratecard_get) method to return an [**AzureRateCard**](pc_sdk_models_ratecards.azureratecard) resource that contains the Azure prices.
+To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
 ```
 IPartner partner = PartnerService.Instance.CreatePartnerOperations(credentials);

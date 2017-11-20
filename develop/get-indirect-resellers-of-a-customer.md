@@ -25,7 +25,7 @@ How to get a list of the indirect resellers that have a relationship with a spec
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve a list of indirect resellers with whom the specified customer has a relationship, first get an interface to customer collection operations for the specific customer from the [**partnerOperations.Customers**](pc_sdk.ipartner_relationships) property by providing the customer ID to identify the customer. Then call the [**Relationships.Get**](pc_sdk_relationships.icustomerrelationshipcollection_get) or [**Get\_Async**](pc_sdk_relationships.icustomerrelationshipcollection_getasync) method to get the list of indirect resellers.
+To retrieve a list of indirect resellers with whom the specified customer has a relationship, first get an interface to customer collection operations for the specific customer from the [**partnerOperations.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property by providing the customer ID to identify the customer. Then call the [**Relationships.Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.get) or [**Get\_Async**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.getasync) method to get the list of indirect resellers.
 
 ```
 // IAggregatePartner partnerOperations;

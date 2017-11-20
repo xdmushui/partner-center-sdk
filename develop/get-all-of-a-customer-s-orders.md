@@ -28,7 +28,7 @@ Gets all of a customer's orders.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To obtain a list of all of a customer's orders, use your [**IAggregatePartner.Customers**](pc_sdk.ipartner_customers) collection and call the [**ById()**](pc_sdk_cust.icustomercollectionoperations_byid) method. Then call the [**Orders**](pc_sdk_cust.icustomeroperations_orders) property, followed by the [**Get()**](pc_sdk_genericops.ientitygetoperations_get) or [**GetAsync()**](pc_sdk_genericops.ientitygetoperations_getasync) methods.
+To obtain a list of all of a customer's orders, use your [**IAggregatePartner.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollectionoperations.byid) method. Then call the [**Orders**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomeroperations.orders) property, followed by the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.getasync) methods.
 
 ```CSharp
 // IAggregatePartner partnerOperations;

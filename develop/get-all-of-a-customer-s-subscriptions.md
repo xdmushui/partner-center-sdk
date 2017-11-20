@@ -28,7 +28,7 @@ How to get a collection of a customer's subscriptions.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of all of a customer's subscriptions, first use the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer identifier to identify the customer. Then use the [**Subscriptions**](pc_sdk_cust.icustomer_subscriptions) property to retrieve an interface to subscription collection operations. Finally, call the [**Get**](pc_sdk_subscrpt.isubscriptioncollection_get) or [**GetAsync**](pc_sdk_subscrpt.isubscriptioncollection_getasync) methods to retrieve the customer's subscriptions collection.
+To get a list of all of a customer's subscriptions, first use the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to identify the customer. Then use the [**Subscriptions**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property to retrieve an interface to subscription collection operations. Finally, call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) methods to retrieve the customer's subscriptions collection.
 
 ```
 // IAggregatePartner partnerOperations;

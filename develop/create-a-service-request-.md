@@ -27,7 +27,7 @@ How to create a partner center service request.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To create a service request, first create and populate a [**ServiceRequest**](pc_sdk_models_servicreq.servicerequest) object with the title, description, severity and support topic id. Then call the [**IAggregatePartner.ServiceRequests.Create**](pc_sdk_servicereq.ipartnerservicerequestcollection_create) method, passing it the newly created ServiceRequest object and a string containing the Agent Locale.
+To create a service request, first create and populate a [**ServiceRequest**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity and support topic id. Then call the [**IAggregatePartner.ServiceRequests.Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the Agent Locale.
 
 ```
 // IAggregatePartner partnerOperations;

@@ -44,7 +44,7 @@ Here are the steps:
     var parentSubscription = subscriptionOperations.Get();
     ```
 
-3.  Instantiate a new [**Order**](pc_sdk_models_orders.order) object. This order instance is used to update the original order used to purchase the subscription. Add a single line item to the order that represents the add-on.
+3.  Instantiate a new [**Order**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object. This order instance is used to update the original order used to purchase the subscription. Add a single line item to the order that represents the add-on.
     ```
     var orderToUpdate = new Order()
     {
@@ -71,9 +71,9 @@ Here are the steps:
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To purchase an add-on, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](pc_sdk_cust_user.icustomerusercollection_byid) method to identify the subscription that has the add-on offer. Use that [**interface**](pc_sdk_subscrpt.isubscription) to retrieve the subscription details by calling [**Get**](pc_sdk_subscrpt.isubscription_get). Why do you need the subscription details? Because you need the order id of the subscription order. That's the order to be updated with the add-on.
+To purchase an add-on, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription that has the add-on offer. Use that [**interface**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription_get). Why do you need the subscription details? Because you need the order id of the subscription order. That's the order to be updated with the add-on.
 
-Next, instantiate a new [**Order**](pc_sdk_models_orders.order) object and populate it with a single [**LineItem**](pc_sdk_models_orders.orderlineitem) instance that contains the information to identify the add-on, as shown in the following code snippet. You'll use this new object to update the subscription order with the add-on. Finally, call the [**Patch**](pc_sdk_orders.iorder_patch) method to update the subscription order, after first identifying the customer with [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) and the order with [**Orders.ById**](pc_sdk_orders.iordercollection_byid).
+Next, instantiate a new [**Order**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and populate it with a single [**LineItem**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) instance that contains the information to identify the add-on, as shown in the following code snippet. You'll use this new object to update the subscription order with the add-on. Finally, call the [**Patch**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.patch) method to update the subscription order, after first identifying the customer with [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) and the order with [**Orders.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid).
 
 ```
 // IAggregatePartner partnerOperations;

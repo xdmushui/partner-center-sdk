@@ -25,7 +25,7 @@ Get a list of all user accounts that belong to one of your customers. To look up
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve the collection of all user accounts for a specified customer, call the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the specified customer ID to identify the customer. Then call the [**Users.Get**](pc_sdk_cust_user.icustomerusercollection_get) or [**GetAsync**](pc_sdk_cust_user.icustomerusercollection_getasync) method to retrieve the collection.
+To retrieve the collection of all user accounts for a specified customer, call the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the specified customer ID to identify the customer. Then call the [**Users.Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.getasync) method to retrieve the collection.
 
 ```CSharp
 // IAggregatePartner partnerOperations;

@@ -29,7 +29,7 @@ Gets a [Subscription](subscriptions.md) resource that matches the customer ID an
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](pc_sdk_cust_user.icustomerusercollection_byid) method to identify the subscription. Use that [**interface**](pc_sdk_subscrpt.isubscription) to retrieve the subscription details by calling [**Get**](pc_sdk_subscrpt.isubscription_get).
+To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription. Use that [**interface**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription_get).
 
 ```CSharp
 // IAggregatePartner partnerOperations;

@@ -27,13 +27,13 @@ How to assign licenses to a customer user.
 ## <span id="Assigning_licenses_through_code"></span><span id="assigning_licenses_through_code"></span><span id="ASSIGNING_LICENSES_THROUGH_CODE"></span>Assigning licenses through code
 
 
-When you assign licenses to a user you must choose from the customer's collection of subscribed SKUs. Then, having identified the products that you want to assign, you must obtain the product SKU ID for each product in order to make the assignments. Each [**SubscribedSku**](pc_sdk_models_lic.subscribedsku) instance contains a [**ProductSku**](pc_sdk_models_lic.subscribedsku_productsku) property from which you can reference the [**ProductSku**](pc_sdk_models_lic.productsku) object and get the [**ID**](pc_sdk_models_lic.productsku_id).
+When you assign licenses to a user you must choose from the customer's collection of subscribed SKUs. Then, having identified the products that you want to assign, you must obtain the product SKU ID for each product in order to make the assignments. Each [**SubscribedSku**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.subscribedsku) instance contains a [**ProductSku**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.subscribedsku_productsku) property from which you can reference the [**ProductSku**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.productsku) object and get the [**ID**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.productsku_id).
 
-A license assignment request must contain licenses from a single license group. For example, you cannot assign licenses from [**Group1**](pc_sdk_models_lic.licensegroupid) and **Group2** in the same request. An attempt to assign licenses from more than one group in a single request will fail with an appropriate error. To find out what licenses are available by license group, see [Get a list of available licenses by license group](get-a-list-of-available-licenses-by-license-group.md).
+A license assignment request must contain licenses from a single license group. For example, you cannot assign licenses from [**Group1**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid) and **Group2** in the same request. An attempt to assign licenses from more than one group in a single request will fail with an appropriate error. To find out what licenses are available by license group, see [Get a list of available licenses by license group](get-a-list-of-available-licenses-by-license-group.md).
 
 Here are the steps to assign licenses through code:
 
-1.  Instantiate a [**LicenseAssignment**](pc_sdk_models_lic.licenseassignment) object. You use this object to specify the product SKU and service plans to assign.
+1.  Instantiate a [**LicenseAssignment**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object. You use this object to specify the product SKU and service plans to assign.
     ```
     LicenseAssignment license = new LicenseAssignment();
     ```
@@ -52,19 +52,19 @@ Here are the steps to assign licenses through code:
     license.ExcludedPlans = null;
     ```
 
-4.  Next, instantiate a new list of type [**LicenseAssignment**](pc_sdk_models_lic.licenseassignment), and add the license object. You can assign more than one license by adding each individually to the list. The licenses included in this list must be from the same license group.
+4.  Next, instantiate a new list of type [**LicenseAssignment**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment), and add the license object. You can assign more than one license by adding each individually to the list. The licenses included in this list must be from the same license group.
     ```
     List<LicenseAssignment> licenseList = new List<LicenseAssignment>();
     licenseList.Add(license);
     ```
 
-5.  Create a [**LicenseUpdate**](pc_sdk_models_lic.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](pc_sdk_models_lic.licenseupdate_licensestoassign) property.
+5.  Create a [**LicenseUpdate**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate_licensestoassign) property.
     ```
     LicenseUpdate updateLicense = new LicenseUpdate();
     updateLicense.LicensesToAssign = licenseList;
     ```
 
-6.  Call the [**Create**](pc_sdk_cust_user.icustomeruserlicenseupdates_create) or [**CreateAsync**](pc_sdk_cust_user.icustomeruserlicenseupdates_createasync) method and pass the license update object as shown below to assign the licenses.
+6.  Call the [**Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object as shown below to assign the licenses.
     ```
     var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).LicenseUpdates.Create(updateLicense);
     ```
@@ -72,11 +72,11 @@ Here are the steps to assign licenses through code:
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To assign a license to a customer user, first instantiate a [**LicenseAssignment**](pc_sdk_models_lic.licenseassignment) object, and populate the [**Skuid**](pc_sdk_models_lic.licenseassignment_skuid) and [**ExcludedPlans**](pc_sdk_models_lic.licenseassignment_excludedplans) properties. You use this object to specify the product SKU to assign and service plans to exclude. Next, instantiate a new list of type **LicenseAssignment**, and add the license object to the list. Then create a [**LicenseUpdate**](pc_sdk_models_lic.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](pc_sdk_models_lic.licenseupdate_licensestoassign) property.
+To assign a license to a customer user, first instantiate a [**LicenseAssignment**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object, and populate the [**Skuid**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment_skuid) and [**ExcludedPlans**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment_excludedplans) properties. You use this object to specify the product SKU to assign and service plans to exclude. Next, instantiate a new list of type **LicenseAssignment**, and add the license object to the list. Then create a [**LicenseUpdate**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate_licensestoassign) property.
 
-Next, use the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to identify the customer, and the [**Users.ById**](pc_sdk_cust_user.icustomerusercollection_byid) method with the user ID to identify the user. Then get an interface to customer user license update operations from the [**LicenseUpdates**](pc_sdk_cust_user.icustomeruser_licenseupdates) property.
+Next, use the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Users.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the user ID to identify the user. Then get an interface to customer user license update operations from the [**LicenseUpdates**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.licenseupdates) property.
 
-Finally, call the [**Create**](pc_sdk_cust_user.icustomeruserlicenseupdates_create) or [**CreateAsync**](pc_sdk_cust_user.icustomeruserlicenseupdates_createasync) method and pass the license update object to assign the license.
+Finally, call the [**Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object to assign the license.
 
 ```
 // IAggregatePartner partnerOperations; 

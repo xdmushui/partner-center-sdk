@@ -26,7 +26,7 @@ Gets a collection of items representing valid topics for service requests.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a collection of service request topics, use your [**IPartnerOperations**](pc_sdk.ipartneroperations) collection to retrieve the [**ServiceRequests**](pc_sdk_cust.icustomeroperations_servicerequests) property of the resulting object, followed by the [**SupportTopics**](pc_sdk_models_servicreq.supporttopic) property and the [**Get()**](pc_sdk_genericops.ientitygetoperations_get) or [**GetAsync()**](pc_sdk_genericops.ientitygetoperations_getasync) methods.
+To get a collection of service request topics, use your [**IPartnerOperations**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartneroperations) collection to retrieve the [**ServiceRequests**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomeroperations.servicerequests) property of the resulting object, followed by the [**SupportTopics**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.supporttopic) property and the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.getasync) methods.
 
 ```CSharp
 // IPartner partnerOperations;

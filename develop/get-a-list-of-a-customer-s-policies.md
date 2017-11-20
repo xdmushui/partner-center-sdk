@@ -26,7 +26,7 @@ How to retrieve a collection of the specified customer's configuration policies.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of all of a customer's policies, first call the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to retrieve an interface to operations on the specified customer. Next, retrieve the [**ConfigurationPolicies**](pc_sdk_cust.icustomer_configurationpolicies) property to get an interface to configuration policy collection operations. Finally, call the [**Get**](pc_sdk_devicesdeployment.iconfigurationpolicycollection_get) or [**GetAsync**](pc_sdk_devicesdeployment.iconfigurationpolicycollection_getasync) method to retrieve the collection of policies.
+To get a list of all of a customer's policies, first call the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Next, retrieve the [**ConfigurationPolicies**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.configurationpolicies) property to get an interface to configuration policy collection operations. Finally, call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.getasync) method to retrieve the collection of policies.
 
 ```
 IAggregatePartner partnerOperations;

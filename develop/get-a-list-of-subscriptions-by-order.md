@@ -29,7 +29,7 @@ Gets a collection of [Subscription](subscriptions.md) resources that correspond 
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of subscriptions by order, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](pc_sdk_cust.icustomeroperations_subscriptions) property, followed by the **ByOrderId()** method. Finish by calling [**Get()**](pc_sdk_genericops.ientitygetoperations_get) or [**GetAsync()**](pc_sdk_genericops.ientitygetoperations_getasync).
+To get a list of subscriptions by order, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomeroperations.subscriptions) property, followed by the **ByOrderId()** method. Finish by calling [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.getasync).
 
 ```
 // IAggregatePartner partnerOperations;

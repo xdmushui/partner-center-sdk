@@ -35,7 +35,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To add a customer, instantiate a new [Customer](pc_sdk_models_cust.customer) object. Be sure to fill in the [BillingProfile](pc_sdk_models_cust.customerbillingprofile) and [CompanyProfile](pc_sdk_models_cust.customercompanyprofile). Then, add it to your [IAggregatePartners.Customers](pc_sdk.ipartner_customers) collection by calling [Create()](pc_sdk_genericops.ientitycreateoperations_create) or [CreateAsync()](pc_sdk_genericops.ientitycreateoperations_createasync).
+To add a customer, instantiate a new [Customer](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [BillingProfile](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [CompanyProfile](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Then, add it to your [IAggregatePartners.Customers](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [Create()](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations.create) or [CreateAsync()](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations.createasync).
 
 ```
 // IAggregatePartner partnerOperations;

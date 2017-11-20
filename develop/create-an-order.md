@@ -29,11 +29,11 @@ How to create an order for a customer. For more information about what is curren
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To create an order for a customer, first instantiate an [**Order**](pc_sdk_models_orders.order) object and set the [**ReferenceCustomerID**](pc_sdk_models_orders.order_referencecustomerid) property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](pc_sdk_models_orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](pc_sdk_models_orders.order_lineitems) property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
+To create an order for a customer, first instantiate an [**Order**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order_referencecustomerid) property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order_lineitems) property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
 
-Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](pc_sdk_cust.icustomer_orders) property.
+Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
-Finally, call the [**Create**](pc_sdk_orders.iordercollection_create) or [**CreateAsync**](pc_sdk_orders.iordercollection_createasync) method to create the order.
+Finally, call the [**Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
 ```
 IAggregatePartner partnerOperations;
@@ -123,7 +123,7 @@ This table describes the **Order** properties in the request body.
 <td>billingCycle</td>
 <td>string</td>
 <td>No</td>
-<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [<strong>BillingCycleType</strong>](pc_sdk_models_offers.billingcycletype).
+<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>

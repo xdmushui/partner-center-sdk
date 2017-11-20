@@ -26,7 +26,7 @@ Gets an object representing a user's support profile.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get your support profile, use your **IAggregatePartner.Profiles** collection. Call the [**SupportProfile**](pc_sdk_prof.isupportprofileoperations) property, followed by the [**Get()**](pc_sdk_prof.isupportprofileoperations_get) or [**GetAsync()**](pc_sdk_prof.isupportprofileoperations_getasync) methods.
+To get your support profile, use your **IAggregatePartner.Profiles** collection. Call the [**SupportProfile**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations) property, followed by the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations_get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations_getasync) methods.
 
 ```CSharp
 // IAggregatePartner partnerOperations;

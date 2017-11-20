@@ -27,7 +27,7 @@ How to get a partner's legal business profile.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the partner legal business profile, first get an interface to the collection of partner profile operations from the **IAggregatePartner.Profiles** property. Then, get the value of the **LegalBusinessProfile** property to retrieve an interface to legal business profile operations. Finally, call the [**Get**](pc_sdk_genericops.ientitygetoperations_get) or the [**GetAsync**](pc_sdk_genericops.ientitygetoperations_getasync) method to retrieve the profile.
+To get the partner legal business profile, first get an interface to the collection of partner profile operations from the **IAggregatePartner.Profiles** property. Then, get the value of the **LegalBusinessProfile** property to retrieve an interface to legal business profile operations. Finally, call the [**Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.get) or the [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.getasync) method to retrieve the profile.
 
 ```
 // IAggregatePartner partnerOperations;

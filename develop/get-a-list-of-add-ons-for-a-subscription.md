@@ -29,7 +29,7 @@ Gets a collection of add-ons that a customer has chosen to add to their [Subscri
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the list of add-ons for a customer's subscription, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](pc_sdk_cust.icustomeroperations_subscriptions) property, followed by the [**ById()**](pc_sdk_subscrpt.isubscriptioncollectionoperations_byid) method. Finish by calling the [**Addons**](pc_sdk_subscrpt.isubscriptionoperations_addons) property, followed by [**Get()**](pc_sdk_genericops.ientitygetoperations_get) or [**GetAsync()**](pc_sdk_genericops.ientitygetoperations_getasync).
+To get the list of add-ons for a customer's subscription, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomeroperations.subscriptions) property, followed by the [**ById()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollectionoperations.byid) method. Finish by calling the [**Addons**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionoperations.addons) property, followed by [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitygetoperations.getasync).
 
 ```CSharp
 // IAggregatePartner partnerOperations;

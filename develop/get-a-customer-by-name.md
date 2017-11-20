@@ -28,11 +28,11 @@ Gets a collection of [Customer](customers.md#customer) resources that match a fi
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a collection of customers that match a filter, first instantiate a [**SimpleFieldFilter**](pc_sdk_models_query.simplefieldfilter) object to create the filter. You'll need to pass a string that contains the [**CustomerSearchField**](pc_sdk_models_cust.customersearchfield), and indicate the type of filter operation as [**FieldFilterOperation.StartsWith**](pc_sdk_models_query.fieldfilteroperation). That's the only field filter operation supported by the customers end point. You'll also need to provide the string to filter by.
+To get a collection of customers that match a filter, first instantiate a [**SimpleFieldFilter**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object to create the filter. You'll need to pass a string that contains the [**CustomerSearchField**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield), and indicate the type of filter operation as [**FieldFilterOperation.StartsWith**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.fieldfilteroperation). That's the only field filter operation supported by the customers end point. You'll also need to provide the string to filter by.
 
-Next, instantiate an [**iQuery**](pc_sdk_models_query.iquery) object to pass to the query by calling the [**BuildSimpleQuery**](pc_sdk_models_query.queryfactory_buildsimplequery) method and passing it the filter. BuildSimplyQuery is just one of the query types supported by the [**QueryFactory**](pc_sdk_models_query.queryfactory) class.
+Next, instantiate an [**iQuery**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.iquery) object to pass to the query by calling the [**BuildSimpleQuery**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildsimplequery) method and passing it the filter. BuildSimplyQuery is just one of the query types supported by the [**QueryFactory**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
 
-Finally, to execute the filter and get the result, first use [**IAggregatePartner.Customers**](pc_sdk.ipartner_customers) to get an interface to the partner's customer operations. Then call the [**Query**](pc_sdk_cust.icustomercollection_query) or [**QueryAsync**](pc_sdk_cust.icustomercollection_queryasync) method.
+Finally, to execute the filter and get the result, first use [**IAggregatePartner.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Then call the [**Query**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) method.
 
 ```
 IAggregatePartner partnerOperations;
@@ -91,7 +91,7 @@ The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |
 |----------|--------------------------------------------------------------------------------------------------------------------------|
-| Field    | The field to filter. The valid values can be found in [**CustomerSearchField**](pc_sdk_models_cust.customersearchfield). |
+| Field    | The field to filter. The valid values can be found in [**CustomerSearchField**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield). |
 | Value    | The value to filter by. The case of the value is ignored.                                                                |
 | Operator | The operator to apply. The only supported value for this customer scenario is "starts\_with".                            |
 

@@ -25,7 +25,7 @@ How to remove a user from a directory role within a customer account.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To remove a user from a directory role, select the customer with the user to modify with a call to the [**IAggregatePartner.Customers.ById**](pc_sdk_cust.icustomercollection_byid) method, From there, specify the role using the [**DirectoryRoles.ById**](pc_sdk_cust_role.idirectoryrolecollection_byid) method with the directory role ID. Then, access the [**UserMembers.ById**](pc_sdk_cust_role.iusermembercollection_byid) method to identify the user to remove, and the [**Delete**](pc_sdk_cust_role.iusermember_delete) method to remove the user from the role.
+To remove a user from a directory role, select the customer with the user to modify with a call to the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, From there, specify the role using the [**DirectoryRoles.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.idirectoryrolecollection.byid) method with the directory role ID. Then, access the [**UserMembers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermembercollection.byid) method to identify the user to remove, and the [**Delete**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermember.delete) method to remove the user from the role.
 
 ```CSharp
 // IAggregatePartner partnerOperations;
