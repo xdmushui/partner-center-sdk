@@ -113,7 +113,7 @@ to their customers.
 <tr class="odd">
 <td>supportedBillingCycles</td>
 <td>array of strings</td>
-<td>Indicates the billing cycles supported for this offer. Supported values are the member names found in [<strong>BillingCycleType</strong>](pc_sdk_models_offers.billingcycletype).
+<td>Indicates the billing cycles supported for this offer. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>
