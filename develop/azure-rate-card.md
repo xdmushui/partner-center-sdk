@@ -24,9 +24,9 @@ Cloud Solution Provider partners to get current prices.
 
 To track usage and help predict your monthly bill and the bills for
 individual customers, you can combine a Rate Card query to [Get prices
-for Microsoft Azure](get_prices_for_microsoft_azure.htm) with a request
+for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request
 to [Get a customer's utilization records for
-Azure](get_a_customer_s_utilization_record_for_azure.htm).
+Azure](get-a-customer-s-utilization-record-for-azure.md).
 
 Prices differ by market and currency, and this API takes location into
 consideration. By default, it uses your partner profile settings in

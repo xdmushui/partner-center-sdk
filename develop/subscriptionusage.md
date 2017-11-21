@@ -30,7 +30,7 @@ with a usage summary for each pay period.
 **Note**  The SubscriptionDailyUsageRecord resource is obsolete and may
 produce inaccurate results. We recommend that you update your
 applications to use the APIs described in [Get a customer's utilization
-records for Azure](get_a_customer_s_utilization_record_for_azure.htm)
+records for Azure](get-a-customer-s-utilization-record-for-azure)
 and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 instead.
 

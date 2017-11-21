@@ -24,7 +24,7 @@ This section provides definitions for the JSON elements needed to create
 requests and parse responses using the Partner Center REST API. For more
 information about how to use these elements, including sample code, see
 the [Scenarios](scenarios.md) section and the [Partner Center
-samples](partner_center_samples.htm) section.
+samples](partner-center-samples.md) section.
 
 ## <span id="In_this_section"></span><span id="in_this_section"></span><span id="IN_THIS_SECTION"></span>In this section
 
