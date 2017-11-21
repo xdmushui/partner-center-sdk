@@ -80,7 +80,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a [ServiceCostsSummary](pc_apiv2.servicecostssummary) resource that provides information about the service costs.
+If successful, the response body contains a [ServiceCostsSummary](servicecosts.md) resource that provides information about the service costs.
 
 **Response success and error codes**
 

@@ -161,7 +161,7 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p>[Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)</p></li>
 <li><p>[Get an invoice by ID](get-invoice-by-id.md)</p></li>
-<li><p>[Get invoice line items](pc_apiv2.get_invoice_line_items)</p></li>
+<li><p>[Get invoice line items](get-invoiceline-items.md)</p></li>
 <li><p>[Get a collection of invoices](get-a-collection-of-invoices.md)</p></li>
 </ul>
 <p>Check your Azure spending budget</p>

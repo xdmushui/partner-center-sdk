@@ -31,7 +31,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get invoice by ID](get-invoice-by-id.md)
 
--   [Get invoice line items](pc_apiv2.get_invoice_line_items)
+-   [Get invoice line items](get-invoiceline-items.md)
 
 -   [Get a collection of invoices](get-a-collection-of-invoices.md)
 

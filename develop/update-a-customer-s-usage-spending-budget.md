@@ -29,7 +29,7 @@ allocated for a customer's usage.
 
 
 -   Credentials as described in [Partner Center
-    authentication](partner_center_authentication.htm). This scenario
+    authentication](partner-center-authentication.md). This scenario
     supports authentication with both standalone App and App+User
     credentials.
 -   A customer ID (customer-tenant-id). If you do not have a customer's
