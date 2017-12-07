@@ -4,10 +4,12 @@ description:
     Partners can file service requests on behalf of their partners to report
     disruptions services provided by Microsoft or to request other technical
     support that they are incapable of providing.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: E9FBF7D8-A7E8-4DC6-B370-8339B9EE16B7
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # ServiceRequest

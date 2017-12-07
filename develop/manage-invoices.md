@@ -1,10 +1,12 @@
 ---
 title: Manage billing
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 198D32A5-AA2C-49BB-A057-0EFFBA408753
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Manage billing

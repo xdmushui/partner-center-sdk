@@ -1,10 +1,12 @@
 ---
 title: Get a customer by ID
 description: Gets a Customer resource that corresponds to a customer ID.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: C84DF574-0E1B-418B-8AED-06C1E3BD301F
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a customer by ID

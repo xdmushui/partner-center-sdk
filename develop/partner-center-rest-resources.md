@@ -3,10 +3,12 @@ title: Partner Center REST resources
 description: 
     This section provides definitions for the JSON elements needed to create
     requests and parse responses using the Partner Center REST API.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: E7C51D19-C6A7-4A4C-9F17-B4D39195972A
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Partner Center REST resources

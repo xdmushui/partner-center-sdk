@@ -1,10 +1,12 @@
 ---
 title: Update the nickname for a subscription
 description: Updates the friendly name or nickname for a customer's Subscription.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 9A4431CB-1EB5-4C1C-B4D1-18B017ADD2F4
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update the nickname for a subscription

@@ -1,10 +1,12 @@
 ---
 title: Get a list of available licenses by license group
 description: How to get a list of licenses for the specified license groups available to users of the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 1677A68C-0298-49C7-BAE1-5E74D8449C3F
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of available licenses by license group

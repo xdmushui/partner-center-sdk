@@ -5,10 +5,12 @@ description:
     integrate their existing CRM or billing software with the Microsoft
     systems that manage customer accounts, place orders, manage
     subscriptions, and handle support requests.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 25191A95-52BB-4E33-A63C-5D00FAF55806
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Partner Center REST API reference

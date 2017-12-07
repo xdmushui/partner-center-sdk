@@ -1,10 +1,12 @@
 ---
 title: Update a service request
 description: How to update an existing customer service request that a Cloud Solution Provider has filed with Microsoft on the customer's behalf.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 09C13775-739B-4CB9-9442-456E17F91452
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update a service request

@@ -1,10 +1,12 @@
 ---
 title: Get an organization profile
 description: Gets an object representing the partner's organization profile.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 2AA159F1-CC84-4367-A2AF-DFA4C8B0E673
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get an organization profile

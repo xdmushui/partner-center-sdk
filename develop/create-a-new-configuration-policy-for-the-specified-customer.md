@@ -1,10 +1,12 @@
 ---
 title: Create a new configuration policy for the specified customer
 description: How to create a new configuration policy for the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 95649991-A950-4F43-87E8-3EB1E7D06FCD
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Create a new configuration policy for the specified customer

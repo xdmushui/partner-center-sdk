@@ -1,10 +1,12 @@
 ---
 title: Product
 description: A product or service created by Microsoft.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 9989EF42-1833-46A1-AAFE-3E110ED659BB
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Product

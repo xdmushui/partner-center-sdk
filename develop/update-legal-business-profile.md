@@ -1,10 +1,12 @@
 ---
 title: Update the partner legal business profile
 description: How to update the partner legal business profile.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: DEB60680-145D-47C5-BB19-374752D45236
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update the partner legal business profile

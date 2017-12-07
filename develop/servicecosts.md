@@ -1,10 +1,12 @@
 ---
 title: ServiceCosts
 description: Describes resources related to services purchased by a customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 2916B7F3-06D5-4DC1-A137-CD8270258CDB
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # ServiceCosts

@@ -1,10 +1,12 @@
 ---
 title: Update a subscription's support contact
 description: How to update a subscription's support contact to one of the partner’s value added resellers.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 6DE6EF60-6F8B-46F2-8278-CD706081B180
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update a subscription's support contact

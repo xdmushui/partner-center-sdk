@@ -1,10 +1,12 @@
 ---
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get an order by ID

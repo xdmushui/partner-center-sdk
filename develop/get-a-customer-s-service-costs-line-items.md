@@ -1,10 +1,12 @@
 ---
 title: Get a customer's service costs line items
 description: Gets a customer's service cost line items for the specified billing period.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 1D6364A2-51FE-44E4-96A0-444EDB3BB56A
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a customer's service costs line items

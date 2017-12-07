@@ -1,10 +1,12 @@
 ---
 title: Utilities
 description: This section describes the ways that partners can use the Partner Center to programmatically manage utility functions.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 646301CF-83E5-4BC3-987D-948E984D17F3
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Utilities

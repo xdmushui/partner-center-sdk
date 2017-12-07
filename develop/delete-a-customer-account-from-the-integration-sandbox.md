@@ -1,10 +1,12 @@
 ---
 title: Delete a customer account from the integration sandbox
 description: How to delete a customer account from the Testing in Production (Tip) integration sandbox.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: B95431F6-EA7F-4C21-835F-6D6C303B05A5
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Delete a customer account from the integration sandbox

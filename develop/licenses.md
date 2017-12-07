@@ -1,10 +1,12 @@
 ---
 title: License
 description: Describes resources related to licenses.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 20592E06-8A87-41F4-B8B0-6F9200556FDA
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # License

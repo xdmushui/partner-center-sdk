@@ -1,10 +1,12 @@
 ---
 title: Update user accounts for a customer
 description: Update details in an existing user account for your customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 26E79662-2376-4208-A645-20069DBE0457
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update user accounts for a customer

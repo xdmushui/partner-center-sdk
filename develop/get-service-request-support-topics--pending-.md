@@ -1,10 +1,12 @@
 ---
 title: Get service request support topics
 description: Gets a collection of items representing valid topics for service requests.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 50A61342-70C4-49F5-BEA2-2754338CF5A1
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get service request support topics

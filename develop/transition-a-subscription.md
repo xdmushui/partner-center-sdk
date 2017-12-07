@@ -1,10 +1,12 @@
 ---
 title: Transition a subscription
 description: Upgrades a customer's subscription to a specified target subscription.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 54618BC1-6AF7-4518-925B-8A6A4C926CE7
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Transition a subscription

@@ -1,10 +1,12 @@
 ---
 title: Relationships
 description: Describes resources related to relationships.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: F6157FE3-7C9D-4A8F-AC11-6F4007594C3D
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Relationships

@@ -1,10 +1,12 @@
 ---
 title: Assign licenses to a user
 description: How to assign licenses to a customer user.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 872C7444-DF89-4EB5-8C1E-1D8E2934A40E
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Assign licenses to a user

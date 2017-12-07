@@ -1,10 +1,12 @@
 ---
 title: Get a record of Partner Center activity
 description: How to get a record of operations performed by a partner user or application over a period of time.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: C24054DA-3E31-4BCD-BEB5-085564C20C58
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a record of Partner Center activity

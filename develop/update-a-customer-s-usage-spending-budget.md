@@ -1,10 +1,12 @@
 ---
 title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update a customer's usage spending budget

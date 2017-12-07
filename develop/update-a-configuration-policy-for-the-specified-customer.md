@@ -1,10 +1,12 @@
 ---
 title: Update a configuration policy for the specified customer
 description: How to update the specified configuration policy for the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: E2B91AC4-B8E8-4A77-AFB7-0CCEF5136621
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Update a configuration policy for the specified customer

@@ -1,10 +1,12 @@
 ---
 title: Get a list of subscriptions by order
 description: Gets a collection of Subscription resources that correspond to a given order.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: C6DCE351-8C02-42CD-9A80-8156BC6BF1B8
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of subscriptions by order

@@ -4,10 +4,12 @@ description:
     Managed services are services to which a partner has delegated admin
     privileges. Partners can provide support for and file service requests
     on the behalf of their managed services.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: B05E9585-72E4-4330-8721-A88EC4C193D7
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # ManagedService

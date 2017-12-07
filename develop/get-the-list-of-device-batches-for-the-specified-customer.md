@@ -1,10 +1,12 @@
 ---
 title: Get a list of device batches for the specified customer
 description: How to retrieve a collection of device batches for the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 46865031-E067-4FE3-9EC1-FE18F49F137A
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of device batches for the specified customer

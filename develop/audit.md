@@ -1,10 +1,12 @@
 ---
 title: Audit operations
 description: The Partner Center APIs provide auditing features so you can get a record of Partner Center activity.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: C6337A08-6009-4F12-A7A3-B1CA1AE016A1
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Audit operations

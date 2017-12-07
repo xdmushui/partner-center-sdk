@@ -1,10 +1,12 @@
 ---
 title: Auditing
 description: The resources detailed here are used with audit operations.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: FEF0BED4-2CEB-46D2-9365-D7D3C50AF0E3
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Auditing

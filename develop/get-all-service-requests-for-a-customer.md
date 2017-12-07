@@ -1,10 +1,12 @@
 ---
 title: Get all service requests for a customer
 description: Gets all of a customer's service requests.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 21F01038-EE51-4FB3-8BE5-9086DBD0F393
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get all service requests for a customer

@@ -1,10 +1,12 @@
 ---
 title: Delete a device for the specified customer
 description: How to delete a device belonging to the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 44F06D4B-E9DE-470F-BAE2-15205CC7C699
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Delete a device for the specified customer

@@ -1,10 +1,12 @@
 ---
 title: Get a list of customers filtered by a search field
 description: Gets a collection of Customer resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 7D5D8C83-1DBD-4C54-8CDA-FE0CAC911D14
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of customers filtered by a search field

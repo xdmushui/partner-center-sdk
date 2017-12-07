@@ -3,10 +3,12 @@ title: Azure Utilization Record
 description: 
     The Azure Utilization Record contains details about the utilization of
     an Azure subscription resource.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 4C1EEEB3-DB25-4D61-BFED-C4AB5D3BB5CF
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Azure Utilization Record

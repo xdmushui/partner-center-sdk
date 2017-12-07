@@ -1,10 +1,12 @@
 ---
 title: Change the quantity of a subscription
 description: Updates a Subscription to increase or decrease the quantity of licenses.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 10535C45-63BF-4E75-A6E5-E03ADC1DF8DC
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Change the quantity of a subscription

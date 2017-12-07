@@ -1,10 +1,12 @@
 ---
 title: Get partner licenses deployment information
 description: How to get partner licenses deployment information aggregated to include all customers.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: BC78F9EA-C07C-4FD5-B06D-C87E8330B6E2
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get partner licenses deployment information

@@ -3,10 +3,12 @@ title: Subscription
 description: 
     A subscription lets a customer use a service for a certain period of
     time.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Subscription

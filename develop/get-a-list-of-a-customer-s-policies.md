@@ -1,10 +1,12 @@
 ---
 title: Get a list of a customer's policies
 description: How to retrieve a collection of the specified customer's configuration policies.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 37C40EFC-7BC9-4111-BB9E-27018B583391
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of a customer's policies

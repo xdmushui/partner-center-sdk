@@ -3,10 +3,12 @@ title: Conversions
 description: 
     Conversion resources support the conversion of a trial subscription to a
     paid subscription.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 4AE796E3-47D9-428B-8267-A5247B573E0C
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Conversions

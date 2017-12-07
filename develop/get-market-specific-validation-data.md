@@ -1,10 +1,12 @@
 ---
 title: Get address formatting rules by market
 description: Get the expected address format based on the iso code for the market.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: B02B3ECF-8020-4818-872F-9D70DCBC0228
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get address formatting rules by market

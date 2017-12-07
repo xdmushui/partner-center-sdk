@@ -1,10 +1,12 @@
 ---
 title: Get a customer's utilization records for Azure
 description: Gets the utilization records of a customer's Azure subscription for a specified time period.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a customer's utilization records for Azure

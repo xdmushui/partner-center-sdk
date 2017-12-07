@@ -1,10 +1,12 @@
 ---
 title: Get support profile
 description: Gets an object representing a user's support profile.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 7161B81C-09E7-46C8-8EF4-214B3ED76FB7
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get support profile

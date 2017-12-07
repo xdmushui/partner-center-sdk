@@ -1,10 +1,12 @@
 ---
 title: Get a list of add-ons for a subscription
 description: Gets a collection of add-ons that a customer has chosen to add to their Subscription.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: F10823A2-CA77-4F80-9ED4-CFB4E4343049
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # <span id="pc_apiv2.get_a_list_of_add-ons_for_a_subscription"></span>Get a list of add-ons for a subscription

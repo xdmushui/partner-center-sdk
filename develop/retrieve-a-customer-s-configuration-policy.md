@@ -1,10 +1,12 @@
 ---
 title: Retrieve a customer's configuration policy
 description: How to retrieve the specified configuration policy for the specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: A26B5CDA-C23C-4DC3-BC56-A27F3DDDCFB1
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Retrieve a customer's configuration policy

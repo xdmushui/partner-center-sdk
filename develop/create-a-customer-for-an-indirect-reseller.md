@@ -1,10 +1,12 @@
 ---
 title: Create a customer for an indirect reseller
 description: How an indirect provider can create a customer for an indirect reseller.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Create a customer for an indirect reseller

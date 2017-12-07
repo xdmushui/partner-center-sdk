@@ -1,10 +1,12 @@
 ---
 title: Get customer licenses usage information
 description: How to get licenses deployment insights for a specific customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 02B98495-9FE7-4A9F-B1DD-B14563D0FF29
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get customer licenses usage information

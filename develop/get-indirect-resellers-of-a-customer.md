@@ -1,10 +1,12 @@
 ---
 title: Get indirect resellers of a customer
 description: How to get a list of the indirect resellers that have a relationship with a specified customer.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: C3C4BE9A-97E8-41AD-AB28-6F9CB7DCE475
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get indirect resellers of a customer

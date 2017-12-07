@@ -1,10 +1,12 @@
 ---
 title: CountryInformation
 description: Descriptive metadata for a country/region.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 19460437-5611-49A1-A7E7-704420C1DE8F
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # CountryInformation

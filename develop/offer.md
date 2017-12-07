@@ -3,10 +3,12 @@ title: Offer
 description: 
     Describes a product listed in the reseller catalog that they can offer
     to their customers.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Offer

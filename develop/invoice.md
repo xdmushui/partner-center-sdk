@@ -1,10 +1,12 @@
 ---
 title: Invoice
 description: Describes invoice related resources.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Invoice

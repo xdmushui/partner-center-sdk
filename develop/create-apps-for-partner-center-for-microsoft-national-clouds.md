@@ -4,10 +4,12 @@ description: Developers must register details about their application with Azure
 MS-HAID:
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_cloud\_germany'
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_national\_clouds'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 73C5926A-0DEB-42E5-8982-7E44A2031F0B
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Register app details for Partner Center for Microsoft National Cloud

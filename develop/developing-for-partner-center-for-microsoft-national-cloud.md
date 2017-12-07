@@ -3,11 +3,13 @@ title: Developing for Partner Center for Microsoft National Cloud
 MS-HAID:
 - 'pc\_apiv2.developing\_with\_different\_partner\_center\_versions'
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
 description: 
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Developing for Partner Center for Microsoft National Cloud

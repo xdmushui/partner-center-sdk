@@ -1,10 +1,12 @@
 ---
 title: Get partner licenses usage information
 description: How to get partner licenses usage information aggregated to include all customers.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 87BCC8FC-5C29-4245-8607-BB62ABC03EDE
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get partner licenses usage information

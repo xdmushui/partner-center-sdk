@@ -1,10 +1,12 @@
 ---
 title: Get a subscription by ID
 description: Gets a Subscription resource that matches the customer ID and the subscription ID.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 0A91755F-C5AB-4CB1-9E61-6C927F6AA5C5
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a subscription by ID

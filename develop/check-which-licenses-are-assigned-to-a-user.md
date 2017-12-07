@@ -1,10 +1,12 @@
 ---
 title: Get licenses assigned to a user
 description: How to get a list of licenses assigned to a user within a customer account.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 87DC74A1-92E2-4639-BC4C-168A677F5F52
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get licenses assigned to a user

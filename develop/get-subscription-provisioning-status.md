@@ -1,10 +1,12 @@
 ---
 title: Get subscription provisioning status
 description: How to get the subscription provisioning status for a customer subscription.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: CC3A13FE-D6D3-4A65-981F-0235A4A8382E
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get subscription provisioning status

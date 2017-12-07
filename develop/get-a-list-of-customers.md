@@ -1,10 +1,12 @@
 ---
 title: Get a list of customers
 description: Gets a collection of resources representing all the partner's customers.In the Partner Center dashboard, this operation can be performed by selecting either View Customers under Customer management on the main page, or selecting Customers in the sidebar.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Get a list of customers

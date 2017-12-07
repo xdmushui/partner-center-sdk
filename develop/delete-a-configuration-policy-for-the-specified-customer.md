@@ -1,10 +1,12 @@
 ---
 title: Delete a configuration policy for the specified customer
 description: How to delete a configuration policy for the specified customer and policy identifier.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: DEFEC12E-3EA0-401B-B612-ACD1D71DB415
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Delete a configuration policy for the specified customer

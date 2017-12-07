@@ -4,10 +4,12 @@ description:
     Customers with usage-based subscriptions may have a monthly use budget,
     which sets a limit on their maximum usage and allows the partner to
     track their usage over time.
-MSHAttr:
-- 'PreferredSiteName:MSDN'
-- 'PreferredLib:/library/PartnerCenter'
 ms.assetid: 268C7AF5-3A95-451F-8092-033A3E8126F2
+ms.author: v-thpr
+ms.date: 12/15/2017
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
 ---
 
 # Customer Usage Budgeting
