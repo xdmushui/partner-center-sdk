@@ -31,7 +31,7 @@ general-purpose data models used throughout the SDK.
 An address to use for the customer or for partner profiles. For more
 information about the supported formats and properties in different
 countries/regions, see [Get address formatting rules by
-market](get_market_specific_validation_data.htm).
+market](get-market-specific-validation-data.md).
 
 | Property     | Type   | Length (min, max) | Description                                                                                      |
 |--------------|--------|-------------------|--------------------------------------------------------------------------------------------------|

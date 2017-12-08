@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying. For more information about this test-in-production (TiP) environment, see [Set up Partner Center accounts for API access](pc_cloud_sltn_provider.access_the_crest_api_with_your_csp_account).
+To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying. For more information about this test-in-production (TiP) environment, see [Set up API access in Partner Center](set-up-api-access-in-partner-center.md).
 
 ## <span id="Integration_sandbox_constraints"></span><span id="integration_sandbox_constraints"></span><span id="INTEGRATION_SANDBOX_CONSTRAINTS"></span>Integration sandbox constraints
 

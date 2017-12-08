@@ -29,7 +29,7 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 ## <span id="Determine_your_version_of_Partner_Center"></span><span id="determine_your_version_of_partner_center"></span><span id="DETERMINE_YOUR_VERSION_OF_PARTNER_CENTER"></span>Determine your version of Partner Center
 
 
-Some versions of Partner Center do not have the entire SDK available. For more information, see [Developing with Different Partner Center Versions](pc_apiv2.developing_with_different_partner_center_versions).
+Some versions of Partner Center do not have the entire SDK available. For more information, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
 
 ## <span id="Get_the_samples"></span><span id="get_the_samples"></span><span id="GET_THE_SAMPLES"></span>Get the samples
 

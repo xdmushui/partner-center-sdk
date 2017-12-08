@@ -61,7 +61,7 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
 <li><p>Branding: logo and company name.</p></li>
 <li><p>Welcome message.</p></li>
 <li><p>Offers, including descriptions and prices. The app assumes that the list prices include any applicable taxes. Alternatively, you can add additional logic to calculate tax during checkout.</p></li>
-<li><p>Payment information: provide your own credit card options, PayPal, or other payment types. Before you configure this part, please read the guide [Understand fraud and other risks](pc_cloud_sltn_provider.understanding_risks_like_fraud).</p></li>
+<li><p>Payment information: provide your own credit card options, PayPal, or other payment types. Before you configure this part, please read the guide [Non-payment, fraud, or misuse](https://msdn.microsoft.com/partner-center/non-payment--fraud--or-misuse).</p></li>
 </ul></td>
 </tr>
 <tr class="even">

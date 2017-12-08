@@ -41,8 +41,6 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get a subscription by ID](get-a-subscription-by-id.md)
 
--   [Get a list of subscriptions by ID](pc_apiv2.get_a_list_of_subscriptions_by_id)
-
 -   [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 
 -   [Get a list of add-ons for a subscription](get-a-list-of-add-ons-for-a-subscription.md)
@@ -54,8 +52,6 @@ This section describes the ways that Cloud Solution Provider partners can use th
 -   [Suspend a subscription](suspend-a-subscription.md)
 
 -   [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
-
--   [Cancel a subscription](pc_apiv2.cancel_a_subscription)
 
 -   [Transition a subscription](transition-a-subscription.md)
 

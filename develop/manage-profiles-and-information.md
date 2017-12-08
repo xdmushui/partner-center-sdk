@@ -33,7 +33,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Update legal business profile](update-legal-business-profile.md)
 
--   [Update a partner's billing profile](pc_apiv2.update_a_partner_s_billing_profile)
+-   [Update a partner's billing profile](update-partner-billing-profile.md)
 
 -   [Update support profile](update-support-profile.md)
 

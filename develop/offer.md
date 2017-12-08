@@ -89,7 +89,7 @@ to their customers.
 </tr>
 <tr class="even">
 <td>category</td>
-<td>[OfferCategory](pc_apiv2.offercategory)</td>
+<td>[OfferCategory](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.offer.category)</td>
 <td>Gets or sets the category.</td>
 </tr>
 <tr class="odd">

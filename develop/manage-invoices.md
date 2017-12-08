@@ -41,7 +41,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
 
--   [Get usage data for all subscriptions](pc_apiv2.get_a_listing_of_subscriptions_and_their_rated_usage_information)
+-   [Get usage data for all subscriptions](https://msdn.microsoft.com/en-us/library/partnercenter/mt651644.aspx)
 
 -   [Get usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
 

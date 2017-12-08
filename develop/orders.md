@@ -114,7 +114,7 @@ Represents the full subscription associated with the order.
 
 | Property     | Type                                         | Description                                    |
 |--------------|----------------------------------------------|------------------------------------------------|
-| subscription | [Link](pc_apiv2.Utility_Resources#link) | The link to the full subscription information. |
+| subscription | [Link](utility-resources.md#Link) | The link to the full subscription information. |
 
  
 

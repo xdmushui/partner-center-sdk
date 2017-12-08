@@ -18,7 +18,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets a [collection resource](pc_crest.collections) that contains a list of services within a customer's subscription and their associated rated usage information.
+Gets a [collection resource](https://msdn.microsoft.com/library/partnercenter/mt844538.aspx) that contains a list of services within a customer's subscription and their associated rated usage information.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
