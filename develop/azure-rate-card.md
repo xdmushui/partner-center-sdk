@@ -48,7 +48,7 @@ Describes the properties of an Azure Rate Card resource.
 | locale        | string                                    | The culture in which the resource information is localized.       |
 | meters        | array of objects                          | Array of [AzureMeter](#azuremeter) objects.                       |
 | offerTerms    | array of objects                          | Array of [AzureOfferTerm](#azureofferterm) objects.               |
-| attributes    | [ResourceAttributes](#resourceattributes) | The metadata attributes. Contains "objectType": "AzureRateCard"   |
+| attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Contains "objectType": "AzureRateCard"   |
 
  
 

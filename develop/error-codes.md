@@ -29,22 +29,22 @@ failed.
 
 -   Success responses: A 2xx status code indicates that the client's
     request was successfully received, understood, and accepted.
--   [Error responses](#pc-error-payload)
+-   [Error responses](#pc_error_payload)
 -   Error codes
-    -   [400: Bad request](#pc-error-400)
-    -   [401: Unauthorized](#pc-error-401)
-    -   [403: Forbidden](#pc-error-403)
-    -   [404: Not found](#pc-error-404)
-    -   [405: Method not allowed](#pc-error-405)
-    -   [406: Not acceptable](#pc-error-406)
-    -   [409: Conflict, error code](#pc-error-409)
-    -   [412: Precondition failed](#pc-error-412)
-    -   [429: Too many requests](#pc-error-429)
-    -   [500: Internal server error](#pc-error-500)
-    -   [501: Not implemented](#pc-error-501)
-    -   [502: Bad gateway](#pc-error-502)
-    -   [503: Service unavailable](#pc-error-503)
-    -   [504: Gateway timeout](#pc-error-504)
+    -   400: Bad request
+    -   401: Unauthorized
+    -   403: Forbidden
+    -   404: Not found
+    -   405: Method not allowed
+    -   406: Not acceptable
+    -   409: Conflict, error code
+    -   412: Precondition failed
+    -   429: Too many requests
+    -   500: Internal server error
+    -   501: Not implemented
+    -   502: Bad gateway
+    -   503: Service unavailable
+    -   504: Gateway timeout
 
 ## <span id="pc_error_payload"></span><span id="PC_ERROR_PAYLOAD"></span>Error responses
 

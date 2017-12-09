@@ -23,9 +23,9 @@ ms.technology: partner-center-sdk
 
 Partner Center has one set of SDK documentation. However, some functionality might not be available in the versions of Partner Center for Microsoft National Clouds. Developers need to consider the following changes to the SDK for these versions of Partner Center:
 
--   [Partner Center operated by 21Vianet](#partner-center-operated-by-21vianet)
--   [Partner Center for Microsoft Cloud Germany](#partner-center-cloud-germany)
--   [Partner Center for Microsoft Cloud for US Government](#partner-center-msftcloudus)
+-   [Partner Center operated by 21Vianet](#partner_center_operated_by_21vianet)
+-   [Partner Center for Microsoft Cloud Germany](#partner_center_cloud_germany)
+-   [Partner Center for Microsoft Cloud for US Government](#partner_center_msftcloudUS)
 
 Each overview topic contains an **Applies To** block at the top that describes which versions of Partner Center the topic applies to. Similarly, each managed reference topic contains the version information in the **Requirements** block at the bottom.
 
