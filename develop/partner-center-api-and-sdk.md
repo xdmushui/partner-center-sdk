@@ -42,7 +42,7 @@ There are different versions of Partner Center for specific regions, countries, 
 
     API reference documentation for the Partner Center REST headers, resources, and error messages.
 
--   [Partner Center Managed API reference](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.microsoft.partner.sdk.nodepage)
+-   [Partner Center Managed API reference](https://review.docs.microsoft.com/en-us/dotnet/api/?branch=master)
 
     API reference documentation for the Partner Center namespaces, classes and interfaces.
 

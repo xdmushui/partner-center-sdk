@@ -29,7 +29,7 @@ Updates a user's support profile.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To update your support profile, first [get your support profile](get-support-profile.md) and make any changes you wish. Then, use your [**IPartnerOperations.Profiles**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartneroperations.profiles) collection. Call the [**SupportProfile**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations) property, followed by the [**Update()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations_update) or [**UpdateAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofileoperations_updateasync) method.
+To update your support profile, first [get your support profile](get-support-profile.md) and make any changes you wish. Then, use your [**IPartnerOperations.Profiles**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.profiles) collection. Call the [**SupportProfile**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Update()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.update) or [**UpdateAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.updateasync) method.
 
 ```CSharp
 // IAggregatePartner partnerOperations;
