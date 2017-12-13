@@ -25,7 +25,7 @@ The following topic describes how to associate an existing Partner Center accoun
 
 ### <span id="Technologies"></span><span id="technologies"></span><span id="TECHNOLOGIES"></span>Technologies
 
--   [Partner Center](partner-center-api-and-sdk.md)
+-   [Partner Center](index.md)
 
 ### <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that partners can use the [Partner Center](partner-center-api-and-sdk.md) to programmatically manage utility functions.
+This section describes the ways that partners can use the [Partner Center](index.md) to programmatically manage utility functions.
 
 -   [Validate an address](validate-an-address.md)
 
