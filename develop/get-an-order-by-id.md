@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets a [Order](orders.md) resource that matches the customer and order ID.
+Gets an [Order](orders.md) resource that matches the customer and order ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

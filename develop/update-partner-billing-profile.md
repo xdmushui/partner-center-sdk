@@ -36,7 +36,7 @@ To update a partner billing profile, retrieve the existing profile. Once you hav
 
 BillingProfile existingBillingProfile = partnerOperations.Profiles.BillingProfile.Get();
 
-//updating the profile with a random phone number
+// update the profile with a purchase order number
 existingBillingProfile.PurchaseOrderNumber = new Random().Next(9000, 10000).ToString(CultureInfo.InvariantCulture);
 
 BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.BillingProfile.Update(existingBillingProfile);

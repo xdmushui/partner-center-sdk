@@ -88,7 +88,7 @@ Use the following query parameters to create the request.
 | Name   | Type   | Required | Description                                                                                                                                                                                                                                                                                   |
 |--------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional.                                                                                                                                                                                                                |
-| filter | filter | Yes      | The query that filters the search. To retrieve customers for a specified indirect reseller, you must insert the indirect reseller identifier in and include and encode the following string: {"Field":"IndirectReseller","Value":"{indirect reseller identifier}","Operator":"starts\_with"}. |
+| filter | filter | Yes      | The query that filters the search. To retrieve customers for a specified indirect reseller, you must insert the indirect reseller identifier and include and encode the following string: {"Field":"IndirectReseller","Value":"{indirect reseller identifier}","Operator":"starts\_with"}. |
 
  
 

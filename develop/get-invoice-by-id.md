@@ -83,7 +83,7 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, this method returns an **InvoiceSummary** object in the response.
+If successful, this method returns an **Invoice** object in the response.
 
 **Response success and error codes**
 

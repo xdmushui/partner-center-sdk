@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets a **Offer** resource that matches the offer ID.
+Gets an **Offer** resource that matches the offer ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -30,12 +30,12 @@ Gets a **Offer** resource that matches the offer ID.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country withe a call to **ByCountry()**, and then call the [**ByID()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, then call the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
+To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country with a call to **ByCountry()**, and then call the [**ByID()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, call the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
 
-```
+```CSharp
 // IAggretagePartner partnerOperations;
 
-//retrieve the offer ID
+// retrieve the offer ID
 var offers = state[FeatureSamplesApplication.OffersKey] as List<Offer>;
 
 var offerDetails = partnerOperations.Offers.ByCountry("US").ById(offers[0].Id).Get();
@@ -87,7 +87,7 @@ Connection: Keep-Alive
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, this method returns a **Offer** resource in the response body.
+If successful, this method returns an **Offer** resource in the response body.
 
 **Response success and error codes**
 

@@ -82,7 +82,7 @@ MS-CorrelationId: 03d6064a-f048-4aee-8892-ed46dc5c8bee
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
 
-If successful, this method returns a collection of **Managed Service** object in the response body.
+If successful, this method returns a collection of **Managed Service** objects in the response body.
 
 **Response success and error codes**
 

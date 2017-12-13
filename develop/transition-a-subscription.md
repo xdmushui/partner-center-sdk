@@ -37,7 +37,7 @@ To upgrade a customer's subscription, first [get that's customer's subscription]
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 // string subscriptionIdForUpgrade;
-// Upgrade TargetOffer; 
+// Upgrade targetOffer; 
 
 UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(subscriptionIdForUpgrade).Upgrades.Create(targetOffer);
 ```
@@ -64,7 +64,7 @@ Use the following query parameter to transition the subscription.
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.             |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the initial subscription. |
-| i**id-for-target**      | **guid** | Y        | A GUID corresponding to the target subscription.  |
+| **id-for-target**       | **guid** | Y        | A GUID corresponding to the target subscription.  |
 
  
 

@@ -35,9 +35,9 @@ The user state is set to "inactive" when you delete a user account. It remains t
 
 To delete an existing customer user account, use the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then call the [**Users.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user. Finally, call the [**Delete**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.delete) method to delete the user and set the user state to inactive.
 
-```
-// string selectedCustomerId;
+```CSharp
 // IAggregatePartner partnerOperations;
+// string selectedCustomerId;
 // string customerUserIdToDelete;
 
 partnerOperations.Customers.ById(selectedCustomerId).Users.ById(customerUserIdToDelete).Delete();

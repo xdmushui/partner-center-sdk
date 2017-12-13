@@ -29,23 +29,22 @@ Create a new user account for your customer.
 
 To obtain a new user account for a customer, create a new **CustomerUser** object with the relevant user information. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, followed by the **Create** method.
 
-```
+```CSharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 // var SelectedCustomer;
 
 var userToCreate = new CustomerUser()
-            {
-                PasswordProfile = new PasswordProfile() { ForceChangePassword = true, Password = "Password!1" },
-                DisplayName = "TestDisplayName",
-                FirstName = "TestFirstName",
-                LastName = "TestLastName",
-                UsageLocation = "US",
-                UserPrincipalName = Guid.NewGuid().ToString("N") + "@" + selectedCustomer.CompanyProfile.Domain.ToString()
-            };;
+{
+    PasswordProfile = new PasswordProfile() { ForceChangePassword = true, Password = "Password!1" },
+    DisplayName = "TestDisplayName",
+    FirstName = "TestFirstName",
+    LastName = "TestLastName",
+    UsageLocation = "US",
+    UserPrincipalName = Guid.NewGuid().ToString("N") + "@" + selectedCustomer.CompanyProfile.Domain.ToString()
+};
 
 User createdUser = partnerOperations.Customers.ById(selectedCustomerId).Users.Create(userToCreate);
-
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserCreate.cs

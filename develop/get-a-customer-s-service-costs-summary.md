@@ -28,9 +28,9 @@ Gets a customer's service costs for the specified billing period.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve a service costs summary for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then use the [**ServiceCosts**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicecosts) property to get an interface to customer service costs collection operations. Next, call the [**ByBillingPeriod**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.icustomerservicecostscollection.bybillingperiod) method with a member of the billing period enumerator to return an [**IServiceCostsCollection**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostscollection). Finally, use the [**IServiceCostsCollection.Summary.Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostsummary.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostsummary.getasync) method to get the customer’s service costs summary.
+To retrieve a service costs summary for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then use the [**ServiceCosts**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicecosts) property to get an interface to customer service costs collection operations. Next, call the [**ByBillingPeriod**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.icustomerservicecostscollection.bybillingperiod) method with a member of the [**ServiceCostsBillingPeriod**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicecosts.servicecostsbillingperiod) enumeration to return an [**IServiceCostsCollection**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostscollection). Finally, use the [**IServiceCostsCollection.Summary.Get**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostsummary.get) or [**GetAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostsummary.getasync) method to get the customer’s service costs summary.
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
@@ -50,7 +50,7 @@ var serviceCostsSummary = partnerOperations.Customers.ById(selectedCustomerId).S
 
 **URI parameter**
 
-Use the following path parameter to identify the customer.
+Use the following path parameters to identify the customer and the billing period.
 
 | Name           | Type   | Required | Description                                                                                                                      |
 |----------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------|

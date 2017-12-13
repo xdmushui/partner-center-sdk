@@ -30,8 +30,8 @@ Resetting a password is very similar to updating other details in an existing us
 To reset a password for a specified customer user, first retrieve the specified customer ID and the targeted user. Then, create a new **CustomerUser** object that contains the information for the existing customer, but with a new **PasswordProfile** object. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, the **ById()** method, and then the **Patch()**method.
 
 ```CSharp
-// string selectedCustomerId;
 // IAggregatePartner partnerOperations;
+// string selectedCustomerId;
 // CustomerUser specifiedUser;
 
 var selectedCustomer = partnerOperations.Customers.ById(selectedCustomerId).Get();

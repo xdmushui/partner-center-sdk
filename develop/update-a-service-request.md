@@ -35,7 +35,7 @@ To update a customer's service request, call the [**IServiceRequestCollection.By
 
 ```CSharp
 // IAggregatePartner partnerOperations;
-// ServiceRequest existingServiceRequest as ServiceRequest;
+// ServiceRequest existingServiceRequest;
 
 ServiceRequest updatedServiceRequest = partnerOperations.ServiceRequests.ById(existingServiceRequest.Id).Patch(new ServiceRequest
 {
@@ -121,7 +121,7 @@ Expect: 100-continue
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, this method returns updated **Service Request** resource properties in the response body.
+If successful, this method returns a **Service Request** resource with updated properties in the response body.
 
 **Response success and error codes**
 
