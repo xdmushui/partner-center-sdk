@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](partner-center-api-and-sdk.md) to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
+This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
 
 **Azure rates and utilization:**
 
