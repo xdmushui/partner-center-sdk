@@ -29,7 +29,7 @@ Gets the managed services for a customer. In other words, get links to all of th
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To display a list of all the managed services for a customer, use your **IAggregatePartner.Customers** collection and call the [**ById()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ManagedServices**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.managedservices) property, followed by the [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.getasync) methods.
+To display a list of all the managed services for a customer, use your **IAggregatePartner.Customers** collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ManagedServices**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.managedservices) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.getasync) methods.
 
 ```CSharp
 // IAggregatePartner partnerOperations;

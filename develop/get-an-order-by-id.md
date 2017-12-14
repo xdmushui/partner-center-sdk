@@ -31,7 +31,7 @@ Gets an [Order](orders.md) resource that matches the customer and order ID.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a customer's order by ID, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Orders**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**ByID()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method once more. Finish by calling [**Get()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.get) or [**GetAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.getasync).
+To get a customer's order by ID, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method once more. Finish by calling [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.getasync).
 
 ```CSharp
 // IAggregatePartner partnerOperations;

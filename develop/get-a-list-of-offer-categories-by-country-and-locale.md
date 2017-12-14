@@ -29,7 +29,7 @@ Gets a collection that contains all the offer categories in a given country/regi
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of offer categories in a given country/region and locale, use your [**IAggregatePartner.Operations**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection, call the [**With()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context, and inspect the [**OfferCategories**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
+To get a list of offer categories in a given country/region and locale, use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection, call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context, and inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
 
 ```CSharp
 // IAggregatePartner partnerOperations;

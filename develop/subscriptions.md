@@ -112,7 +112,7 @@ suspended or cancelled.
 <tr class="even">
 <td>billingCycle</td>
 <td>string</td>
-<td>Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
+<td>Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>

@@ -31,11 +31,11 @@ How to create an order for a customer. For more information about what is curren
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To create an order for a customer, first instantiate an [**Order**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
+To create an order for a customer, first instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
 
-Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
-Finally, call the [**Create**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
+Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
 ```
 IAggregatePartner partnerOperations;
@@ -125,7 +125,7 @@ This table describes the **Order** properties in the request body.
 <td>billingCycle</td>
 <td>string</td>
 <td>No</td>
-<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
+<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>
