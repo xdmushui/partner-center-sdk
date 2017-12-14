@@ -89,7 +89,7 @@ to their customers.
 </tr>
 <tr class="even">
 <td>category</td>
-<td>[OfferCategory](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.offer.category)</td>
+<td>[OfferCategory](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.offer.category)</td>
 <td>Gets or sets the category.</td>
 </tr>
 <tr class="odd">
@@ -115,7 +115,7 @@ to their customers.
 <tr class="odd">
 <td>supportedBillingCycles</td>
 <td>array of strings</td>
-<td>Indicates the billing cycles supported for this offer. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
+<td>Indicates the billing cycles supported for this offer. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>

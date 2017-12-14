@@ -31,7 +31,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of all customers, use your [**IAggregatePartner.Customers**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://review.docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
+To get a list of all customers, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
 
 ```
 // IAggregatePartner partnerOperations;
