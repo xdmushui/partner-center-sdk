@@ -7,6 +7,7 @@ ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
+#Partner Center Managed API Reference
 
 The Partner Center managed API helps partners integrate their existing customer relationship management or billing software with the Microsoft systems that manage customer accounts, place orders, manage subscriptions, and handle support requests in Partner Center. 
 The Managed API also includes token management so that you don’t have to refresh your Azure AD tokens and authentication each hour, and a simple interface library for network calls with retries.
