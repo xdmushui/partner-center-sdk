@@ -1,1 +1,0 @@
-# Welcome to partner-center-test!
