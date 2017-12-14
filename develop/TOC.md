@@ -119,7 +119,7 @@
 #### [Get address formatting rules by market](get-market-specific-validation-data.md)
 #### [Verify domain availability](verify-domain-availability.md)
 #### [Delete a customer account from the integration sandbox](delete-a-customer-account-from-the-integration-sandbox.md)
-## [Partner Center Managed API reference](develop/partner-center-managed-api.md)
+## [Partner Center Managed API reference](partner-center-managed-api.md)
 ## [Partner Center REST API reference](partner-center-rest-api-reference.md)
 ### [Partner Center REST URLs](partner-center-rest-urls.md)
 ### [Partner Center REST headers](headers.md)
