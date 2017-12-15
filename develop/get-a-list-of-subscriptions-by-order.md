@@ -33,7 +33,7 @@ Gets a collection of [Subscription](subscriptions.md) resources that correspond 
 
 To get a list of subscriptions by order, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the **ByOrder()** method. Finish by calling [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.getasync).
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // var selectedCustomerId as string;
 // string orderID;

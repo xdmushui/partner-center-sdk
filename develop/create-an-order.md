@@ -37,7 +37,7 @@ Next, obtain an interface to order operations by calling the [**IAggregatePartne
 
 Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
-```
+```CSharp
 IAggregatePartner partnerOperations;
 string customerId;
 string offerId;

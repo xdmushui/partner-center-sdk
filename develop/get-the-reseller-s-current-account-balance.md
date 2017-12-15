@@ -31,7 +31,7 @@ Retrieves the partner's current account balance.
 
 To retrieve your account balance, use your **IAggregatePartner.Invoices** collection, and then call the **Summary** property. Then call the **Get** function, and finally call the **BalanceAmount** property.
 
-```
+```CSharp
 // IAggregatePartner scopedPartnerOperations;
 
 var invoiceSummary = scopedPartnerOperations.Invoices.Summary.Get();

@@ -32,7 +32,7 @@ How to delete a customer account from the Testing in Production (Tip) integratio
 
 To delete a customer from the integration sandbox, first log into the sandbox using your TIP account credentials. Then, use your [**IPartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the **Delete** method.
 
-```
+```CSharp
 // IPartnerCredentials tipAccountCredentials;
 // string customerTenantId;
 

@@ -33,7 +33,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To get a list of all customers, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 
 var allCustomers = new List<Customer>();

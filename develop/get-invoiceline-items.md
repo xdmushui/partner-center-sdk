@@ -40,7 +40,7 @@ To get a collection of line items that correspond to an InvoiceDetail instance, 
 
 Finally, create an enumerator to traverse the collection as shown in the following example.
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // int invoicePageSize;
 // string invoiceId;

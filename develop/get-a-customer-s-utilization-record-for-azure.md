@@ -38,7 +38,7 @@ This REST API is paged. If the response payload is larger than a single page, yo
 
 To obtain the Azure Utilization Records, you first need a customer ID and a subscription ID. You then call the [**IAzureUtilizationCollection.Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.utilization.iazureutilizationcollection.query) method to return a [**ResourceCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.resourcecollection-1) that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
 
-```
+```CSharp
 // string customerId;
 // string subscriptionId;
 
