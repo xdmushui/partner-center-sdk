@@ -44,7 +44,7 @@ Partner Center uses Azure AD for authentication, and to use the Partner Center A
 
 2.  Sign in to Azure AD from the Azure management portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
 
-3.  In the Azure management portal, **Add application**. Search for `fa3d9a0c-3fb0-42cc-9193-47c7ecd2edbd`, which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**.
+3.  In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
 
 ## <span id="managedApp"></span><span id="managedapp"></span><span id="MANAGEDAPP"></span>Authentication with App credentials and the managed API
 
