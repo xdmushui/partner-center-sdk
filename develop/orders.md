@@ -25,6 +25,9 @@ To</span>
 A partner places an order when a customer wants to buy a subscription
 from a list of offers.
 
+**Note** The Order resource has a rate limit of 500 requests per minute per tenant identifier.
+
+
 ## <span id="order"></span><span id="ORDER"></span>Order
 
 
