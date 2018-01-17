@@ -15,8 +15,6 @@ ms.technology: partner-center-sdk
 **Applies To**
 
 -   Partner Center
--   Partner Center for Microsoft Cloud Germany 
--   Partner Center for Microsoft Cloud for US Government
 
 
 Remove a reseller relationship with a customer that you no longer have transactions with. 
