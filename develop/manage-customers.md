@@ -25,7 +25,9 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Create a customer](create-a-customer.md)
 
--   [Request a reseller relationship](request-reseller-relationship.md)
+-   [Request a reseller relationship](request-reseller-relationship.md) 
+
+-   [Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md) 
 
 **Look up a customer**
 
@@ -75,7 +77,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Assign licenses to a user](assign-licenses-to-a-user.md)
 
--   [Check which licenses are assigned to a user](check-which-licenses-are-assigned-to-a-user.md)
+-   [Check which licenses are assigned to a user](check-which-licenses-are-assigned-to-a-user.md) 
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 
