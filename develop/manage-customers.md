@@ -27,8 +27,6 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Request a reseller relationship](request-reseller-relationship.md) 
 
--   [Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md) 
-
 **Look up a customer**
 
 -   [Get a customer by ID](get-a-customer-by-id.md)
