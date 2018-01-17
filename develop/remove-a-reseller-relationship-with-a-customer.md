@@ -14,7 +14,7 @@ ms.technology: partner-center-sdk
 
 **Applies To**
 
--   Partner Center
+-   Partner Center 
 
 
 Remove a reseller relationship with a customer that you no longer have transactions with. 
