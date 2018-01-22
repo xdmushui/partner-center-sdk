@@ -77,6 +77,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create a customer](create-a-customer.md)</p></li>
 <li><p>[Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md)</p></li>
 <li><p>[Retrieve a relationship request URL](request-reseller-relationship.md)</p></li>
+<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li>
 </ul>
 <p>Look up a customer</p>
 <ul>

@@ -196,46 +196,57 @@ Date: Fri, 04 Aug 2017 23:48:28 GMT
 ﻿{
     "totalCount": 2,
     "items": [{
-            "usageStartTime": "2017-07-08T17:00:00-07:00",
-            "usageEndTime": "2017-07-09T17:00:00-07:00",
+            "usageStartTime": "2017-06-07T17:00:00-07:00",
+            "usageEndTime": "2017-06-08T17:00:00-07:00",
             "resource": {
-                "id": "cbb21f5a-b453-4101-b240-21772070da0b",
-                "name": "Compute Hours",
-                "category": "Virtual Machines",
-                "subcategory": "Standard_D1_v2 VM (Windows)",
-                "region": "US West"
+                "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
+                "name": "Storage Admin",
+                "category": "Storage",
+                "subcategory": "Block Blob",
+                "region": "Azure Stack" 
             },
-            "quantity": 8.0,
-            "unit": "Hours",
+            "quantity": 0.217790327034891,
+            "unit": "1 GB/Hr",
             "infoFields": {},
             "instanceData": {
-                "resourceUri": "/subscriptions/fc8f8908-f918-4406-af13-d5bc0fe41865/resourceGroups/RG1/providers/Microsoft.Compute/virtualMachines/testvm2",
-                "location": "westus",
+                "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount", 
+                "location": "azurestack",
                 "partNumber": "",
-                "orderNumber": ""
+                "orderNumber": "",
+                "additionalInfo": { 
+                    "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857", 
+                    "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027", 
+                    "azureStack.Location": "local", 
+                    "azureStack.EventDateTime": "06/05/2017 06:00:00"
+                }
             },
             "attributes": {
                 "objectType": "AzureUtilizationRecord"
             }
         }, {
-            "usageStartTime": "2017-07-08T17:00:00-07:00",
-            "usageEndTime": "2017-07-09T17:00:00-07:00",
+            "usageStartTime": "2017-06-07T17:00:00-07:00",
+            "usageEndTime": "2017-06-08T17:00:00-07:00",
             "resource": {
-                "id": "cbb21f5a-b453-4101-b240-21772070da0b",
-                "name": "Compute Hours",
-                "category": "Virtual Machines",
-                "subcategory": "Standard_D1_v2 VM (Windows)",
-                "region": "US West"
+                "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
+                "name": "Storage Admin",
+                "category": "Storage",
+                "subcategory": "Block Blob",
+                "region": "Azure Stack" 
             },
-            "quantity": 8.0,
-            "unit": "Hours",
+            "quantity": 0.217790327034891,
+            "unit": "1 GB/Hr",
             "infoFields": {},
             "instanceData": {
-                "resourceUri": "/subscriptions/fc8f8908-f918-4406-af13-d5bc0fe41865/resourceGroups/RG1/providers/Microsoft.Compute/virtualMachines/testvm12",
-                "location": "westus",
+                "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount", 
+                "location": "azurestack",
                 "partNumber": "",
-                "orderNumber": ""
-            },
+                "orderNumber": "",
+                "additionalInfo": { 
+                    "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857", 
+                    "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027", 
+                    "azureStack.Location": "local", 
+                    "azureStack.EventDateTime": "06/05/2017 06:00:00"
+                }
             "attributes": {
                 "objectType": "AzureUtilizationRecord"
             }
