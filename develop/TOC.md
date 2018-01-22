@@ -62,7 +62,7 @@
 #### [View deleted users for a customer](view-a-deleted-user.md)
 ### [Place orders](place-orders.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
-#### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)
+#### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md
 #### [Create an order](create-an-order.md)
 #### [Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)
 #### [Get a list of add-ons for a subscription](get-a-list-of-add-ons-for-a-subscription.md)
@@ -77,6 +77,7 @@
 #### [Get subscription provisioning status](get-subscription-provisioning-status.md)
 #### [Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)
 #### [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
+#### [Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md) 
 #### [Suspend a subscription](suspend-a-subscription.md)
 #### [Transition a subscription](transition-a-subscription.md)
 ### [Manage billing](manage-invoices.md)
