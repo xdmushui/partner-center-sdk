@@ -149,4 +149,5 @@
 #### [Upgrade](upgrade.md)
 #### [User](user.md)
 #### [Utility Resources](utility-resources.md)
-### [Partner Center REST error codes](error-codes.md)
+### [Partner Center REST error codes](error-codes.md) 
+### [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) 
