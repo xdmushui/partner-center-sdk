@@ -44,7 +44,7 @@ finding the sample code.
 | [Partner Center REST URLs](partner-center-rest-urls.md)           | Defines the REST API endpoints for different versions of Partner Center.                                                                                                                                         |
 | [Partner Center REST headers](headers.md)                         | Defines the request and response headers used by the REST API.                                                                                                                                                   |
 | [Partner Center REST resources](partner-center-rest-resources.md) | Defines the JSON constructs that represent the objects needed to use the REST API.                                                                                                                               |
-| [Partner Center REST error codes](error-codes.md)                 | The Partner Center API returns standard HTTP success and error codes. Partners can review the error type and occasionally additional parameters to determine whether their requests succeeded and to help debug. |
+| [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md)              | Lists the locales, languages, and country/region codes that are supported in the Partner Center APIs. |
 
  
 
