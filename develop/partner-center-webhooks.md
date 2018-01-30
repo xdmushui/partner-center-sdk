@@ -14,11 +14,14 @@ ms.technology: partner-center-sdk
 
 **Applies To**
 
--   Partner Center
+-   Partner Center   
+-   Partner Center operated by 21Vianet
+-   Partner Center for Microsoft Cloud Germany
+-   Partner Center for Microsoft Cloud for US Government
 
-The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner’s registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that itt was sent from Partner Center. 
+The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner’s registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center. 
 
-Partners can select from the following Webhook events supported by Partner Center. 
+Partners can select from Webhook events, like the following, that are supported by Partner Center.  
 
 -   **Test Event ("test-created")**
 
@@ -41,13 +44,13 @@ The following sample shows an event posted from Partner Center.
 
 ```
 POST /webhooks/callback
-content-type: application/json
-authorization: Signature VOhcjRqA4f7u/4R29ohEzwRZibZdzfgG5/w4fHUnu8FHauBEVch8m2+5OgjLZRL33CIQpmqr2t0FsGF0UdmCR2OdY7rrAh/6QUW+u+jRUCV1s62M76jbVpTTGShmrANxnl8gz4LsbY260LAsDHufd6ab4oejerx1Ey9sFC+xwVTa+J4qGgeyIepeu4YCM0oB2RFS9rRB2F1s1OeAAPEhG7olp8B00Jss3PQrpLGOoAr5+fnQp8GOK8IdKF1/abUIyyvHxEjL76l7DVQN58pIJg4YC+pLs8pi6sTKvOdSVyCnjf+uYQWwmmWujSHfyU37j2Fzz16PJyWH41K8ZXJJkw==
-x-ms-certificate-url: https://3psostorageacctppe.blob.core.windows.net/3pso/pcnotifications.microsoft-ppe.com.cer
-x-ms-signature-algorithm: rsa-sha256
-host: api.partnercenter.microsoft.com
-accept-encoding: gzip, deflate
-content-length: 195
+Content-Type: application/json
+Authorization: Signature VOhcjRqA4f7u/4R29ohEzwRZibZdzfgG5/w4fHUnu8FHauBEVch8m2+5OgjLZRL33CIQpmqr2t0FsGF0UdmCR2OdY7rrAh/6QUW+u+jRUCV1s62M76jbVpTTGShmrANxnl8gz4LsbY260LAsDHufd6ab4oejerx1Ey9sFC+xwVTa+J4qGgeyIepeu4YCM0oB2RFS9rRB2F1s1OeAAPEhG7olp8B00Jss3PQrpLGOoAr5+fnQp8GOK8IdKF1/abUIyyvHxEjL76l7DVQN58pIJg4YC+pLs8pi6sTKvOdSVyCnjf+uYQWwmmWujSHfyU37j2Fzz16PJyWH41K8ZXJJkw==
+X-MS-Certificate-Url: https://3psostorageacct.blob.core.windows.net/cert/pcnotifications.microsoft.com.cer
+X-MS-Signature-Algorithm: rsa-sha256
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
+Content-Length: 195
 
 {
     "EventName": "test-created",
@@ -132,14 +135,14 @@ host: api.partnercenter.microsoft.com
 
 ```
 HTTP/1.1 200
-status: 200
-content-length: 183
-content-type: application/json; charset=utf-8
-content-encoding: gzip
-vary: Accept-Encoding
-ms-correlationid: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
-ms-requestid: 79419bbb-06ee-48da-8221-e09480537dfc
-x-locale: en-US
+Status: 200
+Content-Length: 183
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
+MS-RequestId: 79419bbb-06ee-48da-8221-e09480537dfc
+X-Locale: en-US
  
 [ "subscription-updated", "test-created" ]
 ```
@@ -158,13 +161,12 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 ```
 POST /webhooks/v1/registration
-content-type: application/json
-ms-debug: true
-authorization: Bearer eyJ0e…..
-accept: */*
-host: api.partnercenter.microsoft.com
-accept-encoding: gzip, deflate
-content-length: 219
+Content-Type: application/json
+Authorization: Bearer eyJ0e…..
+Accept: */*
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
+Content-Length: 219
  
 {
     "WebhookUrl": "{{YourCallbackUrl}}",
@@ -176,14 +178,14 @@ content-length: 219
 
 ```
 HTTP/1.1 200
-status: 200
-content-length: 183
-content-type: application/json; charset=utf-8
-content-encoding: gzip
-vary: Accept-Encoding
-ms-correlationid: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
-ms-requestid: 79419bbb-06ee-48da-8221-e09480537dfc
-x-locale: en-US
+Status: 200
+Content-Length: 183
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
+MS-RequestId: 79419bbb-06ee-48da-8221-e09480537dfc
+X-Locale: en-US
  
 [ "subscription-updated", "test-created" ]
 ```
@@ -202,25 +204,25 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 ```
 GET /webhooks/v1/registration
-content-type: application/json
-authorization: Bearer …
-accept: */*
-host: api.partnercenter.microsoft.com
-accept-encoding: gzip, deflate
+Content-Type: application/json
+Authorization: Bearer …
+Accept: */*
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
 ```
 
 **Response example**   
 
 ```
 HTTP/1.1 200
-status: 200
-content-length: 341
-content-type: application/json; charset=utf-8
-content-encoding: gzip
-vary: Accept-Encoding
-ms-correlationid: c3b88ab0-b7bc-48d6-8c55-4ae6200f490a
-ms-requestid: ca30367d-4b24-4516-af08-74bba6dc6657
-x-locale: en-US
+Status: 200
+Content-Length: 341
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: c3b88ab0-b7bc-48d6-8c55-4ae6200f490a
+MS-RequestId: ca30367d-4b24-4516-af08-74bba6dc6657
+X-Locale: en-US
 
 {
     "WebhookUrl": "{{YourCallbackUrl}}",
@@ -241,26 +243,26 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 ```
 POST /webhooks/v1/registration/validationEvents
-ms-correlationid: 3ef0202b-9d00-4f75-9cff-15420f7612b3
-authorization: Bearer …
-accept: */*
-host: api.partnercenter.microsoft.com
-accept-encoding: gzip, deflate
-content-length:
+MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
+Authorization: Bearer …
+Accept: */*
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
+Content-Length:
 ```
 
 **Response example**   
 
 ```
 HTTP/1.1 200
-status: 200
-content-length: 181
-content-type: application/json; charset=utf-8
-content-encoding: gzip
-vary: Accept-Encoding
-ms-correlationid: 04af2aea-d413-42db-824e-f328001484d1
-ms-requestid: 2f498d5a-a6ab-468f-98d8-93c96da09051
-x-locale: en-US
+Status: 200
+Content-Length: 181
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: 04af2aea-d413-42db-824e-f328001484d1
+MS-RequestId: 2f498d5a-a6ab-468f-98d8-93c96da09051
+X-Locale: en-US
 
 { "correlationId": "04af2aea-d413-42db-824e-f328001484d1" }
 ```
@@ -278,25 +280,25 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 ```
 GET /webhooks/v1/registration/validationEvents/04af2aea-d413-42db-824e-f328001484d1
-ms-correlationid: 3ef0202b-9d00-4f75-9cff-15420f7612b3
-authorization: Bearer …
-accept: */*
-host: api.partnercenter.microsoft.com
-accept-encoding: gzip, deflate
+MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
+Authorization: Bearer …
+Accept: */*
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
 ```
 
 **Response example**     
 
 ```
 HTTP/1.1 200
-status: 200
-content-length: 469
-content-type: application/json; charset=utf-8
-content-encoding: gzip
-vary: Accept-Encoding
-ms-correlationid: 497e0a23-9498-4d6c-bd6a-bc4d6d0054e7
-ms-requestid: 0843bdb2-113a-4926-a51c-284aa01d722e
-x-locale: en-US
+Status: 200
+Content-Length: 469
+Content-Type: application/json; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: 497e0a23-9498-4d6c-bd6a-bc4d6d0054e7
+MS-RequestId: 0843bdb2-113a-4926-a51c-284aa01d722e
+X-Locale: en-US
 
 {
     "correlationId": "04af2aea-d413-42db-824e-f328001484d1",
