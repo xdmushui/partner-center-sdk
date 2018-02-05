@@ -17,7 +17,8 @@ ms.technology: partner-center-sdk
 -   Partner Center   
 -   Partner Center operated by 21Vianet
 -   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+-   Partner Center for Microsoft Cloud for US Government   
+
 
 The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner’s registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center. 
 
@@ -33,10 +34,16 @@ Partners can select from Webhook events, like the following, that are supported 
 
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to “real time” as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 
+For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
+
+## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+
+
+-   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.   
+
+
+
 ## <span id="receivingEvents"></span><span id="RECEIVINGEVENTS"></span>Receiving events from Partner Center
-
-
-**Receiving events from Partner Center**
 
 To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery. 
 
