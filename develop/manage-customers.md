@@ -51,7 +51,9 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Update a customer's billing profile](update-a-customer-s-billing-profile.md)
 
--   [Get a customer's company profile](get-a-customer-s-company-profile.md)
+-   [Get a customer's company profile](get-a-customer-s-company-profile.md)   
+
+-   [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
 
 **Manage user accounts and assign licenses**
 
