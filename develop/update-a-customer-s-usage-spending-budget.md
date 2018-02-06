@@ -3,7 +3,7 @@ title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
 ms.author: v-thpr
-ms.date: 12/15/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -12,17 +12,11 @@ ms.technology: partner-center-sdk
 # Update a customer's usage spending budget
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
-
-\[Some information relates to pre-released product which may be
-substantially modified before it's commercially released. Microsoft
-makes no warranties, express or implied, with respect to the information
-provided here.\]
 
 Update the [spending budget](customer-usage.md#customerusagesummary)
 allocated for a customer's usage.
@@ -30,24 +24,19 @@ allocated for a customer's usage.
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 
--   Credentials as described in [Partner Center
-    authentication](partner-center-authentication.md). This scenario
-    supports authentication with both standalone App and App+User
-    credentials.
--   A customer ID (customer-tenant-id). If you do not have a customer's
-    ID, you can look up the ID in Partner Center by choosing the
-    customer from the customers list, selecting Account, then saving
-    their Microsoft ID.
+-   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+-   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the
+    customer from the customers list, selecting Account, then saving their Microsoft ID.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
 To update a customer's usage spending budget, first create a new
-**SpendingBudget** object with the updated amount. Then use the
-**IAggregatePartner.Customers** collection and call the **ById()**
-method with the specified customer's ID. Then access the **UsageBudget**
-property and pass the updated usage budget to the **Patch()** or
-**PatchAsync()** method.
+[**SpendingBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
+[**IAggregatePartner.Customers**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
+property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
+[**PatchAsync()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
 ```CSharp
 // IAggregatePartner partnerOperations;
@@ -59,8 +48,45 @@ var newUsageBudget = new SpendingBudget()
     Amount = 100
 };
 
-// Update the customer&#39;s usage budget.
-## var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
+// Update the customer's usage budget.
+var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
+```
+
+
+
+## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> REST Request
+
+
+**Request syntax**
+
+| Method    | Request URI                                                                                             |
+|-----------|---------------------------------------------------------------------------------------------------------|
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |   
+ 
+
+**URI parameter**
+
+Use the following query parameter to update the billing profile.
+
+| Name                   | Type     | Required | Description                                                                                                                                            |
+|------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+
+ 
+
+**Request headers**
+
+-   See [Headers](headers.md) for more information.
+
+
+**Request body**
+
+The full resource.
+
+
+**Request example**
+
+```
 PATCH https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/usagebudget HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
@@ -74,7 +100,24 @@ X-Locale: "en-US"
      "Attributes": {
           "ObjectType": "SpendingBudget"
      }
-## }
+}
+```
+
+
+
+## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> REST Response
+
+If successful, this method returns a user's spending budget with the updated amount.
+
+
+**Response success and error codes**
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+
+
+**Response example**
+
+```
 HTTP/1.1 200 OK
 Content-Length: 12014
 Content-Type: application/json
@@ -98,5 +141,5 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
         }
     }
 }
-
+```
 
