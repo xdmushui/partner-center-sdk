@@ -61,7 +61,7 @@ var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudg
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |   
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
  
 
 **URI parameter**
@@ -87,7 +87,7 @@ The full resource.
 **Request example**
 
 ```
-PATCH https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/usagebudget HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
 MS-RequestId: 312b044d-dc41-4b37-c2d5-7d27322d9654
@@ -135,7 +135,7 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
     },
     "links":{
         "self":{
-            "uri":"/v1/customers/{customer-tenant-id}/usagebudget",
+            "uri":"/v1/customers/<customer-tenant-id>/usagebudget",
             "method":"PATCH",
             "headers":[]
         }
