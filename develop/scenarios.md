@@ -77,7 +77,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create a customer](create-a-customer.md)</p></li>
 <li><p>[Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md)</p></li>
 <li><p>[Retrieve a relationship request URL](request-reseller-relationship.md)</p></li>
-<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li>
+<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li> 
 </ul>
 <p>Look up a customer</p>
 <ul>
@@ -96,6 +96,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a customer's billing profile](get-all-of-a-customer-s-billing-profiles.md)</p></li>
 <li><p>[Update a customer's billing profile](update-a-customer-s-billing-profile.md)</p></li>
 <li><p>[Get a customer's company profile](get-a-customer-s-company-profile.md)</p></li>
+<li><p>[Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)</p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
@@ -194,6 +195,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create a service request](create-a-service-request-.md)</p></li>
 <li><p>[Get service request support topics](get-service-request-support-topics--pending-.md)</p></li>
 <li><p>[Get all service requests for a customer](get-all-service-requests-for-a-customer.md)</p></li>
+<li><p>[Get service request details by ID](get-service-request-details-by-id.md)</p></li> 
 <li><p>[Update a service request](update-a-service-request.md)</p></li>
 </ul></td>
 </tr>
