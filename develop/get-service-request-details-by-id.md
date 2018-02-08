@@ -35,7 +35,7 @@ To retrieve the details of an existing customer service request, call the [**ISe
 // IAggregatePartner partnerOperations;
 // ServiceRequest existingServiceRequest as ServiceRequest;
 
-ServiceRequest serviceRequestDetails = partnerOperations.ServiceRequests.ById(existingServiceRequest.Id);
+ServiceRequest serviceRequestDetails = partnerOperations.ServiceRequests.ById(existingServiceRequest.Id).Get();
 
 Console.WriteLine(string.Format("The primary contact for the service request {0} is {1} {2}.", 
     serviceRequestDetails.Title, 
