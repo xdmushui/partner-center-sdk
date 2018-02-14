@@ -21,68 +21,29 @@ To</span>
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Partner Center Webhook events... 
+Partner Center Webhook events are resource change events delivered in the form of HTTP POSTs to a registered URL. To receive an event from Partner Center, you host a callback where Partner Center can POST the event. The event is digitally signed so you can validate that it was sent from Partner Center. 
 
-## <span id="receivingEvents"></span><span id="RECEIVINGEVENTS"></span>Receiving events from Partner Center
-
-To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery. 
-
-The following sample shows an event posted from Partner Center.
-
-```
-POST /webhooks/callback
-Content-Type: application/json
-Authorization: Signature VOhcjRqA4f7u/4R29ohEzwRZibZdzfgG5/w4fHUnu8FHauBEVch8m2+5OgjLZRL33CIQpmqr2t0FsGF0UdmCR2OdY7rrAh/6QUW+u+jRUCV1s62M76jbVpTTGShmrANxnl8gz4LsbY260LAsDHufd6ab4oejerx1Ey9sFC+xwVTa+J4qGgeyIepeu4YCM0oB2RFS9rRB2F1s1OeAAPEhG7olp8B00Jss3PQrpLGOoAr5+fnQp8GOK8IdKF1/abUIyyvHxEjL76l7DVQN58pIJg4YC+pLs8pi6sTKvOdSVyCnjf+uYQWwmmWujSHfyU37j2Fzz16PJyWH41K8ZXJJkw==
-X-MS-Certificate-Url: https://3psostorageacct.blob.core.windows.net/cert/pcnotifications.microsoft.com.cer
-X-MS-Signature-Algorithm: rsa-sha256
-Host: api.partnercenter.microsoft.com
-Accept-Encoding: gzip, deflate
-Content-Length: 195
-
-{
-    "EventName": "test-created",
-    "ResourceUri": "http://localhost:16722/v1/webhooks/registration/test",
-    "ResourceName": "test",
-    "AuditUri": null,
-    "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
-} 
-```
-
-**Note** the Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
-
-## <span id="AuthenticateCallback"></span><span id="authenticatecallback"></span><span id="AUTHENTICATECALLBACK"></span>How to authenticate the callback
+For information on how to receive events, authenticate a callback, and use the Partner Center APIs to create, view, and update an event registration, see [Partner Center Webhooks](partner-center-webhooks.md).
 
 
-To authenticate the callback event received from Partner Center, do the following:
+## <span id="supportedEvents"></span><span id="SUPPORTEDEVENTS"></span>Supported Events
 
-1.	Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
-2.	Download the certificate used to sign the content (x-ms-certificate-url).
-3.	Verify the Certificate Chain.
-4.	Verify the “Organization” of the certificate.
-5.	Read the content with UTF8 encoding into a buffer.
-6.	Create an RSA Crypto Provider.
-7.	Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
-8.	If the verification succeeds, process the message.
+The following webhook events are supported by Partner Center.
 
-## <span id="EventModel"></span><span id="eventmodel"></span><span id="EVENTMODEL"></span>Event model
+### <span id="testEvent"></span><span id="TESTEVENT"></span>Test Event
 
-
-The following table describes the properties of a Partner Center event.
+This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to “test-created” events and data older than 7 days will be purged.
 
 **Properties**
 
 | Name                      | Description                                                                           |
 |---------------------------|---------------------------------------------------------------------------------------|
-| **EventName**             | The name of the event. In the form {resource}-{action}. For example, "test-created".  |
-| **ResourceUri**           | The URI of the resource that changed.                                                 |
-| **ResourceName**          | The name of the resource that changed.                                                |
-| **AuditUrl**              | Optional. The URI of the Audit record.                                                |
-| **ResourceChangeUtcDate** | The date and time, in UTC format, when the resource change occurred.                  |
+| **EventName**             | test-created|
+| **ResourceUri**           | "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f"                                                 |
+| **ResourceName**          | test                                                |   
 
 
 **Sample**
-
-The following sample shows the structure of a Partner Center event.
 
 ```
 {
@@ -93,3 +54,31 @@ The following sample shows the structure of a Partner Center event.
     "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
 }
 ```
+
+### <span id="subscriptionUpdatedEvent"></span><span id="SUBSCRIPTIONUPDATEDEVENT"></span>Subscription Updated Event
+
+This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API. 
+
+**Properties**
+
+| Name                      | Description                                                                           |
+|---------------------------|---------------------------------------------------------------------------------------|
+| **EventName**             | subscription-updated                                                                  |
+| **ResourceUri**           | "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f"                                                 |
+| **ResourceName**          | subscription                                                |   
+
+
+**Sample**
+
+```
+{
+    "EventName": "subscription-updated",
+    "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/",
+    "ResourceName": "subscription",
+    "AuditUri": null,
+    "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
+}
+```
+
+
+

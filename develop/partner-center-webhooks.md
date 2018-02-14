@@ -186,15 +186,18 @@ Content-Length: 219
 ```
 HTTP/1.1 200
 Status: 200
-Content-Length: 183
+Content-Length: 346
 Content-Type: application/json; charset=utf-8
-Content-Encoding: gzip
+content-encoding: gzip
 Vary: Accept-Encoding
-MS-CorrelationId: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
-MS-RequestId: 79419bbb-06ee-48da-8221-e09480537dfc
-X-Locale: en-US
- 
-[ "subscription-updated", "test-created" ]
+MS-CorrelationId: 718f2336-8b56-4f42-93ac-54896047c59a
+MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2 
+
+{
+    "SubscriberId": "e82cac64-dc67-4cd3-849b-78b6127dd57d",
+    "WebhookUrl": "{{YourCallbackUrl}}",
+    "WebhookEvents": [ "subscription-updated", "test-created" ]
+}
 ```
 
 
@@ -234,6 +237,52 @@ X-Locale: en-US
 {
     "WebhookUrl": "{{YourCallbackUrl}}",
     "WebhookEvents": ["subscription-updated", "test-created"]
+}
+```
+
+
+
+### <span id="UpdateEventRegistration"></span><span id="updateeventregistration"></span><span id="UPDATEEVENTREGISTRATION"></span>Update an event registration      
+
+Updates an existing event registration. 
+
+**Resource URL**   
+https://api.partnercenter.microsoft.com/webhooks/v1/registration
+
+
+**Request example**   
+
+```
+PUT /webhooks/v1/registration
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOR…
+Accept: */*
+Host: api.partnercenter.microsoft.com
+Accept-Encoding: gzip, deflate
+Content-Length: 258
+ 
+{
+    "WebhookUrl": "{{YourCallbackUrl}}",
+    "WebhookEvents": ["subscription-updated", "test-created"]
+}
+```
+
+**Response example**   
+
+```
+HTTP/1.1 200
+Status: 200
+Content-Length: 346
+Content-Type: application/json; charset=utf-8
+content-encoding: gzip
+Vary: Accept-Encoding
+MS-CorrelationId: 718f2336-8b56-4f42-93ac-54896047c59a
+MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2 
+
+{
+    "SubscriberId": "e82cac64-dc67-4cd3-849b-78b6127dd57d",
+    "WebhookUrl": "{{YourCallbackUrl}}",
+    "WebhookEvents": [ "subscription-updated", "test-created" ]
 }
 ```
 
