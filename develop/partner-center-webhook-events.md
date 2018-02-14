@@ -4,7 +4,7 @@ description:
     Documentation for all Webhook events supported by Partner Center.
 ms.assetid: 
 ms.author: v-thpr
-ms.date: 02/05/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -36,19 +36,22 @@ This event allows you to self-onboard and test your registration by requesting a
 
 **Properties**
 
-| Name                      | Description                                                                           |
-|---------------------------|---------------------------------------------------------------------------------------|
-| **EventName**             | test-created|
-| **ResourceUri**           | "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f"                                                 |
-| **ResourceName**          | test                                                |   
+| Property                  | Type                               | Description                                                                                                  |
+|---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "test-created".                                          |
+| ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/registration/validationEvents/{{CorrelationId}}" |
+| ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "test".                                  |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/auditrecords/{{AuditId}}" |
+| ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
-**Sample**
+
+**Example**
 
 ```
 {
     "EventName": "test-created",
-    "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f",
+    "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{{CorrelationId}}",
     "ResourceName": "test",
     "AuditUri": null,
     "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
@@ -57,25 +60,28 @@ This event allows you to self-onboard and test your registration by requesting a
 
 ### <span id="subscriptionUpdatedEvent"></span><span id="SUBSCRIPTIONUPDATEDEVENT"></span>Subscription Updated Event
 
-This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API. 
+This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API. 
 
 **Properties**
 
-| Name                      | Description                                                                           |
-|---------------------------|---------------------------------------------------------------------------------------|
-| **EventName**             | subscription-updated                                                                  |
-| **ResourceUri**           | "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f"                                                 |
-| **ResourceName**          | subscription                                                |   
+| Property                  | Type                               | Description                                                                                                  |
+|---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "subscription-updated".                                  |
+| ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/{{CustomerId}}/subscriptions/{{SubscriptionId}}" |
+| ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "subscription".                          |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/auditrecords/{{AuditId}}" |
+| ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
-**Sample**
+
+**Example**
 
 ```
 {
     "EventName": "subscription-updated",
-    "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/",
+    "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/customers/{{CustomerId}}/subscriptions/{{SubscriptionId}}",
     "ResourceName": "subscription",
-    "AuditUri": null,
+    "AuditUri": "https://api.partnercenter.microsoft.com/v1/auditrecords/{{AuditId}}", 
     "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
 }
 ```
