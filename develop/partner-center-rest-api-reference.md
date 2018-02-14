@@ -45,7 +45,7 @@ finding the sample code.
 | [Partner Center REST headers](headers.md)                         | Defines the request and response headers used by the REST API.                                                                                                                                                   |
 | [Partner Center REST resources](partner-center-rest-resources.md) | Defines the JSON constructs that represent the objects needed to use the REST API.                                                                                                                               |
 | [Partner Center REST error codes](error-codes.md)                 | The Partner Center API returns standard HTTP success and error codes. Partners can review the error type and occasionally additional parameters to determine whether their requests succeeded and to help debug. |
-| [Partner Center REST events](partner-center-webhooks-events.md)   | Defines the REST resource change events that are supported by Partner Center webhooks. |
+| [Partner Center REST events](partner-center-webhook-events.md)   | Defines the REST resource change events that are supported by Partner Center webhooks. |
 
 
  
