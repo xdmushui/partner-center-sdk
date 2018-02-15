@@ -290,7 +290,9 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 ### <span id="ValidationEvents"></span><span id="validationevents"></span><span id="VALIDATIONEVENTS"></span>Send a test event to validate your registration   
 
-Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event.
+Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event. 
+
+**Note** There is a throttle limit of 2 requests per minute when posting a validation event. 
 
 **Resource URL**   
 https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents
