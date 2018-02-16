@@ -57,6 +57,11 @@ suspended or cancelled.
 <td>string</td>
 <td>The offer identifier.</td>
 </tr>
+<tr class="even">
+<td>entitlementId</td>
+<td>string</td>
+<td>The entitlement identifier (an Azure subscription ID).</td>
+</tr>
 <tr class="odd">
 <td>offerName</td>
 <td>string</td>
