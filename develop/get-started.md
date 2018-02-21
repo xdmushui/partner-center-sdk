@@ -48,7 +48,7 @@ For tips and suggestions about testing and debugging, including more information
 ## <span id="sdk_config_auth"></span><span id="SDK_CONFIG_AUTH"></span>Configure your authentication
 
 
-To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).
+To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).   
 
 ## <span id="Get_help"></span><span id="get_help"></span><span id="GET_HELP"></span>Get help
 

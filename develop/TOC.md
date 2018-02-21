@@ -9,7 +9,7 @@
 #### [Console test app](console-test-app.md)
 ### [Set up API access in Partner Center](set-up-api-access-in-partner-center.md)
 ### [Partner Center authentication](partner-center-authentication.md)
-### [Test and debug](test-and-debug.md)
+### [Test and debug](test-and-debug.md)   
 ## [Scenarios](scenarios.md)
 ### [Analytics](usage-analytics.md)
 #### [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)

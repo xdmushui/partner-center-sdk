@@ -107,7 +107,8 @@ MS-ServerId: 202010406
 Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 ﻿ {
-    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99",
+    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99", 
+    "entitlementId": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",
     "offerId": "MS-AZR-0145P",
     "offerName": "Microsoft Azure",
     "friendlyName": "Microsoft Azure",
