@@ -10,7 +10,6 @@
 ### [Set up API access in Partner Center](set-up-api-access-in-partner-center.md)
 ### [Partner Center authentication](partner-center-authentication.md)
 ### [Test and debug](test-and-debug.md)   
-### [Partner Center webhooks](partner-center-webhooks.md)   
 ## [Scenarios](scenarios.md)
 ### [Analytics](usage-analytics.md)
 #### [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)
@@ -151,4 +150,3 @@
 #### [User](user.md)
 #### [Utility Resources](utility-resources.md)
 ### [Partner Center REST error codes](error-codes.md)
-### [Partner Center REST events](partner-center-webhook-events.md) 
