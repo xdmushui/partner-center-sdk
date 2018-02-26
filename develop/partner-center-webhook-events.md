@@ -33,6 +33,8 @@ The following webhook events are supported by Partner Center.
 
 This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to “test-created” events and data older than 7 days will be purged.
 
+**Note** There is a throttle limit of 2 requests per minute when posting a test-created event.
+
 **Properties**
 
 | Property                  | Type                               | Description                                                                                                  |
@@ -91,7 +93,7 @@ This event is raised when the specified subscription changes. A Subscription Upd
 
 ### <span id="thresholdExceededEvent"></span><span id="THRESHOLDEXCEEDEDEVENT"></span>Threshold Exceeded Event
 
-This event is raised when the amount of usage for any customer exceeds their usage spending budget (their threshold).  
+This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/en-us/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 **Properties**
 
