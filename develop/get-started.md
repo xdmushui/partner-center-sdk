@@ -55,6 +55,10 @@ To configure your Azure AD authentication so that you can use the Partner Center
 
 Partners can get support at the [Partner Center SDK Yammer group](http://go.microsoft.com/fwlink/p/?LinkID=717360). To get more personalized help, developers can use their MPN support benefits or Premier Support.
 
+## <span id="Early_adopter_program"></span><span id="early_adopter_program"></span><span id="EARLY_ADOPTER_PROGRAM"></span>Join the Partner Center API and SDK Early Adopter Program
+
+
+To find out how you can collaborate with Microsoft on the development of Partner features and capabilities, see [Join the Partner Center API and SDK Early Adopter Program](early-adopter-program.md).
  
 
  
