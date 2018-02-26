@@ -3,7 +3,7 @@ title: Partner Center webhook events
 description: 
     Documentation for all Webhook events supported by Partner Center.
 ms.assetid: 
-ms.author: v-thpr
+ms.author: dansimp
 ms.date: 02/14/2018
 ms.topic: article
 ms.prod: partner-center
@@ -11,7 +11,6 @@ ms.technology: partner-center-sdk
 ---
 
 # Partner Center webhook events
-
 
 <span class="sidebar_heading" style="font-weight: bold;">Applies
 To</span>
