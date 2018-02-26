@@ -10,6 +10,7 @@
 ### [Set up API access in Partner Center](set-up-api-access-in-partner-center.md)
 ### [Partner Center authentication](partner-center-authentication.md)
 ### [Test and debug](test-and-debug.md) 
+### [Early Adopter Program](https://docs.microsoft.com/en-us/partner-center/develop/early-adopter-program.md)
 ## [Scenarios](scenarios.md)
 ### [Analytics](usage-analytics.md)
 #### [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)
