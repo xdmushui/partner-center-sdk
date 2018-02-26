@@ -3,7 +3,7 @@ title: Partner Center
 description: The Partner Center SDK is designed for partners in the Cloud Solution Provider program.
 ms.assetid: 0F976995-22BC-4B95-A3C7-DA5552D9BE81
 ms.author: v-thpr
-ms.date: 12/15/2017
+ms.date: 2/26/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
