@@ -3,7 +3,7 @@ title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
 ms.assetid: 
 ms.author: v-thpr
-ms.date: 02/14/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
