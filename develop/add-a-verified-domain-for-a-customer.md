@@ -26,9 +26,13 @@ How to add a verified domain to the list of approved domains for an existing cus
 
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID. 
+-   A customer ID (CustomerTenantId). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID. 
+-   You must be a Partner who is a domain registrar.
+
+## <span id="AddingaVerifiedDomain"></span><span id="addingaverifieddomain"><span id="ADDINGAVERIFIEDDOMAIN"></span>Adding a verified domain
 
 
+If you are a Partner who is a domain registrar, you can use the verifieddomain API to POST a new [Domain](#domain) resource to the list of domains for an existing customer. To do this, identify the customer using their CustomerTenantId, specify a value for the VerifiedDomainName property, and pass a [Domain](#domain) resource in the Request with the required Name, Capability, AuthenticationType, Status, and VerificationMethod properties included. To specify that the new [Domain](#domain) is a federated domain, set the AuthenticationType property in the [Domain](#domain) resource to "Federated", and include a [DomainFederationSettings](#domainfederationsettings) resource in the Request. If the method is successful, the Response will include a [Domain](#domain) resource for the new verified domain.
 
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
@@ -36,9 +40,9 @@ How to add a verified domain to the list of approved domains for an existing cus
 
 **Request syntax**
 
-| Request URI                                                                                        |
-|----------------------------------------------------------------------------------------------------|
-| [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1 |
+| Method | Request URI                                                                                        |
+|--------|----------------------------------------------------------------------------------------------------|
+| POST   | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1 |
 
 
 
@@ -67,8 +71,6 @@ This table describes the required properties in the request body.
 | VerifiedDomainName                                    | string | Yes                                           | The verified domain name. |
 | [Domain](#domain)                                     | object | Yes                                           | Contains the domain information. |
 | [DomainFederationSettings](#domainfederationsettings) | object | Yes (If AuthenticationType = "Federated")     | The domain federation settings to be used if the domain is a "Federated" domain and not a "Managed" domain. |
-
-
  
 
 ### <span id="domain"></span><span id="domain"></span><span id="DOMAIN"></span>
@@ -80,15 +82,13 @@ This table describes the required and optional **Domain** properties in the requ
 | Name               | Type                                     | Required | Description                                                                                                                                                                                                     |
 |--------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AuthenticationType                                    | string           | Yes      | Defines whether the domain is a "Managed" domain or a "Federated" domain. Supported values: Managed, Federated.|
-| Capabilities                                          | string           | Yes      | Specifies the domain capabilities. For example, "Email".                  |
+| Capability                                            | string           | Yes      | Specifies the domain capability. For example, "Email".                  |
 | IsDefault                                             | nullable boolean | No       | Indicates whether the domain is the default domain for the tenant. Supported values: True, False, Null.        |
 | IsInitial                                             | nullable boolean | No       | Indicates whether the domain is an initial domain. Supported values: True, False, Null.                       |
 | Name                                                  | string           | Yes      | The domain name.                                                          |
 | RootDomain                                            | string           | No       | The name of the root domain.                                              |
 | Status                                                | string           | Yes      | The domain status. For example, "Verified". Supported values:  Unverified, Verified, PendingDeletion.                               |
 | VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: None, DnsRecord, Email.                                    |
-
- 
 
 
 ### <span id="domainFederationSettings"></span><span id="domainfederationsettings"></span><span id="DOMAINFEDERATIONSETTINGS"></span>
@@ -116,10 +116,11 @@ This table describes the required and optional **DomainFederationSettings** prop
 
  
 
+
 **Request example**
 
 ```
-https://api.partnercenter.microsoft.com/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
 MS-RequestId: 312b044d-dc41-4b37-c2d5-7d27322d9654
@@ -131,9 +132,9 @@ X-Locale: "en-US"
     "VerifiedDomainName": "MyDomainName.com",
     "Domain": {
         "AuthenticationType": "Federated",
-        "Capabilities": "None",
-        "IsDefault": null,
-        "IsInitial": null,
+        "Capability": "Email",
+        "IsDefault": Null,
+        "IsInitial": Null,
 	    "Name": "MyDomainName.com",
 	    "RootDomain": null,
 	    "Status": "Verified",
@@ -158,3 +159,33 @@ X-Locale: "en-US"
 }
 ```
 
+
+## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+
+
+If successful, this API returns a [Domain](#domain) resource for the new verified domain.
+
+**Response success and error codes**
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+
+**Response example**
+
+```
+HTTP/1.1 201 Created
+Content-Length: 206
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 7cb67bb7-4750-403d-cc2e-6bc44c52d52c
+MS-RequestId: 312b044d-dc41-4b37-c2d5-7d27322d9654
+Date: Tue, 14 Feb 2017 20:06:02 GMT
+
+{
+    "authenticationType": "federated",
+    "capability": "email",
+    "isDefault": false,
+    "isInitial": false,
+    "name": "MyDomainName.com",
+    "status": "verified",
+    "verificationMethod": "dns_record"
+}
+```
