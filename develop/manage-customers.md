@@ -55,6 +55,8 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
 
+-   [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)   
+
 **Manage user accounts and assign licenses**
 
 -   [Create user accounts for a customer](create-user-accounts-for-a-customer.md)

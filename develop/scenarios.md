@@ -97,6 +97,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Update a customer's billing profile](update-a-customer-s-billing-profile.md)</p></li>
 <li><p>[Get a customer's company profile](get-a-customer-s-company-profile.md)</p></li>
 <li><p>[Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)</p></li>
+<li><p>[Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)</p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
