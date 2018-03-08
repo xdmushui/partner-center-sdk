@@ -35,6 +35,10 @@ How to add a verified domain to the list of approved domains for an existing cus
 If you are a Partner who is a domain registrar, you can use the verifieddomain API to POST a new [Domain](#domain) resource to the list of domains for an existing customer. To do this, identify the customer using their CustomerTenantId, specify a value for the VerifiedDomainName property, and pass a [Domain](#domain) resource in the Request with the required Name, Capability, AuthenticationType, Status, and VerificationMethod properties included. To specify that the new [Domain](#domain) is a federated domain, set the AuthenticationType property in the [Domain](#domain) resource to "Federated", and include a [DomainFederationSettings](#domainfederationsettings) resource in the Request. If the method is successful, the Response will include a [Domain](#domain) resource for the new verified domain.
 
 
+**Custom verified domains**
+
+When adding a custom verified domain, a domain that is not registered on onmicrosoft.com, you must set the [CustomerUser.immutableId](user.md#customeruser) property to a unique ID value for the customer you are adding the domain for. This unique identifier is required during the validation process when the domain is being verified. For more information about customer user accounts, see [create user accounts for a customer](create-user-accounts-for-a-customer.md).
+
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
 
 
