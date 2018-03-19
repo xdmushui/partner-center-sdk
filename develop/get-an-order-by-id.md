@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Get an order by ID
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 **Applies To**
 
@@ -50,18 +51,18 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 
 | Method  | Request URI                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order} HTTP/1.1  |
 
  
 
 **URI parameter**
 
-This table lists the required query parameter to get an order by ID.
+This table lists the required query parameters to get an order by ID.
 
-| Name                   | Type     | Required | Description                           |
-|------------------------|----------|----------|---------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
-| **id-for-order**       | **guid** | Y        | A GUID corresponding to the order.    |
+| Name                   | Type     | Required | Description                                            |
+|------------------------|----------|----------|--------------------------------------------------------|
+| customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer. |
+| id-for-order           | string   | Yes      | A string corresponding to the order ID.                |
 
  
 
@@ -87,7 +88,7 @@ Connection: Keep-Alive
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, this method returns a [Order](orders.md) resource in the response body.
+If successful, this method returns an [Order](orders.md) resource in the response body.
 
 **Response success and error codes**
 
@@ -97,32 +98,47 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```
 HTTP/1.1 200 OK
-Content-Length: 1252
+Content-Length: 823
 Content-Type: application/json
-MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 MS-RequestId: 0e5fc923-8e3c-4560-9100-ce7283c3e081
-Date: Mon, 23 Nov 2015 22:02:59 GMT
+MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
+Date: Thu, 15 Mar 2018 22:05:30 GMT
 
 {
-    "id": "d6595733-265f-4918-a62e-026e64bc8384",
+    "id": "YxH1q4KScfvfkJQjgRI8QY1DznnUWZTH1",
     "referenceCustomerId": "<customer-tenant-id>",
-    "lineItems": [{
+    "billingCycle": "one_time",
+    "currencyCode": "USD",
+    "lineItems": [
+    {
         "lineItemNumber": 0,
-        "offerId": "031C9E47-4802-4248-838E-778FB1D2CC05",
-        "friendlyName": "nickname",
+        "offerId": "DZH318Z0BQ4Z:002L:DZH318Z0CMNP",
+        "friendlyName": "Reserved_VM_Instance_Standard_NC12_AU_East_1_Year",
         "quantity": 1,
         "links": {
-            "subscription": {
-                "uri": "/subscriptions?key=<key>",
+            "sku": {
+                "uri": "/products/DZH318Z0BQ4Z/skus/002L?country=US",
                 "method": "GET",
                 "headers": []
             }
         }
-    }],
-    "status": "none",
-    "creationDate": "2015-10-08T10:42:36.54-07:00",
+    }
+    ],
+    "creationDate": "2018-03-13T22:49:54.3396949Z",
+    "status": "completed",
+    "links": {
+        "provisioningStatus": {
+            "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders/YxH1q4KScfvfkJQjgRI8QY1DznnUWZTH1/provisioningstatus",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders/YxH1q4KScfvfkJQjgRI8QY1DznnUWZTH1",
+            "method": "GET",
+            "headers": []
+        }
+    },
     "attributes": {
-        "etag": "<etag>",
         "objectType": "Order"
     }
 }

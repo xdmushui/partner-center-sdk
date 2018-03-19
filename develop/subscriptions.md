@@ -13,6 +13,7 @@ ms.technology: partner-center-sdk
 
 # Subscription
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 <span class="sidebar_heading" style="font-weight: bold;">Applies
 To</span>
@@ -189,9 +190,21 @@ Provides information about the provisioning status of a subscription.
 | status     | string                                                         | Indicates the provisioning status: "success", "pending" or "failed". |
 | quantity   | number                                                         | Provides the subscription quantity after provisioning.               |
 | endDate    | string in UTC date time format                                 | The end date of the subscription.                                    |
-| attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                             |
+| attributes | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                             |
 
  
+
+## <span id="SubscriptionRegistrationStatus"></span><span id="subscriptionregistrationstatus"></span><span id="SUBSCRIPTIONREGISTRATIONSTATUS"></span>SubscriptionRegistrationStatus
+
+
+Describes the collection of links attached to a subscription resource.
+
+| Property           | Type                               | Description                                                                           |
+|--------------------|------------------------------------|---------------------------------------------------------------------------------------|
+| subscriptionId     | string                             | The subscription identifier.                                                          |
+| status             | string                             | Indicates the registration status: "registered", "registering" or "notregistered".    |
+
+
 
 ## <span id="SupportContact"></span><span id="supportcontact"></span><span id="SUPPORTCONTACT"></span>SupportContact
 
@@ -203,8 +216,19 @@ Represents a support contact for a customer's subscription.
 | supportTenantId | string                                                         | A GUID formatted string that indicates the support contact's tenant identifier. |
 | supportMpnId    | string                                                         | The contact's Microsoft Partner Network (MPN) identifier.                       |
 | name            | string                                                         | The name of the support contact.                                                |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The support contact related links.                                              |
-| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Contains "objectType": " SupportContact".              |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                                              |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
+
+
+
+## <span id="RegisterSubscription"></span><span id="registersubscription"></span><span id="REGISTERSUBSCRIPTION"></span>Register Subscription
+
+
+Returns a link that can be used to query the registration status of a subscription. The registration status is returned in the response body of a successfully accepted request to register an Azure subscription.
+
+| Property                | Type                               | Description                                                                           |
+|-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
+| HttpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus" |
 
  
 
