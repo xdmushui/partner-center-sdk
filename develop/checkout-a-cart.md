@@ -44,7 +44,7 @@ string skuId;
 string availabilityId;
 string cartId;
 
-var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Create();
+var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checkout();
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
@@ -80,10 +80,10 @@ This table describes the [Cart](cart.md) properties in the request body.
 | Property              | Type             | Required        | Description                                                                                               |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | id                    | string           | No              | A cart identifier that is supplied upon successful creation of the cart.                                  |
-|CreationTimeStamp      | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.         |
-| LastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
-| ExpirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
-| LastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
+| creationTimeStamp     | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.         |
+| lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
+| expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
+| lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                                    |
 
 
@@ -97,7 +97,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | quantity             | int                         | Yes          | The number of licenses for a licence-based subscription or instances for an Azure reservation.     |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
-| Participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
+| participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | purchaseSystem       | string                      | No           | Which purchase system to place order to.                                                           |
@@ -122,7 +122,7 @@ Expect: 100-continue
 {  
     {  
         "Id":"b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-         "CreationTimestamp":"2018-03-15T17:15:02.3840528Z",
+        "CreationTimestamp":"2018-03-15T17:15:02.3840528Z",
         "LastModifiedTimestamp":"2018-03-15T17:15:02.3840528Z",
         "ExpirationTimestamp":"0001-01-01T00:00:00",
         "LastModifiedUser":"2713ccd7-ea3b-470a-9cfb-451d5d0482cc",

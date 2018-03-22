@@ -31,7 +31,7 @@ Gets an availability for the specified product and SKU using an availability ID.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get details of a specific [availability](products.md#availability), start by using the steps in (link here) to get the interface for a specific [SKU's](products.md#sku) operations. From that resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, use the availability ID on the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
+To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
 
 ```CSharp
 IAggregatePartner partnerOperations;
@@ -61,9 +61,9 @@ Use the following path and query parameters to get a specific availability using
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| product-id             | string   | Yes      | A string that identifies the product.                           |
-| sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
-| availability-id        | string   | Yes      | A string that identifies the availability.                      |
+| product-id             | string   | Yes      | A GUID formatted string that identifies the product.            |
+| sku-id                 | string   | Yes      | A GUID formatted string that identifies the SKU.                |
+| availability-id        | string   | Yes      | A GUID formatted string that identifies the availability.       |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
  
@@ -79,7 +79,7 @@ None.
 **Request example**
 
 ```
-GET http://api.partnercenter.microsoft.com/v1/products/{product-id}/skus/{sku-id}/availabilities/{availability-id}?country={country-code} HTTP/1.1
+GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318Z0HMKQ?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 2e12a576-ded5-437e-a5ec-dbfbcbd1624c

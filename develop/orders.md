@@ -35,7 +35,7 @@ Describes a partner's order.
 |---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
 | id                  | string                                                         | An order identifier that is supplied upon successful creation of the order.                                   |
 |referenceCustomerId  | string                                                         | The customer identifier. |
-| billingCycle        | string                                                         | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| billingCycle        | string                                                         | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
 | lineItems           | array of [OrderLineItem](#orderlineitem) resources             | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode        | string                                                         | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate        | datetime                                                       | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
@@ -60,7 +60,7 @@ An order contains an itemized list of offers, and each item is represented as an
 | quantity             | int                                       | The number of licenses for a licence-based subscription or instances for an Azure reservation.                                                                                                                                                                                |
 | partnerIdOnRecord    | string                                    | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
 | provisioningContext  | Dictionary<string, string>                | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
-| links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the Order line item.                                                                                                                                                                                |
+| links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the order line item.                                                                                                                                                                                |
 
  
 
@@ -72,7 +72,7 @@ Represents the resource links corresponding to the order.
 | Property           | Type                                         | Description                                                                   |
 |--------------------|----------------------------------------------|-------------------------------------------------------------------------------|
 | provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve provisioning status for the order.       |
-| self               | [Link](utility-resources.md#Link)            | The link to retrieve the Order resource.                                      |
+| self               | [Link](utility-resources.md#Link)            | The link to retrieve the order resource.                                      |
 
 
 
@@ -93,7 +93,7 @@ Represents the full subscription associated with the order.
 ## <span id="orderStatus"></span><span id="orderstatus"></span><span id="ORDERSTATUS"></span>OrderStatus
 
 
-An enumeration with values that indicate the state of the order.
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the state of the order.
 
 | Value              | Position     | Description                                     |
 |--------------------|--------------|-------------------------------------------------|

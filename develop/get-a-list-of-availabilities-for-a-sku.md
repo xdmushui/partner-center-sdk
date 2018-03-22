@@ -29,7 +29,7 @@ Gets a collection of availabilities for the specified product and SKU.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the list of [availabilities](products.md#availability) for a [SKU](products.md#sku), start by using following the steps in (link here) to get the interface for a specific sku's operations. From that resulting interface select the **Availabilities** property to obtain an interface with the operations for Availabilities. Finally, call **Get()** or **GetAsync()** to retrieve a collection of the availabilities for this SKU. Optionally, you can use the **ByTargetSegment()** method to filter the availabilities by target segment before calling **Get()** or **GetAsync()**.
+To get the list of [availabilities](products.md#availability) for a [SKU](products.md#sku), start by using following the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific sku's operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the operations for availabilities. Finally, call **Get()** or **GetAsync()** to retrieve a collection of the availabilities for this SKU. Optionally, you can use the **ByTargetSegment()** method to filter the availabilities by target segment before calling **Get()** or **GetAsync()**.
 
 ```CSharp
 IAggregatePartner partnerOperations;
@@ -42,7 +42,7 @@ string targetSegment;
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.Get();
 
 // Get the availabilities, filtered by target segment.
-var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.BySegment(targetSegment)Get();
+var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.BySegment(targetSegment).Get();
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request

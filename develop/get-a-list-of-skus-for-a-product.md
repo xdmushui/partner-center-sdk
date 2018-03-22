@@ -28,7 +28,7 @@ Gets a collection of SKUs for a particular product.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the list of SKUs for a product, acquire the interface for a specific product's operations by passing a country code to the **IAggregatePartner.ProductsByCountry()** method and a product ID to the **ById()** method. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Finally, call **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product. Optionally, you can use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
+To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Finally, call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product. Optionally, you can use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
 ```CSharp
 IAggregatePartner partnerOperations;

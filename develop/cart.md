@@ -30,20 +30,12 @@ Describes a cart.
 
 | Property            | Type                                                           | Description                                                 |
 |---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
-| id                  | string                                                         | A cart identifier that is supplied upon successful creation of the cart.                                   |
-|CreationTimeStamp    | DateTime                                                       | The date the cart was created, in date-time format. Applied upon 
-successful creation of the cart.
- |
-| LastModifiedTimeStamp | DateTime                                                     | The date the cart was last updated, in date-time format. 
-Applied upon successful creation of the cart.
- |
-| ExpirationTimeStamp   | DateTime                                                     | The date the cart will expire, in date-time format.
- Applied upon successful creation of cart.
-    |
-| LastModifiedUser    | string                                                         | The user who last updated the cart. Applied upon successful 
-creation of cart.
-           |
-| lineItems           | Array of objects                                               | An Array of [CartLineItem](#cart-line-item) resources.                                   |
+| id                  | string                                                         | A cart identifier that is supplied upon successful creation of the cart.   |
+|CreationTimeStamp    | DateTime                                                       | The date the cart was created, in date-time format. Applied upon successful creation of the cart. |
+| LastModifiedTimeStamp | DateTime                                                     | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.   |
+| ExpirationTimeStamp   | DateTime                                                     | The date the cart will expire, in date-time format. Applied upon successful creation of cart.                |
+| LastModifiedUser    | string                                                         | The user who last updated the cart. Applied upon successful creation of cart.   |
+| lineItems           | Array of objects                                               | An Array of [CartLineItem](#cart-line-item) resources.                          |
 
 
 

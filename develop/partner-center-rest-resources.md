@@ -135,6 +135,7 @@ samples](partner-center-samples.md) section.
 <li>Offer</li>
 <li>OfferCategory</li>
 <li>OfferLinks</li>
+<li>OfferProduct</li>
 </ul></td>
 </tr>
 <tr class="odd">

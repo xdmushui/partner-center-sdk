@@ -24,12 +24,12 @@ How to check the inventory for a specific set of catalog items.
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   One or more product IDs. Optionally, SKU IDs can also be specified.
--   Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU id(s). These requirements may vary by type of product/SKU,  and can be determined from the SKU’s InventoryVariables property. 
+-   Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU,  and can be determined from the [SKU’s](products.md#sku) **InventoryVariables** property. 
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To check the inventory, build an [InventoryCheckRequest](products.md#inventorycheckrequest) object using an [InventoryItem](products.md#inventoryitem) object for each item to be checked. Then, use an **IAggregatePartner.Extensions** accessor, scope it down to **Product** and then select the country using the **ByCountry()** method. Finally, call the **CheckInventory()** function with your **InventoryCheckRequest** object.
+To check the inventory, build an [InventoryCheckRequest](products.md#inventorycheckrequest) object using an [InventoryItem](products.md#inventoryitem) object for each item to be checked. Then, use an **IAggregatePartner.Extensions** accessor, scope it down to **Product** and then select the country using the **ByCountry()** method. Finally, call the **CheckInventory()** method with your **InventoryCheckRequest** object.
 
 ```CSharp
 IAggregatePartner partnerOperations;
@@ -103,7 +103,7 @@ Content-Type: application/json
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of InventoryItem](products.md#inventoryitem) objects populated with the restriction details, if any apply.
+If successful, the response body contains a collection of [InventoryItem](products.md#inventoryitem) objects populated with the restriction details, if any apply.
 
 **Note** If an input InventoryItem represents an item that could not be found in the catalog, it will not be included in the output collection.
 

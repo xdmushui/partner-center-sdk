@@ -30,7 +30,7 @@ Gets a SKU for the specified product using the specified SKU ID.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get the details of a specific SKU, start by following the steps in (link here) to get the interface for a specific product's operations. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Pass the SKU ID to the **ById()** method, and call **Get()** or **GetAsync()** to retrieve the SKU details.
+To get the details of a specific SKU, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Pass the SKU ID to the **ById()** method, and call **Get()** or **GetAsync()** to retrieve the SKU details.
 
 ```CSharp
 IAggregatePartner partnerOperations;

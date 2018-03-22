@@ -145,8 +145,8 @@ to their customers.
 </tr>
 <tr class="even">
 <td>product</td>
-<td>[Product](product.md)</td>
-<td>Gets or sets the product.</td>
+<td>[OfferProduct](#offerproduct)</td>
+<td>Gets or sets the offer product.</td>
 </tr>
 <tr class="odd">
 <td>unitType</td>
@@ -199,7 +199,22 @@ Contains links for learning more information about the offer.
 | next      | Link | The next page of items.     |
 | previous  | Link | The previous page of items. |
 
- 
+
+
+## <span id="OfferProduct"></span><span id="offerproduct"></span><span id="OFFERPRODUCT"></span>OfferProduct
+
+
+A product or service created by Microsoft. In some cases, may be created
+by a third party and listed in a catalog by Microsoft. A product may
+have more than one offer associated with it, each with different sets of
+features and targeted at different customer needs.
+
+| Property | Type   | Description              |
+|----------|--------|--------------------------|
+| Id       | string | The category identifier. |
+| Name     | string | The category name.       |
+| Unit     | string | The product unit.        |
+
 
  
 
