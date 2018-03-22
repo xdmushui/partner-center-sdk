@@ -76,7 +76,7 @@ while (invoicesEnumerator.HasValue)
 
 For a slightly different example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetPagedInvoices.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
 
 
 **Request syntax**
@@ -119,7 +119,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
 If successful, the response body contains the collection of [Invoice](invoice.md#invoice) resources.
@@ -132,56 +132,29 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```
 HTTP/1.1 200 OK
-Content-Length: 2231
+Content-Length: 256
 Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 4a5002a2-0c1b-4e57-b491-dbcf19c0e7b8
-MS-RequestId: 7b3e2e00-b330-4480-9d84-59ace713427f
-MS-CV: YrLe3w6BbUSMt1fi.0
-MS-ServerId: 030020344
-Date: Mon, 24 Jul 2017 22:55:51 GMT
-
+MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
+MS-RequestId: a45e6643-1caf-4429-8f90-07c03d85bc2b
+Date: Thu, 24 Mar 2016 05:21:01 GMT
 {
     "totalCount": 2,
-    "items": [{
-            "id": "D070002J8C",
-            "invoiceDate": "2017-07-11T00:00:00Z",
-            "totalCharges": 88029.46,
-            "paidAmount": 0.0,
-            "currencyCode": "USD",
-            "currencySymbol": "$",
-            "pdfDownloadLink": "/invoices/D070002J8C/documents/statement",
-            "invoiceDetails": [{
+    "items": [
+        {
+            "id": "D02005YFHI",
+            "invoiceDate": "2017-01-21T00:00:00Z",
+            "totalCharges": 24606.35,
+            "paidAmount": 1000,
+            "currencyCode": "GBP",
+            "currencySymbol": "£",
+            "pdfDownloadLink": "/invoices/D02005YFHI/documents/statement",
+            "invoiceDetails": [
+                {
                     "invoiceLineItemType": "billing_line_items",
                     "billingProvider": "office",
                     "links": {
                         "self": {
-                            "uri": "/invoices/D070002J8C/lineitems/Office/BillingLineItems",
-                            "method": "GET",
-                            "headers": []
-                        }
-                    },
-                    "attributes": {
-                        "objectType": "InvoiceDetail"
-                    }
-                }, {
-                    "invoiceLineItemType": "billing_line_items",
-                    "billingProvider": "azure",
-                    "links": {
-                        "self": {
-                            "uri": "/invoices/D070002J8C/lineitems/Azure/BillingLineItems",
-                            "method": "GET",
-                            "headers": []
-                        }
-                    },
-                    "attributes": {
-                        "objectType": "InvoiceDetail"
-                    }
-                }, {
-                    "invoiceLineItemType": "usage_line_items",
-                    "billingProvider": "azure",
-                    "links": {
-                        "self": {
-                            "uri": "/invoices/D070002J8C/lineitems/Azure/UsageLineItems",
+                            "uri": "/invoices/Recurring-D02005YFHI/lineitems/Office/BillingLineItems",
                             "method": "GET",
                             "headers": []
                         }
@@ -191,9 +164,11 @@ Date: Mon, 24 Jul 2017 22:55:51 GMT
                     }
                 }
             ],
+            "documentType": "invoice",
+            "invoiceType": "Recurring",
             "links": {
                 "self": {
-                    "uri": "/invoices/D070002J8C",
+                    "uri": "/invoices/Recurring-D02005YFHI",
                     "method": "GET",
                     "headers": []
                 }
@@ -201,46 +176,22 @@ Date: Mon, 24 Jul 2017 22:55:51 GMT
             "attributes": {
                 "objectType": "Invoice"
             }
-        }, {
-            "id": "D070002ISK",
-            "invoiceDate": "2017-06-11T00:00:00Z",
-            "totalCharges": 115761.32,
-            "paidAmount": 0.0,
-            "currencyCode": "USD",
-            "currencySymbol": "$",
-            "pdfDownloadLink": "/invoices/D070002ISK/documents/statement",
-            "invoiceDetails": [{
+        },
+{
+            "id": "G000024130",
+            "invoiceDate": "2018-02-08T01:22:47.603895Z",
+            "totalCharges": 586366,
+            "paidAmount": 0,
+            "currencyCode": "CHF",
+            "currencySymbol": "CHF",
+            "pdfDownloadLink": "/invoices/G000024130/documents/statement",
+            "invoiceDetails": [
+                {
                     "invoiceLineItemType": "billing_line_items",
-                    "billingProvider": "office",
+                    "billingProvider": "one_time",
                     "links": {
                         "self": {
-                            "uri": "/invoices/D070002ISK/lineitems/Office/BillingLineItems",
-                            "method": "GET",
-                            "headers": []
-                        }
-                    },
-                    "attributes": {
-                        "objectType": "InvoiceDetail"
-                    }
-                }, {
-                    "invoiceLineItemType": "billing_line_items",
-                    "billingProvider": "azure",
-                    "links": {
-                        "self": {
-                            "uri": "/invoices/D070002ISK/lineitems/Azure/BillingLineItems",
-                            "method": "GET",
-                            "headers": []
-                        }
-                    },
-                    "attributes": {
-                        "objectType": "InvoiceDetail"
-                    }
-                }, {
-                    "invoiceLineItemType": "usage_line_items",
-                    "billingProvider": "azure",
-                    "links": {
-                        "self": {
-                            "uri": "/invoices/D070002ISK/lineitems/Azure/UsageLineItems",
+                            "uri": "/invoices/OneTime-G000024130/lineitems/OneTime/BillingLineItems",
                             "method": "GET",
                             "headers": []
                         }
@@ -250,9 +201,36 @@ Date: Mon, 24 Jul 2017 22:55:51 GMT
                     }
                 }
             ],
+            "amendments": [
+                {
+                    "id": "G000024131",
+                    "invoiceDate": "2018-02-08T18:44:37.5381456Z",
+                    "totalCharges": 107661.12,
+                    "paidAmount": 0,
+                    "currencyCode": "CHF",
+                    "currencySymbol": "CHF",
+                    "invoiceDetails": [
+                        {
+                            "invoiceLineItemType": "billing_line_items",
+                            "billingProvider": "one_time",
+                            "attributes": {
+                                "objectType": "InvoiceDetail"
+                            }
+                        }
+                    ],
+                    "documentType": "adjustment_note",
+                    "amendsOf": "G000024130",
+                    "invoiceType": "OneTime",
+                    "attributes": {
+                        "objectType": "Invoice"
+                    }
+                }
+            ],
+            "documentType": "void_note",
+            "invoiceType": "OneTime",
             "links": {
                 "self": {
-                    "uri": "/invoices/D070002ISK",
+                    "uri": "/invoices/OneTime-G000024130",
                     "method": "GET",
                     "headers": []
                 }
@@ -261,7 +239,7 @@ Date: Mon, 24 Jul 2017 22:55:51 GMT
                 "objectType": "Invoice"
             }
         }
-    ],
+  ],
     "links": {
         "self": {
             "uri": "/invoices?size=2&amp;offset=0",
