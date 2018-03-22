@@ -143,7 +143,7 @@
 #### [Offer](offer.md)
 #### [Order](orders.md)
 #### [Profile](profiles.md)
-#### [Product](product.md)
+#### [Products](products.md)
 #### [Relationships](relationships.md)
 #### [ServiceCosts](servicecosts.md)
 #### [ServiceRequest](servicerequest.md)

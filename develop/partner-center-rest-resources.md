@@ -157,7 +157,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Product](product.md)</td>
+<td>[Products](products.md)</td>
 <td><ul>
 <li>Product</li>
 </ul></td>
