@@ -57,9 +57,9 @@ var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).
 
 Use the following query parameter to get the invoice statement.
 
-| Name           | Type       | Required | Description                                                                                        |
-|----------------|------------|----------|----------------------------------------------------------------------------------------------------|
-| **invoice-id** | **string** | Yes      | The value is an **invoice-id** that allows the reseller to filter the results for a given invoice. |
+| Name       | Type       | Required | Description                                                                                        |
+|------------|------------|----------|----------------------------------------------------------------------------------------------------|
+| invoice-id | string     | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 
  
 

@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Get a collection of invoices
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 **Applies To**
 
@@ -83,11 +84,11 @@ For a slightly different example, see **Sample**: [Console test app](console-tes
 
 | Method  | Request URI                                                                                  |
 |---------|----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices?size={size}&offset={offset} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices?size={size}&offset={offset} HTTP/1.1  |
 
  
 
-**URI parameter**
+**URI parameters**
 
 Use the following query parameters when creating the request.
 
@@ -177,7 +178,7 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
                 "objectType": "Invoice"
             }
         },
-{
+        {
             "id": "G000024130",
             "invoiceDate": "2018-02-08T01:22:47.603895Z",
             "totalCharges": 586366,
@@ -239,7 +240,7 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
                 "objectType": "Invoice"
             }
         }
-  ],
+    ],
     "links": {
         "self": {
             "uri": "/invoices?size=2&amp;offset=0",

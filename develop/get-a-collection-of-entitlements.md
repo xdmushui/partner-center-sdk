@@ -9,8 +9,9 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get invoice line items
+# Get a collection of entitlements
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 **Applies To**
 
@@ -27,7 +28,7 @@ How to get a collection of entitlements.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get entitlements collections for a customer, obtain an interface to Entitlement operations by calling the IAggregatePartner.Customers.ById method with the customer ID to identify the customer, and then retrieving the interface from the Entitlements property.  From the resulting interface call Get() or GetAsync() to retrieve the collection of entitlements.
+To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
 ```CSharp
 IAggregatePartner partnerOperations;
@@ -82,7 +83,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Entitlement](entitlement.md) resources.
+If successful, the response body contains a collection of [Entitlement](entitlement.md#entitlement) resources.
 
 **Response success and error codes**
 

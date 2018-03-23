@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Invoice
+# Entitlement
 
 [This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
@@ -56,7 +56,7 @@ The order reference of an entitlement.
 ## <span id="EntitlementType"></span><span id="entitlementtype"></span><span id="ENTITLEMENTTYPE"></span>EntitlementType
 
 
-An enumeration with values that indicate the type of entitlement.
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the type of entitlement.
 
 | Value                                     | Description                                                                                |
 |-------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -79,7 +79,7 @@ The artifact associated with the entitlement.
 ## <span id="ArtifactType"></span><span id="artifacttype"></span><span id="ARTIFACTTYPE"></span>ArtifactType
 
 
-An enumeration with values that indicate the type of entitlement artifact.
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
 
 | Value                                     | Description                                                                                |
 |-------------------------------------------|--------------------------------------------------------------------------------------------|

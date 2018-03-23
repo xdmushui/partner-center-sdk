@@ -1,6 +1,6 @@
 ---
-title: Get a customer's orders
-description: Gets all of a customer's orders.
+title: Get all of a customer's orders
+description: Gets a collection of all the orders for a specified customer.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.author: v-thpr
 ms.date: 12/15/2017
@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get a customer's orders
+# Get all of a customer's orders
 
 
 **Applies To**
@@ -73,7 +73,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/orders HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 0e5fc923-8e3c-4560-9100-ce7283c3e081

@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Get invoice line items
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 **Applies To**
 
@@ -94,7 +95,7 @@ For a similar example, see **Sample**: [Console test app](console-test-app.md). 
 
 **Request syntax**
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax for an invoice with a billing-provider of "OneTime" in order to get the next page of invoice line items.
+Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax for an invoice with a billing-provider value of "OneTime" and set seekOperation to "Next" to get the next page of invoice line items.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -139,7 +140,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 ## <span id="Request_Response_Examples"></span><span id="request_response_examples"></span><span id="REQUEST_RESPONSE_EXAMPLES"></span>Request/Response Examples
 
 
-**Request example** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+**Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
 ```
 GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
@@ -152,7 +153,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+**Response example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
 ```
 HTTP/1.1 200 OK
@@ -164,7 +165,7 @@ MS-CV: bpqyomePDUqrSSYC.0
 MS-ServerId: 202010406
 Date: Thu, 07 Sep 2017 23:31:09 GMT
 
-﻿{
+{
     "totalCount": 2,
     "items": [{
             "partnerId": "3b33e682-00c3-41ee-9dd2-a548adf56438",
@@ -254,7 +255,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
+**Request example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
 ```
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
@@ -267,7 +268,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
+**Response example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
 ```
 HTTP/1.1 200 OK
@@ -365,7 +366,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
+**Request example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
 ```
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next HTTP/1.1
@@ -379,7 +380,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
+**Response example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
 ```
 HTTP/1.1 200 OK

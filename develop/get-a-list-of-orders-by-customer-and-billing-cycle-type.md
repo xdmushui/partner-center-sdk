@@ -1,5 +1,5 @@
 ---
-title: Get a list of order by customer and billing cycle type
+title: Get a list of orders by customer and billing cycle type
 description: Gets a collection of order resources for the specified customer and biling cycle type.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.author: v-thpr
@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get a list of order by customer and billing cycle type
+# Get a list of orders by customer and billing cycle type
 
 
 **Applies To**
@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of Order resources that correspond to a given customer and a billing cycle type.
+Gets a collection of Order resources that correspond to a given customer and billing cycle type.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -30,14 +30,14 @@ Gets a collection of Order resources that correspond to a given customer and a b
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To obtain a collection of all of a customer's orders, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) methods.
+To get a collection of a customer's orders, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the **ByBillingCycleType()** method with your specified  [**BillingCycleType**](products.md#billingcycletype). Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) method.
 
 ```CSharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
-// BillingCycleType billingCycle;
+// BillingCycleType selectedBillingCycleType;
 
-var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBillingCycleType(selectedBillingCycle).Get();
+var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBillingCycleType(selectedBillingCycleType).Get();
 ```
 
 
@@ -52,14 +52,14 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBilli
 
  
 
-**URI parameter**
+**URI parameters**
 
 This table lists the required query parameters to get a collection of orders by customer ID and billing cycle type.
 
 | Name                   | Type     | Required | Description                                               |
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
-| billingType            | string   | No       | A string corresponding to the billing cycle type.         |
+| billing-cycle-type     | string   | No       | A string corresponding to the billing cycle type.         |
 
  
 
@@ -74,7 +74,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/orders?billingType=onetime HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders?billingType=onetime HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 0e5fc923-8e3c-4560-9100-ce7283c3e081

@@ -20,6 +20,10 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
+**Creating an Order for Azure Reserved Instance products applies only to**
+
+-   Partner Center
+
 How to create an order for a customer. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -32,11 +36,11 @@ How to create an order for a customer. For more information about what is curren
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To create an order for a customer, first instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
+To create an order for a customer, first instantiate an [**Order**](orders.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](orders.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
 
 Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
-Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
+Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](orders.md) object.
 
 ```CSharp
 IAggregatePartner partnerOperations;
@@ -55,9 +59,9 @@ var order = new Order()
             Quantity = 1,
             ProvisioningContext = new Dictionary<string, string>
             {
-                { "subscriptionId", “5198C069-3DAA-403A-8660-5BE11BFD12EE” },
+                { "subscriptionId", "5198C069-3DAA-403A-8660-5BE11BFD12EE" },
                 { "scope", "shared" },
-                { "duration", “3Years” }            
+                { "duration", "3Years" }            
             }	
         }
     }
@@ -104,11 +108,11 @@ This table describes the [Order](orders.md) properties in the request body.
 |----------------------|-----------------------------|---------------------------------|-------------------------------------------------------------------------------|
 | id                   | string                      | No                              | An order identifier that is supplied upon successful creation of the order.   |
 | referenceCustomerId  | string                      | No                              | The customer identifier. |
-| billingCycle         | string                      | No                              | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| billingCycle         | string                      | No                              | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
 | lineItems            | array of [OrderLineItem](orders.md#orderlineitem) resources | Yes      | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode         | string                      | No                              | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate         | datetime                    | No                              | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
-| status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](orders.md#orderstatus).        |
+| status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](orders.md#orderstatus).        |
 | links                | [OrderLinks](utility-resources.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. | 
 
@@ -132,10 +136,9 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 | friendlyName         | string | No       | Optional. The friendly name for the subscription defined by the partner to help disambiguate.                                                                                                                                              |
 | quantity             | int    | Yes      | The number of licenses for a license-based subscription.                                                                                                                                                                                   |
 | partnerIdOnRecord    | string | No       | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
-| attributes           | object | No       | Contains "ObjectType":"OrderLineItem".                                   |
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
 | links                | [OrderLineItemLinks](orders.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
-
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
  
 
 **Request example**
@@ -148,23 +151,21 @@ Content-Length: 691
 Content-Type: application/json
 
 {
-    "Id": null,
-    "ReferenceCustomerId": "4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04",
-    "BillingCycle": "one_time",
-    "CurrencyCode": "USD",
-    "LineItems": [
-        {
-            "LineItemNumber": 0,
-            "ProvisioningContext": {
-                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
-                "scope": "shared",
-                "duration": "1Year"
-            },
-            "OfferId": "DZH318Z0BQ4B:0047:DZH318Z0DSM8",
-            "FriendlyName": "A_sample_Azure_RI",
-            "Quantity": 1
-        }
-    ],
+  "BillingCycle": "one_time",
+  "CurrencyCode": "USD",
+  "LineItems": [
+    {
+      "LineItemNumber": 0,
+      "ProvisioningContext": {
+        "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
+        "scope": "shared",
+        "duration": "1Year"
+      },
+      "OfferId": "DZH318Z0BQ4B:0047:DZH318Z0DSM8",
+      "FriendlyName": "A_sample_Azure_RI",
+      "Quantity": 1
+    }
+  ]
 }
 ```
 

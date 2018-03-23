@@ -87,7 +87,7 @@ All of the following scenarios can be completed three different ways:
 </ul>
 <p>Manage customer orders and subscriptions</p>
 <ul>
-<li><p>[Get a customer's orders](get-all-of-a-customer-s-orders.md)</p></li>
+<li><p>[Get all of a customer's orders](get-all-of-a-customer-s-orders.md)</p></li>
 <li><p>[Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)</p></li>
 <li><p>[Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)</p></li>
 </ul>

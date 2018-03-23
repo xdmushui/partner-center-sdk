@@ -1,6 +1,6 @@
 ---
-title: Get invoice summary
-description: Retrieves an invoice summary that shows the balance and total charges of an invoice for both recurring and one-time charges.
+title: Get invoice summaries
+description: Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges. 
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
 ms.author: v-thpr
 ms.date: 12/15/2017
@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get invoice by ID
+# Get invoice summaries
 
 [This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
@@ -20,7 +20,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Retrieves an invoice summary that shows the balance and total charges of an invoice for both recurring and one-time charges.
+Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -31,13 +31,15 @@ Retrieves an invoice summary that shows the balance and total charges of an invo
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve your account balance, use your **IAggregatePartner.Invoices** collection and call the **Summaries** property. Then, call the **Get()** method, and access the value of the **BalanceAmount** property. 
+To retrieve an [**InvoiceSummaries**](invoice.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
 
 ```CSharp
 // IAggregatePartner scopedPartnerOperations;
 
+// Get the invoice summaries collection.
 var invoiceSummaries = scopedPartnerOperations.Invoices.Summaries.Get();
 
+// Display the balance on the first invoice summary in the collection.
 Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].BalanceAmount);
 ```
 

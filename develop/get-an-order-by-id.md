@@ -39,7 +39,7 @@ To get a customer's order by ID, use your **IAggregatePartner.Customers** collec
 // string selectedCustomerId;
 // string selectedOrderId;
 
-var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(selectedOrder.Id).Get();
+var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(selectedOrderId).Get();
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
@@ -106,7 +106,7 @@ Date: Thu, 15 Mar 2018 22:05:30 GMT
 
 {
     "id": "YxH1q4KScfvfkJQjgRI8QY1DznnUWZTH1",
-    "referenceCustomerId": "<customer-tenant-id>",
+    "referenceCustomerId": "b0d70a69-4c42-4b27-b17b-91a835d8686a",
     "billingCycle": "one_time",
     "currencyCode": "USD",
     "lineItems": [

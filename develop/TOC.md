@@ -44,7 +44,7 @@
 #### [Get a customer by ID](get-a-customer-by-id.md)
 #### [Get a customer's billing profile](get-all-of-a-customer-s-billing-profiles.md)
 #### [Get a customer's company profile](get-a-customer-s-company-profile.md)
-#### [Get a customer's orders](get-all-of-a-customer-s-orders.md)
+#### [Get all of a customer's orders](get-all-of-a-customer-s-orders.md)
 #### [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 #### [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)
 #### [Get a list of available licenses](get-a-list-of-available-licenses.md)
