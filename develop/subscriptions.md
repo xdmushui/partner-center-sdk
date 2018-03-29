@@ -31,136 +31,35 @@ suspended or cancelled.
 **Note** The Subscription resource has a rate limit of 500 requests per minute per tenant identifier.
 
 
+
 ## <span id="Subscription"></span><span id="subscription"></span><span id="SUBSCRIPTION"></span>Subscription
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>id</td>
-<td>string</td>
-<td>The subscription identifier.</td>
-</tr>
-<tr class="even">
-<td>offerId</td>
-<td>string</td>
-<td>The offer identifier.</td>
-</tr>
-<tr class="even">
-<td>entitlementId</td>
-<td>string</td>
-<td>The entitlement identifier (an Azure subscription ID).</td>
-</tr>
-<tr class="odd">
-<td>offerName</td>
-<td>string</td>
-<td>The offer name.</td>
-</tr>
-<tr class="even">
-<td>friendlyName</td>
-<td>string</td>
-<td>The friendly name for the subscription defined by the partner to help disambiguate.</td>
-</tr>
-<tr class="odd">
-<td>quantity</td>
-<td>number</td>
-<td>Read-only. The quantity. For example, in case of license-based billing, this property is set to the license count.</td>
-</tr>
-<tr class="even">
-<td>unitType</td>
-<td>string</td>
-<td>The units defining Quantity for the subscription.</td>
-</tr>
-<tr class="odd">
-<td>parentSubscriptionId</td>
-<td>string</td>
-<td>Gets or sets the parent subscription identifier.</td>
-</tr>
-<tr class="even">
-<td>creationDate</td>
-<td>string</td>
-<td>Gets or sets the creation date, in date-time format.</td>
-</tr>
-<tr class="odd">
-<td>effectiveStartDate</td>
-<td>string in UTC date time format</td>
-<td>Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.</td>
-</tr>
-<tr class="even">
-<td>commitmentEndDate</td>
-<td>string in UTC date time format</td>
-<td>The commitment end date for this subscription, in date-time format. For subscriptions which are not autorenewable, this represents a date far, far away in the future.</td>
-</tr>
-<tr class="odd">
-<td>status</td>
-<td>string</td>
-<td>The subscription status: &quot;none&quot;, &quot;active&quot;, &quot;suspended&quot;, or &quot;deleted&quot;.</td>
-</tr>
-<tr class="even">
-<td>autoRenewEnabled</td>
-<td>boolean</td>
-<td>Gets or sets a value indicating whether the subscription is renewed automatically.</td>
-</tr>
-<tr class="odd">
-<td>billingType</td>
-<td>string</td>
-<td>Specifies how the subscription is billed: &quot;none&quot;, &quot;usage&quot;, or &quot;license&quot;.</td>
-</tr>
-<tr class="even">
-<td>billingCycle</td>
-<td>string</td>
-<td>Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
-<div class="alert">
-<strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
-</div>
-<div>
- 
-</div></td>
-</tr>
-<tr class="odd">
-<td>partnerId</td>
-<td>string</td>
-<td>MPN ID of the reseller of record, used in the indirect partner model.</td>
-</tr>
-<tr class="even">
-<td>suspensionReasons</td>
-<td>array of strings</td>
-<td>Read-only. If the subscription was suspended, indicates why.</td>
-</tr>
-<tr class="odd">
-<td>contractType</td>
-<td>string</td>
-<td>Read-only. The type of contract: &quot;subscription&quot;, &quot;productKey&quot;, or &quot;redemptionCode&quot;.</td>
-</tr>
-<tr class="even">
-<td>links</td>
-<td>[SubscriptionLinks](#subscriptionlinks)</td>
-<td>Gets or sets the subscription links.</td>
-</tr>
-<tr class="odd">
-<td>orderId</td>
-<td>string</td>
-<td>The id of the order that was placed to begin the subscription.</td>
-</tr>
-<tr class="even">
-<td>attributes</td>
-<td>[ResourceAttributes](utility-resources.md#resourceattributes)</td>
-<td>The metadata attributes corresponding to the subscription.</td>
-</tr>
-</tbody>
-</table>
+Represents the life cycle of a subscription and includes properties that define the states throughout the subscription life cycle.
+
+| Property        | Type                                                                 | Description                                                               |
+|-----------------|----------------------------------------------------------------------|---------------------------------------------------------------------------|
+| id              | string                                                               | The subscription identifier.                                              |
+| offerId         | string                                                               | The offer identifier.                                                     |
+| entitlementId   | string                                                               | The entitlement identifier (an Azure subscription ID).                    |
+| offerName       | string                                                               | The offer name.                                                           |
+| friendlyName    | string                                                               | The friendly name for the subscription defined by the partner to help disambiguate. |
+| quantity        | number                                                               | Read-only. The quantity. For example, in case of license-based billing, this property is set to the license count. |
+| unitType        | string                                                               | The units defining quantity for the subscription.                         |
+| parentSubscriptionId        | string                                                   | Gets or sets the parent subscription identifier.                          |
+| creationDate                | string                                                   | Gets or sets the creation date, in date-time format.                      |
+| effectiveStartDate          | string in UTC date time format                           | Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.     |
+| commitmentEndDate           | string in UTC date time format                           | The commitment end date for this subscription, in date-time format. For subscriptions which are not autorenewable, this represents a date far, far away in the future. |
+| status                      | string                                                   | The subscription status: "none", "active", "suspended", or "deleted".     |
+| autoRenewEnabled            | boolean                                                  | Gets or sets a value indicating whether the subscription is renewed automatically. |
+| billingType                 | string                                                   | Specifies how the subscription is billed: "none", "usage", or "license".  |
+| billingCycle                | string                                                   | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](products.md#billingcycletype). **Note** The annual billing feature is not yet generally available. Support for annual billing is coming soon. |
+| partnerId                   | string                                                   | The MPN ID of the reseller of record, used in the indirect partner model. |
+| suspensionReasons           | array of strings                                         | Read-only. If the subscription was suspended, indicates why.              |
+| contractType                | string                                                   | Read-only. The type of contract: "subscription", "productKey", or "redemptionCode". |
+| links                       | [SubscriptionLinks](#subscriptionlinks)                  | Gets or sets the subscription links.                                      |
+| orderId                     | string                                                   | The ID of the order that was placed to begin the subscription.            |
+| attributes | [ResourceAttributes](utility-resources.md#resourceattributes)             | The metadata attributes corresponding to the subscription.                |
 
  
 
@@ -228,7 +127,7 @@ Returns a link that can be used to query the registration status of a subscripti
 
 | Property                | Type                               | Description                                                                           |
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
-| HttpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus" |
+| httpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus" |
 
  
 

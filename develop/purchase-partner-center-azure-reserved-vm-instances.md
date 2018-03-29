@@ -18,9 +18,9 @@ ms.technology: partner-center-sdk
 -   Partner Center
 
 
-How to purchase Partner Center Azure Reserved VM instances. To purchase a Partner Center Azure reserved instance, you must have one or more deployed Cloud Solution Provider (CSP) Azure PayG (Pay-As-You-Go)subscriptions. If you do not have a CSP Azure PayG subscription, use these basic steps to purchase one:
+How to purchase Partner Center Azure Reserved VM instances. To purchase a Partner Center Azure reserved instance, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
 -   Get a list of offers for a market. 
--   Create an order for an Azure PayG subscription.
+-   Create an order for an CSP Azure subscription.
 -   Submit your order.
 -   Make sure your order is fulfilled. 
 
@@ -29,15 +29,15 @@ How to purchase Partner Center Azure Reserved VM instances. To purchase a Partne
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
--   A subscription ID for an active CSP Azure PayG subscription.
+-   A subscription ID for an active CSP Azure subscription.
 
 ## <span id="How_to_purchase_Azure_reserved_instances"></span><span id="how_to_purchase_azure_reserved_instances"></span><span id="HOW_TO_PURCHASE_AZURE_RESERVED_INSTANCES"></span>How to purchase Microsoft Azure reserved instances
 
 
 
-Once you have identified the active CSP Azure PayG subscription that you want to add an Azure reserved instance to, use the following steps to purchase it:    
+Once you have identified the active CSP Azure subscription that you want to add an Azure reserved instance to, use the following steps to purchase it:    
 
-1.  [Azure RI enablement](#azure_ri_enablement) - Register an active CSP Azure PayG subscription to enable it for Azure RI. 
+1.  [Azure RI enablement](#azure_ri_enablement) - Register an active CSP Azure subscription to enable it for Azure RI. 
 2.  [Azure RI discovery](#azure_ri_discovery) - Find and select the Azure RI products and SKUs you want to purchase, and check their availability. 
 3.  [Azure RI order submission](#azure_order_submission) - Create a shopping cart with the items in your order and submit it. 
 4.  [Get order details](#get_order_details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type. 

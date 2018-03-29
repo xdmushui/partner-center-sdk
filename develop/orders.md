@@ -97,10 +97,10 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                     |
 |--------------------|--------------|-------------------------------------------------|
-| Unknown            | 0            | Enum initializer                                |
-| Completed          | 1            | Indicates that the order is completed.          |
-| Pending            | 2            | Indicates that the order is still pending.      |
-| Cancelled          | 3            | Indicates that the order has been cancelled.    |
+| unknown            | 0            | Enum initializer.                               |
+| completed          | 1            | Indicates that the order is completed.          |
+| pending            | 2            | Indicates that the order is still pending.      |
+| cancelled          | 3            | Indicates that the order has been cancelled.    |
 
  
 

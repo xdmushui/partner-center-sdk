@@ -38,9 +38,6 @@ string subscriptionId;
 string countryCode;
 string productId;
 
-// Populate the customerId, subscriptionId, countryCode, and productId variables.
-…
-
 // Build the inventory check request details object.
 var inventoryCheckRequest = new InventoryCheckRequest()
 {

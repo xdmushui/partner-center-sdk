@@ -84,7 +84,7 @@ This table describes the [Cart](cart.md) properties in the request body.
 | lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
 | expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
-| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                                    |
+| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                               |
 
 
 This table describes the [CartLineItem](cart.md#cartlineitem) properties in the request body.

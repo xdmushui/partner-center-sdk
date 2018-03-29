@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 
 How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure RI instances.  
 
-To purchase a Partner Center RI you must have at least one existing Pay-as-you-go (PayG) subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing PayG subscription, enabling it for purchasing Azure RI instances. This method allows you to retrieve the status of that registration. 
+To purchase a Partner Center RI you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure RI instances. This method allows you to retrieve the status of that registration. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

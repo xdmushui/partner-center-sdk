@@ -31,10 +31,10 @@ Describes a cart.
 | Property            | Type                                                           | Description                                                 |
 |---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
 | id                  | string                                                         | A cart identifier that is supplied upon successful creation of the cart.   |
-|CreationTimeStamp    | DateTime                                                       | The date the cart was created, in date-time format. Applied upon successful creation of the cart. |
-| LastModifiedTimeStamp | DateTime                                                     | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.   |
-| ExpirationTimeStamp   | DateTime                                                     | The date the cart will expire, in date-time format. Applied upon successful creation of cart.                |
-| LastModifiedUser    | string                                                         | The user who last updated the cart. Applied upon successful creation of cart.   |
+| creationTimeStamp   | DateTime                                                       | The date the cart was created, in date-time format. Applied upon successful creation of the cart. |
+| lastModifiedTimeStamp | DateTime                                                     | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.   |
+| expirationTimeStamp   | DateTime                                                     | The date the cart will expire, in date-time format. Applied upon successful creation of cart.                |
+| lastModifiedUser    | string                                                         | The user who last updated the cart. Applied upon successful creation of cart.   |
 | lineItems           | Array of objects                                               | An Array of [CartLineItem](#cart-line-item) resources.                          |
 
 
@@ -44,20 +44,19 @@ Describes a cart.
 
 Represents one item contained in a cart.
 
-| Property             | Type                                      | Description                                                                                                                                                                                                                                |
-|----------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id                   | string                                    | A Unique identifier for a cart line item.
-Applied upon successful creation of cart.                                                                                                                                                                                                                       |
-| catalogId            | string                                    | The catalog item identifier.                                                                                                                                                                                                                |
-| friendlyName         | string                                    | Optional. The friendly name for the item defined by the partner to help disambiguate.                                                                                                                                              |
-| quantity             | int                                       | The number of licenses for a licence-based subscription or instances for an Azure reservation.                                                                                                                                                                                |
-| currencyCode         | string                                    | The currency code.                                                                                                                                                                                |
-| billingCycle         | Object                                    | The type of billing cycle set for the current period.    |
-| Participants         | List of Object String pairs               | A collection of participants on the purchase.     |
-| provisioningContext  | Dictionary<string, string>                | A context used for provisioning of offer.                                                                                                                                               |
-| orderGroup           | string                                    | A group to indicate which items can be placed together.    |
-| purchaseSystem       | string                                    | Which purchase system to place order to.    |
-| error                | Object                                    | Applied after cart is created in case of an error.    |
+| Property             | Type                                      | Description                                                                                                        |
+|----------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| id                   | string                                    | A unique identifier for a cart line item. Applied upon successful creation of cart.                                |
+| catalogId            | string                                    | The catalog item identifier.                                                                                       |
+| friendlyName         | string                                    | Optional. The friendly name for the item defined by the partner to help disambiguate.                              |
+| quantity             | int                                       | The number of licenses for a licence-based subscription or instances for an Azure reservation.                     |
+| currencyCode         | string                                    | The currency code.                                                                                                 |
+| billingCycle         | Object                                    | The type of billing cycle set for the current period.                                                              |
+| participants         | List of Object String pairs               | A collection of participants on the purchase.                                                                      |
+| provisioningContext  | Dictionary<string, string>                | A context used for provisioning of offer.                                                                          |
+| orderGroup           | string                                    | A group to indicate which items can be placed together.                                                            |
+| purchaseSystem       | string                                    | Which purchase system to place order to.                                                                           |
+| error                | Object                                    | Applied after cart is created in case of an error.                                                                 |
 
  
 
@@ -66,9 +65,9 @@ Applied upon successful creation of cart.                                       
 
 Represents an error that occurs after a cart is created.
 
-| Property           | Type                                         | Description                                                                                   |
-|--------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <name>             | <type>                                       | The error description, including any notes about supported values, default values, or limits. |
+| Property             | Type                                         | Description                                                                                   |
+|----------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
+| <*name*>             | <*type*>                                     | The error description, including any notes about supported values, default values, or limits. |
 
 
 
