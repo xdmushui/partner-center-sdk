@@ -21,6 +21,8 @@ ms.technology: partner-center-sdk
 
 How to delete a customer account from the Testing in Production (Tip) integration sandbox.
 
+**Note** Please be aware that deleting a customer account means that all resources associated with that customer tenant will be purged.
+
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 

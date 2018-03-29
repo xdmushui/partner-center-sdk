@@ -221,7 +221,7 @@ Represents a support contact for a customer's subscription.
 
 
 
-## <span id="RegisterSubscription"></span><span id="registersubscription"></span><span id="REGISTERSUBSCRIPTION"></span>Register Subscription
+## <span id="RegisterSubscription"></span><span id="registersubscription"></span><span id="REGISTERSUBSCRIPTION"></span>RegisterSubscription
 
 
 Returns a link that can be used to query the registration status of a subscription. The registration status is returned in the response body of a successfully accepted request to register an Azure subscription.

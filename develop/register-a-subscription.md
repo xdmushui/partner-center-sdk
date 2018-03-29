@@ -1,6 +1,6 @@
 ---
 title: Register a subscription
-description: Registers a Subscription resource so that it is enabled for Azure Reserved Instance.
+description: Register an existing subscription so that it is enabled for ordering Partner Center Reserved VM Instances.
 ms.assetid: 
 ms.author: v-thpr
 ms.date: 03/19/2018
@@ -17,7 +17,7 @@ ms.technology: partner-center-sdk
 
 -   Partner Center
 
-Registers an existing [Subscription](subscriptions.md) resource so that it is enabled for ordering Partner Center Reserved VM Instances.  
+Register an existing [Subscription](subscriptions.md) so that it is enabled for ordering Partner Center Reserved VM Instances.  
 
 To purchase a Partner Center RI you must have at least one existing Pay-as-you-go (PayG) subscription. This method allows you to register your existing PayG subscription, enabling it for purchasing Azure RI instances. 
 

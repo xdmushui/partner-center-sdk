@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Manage billing
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
 **Applies To**
 
@@ -34,6 +35,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 -   [Get invoice by ID](get-invoice-by-id.md)
 
 -   [Get invoice line items](get-invoiceline-items.md)
+
+-   [Get invoice statement](get-invoice-statement.md) 
+
+-   [Get invoice summaries](get-invoice-summaries.md)
 
 -   [Get a collection of invoices](get-a-collection-of-invoices.md)
 

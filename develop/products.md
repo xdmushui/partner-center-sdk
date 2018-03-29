@@ -36,7 +36,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 
 
 
-## <span id="ItemType"></span><span id="itemtype"></span><span id="ITEMTYPE"></span>Item Type
+## <span id="ItemType"></span><span id="itemtype"></span><span id="ITEMTYPE"></span>ItemType
 
 
 Represents the type of a product.
@@ -49,7 +49,7 @@ Represents the type of a product.
 
  
 
-## <span id="ProductLinks"></span><span id="productlinks"></span><span id="PRODUCTLINKS"></span>Product Links
+## <span id="ProductLinks"></span><span id="productlinks"></span><span id="PRODUCTLINKS"></span>ProductLinks
 
 
 Contains a list of links for a [Product](#product).

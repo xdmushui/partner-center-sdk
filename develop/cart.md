@@ -61,7 +61,7 @@ Applied upon successful creation of cart.                                       
 
  
 
-## <span id="cartError"></span><span id="carterror"></span><span id="CARTERROR"></span>Cart Error
+## <span id="cartError"></span><span id="carterror"></span><span id="CARTERROR"></span>CartError
 
 
 Represents an error that occurs after a cart is created.

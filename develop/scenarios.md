@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Scenarios
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
 **Applies To**
 
@@ -88,6 +89,8 @@ All of the following scenarios can be completed three different ways:
 <p>Manage customer orders and subscriptions</p>
 <ul>
 <li><p>[Get all of a customer's orders](get-all-of-a-customer-s-orders.md)</p></li>
+<li><p>[Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md)</p></li>
+<li><p>[Get a collection of entitlements](get-a-collection-of-entitlements.md)</p></li> 
 <li><p>[Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)</p></li>
 <li><p>[Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)</p></li>
 </ul>
@@ -120,19 +123,38 @@ All of the following scenarios can be completed three different ways:
 </tr>
 <tr class="even">
 <td><p>[Place orders](place-orders.md)</p></td>
-<td><p>Get offers from the catalog</p>
+<td><p>Purchase Partner Center Azure reserved VM instances</p>
+<ul>
+<li><p>[Purchase Partner Center Azure reserved VM instances](purchase-partner-center-azure-reserved-vm-instances.md)</p></li>
+</ul>
+<p>Get offers from the catalog</p>
 <ul>
 <li><p>[Get a list of offer categories by market](get-a-list-of-offer-categories-by-country-and-locale.md)</p></li>
 <li><p>[Get a list of offers for a market](get-a-list-of-offers-for-a-market.md)</p></li>
 <li><p>[Get an offer by ID](get-an-offer-by-id.md)</p></li>
 <li><p>[Get add-ons for an offer ID](get-addon-offers-by-offer-id.md)</p></li>
+<li><p>[Get a list of products](get-a-list-of-products.md)</p></li>
+<li><p>[Get a product by ID](get-a-product-by-id.md)</p></li>
+<li><p>[Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)</p></li>
+<li><p>[Get a SKU by ID](get-a-sku-by-id.md)</p></li>
+<li><p>[Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)</p></li>
+<li><p>[Get an availability by ID](get-an-availability-by-id.md)</p></li>
+<li><p>[Check Inventory](check-inventory.md)</p></li>
 </ul>
 <p>Create an order</p>
 <ul>
+<li><p>[Create a cart](create-a-cart.md)</p></li>
+<li><p>[Update a cart](update-a-cart.md)</p></li>
+<li><p>[Checkout a cart](checkout-a-cart.md)</p></li>
 <li><p>[Create an order](create-an-order.md)</p></li>
 <li><p>[Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)</p></li>
 <li><p>[Get an order by ID](get-an-order-by-id.md)</p></li>
 <li><p>[Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)</p></li>
+</ul>
+<p>Enable a subscription for Azure RI purchase</p>
+<ul>
+<li><p>[Register a subscription](register-a-subscription.md)</p></li>
+<li><p>[Get subscription registration status](get-subscription-registration-status.md)</p></li>
 </ul>
 <p>Trial conversions</p>
 <ul>
@@ -166,6 +188,8 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)</p></li>
 <li><p>[Get an invoice by ID](get-invoice-by-id.md)</p></li>
 <li><p>[Get invoice line items](get-invoiceline-items.md)</p></li>
+<li><p>[Get invoice statement](get-invoice-statement.md)</p></li>
+<li><p>[Get invoice summaries](get-invoice-summaries.md)</p></li>
 <li><p>[Get a collection of invoices](get-a-collection-of-invoices.md)</p></li>
 </ul>
 <p>Check your Azure spending budget</p>
