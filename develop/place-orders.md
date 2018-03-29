@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Place orders
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
 **Applies To**
 
@@ -20,6 +21,10 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer orders and subscriptions.
+
+**Purchase Partner Center Azure reserved VM instances**
+
+-   [Purchase Partner Center Azure reserved VM instances](purchase-partner-center-azure-reserved-vm-instances.md) 
 
 **Get offers from the catalog**
 
@@ -31,11 +36,37 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get add-ons for an offer ID](get-addon-offers-by-offer-id.md)
 
+-   [Get a list of products](get-a-list-of-products.md)
+
+-   [Get a product by ID](get-a-product-by-id.md)
+
+-   [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
+
+-   [Get a SKU by ID](get-a-sku-by-id.md)
+
+-   [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
+
+-   [Get an availability by ID](get-an-availability-by-id.md)
+
+-   [Check Inventory](check-inventory.md)
+
 **Create an order**
+
+-   [Create a cart](create-a-cart.md)
+
+-   [Update a cart](update-a-cart.md)
+
+-   [Checkout a cart](checkout-a-cart.md)
 
 -   [Create an order](create-an-order.md)
 
 -   [Get an order by ID](get-an-order-by-id.md)
+
+**Enable a subscription for Azure RI purchase**
+
+-   [Register a subscription](register-a-subscription.md)
+
+-   [Get subscription registration status](get-subscription-registration-status.md) 
 
 **Get subscription details**
 

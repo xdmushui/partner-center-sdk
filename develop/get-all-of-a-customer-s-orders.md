@@ -1,6 +1,6 @@
 ---
-title: Get a customer's orders
-description: Gets all of a customer's orders.
+title: Get all of a customer's orders
+description: Gets a collection of all the orders for a specified customer.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.author: v-thpr
 ms.date: 12/15/2017
@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get a customer's orders
+# Get all of a customer's orders
 
 
 **Applies To**
@@ -19,22 +19,22 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets all of a customer's orders.
+Gets a collection of all the orders for a specified customer.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+-   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To obtain a list of all of a customer's orders, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) methods.
+To obtain a collection of all of a customer's orders, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) methods.
 
 ```CSharp
 // IAggregatePartner partnerOperations;
-// var selectedCustomerID as String;
+// string selectedCustomerId;
 
 var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 ```
@@ -48,7 +48,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders HTTP/1.1  |
 
  
 
@@ -56,9 +56,9 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 
 Use the following query parameter to get all orders.
 
-| Name                   | Type     | Required | Description                                                                                                                                            |
-|------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| Name                   | Type     | Required | Description                                               |
+|------------------------|----------|----------|-----------------------------------------------------------|
+| customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 
  
 
@@ -73,11 +73,12 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/orders HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: b1317092-f087-471e-a637-f66523b2b94c
+MS-RequestId: 0e5fc923-8e3c-4560-9100-ce7283c3e081
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
+Connection: Keep-Alive
 ```
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
@@ -93,58 +94,107 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```
 HTTP/1.1 200 OK
-Content-Length: 31942
-Content-Type: application/json
+Content-Length: 22463
+Content-Type: application/json; charset=utf-8
+MS-RequestId: 0e5fc923-8e3c-4560-9100-ce7283c3e081
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
-MS-RequestId: b1317092-f087-471e-a637-f66523b2b94c
-Date: Mon, 23 Nov 2015 22:00:25 GMT
+Date: Thu, 15 Mar 2018 20:44:40 GMT
 
 {
-    "totalCount": 24,
-    "items": [{
-        "id": "d6595733-265f-4918-a62e-026e64bc8384",
-        "referenceCustomerId": "<customer-tenant-id>",
-        "lineItems": [{
-            "lineItemNumber": 0,
-            "offerId": "031C9E47-4802-4248-838E-778FB1D2CC05",
-            "friendlyName": "nickname",
-            "quantity": 1,
+    "totalCount": 2,
+    "items": [
+        {
+            "id": "9qg-ErcO-4MPbPqq_3MIQaS7bn8W6HfG1",
+            "referenceCustomerId": "b0d70a69-4c42-4b27-b17b-91a835d8686a",
+            "billingCycle": "one_time",
+            "currencyCode": "USD",
+            "lineItems": [
+                {
+                    "lineItemNumber": 0,
+                    "offerId": "DZH318Z0BQ4B:000Z:DZH318Z0DSPL",
+                    "friendlyName": "Reserved_VM_Instance_Standard_D1_AP_East_1_Year",
+                    "quantity": 1,
+                    "links": {
+                        "sku": {
+                            "uri": "/products/DZH318Z0BQ4B/skus/000Z?country=US",
+                            "method": "GET",
+                            "headers": []
+                        }
+                    }
+                }
+            ],
+            "creationDate": "2018-03-15T02:17:15.6455674Z",
+            "status": "pending",
             "links": {
-                "subscription": {
-                    "uri": "/subscriptions?key=<key>",
+                "provisioningStatus": {
+                    "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders/9qg-ErcO-4MPbPqq_3MIQaS7bn8W6HfG1/provisioningstatus",
+                    "method": "GET",
+                    "headers": []
+                },
+                "self": {
+                    "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders/9qg-ErcO-4MPbPqq_3MIQaS7bn8W6HfG1",
                     "method": "GET",
                     "headers": []
                 }
+            },
+            "attributes": {
+                 "objectType": "Order" 
             }
-        }],
-        "status": "none",
-        "creationDate": "2015-10-08T10: 42: 36.54-07: 00",
-        "attributes": {
-            "etag": "<etag>",
-            "objectType": "Order"
+        },
+        {
+            "id": "eeba9d00-7b46-443a-917e-22887a8fc993",
+            "referenceCustomerId": "b0d70a69-4c42-4b27-b17b-91a835d8686a",
+            "billingCycle": "monthly",
+            "currencyCode": "USD",
+            "lineItems": [
+                {
+                    "lineItemNumber": 0,
+                    "offerId": "E59159FC-6F67-4599-B3CB-17FF4020F643",
+                    "subscriptionId": "DB8C695B-1C3C-4C55-B697-771503DD46BF",
+                    "friendlyName": "Azure Active Directory Premium P2",
+                    "quantity": 1,
+                    "links": {
+                        "subscription": {
+                            "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/subscriptions/DB8C695B-1C3C-4C55-B697-771503DD46BF",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "sku": {
+                            "uri": "/products/84A661C4-E949-4BD2-A560-ED7766FCAF2B/skus/E59159FC-6F67-4599-B3CB-17FF4020F643",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "provisioningStatus": {
+                            "uri": "/subscriptions/DB8C695B-1C3C-4C55-B697-771503DD46BF/provisioningstatus",
+                            "method": "GET",
+                            "headers": []
+                        }
+                    }
+            ],
+            "creationDate": "2018-03-06T17:37:05.253-08:00",
+            "status": "completed",
+            "links": {
+                "self": {
+                    "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders/eeba9d00-7b46-443a-917e-22887a8fc993",
+                    "method": "GET",
+                    "headers": []
+                }
+            },
+            "attributes": {
+                "etag": "eyJpZCI6ImVlYmE5ZDAwLTdiNDYtNDQzYS05MTdlLTIyODg3YThmYzk5MyIsInZlcnNpb24iOjF9",
+                "objectType": "Order"
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders",
+            "method": "GET",
+            "headers": []
         }
     },
-    {
-        "id": "b8fe2ddb-6e85-4f8b-a5ba-06c20ce6d6c5",
-        "referenceCustomerId": "<customer-tenant-id>",
-        "lineItems": [{
-            "lineItemNumber": 0,
-            "offerId": "4271AA57-4129-477E-BA88-0A276D4A1619",
-            "quantity": 1,
-            "links": {
-                "subscription": {
-                    "uri": "/subscriptions?key=<key>",
-                    "method": "GET",
-                    "headers": []
-                }
-            }
-        }],
-        "status": "none",
-        "creationDate": "2015-10-09T21: 53: 18.83-07: 00",
-        "attributes": {
-            "etag": "<etag>",
-            "objectType": "Order"
-        }
+    "attributes": {
+         "objectType": "Collection" 
     }
 }
 ```

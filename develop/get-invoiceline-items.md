@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Get invoice line items
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
 **Applies To**
 
@@ -89,17 +90,18 @@ foreach (var invoiceDetail in invoice.InvoiceDetails)
 
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetInvoiceLineItems.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
 
 
 **Request syntax**
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items.
+Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax for an invoice with a billing-provider value of "OneTime" and set seekOperation to "Next" to get the next page of invoice line items.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                             |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                              |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               |
 
  
 
@@ -110,10 +112,11 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
-| billing-provider       | string | Yes      | The billing provider: "Office", "Azure" or "AzureDataMarket".     |
+| billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime".               |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
 | size                   | number | No       | The maximum number of items to return.                            |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
+| seekOperation          | string | No       | If billing-provider = "OneTime", set seekOperation=Next to get the next page of invoice line items. |
 
  
 
@@ -123,9 +126,9 @@ Use the following URI and query parameters when creating the request.
 
 **Request body**
 
-None
+None.
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
 If successful, the response contains the collection of line item details.
@@ -137,7 +140,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 ## <span id="Request_Response_Examples"></span><span id="request_response_examples"></span><span id="REQUEST_RESPONSE_EXAMPLES"></span>Request/Response Examples
 
 
-**Request example** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+**Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
 ```
 GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
@@ -150,7 +153,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+**Response example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
 ```
 HTTP/1.1 200 OK
@@ -162,7 +165,7 @@ MS-CV: bpqyomePDUqrSSYC.0
 MS-ServerId: 202010406
 Date: Thu, 07 Sep 2017 23:31:09 GMT
 
-﻿{
+{
     "totalCount": 2,
     "items": [{
             "partnerId": "3b33e682-00c3-41ee-9dd2-a548adf56438",
@@ -252,11 +255,11 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example** (BillingProvider: Azure, InvoiceLineItemType: BillingLineItems)
+**Request example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Azure/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
-Authorization: Bearer <token>
+GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
+Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
@@ -265,114 +268,96 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: Azure, InvoiceLineItemType: BillingLineItems)
+**Response example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
 ```
 HTTP/1.1 200 OK
-Content-Length: 2769
+Content-Length: 2484
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
-MS-CV: mkcG2RWgd0qXi6MP.0
-MS-ServerId: 201022015
-Date: Fri, 08 Sep 2017 00:19:09 GMT
+MS-CV: bpqyomePDUqrSSYC.0
+MS-ServerId: 202010406
+Date: Thu, 07 Sep 2017 23:31:09 GMT
 
-﻿{
+ {
+    "continuationToken": "d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7",
     "totalCount": 2,
-    "items": [{
-            "detailLineItemId": 1,
-            "sku": "7UD-00001",
-            "includedQuantity": 0.0,
-            "overageQuantity": 0.0008,
-            "listPrice": 0.0003,
+    "items": [
+        {
+            "partnerId": "6480d686-cfb4-424d-a945-6b9b9f4badc2",
+            "customerId": "org:9060d13d-c5ed-482e-b059-a15a38cbb28e",
+            "customerName": "recipientCustomerName",
+            "customerDomainName": "recipientCustomerDomain",
+            "invoiceNumber": "G000024135",
+            "mpnId": "4870137",
+            "resellerMpnId": 0,
+            "orderId": "QDOx5ZN3YR9uYhm4M1MGQJ_0nievUOrx1",
+            "orderDate": "2018-02-08T22:31:42.9397946Z",
+            "productId": "productid",
+            "skuId": "skuid",
+            "availabilityId": "availabilityid",
+            "productName": "TEST PRODUCT",
+            "skuName": "TEST SKU TITLE",
+            "chargeType": "Purchase",
+            "unitPrice": 431.8,
+            "quantity": 1,
+            "subtotal": 431.8,
+            "taxTotal": 38.87,
+            "totalForCustomer": 470.67,
             "currency": "USD",
-            "pretaxCharges": 0.0,
-            "taxAmount": 0.0,
-            "postTaxTotal": 0.0,
-            "pretaxEffectiveRate": 0.0,
-            "postTaxEffectiveRate": 0.0,
-            "chargeType": "ASSESS USAGE FEE FOR CURRENT CYCLE",
+            "discountDetails": "",
             "invoiceLineItemType": "billing_line_items",
-            "partnerId": "3B33E682-00C3-41EE-9DD2-A548ADF56438",
-            "partnerName": "TEST_TEST_BUGBASH1",
-            "partnerBillableAccountId": "3957834781",
-            "customerId": "5F7CE186-F9B5-4532-BF66-1823B50498E2",
-            "domainName": "FESTSHOUKAI.onmicrosoft.com",
-            "customerCompanyName": "フェスト商会",
-            "mpnId": 4391507,
-            "tier2MpnId": -1,
-            "invoiceNumber": "D070002ISK",
-            "subscriptionId": "5B32D6C3-2AD3-4013-990A-9804D4E9B051",
-            "subscriptionName": "MICROSOFT AZURE",
-            "subscriptionDescription": "MICROSOFT AZURE",
-            "billingCycleType": "MONTHLY",
-            "orderId": "567735045903866440",
-            "serviceName": "DATA MANAGEMENT",
-            "serviceType": "",
-            "resourceGuid": "12DA282F-7E96-49E2-983A-9A65DA2A4866",
-            "resourceName": "STANDARD IO - TABLE READ OPERATION UNITS (IN 10,000S)",
-            "region": "",
-            "consumedQuantity": 0.0008,
-            "chargeStartDate": "2017-05-10T00:00:00",
-            "chargeEndDate": "2017-06-09T00:00:00",
-            "unit": "10,000S",
-            "billingProvider": "azure",
+            "billingProvider": "one_time",
             "attributes": {
-                "objectType": "UsageBasedLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
-        }, {
-            "detailLineItemId": 1,
-            "sku": "7UD-00001",
-            "includedQuantity": 0.0,
-            "overageQuantity": 143.036111,
-            "listPrice": 0.0595,
+        },
+        {
+            "partnerId": "6480d686-cfb4-424d-a945-6b9b9f4badc2",
+            "customerId": "org:9060d13d-c5ed-482e-b059-a15a38cbb28e",
+            "customerName": "recipientCustomerName",
+            "customerDomainName": "recipientCustomerDomain",
+            "invoiceNumber": "G000024135",
+            "mpnId": "4870137",
+            "resellerMpnId": 0,
+            "orderId": "QDOx5ZN3YR9uYhm4M1MGQJ_0nievUOrx1",
+            "orderDate": "2018-02-08T22:31:42.9397946Z",
+            "productId": "productid",
+            "skuId": "skuid",
+            "availabilityId": "availabilityid",
+            "productName": "TEST PRODUCT",
+            "skuName": "TEST SKU TITLE",
+            "chargeType": "Purchase",
+            "unitPrice": 26.35,
+            "quantity": 1,
+            "subtotal": 26.35,
+            "taxTotal": 2.37,
+            "totalForCustomer": 28.72,
             "currency": "USD",
-            "pretaxCharges": 8.51,
-            "taxAmount": 0.0,
-            "postTaxTotal": 8.51,
-            "pretaxEffectiveRate": 0.05949546,
-            "postTaxEffectiveRate": 0.05949546,
-            "chargeType": "ASSESS USAGE FEE FOR CURRENT CYCLE",
+            "discountDetails": "",
             "invoiceLineItemType": "billing_line_items",
-            "partnerId": "3B33E682-00C3-41EE-9DD2-A548ADF56438",
-            "partnerName": "TEST_TEST_BUGBASH1",
-            "partnerBillableAccountId": "3957834781",
-            "customerId": "5F7CE186-F9B5-4532-BF66-1823B50498E2",
-            "domainName": "FESTSHOUKAI.onmicrosoft.com",
-            "customerCompanyName": "フェスト商会",
-            "mpnId": 4391507,
-            "tier2MpnId": -1,
-            "invoiceNumber": "D070002ISK",
-            "subscriptionId": "5B32D6C3-2AD3-4013-990A-9804D4E9B051",
-            "subscriptionName": "MICROSOFT AZURE",
-            "subscriptionDescription": "MICROSOFT AZURE",
-            "billingCycleType": "MONTHLY",
-            "orderId": "567735045903866440",
-            "serviceName": "STORAGE",
-            "serviceType": "LOCALLY REDUNDANT",
-            "resourceGuid": "3F2B1E1C-C886-4EC6-AD6F-DD0EF38819C9",
-            "resourceName": "STANDARD IO - TABLE (GB)",
-            "region": "",
-            "consumedQuantity": 143.036111,
-            "chargeStartDate": "2017-05-10T00:00:00",
-            "chargeEndDate": "2017-06-09T00:00:00",
-            "unit": "GB",
-            "billingProvider": "azure",
+            "billingProvider": "one_time",
             "attributes": {
-                "objectType": "UsageBasedLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],
     "links": {
         "self": {
-            "uri": "/invoices/D070002ISK/lineitems/Azure/BillingLineItems?size=2&amp;offset=0",
+            "uri": "/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/D070002ISK/lineitems/Azure/BillingLineItems?size=2&amp;offset=2",
+            "uri": "/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next",
             "method": "GET",
-            "headers": []
+            "headers": [
+                {
+                    "key": "MS-ContinuationToken",
+                    "value": "d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7"
+                }
+            ]
         }
     },
     "attributes": {
@@ -381,105 +366,68 @@ Date: Fri, 08 Sep 2017 00:19:09 GMT
 }
 ```
 
-**Request example** (BillingProvider: Azure, InvoiceLineItemType: UsageLineItems)
+**Request example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Azure/UsageLineItems?size=2&amp;offset=0 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: 606429d6-99dc-49c5-bc17-b155c22c9e81
+MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
+MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
 X-Locale: en-US
 MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example** (BillingProvider: Azure, InvoiceLineItemType: UsageLineItems)
+**Response example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
 ```
 HTTP/1.1 200 OK
-Content-Length: 2322
+Content-Length: 2484
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
-MS-RequestId: 606429d6-99dc-49c5-bc17-b155c22c9e81
-MS-CV: 2ClpjdfSLEOot0no.0
+MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
+MS-CV: bpqyomePDUqrSSYC.0
 MS-ServerId: 202010406
-Date: Fri, 08 Sep 2017 00:46:26 GMT
+Date: Thu, 07 Sep 2017 23:31:09 GMT
 
-﻿{
-    "totalCount": 2,
-    "items": [{
-            "customerBillableAccount": "5028553399",
-            "usageDate": "2017-06-09T00:00:00",
-            "invoiceLineItemType": "usage_line_items",
-            "partnerId": "3B33E682-00C3-41EE-9DD2-A548ADF56438",
-            "partnerName": "TEST_TEST_BUGBASH1",
-            "partnerBillableAccountId": "3957834781",
-            "customerId": "5F7CE186-F9B5-4532-BF66-1823B50498E2",
-            "domainName": "FESTSHOUKAI.onmicrosoft.com",
-            "customerCompanyName": "フェスト商会",
-            "mpnId": 4391507,
-            "tier2MpnId": -1,
-            "invoiceNumber": "D070002ISK",
-            "subscriptionId": "5B32D6C3-2AD3-4013-990A-9804D4E9B051",
-            "subscriptionName": "MICROSOFT AZURE",
-            "subscriptionDescription": "MICROSOFT AZURE",
-            "billingCycleType": "MONTHLY",
-            "orderId": "567735045903866440",
-            "serviceName": "DATA MANAGEMENT",
-            "serviceType": "",
-            "resourceGuid": "12DA282F-7E96-49E2-983A-9A65DA2A4866",
-            "resourceName": "STANDARD IO - TABLE READ OPERATION UNITS (IN 10,000S)",
-            "region": "",
-            "consumedQuantity": 0.0002,
-            "chargeStartDate": "2017-05-10T00:00:00",
-            "chargeEndDate": "2017-06-09T00:00:00",
-            "unit": "10,000S",
-            "billingProvider": "azure",
+{
+    "totalCount": 1,
+    "items": [
+        {
+            "partnerId": "6480d686-cfb4-424d-a945-6b9b9f4badc2",
+            "customerId": "org:9060d13d-c5ed-482e-b059-a15a38cbb28e",
+            "customerName": "recipientCustomerName",
+            "customerDomainName": "recipientCustomerDomain",
+            "invoiceNumber": "G000024135",
+            "mpnId": "4870137",
+            "resellerMpnId": 0,
+            "orderId": "NeqT31Kziwf8gkCXM9YQToWTqU-9Jbm81",
+            "orderDate": "2018-02-08T22:31:47.1751688Z",
+            "productId": "DZH318Z0BQ3P",
+            "skuId": "001F",
+            "availabilityId": "DZH318Z0DR0H",
+            "productName": "Reserved VM Instance, Standard_D1, AP East, 3 years",
+            "skuName": "D Series",
+            "chargeType": "Purchase",
+            "unitPrice": 1447,
+            "quantity": 1,
+            "subtotal": 1447,
+            "taxTotal": 130.24,
+            "totalForCustomer": 1577.24,
+            "currency": "USD",
+            "discountDetails": "",
+            "invoiceLineItemType": "billing_line_items",
+            "billingProvider": "one_time",
             "attributes": {
-                "objectType": "DailyUsageLineItem"
-            }
-        }, {
-            "customerBillableAccount": "5028553399",
-            "usageDate": "2017-06-09T00:00:00",
-            "invoiceLineItemType": "usage_line_items",
-            "partnerId": "3B33E682-00C3-41EE-9DD2-A548ADF56438",
-            "partnerName": "TEST_TEST_BUGBASH1",
-            "partnerBillableAccountId": "3957834781",
-            "customerId": "5F7CE186-F9B5-4532-BF66-1823B50498E2",
-            "domainName": "FESTSHOUKAI.onmicrosoft.com",
-            "customerCompanyName": "フェスト商会",
-            "mpnId": 4391507,
-            "tier2MpnId": -1,
-            "invoiceNumber": "D070002ISK",
-            "subscriptionId": "5B32D6C3-2AD3-4013-990A-9804D4E9B051",
-            "subscriptionName": "MICROSOFT AZURE",
-            "subscriptionDescription": "MICROSOFT AZURE",
-            "billingCycleType": "MONTHLY",
-            "orderId": "567735045903866440",
-            "serviceName": "STORAGE",
-            "serviceType": "LOCALLY REDUNDANT",
-            "resourceGuid": "3F2B1E1C-C886-4EC6-AD6F-DD0EF38819C9",
-            "resourceName": "STANDARD IO - TABLE (GB)",
-            "region": "",
-            "consumedQuantity": 4.38427,
-            "chargeStartDate": "2017-05-10T00:00:00",
-            "chargeEndDate": "2017-06-09T00:00:00",
-            "unit": "GB",
-            "billingProvider": "azure",
-            "attributes": {
-                "objectType": "DailyUsageLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],
     "links": {
         "self": {
-            "uri": "/invoices/D070002ISK/lineitems/Azure/UsageLineItems?size=2&amp;offset=0",
-            "method": "GET",
-            "headers": []
-        },
-        "next": {
-            "uri": "/invoices/D070002ISK/lineitems/Azure/UsageLineItems?size=2&amp;offset=2",
+            "uri": "/invoices/G000024135/lineitems/OneTime/BillingLineItems",
             "method": "GET",
             "headers": []
         }

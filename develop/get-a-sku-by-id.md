@@ -1,0 +1,169 @@
+---
+title: Get a SKU by ID
+description: Gets a SKU for the specified product using the specified SKU ID.
+ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
+ms.author: v-thpr
+ms.date: 03/20/2018
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
+---
+
+# Get a SKU by ID
+
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
+
+**Applies To**
+
+-   Partner Center
+
+Gets a SKU for the specified product using the specified SKU ID.
+
+## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+
+
+-   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+-   A product ID. 
+-   A SKU ID. 
+
+
+## <span id="C_"></span><span id="c_"></span>C#
+
+
+To get the details of a specific SKU, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Pass the SKU ID to the **ById()** method, and call **Get()** or **GetAsync()** to retrieve the SKU details.
+
+```CSharp
+IAggregatePartner partnerOperations;
+string countryCode;
+string productId; 
+string skuId;
+
+// Get the SKU details.
+var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Get();
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+
+
+**Request syntax**
+
+| Method  | Request URI                                                                                                         |
+|---------|---------------------------------------------------------------------------------------------------------------------|
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
+
+ 
+
+**URI parameter**
+
+Use the following path and query parameters to get a SKU for the specified product using the specified SKU ID.
+
+| Name                   | Type     | Required | Description                                                     |
+|------------------------|----------|----------|-----------------------------------------------------------------|
+| product-id             | string   | Yes      | A string that identifies the product.                           |
+| sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
+| country-code           | string   | Yes      | A country/region ID.                                            |
+
+ 
+
+**Request headers**
+
+-   See [Headers](headers.md) for more information.
+
+**Request body**
+
+None.
+
+**Request example**
+
+```
+GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3V/skus/00G1?country=US HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: e0ae69a5-6322-4d7e-809d-59e02b51d71f
+MS-CorrelationId: 956eae17-7650-4470-94d2-4f61b9b02a23
+X-Locale: en-US
+MS-PartnerCenter-Client: Partner Center .NET SDK
+MS-PartnerCenter-Application: Partner Center .NET SDK Samples
+Host: api.partnercenter.microsoft.com
+```
+
+## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+
+
+If successful, the response body contains a collection of [SKU](products.md#sku) resources.
+
+**Response success and error codes**
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
+
+This method returns the following error codes:
+
+| HTTP Status Code     | Error code   | Description                                                                                               |
+|----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
+| 404                  | 400013       | Product was not found.                                                                                    |
+| 404                  | 400018       | Sku was not found.                                                                                        |
+
+
+**Response example**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/10.0
+MS-CorrelationId: 956eae17-7650-4470-94d2-4f61b9b02a23,956eae17-7650-4470-94d2-4f61b9b02a23
+MS-RequestId: e0ae69a5-6322-4d7e-809d-59e02b51d71f,e0ae69a5-6322-4d7e-809d-59e02b51d71f
+X-Locale: en-US,en-US
+X-SourceFiles: =?UTF-8?B?QzpcVXNlcnNcbWFtZW5kZVxkZXZcZHBzLXJwZVxSUEUuUGFydG5lci5TZXJ2aWNlLkNhdGFsb2dcV2ViQXBpc1xDYXRhbG9nU2VydmljZS5WMi5XZWJcdjFccHJvZHVjdHNcRFpIMzE4WjBCUTNWXHNrdXNcMDBHMQ==?=
+X-Powered-By: ASP.NET
+Date: Thu, 15 Mar 2018 17:43:25 GMT
+Content-Length: 1108
+
+{
+    "id": "00G1",
+    "productId": "DZH318Z0BQ3V",
+    "title": "Reserved VM Instance, Standard_D32s_v3, US West 2, 3 Years",
+    "description": "Reserved Virtual Machines Instance, Standard_D32s_v3, US West 2, 3 Years",
+    "minimumQuantity": 1,
+    "maximumQuantity": 999999999,
+    "isTrial": false,
+    "supportedBillingCycles": [
+        "one_time"
+    ],
+    "purchasePrerequisites": [
+        "AzureSubscriptionRegistration",
+        "InventoryCheck"
+    ],
+    "inventoryVariables": [
+        "CustomerId",
+        "AzureSubscriptionId"
+    ],
+    "provisioningVariables": [
+        "Scope",
+        "AzureSubscriptionId"
+    ],
+    "dynamicAttributes": {
+        "armSkuName": "Standard_D32s_v3",
+        "cores": "32",
+        "ram": "128",
+        "skuDisplayName": "D32s v3",
+        "category": "General purpose",
+        "armRegionName": "westus2",
+        "duration": "3Years",
+        "region": "US West 2",
+        "diskType": "Ssd"
+    },
+    "links": {
+        "availabilities": {
+            "uri": "/products/DZH318Z0BQ3V/skus/00G1/availabilities?country=us",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/products/DZH318Z0BQ3V/skus/00G1?country=us",
+            "method": "GET",
+            "headers": []
+        }
+    }
+}
+```
+

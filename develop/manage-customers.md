@@ -11,6 +11,7 @@ ms.technology: partner-center-sdk
 
 # Manage customers
 
+[This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.]
 
 **Applies To**
 
@@ -40,6 +41,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 **Manage customer orders and subscriptions**
 
 -   [Get all of a customer's orders](get-all-of-a-customer-s-orders.md)
+
+-   [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md) 
+
+-   [Get a collection of entitlements](get-a-collection-of-entitlements.md)
 
 -   [Get all of a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 
