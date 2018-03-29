@@ -43,9 +43,9 @@ var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                                                                      |
+| Method  | Request URI                                                                                                           |
+|---------|-----------------------------------------------------------------------------------------------------------------------|
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                            |
 
  
 
@@ -55,7 +55,7 @@ Use the following path and query parameters when creating the request.
 
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
-| customer-id            | string | Yes      | A GUID formatted customer-id that identifies the customer.        |
+| customerId             | string | Yes      | A GUID formatted customerId that identifies the customer.         |
 
  
 
@@ -161,7 +161,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 
 ## <span id="C_"></span><span id="c_"></span>Additional C# Example
 
-To retrieve more details related to the virtual machine reservations on an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance (Always use the exposed URI and do not hand-generate this URI as it might change in the future).
+To retrieve more details related to the virtual machine reservations on an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance.
 
 ```CSharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.Get();

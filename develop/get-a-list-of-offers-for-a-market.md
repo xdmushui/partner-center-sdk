@@ -46,7 +46,7 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 
 | Method  | Request URI                                                                          |
 |---------|--------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country\_id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
  
 
@@ -151,12 +151,12 @@ Date: Mon, 23 Nov 2015 23:20:44 GMT
     },
     "links":{
         "self":{
-            "uri":"/v1/offers?country={country_id}",
+            "uri":"/v1/offers?country={country-id}",
             "method":"GET",
             "headers":[]
         },
         "previous":{
-            "uri":"/v1/offers?country={country_id}",
+            "uri":"/v1/offers?country={country-id}",
             "method":"GET",
             "headers":[]
         }

@@ -85,11 +85,11 @@ This table describes the [Cart](cart.md) properties in the request body.
 | Property              | Type             | Required        | Description                                                                                               |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | id                    | string           | No              | A cart identifier that is supplied upon successful creation of the cart.                                  |
-|CreationTimeStamp      | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.         |
-| LastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
-| ExpirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
-| LastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
-| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                                    |
+| creationTimeStamp     | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.        |
+| lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
+| expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
+| lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
+| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                               |
 
 
 This table describes the [CartLineItem](cart.md#cartlineitem) properties in the request body.
@@ -102,7 +102,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | quantity             | int                         | Yes          | The number of licenses for a licence-based subscription or instances for an Azure reservation.     |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
-| Participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
+| participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | purchaseSystem       | string                      | No           | Which purchase system to place order to.                                                           |

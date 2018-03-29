@@ -19,7 +19,7 @@ ms.technology: partner-center-sdk
 
 Register an existing [Subscription](subscriptions.md) so that it is enabled for ordering Partner Center Reserved VM Instances.  
 
-To purchase a Partner Center RI you must have at least one existing Pay-as-you-go (PayG) subscription. This method allows you to register your existing PayG subscription, enabling it for purchasing Azure RI instances. 
+To purchase a Partner Center RI you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure RI instances. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

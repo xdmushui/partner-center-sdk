@@ -34,7 +34,6 @@ This resource represents the products to which the customer has right to use bec
 | skuID                | string                                                         | The ID of the SKU.                                                      |
 | skuTitle             | string                                                         | The title of the product SKU.                                           |
 | quantity             | int                                                            | The quantity of entitlements.                                           |
-| productType          | [ItemType](products.md#itemtype)                               | The type of product to filter the entitlements.                         |
 | entitlementType      | [EntitlementType](#entitlementtype)                            | The type of entitlement.                                                |
 | entitledArtifacts    | IEnumerable<[Artifact](#artifact)>.                            | The list of artifacts associated with the entitlement.                  |
 | IncludedEntitlements | IEnumerable<[Entitlement](#artifact)>.                         | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |

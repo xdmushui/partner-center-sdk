@@ -138,7 +138,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 | domainName               | string                                                         | Gets or sets domain name.                                             |
 | durableOfferId           | string                                                         | Gets or sets the durable offer unique identifier.                     |
 | invoiceLineItemType      | string                                                         | Gets the type of invoice line item.                                   |
-| MpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
+| mpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
 | offerId                  | string                                                         | Gets or sets the offer unique identifier.                             |
 | offerName                | string                                                         | Gets or sets the offer name.                                          |
 | orderId                  | string                                                         | Gets or sets the order unique identifier.                             |
@@ -150,7 +150,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 | subscriptionName         | string                                                         | Gets or sets the subscription name.                                   |
 | subscriptionStartDate    | string in UTC date-time format                                 | Gets or sets the date when the subscription starts.                   |
 | subtotal                 | number                                                         | Gets or sets the amount after discount.                               |
-| SyndicationPartnerSubscriptionNumber | string                                             | Gets or sets the syndication partner subscription number.             |
+| syndicationPartnerSubscriptionNumber | string                                             | Gets or sets the syndication partner subscription number.             |
 | tax                      | number                                                         | Gets or sets the taxes charged.                                       |
 | tier2MpnId               | number                                                         | Gets or sets the MPN Id of the Tier 2 partner associated to this line item. |
 | totalForCustomer         | number                                                         | Gets or sets the total amount after discount and tax.                 |
@@ -184,7 +184,7 @@ Represents an invoice billing line item for usage based subscriptions.
 | invoiceLineItemType      | string                                                         | Gets the type of invoice line item.                                   |
 | invoiceNumber            | string                                                         | Gets or sets the invoice number.                                      |
 | listPrice                | number                                                         | Gets or sets the price of each unit.                                  |
-| MpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
+| mpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
 | orderId                  | string                                                         | Gets or sets the order unique identifier.                             |
 | overageQuantity          | number                                                         | Gets or sets the quantity consumed above allowed usage.               |
 | partnerBillableAccountId | string                                                         | Gets or sets the partner billable account ID.                         |
@@ -216,4 +216,4 @@ Represents the operations available on an invoice statement in application/pdf.
 
 | Property                 | Type                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
-| HttpResponseMessage      | object                                                         | ByteArrayContent with contentType = application/pdf.                  |
+| httpResponseMessage      | object                                                         | ByteArrayContent with contentType = application/pdf.                  |
