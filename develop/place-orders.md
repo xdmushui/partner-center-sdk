@@ -22,9 +22,9 @@ ms.technology: partner-center-sdk
 
 This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer orders and subscriptions.
 
-**Purchase Partner Center Azure reserved VM instances**
+**Purchase Azure Reserved VM Instances**
 
--   [Purchase Partner Center Azure reserved VM instances](purchase-partner-center-azure-reserved-vm-instances.md) 
+-   [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md) 
 
 **Get offers from the catalog**
 
@@ -62,7 +62,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get an order by ID](get-an-order-by-id.md)
 
-**Enable a subscription for Azure RI purchase**
+**Enable a subscription for Azure Reserved VM Instance purchases**
 
 -   [Register a subscription](register-a-subscription.md)
 

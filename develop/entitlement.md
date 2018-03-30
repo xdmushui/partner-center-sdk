@@ -60,7 +60,7 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | Value                                     | Description                                                                                |
 |-------------------------------------------|--------------------------------------------------------------------------------------------|
 | Software                                  | Indicates entitlement type related to software.                                            |
-| VirtualMachineReservedInstance            | Indicates entitlement type related to Azure virtual machine reserved instances.            |
+| VirtualMachineReservedInstance            | Indicates entitlement type related to Azure Reserved Virtual Machine Instances.            |
 
 
 
@@ -83,14 +83,14 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | Value                                     | Description                                                                                |
 |-------------------------------------------|--------------------------------------------------------------------------------------------|
 | ProductKey                                | Indicates the artifact aids with retrieval of product key.                                 |
-| VirtualMachineReservedInstance            | Indicates the artifact aids with retrieval of Azure virtual machine reserved instances.    |
+| VirtualMachineReservedInstance            | Indicates the artifact aids with retrieval of Azure Reserved Virtual Machine Instances.    |
 
 
 
 ## <span id="VirtualMachineReservedInstanceArtifact"></span><span id="virtualmachinereservedinstanceartifact"></span><span id="VIRTUALMACHINERESERVEDARTIFACT"></span>VirtualMachineReservedInstanceArtifact
 
 
-The artifact associated with a virtual machine reserved instance entitlement. It inherits from the [Artifact](#artifact) class.  
+The artifact associated with an Azure Reserved Virtual Machine Instance entitlement. It inherits from the [Artifact](#artifact) class.  
 
 | Property             | Type                                                           | Description                                                             |
 |----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -102,12 +102,12 @@ The artifact associated with a virtual machine reserved instance entitlement. It
 ## <span id="VirtualMachineReservedInstanceArtifactDetails"></span><span id="virtualmachinereservedinstanceartifactdetails"></span><span id="VIRTUALMACHINERESERVEDARTIFACTDETAILS"></span>VirtualMachineReservedInstanceArtifactDetails
 
 
-Represents the entity returned upon invocation of the virtual machine reserved instance artifact link.  
+Represents the entity returned upon invocation of the Azure Reserved Virtual Machine Instance artifact link.  
 
 | Property                    | Type                                                                 | Description                                                   |
 |-----------------------------|----------------------------------------------------------------------|---------------------------------------------------------------|
 | type                        | [ArtifactType](#artifacttype)                                        | The type of artifact.                                         |
-| virtualMachineReservations  | IEnumerable<[VirtualMachineReservation](#virtualmachinereservation)> | Indicates the azure resource or reservation order identifier. |
+| virtualMachineReservations  | IEnumerable<[VirtualMachineReservation](#virtualmachinereservation)> | Indicates the Azure resource or reservation order identifier. |
 
 
 

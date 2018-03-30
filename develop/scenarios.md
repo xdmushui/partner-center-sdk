@@ -123,9 +123,9 @@ All of the following scenarios can be completed three different ways:
 </tr>
 <tr class="even">
 <td><p>[Place orders](place-orders.md)</p></td>
-<td><p>Purchase Partner Center Azure reserved VM instances</p>
+<td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
-<li><p>[Purchase Partner Center Azure reserved VM instances](purchase-partner-center-azure-reserved-vm-instances.md)</p></li>
+<li><p>[Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)</p></li>
 </ul>
 <p>Get offers from the catalog</p>
 <ul>
@@ -151,7 +151,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get an order by ID](get-an-order-by-id.md)</p></li>
 <li><p>[Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)</p></li>
 </ul>
-<p>Enable a subscription for Azure RI purchase</p>
+<p>Enable a subscription for Azure Reserved VM Instance purchases</p>
 <ul>
 <li><p>[Register a subscription](register-a-subscription.md)</p></li>
 <li><p>[Get subscription registration status](get-subscription-registration-status.md)</p></li>
