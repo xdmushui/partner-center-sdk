@@ -1,6 +1,6 @@
 ---
 title: Purchase Partner Center Azure Reserved VM instances
-description: Purchase Partner Center Azure Reserved Virtual Machine (VM) instances.
+description: How to purchase Partner Center Azure Reserved Virtual Machine (VM) instances.
 ms.assetid: 
 ms.author: v-thpr
 ms.date: 03/26/2018
@@ -18,7 +18,7 @@ ms.technology: partner-center-sdk
 -   Partner Center
 
 
-How to purchase Partner Center Azure Reserved VM instances. To purchase a Partner Center Azure reserved instance, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
+To purchase a Partner Center Azure reserved instance, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
 -   Get a list of offers for a market. 
 -   Create an order for an CSP Azure subscription.
 -   Submit your order.
@@ -42,7 +42,7 @@ Once you have identified the active CSP Azure subscription that you want to add 
 3.  [Azure RI order submission](#azure_order_submission) - Create a shopping cart with the items in your order and submit it. 
 4.  [Get order details](#get_order_details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type. 
 
-After you have purchased Partner Center Azure Reserved VM instances, the following scenarios show you how to manage your RI lifecycle by getting information about your RI entitlements, and how to retrieve balance statements, invoices and invoice summaries. 
+After you have purchased Partner Center Azure Reserved VM instances, the following scenarios show you how to manage your RI lifecycle by getting information about your RI entitlements, and how to retrieve balance statements, invoices, and invoice summaries. 
 -   [Azure RI lifecycle management](#azure_ri_lifecycle_management)
 -   [Invoice and reconciliation](#invoice_and_reconciliation)
 
