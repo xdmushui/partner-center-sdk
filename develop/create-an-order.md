@@ -20,7 +20,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-**Creating an Order for Azure Reserved Instance products applies only to**
+**Creating an Order for Azure Reserved VM Instance products applies only to**
 
 -   Partner Center
 
@@ -183,8 +183,8 @@ This method returns the following error codes:
 | HTTP Status Code     | Error code   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 400                  | 2093         | Inventory is not available for the catalog item selected.                                                 |
-| 400                  | 2094         | Subscription is not a valid Azure subscription. Only applicable for Azure Reserved Instance purchase.     |
-| 400                  | 2095         | Subscription is not enabled for an Azure Reserved Instance purchase.                                                                                                
+| 400                  | 2094         | Subscription is not a valid Azure subscription. Only applicable for Azure Reserved VM Instance purchase.     |
+| 400                  | 2095         | Subscription is not enabled for an Azure Reserved VM Instance purchase.                                                                                                
 
 **Response example**
 

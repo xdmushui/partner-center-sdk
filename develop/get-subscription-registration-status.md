@@ -1,6 +1,6 @@
 ---
 title: Get subscription registration status
-description: Get the status of a subscription that has been registered for use with Azure Reserved Instance.
+description: Get the status of a subscription that has been registered for use with Azure Reserved VM Instances.
 ms.assetid: 
 ms.author: v-thpr
 ms.date: 03/19/2018
@@ -17,9 +17,9 @@ ms.technology: partner-center-sdk
 
 -   Partner Center
 
-How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure RI instances.  
+How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure Reserved VM Instances.  
 
-To purchase a Partner Center RI you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure RI instances. This method allows you to retrieve the status of that registration. 
+To purchase an Azure Reserved VM Instance using the Partner Center API, you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. This method allows you to retrieve the status of that registration. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

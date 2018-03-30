@@ -92,7 +92,7 @@
 #### [Get subscription provisioning status](get-subscription-provisioning-status.md)
 #### [Get subscription registration status](get-subscription-registration-status.md) 
 #### [Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)
-#### [Purchase Partner Center Azure reserved VM instances](purchase-partner-center-azure-reserved-vm-instances.md) 
+#### [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md) 
 #### [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 #### [Register a subscription](register-a-subscription.md)
 #### [Suspend a subscription](suspend-a-subscription.md)

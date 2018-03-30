@@ -1,6 +1,6 @@
 ---
-title: Purchase Partner Center Azure Reserved VM instances
-description: How to purchase Partner Center Azure Reserved Virtual Machine (VM) instances.
+title: Purchase Azure Reserved VM Instances
+description: How to purchase Azure Reserved Virtual Machine (VM) Instances using the Partner Center API.
 ms.assetid: 
 ms.author: v-thpr
 ms.date: 03/26/2018
@@ -9,7 +9,7 @@ ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Purchase Partner Center Azure Reserved VM Instances
+# Purchase Azure Reserved VM Instances
 
 [This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.] 
 
@@ -18,7 +18,7 @@ ms.technology: partner-center-sdk
 -   Partner Center
 
 
-To purchase a Partner Center Azure reserved instance, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
+To purchase an Azure Reserved Virtual Machine (VM) Instance using the Partner Center API, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
 -   Get a list of offers for a market. 
 -   Create an order for an CSP Azure subscription.
 -   Submit your order.
@@ -31,40 +31,40 @@ To purchase a Partner Center Azure reserved instance, you must have one or more 
 -   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 -   A subscription ID for an active CSP Azure subscription.
 
-## <span id="How_to_purchase_Azure_reserved_instances"></span><span id="how_to_purchase_azure_reserved_instances"></span><span id="HOW_TO_PURCHASE_AZURE_RESERVED_INSTANCES"></span>How to purchase Microsoft Azure reserved instances
+## <span id="How_to_purchase_Azure_reserved_instances"></span><span id="how_to_purchase_azure_reserved_instances"></span><span id="HOW_TO_PURCHASE_AZURE_RESERVED_INSTANCES"></span>How to purchase Microsoft Azure Reserved VM Instances
 
 
 
-Once you have identified the active CSP Azure subscription that you want to add an Azure reserved instance to, use the following steps to purchase it:    
+Once you have identified the active CSP Azure subscription that you want to add an Azure Reserved VM Instance to, use the following steps to purchase it:    
 
-1.  [Azure RI enablement](#azure_ri_enablement) - Register an active CSP Azure subscription to enable it for Azure RI. 
-2.  [Azure RI discovery](#azure_ri_discovery) - Find and select the Azure RI products and SKUs you want to purchase, and check their availability. 
-3.  [Azure RI order submission](#azure_order_submission) - Create a shopping cart with the items in your order and submit it. 
+1.  [Enablement](#enablement) - Register an active CSP Azure subscription to enable it for purchasing Azure Reserved VM Instances. 
+2.  [Discovery](#discovery) - Find and select the Azure Reserved VM Instance products and SKUs you want to purchase, and check their availability. 
+3.  [Order submission](#order_submission) - Create a shopping cart with the items in your order and submit it. 
 4.  [Get order details](#get_order_details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type. 
 
-After you have purchased Partner Center Azure Reserved VM instances, the following scenarios show you how to manage your RI lifecycle by getting information about your RI entitlements, and how to retrieve balance statements, invoices, and invoice summaries. 
--   [Azure RI lifecycle management](#azure_ri_lifecycle_management)
+After you have purchased Azure Reserved VM Instances, the following scenarios show you how to manage their lifecycle by getting information about your Azure Reserved VM Instance entitlements, and how to retrieve balance statements, invoices, and invoice summaries. 
+-   [Lifecycle management](#lifecycle_management)
 -   [Invoice and reconciliation](#invoice_and_reconciliation)
 
-## <span id="Azure_RI_enablement"></span><span id="azure_ri_enablement"></span><span id="AZURE_RI_ENABLEMENT"></span>Azure RI enablement
+## <span id="Enablement"></span><span id="enablement"></span><span id="ENABLEMENT"></span>Enablement
 
 
 
-Once you have identified the active subscription that you want to add the Azure reserved instance to, you must register the subscription so that it is enabled for Azure RI. To register an existing [Subscription](subscriptions.md) resource so that it is enabled for ordering Partner Center Reserved VM Instances, see [Register a subscription](register-a-subscription.md).
+Once you have identified the active subscription that you want to add the Azure Reserved VM Instance to, you must register the subscription so that it is enabled for Azure Reserved VM Instances. To register an existing [Subscription](subscriptions.md) resource so that it is enabled for ordering Azure Reserved VM Instances, see [Register a subscription](register-a-subscription.md).
 
 After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
 
-## <span id="Azure_RI_discovery"></span><span id="azure_ri_discovery"></span><span id="AZURE_RI_DISCOVERY"></span>Azure RI discovery
+## <span id="Discovery"></span><span id="discovery"></span><span id="DISCOVERY"></span>Discovery
 
 
 
-Once the subscription is enabled for purchasing Partner Center Reserved VM Instances, you're ready to select RI products and SKUs and check their availability using the following Partner Center API models: 
+Once the subscription is enabled for purchasing Azure Reserved VM Instances, you're ready to select products and SKUs and check their availability using the following Partner Center API models: 
 
 -   [Product](products.md#product) - A grouping construct for purchasable goods or services. A product by itself is not a purchasable item.​​
 -   [SKU](products.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
 -   [Availability](products.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
 
-Before purchasing a Reserved VM instance, complete the folowing steps:
+Before purchasing an Azure Reserved VM Instance, complete the folowing steps:
 
 1.  Identify and retrieve the Product and SKU that you want to purchase. You can do this by listing the products and SKUs first, or If you already know the IDs of the product and SKU, selecting them.
 
@@ -82,11 +82,11 @@ Before purchasing a Reserved VM instance, complete the folowing steps:
     -   [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
     -   [Get an availability using the SKU ID](get-an-availability-by-id.md)
 
-## <span id="Azure_RI_order_submission"></span><span id="azure_order_submission"></span><span id="AZURE_RI_ORDER_SUBMISSION"></span>Azure RI order submission
+## <span id="Order_submission"></span><span id="order_submission"></span><span id="ORDER_SUBMISSION"></span>Order submission
 
 
 
-To submit your Azure RI order, do the following:
+To submit your Azure Reserved VM Instance order, do the following:
 
 1.  Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart.md), the [cart line items](cart.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](orders.md).
 
@@ -108,22 +108,22 @@ Getting the details of the orders you have submitted, can be done in the folowin
 -   Get a list of orders for a customer using the customer ID. See, [Get all of a customer's orders](get-all-of-a-customer-s-orders.md).    
     **Note** There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's order.​
 
--   Getting a list of orders for a customer by [billing cycle type](products.md#billingcycletype) allows you to list Azure RI (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
+-   Getting a list of orders for a customer by [billing cycle type](products.md#billingcycletype) allows you to list Azure Reserved VM Instance orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
 
-## <span id="Azure_RI_lifecycle_management"></span><span id="azure_ri_lifecycle_management"></span><span id="AZURE_RI_LIFECYCLE_MANAGEMENT"></span>Azure RI lifecycle management
+## <span id="Lifecycle_management"></span><span id="lifecycle_management"></span><span id="LIFECYCLE_MANAGEMENT"></span>Lifecycle management
 
 
 
-As part of managing the lifecycle of your Partner Center Azure reserved instances, you can retrieve information about your VM reserved instance [Entitlements](entitlement.md), and get reservation details using the reservation order ID. For examples of how to do this, see [Get entitlements](get-a-collection-of-entitlements.md).   ​
+As part of managing the lifecycle of your Azure Reserved VM Instances in Partner Center, you can retrieve information about your Azure Reserved VM Instance [Entitlements](entitlement.md), and get reservation details using the reservation order ID. For examples of how to do this, see [Get entitlements](get-a-collection-of-entitlements.md).   ​
 
 ## <span id="Invoice_and_reconciliation"></span><span id="invoice_and_reconciliation"></span><span id="INVOICE_AND_RECONCILIATION"></span>Invoice and reconciliation
 
 
 
-The following scenarios show you how to programmatically view your customer's [invoices](invoice.md), and get your account balances and summaries that include one-time chargews for Partner Center Azure reserved instances.  
+The following scenarios show you how to programmatically view your customer's [invoices](invoice.md), and get your account balances and summaries that include one-time charges for Azure Reserved VM Instances.  
 
 **Balance and payment​**    
-To get current account balance in your default currency type that is a balance of ​both recurring and one-time (Azure RI) charges, see 
+To get current account balance in your default currency type that is a balance of ​both recurring and one-time (Azure Reserved VM Instance) charges, see 
 [Get your current account balance](get-the-reseller-s-current-account-balance.md)
 
 **Multi-currency balance and payment**​    
