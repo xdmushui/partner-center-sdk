@@ -38,7 +38,7 @@ To purchase an Azure Reserved Virtual Machine (VM) Instance using the Partner Ce
 Once you have identified the active CSP Azure subscription that you want to add an Azure Reserved VM Instance to, use the following steps to purchase it:    
 
 1.  [Enablement](#enablement) - Register an active CSP Azure subscription to enable it for purchasing Azure Reserved VM Instances. 
-2.  [Discovery](#discovery) - Find and select the Azure Reserved VM Instance products and SKUs you want to purchase, and check their availability. 
+2.  [Discovery](#discovery) - Find and select the Azure Reserved VM Instance products and SKUs you want to purchase and check their availability. 
 3.  [Order submission](#order_submission) - Create a shopping cart with the items in your order and submit it. 
 4.  [Get order details](#get_order_details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type. 
 
