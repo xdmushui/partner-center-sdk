@@ -118,7 +118,7 @@ Represents a request to check inventory against certain catalog items.
 ## <span id="InventoryItem"></span><span id="inventoryitem"></span><span id="INVENTORYITEM"></span>InventoryItem
 
 
-Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request, and is also used to represent the output results of the inventory check operation.  
+Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
 
 | Property         | Type                                                              | Description                                                                      |
 |------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|

@@ -64,7 +64,7 @@ Once the subscription is enabled for purchasing Azure Reserved VM Instances, you
 -   [SKU](products.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
 -   [Availability](products.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
 
-Before purchasing an Azure Reserved VM Instance, complete the folowing steps:
+Before purchasing an Azure Reserved VM Instance, complete the following steps:
 
 1.  Identify and retrieve the Product and SKU that you want to purchase. You can do this by listing the products and SKUs first, or If you already know the IDs of the product and SKU, selecting them.
 
@@ -101,7 +101,7 @@ To submit your Azure Reserved VM Instance order, do the following:
 
 
 
-Getting the details of the orders you have submitted, can be done in the folowing ways:
+Getting the details of the orders you have submitted, can be done in the following ways:
 
 -   Get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
 

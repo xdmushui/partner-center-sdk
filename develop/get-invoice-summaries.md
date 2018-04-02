@@ -20,7 +20,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges.
+Gets an **InvoiceSummaries** resource that contains an invoice summary for each currency type. An invoice summary shows the balance and total charges of both recurring and one-time charges.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
