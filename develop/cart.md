@@ -49,7 +49,7 @@ Represents one item contained in a cart.
 | id                   | string                                    | A unique identifier for a cart line item. Applied upon successful creation of cart.                                |
 | catalogId            | string                                    | The catalog item identifier.                                                                                       |
 | friendlyName         | string                                    | Optional. The friendly name for the item defined by the partner to help disambiguate.                              |
-| quantity             | int                                       | The number of licenses for a licence-based subscription or instances for an Azure reservation.                     |
+| quantity             | int                                       | The number of licenses for a license-based subscription or instances for an Azure reservation.                     |
 | currencyCode         | string                                    | The currency code.                                                                                                 |
 | billingCycle         | Object                                    | The type of billing cycle set for the current period.                                                              |
 | participants         | List of Object String pairs               | A collection of participants on the purchase.                                                                      |

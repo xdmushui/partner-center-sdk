@@ -28,7 +28,7 @@ If you run automated build verification tests, conduct testing in production, or
 
 Note that this means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials.
 
-If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reserved-vm-instances.md) with your sandbox account, you are limited to 2 Azure Reserved VM Instances per customer.    
+If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reserved-vm-instances.md) with your sandbox account, you are limited to 2 VM Instances per customer.    
 
 To clean up at the end of your test run so there's space for the next round of testing, see the following topics:
 

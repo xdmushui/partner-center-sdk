@@ -60,7 +60,7 @@ var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checko
 
 **URI parameters**
 
-Use the following path parameters to identify the customer, and specify the cart to be checked out.
+Use the following path parameters to identify the customer and specify the cart to be checked out.
 
 | Name            | Type     | Required | Description                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
 | catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
 | friendlyName         | string                      | No           | Optional. The friendly name for the item defined by the partner to help disambiguate.              |
-| quantity             | int                         | Yes          | The number of licenses for a licence-based subscription or instances for an Azure reservation.     |
+| quantity             | int                         | Yes          | The number of licenses for a license-based subscription or instances for an Azure reservation.     |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
 | participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
