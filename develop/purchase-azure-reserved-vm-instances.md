@@ -101,14 +101,13 @@ To submit your Azure Reserved VM Instance order, do the following:
 
 
 
-Getting the details of the orders you have submitted, can be done in the following ways:
+Once you have created your Azure Reserved VM Instance order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​ 
 
--   Get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
+-   To get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
 
--   Get a list of orders for a customer using the customer ID. See, [Get all of a customer's orders](get-all-of-a-customer-s-orders.md).    
-    **Note** There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's order.​
+-   To get a list of orders for a customer using the customer ID. See, [Get all of a customer's orders](get-all-of-a-customer-s-orders.md).      
 
--   Getting a list of orders for a customer by [billing cycle type](products.md#billingcycletype) allows you to list Azure Reserved VM Instance orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
+-   To get a list of orders for a customer by [billing cycle type](products.md#billingcycletype) allowing you to list Azure Reserved VM Instance orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
 
 ## <span id="Lifecycle_management"></span><span id="lifecycle_management"></span><span id="LIFECYCLE_MANAGEMENT"></span>Lifecycle management
 
