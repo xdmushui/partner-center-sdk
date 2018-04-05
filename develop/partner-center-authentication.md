@@ -204,6 +204,59 @@ The following code shows how to get and use App authentication using the Partner
 
         return null;
     }
+
+    // Deprecated: DO NOT use this code
+    //
+    // Gets the partner center app credential token.
+    // Returns: Token response from server.
+    // public static JObject GetPartnerCenterAppCredentialsToken()
+    // {
+    // Get the Azure AD token for user.
+    //    var aadToken = 
+    //        GetADToken(PartnerApplicationConfiguration.ApplicationDomain, 
+    //            PartnerApplicationConfiguration.ApplicationId, 
+    //            PartnerApplicationConfiguration.ApplicationSecret);
+    //
+    //    var request = WebRequest.Create(string.Format(
+    //        "{0}/generatetoken", 
+    //        PartnerApplicationConfiguration.PartnerServiceApiRoot));
+    //
+    //   request.Headers.Add(HttpRequestHeader.Authorization, 
+    //        "Bearer " + aadToken["access_token"].ToString());
+    //    request.Method = "POST";
+    //    request.ContentType = "application/x-www-form-urlencoded";
+    //    string content = string.Format("grant_type=jwt_token");
+    //
+    //    using (var writer = new StreamWriter(request.GetRequestStream()))
+    //    {
+    //       writer.Write(content);
+    //    }
+    //
+    //    try
+    //    {
+    //        var response = request.GetResponse();
+    //        using (var reader = new StreamReader(response.GetResponseStream()))
+    //        {
+    //            var responseContent = reader.ReadToEnd();
+    //           var adResponse = 
+    //                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
+    //            return adResponse;
+    //        }
+    //
+    //    }
+    //    catch (WebException webException)
+    //    {
+    //        if (webException.Response != null)
+    //        {
+    //            using (var reader = new StreamReader(webException.Response.GetResponseStream()))
+    //            {
+    //               var responseContent = reader.ReadToEnd();
+    //           }
+    //       }
+    //    }
+    //
+    //    return null;
+    //}
     ```
 
 3.  Get your token and use it to call the REST API. The following example retrieves a list of offer objects and then displays information about each offer.
@@ -422,6 +475,58 @@ The following code shows how to get and use App+User authentication using the Pa
 
         return null;
     }
+
+    // Deprecated: DO NOT use this code
+    //
+    // Gets the partner center App+User token.
+    // Returns: Token response from server.
+    // public static JObject GetPartnerCenterToken()
+    // {
+    // Get Azure AD token for user.
+    //   var aadToken = 
+    //        GetADToken(PartnerUserConfiguration.ApplicationDomain, PartnerUserConfiguration.ClientId);
+    //
+    //    var request = 
+    //        WebRequest.Create(
+    //            string.Format(
+    //                "{0}/generatetoken", 
+    //                PartnerUserConfiguration.PartnerServiceApiRoot));
+    //
+    //    request.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + aadToken["access_token"].ToString());
+    //    request.Method = "POST";
+    //    request.ContentType = "application/x-www-form-urlencoded";
+    //   string content = string.Format("grant_type=jwt_token");
+    //
+    //    using (var writer = new StreamWriter(request.GetRequestStream()))
+    //    {
+    //        writer.Write(content);
+    //   }
+    //
+    //   try
+    //   {
+    //        var response = request.GetResponse();
+    //        using (var reader = new StreamReader(response.GetResponseStream()))
+    //        {
+    //            var responseContent = reader.ReadToEnd();
+    //            var adResponse = 
+    //                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
+    //            return adResponse;
+    //        }
+    //
+    //    }
+    //    catch (WebException webException)
+    //    {
+    //        if (webException.Response != null)
+    //        {
+    //            using (var reader = new StreamReader(webException.Response.GetResponseStream()))
+    //            {
+    //                var responseContent = reader.ReadToEnd();
+    //            }
+    //       }
+    //  }
+    //
+    // return null;
+    //}
     ```
 
 3.  Get your token and use it to call the REST API.
