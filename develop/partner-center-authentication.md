@@ -58,12 +58,15 @@ The following code shows how to get and use App authentication using the Partner
     The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
 
     ```CSharp
-    public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-    public static string Authority = "https://login.windows.net";
-    public static string ResourceUrl = "https://graph.windows.net";
-    public static string ApplicationId = "<web application id>";
-    public static string ApplicationSecret = "<application secret>";
-    public static string ApplicationDomain = "<partner tenant id>";
+    private static class PartnerApplicationConfiguration
+    {
+        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
+        public static string Authority = "https://login.windows.net";
+        public static string ResourceUrl = "https://graph.windows.net";
+        public static string ApplicationId = "<web application id>";
+        public static string ApplicationSecret = "<application secret>";
+        public static string ApplicationDomain = "<partner tenant id>";
+    }
     ```
 
 2.  Add code to manage your tokens.
@@ -138,12 +141,15 @@ The following code shows how to get and use App authentication using the Partner
     The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
 
     ```CSharp
-    public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-    public static string Authority = "https://login.windows.net";
-    public static string ResourceUrl = "https://graph.windows.net";
-    public static string ApplicationId = "<web application id>";
-    public static string ApplicationSecret = "<application secret>";
-    public static string ApplicationDomain = "<partner tenant id>";
+    private static class PartnerApplicationConfiguration
+    {
+        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
+        public static string Authority = "https://login.windows.net";
+        public static string ResourceUrl = "https://graph.windows.net";
+        public static string ApplicationId = "<web application id>";
+        public static string ApplicationSecret = "<application secret>";
+        public static string ApplicationDomain = "<partner tenant id>";
+    }
     ```
 
 2.  Add code to manage your tokens.
@@ -204,7 +210,9 @@ The following code shows how to get and use App authentication using the Partner
 
         return null;
     }
-
+    ```
+   
+    ```CSharp
     // Deprecated: DO NOT use this code
     //
     // Gets the partner center app credential token.
@@ -265,9 +273,7 @@ The following code shows how to get and use App authentication using the Partner
     // Gets a list of offers using the REST API.
     public static void GetOffersWithAppCredentials()
     {
-        JObject tokenObject = GetADToken(PartnerApplicationConfiguration.ApplicationDomain, 
-                PartnerApplicationConfiguration.ApplicationId, 
-                PartnerApplicationConfiguration.ApplicationSecret);
+        JObject tokenObject = GetADToken(PartnerUserConfiguration.ApplicationDomain, PartnerUserConfiguration.ClientId);
 
         // Get a list of offers.
         var request = WebRequest.Create(
@@ -416,7 +422,7 @@ The following code shows how to get and use App+User authentication using the Pa
 2.  Add code to manage your tokens.
 
     ```CSharp
-    // Given the reseller domain, clientid and username/password of the app, this method helps to retrieve the AD token
+    // Given the reseller domain, clientid and username/password of the app, this method helps to retrieve the AD token.
     //
     // Parameters:
     // resellerDomain - The domain of the reseller including ".onmicrosoft.com".
@@ -475,7 +481,9 @@ The following code shows how to get and use App+User authentication using the Pa
 
         return null;
     }
+    ```
 
+    ```CSharp
     // Deprecated: DO NOT use this code
     //
     // Gets the partner center App+User token.
