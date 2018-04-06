@@ -175,7 +175,7 @@ The following code shows how to get and use App authentication using the Partner
         request.Method = "POST";
         request.ContentType = "application/x-www-form-urlencoded";
         string content = string.Format(
-            "grant_type=client_credentials&amp;client_id={0}&amp;client_secret={1}&amp;resource={2}",
+            "grant_type=client_credentials&client_id={0}&client_secret={1}&resource={2}",
             clientId,
             HttpUtility.UrlEncode(clientSecret),
             HttpUtility.UrlEncode(PartnerApplicationConfiguration.ResourceUrl));
@@ -445,7 +445,7 @@ The following code shows how to get and use App+User authentication using the Pa
         request.ContentType = "application/x-www-form-urlencoded";
         
         string content = string.Format(
-            "resource={0}&amp;client_id={1}&amp;grant_type=password&amp;username={2}&amp;password={3}&amp;scope=openid",
+            "resource={0}&client_id={1}&grant_type=password&username={2}&password={3}&scope=openid", 
             HttpUtility.UrlEncode(Configuration.ResourceUrl),
             HttpUtility.UrlEncode(clientId),
             HttpUtility.UrlEncode(Configuration.UserName),
