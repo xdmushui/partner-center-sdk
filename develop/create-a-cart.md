@@ -25,9 +25,6 @@ How to add an order for a customer in a cart. For more information about what is
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
--   A Product ID.
--   A Product Sku ID.
--   A Product Availability ID.
 
 
 ## <span id="C_"></span><span id="c_"></span>C#
@@ -43,20 +40,24 @@ Finally, call the **Create** or **CreateAsync** method to create the order.
 ```CSharp
 IAggregatePartner partnerOperations;
 string customerId;
-string productId;
-string skuId;
-string availabilityId;
+string catalogItemId;
+string subscriptionId;
 
 var cart = new Cart()
 {
-	ReferenceCustomerId = customerId,
-	LineItems = new List<CartLineItem>()
-	{
-		catalogItemId = productId+":"+skuId+":"availabilityId,
-		FriendlyName = "New Offer Purchase",
-		Quantity = 5,
-		BillingCycle = one_time
-	}
+    LineItems = new List<CartLineItem>()
+    {
+        catalogItemId = catalogItemId,
+        FriendlyName = "A_sample_Azure_RI",
+        Quantity = 5,
+        BillingCycle = one_time,
+        ProvisioningContext = new Dictionary<string, string>
+        {
+            { "subscriptionId", subscriptionId },
+            { "scope", "shared" },
+            { "duration", "3Years" }            
+        }   
+    }
 };
 
 var createdCart = partnerOperations.Customers.ById(customerId).Cart.Create(cart);
@@ -114,7 +115,6 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
-| purchaseSystem       | string                      | No           | Which purchase system to place order to.                                                           |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
 
@@ -134,31 +134,23 @@ Content-Length: 496
 Expect: 100-continue
 
 {  
-   "Id": null,
-   "CreationTimestamp": null,
-   "LastModifiedTimestamp": null,
-   "ExpirationTimestamp": "0001-01-01T00:00:00",
-   "LastModifiedUser": null,
    "LineItems": [  
-      {  
-         "Id":0,
-         "CatalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-         "FriendlyName": "My offer purchase",
-         "Quantity": 2,
-         "CurrencyCode": null,
-         "BillingCycle": "one_time",
-         "Participants": null,
-         "ProvisioningContext": null,
-         "OrderGroup": null,
-         "PurchaseSystem": null,
-         "AudienceClaimHeader": null,
-         "TargetId": null,
-         "Error": null
-      }
-   ],
-   "Attributes": {  
-      "ObjectType": "Cart"
-   }
+        {  
+            "Id":0,
+            "CatalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
+            "FriendlyName": "A_sample_Azure_RI",
+            "Quantity": 2,
+            "BillingCycle": "one_time",
+            "ProvisioningContext": {
+                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
+                "scope": "shared",
+                "duration": "1Year"
+            }
+        }
+    ],
+    "Attributes": {  
+        "ObjectType": "Cart"
+    }
 }
 ```
 
@@ -184,31 +176,36 @@ MS-CV: sF/wRa2ih0CzbABc.0
 MS-ServerId: 000001
 Date: Thu, 15 Mar 2018 17:15:01 GMT
 {
-   "id": "b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-   "creationTimestamp": "2018-03-15T17:15:02.3840528Z",
-   "lastModifiedTimestamp": "2018-03-15T17:15:02.3840528Z",
-   "lastModifiedUser": "2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
-   "lineItems": [
-      {
-          "id": 0,
-          "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-          "friendlyName": "My offer purchase",
-          "quantity": 2,
-          "currencyCode": "USD",
-          "billingCycle": "one_time",
-          "orderGroup": "0"
-      }
-   ],
-   "links": {
-      "self": {
-         "uri": "/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-         "method": "GET",
-         "headers": []
-      }
-   },
-   "attributes": {
-      "objectType": "Cart"
-   }
+    "id": "b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
+    "creationTimestamp": "2018-03-15T17:15:02.3840528Z",
+    "lastModifiedTimestamp": "2018-03-15T17:15:02.3840528Z",
+    "lastModifiedUser": "2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
+            "friendlyName": "My offer purchase",
+            "quantity": 2,
+            "currencyCode": "USD",
+            "billingCycle": "one_time",
+            "provisioningContext": {
+                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
+                "scope": "shared",
+                "duration": "1Year"
+            },
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
 }
 ```
 
