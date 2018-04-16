@@ -50,7 +50,7 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
-| **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations HTTP/1.1 |
+| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus HTTP/1.1 |
 
  
 
@@ -76,7 +76,7 @@ None.
 **Request example**
 
 ```
-POST https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3123
