@@ -55,7 +55,6 @@ Represents one item contained in a cart.
 | participants         | List of Object String pairs               | A collection of participants on the purchase.                                                                      |
 | provisioningContext  | Dictionary<string, string>                | A context used for provisioning of offer.                                                                          |
 | orderGroup           | string                                    | A group to indicate which items can be placed together.                                                            |
-| purchaseSystem       | string                                    | Which purchase system to place order to.                                                                           |
 | error                | Object                                    | Applied after cart is created in case of an error.                                                                 |
 
  
