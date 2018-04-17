@@ -64,14 +64,57 @@ Represents one item contained in a cart.
 
 Represents an error that occurs after a cart is created.
 
-| Property             | Type                                         | Description                                                                                   |
-|----------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <*name*>             | <*type*>                                     | The error description, including any notes about supported values, default values, or limits. |
+| Property             | Type                                      | Description                                                                 |
+|----------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------|
+| errorCode            | [CartErrorCode](cart.md#carterrorcode)    | The type of cart error.                                                                       |
+| errorDescription     | string                                    | The error description, including any notes about supported values, default values, or limits. |
 
 
 
+## <span id="cartErrorCode"></span><span id="carterrorcode"></span><span id="CARTERRORCODE"></span>CartErrorCode
 
+
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate a type of cart error.
+
+| Value                                 | Position     | Description                                                                 |
+|---------------------------------------|--------------|-----------------------------------------------------------------------------|
+| Unknown                               | 0            | Default value.                                                              |
+| CurrencyIsNotSupported                | 10000        | The currency is not supported for the specified market.                     |
+| CatalogItemIdIsNotValid               | 10001        | The catalog item ID is not valid.                                           |
+| QuotaNotAvailable                     | 10002        | There is not enough quota available.                                        |
+| InventoryNotAvailable                 | 10003        | The inventory is not available for the selected offer.                      |
+| ParticipantsIsNotSupportedForPartner  | 10004        | Setting participants is not supported for this partner.                     |
+| UnableToProcessCartLineItem           | 10006        | Unable to process the cart line item.                                       |
+| SubscriptionIsNotValid                | 10007        | The subscription is not valid.                                              |
+| SubscriptionIsNotEnabledForRI         | 10008        | The subscription is not enabled for Azure Reserved VM Instances.            |
+| SandboxLimitExceeded                  | 10009        | The sandbox limit has been exceeded.                                        |
+
+
+
+## <span id="cartCheckoutResult"></span><span id="cartcheckoutresult"></span><span id="CARTCHECKOUTRESULT"></span>CartCheckoutResult
+
+
+Represents the result of a cart checkout.
+
+| Property             | Type                                                 | Description                                                       |
+|----------------------|------------------------------------------------------|-------------------------------------------------------------------|
+| orders               | List of [Order](orders.md#order) objects.            | The collection of orders.                                         |
+| orderErrors          | List of [OrderError](cart.md#ordererror) objects.    | The collection of order errors.                                   |
  
+
+
+## <span id="orderError"></span><span id="ordererror"></span><span id="ORDERERROR"></span>OrderError
+
+
+Represents an error that occurs during a cart checkout when an order is created.
+
+| Property             | Type           | Description                                                               |
+|----------------------|----------------|---------------------------------------------------------------------------|
+| orderGroupId         | string         | The order group ID of the order with the error.                           |
+| code                 | int            | The error code.                                                           |
+| description          | string         | The description of the error.                                             |
+
+
 
 
 

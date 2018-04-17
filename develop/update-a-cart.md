@@ -131,29 +131,16 @@ Expect: 100-continue
             {  
                 "Id":0,
                 "CatalogItemId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-                "FriendlyName":"My offer purchase",
-                "Quantity":3,
-                "CurrencyCode":"USD",
+                "FriendlyName":"A_sample_Azure_RI",
+                "Quantity":2,
                 "BillingCycle":"one_time",
-                "Participants":null,
-                "ProvisioningContext":null,
-                 "OrderGroup":"0",
-                "PurchaseSystem":null,
-                "AudienceClaimHeader":null,
-                "TargetId":null,
-                "Error":null
+                "ProvisioningContext": {
+                    "SubscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
+                    "Scope": "shared",
+                    "Duration": "1Year"
+                }
             }
         ],
-        "Links":{  
-            "Self":{  
-                "Uri":"/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-                "Method":"GET",
-                "Headers":[]
-            }
-        },
-        "Attributes":{  
-            "ObjectType":"Cart"
-        }
     }
 }
 ```
@@ -188,16 +175,21 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
         {
             "id": 0,
             "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-            "friendlyName": "My offer purchase",
-            "quantity": 3,
+            "friendlyName": "A_sample_Azure_RI",
+            "quantity": 2,
             "currencyCode": "USD",
             "billingCycle": "one_time",
+            "ProvisioningContext": {
+                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
+                "scope": "shared",
+                "duration": "1Year"
+            }            
             "orderGroup": "0"
         }
     ],
     "links": {
         "self": {
-            "uri": "/v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/65faf57b-0205-47ee-92b3-08dcf233ea73/",
+            "uri": "/v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605/",
             "method": "GET",
             "headers": []
         }

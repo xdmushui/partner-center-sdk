@@ -72,38 +72,12 @@ Use the following path parameters to identify the customer and specify the cart 
 
 **Request body**
 
-This table describes the [Cart](cart.md) properties in the request body.
-
-| Property              | Type             | Required        | Description                                                                                               |
-|-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| id                    | string           | No              | A cart identifier that is supplied upon successful creation of the cart.                                  |
-| creationTimeStamp     | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.         |
-| lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
-| expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
-| lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
-| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                               |
-
-
-This table describes the [CartLineItem](cart.md#cartlineitem) properties in the request body.
-
-| Property             | Type                        | Required     | Description                                                                                        |
-|----------------------|-----------------------------|--------------|----------------------------------------------------------------------------------------------------|
-| id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
-| catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
-| friendlyName         | string                      | No           | Optional. The friendly name for the item defined by the partner to help disambiguate.              |
-| quantity             | int                         | Yes          | The number of licenses for a license-based subscription or instances for an Azure reservation.     |
-| currencyCode         | string                      | No           | The currency code.                                                                                 |
-| billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
-| participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
-| provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
-| orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
-| error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
-
+None.
 
 **Request example**
 
 ```
-POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/65faf57b-0205-47ee-92b3-08dcf233ea73/checkout HTTP/1.1
+POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605/checkout HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 4fa6dad6-a89f-4875-8247-8294a10ae1cf
@@ -112,51 +86,16 @@ X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
 Host: api.partnercenter.microsoft-ppe.com
-Content-Length: 496
+Content-Length: 0
 Expect: 100-continue
 
-{  
-    {  
-        "Id":"b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-        "CreationTimestamp":"2018-03-15T17:15:02.3840528Z",
-        "LastModifiedTimestamp":"2018-03-15T17:15:02.3840528Z",
-        "ExpirationTimestamp":"0001-01-01T00:00:00",
-        "LastModifiedUser":"2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
-        "LineItems":[  
-            {  
-                "Id":0,
-                "CatalogItemId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-                "FriendlyName":"My offer purchase",
-                "Quantity":3,
-                "CurrencyCode":"USD",
-                "BillingCycle":"one_time",
-                "Participants":null,
-                "ProvisioningContext":null,
-                "OrderGroup":"0",
-                "PurchaseSystem":null,
-                "AudienceClaimHeader":null,
-                "TargetId":null,
-                "Error":null
-            }
-        ],
-        "Links":{  
-            "Self":{  
-                "Uri":"/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-                "Method":"GET",
-                "Headers":[]
-            }
-        },
-        "Attributes":{  
-            "ObjectType":"Cart"
-        }
-    }
-}
+No-Content-Body
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains the populated **CartCheckoutResult** resource.
+If successful, the response body contains the populated [CartCheckoutResult](cart.md#cartcheckoutresult) resource.
 
 **Response success and error codes**
 
@@ -185,7 +124,7 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
                 {  
                     "lineItemNumber":0,
                     "offerId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-                    "friendlyName":"Office Professional Plus 2016My offer purchase",
+                    "friendlyName":"A_sample_Azure_RI",
                     "quantity":2,
                     "links":{  
                     "sku":{  
