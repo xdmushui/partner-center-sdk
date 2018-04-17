@@ -30,7 +30,7 @@ How to add an order for a customer in a cart. For more information about what is
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To create an order for a customer, first instantiate a Cart object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of **CartLineItem** objects, and assign the list to the Cart's LineItems property. Each cart line item contains the purchase information for one Product. You must have at least one cart line item. 
+To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the Cart's LineItems property. Each cart line item contains the purchase information for one Product. You must have at least one cart line item. 
 
 Next, obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
 

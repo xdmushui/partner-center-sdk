@@ -39,9 +39,6 @@ Finally, call the **Create** or **CreateAsync()** method to create the order.
 ```CSharp
 IAggregatePartner partnerOperations;
 string customerId;
-string productId;
-string skuId;
-string availabilityId;
 string cartId;
 
 var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checkout();
@@ -100,7 +97,6 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
-| purchaseSystem       | string                      | No           | Which purchase system to place order to.                                                           |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
 
