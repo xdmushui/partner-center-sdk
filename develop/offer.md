@@ -25,146 +25,42 @@ To</span>
 Describes a product listed in the reseller catalog that they can offer
 to their customers.
 
+
+
 ## <span id="Offer"></span><span id="offer"></span><span id="OFFER"></span>Offer
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>id</td>
-<td>string</td>
-<td>The offer identifier.</td>
-</tr>
-<tr class="even">
-<td>name</td>
-<td>string</td>
-<td>The offer name.</td>
-</tr>
-<tr class="odd">
-<td>description</td>
-<td>string</td>
-<td>A description of the offer.</td>
-</tr>
-<tr class="even">
-<td>minimumQuantity</td>
-<td>int</td>
-<td>The minimum quantity available.</td>
-</tr>
-<tr class="odd">
-<td>maximumQuantity</td>
-<td>int</td>
-<td>The maximum quantity available.</td>
-</tr>
-<tr class="even">
-<td>rank</td>
-<td>int</td>
-<td>The offer rank or priority compared to other categories in the same product line. This property should be set only if there is more than one offer for a given product line.</td>
-</tr>
-<tr class="odd">
-<td>uri</td>
-<td>string</td>
-<td>The offer URI.</td>
-</tr>
-<tr class="even">
-<td>locale</td>
-<td>string</td>
-<td>Gets or sets the locale in which the offer applies.</td>
-</tr>
-<tr class="odd">
-<td>country</td>
-<td>string</td>
-<td>Gets or sets the country/region where the offer applies.</td>
-</tr>
-<tr class="even">
-<td>category</td>
-<td>[OfferCategory](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.offer.category)</td>
-<td>Gets or sets the category.</td>
-</tr>
-<tr class="odd">
-<td>prerequisiteOffers</td>
-<td>string</td>
-<td>Gets or sets the prerequisite offers.</td>
-</tr>
-<tr class="even">
-<td>isAddOn</td>
-<td>boolean</td>
-<td>Gets or sets a value indicating whether this instance is addon.</td>
-</tr>
-<tr class="odd">
-<td>isAvailableForPurchase</td>
-<td>boolean</td>
-<td>Gets or sets a value indicating whether this instance is available for purchase.</td>
-</tr>
-<tr class="even">
-<td>billing</td>
-<td>string</td>
-<td>Specifies the billing type for the line item purchase: &quot;none&quot;, &quot;usage&quot;, or &quot;license&quot;.</td>
-</tr>
-<tr class="odd">
-<td>supportedBillingCycles</td>
-<td>array of strings</td>
-<td>Indicates the billing cycles supported for this offer. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
-<div class="alert">
-<strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
-</div>
-<div>
- 
-</div></td>
-</tr>
-<tr class="even">
-<td>isAutoRenewable</td>
-<td>boolean</td>
-<td>Gets or sets a value indicating whether the offer renews automatically.</td>
-</tr>
-<tr class="odd">
-<td>upgradeTargetOffers</td>
-<td>array of strings</td>
-<td>Gets or sets the list of offers that this offer can be upgraded to.</td>
-</tr>
-<tr class="even">
-<td>conversionTargetOffers</td>
-<td>array of strings</td>
-<td>Gets or sets the list of offers that this offer can be converted to.</td>
-</tr>
-<tr class="odd">
-<td>partnerQualifications</td>
-<td>array of strings</td>
-<td>A partner must be qualified to sell at least one of the specified offer types to get the specific offer, such as &quot;none&quot;, &quot;syndication&quot;, &quot;education&quot;, &quot;nonprofit&quot;, or &quot;government&quot;. If no qualifications are specified, then the offer is available to all partners.</td>
-</tr>
-<tr class="even">
-<td>product</td>
-<td>[OfferProduct](#offerproduct)</td>
-<td>Gets or sets the offer product.</td>
-</tr>
-<tr class="odd">
-<td>unitType</td>
-<td>string</td>
-<td>Gets or sets the type of the unit.</td>
-</tr>
-<tr class="even">
-<td>links</td>
-<td>[OfferLinks](#offerlinks)</td>
-<td>The offer's &quot;lean more&quot; link.</td>
-</tr>
-<tr class="odd">
-<td>attributes</td>
-<td>[ResourceAttributes](utility-resources.md#resourceattributes)</td>
-<td>The metadata attributes corresponding to the offer.</td>
-</tr>
-</tbody>
-</table>
+| Property                    | Type                      | Description                                                                                                                                                                |
+|-----------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id                          | string                    | The offer identifier.                                                                                           |
+| name                        | string                    | The offer name.                                                                                                 |
+| description                 | string                    | A description of the offer.                                                                                     |
+| minimumQuantity             | int                       | The minimum quantity available.                                                                                 |
+| maximumQuantity             | int                       | The maximum quantity available.                                                                                 |
+| rank                        | int                       | The offer rank or priority compared to other categories in the same product line. This property should be set only if there is more than one offer for a given product line.  |
+| uri                         | string                    | The offer URI.                                                                                                  |
+| locale                      | string                    | The locale in which the offer applies.                                                                          |
+| country                     | string                    | The country/region  where the offer applies.                                                                    |
+| category                    | [OfferCategory](offer.md#category)           | The category of the offer.                                                                   |
+| limitUnitOfMeasure          | string                    | A value used to indicate the type of the purchase limitation.                                                   |
+| limit                       | int                       | The amount of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
+| prerequisiteOffers          | string                    | The prerequisite offers.                                                                                        |
+| isAddOn                     | boolean                   | A value indicating whether this instance is an addon.                                                           |
+| hasAddOns                   | boolean                   | Gets a value indicating whether this offer has any addons.                                                      |
+| isAvailableForPurchase      | boolean                   | A value indicating whether this instance is available for purchase.                                             |
+| billing                     | string                    | Specifies the billing type for the line item purchase: "none", "usage", or "license".                           |
+| supportedBillingCycles      | array of strings          | Indicates the billing cycles supported for this offer. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype)   |
+| isAutoRenewable             | boolean                   | A value indicating whether the offer renews automatically.                                                      |
+| upgradeTargetOffers         | array of strings          | The list of offers that this offer can be upgraded to.                                                          |
+| conversionTargetOffers      | array of strings          | The list of offers that this offer can be converted to.                                                         |
+| reselleeQualifications      | array of strings          | The qualifications required by the customer in order to purchase the offer.                                     |
+| resellerQualifications      | array of strings          | The qualifications required by the partner in order to purchase the offer for a customer.                       |
+| salesGroupId                | string                    | A string used to group offers into separate orders.                                                             |
+| isTrial                     | boolean                   | Gets a value indicating whether this is a trial offer.                                                          |
+| product                     | [OfferProduct](#offerproduct)           | Gets the offer product.                                                                           |
+| unitType                    | string                    | Gets the type of the unit.                                                                                      |
+| links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
+| attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
  
 
