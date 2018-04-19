@@ -42,11 +42,11 @@ to their customers.
 | locale                      | string                    | The locale in which the offer applies.                                                                          |
 | country                     | string                    | The country/region  where the offer applies.                                                                    |
 | category                    | [OfferCategory](offer.md#category)           | The category of the offer.                                                                   |
-| limitUnitOfMeasure          | string                    | A value used to indicate the type of the purchase limitation.                                                   |
+| limitUnitOfMeasure          | string                    | A value that indicates the type of the purchase limitation. For example, "Concurrent", "LifeTime", "None".      |
 | limit                       | int                       | The amount of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
 | prerequisiteOffers          | string                    | The prerequisite offers.                                                                                        |
 | isAddOn                     | boolean                   | A value indicating whether this instance is an addon.                                                           |
-| hasAddOns                   | boolean                   | Gets a value indicating whether this offer has any addons.                                                      |
+| hasAddOns                   | boolean                   | A value indicating whether this offer has any addons.                                                           |
 | isAvailableForPurchase      | boolean                   | A value indicating whether this instance is available for purchase.                                             |
 | billing                     | string                    | Specifies the billing type for the line item purchase: "none", "usage", or "license".                           |
 | supportedBillingCycles      | array of strings          | Indicates the billing cycles supported for this offer. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype)   |
@@ -56,9 +56,9 @@ to their customers.
 | reselleeQualifications      | array of strings          | The qualifications required by the customer in order to purchase the offer.                                     |
 | resellerQualifications      | array of strings          | The qualifications required by the partner in order to purchase the offer for a customer.                       |
 | salesGroupId                | string                    | A string used to group offers into separate orders.                                                             |
-| isTrial                     | boolean                   | Gets a value indicating whether this is a trial offer.                                                          |
+| isTrial                     | boolean                   | A value indicating whether this is a trial offer.                                                               |
 | product                     | [OfferProduct](#offerproduct)           | Gets the offer product.                                                                           |
-| unitType                    | string                    | Gets the type of the unit.                                                                                      |
+| unitType                    | string                    | The type of the unit.                                                                                      |
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
@@ -76,8 +76,8 @@ line.
 | id         | string                                                         | The category identifier.                                                                                                                                                   |
 | name       | string                                                         | The category name.                                                                                                                                                         |
 | rank       | int                                                            | The category rank or priority compared to other categories in the same offer. This property should be set only if there is more than one offer category for a given offer. |
-| locale     | string                                                         | Gets or sets the locale in which the offer applies.                                                                                                                        |
-| country    | string                                                         | Gets or sets the country/region where the offer applies.                                                                                                                   |
+| locale     | string                                                         | The locale in which the offer applies.                                                                                                                        |
+| country    | string                                                         | The country/region where the offer applies.                                                                                                                   |
 | links      | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
 
