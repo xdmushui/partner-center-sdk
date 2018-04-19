@@ -24,25 +24,38 @@ Remove a reseller relationship with a customer that you no longer have transacti
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 -   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+-   All Azure Reserved VM Instance orders must be cancelled before a reseller relationship is removed. Call Azure support for cancelling any open Azure Reserved VM Instance orders.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To remove the reseller relationship for a customer, you must first ensure that all active subscriptions for that customer are suspended. To do this, determine the ID of the customer for whom you want to delete the reseller relationship (in the following code example, the user is prompted to provide the customer identifier). Then, retrieve a collection of the customer's subscriptions by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and the [**Subscriptions**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property to retrieve an interface to subscription collection operations. Finally, call the [**Get**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) method to retrieve the customer's subscriptions collection. Traverse the subscription collection and ensure that none of the subscriptions have a [**Subscriptions.Status**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) property value of [**SubscriptionStatus.Active**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus). If a subscription is still active, see [Suspend a subscription](https://review.docs.microsoft.com/en-us/partner-center/develop/suspend-a-subscription) for information on how to suspend it. 
+To remove the reseller relationship for a customer, you must first ensure that any active Azure Reserved VM Instances for that customer are cancelled and that all active subscriptions for that customer are suspended. To do this, determine the ID of the customer for whom you want to delete the reseller relationship (in the following code example, the user is prompted to provide the customer identifier). 
 
-After confirming that all active subscriptions are suspended, you can remove the reseller relationship for the customer. First, create a new [Customer](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object with the [Customer.RelationshipToPartner](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer.relationshiptopartner) property set to [**CustomerPartnerRelationship.None**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerpartnerrelationship). Then call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and call the **Patch** method, passing in the new customer object.
+To determine if any Azure Reserved VM Instances for the customer must be cancelled, retrieve the collection of entitlements by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and the [**Entitlements**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property to retrieve an interface to entitlement collection operations. Call the [**Get**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) method to retrieve the entitlement collection. Filter the collection for any entitlements with an [**EntitlementType**](entitlement.md#entitlementtype) value of [**EntitlementType.VirtualMachineReservedInstance**](entitlement.md#entitlementtype) and if there are any, cancel them by calling support before proceeding. 
+
+Then, retrieve a collection of the customer's subscriptions by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and the [**Subscriptions**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property to retrieve an interface to subscription collection operations. Finally, call the [**Get**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) method to retrieve the customer's subscriptions collection. Traverse the subscription collection and ensure that none of the subscriptions have a [**Subscriptions.Status**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) property value of [**SubscriptionStatus.Active**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus). If a subscription is still active, see [Suspend a subscription](https://review.docs.microsoft.com/en-us/partner-center/develop/suspend-a-subscription) for information on how to suspend it. 
+
+After confirming that all active Azure Reserved VM Instances for that customer are cancelled and all active subscriptions are suspended, you can remove the reseller relationship for the customer. First, create a new [Customer](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object with the [Customer.RelationshipToPartner](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer.relationshiptopartner) property set to [**CustomerPartnerRelationship.None**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerpartnerrelationship). Then call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and call the **Patch** method, passing in the new customer object.
 
 To re-establish the relationship, repeat the process of [requesting a reseller relationship](https://docs.microsoft.com/en-us/partner-center/develop/request-reseller-relationship). 
 
 
 ```CSharp
-
 // IAggregatePartner partnerOperations;
 
 // Prompt the user the enter the customer ID.
 var customerIdToDeleteRelationshipOf = this.Context.ConsoleHelper.ReadNonEmptyString("Please enter the ID of the customer you want to delete the relationship with", "The customer ID can't be empty");
 
-// Verify that there are no active subscriptions
+// Determine if there are any active Azure Reserved VM Instances for this customer.
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(customerIdToDeleteRelationshipOf).Entitlements.Get();
+
+If (entitlements.Items.Where(x => x.EntitlementType == EntitlementType.VirtualMachineReservedInstance).Any())
+{
+    this.Context.ConsoleHelper.Warning("Please cancel Azure Reserved Virtual Machine Instance orders through support and try again. Aborting the delete customer relationship operation");
+               return;
+}
+
+// Verify that there are no active subscriptions.
 ResourceCollection<Subscription> customerSubscriptions = partnerOperations.Customers.ById(customerIdToDeleteRelationshipOf).Subscriptions.Get();
 IList<Subscription> subscriptions = new List<Subscription>(customerSubscriptions.Items);
 
@@ -65,7 +78,6 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 {
     this.Context.ConsoleHelper.Success("Customer Partner Relationship successfully deleted");
 }
-
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: DeletePartnerCustomerRelationship.cs
@@ -153,5 +165,4 @@ Expect: 100-continue
         "ObjectType":"Customer"
     }
 }
-
 ```
