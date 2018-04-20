@@ -42,7 +42,7 @@ to their customers.
 | locale                      | string                    | The locale in which the offer applies.                                                                          |
 | country                     | string                    | The country/region  where the offer applies.                                                                    |
 | category                    | [OfferCategory](offer.md#category)           | The category of the offer.                                                                   |
-| limitUnitOfMeasure          | string                    | A value that indicates the type of the purchase limitation. For example, "Concurrent", "LifeTime", "None".      |
+| limitUnitOfMeasure          | string                    | A value that indicates the type of purchase limitation. Possible values include:  "None" - There are no restrictions on the number of subscriptions based on the offer purchased. "Concurrent" - The number of subscriptions that can exist on the customer tenant at a given time, this includes subscriptions that are active or canceled. This value applies mostly to small business offers where license counts are less than 300. De-provisionioned subscriptions don’t count. "LifeTime" - The number of subscriptions that can exist for the lifetime of the customer tenant. This value is most applicable to Trials. De-provisionioned subscriptions don’t count.      |
 | limit                       | int                       | The amount of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
 | prerequisiteOffers          | string                    | The prerequisite offers.                                                                                        |
 | isAddOn                     | boolean                   | A value indicating whether this instance is an addon.                                                           |
@@ -53,7 +53,7 @@ to their customers.
 | isAutoRenewable             | boolean                   | A value indicating whether the offer renews automatically.                                                      |
 | upgradeTargetOffers         | array of strings          | The list of offers that this offer can be upgraded to.                                                          |
 | conversionTargetOffers      | array of strings          | The list of offers that this offer can be converted to.                                                         |
-| reselleeQualifications      | array of strings          | The qualifications required by the customer in order to purchase the offer.                                     |
+| reselleeQualifications      | array of strings          | The qualifications required by the customer in order for a partner to purchase the offer for that customer.     |
 | resellerQualifications      | array of strings          | The qualifications required by the partner in order to purchase the offer for a customer.                       |
 | salesGroupId                | string                    | A string used to group offers into separate orders.                                                             |
 | isTrial                     | boolean                   | A value indicating whether this is a trial offer.                                                               |
