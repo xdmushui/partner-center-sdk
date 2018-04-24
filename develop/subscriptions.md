@@ -29,7 +29,8 @@ time. Not all fields will apply to all subscriptions, and many only
 apply at certain points in the life cycle, such as if a subscription is
 suspended or cancelled.
 
-**Note** The Subscription resource has a rate limit of 500 requests per minute per tenant identifier.
+>[!NOTE]
+>The Subscription resource has a rate limit of 500 requests per minute per tenant identifier.
 
 
 

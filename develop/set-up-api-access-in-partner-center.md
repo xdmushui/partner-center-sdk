@@ -60,7 +60,8 @@ To help you integrate and test your API integration, Partner Center supports two
 1.  Sign in into Partner Center with a global admin account. (This is your primary Partner Center account.)
 2.  From the **Dashboard** menu, select **Account settings**, then **Integration sandbox**.
 
-    **Note**  If you don't see an Integration sandbox option, you might not have a global admin account, or the integration sandbox has already been set up and you're using an integration sandbox account.
+    >[!NOTE]
+    >If you don't see an Integration sandbox option, you might not have a global admin account, or the integration sandbox has already been set up and you're using an >integration sandbox account.
 
      
 

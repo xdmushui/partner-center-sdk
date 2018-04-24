@@ -103,7 +103,8 @@ Content-Type: application/json
 
 If successful, the response body contains a collection of [InventoryItem](products.md#inventoryitem) objects populated with the restriction details, if any apply.
 
-**Note** If an input InventoryItem represents an item that could not be found in the catalog, it will not be included in the output collection.
+>[!NOTE]
+>If an input InventoryItem represents an item that could not be found in the catalog, it will not be included in the output collection.
 
 
 **Response success and error codes**

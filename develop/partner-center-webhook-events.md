@@ -33,7 +33,8 @@ The following webhook events are supported by Partner Center.
 
 This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to “test-created” events and data older than 7 days will be purged.
 
-**Note** There is a throttle limit of 2 requests per minute when posting a test-created event.
+>[!NOTE]
+>There is a throttle limit of 2 requests per minute when posting a test-created event.
 
 **Properties**
 
@@ -64,7 +65,8 @@ This event allows you to self-onboard and test your registration by requesting a
 
 This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API. 
 
-**Note** There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.  
+>[!NOTE]
+>There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.  
 
 **Properties**
 

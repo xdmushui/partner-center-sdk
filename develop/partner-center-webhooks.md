@@ -32,7 +32,8 @@ Partners can select from Webhook events, like the following, that are supported 
 
     This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API. 
     
-    **Note** There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered. 
+    >[!NOTE]
+    >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered. 
 
 -   **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
@@ -74,7 +75,8 @@ Content-Length: 195
 } 
 ```
 
-**Note** the Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
+>[!NOTE]
+>the Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
 
 ## <span id="AuthenticateCallback"></span><span id="authenticatecallback"></span><span id="AUTHENTICATECALLBACK"></span>How to authenticate the callback
 
@@ -301,7 +303,8 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event. 
 
-**Note** There is a throttle limit of 2 requests per minute when posting a validation event. 
+>[!NOTE]
+>There is a throttle limit of 2 requests per minute when posting a validation event. 
 
 **Resource URL**   
 https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents

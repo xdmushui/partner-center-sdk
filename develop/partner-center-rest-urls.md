@@ -57,8 +57,8 @@ versions of Partner Center:
 
  
 
-**Note**  The token authority for Partner Center for Microsoft Cloud
-Germany Azure AD Library is: https://login.microsoftonline.de.
+>[!NOTE]
+>The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.   
 
  
 

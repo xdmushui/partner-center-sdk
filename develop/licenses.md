@@ -26,7 +26,8 @@ Describes resources related to licenses.
 
 Describes a user license.
 
-**Note**  Unsupported on Partner Center operated by 21Vianet.
+>[!NOTE]
+>Unsupported on Partner Center operated by 21Vianet.
 
  
 
