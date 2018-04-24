@@ -27,7 +27,8 @@ This website is fully owned, supported, and maintained by partners, and Microsof
 
 The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
 
-**Note**  You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
+>[!NOTE]
+>You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
 
  
 

@@ -22,8 +22,8 @@ The Partner Center SDK is designed for partners in the Cloud Solution Provider p
 
 The Partner Center SDK includes a managed API library, a REST API, a comprehensive sample app written in C#, and this documentation. The Partner Center SDK is a superset of the existing CREST API and includes a Managed API that features improved token management and a simple interface library for network calls with retries.
 
-**Note**  
-There are different versions of Partner Center for specific regions, countries, or government agencies. App developers need to understand the different SDK capabilities for these versions. For more information, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).   
+>[!NOTE]
+>There are different versions of Partner Center for specific regions, countries, or government agencies. App developers need to understand the different SDK capabilities >for these versions. For more information, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).   
 
  
 

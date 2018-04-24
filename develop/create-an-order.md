@@ -121,7 +121,8 @@ This table describes the [Order](orders.md) properties in the request body.
 
 This table describes the [OrderLineItem](orders.md#orderlineitem) properties in the request body.
 
-**Note**  The partnerIdOnRecord should only be provided when an indirect provider places an order on behalf of an indirect reseller. It's used to store the Microsoft Partner Network ID of the indirect reseller only (never the ID of the indirect provider).
+>[!NOTE]
+>The partnerIdOnRecord should only be provided when an indirect provider places an order on behalf of an indirect reseller. It's used to store the Microsoft Partner Network ID of the indirect reseller only (never the ID of the indirect provider).
 
  
 

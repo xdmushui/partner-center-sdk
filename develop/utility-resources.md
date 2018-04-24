@@ -106,7 +106,8 @@ Contains a URI link and associated information.
 
 Describes a specific password and if that password needs to be changed.
 
-**Note**  Unsupported on Partner Center operated by 21Vianet.
+>[!NOTE]
+>Unsupported on Partner Center operated by 21Vianet.
 
  
 

@@ -22,7 +22,8 @@ ms.technology: partner-center-sdk
 
 Developers must register details about their application with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
 
-**Note**  For Partner Center for Microsoft Cloud for US Government, you currently must manage applications through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/en-us/powershell/module/Azuread/?view=azureadps-2.0#applications).
+>[!NOTE]
+>For Partner Center for Microsoft Cloud for US Government, you currently must manage applications through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/en-us/powershell/module/Azuread/?view=azureadps-2.0#applications).
 
  
 
@@ -53,7 +54,7 @@ For web applications, use the following procedure to register your app ID.
 1.  Go to the **Keys** section of your web application
 2.  Enter key description and select duration as 1 or 2 years, as you need
 3.  Save and copy the secret key value
-    **Note**  This value will not be shown again once you leave this page.
+    >[!NOTE] This value will not be shown again once you leave this page.
 
      
 
@@ -75,7 +76,8 @@ You should have the following details from the web app configuration:
 
 Native applications do not need to be registered to partner center. But these applications need to be configured to provide access to Partner center APIs.
 
-**Note**  Before creating native application in the Azure management portal, log in into partner center using the admin user credentials from the partner tenant. This creates the settings on the tenant to enable application permissions.
+>[!NOTE]
+>Before creating native application in the Azure management portal, log in into partner center using the admin user credentials from the partner tenant. This creates the settings on the tenant to enable application permissions.
 
  
 
