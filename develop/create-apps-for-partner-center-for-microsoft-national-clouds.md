@@ -53,8 +53,8 @@ For web applications, use the following procedure to register your app ID.
 
 1.  Go to the **Keys** section of your web application
 2.  Enter key description and select duration as 1 or 2 years, as you need
-3.  Save and copy the secret key value
-    **Note** This value will not be shown again once you leave this page.
+3.  Save and copy the secret key value      
+    >[!Note] This value will not be shown again once you leave this page.
 
      
 
