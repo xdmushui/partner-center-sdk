@@ -54,7 +54,7 @@ For web applications, use the following procedure to register your app ID.
 1.  Go to the **Keys** section of your web application
 2.  Enter key description and select duration as 1 or 2 years, as you need
 3.  Save and copy the secret key value
-    >[!NOTE] This value will not be shown again once you leave this page.
+    **Note** This value will not be shown again once you leave this page.
 
      
 
@@ -69,7 +69,7 @@ You should have the following details from the web app configuration:
 2.  Go to **Dashboard** &gt; **Account Settings** &gt; **App Management**
 3.  In the **Web App** section, click on **Register existing app**
 4.  Select the web application you created in Azure management portal
-5.  5. Click on **register your app**
+5.  Click on **register your app**
 
 ## <span id="Native_applications_"></span><span id="native_applications_"></span><span id="NATIVE_APPLICATIONS_"></span>Native applications
 

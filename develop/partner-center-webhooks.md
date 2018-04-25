@@ -75,8 +75,8 @@ Content-Length: 195
 } 
 ```
 
->[!NOTE]
->the Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
+>[!NOTE] 
+>The Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
 
 ## <span id="AuthenticateCallback"></span><span id="authenticatecallback"></span><span id="AUTHENTICATECALLBACK"></span>How to authenticate the callback
 
