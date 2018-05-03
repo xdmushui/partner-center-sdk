@@ -28,16 +28,16 @@ Gets a collection of products.
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To get a list of products, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, select the collection ID by using the **ByCollectionId()** method, and optionally select the target segment by using the **ByTargetSegment()** method. Finally, call the **Get()** or **GetAsync()** method to return the collection. 
+To get a list of products, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, select the catalog view by using the **ByTargetView()** method, and optionally select the target segment by using the **ByTargetSegment()** method. Finally, call the **Get()** or **GetAsync()** method to return the collection. 
 
 ```CSharp
 IAggregatePartner partnerOperations;
 
-// Get the products.
-ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByCollectionId("Azure").Get();
+// Get the products for the specified catalog view.
+ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("Azure").Get();
 
-// Get the products, filtered by target segment.
-ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByCollectionId("Azure").ByTargetSegment("commercial").Get();
+// Get the products filtered by target view and target segment.
+ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("Azure").ByTargetSegment("commercial").Get();
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
@@ -47,19 +47,19 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 
 | Method  | Request URI                                                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&collectionId={collection-id}&targetSegment={target-segment} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1    |
 
  
 
-**URI parameter**
+**URI parameters**
 
 Use the following path and query parameters to get a list of products.
 
-| Name                   | Type     | Required | Description                                                     |
-|------------------------|----------|----------|-----------------------------------------------------------------|
-| country                | string   | Yes      | A country/region ID.                                            |
-| collection-id          | string   | Yes      | A string that identifies the product collection.                |
-| target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
+| Name                   | Type     | Required | Description                                                             |
+|------------------------|----------|----------|-------------------------------------------------------------------------|
+| country                | string   | Yes      | The country/region ID.                                                  |
+| targetView             | string   | Yes      | Identifies the target view of the catalog.                              |
+| targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. |
 
  
 
@@ -74,7 +74,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/v1/products?country=US&collectionId=Azure HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
 Authorization: Bearer 
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
@@ -95,6 +95,7 @@ This method returns the following error codes:
 | HTTP Status Code     | Error code   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
+| 403                  | 400036       | Access to the requested targetView is not allowed.                                                        | 
 
 
 **Response example**
@@ -128,7 +129,7 @@ This method returns the following error codes:
     ],
     "links": {
         "self": {
-            "uri": "/products?country=US&collectionId=Azure",
+            "uri": "/products?country=US&targetView=Azure",
             "method": "GET",
             "headers": []
         }

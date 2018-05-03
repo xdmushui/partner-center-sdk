@@ -33,11 +33,11 @@ This resource represents the products to which the customer has right to use bec
 | referenceOrder       | [ReferenceOrder](#referenceorder)                              | The order reference which resulted in the entitlement.                  |
 | productId            | string                                                         | The ID of the product.                                                  |
 | skuID                | string                                                         | The ID of the SKU.                                                      |
-| skuTitle             | string                                                         | The title of the product SKU.                                           |
-| quantity             | int                                                            | The quantity of entitlements.                                           |
+| quantity             | int                                                            | The quantity of entitlements (excludes Unfulfilled/Transfered entitlements). |
+| quantityDetails      | IEnumerable<[QuantityDetail](#quantitydetail)>                 | The list of entitlement quantity details (the number of items and status of each quantity). |
 | entitlementType      | [EntitlementType](#entitlementtype)                            | The type of entitlement.                                                |
-| entitledArtifacts    | IEnumerable<[Artifact](#artifact)>.                            | The list of artifacts associated with the entitlement.                  |
-| IncludedEntitlements | IEnumerable<[Entitlement](#artifact)>.                         | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
+| entitledArtifacts    | IEnumerable<[Artifact](#artifact)>                             | The list of artifacts associated with the entitlement.                  |
+| IncludedEntitlements | IEnumerable<[Entitlement](#artifact)>                          | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
 
  
 
@@ -50,6 +50,18 @@ The order reference of an entitlement.
 |----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------|
 | id                   | string                                                         | The ID of the referenced order.                                         |
 | lineItemId           | string                                                         | The ID of the referenced order line item.                               |
+
+
+
+## <span id="QuantityDetail"></span><span id="quantitydetail"></span><span id="QUANTITYDETAIL"></span>QuantityDetail
+
+
+Represents the details of an entitlement quantity.
+
+| Property             | Type                                            | Description                                                             |
+|----------------------|-------------------------------------------------|-------------------------------------------------------------------------|
+| quantity             | int                                             | The number of items.                                                    |
+| status               | string                                          | The status of quantity.                                                 |
 
 
 
@@ -121,6 +133,8 @@ Represents an individual virtual machine reservation.
 |-------------------------|----------------------------------------------------------------|------------------------------------------------------------------------|
 | reservationId           | string                                                         | The ID of the reservation.                                             |
 | scopeType               | string                                                         | The type of scope associated with the virtual machine reservation.     |
+| displayName             | string                                                         | The display name of the reservation.                                   |
+| appliedScopes           | IEnumerable<[string>                                           | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.)  |
 | quantity                | int                                                            | The number of virtual machines in the reservation.                     |
 | expiryDateTime          | string in UTC date-time format                                 | The expiry date of the reservation.                                    |
 | effectiveDateTime       | string in UTC date-time format                                 | The effective date of the reservation.                                 |
