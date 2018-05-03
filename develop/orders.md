@@ -85,7 +85,7 @@ Represents the full subscription associated with the order.
 
 | Property           | Type                                         | Description                                                                          |
 |--------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
-| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve the provisioning status of the line item.       |
+| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
 | sku                | [Link](utility-resources.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
 | subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
 
@@ -103,6 +103,33 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | completed          | 1            | Indicates that the order is completed.          |
 | pending            | 2            | Indicates that the order is still pending.      |
 | cancelled          | 3            | Indicates that the order has been cancelled.    |
+
+
+
+
+## <span id="orderLineItemProvisioningStatus"></span><span id="orderlineitemprovisioningstatus"></span><span id="ORDERLINEITEMPROVISIONINGSTATUS"></span>OrderLineItemProvisioningStatus 
+
+
+Represents the provisioning status of an [OrderLineItem](#orderlineitem).
+
+| Property                           | Type                                | Description                                                                                |
+|------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------|
+| lineItemNumber                     | int                                 | The unique line number of the order line item. Values range from 0 to count-1.             |
+| status                             | string                              | The provisioning status of the order line item. Values include: Fulfilled, Unfulfilled,  PrefulfillmentPending.  |
+| quantityProvisioningInformation    | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)>   | A list of quantity provisioning status information for the order line item. |
+
+
+
+
+## <span id="quantityProvisioningStatus"></span><span id="quantityprovisioningstatus"></span><span id="QUANTITYPROVISIONINGSTATUS"></span>QuantityProvisioningStatus 
+
+
+Represents the provisioning status by quantity.
+
+| Property                           | Type                                         | Description                                          |
+|------------------------------------|----------------------------------------------|------------------------------------------------------|
+| quantity                           | int                                          | The number of items.                                 |
+| status                             | string                                       | The status of the number of items.                   |
 
  
 
