@@ -134,7 +134,7 @@ Represents an individual virtual machine reservation.
 | reservationId           | string                                                         | The ID of the reservation.                                             |
 | scopeType               | string                                                         | The type of scope associated with the virtual machine reservation.     |
 | displayName             | string                                                         | The display name of the reservation.                                   |
-| appliedScopes           | IEnumerable<[string>                                           | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.)  |
+| appliedScopes           | IEnumerable<string>                                            | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.)  |
 | quantity                | int                                                            | The number of virtual machines in the reservation.                     |
 | expiryDateTime          | string in UTC date-time format                                 | The expiry date of the reservation.                                    |
 | effectiveDateTime       | string in UTC date-time format                                 | The effective date of the reservation.                                 |
