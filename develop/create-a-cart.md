@@ -51,7 +51,7 @@ var cart = new Cart()
         catalogItemId = catalogItemId,
         FriendlyName = "A_sample_Azure_RI",
         Quantity = 5,
-        BillingCycle = one_time,
+        BillingCycle = BillingCycleType.OneTime,
         ProvisioningContext = new Dictionary<string, string>
         {
             { "subscriptionId", subscriptionId },
