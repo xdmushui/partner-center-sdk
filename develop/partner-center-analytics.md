@@ -105,7 +105,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Subscription](#subscriptions) resources.
+If successful, the response body contains a collection of [Subscription](#subscription) resources.
 
 **Response success and error codes**
 
@@ -140,7 +140,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 
-## <span id="Get_subscription_analytics_by_search_query"></span><span id="get_subscription_analytics_by_search_query"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_SEARCH_QUERY"></span>Get subscription analytics information filtered by a search query
+# <span id="Get_subscription_analytics_by_search_query"></span><span id="get_subscription_analytics_by_search_query"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_SEARCH_QUERY"></span>Get subscription analytics information filtered by a search query
 
 
 
@@ -261,7 +261,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Subscription](#subscriptions) resources.
+If successful, the response body contains a collection of [Subscription](#subscription) resources.
 
 **Response success and error codes**
 
@@ -301,7 +301,7 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 }
 ```
 
-## <span id="Get_subscription_analytics_by_dates_or_terms"></span><span id="get_subscription_analytics_by_dates_or_terms"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_DATES_OR_TERMS"></span>Get subscription analytics grouped by dates or terms
+# <span id="Get_subscription_analytics_by_dates_or_terms"></span><span id="get_subscription_analytics_by_dates_or_terms"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_DATES_OR_TERMS"></span>Get subscription analytics grouped by dates or terms
 
 
 
@@ -385,7 +385,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Subscription](#subscriptions) resources grouped by the specified terms and dates.
+If successful, the response body contains a collection of [Subscription](#subscription) resources grouped by the specified terms and dates.
 
 **Response success and error codes**
 
@@ -426,7 +426,7 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 ```
 
 
-## <span id="Get_subscription_analytics_by_aggregation_level"></span><span id="get_subscription_analytics_by_aggregation_level"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_AGGREGATION_LEVEL"></span>Get subscription analytics grouped by aggregation level
+# <span id="Get_subscription_analytics_by_aggregation_level"></span><span id="get_subscription_analytics_by_aggregation_level"></span><span id="GET_SUBSCRIPTION_ANALYTICS_BY_AGGREGATION_LEVEL"></span>Get subscription analytics grouped by aggregation level
 
 
 
@@ -494,7 +494,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Subscription](#subscriptions) resources grouped by the specified terms and dates. Query Params are used for filtering data; aggregation level will apply to dates; aggregation supported by datesa
+If successful, the response body contains a collection of [Subscription](#subscription) resources grouped by the specified terms and dates. Query Params are used for filtering data; aggregation level will apply to dates; aggregation supported by datesa
 
 **Response success and error codes**
 
