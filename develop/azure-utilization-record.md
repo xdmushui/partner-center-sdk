@@ -14,8 +14,7 @@ ms.technology: partner-center-sdk
 # Azure Utilization Record
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany

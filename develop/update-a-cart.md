@@ -11,8 +11,6 @@ ms.technology: partner-center-sdk
 
 # Update a cart
 
->[!IMPORTANT]   
->This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
 
 **Applies To**
 
