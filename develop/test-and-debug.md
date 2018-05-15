@@ -28,7 +28,16 @@ If you run automated build verification tests, conduct testing in production, or
 
 Note that this means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials.
 
-If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reserved-vm-instances.md) with your sandbox account, you are limited to 2 VM Instances per customer.    
+If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reserved-vm-instances.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
+
+| Product Title  | Effective Date  | Sku Title                                               | Region [ArmRegionName] | Instance Key [ArmSkuName] | Duration | Consumption Meter Id       | USD |
+|----------------|-----------------|---------------------------------------------------------|------------------------|--------------|----------|----------------------------|-----|
+| B Series       | 12/1/2017 0:00  | Reserved VM instance, Standard_B1s, KR South, 1 year    | KoreaSouth             | Standard_B1s | 1Year    | 3f913071-0dd7-4258-8ec4-6fad05bd976d | 56  |
+| B Series       | 12/1/2017 0:00  | Reserved VM instance, Standard_B1s, US East, 1 year     | eastus                 | Standard_B1s | 1Year    | f4d7a5a5-1b67-45ea-b1a0-282fbdd34b05 | 59  |
+| B Series       | 12/1/2017 0:00  | Reserved VM instance, Standard_B1s, US West 2, 1 year   | westus2                | Standard_B1s | 1Year    | 222e39f5-e99f-4fa3-a323-f46402977888 | 59  |
+| B Series       | 12/1/2017 0:00  | Reserved VM instance, Standard_B1s, US North Central, 1 year    | northcentralus | Standard_B1s | 1Year    | 4e1716fc-4842-43f1-aa96-7c1b1b1395a7 | 59  |
+| B Series       | 12/1/2017 0:00  | Reserved VM instance, Standard_B1s, CA East, 1 year     | CanadaEast             | Standard_B1s | 1Year    | ab8a5993-5db7-47c8-b3b1-2e1365b353fb | 65  |
+     
 
 To clean up at the end of your test run so there's space for the next round of testing, see the following topics:
 
