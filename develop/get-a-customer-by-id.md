@@ -73,7 +73,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft-ppe.com/v1/customers/<customer-tenant-id> HTTP/1.1    
+GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1    
 Authorization: Bearer <token> 
 Accept: application/json    
 MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9  

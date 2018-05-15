@@ -44,7 +44,7 @@ var inventoryCheckRequest = new InventoryCheckRequest()
 	InventoryContext = new Dictionary<string, string>()
 	{
 		{ “customerId”, customerId },
-		{“azureSubscriptionId”, subscriptionId }
+		{ “azureSubscriptionId”, subscriptionId }
 	}
 };
 
@@ -84,7 +84,7 @@ The inventory request details, consisting of an [InventoryCheckRequest](products
 **Request example**
 
 ```
-POST https://api.partnercenter.microsoft-ppe.com/v1/extensions/product/checkinventory?country=US HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/extensions/product/checkinventory?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: d1b1981a-e088-4610-870a-eebec96d6bcd
@@ -93,7 +93,7 @@ X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
 
-{"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","subscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75"}}
+{"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","azureSubscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75"}}
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
