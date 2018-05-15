@@ -30,22 +30,22 @@ Update details in an existing user account for your customer.
 To update the details for a specified customer user, first retrieve the specified customer ID and user to update. Then, create an updated version of the user in a new **CustomerUser** object. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, the **ById()** method, followed by the **Patch()** method.
 
 ```CSharp
-//string selectedCustomerId;
-//customerUser specifiedUser;
-//IAggregatePartner partnerOperations;
+// string selectedCustomerId;
+// customerUser specifiedUser;
+// IAggregatePartner partnerOperations;
 
-//updated information            
+// Updated information            
 var userToUpdate = new CustomerUser()
-            {
-                PasswordProfile = new PasswordProfile() { ForceChangePassword = true, Password = "testPw@!122B" },
-                DisplayName = "Roger Federer",
-                FirstName = "Roger",
-                LastName = "Federer",
-                UsageLocation = "US",
-                UserPrincipalName = Guid.NewGuid().ToString("N") + "@" + selectedCustomer.CompanyProfile.Domain.ToString()
-            };
+{
+    PasswordProfile = new PasswordProfile() { ForceChangePassword = true, Password = "testPw@!122B" },
+    DisplayName = "DisplayNameChange",
+    FirstName = "FirstNameChange",
+    LastName = "LastNameChange",
+    UsageLocation = "US",
+    UserPrincipalName = Guid.NewGuid().ToString("N") + "@" + selectedCustomer.CompanyProfile.Domain.ToString()
+};
 
-// update customer user information
+// Update customer user information
 User updatedCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(specifiedUser.Id).Patch(userToUpdate);
 
 ```
