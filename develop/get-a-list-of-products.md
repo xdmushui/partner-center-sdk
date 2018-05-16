@@ -56,8 +56,8 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog.                              |
-| targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> Azure - Includes all Azure items.<br/> OnlineServices - Includes all online service items.                      |
+| targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
 
  
 

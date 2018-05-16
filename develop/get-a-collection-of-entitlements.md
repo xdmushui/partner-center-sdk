@@ -178,7 +178,7 @@ MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
-Host: api.partnercenter.microsoft-ppe.com
+Host: api.partnercenter.microsoft.com 
 ```
 
 **Response example**

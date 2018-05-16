@@ -84,7 +84,7 @@ MS-CorrelationId: 0e93c70c-977a-4a88-9580-7cf084c73286
 X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
-Host: api.partnercenter.microsoft-ppe.com
+Host: api.partnercenter.microsoft.com 
 Content-Length: 0
 Expect: 100-continue
 
