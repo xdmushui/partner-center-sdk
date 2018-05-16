@@ -23,8 +23,9 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 
 ## <span id="Get_the_code"></span><span id="get_the_code"></span><span id="GET_THE_CODE"></span>Get the code
 
+[Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681)  
 
-[Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681)
+> [!NOTE] API access to Partner Center for indirect resellers is not a supported scenario.
 
 ## <span id="Determine_your_version_of_Partner_Center"></span><span id="determine_your_version_of_partner_center"></span><span id="DETERMINE_YOUR_VERSION_OF_PARTNER_CENTER"></span>Determine your version of Partner Center
 
