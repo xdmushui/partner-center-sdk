@@ -92,7 +92,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>API reference</h3>
-                        <p>Detailed reference info for the managed and REST APIs for Partner Center.<br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-managed-api">Partner Center managed API</a><br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
+                        <p>Detailed reference info for the managed and REST APIs for Partner Center.<br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-managed-api">Partner Center Managed API</a><br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
                     </div>
                 </div>
             </div>
