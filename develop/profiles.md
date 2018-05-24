@@ -12,8 +12,7 @@ ms.technology: partner-center-sdk
 # Profile
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet

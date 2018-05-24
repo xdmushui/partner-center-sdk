@@ -3,7 +3,7 @@ title: Get started
 description: The Partner Center SDK includes a managed API and a REST API for partners to use to manage customer, subscription, and order data.
 ms.assetid: D9A91032-CA5B-4CD2-ADBA-6C5513E05D32
 ms.author: v-thpr
-ms.date: 12/15/2017
+ms.date: 05/18/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -23,8 +23,10 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 
 ## <span id="Get_the_code"></span><span id="get_the_code"></span><span id="GET_THE_CODE"></span>Get the code
 
+[Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681)  
 
-[Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681)
+> [!NOTE]  
+> API access to Partner Center for indirect resellers is not a supported scenario.
 
 ## <span id="Determine_your_version_of_Partner_Center"></span><span id="determine_your_version_of_partner_center"></span><span id="DETERMINE_YOUR_VERSION_OF_PARTNER_CENTER"></span>Determine your version of Partner Center
 
@@ -48,13 +50,17 @@ For tips and suggestions about testing and debugging, including more information
 ## <span id="sdk_config_auth"></span><span id="SDK_CONFIG_AUTH"></span>Configure your authentication
 
 
-To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).
+To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).   
 
 ## <span id="Get_help"></span><span id="get_help"></span><span id="GET_HELP"></span>Get help
 
 
 Partners can get support at the [Partner Center SDK Yammer group](http://go.microsoft.com/fwlink/p/?LinkID=717360). To get more personalized help, developers can use their MPN support benefits or Premier Support.
 
+## <span id="Early_adopter_program"></span><span id="early_adopter_program"></span><span id="EARLY_ADOPTER_PROGRAM"></span>Join the Partner Center API and SDK Early Adopter Program
+
+
+To find out how you can collaborate with Microsoft on the development of Partner features and capabilities, see [Join the Partner Center API and SDK Early Adopter Program](early-adopter-program.md).
  
 
  

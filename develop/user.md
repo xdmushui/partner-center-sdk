@@ -14,8 +14,7 @@ ms.technology: partner-center-sdk
 # User
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -61,6 +60,7 @@ Describes a customer user.
 | firstName             | string                                                         | The first name of the user.                                                                                                                                                                                                |
 | lastName              | string                                                         | The last name of the user.                                                                                                                                                                                                 |
 | displayName           | string                                                         | The displayed name of the user.                                                                                                                                                                                            |
+| immutableId           | string                                                         | The immutable id of the user.                                                                                                                                                                                              |
 | passwordProfile       | [PasswordProfile](utility-resources.md#passwordprofile)       | The user's password profile.                                                                                                                                                                                               |
 | phoneNumber           | string                                                         | The user's phone number.                                                                                                                                                                                                   |
 | lastDirectorySyncTime | string in UTC date time format                                 | The last time that information for this user was synced between Azure Active Directory and on-premises Active Directory. A date time value only appears if Azure AD Connect sync is enabled. Otherwise, the value is null. |

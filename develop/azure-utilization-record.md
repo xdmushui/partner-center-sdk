@@ -14,8 +14,7 @@ ms.technology: partner-center-sdk
 # Azure Utilization Record
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany
@@ -78,14 +77,14 @@ Describes the properties of an Azure Resource.
 
 Describes the properties of an Azure Instance Data resource.
 
-| Property    | Type             | Required | Description                                                                                                        |
-|-------------|------------------|----------|--------------------------------------------------------------------------------------------------------------------|
-| resourceUri | string           | Yes      | The fully qualified Azure resource ID, which includes the resource groups and the instance name.                   |
-| location    | string           | Yes      | Region in which the service was run.                                                                               |
-| partNumber  | object           | Yes      | Unique namespace used to identify the resource for Azure Marketplace 3rd party usage. This may be an empty string. |
-| orderNumber | number           | Yes      | Unique namespace used to identify the 3rd party order for Azure Marketplace. This may be an empty string.          |
-| tags        | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
-
+| Property       | Type             | Required | Description                                                                                                        |
+|----------------|------------------|----------|--------------------------------------------------------------------------------------------------------------------|
+| resourceUri    | string           | Yes      | The fully qualified Azure resource ID, which includes the resource groups and the instance name.                   |
+| location       | string           | Yes      | Region in which the service was run.                                                                               |
+| partNumber     | object           | Yes      | Unique namespace used to identify the resource for Azure Marketplace 3rd party usage. This may be an empty string. |
+| orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for Azure Marketplace. This may be an empty string.          |
+| tags           | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
+| additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          | 
  
 
 ## <span id="Operations_on_the_AzureUtilizationRecord_resource"></span><span id="operations_on_the_azureutilizationrecord_resource"></span><span id="OPERATIONS_ON_THE_AZUREUTILIZATIONRECORD_RESOURCE"></span>Operations on the AzureUtilizationRecord resource

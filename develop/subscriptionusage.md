@@ -15,8 +15,7 @@ ms.technology: partner-center-sdk
 # Subscription Usage
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany
@@ -29,12 +28,10 @@ with a usage summary for each pay period.
 ## <span id="SubscriptionDailyUsageRecord"></span><span id="subscriptiondailyusagerecord"></span><span id="SUBSCRIPTIONDAILYUSAGERECORD"></span>SubscriptionDailyUsageRecord
 
 
-**Note**  The SubscriptionDailyUsageRecord resource is obsolete and may
-produce inaccurate results. We recommend that you update your
-applications to use the APIs described in [Get a customer's utilization
-records for Azure](get-a-customer-s-utilization-record-for-azure.md)
-and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
-instead.
+>[!NOTE]
+>The SubscriptionDailyUsageRecord resource is obsolete and may produce inaccurate results. We recommend that you update your applications to use the APIs described in
+>[Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md) and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
+>instead.
 
  
 

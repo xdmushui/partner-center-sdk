@@ -108,6 +108,7 @@ Date: Wed, 25 Nov 2015 05:50:45 GMT
     "totalCount": 37,
     "items": [{
         "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de",
+        "entitlementId": "42226ed6-070a-4e0f-b80c-4cdfB3e97aa7", 
         "friendlyName": "Myofferpurchase",
         "quantity": 1,
         "unitType": "none",
@@ -121,11 +122,6 @@ Date: Wed, 25 Nov 2015 05:50:45 GMT
         "links": {
             "offer": {
                 "uri": "/v1/offers/0CCA44D6-68E9-4762-94EE-31ECE98783B9",
-                "method": "GET",
-                "headers": []
-            },
-            "entitlement": {
-                "uri": "/entitlements?key=<key>",
                 "method": "GET",
                 "headers": []
             },

@@ -16,8 +16,7 @@ ms.technology: partner-center-sdk
 # Partner Center REST API reference
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -43,8 +42,10 @@ finding the sample code.
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Partner Center REST URLs](partner-center-rest-urls.md)           | Defines the REST API endpoints for different versions of Partner Center.                                                                                                                                         |
 | [Partner Center REST headers](headers.md)                         | Defines the request and response headers used by the REST API.                                                                                                                                                   |
-| [Partner Center REST resources](partner-center-rest-resources.md) | Defines the JSON constructs that represent the objects needed to use the REST API.                                                                                                                               |
-| [Partner Center REST error codes](error-codes.md)                 | The Partner Center API returns standard HTTP success and error codes. Partners can review the error type and occasionally additional parameters to determine whether their requests succeeded and to help debug. |
+| [Partner Center REST resources](partner-center-rest-resources.md) | Defines the JSON constructs that represent the objects needed to use the REST API.                                                                                                                               | 
+| [Partner Center REST events](partner-center-webhook-events.md)    | Defines the REST resource change events that are supported by Partner Center webhooks. | 
+| [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md)                 | Lists the locales, languages, and country/region codes that are supported in the Partner Center APIs. |
+| [Partner Center webhooks](partner-center-webhooks.md)             | How to receive events, authenticate a callback, and use the Partner Center webhook APIs to create, view, and update an event registration.                  |
 
  
 

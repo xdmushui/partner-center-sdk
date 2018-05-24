@@ -25,7 +25,9 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Create a customer](create-a-customer.md)
 
--   [Request a reseller relationship](request-reseller-relationship.md)
+-   [Request a reseller relationship](request-reseller-relationship.md) 
+
+-   [Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md) 
 
 **Look up a customer**
 
@@ -39,6 +41,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get all of a customer's orders](get-all-of-a-customer-s-orders.md)
 
+-   [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md) 
+
+-   [Get a collection of entitlements](get-a-collection-of-entitlements.md)
+
 -   [Get all of a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 
 -   [Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)
@@ -49,7 +55,11 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Update a customer's billing profile](update-a-customer-s-billing-profile.md)
 
--   [Get a customer's company profile](get-a-customer-s-company-profile.md)
+-   [Get a customer's company profile](get-a-customer-s-company-profile.md)   
+
+-   [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
+
+-   [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)   
 
 **Manage user accounts and assign licenses**
 
@@ -75,7 +85,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Assign licenses to a user](assign-licenses-to-a-user.md)
 
--   [Check which licenses are assigned to a user](check-which-licenses-are-assigned-to-a-user.md)
+-   [Check which licenses are assigned to a user](check-which-licenses-are-assigned-to-a-user.md) 
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 
