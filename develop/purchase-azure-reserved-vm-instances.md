@@ -23,6 +23,15 @@ To purchase an Azure Reserved Virtual Machine (VM) Instance using the Partner Ce
 -   Submit your order.
 -   Make sure your order is fulfilled. 
 
+> [!NOTE]  
+> Azure Reserved VM Instances are not available in the following markets:  
+> * Brazil  
+> * China  
+> * India  
+> * Russia  
+> * South Korea  
+> * Taiwan 
+
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 
