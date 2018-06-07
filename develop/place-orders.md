@@ -23,7 +23,11 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Purchase Azure Reserved VM Instances**
 
--   [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md) 
+-   [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)   
+
+**Make a one-time purchase**
+
+-   [Make a one-time purchase](make-a-one-time-purchase.md) 
 
 **Get offers from the catalog**
 
@@ -34,6 +38,8 @@ This section describes the ways that Cloud Solution Provider partners can use th
 -   [Get an offer by ID](get-an-offer-by-id.md)
 
 -   [Get add-ons for an offer ID](get-addon-offers-by-offer-id.md)
+
+-   [Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)   
 
 -   [Get a list of products](get-a-list-of-products.md)
 

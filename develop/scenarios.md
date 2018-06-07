@@ -127,6 +127,10 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p>[Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)</p></li>
 </ul>
+<p>Make a one-time purchase</p>
+<ul>
+<li><p>[Make a one-time purchase](make-a-one-time-purchase.md)</p></li> 
+</ul>
 <p>Get offers from the catalog</p>
 <ul>
 <li><p>[Get a list of offer categories by market](get-a-list-of-offer-categories-by-country-and-locale.md)</p></li>
@@ -136,7 +140,8 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a list of products](get-a-list-of-products.md)</p></li>
 <li><p>[Get a product by ID](get-a-product-by-id.md)</p></li>
 <li><p>[Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)</p></li>
-<li><p>[Get a SKU by ID](get-a-sku-by-id.md)</p></li>
+<li><p>[Get a SKU by ID](get-a-sku-by-id.md)</p></li>   
+<li><p>[Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)</p></li>  
 <li><p>[Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)</p></li>
 <li><p>[Get an availability by ID](get-an-availability-by-id.md)</p></li>
 <li><p>[Check Inventory](check-inventory.md)</p></li>
