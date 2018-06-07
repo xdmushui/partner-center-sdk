@@ -11,6 +11,8 @@ ms.technology: partner-center-sdk
 
 # Products
 
+>[!IMPORTANT]   
+>This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
 
 **Applies To**
 
@@ -79,6 +81,22 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | provisioningVariables   | array of strings      | The list of variables that must be provided into the provisioning context of a [cart line item](cart.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure Reserved VM Instance purchase: "Single", "Shared".<br/> AzureSubscriptionId - The ID of the Azure Subscription that would be used for an Azure Reserved VM Instance purchase.<br/> Duration - The duration of the Azure Reserved VM Instance: "1Year", "3Year".  |
 | dynamicAttributes       | key/value pairs       | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+
+
+
+## <span id="SkuDownloadOptions"></span><span id="skudownloadoptions"></span><span id="SKUDOWNLOADOPTIONS"></span>SkuDownloadOptions
+
+
+Represents the download options available for a SKU. 
+
+| Property                  | Type                | Description                                                                         |
+|---------------------------|---------------------|-------------------------------------------------------------------------------------|
+| OptionTitle               | string              | The title of the downloadable artifact.                                             |
+| CPUandFileType            | string              | The file format of the downloadable artifact. Example: 64 Bit, ISO                  |
+| LanguageCode              | string              | The language code of the downloadable artifact. Example: pt-BR.                     |
+| LanguageName              | string              | The full language name. Example: Portuguese (Brazil).                               |
+| FileSize                  | string              | The size of the downloadable artifact in bytes.                                     |
+| DownloadLink              | Link                | The link used to retrieve the actual product-sku download link for the selected filetype and language code. |   
 
 
 
