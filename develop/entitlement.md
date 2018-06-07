@@ -11,6 +11,8 @@ ms.technology: partner-center-sdk
 
 # Entitlement
 
+>[!IMPORTANT]   
+>This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 **Applies To**
 
@@ -94,6 +96,31 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 |-------------------------------------------|--------------------------------------------------------------------------------------------|
 | ProductKey                                | Indicates the artifact aids with retrieval of product key.                                 |
 | VirtualMachineReservedInstance            | Indicates the artifact aids with retrieval of Azure Reserved Virtual Machine Instances.    |
+
+
+
+## <span id="ProductKeyArtifact"></span><span id="productkeyartifact"></span><span id="PRODUCTKEYARTIFACT"></span>ProductKeyArtifact
+
+
+The artifact associated with software entitlement. It inherits from the [Artifact](#artifact) class.  
+
+| Property             | Type                                                           | Description                                                             |
+|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------|
+| link                 | [Link](utility-resources.md#link)                              | The link to get all associated artifact details.                        |
+| state                | string                                                         | The state of the product key.                                           |
+| reason               | string                                                         | The reason associated with the product key state.                       |
+
+
+
+## <span id="ProductKeyArtifactDetails"></span><span id="productkeyartifactdetails"></span><span id="PRODUCTKEYARTIFACTDETAILS"></span>ProductKeyArtifactDetails
+
+
+Represents the entity returned upon invocation of the Product Key artifact link.  
+
+| Property                    | Type                                                | Description                                                   |
+|-----------------------------|-----------------------------------------------------|---------------------------------------------------------------|
+| type                        | [ArtifactType](#artifacttype)                       | The type of artifact.                                         |
+| productKey                  | string                                              | The product key.                                              |
 
 
 

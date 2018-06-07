@@ -11,6 +11,8 @@ ms.technology: partner-center-sdk
 
 # Get a list of products
 
+>[!IMPORTANT]   
+>This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.  
 
 **Applies To**
 
@@ -56,7 +58,7 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> Azure - Includes all Azure items.<br/> OnlineServices - Includes all online service items.                      |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> Azure - Includes all Azure items.<br/> OnlineServices - Includes all online service items.<br/> Software - Includes all software items.<br/>                       |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
 
  
