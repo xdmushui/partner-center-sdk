@@ -88,7 +88,7 @@ Before purchasing an Azure Reserved VM Instance, complete the following steps:
 3.  Retrieve the [availability](products.md#availability) for the [SKU](products.md#sku). You will need the **CatalogItemId** of the availability when placing the order​. To get this value, use one of the following APIs: 
 
     -   [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
-    -   [Get an availability using the SKU ID](get-an-availability-by-id.md)
+    -   [Get an availability using the availability ID](get-an-availability-by-id.md)
 
 ## <span id="Order_submission"></span><span id="order_submission"></span><span id="ORDER_SUBMISSION"></span>Order submission
 

@@ -21,7 +21,7 @@ ms.technology: partner-center-sdk
 How to make a one-time purchase of software and reservation products such as, term-based software, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
 
 >[!NOTE]
->To purchase perpetual software, you must have been previously notified and been given the appropriate keys to make the purchase.   
+>To purchase perpetual software, you must have been previously qualified. Contact support for more information.   
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -77,7 +77,7 @@ Before making a one-time purchase, complete the following steps:
 3.  Retrieve the [availability](products.md#availability) for the [SKU](products.md#sku). You will need the **CatalogItemId** of the availability when placing the order. To get this value, use one of the following APIs: 
 
     -   [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
-    -   [Get an availability using the SKU ID](get-an-availability-by-id.md)
+    -   [Get an availability using the availability ID](get-an-availability-by-id.md)  
 
 ## <span id="Order_submission"></span><span id="order_submission"></span><span id="ORDER_SUBMISSION"></span>Order submission
 
