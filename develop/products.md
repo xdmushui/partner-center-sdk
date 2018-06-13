@@ -82,6 +82,22 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 
 
 
+## <span id="SkuDownloadOptions"></span><span id="skudownloadoptions"></span><span id="SKUDOWNLOADOPTIONS"></span>SkuDownloadOptions
+
+
+Represents the download options available for a SKU. 
+
+| Property                  | Type                | Description                                                                         |
+|---------------------------|---------------------|-------------------------------------------------------------------------------------|
+| OptionTitle               | string              | The title of the downloadable artifact.                                             |
+| CPUandFileType            | string              | The file format of the downloadable artifact. Example: 64 Bit, ISO                  |
+| LanguageCode              | string              | The language code of the downloadable artifact. Example: pt-BR.                     |
+| LanguageName              | string              | The full language name. Example: Portuguese (Brazil).                               |
+| FileSize                  | string              | The size of the downloadable artifact in bytes.                                     |
+| DownloadLink              | Link                | The link used to retrieve the actual product-sku download link for the selected filetype and language code. |   
+
+
+
 ## <span id="Availability"></span><span id="availability"></span><span id="AVAILABILITY"></span>Availability
 
 

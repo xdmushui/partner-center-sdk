@@ -97,6 +97,31 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 
 
+## <span id="ProductKeyArtifact"></span><span id="productkeyartifact"></span><span id="PRODUCTKEYARTIFACT"></span>ProductKeyArtifact
+
+
+The artifact associated with software entitlement. It inherits from the [Artifact](#artifact) class.  
+
+| Property             | Type                                                           | Description                                                             |
+|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------|
+| link                 | [Link](utility-resources.md#link)                              | The link to get all associated artifact details.                        |
+| state                | string                                                         | The state of the product key.                                           |
+| reason               | string                                                         | The reason associated with the product key state.                       |
+
+
+
+## <span id="ProductKeyArtifactDetails"></span><span id="productkeyartifactdetails"></span><span id="PRODUCTKEYARTIFACTDETAILS"></span>ProductKeyArtifactDetails
+
+
+Represents the entity returned upon invocation of the Product Key artifact link.  
+
+| Property                    | Type                                                | Description                                                   |
+|-----------------------------|-----------------------------------------------------|---------------------------------------------------------------|
+| type                        | [ArtifactType](#artifacttype)                       | The type of artifact.                                         |
+| productKey                  | string                                              | The product key.                                              |
+
+
+
 ## <span id="VirtualMachineReservedInstanceArtifact"></span><span id="virtualmachinereservedinstanceartifact"></span><span id="VIRTUALMACHINERESERVEDARTIFACT"></span>VirtualMachineReservedInstanceArtifact
 
 
