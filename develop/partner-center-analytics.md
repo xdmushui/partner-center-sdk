@@ -75,7 +75,7 @@ Represents all of the analytical data for a subscription.
 | subscriptionCount         | number                         | The number of subscriptions. Note: This value will only appear in the response of an aggregation query.  |
 
 
-## <span id="Azure_Usage_Analytics"></span><span id="azure_usage_analytics"></span><span id="AZURE_USAGE_ANALYTICS"></span>CSP program: search analytics
+## <span id="Azure_Usage_Analytics"></span><span id="azure_usage_analytics"></span><span id="AZURE_USAGE_ANALYTICS"></span>CSP program: Azure usage analytics
 
 The following scenario shows you how to use the Analytics API to retrieve all your Partner Center Azure usage analytics information.  
 
@@ -84,8 +84,6 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 This scenario returns your analytics information in a collection of [Azure usage](#azure_usage) resources. 
 
 ## <span id="Azure_Usage"></span><span id="azure_usage"></span><span id="AZURE_USAGE"></span>Azure usage resource
-
-Accessing Azure usage data is similar to the [subscription analytics](#subscription_analytics) scenario but using the Azure usage resource described here.
 
 Represents all of the analytical data for Azure usage.
  
@@ -117,8 +115,6 @@ This scenario returns your analytics information in a collection of [indirect re
 
 ## <span id="Indirect_Resellers"></span><span id="indirect_resellers"></span><span id="IDIRECT_RESELLERS"></span>Indirect resellers resource
 
-Accessing indirect resellers data is similar to the [subscription analytics](#subscription_analytics) scenario but using the indirect reseller resource described here.
-
 Represents all of the analytical data for indirect resellers.
  
 | Property | Type | Description |
@@ -142,7 +138,8 @@ Represents all of the analytical data for indirect resellers.
 
 ## <span id="Search_Analytics"></span><span id="search_analytics"></span><span id="SEARCH_ANALYTICS"></span>Search analytics
 
-CSP program membership is not required for search analytics.
+> [!NOTE]  
+> CSP program membership is not required to get search analytics.
 
 The following scenario shows you how to use the Analytics API to retrieve all your Partner Center search analytics information.  
 
@@ -170,7 +167,8 @@ Represents all of the analytical data for a search.
 
 ## <span id="Referral_Analytics"></span><span id="referral_analytics"></span><span id="REFERRAL_ANALYTICS"></span>Referral analytics
 
-CSP program membership is not required for referral analytics.
+> [!NOTE]  
+> CSP program membership is not required to get referral analytics.
 
 The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referral analytics information.  
 

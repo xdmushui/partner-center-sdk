@@ -57,11 +57,9 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/search HTTP/1.1
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/search
 Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3123
-MS-CorrelationId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 Content-Type: application/json
 Content-Length: 0
 ```
