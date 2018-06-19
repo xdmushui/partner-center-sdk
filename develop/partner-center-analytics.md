@@ -178,7 +178,8 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 This scenario returns your analytics information in a collection of [Referral](#referral) resources. 
 
-> [!NOTE] Referral analytics are not available to the Partner Center operated by 21Vianet. 
+> [!NOTE]  
+> Referral analytics are not available to the Partner Center operated by 21Vianet. 
 
 
 ## <span id="Referral"></span><span id="referral"></span><span id="REFERRAL"></span>Referral resource
