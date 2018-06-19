@@ -1,10 +1,11 @@
 ---
 title: Get all subscription analytics information
 description: How to get all the subscription analytics information. 
-ms.assetid: 
-ms.author: v-thpr   
+author: Xansky
+ms.author: mhopkins   
+ms.assetid: 243E54BD-EA34-400E-B9AB-D735EB46B9F6
 robots: noindex,nofollow   
-ms.date: 05/10/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -37,7 +38,7 @@ How to get all the subscription analytics information for your customers.
 
 | Method  | Request URI                                                                                                                   |
 |---------|-------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions HTTP/1.1                                        |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions |
 
  
 
@@ -56,11 +57,9 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions HTTP/1.1
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions
 Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3123
-MS-CorrelationId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 Content-Type: application/json
 Content-Length: 0
 ```
