@@ -245,7 +245,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [indirect resellers](partner-center-analytics.md#indirect-resellers) resources.
+If successful, the response body contains a collection of [indirect resellers](partner-center-analytics.md#indirect_resellers) resources.
 
 **Response success and error codes**
 

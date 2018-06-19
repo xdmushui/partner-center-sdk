@@ -83,7 +83,7 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 This scenario returns your analytics information in a collection of [Azure usage](#azure_usage) resources. 
 
-## <span id="Azure-Usage"></span><span id="azure-usage"></span><span id="AZURE-USAGE"></span>Azure usage resource
+## <span id="Azure_Usage"></span><span id="azure_usage"></span><span id="AZURE_USAGE"></span>Azure usage resource
 
 Accessing Azure usage data is similar to the [subscription analytics](#subscription_analytics) scenario but using the Azure usage resource described here.
 
