@@ -131,7 +131,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>A statement that orders the result data values for each install. The syntax is <code>&amp;orderby=field [order],field [order],...</code>. The <em>field</em> parameter can be one of the following strings:</p>
+        <p>A statement that orders the result data values for each install. The syntax is <code>...&amp;orderby=field [order],field [order],...</code> The <em>field</em> parameter can be one of the following strings:</p>
         <ul>
           <li>"customerTenantId"</li>
           <li>"customerName"</li>
@@ -149,7 +149,7 @@ How to get all the Azure usage analytics information for your customers.
         </ul>
         <p>The <em>order</em> parameter is optional and can be "asc" or "desc" to specify ascending or descending order for each field, respectively. The default is "asc".</p>
         <p><strong>Example:</strong><br/> 
-          <code>&amp;orderby=meterCategory,meterUnit</code>
+          <code>...&amp;orderby=meterCategory,meterUnit</code>
         </p>
       </td>
     </tr>
@@ -181,7 +181,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>The <em>groupby</em> parameter can be used with the
         <em>aggregationLevel</em> parameter.</p>
         <p><strong>Example:</strong></br>
-          <code>&amp;groupby=meterCategory,meterUnit</code>
+          <code>...&amp;groupby=meterCategory,meterUnit</code>
         </p>
       </td>
     </tr>
