@@ -142,12 +142,7 @@ How to get all the indirect resellers analytics information for your customers.
 		<td>filter</td>
 		<td>string</td>
 		<td>
-			<p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. Here are some example <em>filter</em> parameters: </p>
-			<ul>
-				<li><code>filter=market eq 'US'</code></li>
-				<li><code>filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code></li> 
-			</ul> 
-			<p>You can specify the following fields:</p>
+			<p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. You can specify the following fields:</p>
 			<ul>
 				<li><em>partnerTenantId</em></li>
 				<li><em>id</em></li>
@@ -162,6 +157,11 @@ How to get all the indirect resellers analytics information for your customers.
 				<li><em>firstSubscriptionDeprovisionedDate</em></li>
 				<li><em>latestSubscriptionDeprovisionedDate</em></li>
 			</ul>
+			<p>Example:</br>
+			  <code>filter=market eq 'US'</code></p>
+			<p>Example:</br>
+				<code>filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code>
+			</p>
 	    </td>
 	</tr>
 	<tr>
