@@ -192,34 +192,38 @@ How to get all the indirect resellers analytics information for your customers.
     		<li>"licenseCount"</li>
 		</ul>
 		<p>The <em>order</em> parameter is optional, and can be "asc" or "desc" to specify ascending or descending order for each field. The default is "asc".</p>
-		<p>Example <em>orderby</em> string:</br> <code>orderby=market,subscriptionCount</code> </td>
+		<p>Example:</br> <code>orderby=market,subscriptionCount</code> </td>
 	</tr>
 	<tr>
 		<td>groupby</td>
 		<td>string</td>
-		<td><p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
-		<ul>
-		    <li><em>partnerTenantId</em></li>
-		    <li><em>id</em></li>
-		    <li><em>Name</em></li>
-		    <li><em>market</em></li>
-		    <li><em>firstSubscriptionCreationDate</em></li>
-		    <li><em>latestSubscriptionCreationDate</em></li>
-		    <li><em>firstSubscriptionEndDate</em></li>
-		    <li><em>latestSubscriptionEndDate</em></li>
-		    <li><em>firstSubscriptionSuspendedDate</em></li>
-		    <li><em>latestSubscriptionSuspendedDate</em></li>
-		    <li><em>firstSubscriptionDeprovisionedDate</em></li>
-		    <li><em>latestSubscriptionDeprovisionedDate</em></li>
-		</ul>
-		<p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
-		<ul>
-		    <li><em>indirectResellerCount</em></li>
-		    <li><em>licenseCount</em></li>
-		    <li><em>subscriptionCount</em></li>
-		</ul>
-		<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter. For example:</br>
-		<code>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</code></td>
+		<td>
+			<p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
+			<ul>
+				<li><em>partnerTenantId</em></li>
+				<li><em>id</em></li>
+				<li><em>Name</em></li>
+				<li><em>market</em></li>
+				<li><em>firstSubscriptionCreationDate</em></li>
+				<li><em>latestSubscriptionCreationDate</em></li>
+				<li><em>firstSubscriptionEndDate</em></li>
+				<li><em>latestSubscriptionEndDate</em></li>
+				<li><em>firstSubscriptionSuspendedDate</em></li>
+				<li><em>latestSubscriptionSuspendedDate</em></li>
+				<li><em>firstSubscriptionDeprovisionedDate</em></li>
+				<li><em>latestSubscriptionDeprovisionedDate</em></li>
+			</ul>
+			<p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
+			<ul>
+				<li><em>indirectResellerCount</em></li>
+				<li><em>licenseCount</em></li>
+				<li><em>subscriptionCount</em></li>
+			</ul>
+			<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
+			<p>Example:</br>
+				<code>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</code>
+			</p>
+		</td>
 	</tr>
 </tbody>
 </table>
