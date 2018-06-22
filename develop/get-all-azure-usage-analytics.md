@@ -38,7 +38,7 @@ How to get all the Azure usage analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/azureusage |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure |
 
  
 
@@ -104,10 +104,10 @@ How to get all the Azure usage analytics information for your customers.
           <li><em>serviceType</em></li>
         </ul>
         <p><strong>Example:</strong></br>
-          <code>.../azureusage?filter=meterCategory eq 'Data Management'</code>
+          <code>.../usage/azure?filter=meterCategory eq 'Data Management'</code>
         </p>
         <p><strong>Example:</strong></br>
-          <code>.../azureusage?filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code>
+          <code>.../usage/azure?filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code>
         </p>
       </td>
     </tr>
@@ -222,7 +222,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/azureusage
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/usage/azure
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json
