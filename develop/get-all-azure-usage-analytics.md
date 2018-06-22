@@ -103,11 +103,11 @@ How to get all the Azure usage analytics information for your customers.
           <li><em>consumptionMeterId</em></li>
           <li><em>serviceType</em></li>
         </ul>
-        <p>Example:</br>
-          <code>filter=meterCategory eq 'Data Management'</code>
+        <p><strong>Example:</strong></br>
+          <code>.../azureusage?filter=meterCategory eq 'Data Management'</code>
         </p>
-        <p>Example:</br>
-          <code>filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code>
+        <p><strong>Example:</strong></br>
+          <code>.../azureusage?filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code>
         </p>
       </td>
     </tr>
@@ -131,7 +131,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>A statement that orders the result data values for each install. The syntax is <code>orderby=field [order],field [order],...</code>. The <em>field</em> parameter can be one of the following strings:</p>
+        <p>A statement that orders the result data values for each install. The syntax is <code>&amp;orderby=field [order],field [order],...</code>. The <em>field</em> parameter can be one of the following strings:</p>
         <ul>
           <li>"customerTenantId"</li>
           <li>"customerName"</li>
@@ -148,7 +148,9 @@ How to get all the Azure usage analytics information for your customers.
           <li>"serviceType"</li>
         </ul>
         <p>The <em>order</em> parameter is optional and can be "asc" or "desc" to specify ascending or descending order for each field, respectively. The default is "asc".</p>
-        <p>Example:<br/> <code>orderby=meterCategory,meterUnit</code></p>
+        <p><strong>Example:</strong><br/> 
+          <code>&amp;orderby=meterCategory,meterUnit</code>
+        </p>
       </td>
     </tr>
     <tr>
@@ -178,7 +180,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the <em>Quantity</em>.</p>
         <p>The <em>groupby</em> parameter can be used with the
         <em>aggregationLevel</em> parameter.</p>
-        <p>Example:</br>
+        <p><strong>Example:</strong></br>
           <code>&amp;groupby=meterCategory,meterUnit</code>
         </p>
       </td>
@@ -191,7 +193,7 @@ How to get all the Azure usage analytics information for your customers.
       <p>string in UTC date time format</p>
       </td>
       <td>
-        <p>One can specify the date from which usage is needed </p>
+        <p>Specify the date <em>from</em> which usage is needed. </p>
       </td>
     </tr>
     <tr>
@@ -202,7 +204,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>string in UTC date time format</p>
       </td>
       <td>
-        <p>One can specify the date until which usage is needed </p>
+        <p>Specify the date <em>until</em> which usage is needed. </p>
       </td>
     </tr>
   </tbody>

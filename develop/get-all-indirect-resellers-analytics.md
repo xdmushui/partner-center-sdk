@@ -157,10 +157,10 @@ How to get all the indirect resellers analytics information for your customers.
 				<li><em>firstSubscriptionDeprovisionedDate</em></li>
 				<li><em>latestSubscriptionDeprovisionedDate</em></li>
 			</ul>
-			<p>Example:</br>
-			  <code>filter=market eq 'US'</code></p>
-			<p>Example:</br>
-				<code>filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code>
+			<p><strong>Example:</strong></br>
+			  <code>.../indirectresellers?filter=market eq 'US'</code></p>
+			<p><strong>Example:</strong></br>
+				<code>.../indirectresellers?filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code>
 			</p>
 	    </td>
 	</tr>
@@ -174,25 +174,29 @@ How to get all the indirect resellers analytics information for your customers.
 	<tr>
 		<td>orderby</td>
 		<td>string</td>
-		<td>A statement thatorders the result data values for each install. The syntax is <code>orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
-		<ul>
-    		<li>"partnerTenantId"</li> 
-    		<li>"id"</li> 
-    		<li>"name"</li> 
-    		<li>"market"</li> 
-    		<li>"firstSubscriptionCreationDate"</li> 
-    		<li>"latestSubscriptionCreationDate"</li> 
-    		<li>"firstSubscriptionEndDate"</li> 
-    		<li>"latestSubscriptionEndDate"</li> 
-    		<li>"firstSubscriptionSuspendedDate"</li> 
-    		<li>"latestSubscriptionSuspendedDate"</li> 
-    		<li>"firstSubscriptionDeprovisionedDate"</li> 
-    		<li>"latestSubscriptionDeprovisionedDate"</li>
-    		<li>"subscriptionCount"</li> 
-    		<li>"licenseCount"</li>
-		</ul>
-		<p>The <em>order</em> parameter is optional, and can be "asc" or "desc" to specify ascending or descending order for each field. The default is "asc".</p>
-		<p>Example:</br> <code>orderby=market,subscriptionCount</code> </td>
+		<td>
+			<p>A statement thatorders the result data values for each install. The syntax is <code>&amp;orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
+			<ul>
+				<li>"partnerTenantId"</li> 
+				<li>"id"</li> 
+				<li>"name"</li> 
+				<li>"market"</li> 
+				<li>"firstSubscriptionCreationDate"</li> 
+				<li>"latestSubscriptionCreationDate"</li> 
+				<li>"firstSubscriptionEndDate"</li> 
+				<li>"latestSubscriptionEndDate"</li> 
+				<li>"firstSubscriptionSuspendedDate"</li> 
+				<li>"latestSubscriptionSuspendedDate"</li> 
+				<li>"firstSubscriptionDeprovisionedDate"</li> 
+				<li>"latestSubscriptionDeprovisionedDate"</li>
+				<li>"subscriptionCount"</li> 
+				<li>"licenseCount"</li>
+			</ul>
+			<p>The <em>order</em> parameter is optional, and can be "asc" or "desc" to specify ascending or descending order for each field. The default is "asc".</p>
+			<p><strong>Example:</strong></br> 
+				<code>&amp;orderby=market,subscriptionCount</code>
+			</p> 
+		</td>
 	</tr>
 	<tr>
 		<td>groupby</td>
@@ -220,14 +224,13 @@ How to get all the indirect resellers analytics information for your customers.
 				<li><em>subscriptionCount</em></li>
 			</ul>
 			<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
-			<p>Example:</br>
+			<p><strong>Example:</strong></br>
 				<code>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</code>
 			</p>
 		</td>
 	</tr>
 </tbody>
 </table>
-
  
 
 **Request headers**

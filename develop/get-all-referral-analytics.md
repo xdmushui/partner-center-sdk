@@ -35,21 +35,20 @@ How to get all the referral analytics information for your customers.
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| Method  | Request URI |
+|---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referral |
-
  
 
 **URI parameters**
 
-| Parameter | Type | Description | Required |
-|-----------|------|-------------|----------|
-| filter | string | `/search?filter=field eq 'value'`</br>	Returns data matching the filter condition. | No |
-| groupby | string | `/search?groupby=termField1, dateField1,termField2`</br>	Supports both terms and dates. Short circuit logic to limit the number of buckets. | No |
-| aggregationLevel | string | `/search?groupby=termField1, dateField1,termField2&aggregationLevel=day`</br>	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*. | No |
-| top | string | `/search?top=100`</br> The page limit is 10000. Takes any value less than 10000. |  |
-| skip | string | `/search?top=100&skip=100`</br>	Number of rows to skip. | No |
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| filter | string |	Returns data matching the filter condition.</br> **Example:**</br>  `.../referral?filter=field eq 'value'` |
+| groupby | string |	Supports both terms and dates. Short circuit logic to limit the number of buckets.</br> **Example:**</br>  `.../referral?groupby=termField1, dateField1,termField2` |
+| aggregationLevel | string |	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*.</br> **Example:**</br> `.../referral?groupby=termField1, dateField1,termField2&aggregationLevel=day` |
+| top | string | The page limit is 10000. Takes any value less than 10000.</br> **Example:**</br> `.../referral?top=100`</br> |
+| skip | string |	Number of rows to skip.</br> **Example:**</br>  `.../referral?top=100&skip=100` |
 
   
 **Request headers**
