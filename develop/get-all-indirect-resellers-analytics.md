@@ -46,11 +46,9 @@ How to get all the indirect resellers analytics information for your customers.
 
 <table>
 <thead>
-	<tr>
-		<th>Parameter</th>
-		<th>Type</th>
-		<th>Description</th>
-	</tr>
+	<th>Parameter</th>
+	<th>Type</th>
+	<th>Description</th>
 </thead>
 <tbody>
 	<tr>
@@ -75,57 +73,57 @@ How to get all the indirect resellers analytics information for your customers.
 	</tr>
 	<tr>
 		<td>firstSubscriptionCreationDate</td>
-		<td>date</td>
+		<td>string in UTC date time format</td>
 		<td>The creation date of the first subscription based on which you want to retrieve indirect resellers data.</td>
 	</tr>
 	<tr>
 		<td>latestSubscriptionCreationDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>The creation date of the latest subscription.</td>
 	</tr>
 	<tr>
 		<td>firstSubscriptionEndDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>First time any subscription was ended.</td>
 	</tr>
 	<tr>
 		<td>latestSubscriptionEndDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>Latest date when any subscription was ended. </td>
 	</tr>
 	<tr>
 		<td>firstSubscriptionSuspendedDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>First time any subscription was suspended.</td>
 	</tr>
 	<tr>
 		<td>latestSubscriptionSuspendedDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>Latest date when any subscription was suspended.</td>
 	</tr>
 	<tr>
 		<td>firstSubscriptionDeprovisionedDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>First time any subscription was deprovisioned.</td>
 	</tr>
 	<tr>
 		<td>latestSubscriptionDeprovisionedDate</td>
-		<td>Date</td>
+		<td>string in UTC date time format</td>
 		<td>Latest date when any subscription was deprovisioned.</td>
 	</tr>
 	<tr>
 		<td>subscriptionCount</td>
-		<td>Double</td>
+		<td>double</td>
 		<td>Subscription count for all value added resellers</td>
 	</tr>
 	<tr>
 		<td>licenseCount</td>
-		<td>Double</td>
+		<td>double</td>
 		<td>License count for all value added resellers</td>
 	</tr>
 	<tr>
 		<td>indirectResellerCount</td>
-		<td>Double</td>
+		<td>double</td>
 		<td>Indirect resellers count</td>
 	</tr>
 	<tr>
@@ -136,88 +134,92 @@ How to get all the indirect resellers analytics information for your customers.
 	<tr>
 		<td>skip</td>
 		<td>int</td>
-		<td>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, top=10000 and skip=0 retrieves the first 10000 rows of data,top=10000 and skip=10000 retrieves the next 10000 rows of data, and so on.</td>
+		<td>
+		  <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
+		</td>
 	</tr>
 	<tr>
 		<td>filter</td>
 		<td>string</td>
-		<td><p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the eq or ne operators, and statements can be combined using and or or. Here are some example filter parameters:</p>
-		<ul>
-		    <li>filter=market eq 'US'</li>
-		    <li><em>filter=market eq 'US' or (</em>firstSubscriptionCreationDate <em>le cast('2018-01-01',Edm.DateTimeOffset) and </em> firstSubscriptionCreationDate <em>le      cast('2018-04-01',Edm.DateTimeOffset))</em></li> 
-		</ul> 
-		<p>You can specify the following fields:</p>
-		<ul>
-		    <li>partnerTenantId</li>
-		    <li>id</li>
-		    <li>Name</li>
-		    <li>market</li>
-		    <li>firstSubscriptionCreationDate</li>
-		    <li>latestSubscriptionCreationDate</li>
-		    <li>firstSubscriptionEndDate</li>
-		    <li>latestSubscriptionEndDate</li>
-		    <li>firstSubscriptionSuspendedDate</li>
-		    <li>latestSubscriptionSuspendedDate</li>
-		    <li>firstSubscriptionDeprovisionedDate</li>
-		    <li>latestSubscriptionDeprovisionedDate</li>
-		 </ul>
+		<td>
+			<p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. Here are some example <em>filter</em> parameters: </p>
+			<ul>
+				<li><code>filter=market eq 'US'</code></li>
+				<li><code>filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code></li> 
+			</ul> 
+			<p>You can specify the following fields:</p>
+			<ul>
+				<li><em>partnerTenantId</em></li>
+				<li><em>id</em></li>
+				<li><em>Name</em></li>
+				<li><em>market</em></li>
+				<li><em>firstSubscriptionCreationDate</em></li>
+				<li><em>latestSubscriptionCreationDate</em></li>
+				<li><em>firstSubscriptionEndDate</em></li>
+				<li><em>latestSubscriptionEndDate</em></li>
+				<li><em>firstSubscriptionSuspendedDate</em></li>
+				<li><em>latestSubscriptionSuspendedDate</em></li>
+				<li><em>firstSubscriptionDeprovisionedDate</em></li>
+				<li><em>latestSubscriptionDeprovisionedDate</em></li>
+			</ul>
 	    </td>
 	</tr>
 	<tr>
 		<td>aggregationLevel</td>
 		<td>string</td>
-		<td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: day, week, or month. If unspecified, the default is day.</p>
+		<td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: "day", "week", or "month". If unspecified, the default is "day".</p>
 		<p><em>aggregationLevel</em> is not supported without a <strong>groupby</strong>. <em>aggregationLevel</em> applies to all <strong>datefields</strong> present in the <strong>groupby</strong></p>
 		</td>
 	</tr>
 	<tr>
 		<td>orderby</td>
 		<td>string</td>
-		<td>A statement thatorders the result data values for each install. The syntax is orderby=field[order],field [order],.... The field parameter can be one of the followingstrings:</p>
+		<td>A statement thatorders the result data values for each install. The syntax is <code>orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
 		<ul>
-    		<li>partnerTenantId</li> 
-    		<li>id</li> 
-    		<li>name</li> 
-    		<li>market</li> 
-    		<li>firstSubscriptionCreationDate</li> 
-    		<li>latestSubscriptionCreationDate</li> 
-    		<li>firstSubscriptionEndDate</li> 
-    		<li>latestSubscriptionEndDate</li> 
-    		<li>firstSubscriptionSuspendedDate</li> 
-    		<li>latestSubscriptionSuspendedDate</li> 
-    		<li>firstSubscriptionDeprovisionedDate</li> 
-    		<li>latestSubscriptionDeprovisionedDate</li>
-    		<li>subscriptionCount</li> 
-    		<li>licenseCount</li>
+    		<li>"partnerTenantId"</li> 
+    		<li>"id"</li> 
+    		<li>"name"</li> 
+    		<li>"market"</li> 
+    		<li>"firstSubscriptionCreationDate"</li> 
+    		<li>"latestSubscriptionCreationDate"</li> 
+    		<li>"firstSubscriptionEndDate"</li> 
+    		<li>"latestSubscriptionEndDate"</li> 
+    		<li>"firstSubscriptionSuspendedDate"</li> 
+    		<li>"latestSubscriptionSuspendedDate"</li> 
+    		<li>"firstSubscriptionDeprovisionedDate"</li> 
+    		<li>"latestSubscriptionDeprovisionedDate"</li>
+    		<li>"subscriptionCount"</li> 
+    		<li>"licenseCount"</li>
 		</ul>
 		<p>The <em>order</em> parameter is optional, and can be "asc" or "desc" to specify ascending or descending order for each field. The default is "asc".</p>
-		<p>Example <em>orderby</em> string: <em>orderby=market,subscriptionCount</em> </td>
+		<p>Example <em>orderby</em> string:</br> <code>orderby=market,subscriptionCount</code> </td>
 	</tr>
 	<tr>
 		<td>groupby</td>
 		<td>string</td>
 		<td><p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
 		<ul>
-		    <li>partnerTenantId</li>
-		    <li>id</li>
-		    <li>Name</li>
-		    <li>market</li>
-		    <li>firstSubscriptionCreationDate</li>
-		    <li>latestSubscriptionCreationDate</li>
-		    <li>firstSubscriptionEndDate</li>
-		    <li>latestSubscriptionEndDate</li>
-		    <li>firstSubscriptionSuspendedDate</li>
-		    <li>latestSubscriptionSuspendedDate</li>
-		    <li>firstSubscriptionDeprovisionedDate</li>
-		    <li>latestSubscriptionDeprovisionedDate</li>
+		    <li><em>partnerTenantId</em></li>
+		    <li><em>id</em></li>
+		    <li><em>Name</em></li>
+		    <li><em>market</em></li>
+		    <li><em>firstSubscriptionCreationDate</em></li>
+		    <li><em>latestSubscriptionCreationDate</em></li>
+		    <li><em>firstSubscriptionEndDate</em></li>
+		    <li><em>latestSubscriptionEndDate</em></li>
+		    <li><em>firstSubscriptionSuspendedDate</em></li>
+		    <li><em>latestSubscriptionSuspendedDate</em></li>
+		    <li><em>firstSubscriptionDeprovisionedDate</em></li>
+		    <li><em>latestSubscriptionDeprovisionedDate</em></li>
 		</ul>
 		<p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
 		<ul>
-		    <li>indirectResellerCount</li>
-		    <li>licenseCount</li>
-		    <li>subscriptionCount</li>
+		    <li><em>indirectResellerCount</em></li>
+		    <li><em>licenseCount</em></li>
+		    <li><em>subscriptionCount</em></li>
 		</ul>
-		<p>The <em>groupby</em> parameter can be used with the aggregationLevel parameter. For example: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></td>
+		<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter. For example:</br>
+		<code>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</code></td>
 	</tr>
 </tbody>
 </table>

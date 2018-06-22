@@ -45,7 +45,7 @@ How to get all the Azure usage analytics information for your customers.
 **URI parameters**
 
 <table>
- <tr>
+ <thead>
   <th>
     <p>Parameter</p>
   </th>
@@ -55,13 +55,13 @@ How to get all the Azure usage analytics information for your customers.
   <th>
     <p>Description</p>
   </th>
-  <th>
+<!--   <th>
     <p>Required</p>
   </th>
   <th>
     <p>Case Sensitive</p>
   </th>
- </tr>
+ --> </thead>
  <tr>
   <td>
     <p>top</p>
@@ -72,13 +72,13 @@ How to get all the Azure usage analytics information for your customers.
   <td>
     <p>The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data.</p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>skip</p>
@@ -89,13 +89,13 @@ How to get all the Azure usage analytics information for your customers.
   <td>
     <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>filter</p>
@@ -126,13 +126,13 @@ How to get all the Azure usage analytics information for your customers.
    <li><em>serviceType</em></li>
   </ul>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>aggregationLevel</p>
@@ -144,13 +144,13 @@ How to get all the Azure usage analytics information for your customers.
     <p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: "day", "week", or "month". If unspecified, the default is "day".</p>
   <p>The <em>aggregationLevel</em> parameter is not supported without a <em>groupby</em>. The <em>aggregationLevel</em> parameter applies to all date fields present in the <em>groupby</em>.</p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>orderby</p>
@@ -180,13 +180,13 @@ How to get all the Azure usage analytics information for your customers.
   be "asc" or "desc" to specify ascending or descending order for each field, respectively. The default is "asc".</p>
   <p>Example <em>orderby</em> string:<br/> <code>orderby=meterCategory,meterUnit</code></p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>groupby</p>
@@ -223,47 +223,47 @@ How to get all the Azure usage analytics information for your customers.
   <em>aggregationLevel</em> parameter. For example:</br>
   <code>&amp;groupby=meterCategory,meterUnit</code></p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>startDate</p>
   </td>
   <td>
-  <p>DateTime</p>
+  <p>string in UTC date time format</p>
   </td>
   <td>
     <p>One can specify the date from which usage is needed </p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
  <tr>
   <td>
     <p>endDate</p>
   </td>
   <td>
-    <p>DateTime</p>
+    <p>string in UTC date time format</p>
   </td>
   <td>
     <p>One can specify the date until which usage is needed </p>
   </td>
-  <td>
+<!--   <td>
     <p>No</p>
   </td>
   <td>
     <p>&nbsp;</p>
   </td>
- </tr>
+ --> </tr>
 </table>
 
 
