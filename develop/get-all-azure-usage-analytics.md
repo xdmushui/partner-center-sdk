@@ -5,7 +5,7 @@ author: Xansky
 ms.author: mhopkins   
 ms.assetid: CDBD04A4-BA34-49B8-9815-7C19253E6C70
 robots: noindex,nofollow   
-ms.date: 06/12/2018
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -36,8 +36,8 @@ How to get all the Azure usage analytics information for your customers.
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| Method  | Request URI |
+|---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/azureusage |
 
  
@@ -70,10 +70,7 @@ How to get all the Azure usage analytics information for your customers.
     <p>string</p>
   </td>
   <td>
-    <p>The number of rows of data to return in the request. The maximum value and the
-  default value if not specified is 10000. If there are more rows in the query,
-  the response body includes a next link that you can use to request the next
-  page of data.</p>
+    <p>The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data.</p>
   </td>
   <td>
     <p>No</p>
@@ -90,10 +87,7 @@ How to get all the Azure usage analytics information for your customers.
     <p>int</p>
   </td>
   <td>
-    <p>The number of rows to skip in the query. Use this parameter to page through large
-  data sets. For example, top=10000 and skip=0 retrieves the first 10000 rows
-  of data, top=10000 and skip=10000 retrieves the next 10000 rows of data, and
-  so on.</p>
+    <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
   </td>
   <td>
     <p>No</p>
@@ -110,31 +104,26 @@ How to get all the Azure usage analytics information for your customers.
     <p>string</p>
   </td>
   <td>
-    <p>The <em>filter</em> parameter of the request
-  contains one or more statements that filter the rows in the response. Each
-  statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong>
-  operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. Here are some
-  example <em>filter</em> parameters: </p>
+    <p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. Here are some example <em>filter</em> parameters: </p>
   <ul>
-   <li><em>filter=meterCategory eq</em> 'Data Management'</li>
-   <li><em>filter=meterCategory eq</em> 'Data Management' <em>or (usage</em>Date <em>le
-       cast('2018-01-01',Edm.DateTimeOffset) and usage</em>Date <em>le cast('2018-04-01',Edm.DateTimeOffset))</em></li>
+   <li><code>filter=meterCategory eq 'Data Management'</code></li>
+   <li><code>filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code></li>
   </ul>
-  <p>You can specify the following fields</p>
+  <p>You can specify the following fields:</p>
   <ul>
-   <li>customerTenantId</li>
-   <li>customerName</li>
-   <li>subscriptionId</li>
-   <li>subscriptionName</li>
-   <li>usageDate</li>
-   <li>resourceLocation</li>
-   <li>meterCategory</li>
-   <li>meterSubcategory</li>
-   <li>meterUnit</li>
-   <li>reservationOrderId</li>
-   <li>reservationId</li>
-   <li>consumptionMeterId</li>
-   <li>serviceType</li>
+   <li><em>customerTenantId</em></li>
+   <li><em>customerName</em></li>
+   <li><em>subscriptionId</em></li>
+   <li><em>subscriptionName</em></li>
+   <li><em>usageDate</em></li>
+   <li><em>resourceLocation</em></li>
+   <li><em>meterCategory</em></li>
+   <li><em>meterSubcategory</em></li>
+   <li><em>meterUnit</em></li>
+   <li><em>reservationOrderId</em></li>
+   <li><em>reservationId</em></li>
+   <li><em>consumptionMeterId</em></li>
+   <li><em>serviceType</em></li>
   </ul>
   </td>
   <td>
@@ -152,11 +141,8 @@ How to get all the Azure usage analytics information for your customers.
     <p>string</p>
   </td>
   <td>
-    <p>Specifies the time range for which to retrieve aggregate data. Can be one of the
-  following strings: <strong>day</strong>, <strong>week</strong>, or <strong>month</strong>.
-  If unspecified, the default is <strong>day</strong>.</p>
-  <p>aggregationLevel is not supported without a groupby. aggregationLevel applies to all date
-  fields present in the groupby</p>
+    <p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: "day", "week", or "month". If unspecified, the default is "day".</p>
+  <p>The <em>aggregationLevel</em> parameter is not supported without a <em>groupby</em>. The <em>aggregationLevel</em> parameter applies to all date fields present in the <em>groupby</em>.</p>
   </td>
   <td>
     <p>No</p>
@@ -173,28 +159,26 @@ How to get all the Azure usage analytics information for your customers.
     <p>string</p>
   </td>
   <td>
-    <p>A statement that orders the result data values for each install. The syntax is <em>orderby=field [order],field [order],...</em>. The
-  <em>field</em> parameter can be one of the
-  following strings:</p>
+    <p>A statement that orders the result data values for each install. The syntax is <code>orderby=field [order],field [order],...</code>. The <em>field</em> parameter can be one of the following strings:</p>
   <ul>
-   <li>customerTenantId</li>
-   <li>customerName</li>
-   <li>subscriptionId</li>
-   <li>subscriptionName</li>
-   <li>usageDate</li>
-   <li>resourceLocation</li>
-   <li>meterCategory</li>
-   <li>meterSubcategory</li>
-   <li>meterUnit</li>
-   <li>reservationOrderId</li>
-   <li>reservationId</li>
-   <li>consumptionMeterId</li>
-   <li>serviceType</li>
+   <li>"customerTenantId"</li>
+   <li>"customerName"</li>
+   <li>"subscriptionId"</li>
+   <li>"subscriptionName"</li>
+   <li>"usageDate"</li>
+   <li>"resourceLocation"</li>
+   <li>"meterCategory"</li>
+   <li>"meterSubcategory"</li>
+   <li>"meterUnit"</li>
+   <li>"reservationOrderId"</li>
+   <li>"reservationId"</li>
+   <li>"consumptionMeterId"</li>
+   <li>"serviceType"</li>
+
   </ul>
-  <p>The <em>order</em> parameter is optional, and can
-  be <strong>asc</strong> or <strong>desc</strong> to specify ascending or descending order for each field.
-  The default is <strong>asc</strong>.</p>
-  <p>Example <em>orderby</em> string: <em>orderby=meterCategory,meterUnit</em></p>
+  <p>The <em>order</em> parameter is optional and can
+  be "asc" or "desc" to specify ascending or descending order for each field, respectively. The default is "asc".</p>
+  <p>Example <em>orderby</em> string:<br/> <code>orderby=meterCategory,meterUnit</code></p>
   </td>
   <td>
     <p>No</p>
@@ -211,34 +195,33 @@ How to get all the Azure usage analytics information for your customers.
     <p>string</p>
   </td>
   <td>
-    <p>A statement that applies data aggregation only to the specified fields. You can
-  specify the following fields:</p>
+    <p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
   <ul>
-   <li>customerTenantId</li>
-   <li>customerName</li>
-   <li>subscriptionId</li>
-   <li>subscriptionName</li>
-   <li>usageDate</li>
-   <li>resourceLocation</li>
-   <li>meterCategory</li>
-   <li>meterSubcategory</li>
-   <li>meterUnit</li>
-   <li>reservationOrderId</li>
-   <li>reservationId</li>
-   <li>consumptionMeterId</li>
-   <li>serviceType</li>
+   <li><em>customerTenantId</em></li>
+   <li><em>customerName</em></li>
+   <li><em>subscriptionId</em></li>
+   <li><em>subscriptionName</em></li>
+   <li><em>usageDate</em></li>
+   <li><em>resourceLocation</em></li>
+   <li><em>meterCategory</em></li>
+   <li><em>meterSubcategory</em></li>
+   <li><em>meterUnit</em></li>
+   <li><em>reservationOrderId</em></li>
+   <li><em>reservationId</em></li>
+   <li><em>consumptionMeterId</em></li>
+   <li><em>serviceType</em></li>
+   
   </ul>
   <p>&nbsp;</p>
   <p>The
   returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
   <ul>
-   <li>Quantity</li>
+   <li><em>Quantity</em></li>
   </ul>
   <p>&nbsp;</p>
-  <p>The
-  <em>groupby</em> parameter can be used with the
-  <em>aggregationLevel</em> parameter. For
-  example: <em>&amp;groupby=meterCategory,meterUnit</em></p>
+  <p>The <em>groupby</em> parameter can be used with the
+  <em>aggregationLevel</em> parameter. For example:</br>
+  <code>&amp;groupby=meterCategory,meterUnit</code></p>
   </td>
   <td>
     <p>No</p>

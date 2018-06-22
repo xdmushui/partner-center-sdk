@@ -31,49 +31,6 @@ The Analytics API allows you to programmatically access data that is being prese
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). These scenarios support authentication with User credentials only.
 
-## <span id="Subscription_Analytics"></span><span id="subscription_analytics"></span><span id="SUBSCRIPTION_ANALYTICS"></span>CSP program: subscription analytics
-
-
-
-The following scenarios show you how to use the Analytics API to retrieve all your Partner Center subscription analytics information, filter it with a search query, or group it by dates or terms.  
-
-- [Get all subscription analytics information](get-all-subscription-analytics.md)  
-- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)  
-- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)  
-
-All of these scenarios return your analytics information in a collection of [Subscription](#subscription) resources. 
-
-
-## <span id="Subscription"></span><span id="subscription"></span><span id="SUBSCRIPTION"></span>Subscription resource
-
-
-Represents all of the analytical data for a subscription.
- 
-| Property                  | Type                              | Description |
-|---------------------------|-----------------------------------|-------------|
-| customerTenantId          | string                         | A GUID-formatted string that identifies the customer tenant.                            |
-| customerName              | string                         | The name of the customer.                                                               |
-| customerMarket            | string                         | The country/region that the customer does business in.                                  |
-| id                        | string                         | The subscription identifier.                                                            |
-| status                    | string                         | The subscription status: "ACTIVE", "SUSPENDED", or "DEPROVISIONED".                    |
-| productName               | string                         | The name of the product.                                                                |
-| subscriptionType          | string                         | The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".  |
-| autoRenewEnabled          | boolean                        | A value indicating whether the subscription is renewed automatically.                   |
-| partnerId                 | string                         | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller.  |
-| friendlyName              | string                         | The name of the subscription.                                                           |
-| creationDate              | string in UTC date time format | The date the subscription was created.                                                  |
-| effectiveStartDate        | string in UTC date time format | The date the subscription starts.                                                       |
-| commitmentEndDate         | string in UTC date time format | The date the subscription ends.                                                         |
-| currentStateEndDate       | string in UTC date time format | The date that the current status of the subscription will change.                       |
-| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null.  |
-| trialStartDate            | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |
-| trialEndDate              | string in UTC date time format | The date that the trial period for the subscription ends. The default value is null.    |
-| lastUsageDate             | string in UTC date time format | The date that the subscription was last used. The default value is null.                |
-| deprovisionedDate         | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null.            |
-| lastRenewalDate           | string in UTC date time format | The date that the subscription was last renewed The default value is null.              |
-| licenseCount              | number                         | The total number of licenses.                                                           |
-| subscriptionCount         | number                         | The number of subscriptions. Note: This value will only appear in the response of an aggregation query.  |
-
 
 ## <span id="Azure_Usage_Analytics"></span><span id="azure_usage_analytics"></span><span id="AZURE_USAGE_ANALYTICS"></span>CSP program: Azure usage analytics
 
@@ -87,21 +44,21 @@ This scenario returns your analytics information in a collection of [Azure usage
 
 Represents all of the analytical data for Azure usage.
  
-| Property              | Type   | Description                    |
-|-----------------------|--------|--------------------------------|
-| CustomerTenantId      | string | The customer tenant identifier |
-| customerName          | string | The customer name              |
-| subscriptionId        | string | The subscription identifier    |
-| subscriptionName      | string | The subscription name          |
-| usageDate             | string | The usage date                 |
-| resourceLocation      | string | The location of the data center, Western Europe, for example. |
-| meterCategory         | string | The meter category, data management, for example. |
-| meterSubcategory      | string | The meter subcategory, ror example, geo redundant. | 
-| meterUnit             | string | The meter unit, such as gigabytes or hours. | 
-| reservationOrderId    | string | The reservation order for an Azure VM Reserved Instance. |
+| Property | Type | Description |
+|----------|------|-------------|
+| CustomerTenantId | string | The customer tenant identifier. |
+| customerName | string | The customer name. |
+| subscriptionId | string | The subscription identifier. |
+| subscriptionName | string | The subscription name. |
+| usageDate | string | The usage date. |
+| resourceLocation | string | The location of the data center, Western Europe, for example. |
+| meterCategory | string | The meter category, data management, for example. |
+| meterSubcategory | string | The meter subcategory, ror example, geo redundant. |
+| meterUnit | string | The meter unit, such as gigabytes or hours. | 
+| reservationOrderId | string | The reservation order for an Azure VM Reserved Instance. |
 | reservationId | string | Reserved instances under a specific RI order. |
-| serviceType           | string | Indicates the virtual machine type. For example, Standard_E4s_v3. |
-| quantity              | long   | Indicates the numbers used in the meter unit. | 
+| serviceType | string | Indicates the virtual machine type. For example, Standard_E4s_v3. |
+| quantity | long | Indicates the numbers used in the meter unit. |
 
 
 ## <span id="Indirect_Resellers_Analytics"></span><span id="indirect_resellers_analytics"></span><span id="INDIRECT_RESELLERS_ANALYTICS"></span>CSP program: indirect resellers analytics
@@ -120,20 +77,62 @@ Represents all of the analytical data for indirect resellers.
 | Property | Type | Description |
 |----------|------|-------------|
 | partnerTenantId | string | The Tenant ID of the partner for which you want to retrieve indirect resellers data. |
-| id | string | Indirect reseller ID |
+| id | string | Indirect reseller ID. |
 | name | string | The Name of the partner for which you want to retrieve indirect resellers data. |
 | market | string | The Market of the partner for which you want to retrieve indirect resellers data. |
-| firstSubscriptionCreationDate | date | The creation date of the first subscription based on which you want to retrieve indirect resellers data. |
-| latestSubscriptionCreationDate | Date | The creation date of the latest subscription. |
-| firstSubscriptionEndDate | Date | First time any subscription was ended. |
-| latestSubscriptionEndDate | Date | Latest date when any subscription was ended. |
-| firstSubscriptionSuspendedDate | Date | First time any subscription was suspended. |
-| latestSubscriptionSuspendedDate | Date | Latest date when any subscription was suspended. |
-| firstSubscriptionDeprovisionedDate | Date | First time any subscription was deprovisioned. |
-| latestSubscriptionDeprovisionedDate | Date | Latest date when any subscription was deprovisioned. |
-| subscriptionCount | Double | Subscription count for all value added resellers |
-| licenseCount | Double | License count for all value added resellers |
-| indirectResellerCount | Double | Indirect resellers count |
+| firstSubscriptionCreationDate | string in UTC date time format | The creation date of the first subscription based on which you want to retrieve indirect resellers data. |
+| latestSubscriptionCreationDate | string in UTC date time format | The creation date of the latest subscription. |
+| firstSubscriptionEndDate | string in UTC date time format | First time any subscription was ended. |
+| latestSubscriptionEndDate | string in UTC date time format | Latest date when any subscription was ended. |
+| firstSubscriptionSuspendedDate | string in UTC date time format | First time any subscription was suspended. |
+| latestSubscriptionSuspendedDate | string in UTC date time format | Latest date when any subscription was suspended. |
+| firstSubscriptionDeprovisionedDate | string in UTC date time format | First time any subscription was deprovisioned. |
+| latestSubscriptionDeprovisionedDate | string in UTC date time format | Latest date when any subscription was deprovisioned. |
+| subscriptionCount | double | Subscription count for all value added resellers |
+| licenseCount | double | License count for all value added resellers |
+| indirectResellerCount | double | Indirect resellers count |
+
+
+## <span id="Subscription_Analytics"></span><span id="subscription_analytics"></span><span id="SUBSCRIPTION_ANALYTICS"></span>CSP program: subscription analytics
+
+The following scenarios show you how to use the Analytics API to retrieve all your Partner Center subscription analytics information, filter it with a search query, or group it by dates or terms.  
+
+- [Get all subscription analytics information](get-all-subscription-analytics.md)  
+- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)  
+- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)  
+
+All of these scenarios return your analytics information in a collection of [Subscription](#subscription) resources. 
+
+
+## <span id="Subscription"></span><span id="subscription"></span><span id="SUBSCRIPTION"></span>Subscription resource
+
+
+Represents all of the analytical data for a subscription.
+ 
+| Property | Type | Description |
+|----------|------|-------------|
+| customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |
+| customerName | string | The name of the customer. |
+| customerMarket | string | The country/region that the customer does business in. |
+| id | string | The subscription identifier. |
+| status | string | The subscription status: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
+| productName | string | The name of the product. |
+| subscriptionType | string | The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
+| autoRenewEnabled | boolean | A value indicating whether the subscription is renewed automatically. |
+| partnerId | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| friendlyName | string | The name of the subscription. |
+| creationDate | string in UTC date time format | The date the subscription was created. |
+| effectiveStartDate | string in UTC date time format | The date the subscription starts. |
+| commitmentEndDate | string in UTC date time format | The date the subscription ends. |
+| currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |
+| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null. |
+| trialStartDate | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |
+| trialEndDate | string in UTC date time format | The date that the trial period for the subscription ends. The default value is null. |
+| lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |
+| deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |
+| lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed The default value is null. |
+| licenseCount | number | The total number of licenses. |
+| subscriptionCount | number | The number of subscriptions. Note: This value will only appear in the response of an aggregation query. |
 
 
 ## <span id="Search_Analytics"></span><span id="search_analytics"></span><span id="SEARCH_ANALYTICS"></span>Search analytics
@@ -156,12 +155,12 @@ Represents all of the analytical data for a search.
 |----------|------|-------------|  
 | companyName | string | The billing company name. |
 | industryFocus	| string | The industry to search within, for example, healthcare. |
-| mpnId | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
-| partnerMarket | string |   |
-| searchDate | date | Date key for showing |
-| searchResultPageViews | long | Number of times the partner came up in the search result |
+| mpnId | string | The Microsoft Partner Network (MPN) ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| partnerMarket | string | Locale where the partner conducts business. |
+| searchDate | string in UTC date time format | Date when the search query occurred. |
+| searchResultPageViews | long | Number of times the partner came up in the search result. |
 | contactClicks | long | Number of times the contact button was clicked. |
-| referralCount | long | Number of referral generated from the search |
+| referralCount | long | Number of referrals generated from the search. |
 | profileViews | long |  |
 
 
@@ -186,21 +185,20 @@ Represents all of the analytical data for a referral.
  
 | Property | Type | Description |
 |----------|------|-------------|
-| id | string |   |
-| status | string |  |
-| customerMarket | string |  |
-| customerName | string |
-| customerOrgSize | string |
-| acceptedDate | date |  |
-| acknowledgedDate | date |  |
-| archivedDate | date |  |
-| declinedDate | date |  |
-| expiredDate | date |  |
-| lostDate | date |  |
-| missedDate | date |  |
-| createdDate | date |  |
-| skippedDate | date |  |
-| wonDate | date |  |
+| id | string | The customer tenant identifier.  |
+| status | string | Indicates if the referral led to a customer.  |
+| customerMarket | string | The country/region that the customer does business in. |
+| customerName | string | The name of the customer. |
+| customerOrgSize | string | A range indicating the number of employees in the customer's organization. For example, "10to50employees" |
+| acceptedDate | string in UTC date time format |  |
+| acknowledgedDate | string in UTC date time format |  |
+| archivedDate | string in UTC date time format |  |
+| declinedDate | string in UTC date time format |  |
+| expiredDate | string in UTC date time format |  |
+| lostDate | string in UTC date time format |  |
+| missedDate | string in UTC date time format |  |
+| createdDate | string in UTC date time format |  |
+| skippedDate | string in UTC date time format |  |
+| wonDate | string in UTC date time format |  |
 | partnerMarket | string |  |
 | partnerTenantId | string |
-| referralCount | long |  |

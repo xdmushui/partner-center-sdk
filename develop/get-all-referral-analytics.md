@@ -5,7 +5,7 @@ author: Xansky
 ms.author: mhopkins   
 ms.assetid: C6051714-1D8A-4448-9705-12AEC9A6420E
 robots: noindex,nofollow   
-ms.date: 06/12/2018
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -43,8 +43,15 @@ How to get all the referral analytics information for your customers.
 
 **URI parameters**
 
-None. 
+| Parameter | Type | Description | Required |
+|-----------|------|-------------|----------|
+| filter | string | `/search?filter=field eq 'value'`</br>	Returns data matching the filter condition. | No |
+| groupby | string | `/search?groupby=termField1, dateField1,termField2`</br>	Supports both terms and dates. Short circuit logic to limit the number of buckets. | No |
+| aggregationLevel | string | `/search?groupby=termField1, dateField1,termField2&aggregationLevel=day`</br>	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*. | No |
+| top | string | `/search?top=100`</br> The page limit is 10000. Takes any value less than 10000. |  |
+| skip | string | `/search?top=100&skip=100`</br>	Number of rows to skip. | No |
 
+  
 **Request headers**
 
 -   See [Headers](headers.md) for more information.
