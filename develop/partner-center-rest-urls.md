@@ -15,8 +15,7 @@ ms.technology: partner-center-sdk
 # Partner Center REST URLs
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -57,8 +56,8 @@ versions of Partner Center:
 
  
 
-**Note**  The token authority for Partner Center for Microsoft Cloud
-Germany Azure AD Library is: https://login.microsoftonline.de.
+>[!NOTE]
+>The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.   
 
  
 

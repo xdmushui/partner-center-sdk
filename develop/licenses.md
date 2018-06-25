@@ -12,8 +12,7 @@ ms.technology: partner-center-sdk
 # License
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany
@@ -26,7 +25,8 @@ Describes resources related to licenses.
 
 Describes a user license.
 
-**Note**  Unsupported on Partner Center operated by 21Vianet.
+>[!NOTE]
+>Unsupported on Partner Center operated by 21Vianet.
 
  
 

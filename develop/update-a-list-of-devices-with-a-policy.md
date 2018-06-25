@@ -36,7 +36,7 @@ Then, create a list of [**Device**](https://docs.microsoft.com/dotnet/api/micros
 
 To process the device policy update request, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to retrieve an interface to operations on the specified customer. Then, retrieve the [**DevicePolicy**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicepolicy) property to get an interface to customer device collection operations. Finally, call the [**Update**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.icustomerdevicecollection.update) method with the DevicePolicyUpdateRequest object to update the devices with the policy.
 
-```
+```CSharp
 IAggregatePartner partnerOperations;
 string selectedCustomerId;
 string selectedConfigurationPolicyId; 

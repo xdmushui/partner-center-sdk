@@ -32,7 +32,7 @@ Gets a **Customer** resource that corresponds to a customer ID.
 
 To get a customer by ID, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, then call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.getasync) methods.
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // string customerIdToRetrieve;
 
@@ -73,7 +73,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft-ppe.com/v1/customers/<customer-tenant-id> HTTP/1.1    
+GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1    
 Authorization: Bearer <token> 
 Accept: application/json    
 MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9  

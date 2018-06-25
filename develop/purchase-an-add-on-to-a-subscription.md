@@ -37,17 +37,17 @@ When you purchase an add-on to a subscription you are updating the original subs
 Here are the steps:
 
 1.  Get an interface to the operations for the subscription.
-    ```
+    ```CSharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
 2.  Use that interface to instantiate a subscription object. This gets you the parent subscription details, including the order id.
-    ```
+    ```CSharp
     var parentSubscription = subscriptionOperations.Get();
     ```
 
 3.  Instantiate a new [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object. This order instance is used to update the original order used to purchase the subscription. Add a single line item to the order that represents the add-on.
-    ```
+    ```CSharp
     var orderToUpdate = new Order()
     {
         ReferenceCustomerId = customerId,
@@ -66,7 +66,7 @@ Here are the steps:
     ```
 
 4.  Update the original order for the subscription with the new order for the add-on.
-    ```
+    ```CSharp
     Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(parentSubscription.OrderId).Patch(orderToUpdate);
     ```
 
@@ -77,7 +77,7 @@ To purchase an add-on, begin by obtaining an interface to the subscription opera
 
 Next, instantiate a new [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and populate it with a single [**LineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) instance that contains the information to identify the add-on, as shown in the following code snippet. You'll use this new object to update the subscription order with the add-on. Finally, call the [**Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.patch) method to update the subscription order, after first identifying the customer with [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) and the order with [**Orders.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid).
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // string customerId;
 // string subscriptionId;

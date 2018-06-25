@@ -14,8 +14,7 @@ ms.technology: partner-center-sdk
 # Partner Center REST resources
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -69,6 +68,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
+<td>[Cart](cart.md)</td>
+<td><ul>
+<li>Cart</li>
+<li>CartLineItem</li>
+<li>CartError</li>
+</ul></td>
+</tr>
+<tr class="even">
 <td>[Conversions](conversions.md)</td>
 <td><ul>
 <li>Conversion</li>
@@ -76,14 +83,14 @@ samples](partner-center-samples.md) section.
 <li>ConversionResult</li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>[CountryInformation](countryinformation.md)</td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>[Customer](customers.md)</td>
 <td><ul>
 <li>Customer</li>
@@ -92,13 +99,26 @@ samples](partner-center-samples.md) section.
 <li>CustomerRelationshipRequest</li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>[Customer Usage Budgeting](customer-usage.md)</td>
 <td><ul>
 <li>CustomerMonthlyUsageRecord</li>
 <li>CustomerUsageSummary</li>
 <li>PartnerUsageSummary</li>
 <li>SpendingBudget</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>[Entitlement](entitlement.md)</td>
+<td><ul>
+<li>Entitlement</li>
+<li>ReferenceOrder</li>
+<li>EntitlementType</li>
+<li>Artifact</li>
+<li>ArtifactType</li>
+<li>VirtualMachineReservedInstanceArtifact</li>
+<li>VirtualMachineReservedInstanceArtifactDetails</li>
+<li>VirtualMachineReservation</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -108,6 +128,11 @@ samples](partner-center-samples.md) section.
 <li>InvoiceDetail</li>
 <li>InvoiceLineItem</li>
 <li>InvoiceSummary</li>
+<li>InvoiceSummaryDetail</li>
+<li>InvoiceSummaries</li>
+<li>LicenseBasedLineItem</li>
+<li>UsageBasedLineItem</li>
+<li>InvoiceStatement</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -135,6 +160,7 @@ samples](partner-center-samples.md) section.
 <li>Offer</li>
 <li>OfferCategory</li>
 <li>OfferLinks</li>
+<li>OfferProduct</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -142,7 +168,9 @@ samples](partner-center-samples.md) section.
 <td><ul>
 <li>Order</li>
 <li>OrderLineItem</li>
+<li>OrderLinks</li>
 <li>OrderLineItemLinks</li>
+<li>OrderStatus</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -156,9 +184,17 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Product](product.md)</td>
+<td>[Products](products.md)</td>
 <td><ul>
 <li>Product</li>
+<li>ItemType</li>
+<li>ProductLinks</li>
+<li>Sku</li>
+<li>Availability</li>
+<li>InventoryCheckRequest</li>
+<li>InventoryItem</li>
+<li>InventoryRestriction</li>
+<li>BillingCycleType</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -192,7 +228,9 @@ samples](partner-center-samples.md) section.
 <li>Subscription</li>
 <li>SubscriptionLinks</li>
 <li>SubscriptionProvisioningStatus</li>
+<li>SubscriptionRegistrationStatus</li>
 <li>SupportContact</li>
+<li>RegisterSubscription</li>
 </ul></td>
 </tr>
 <tr class="even">

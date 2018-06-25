@@ -35,6 +35,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get invoice line items](get-invoiceline-items.md)
 
+-   [Get invoice statement](get-invoice-statement.md) 
+
+-   [Get invoice summaries](get-invoice-summaries.md)
+
 -   [Get a collection of invoices](get-a-collection-of-invoices.md)
 
 **Azure spending budget:**

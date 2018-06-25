@@ -77,6 +77,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create a customer](create-a-customer.md)</p></li>
 <li><p>[Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md)</p></li>
 <li><p>[Retrieve a relationship request URL](request-reseller-relationship.md)</p></li>
+<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li> 
 </ul>
 <p>Look up a customer</p>
 <ul>
@@ -86,7 +87,9 @@ All of the following scenarios can be completed three different ways:
 </ul>
 <p>Manage customer orders and subscriptions</p>
 <ul>
-<li><p>[Get a customer's orders](get-all-of-a-customer-s-orders.md)</p></li>
+<li><p>[Get all of a customer's orders](get-all-of-a-customer-s-orders.md)</p></li>
+<li><p>[Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md)</p></li>
+<li><p>[Get a collection of entitlements](get-a-collection-of-entitlements.md)</p></li> 
 <li><p>[Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)</p></li>
 <li><p>[Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)</p></li>
 </ul>
@@ -95,6 +98,8 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a customer's billing profile](get-all-of-a-customer-s-billing-profiles.md)</p></li>
 <li><p>[Update a customer's billing profile](update-a-customer-s-billing-profile.md)</p></li>
 <li><p>[Get a customer's company profile](get-a-customer-s-company-profile.md)</p></li>
+<li><p>[Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)</p></li>
+<li><p>[Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)</p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
@@ -118,19 +123,43 @@ All of the following scenarios can be completed three different ways:
 </tr>
 <tr class="even">
 <td><p>[Place orders](place-orders.md)</p></td>
-<td><p>Get offers from the catalog</p>
+<td><p>Purchase Azure Reserved VM Instances</p>
+<ul>
+<li><p>[Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)</p></li>
+</ul>
+<p>Make a one-time purchase</p>
+<ul>
+<li><p>[Make a one-time purchase](make-a-one-time-purchase.md)</p></li> 
+</ul>
+<p>Get offers from the catalog</p>
 <ul>
 <li><p>[Get a list of offer categories by market](get-a-list-of-offer-categories-by-country-and-locale.md)</p></li>
 <li><p>[Get a list of offers for a market](get-a-list-of-offers-for-a-market.md)</p></li>
 <li><p>[Get an offer by ID](get-an-offer-by-id.md)</p></li>
 <li><p>[Get add-ons for an offer ID](get-addon-offers-by-offer-id.md)</p></li>
+<li><p>[Get a list of products](get-a-list-of-products.md)</p></li>
+<li><p>[Get a product by ID](get-a-product-by-id.md)</p></li>
+<li><p>[Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)</p></li>
+<li><p>[Get a SKU by ID](get-a-sku-by-id.md)</p></li>   
+<li><p>[Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)</p></li>  
+<li><p>[Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)</p></li>
+<li><p>[Get an availability by ID](get-an-availability-by-id.md)</p></li>
+<li><p>[Check Inventory](check-inventory.md)</p></li>
 </ul>
 <p>Create an order</p>
 <ul>
+<li><p>[Create a cart](create-a-cart.md)</p></li>
+<li><p>[Update a cart](update-a-cart.md)</p></li>
+<li><p>[Checkout a cart](checkout-a-cart.md)</p></li>
 <li><p>[Create an order](create-an-order.md)</p></li>
 <li><p>[Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)</p></li>
 <li><p>[Get an order by ID](get-an-order-by-id.md)</p></li>
 <li><p>[Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)</p></li>
+</ul>
+<p>Enable a subscription for Azure Reserved VM Instance purchases</p>
+<ul>
+<li><p>[Register a subscription](register-a-subscription.md)</p></li>
+<li><p>[Get subscription registration status](get-subscription-registration-status.md)</p></li>
 </ul>
 <p>Trial conversions</p>
 <ul>
@@ -164,6 +193,8 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)</p></li>
 <li><p>[Get an invoice by ID](get-invoice-by-id.md)</p></li>
 <li><p>[Get invoice line items](get-invoiceline-items.md)</p></li>
+<li><p>[Get invoice statement](get-invoice-statement.md)</p></li>
+<li><p>[Get invoice summaries](get-invoice-summaries.md)</p></li>
 <li><p>[Get a collection of invoices](get-a-collection-of-invoices.md)</p></li>
 </ul>
 <p>Check your Azure spending budget</p>
@@ -193,6 +224,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create a service request](create-a-service-request-.md)</p></li>
 <li><p>[Get service request support topics](get-service-request-support-topics--pending-.md)</p></li>
 <li><p>[Get all service requests for a customer](get-all-service-requests-for-a-customer.md)</p></li>
+<li><p>[Get service request details by ID](get-service-request-details-by-id.md)</p></li> 
 <li><p>[Update a service request](update-a-service-request.md)</p></li>
 </ul></td>
 </tr>

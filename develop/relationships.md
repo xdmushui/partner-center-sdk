@@ -12,8 +12,7 @@ ms.technology: partner-center-sdk
 # Relationships
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 

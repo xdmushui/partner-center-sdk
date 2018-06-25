@@ -21,6 +21,14 @@ ms.technology: partner-center-sdk
 
 This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer orders and subscriptions.
 
+**Purchase Azure Reserved VM Instances**
+
+-   [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)   
+
+**Make a one-time purchase**
+
+-   [Make a one-time purchase](make-a-one-time-purchase.md) 
+
 **Get offers from the catalog**
 
 -   [Get a list of offer categories by country and locale](get-a-list-of-offer-categories-by-country-and-locale.md)
@@ -31,11 +39,39 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 -   [Get add-ons for an offer ID](get-addon-offers-by-offer-id.md)
 
+-   [Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)   
+
+-   [Get a list of products](get-a-list-of-products.md)
+
+-   [Get a product by ID](get-a-product-by-id.md)
+
+-   [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
+
+-   [Get a SKU by ID](get-a-sku-by-id.md)
+
+-   [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
+
+-   [Get an availability by ID](get-an-availability-by-id.md)
+
+-   [Check Inventory](check-inventory.md)
+
 **Create an order**
+
+-   [Create a cart](create-a-cart.md)
+
+-   [Update a cart](update-a-cart.md)
+
+-   [Checkout a cart](checkout-a-cart.md)
 
 -   [Create an order](create-an-order.md)
 
 -   [Get an order by ID](get-an-order-by-id.md)
+
+**Enable a subscription for Azure Reserved VM Instance purchases**
+
+-   [Register a subscription](register-a-subscription.md)
+
+-   [Get subscription registration status](get-subscription-registration-status.md) 
 
 **Get subscription details**
 

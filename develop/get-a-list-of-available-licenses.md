@@ -29,7 +29,7 @@ How to get a list of licenses available to users of the specified customer. The 
 
 To retrieve the list of licenses available from the default license group to users of a customer, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get the value of the [**SubscribedSkus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscribedskus) property to retrieve an interface to customer subscribed SKU collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to retrieve the list of licenses.
 
-```
+```CSharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 

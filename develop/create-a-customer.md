@@ -39,7 +39,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To add a customer, instantiate a new [Customer](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [BillingProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [CompanyProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Then, add it to your [IAggregatePartners.Customers](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [Create()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [CreateAsync()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 var partnerOperations = this.Context.UserPartnerOperations;
 
@@ -98,10 +98,10 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 This table describes the required properties in the request body.
 
-| Name                              | Type   | Required | Description                                 |
-|-----------------------------------|--------|----------|---------------------------------------------|
-| [BillingProfile](#billingprofile) | object | Y        | The customer's billing profile information. |
-| [CompanyProfile](#companyprofile) | object | Y        | The customer's company profile information. |
+| Name                              | Type   | Description                                 |
+|-----------------------------------|--------|---------------------------------------------|
+| [BillingProfile](#billingprofile) | object | The customer's billing profile information. |
+| [CompanyProfile](#companyprofile) | object | The customer's company profile information. |
 
  
 
@@ -111,13 +111,13 @@ This table describes the required properties in the request body.
 
 This table describes the minimum required fields from the [CustomerBillingProfile](customers.md#customerbillingprofile) resource needed to create a new customer.
 
-| Name             | Type                                     | Required | Description                                                                                                                                                                                                     |
-|------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| email            | string                                   | Yes      | The customer's email address.                                                                                                                                                                                   |
-| culture          | string                                   | Yes      | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/en-us/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
-| language         | string                                   | Yes      | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
-| company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
-| default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
+| Name             | Type                                     | Description                                                                                                                                                                                                     |
+|------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| email            | string                                   | The customer's email address.                                                                                                                                                                                   |
+| culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/en-us/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
+| language         | string                                   | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
+| company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
+| default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
  
 
@@ -127,9 +127,9 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 This table describes the minimum required fields from the [CustomerCompanyProfile](customers.md#customercompanyprofile) resource needed to create a new customer.
 
-| Name   | Type   | Required | Description                                                  |
-|--------|--------|----------|--------------------------------------------------------------|
-| domain | string | .Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
+| Name   | Type   | Description                                                  |
+|--------|--------|--------------------------------------------------------------|
+| domain | string | The customer's domain name, such as contoso.onmicrosoft.com. |
 
  
 
@@ -149,47 +149,23 @@ Expect: 100-continue
 Connection: Keep-Alive
 
 {
-    "Id": null,
-    "CommerceId": null,
     "CompanyProfile": {
-        "TenantId": null,
-        "Domain": "SampleApplication1047419322.onmicrosoft.com",
-        "CompanyName": null,
-        "Attributes": {
-            "ObjectType": "CustomerCompanyProfile"
-        }
+        "Domain": "xyz.ccsctp.net",
     },
     "BillingProfile": {
-        "Id": null,
-        "FirstName": null,
-        "LastName": null,
-        "Email": "SomeEmail@Outlook.com",
         "Culture": "EN-US",
-        "Language": "En",
-        "CompanyName": "Some Company1817947250",
+        "Email": "test@outlook.com",
+        "Language": "en",
+        "CompanyName": "test company",
         "DefaultAddress": {
-            "Country": "US",
-            "Region": null,
+            "FirstName": "Test",
+            "LastName": "Test",
+            "AddressLine1": "One Microsoft Way",
             "City": "Redmond",
             "State": "WA",
-            "AddressLine1": "One Microsoft Way",
-            "AddressLine2": null,
             "PostalCode": "98052",
-            "FirstName": "Tania",
-            "LastName": "Carr",
-            "PhoneNumber": ""
-        },
-        "Attributes": {
-            "ObjectType": "CustomerBillingProfile"
+            "Country": "US",
         }
-    },
-    "RelationshipToPartner": "none",
-    "AllowDelegatedAccess": null,
-    "UserCredentials": null,
-    "CustomDomains": null,
-    "AssociatedPartnerId": null,
-    "Attributes": {
-        "ObjectType": "Customer"
     }
 }
 ```
@@ -220,25 +196,25 @@ Date: Tue, 14 Feb 2017 20:06:02 GMT
     "commerceId": "0a4ce58a-6f96-4273-8035-d9c7d31b9ba4",
     "companyProfile": {
         "tenantId": "dfd8cc0a-c592-468c-8461-869a38d24738",
-        "domain": "SampleApplication1047419322.onmicrosoft.com",
+        "domain": "xyz.ccsctp.net",
         "attributes": {
             "objectType": "CustomerCompanyProfile"
         }
     },
     "billingProfile": {
         "id": "d17c0275-da92-5c33-9032-782ef1d0b69b",
-        "email": "SomeEmail@Outlook.com",
+        "email": "test@outlook.com",
         "culture": "en-US",
-        "language": "En",
-        "companyName": "Some Company1817947250",
+        "language": "en",
+        "companyName": "test company",
         "defaultAddress": {
             "country": "US",
             "city": "Redmond",
             "state": "WA",
             "addressLine1": "One Microsoft Way",
             "postalCode": "98052",
-            "firstName": "Tania",
-            "lastName": "Carr",
+            "firstName": "Test",
+            "lastName": "Test",
             "phoneNumber": ""
         },
         "attributes": {

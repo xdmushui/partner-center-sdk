@@ -12,8 +12,7 @@ ms.technology: partner-center-sdk
 # Auditing
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 

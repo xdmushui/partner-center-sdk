@@ -15,8 +15,7 @@ ms.technology: partner-center-sdk
 # Customer
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -27,6 +26,10 @@ A customer resource represents a customer or reseller. (Most broadly, it
 can be any person, employee, or organization that wishes to do business
 with Microsoft and Microsoft's resellers.) Customers also have a company
 profile and a billing profile.
+
+>[!NOTE]
+>The Customer resource has a rate limit of 500 requests per minute per tenant identifier.
+
 
 ## <span id="Customer"></span><span id="customer"></span><span id="CUSTOMER"></span>Customer
 

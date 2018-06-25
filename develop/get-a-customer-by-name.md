@@ -36,7 +36,7 @@ Next, instantiate an [**iQuery**](https://docs.microsoft.com/dotnet/api/microsof
 
 Finally, to execute the filter and get the result, first use [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Then call the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) method.
 
-```
+```CSharp
 IAggregatePartner partnerOperations;
 
 // Specify the partial string to filter by (to match Contoso).

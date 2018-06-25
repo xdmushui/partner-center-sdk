@@ -35,7 +35,7 @@ To execute the filter and get the result, first use [**IAggregatePartner.Custome
 
 To create an enumerator for traversing paged results, get the customer collection enumerator factory interface from the [**IAggregatePartner.Enumerators.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.enumerators.iresourcecollectionenumeratorcontainer.customers) property, and then call [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create), as shown in the code below, passing the variable that holds the customer collection.
 
-```
+```CSharp
 IAggregatePartner partnerOperations;
 string indirectResellerId;
 

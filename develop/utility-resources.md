@@ -14,8 +14,7 @@ ms.technology: partner-center-sdk
 # Utility Resources
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
@@ -106,7 +105,8 @@ Contains a URI link and associated information.
 
 Describes a specific password and if that password needs to be changed.
 
-**Note**  Unsupported on Partner Center operated by 21Vianet.
+>[!NOTE]
+>Unsupported on Partner Center operated by 21Vianet.
 
  
 

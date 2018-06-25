@@ -15,8 +15,7 @@ ms.technology: partner-center-sdk
 # Customer Usage Budgeting
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Applies
-To</span>
+**Applies To**
 
 -   Partner Center
 -   Partner Center for Microsoft Cloud Germany

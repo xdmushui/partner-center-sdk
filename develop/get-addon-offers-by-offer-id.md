@@ -32,7 +32,7 @@ How to get the add-ons for an offer ID.
 
 To get the add-ons for an offer by ID, first call the [**IAggregatePartner.Offers.ByCountry**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.icountryselector-1.bycountry) method with the country code to get an interface to offer operations based on the given country. Then call the [**ByID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method with the offer ID to identify the offer whose add-ons you want to retrieve. Next, use the [**AddOns**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffer.addons) property to get an interface to add-on operations for the current offer. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.getasync) method to get a collection of all the add-ons for the specified offer.
 
-```
+```CSharp
 // IAggregatePartner partnerOperations;
 // string offerId;
 // string countryCode;
