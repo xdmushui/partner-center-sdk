@@ -3,7 +3,7 @@ title: Get a list of customers
 description: Gets a collection of resources representing all the partner's customers.In the Partner Center dashboard, this operation can be performed by selecting either View Customers under Customer management on the main page, or selecting Customers in the sidebar.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
 ms.author: v-thpr
-ms.date: 12/15/2017
+ms.date: 5/23/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -25,15 +25,13 @@ In the Partner Center dashboard, this operation can be performed by selecting ei
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
-Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-
 To get a list of all customers, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
 
-```CSharp
+```csharp
 // IAggregatePartner partnerOperations;
 
 var allCustomers = new List<Customer>();
@@ -41,7 +39,7 @@ var allCustomers = new List<Customer>();
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// read customers into chunks of 40s            
+// read customers into chunks of 40s
 var customersBatch = scopedPartnerOperations.Customers.Query(QueryFactory.Instance.BuildIndexedQuery(40));
 var customersEnumerator = scopedPartnerOperations.Enumerators.Customers.Create(customersBatch);
 ```
@@ -150,11 +148,3 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
