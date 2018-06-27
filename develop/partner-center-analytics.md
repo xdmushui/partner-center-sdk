@@ -164,7 +164,7 @@ Represents all of the analytical data for a search.
 | searchResultPageViews | long | Number of times the partner came up in the search result. |
 | contactClicks | long | Number of times the contact button was clicked. |
 | referralCount | long | Number of referrals generated from the search. |
-| profileViews | long | Number of times that the  |
+| profileViews | long | Number of times that the reseller's profile was viewed. |
 
 > [!IMPORTANT]  
 > The following table is based on the information in the provided response example. Which table is correct?  
