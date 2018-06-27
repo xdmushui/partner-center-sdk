@@ -175,7 +175,7 @@ How to get all the indirect resellers analytics information for your customers.
 		<td>orderby</td>
 		<td>string</td>
 		<td>
-			<p>A statement thatorders the result data values for each install. The syntax is <code>...&amp;orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
+			<p>A statement that orders the result data values for each install. The syntax is <code>...&amp;orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
 			<ul>
 				<li>"partnerTenantId"</li> 
 				<li>"id"</li> 
@@ -278,6 +278,5 @@ Each response comes with an HTTP status code that indicates success or failure a
     "latestSubscriptionDeprovisionedEndDate": "0001-01-01T00:00:00", 
     "subscriptionCount": 10, 
     "licenseCount": 20 
-
 }
 ```

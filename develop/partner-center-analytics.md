@@ -53,7 +53,7 @@ Represents all of the analytical data for Azure usage.
 | usageDate | string | The usage date. |
 | resourceLocation | string | The location of the data center, Western Europe, for example. |
 | meterCategory | string | The meter category, data management, for example. |
-| meterSubcategory | string | The meter subcategory, ror example, geo redundant. |
+| meterSubcategory | string | The meter subcategory, for example, geo redundant. |
 | meterUnit | string | The meter unit, such as gigabytes or hours. | 
 | reservationOrderId | string | The reservation order for an Azure VM Reserved Instance. |
 | reservationId | string | Reserved instances under a specific RI order. |
@@ -144,10 +144,10 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 - [Get all search analytics information](get-all-search-analytics.md)  
 
-This scenario returns your analytics information in a collection of [Search](#search) resources. 
+This scenario returns your analytics information in a collection of [Search](#search_resource) resources. 
 
 
-## <span id="Search"></span><span id="search"></span><span id="SEARCH"></span>Search resource
+## <span id="Search_Resource"></span><span id="search_resource"></span><span id="SEARCH_RESOURCE"></span>Search resource
 
 Represents all of the analytical data for a search.
 
@@ -208,16 +208,15 @@ Represents all of the analytical data for a referral.
 | status | string | Indicates if the referral led to a customer.  |
 | customerMarket | string | The country/region that the customer does business in. |
 | customerName | string | The name of the customer. |
-| customerOrgSize | string | A range indicating the number of employees in the customer's organization. For example, "10to50employees" |
-| acceptedDate | string in UTC date time format | Date that the referral was accepted. |
-| acknowledgedDate | string in UTC date time format | Date that the referral was acknowledged. |
-| archivedDate | string in UTC date time format | Date that the referral was archived. |
-| declinedDate | string in UTC date time format | Date that the referral was declined. |
-| expiredDate | string in UTC date time format | Date that the referral expired. |
-| lostDate | string in UTC date time format | Date that the referral was lost. |
-| missedDate | string in UTC date time format | Date that the referral was missed. |
-| createdDate | string in UTC date time format | Date that the referral was created. |
-| skippedDate | string in UTC date time format | Date that the referral was skipped. |
-| wonDate | string in UTC date time format | Date that the referral was won. |
-| partnerMarket | string |  The country/region that the partner does business in. |
-| partnerTenantId | string | The partner's tenant identifier. |
+| customerOrgSize | string | A range indicating the number of employees in the customer's organization. For example, "10to50employees". |
+| acceptedDate | string in UTC date time format | The date that the referral was accepted. |
+| acknowledgedDate | string in UTC date time format | The date that the referral was acknowledged. |
+| archivedDate | string in UTC date time format | The date that the referral was archived. |
+| declinedDate | string in UTC date time format | The date that the referral was declined. |
+| expiredDate | string in UTC date time format | The date that the referral expired. |
+| lostDate | string in UTC date time format | The date that the referral was lost. |
+| missedDate | string in UTC date time format | The date that the referral was missed. |
+| createdDate | string in UTC date time format | The date that the referral was created. |
+| skippedDate | string in UTC date time format | The date that the referral was skipped. |
+| wonDate | string in UTC date time format | The date that the referral was won. |
+| partnerMarket | string |  The country/region that the partner does business in. |  
