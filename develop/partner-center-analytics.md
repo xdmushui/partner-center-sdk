@@ -172,7 +172,7 @@ Represents all of the analytical data for a search.
 | Property | Type | Description |  
 |----------|------|-------------|  
 | companyName | string | The billing company name. |
-| contactButtonClicked | Boolean | Indicates of the contact button was clicked. |
+| contactButtonClicked | Boolean | Indicates if the contact button was clicked. |
 | keywordCountry | string | The country specified in the search. |
 | detailsViewed | Boolean | Indicates if search details were viewed. |
 | keywordIndustryFocus | string | The industry to search within, for example, healthcare. |
