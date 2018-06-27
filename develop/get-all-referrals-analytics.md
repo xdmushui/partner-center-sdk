@@ -1,17 +1,17 @@
 ---
-title: Get all referral analytics information
-description: How to get all the referral analytics information. 
+title: Get all referrals analytics information
+description: How to get all the referrals analytics information. 
 author: Xansky
 ms.author: mhopkins   
 ms.assetid: C6051714-1D8A-4448-9705-12AEC9A6420E
 robots: noindex,nofollow   
-ms.date: 06/22/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
 ---
 
-# Get all referral analytics information
+# Get all referrals analytics information
 
 >[!IMPORTANT]   
 >This information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
@@ -23,7 +23,7 @@ ms.technology: partner-center-sdk
 -   Partner Center for Microsoft Cloud for US Government
 
 
-How to get all the referral analytics information for your customers. 
+How to get all the referrals analytics information for your customers. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -37,18 +37,18 @@ How to get all the referral analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referral |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals |
  
 
 **URI parameters**
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| filter | string |	Returns data matching the filter condition.</br> **Example:**</br>  `.../referral?filter=field eq 'value'` |
-| groupby | string |	Supports both terms and dates. Short circuit logic to limit the number of buckets.</br> **Example:**</br>  `.../referral?groupby=termField1,dateField1,termField2` |
-| aggregationLevel | string |	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*.</br> **Example:**</br> `.../referral?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
-| top | string | The page limit is 10000. Takes any value less than 10000.</br> **Example:**</br> `.../referral?top=100`</br> |
-| skip | string |	Number of rows to skip.</br> **Example:**</br>  `.../referral?top=100&skip=100` |
+| filter | string |	Returns data matching the filter condition.</br> **Example:**</br>  `.../referrals?filter=field eq 'value'` |
+| groupby | string |	Supports both terms and dates. Short circuit logic to limit the number of buckets.</br> **Example:**</br>  `.../referrals?groupby=termField1,dateField1,termField2` |
+| aggregationLevel | string |	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*.</br> **Example:**</br> `.../referrals?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
+| top | string | The page limit is 10000. Takes any value less than 10000.</br> **Example:**</br> `.../referrals?top=100`</br> |
+| skip | string |	Number of rows to skip.</br> **Example:**</br>  `.../referrals?top=100&skip=100` |
 
   
 **Request headers**
@@ -62,7 +62,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referral
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json
@@ -72,7 +72,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Referral](partner-center-analytics.md#referral) resources.
+If successful, the response body contains a collection of [Referrals](partner-center-analytics.md#referrals) resources.
 
 **Response success and error codes**
 

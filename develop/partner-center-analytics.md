@@ -151,24 +151,6 @@ This scenario returns your analytics information in a collection of [Search](#se
 
 Represents all of the analytical data for a search.
 
-> [!IMPORTANT]  
-> The following table is based on the information in the OneNote. Which table is correct?  
-
-| Property | Type | Description |  
-|----------|------|-------------|  
-| companyName | string | The billing company name. |
-| industryFocus	| string | The industry to search within, for example, healthcare. |
-| mpnId | string | The Microsoft Partner Network (MPN) ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
-| partnerMarket | string | Locale where the partner conducts business. |
-| searchDate | string in UTC date time format | Date when the search query occurred. |
-| searchResultPageViews | long | Number of times the partner came up in the search result. |
-| contactClicks | long | Number of times the contact button was clicked. |
-| referralCount | long | Number of referrals generated from the search. |
-| profileViews | long | Number of times that the reseller's profile was viewed. |
-
-> [!IMPORTANT]  
-> The following table is based on the information in the provided response example. Which table is correct?  
-
 | Property | Type | Description |  
 |----------|------|-------------|  
 | companyName | string | The billing company name. |
@@ -182,23 +164,28 @@ Represents all of the analytical data for a search.
 | referralSubmitted | Boolean | Indicates if a referral was submitted. |
 | searchDate | string in UTC date time format | Date when the search query occurred. |
 | keywordSearchText | string | The text specified in the search. |
+| searchResultPageViews | long | Number of times the partner came up in the search result. Part of a response only on aggregation.
+| contactClicks | long | Number of times the contact button was clicked. Part of a response only on aggregation.
+| referralCount | long | Number of referrals generated from the search. Part of a response only on aggregation.
+| profileViews | long | Number of times the partner profile was viewed. Part of a response only on aggregation.
 
-## <span id="Referral_Analytics"></span><span id="referral_analytics"></span><span id="REFERRAL_ANALYTICS"></span>Referral analytics
 
-> [!NOTE]  
-> CSP program membership is not required to get referral analytics.
-
-The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referral analytics information.  
-
-- [Get all referral analytics information](get-all-referral-analytics.md)  
-
-This scenario returns your analytics information in a collection of [Referral](#referral) resources. 
+## <span id="Referral_Analytics"></span><span id="referral_analytics"></span><span id="REFERRAL_ANALYTICS"></span>Referrals analytics
 
 > [!NOTE]  
-> Referral analytics are not available to the Partner Center operated by 21Vianet. 
+> CSP program membership is not required to get referrals analytics.
+
+The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referrals analytics information.  
+
+- [Get all referrals analytics information](get-all-referrals-analytics.md)  
+
+This scenario returns your analytics information in a collection of [Referrals](#referrals) resources. 
+
+> [!NOTE]  
+> Referrals analytics are not available to the Partner Center operated by 21Vianet. 
 
 
-## <span id="Referral"></span><span id="referral"></span><span id="REFERRAL"></span>Referral resource
+## <span id="Referrals"></span><span id="referrals"></span><span id="REFERRALS"></span>Referrals resource
 
 Represents all of the analytical data for a referral.
  

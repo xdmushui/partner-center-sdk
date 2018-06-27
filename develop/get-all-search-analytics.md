@@ -5,7 +5,7 @@ author: Xansky
 ms.author: mhopkins   
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
 robots: noindex,nofollow   
-ms.date: 06/22/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -74,7 +74,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Search](partner-center-analytics.md#search) resources.
+If successful, the response body contains a collection of [Search](partner-center-analytics.md#search_resource) resources.
 
 **Response success and error codes**
 
