@@ -151,6 +151,9 @@ This scenario returns your analytics information in a collection of [Search](#se
 
 Represents all of the analytical data for a search.
 
+> [!IMPORTANT]  
+> The following table is based on the information in the OneNote. Which table is correct?  
+
 | Property | Type | Description |  
 |----------|------|-------------|  
 | companyName | string | The billing company name. |
@@ -161,8 +164,24 @@ Represents all of the analytical data for a search.
 | searchResultPageViews | long | Number of times the partner came up in the search result. |
 | contactClicks | long | Number of times the contact button was clicked. |
 | referralCount | long | Number of referrals generated from the search. |
-| profileViews | long |  |
+| profileViews | long | Number of times that the  |
 
+> [!IMPORTANT]  
+> The following table is based on the information in the provided response example. Which table is correct?  
+
+| Property | Type | Description |  
+|----------|------|-------------|  
+| companyName | string | The billing company name. |
+| contactButtonClicked | Boolean | Indicates of the contact button was clicked. |
+| keywordCountry | string | The country specified in the search. |
+| detailsViewed | Boolean | Indicates if search details were viewed. |
+| keywordIndustryFocus | string | The industry to search within, for example, healthcare. |
+| mpnId | string | The Microsoft Partner Network (MPN) ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| partnerMarket | string | Locale where the partner conducts business. |
+| keywordProduct | string | The product specified in the search. |
+| referralSubmitted | Boolean | Indicates if a referral was submitted. |
+| searchDate | string in UTC date time format | Date when the search query occurred. |
+| keywordSearchText | string | The text specified in the search. |
 
 ## <span id="Referral_Analytics"></span><span id="referral_analytics"></span><span id="REFERRAL_ANALYTICS"></span>Referral analytics
 
@@ -190,15 +209,15 @@ Represents all of the analytical data for a referral.
 | customerMarket | string | The country/region that the customer does business in. |
 | customerName | string | The name of the customer. |
 | customerOrgSize | string | A range indicating the number of employees in the customer's organization. For example, "10to50employees" |
-| acceptedDate | string in UTC date time format |  |
-| acknowledgedDate | string in UTC date time format |  |
-| archivedDate | string in UTC date time format |  |
-| declinedDate | string in UTC date time format |  |
-| expiredDate | string in UTC date time format |  |
-| lostDate | string in UTC date time format |  |
-| missedDate | string in UTC date time format |  |
-| createdDate | string in UTC date time format |  |
-| skippedDate | string in UTC date time format |  |
-| wonDate | string in UTC date time format |  |
-| partnerMarket | string |  |
-| partnerTenantId | string |
+| acceptedDate | string in UTC date time format | Date that the referral was accepted. |
+| acknowledgedDate | string in UTC date time format | Date that the referral was acknowledged. |
+| archivedDate | string in UTC date time format | Date that the referral was archived. |
+| declinedDate | string in UTC date time format | Date that the referral was declined. |
+| expiredDate | string in UTC date time format | Date that the referral expired. |
+| lostDate | string in UTC date time format | Date that the referral was lost. |
+| missedDate | string in UTC date time format | Date that the referral was missed. |
+| createdDate | string in UTC date time format | Date that the referral was created. |
+| skippedDate | string in UTC date time format | Date that the referral was skipped. |
+| wonDate | string in UTC date time format | Date that the referral was won. |
+| partnerMarket | string |  The country/region that the partner does business in. |
+| partnerTenantId | string | The partner's tenant identifier. |
