@@ -23,7 +23,7 @@ You can use the Partner Center SDK and APIs to programmatically retrieve analyti
 
  - [Partner Center Analytics - Public API documentation](partner-center-analytics.md)
 
- - [Get all Azure usage analytics information](get-all-azure-usage.md)
+ - [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
 
  - [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)
 
