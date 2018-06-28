@@ -74,7 +74,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Search](partner-center-analytics.md#search_resource) resources.
+If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search_resource) resources.
 
 **Response success and error codes**
 

@@ -122,7 +122,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Subscription](partner-center-analytics.md#subscription) resources grouped by the specified terms and dates.
+If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources grouped by the specified terms and dates.
 
 **Response success and error codes**
 

@@ -120,7 +120,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 
-If successful, the response body contains a collection of [Subscription](partner-center-analytics.md#subscription) resources that meet the fileter criteria.
+If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 
 **Response success and error codes**
 

@@ -72,7 +72,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Referrals](partner-center-analytics.md#referrals) resources.
+If successful, the response body contains a collection of [Referrals](partner-center-analytics-resources.md#referrals) resources.
 
 **Response success and error codes**
 

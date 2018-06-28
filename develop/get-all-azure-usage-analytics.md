@@ -232,7 +232,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Azure usage](partner-center-analytics.md#azure_usage) resources.
+If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
 
 **Response success and error codes**
 
