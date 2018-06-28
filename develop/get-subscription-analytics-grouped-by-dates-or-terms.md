@@ -181,4 +181,4 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 
 
 ## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
- - [Partner Center Analytics - Public API documentation](partner-center-analytics.md)
+ - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

@@ -153,4 +153,4 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 
 
 ## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
- - [Partner Center Analytics - Public API documentation](partner-center-analytics.md)
+ - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

@@ -13,6 +13,7 @@
 ### [Early Adopter Program](early-adopter-program.md) 
 ## [Scenarios](scenarios.md)
 ### [Analytics](usage-analytics.md)
+#### [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 #### [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
 #### [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)
 #### [Get all referrals analytics information](get-all-referrals-analytics.md)
