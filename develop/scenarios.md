@@ -14,10 +14,10 @@ ms.technology: partner-center-sdk
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+ - Partner Center
+ - Partner Center operated by 21Vianet
+ - Partner Center for Microsoft Cloud Germany
+ - Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
 
@@ -28,9 +28,9 @@ Note that there are different versions of Partner Center available that include 
 
 All of the following scenarios can be completed three different ways:
 
--   manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
--   programmatically by using the Partner Center managed API.
--   programmatically by using the Partner Center REST API.
+ - manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
+ - programmatically by using the Partner Center managed API.
+ - programmatically by using the Partner Center REST API.
 
 <table>
 <colgroup>
@@ -38,17 +38,22 @@ All of the following scenarios can be completed three different ways:
 <col width="50%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td><p>[Analytics](usage-analytics.md)</p></td>
 <td><p>Retrieve analytics</p>
 <ul>
-<li><p>[Get partner licenses deployment information](get-partner-licenses-deployment-information.md)</p></li>
-<li><p>[Get partner licenses usage information](get-partner-licenses-usage-information.md)</p></li>
+<li><p>[Partner Center Analytics - Public API documentation](partner-center-analytics.md)</p></li>
+<li><p>[Get all Azure usage analytics information](get-all-azure-usage.md)</p></li>
+<li><p>[Get all indirect resellers analytics information](get-all-indirect-resellers.md)</p></li>
+<li><p>[Get all referrals analytics information](get-all-referrals-analytics.md)</p></li>
+<li><p>[Get all search analytics information](get-all-search-analytics.md)</p></li>
 <li><p>[Get customer licenses deployment information](get-customer-licenses-deployment-information.md)</p></li>
 <li><p>[Get customer licenses usage information](get-customer-licenses-usage-information.md)</p></li>
+<li><p>[Get partner licenses deployment information](get-partner-licenses-deployment-information.md)</p></li>
+<li><p>[Get partner licenses usage information](get-partner-licenses-usage-information.md)</p></li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr>
 <td><p>[Device Deployment](device-deployment.md)</p></td>
 <td><p>Configuration policies</p>
 <p>Add, delete, update and retrieve device configuration policies.</p>
@@ -70,7 +75,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Delete a device for the specified customer](delete-a-device-for-the-specified-customer.md)</p></li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><p>[Manage customer accounts](manage-customers.md)</p></td>
 <td><p>Create a customer</p>
 <ul>
@@ -121,7 +126,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a list of available licenses by license group](get-a-list-of-available-licenses-by-license-group.md)</p></li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr>
 <td><p>[Place orders](place-orders.md)</p></td>
 <td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
@@ -181,7 +186,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Transition a subscription](transition-a-subscription.md)</p></li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><p>[Manage billing](manage-invoices.md)</p></td>
 <td><p>Get Azure rates and utilization records</p>
 <ul>
@@ -208,7 +213,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a customer's service costs line items](get-a-customer-s-service-costs-line-items.md)</p></li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr>
 <td><p>[Provide support](provide-support.md)</p></td>
 <td><p>Administer services for a customer</p>
 <ul>
@@ -228,7 +233,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Update a service request](update-a-service-request.md)</p></li>
 </ul></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><p>[Manage accounts and profiles](manage-profiles-and-information.md)</p></td>
 <td><p>Work with accounts and profiles</p>
 <ul>
@@ -248,7 +253,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Retrieve a list of indirect resellers](retrieve-a-list-of-indirect-resellers.md)</p></li>
 </ul></td>
 </tr>
-<tr class="even">
+<tr>
 <td><p>[Utilities](utilities.md)</p></td>
 <td><ul>
 <li><p>[Validate an address](validate-an-address.md)</p></li>
