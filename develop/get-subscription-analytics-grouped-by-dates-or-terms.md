@@ -42,7 +42,6 @@ How to get subscription analytics information for your customers grouped by date
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?groupby={groupby_queries} |
 
  
-
 **URI parameters**
 
 Use the following required path parameters to identify your organization and to group the results.
@@ -62,21 +61,37 @@ An unencoded example looks like this:
 ?groupby=termField1,dateField1,termField2
 ```
 
-The following table describes the required key-value pairs:
+The following table shows a list of the supported fields for group by.
 
-| Key | Value |
-|-----|-------|
-| Field | The field to filter. The valid values can be found in ? |
-| Value | The value to filter by. The case of the value is ignored. |
-| Operator | The operator to apply. The only supported value for this customer scenario is "starts_with". |
+| Field	| Type | Description |
+|-------|------|-------------|
+| customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |  
+| customerName | string | The name of the customer. |  
+| customerMarket | string | The country/region that the customer does business in. |  
+| id | string | A GUID-formatted string that identifies the subscription. |  
+| status | string | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |  
+| productName | string | The name of the product. |  
+| subscriptionType | string | The subscription type. Note: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |  
+| autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |  
+| partnerId	 | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |  
+| friendlyName | string | The name of the subscription. |  
+| creationDate | string in UTC date time format | The date the subscription was created. |  
+| effectiveStartDate | string in UTC date time format | The date the subscription starts. |  
+| commitmentEndDate | string in UTC date time format | The date the subscription ends. |  
+| currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |  
+| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null. |  
+| trialStartDate | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |  
+| lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |  
+| deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |  
+| lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |  
 
 
 **Filter fields**
 
-The following table lists optional parameters and their descriptions:
+The following table lists optional filter fields and their descriptions:
 
-| Parameter | Type |  Description |
-|-----------|------|--------------|
+| Field | Type |  Description |
+|-------|------|--------------|
 | top | int | The number of rows of data to return in the request. If the value is not specified, the maximum value and the default value are 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data. |
 | skip | int | The number of rows to skip in the query. Use this parameter to page through large data sets. For example, top=10000 and skip=0 retrieves the first 10000 rows of data, top=10000 and skip=10000 retrieves the next 10000 rows of data. |
 | filter | string | One or more statements that filter the rows in the response. Each filter statement contains a field name from the response body and a value that are associated with the **eq**, **ne**, or for certain fields, the **contains** operator. Statements can be combined using **and** or **or**. String values must be surrounded by single quotes in the filter parameter. See the following section for a list of fields that can be filtered and the operators that are supported with those fields. |
