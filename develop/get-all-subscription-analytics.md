@@ -75,7 +75,7 @@ Content-Length: 0
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
 
-If successful, the response body contains a collection of [Subscription](partner-center-analytics.md#subscription) resources.
+If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources.
 
 **Response success and error codes**
 

@@ -42,7 +42,7 @@ All of the following scenarios can be completed three different ways:
 <td><p>[Analytics](usage-analytics.md)</p></td>
 <td><p>Retrieve analytics</p>
 <ul>
-<li><p>[Partner Center Analytics - Public API documentation](partner-center-analytics.md)</p></li>
+<li><p>[Partner Center Analytics - Resources](partner-center-analytics-resources.md)</p></li>
 <li><p>[Get all Azure usage analytics information](get-all-azure-usage-analytics.md)</p></li>
 <li><p>[Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)</p></li>
 <li><p>[Get all referrals analytics information](get-all-referrals-analytics.md)</p></li>

@@ -21,7 +21,7 @@ ms.technology: partner-center-sdk
 
 You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the topics listed here.
 
- - [Partner Center Analytics - Public API documentation](partner-center-analytics.md)
+ - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 
  - [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
 
