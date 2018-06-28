@@ -47,6 +47,9 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)</p></li>
 <li><p>[Get all referrals analytics information](get-all-referrals-analytics.md)</p></li>
 <li><p>[Get all search analytics information](get-all-search-analytics.md)</p></li>
+<li><p>[Get all subscription analytics information](get-all-subscription-analytics.md)</p></li>
+<li><p>[Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)</p></li>
+<li><p>[Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)</p></li>
 <li><p>[Get customer licenses deployment information](get-customer-licenses-deployment-information.md)</p></li>
 <li><p>[Get customer licenses usage information](get-customer-licenses-usage-information.md)</p></li>
 <li><p>[Get partner licenses deployment information](get-partner-licenses-deployment-information.md)</p></li>
