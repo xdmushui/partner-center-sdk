@@ -82,23 +82,23 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```
 {
-      "id": "112310",
-      "status": "Accepted",
-      "customerMarket": "US",
-      "customerName": "Best Customer Ever",
-      "customerOrgSize": "10to50employees",
-      "acceptedDate": "2018-02-07T23:43:19",
-      "acknowledgedDate": "2018-02-07T23:40:50",
-      "archivedDate": null,
-      "declinedDate": null,
-      "expiredDate": null,
-      "lostDate": null,
-      "missedDate": null,
-      "createdDate": "2018-02-04T23:08:59",
-      "skippedDate": null,
-      "wonDate": null,
-      "partnerMarket": "US"
-    }
+  "id": "112310",
+  "status": "Accepted",
+  "customerMarket": "US",
+  "customerName": "Best Customer Ever",
+  "customerOrgSize": "10to50employees",
+  "acceptedDate": "2018-02-07T23:43:19",
+  "acknowledgedDate": "2018-02-07T23:40:50",
+  "archivedDate": null,
+  "declinedDate": null,
+  "expiredDate": null,
+  "lostDate": null,
+  "missedDate": null,
+  "createdDate": "2018-02-04T23:08:59",
+  "skippedDate": null,
+  "wonDate": null,
+  "partnerMarket": "US"
+}
 ```
 
 
