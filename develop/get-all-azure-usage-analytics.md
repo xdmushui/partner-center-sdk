@@ -185,28 +185,6 @@ How to get all the Azure usage analytics information for your customers.
         </p>
       </td>
     </tr>
-    <tr>
-      <td>
-        <p>startDate</p>
-      </td>
-      <td>
-      <p>string in UTC date time format</p>
-      </td>
-      <td>
-        <p>Specify the date <em>from</em> which usage is needed. </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>endDate</p>
-      </td>
-      <td>
-        <p>string in UTC date time format</p>
-      </td>
-      <td>
-        <p>Specify the date <em>until</em> which usage is needed. </p>
-      </td>
-    </tr>
   </tbody>
 </table>
 
