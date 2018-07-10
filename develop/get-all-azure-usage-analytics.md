@@ -233,7 +233,7 @@ Each response comes with an HTTP status code that indicates success or failure a
   "reservationId": "",
   "consumptionMeterId": "",
   "serviceType": "",
-  "quantity": 20
+  "quantity": 20  
 }
 ```
 
