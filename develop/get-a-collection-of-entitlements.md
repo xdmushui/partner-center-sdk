@@ -42,8 +42,8 @@ var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                           |
-|---------|-----------------------------------------------------------------------------------------------------------------------|
+| Method | Request URI |
+|--------|-------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                            |
 
  
@@ -52,9 +52,9 @@ var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get
 
 Use the following path and query parameters when creating the request.
 
-| Name                   | Type   | Required | Description                                                       |
-|------------------------|--------|----------|-------------------------------------------------------------------|
-| customerId             | string | Yes      | A GUID formatted customerId that identifies the customer.         |
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
 
  
 
@@ -90,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+```json
 HTTP/1.1 200 OK
 Content-Length: 103778
 Content-Type: application/json; charset=utf-8
@@ -137,18 +137,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
           },
           "productId": "DG7GMGF0DWTJ",
           "quantity": 1,
-          "entitledArtifacts": [
-            {
-              "link": {
-                "uri": "/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/productkey/groups/2caf524395724e638ef64e109f1f79ca/lineitems/0095a02f-1b12-4bb3-a805-f2b71b055ea7/items/DG7GMGF0DWTJ:0001:0095a02f-1b12-4bb3-a805-f2b71b055ea7",
-                "method": "GET",
-                "headers": []
-              },
-              "reason": "",
-              "state": "Active",
-              "artifactType": "product_key"
-            }
-          ],
+          "entitledArtifacts": [],
           "skuId": "0001",
           "entitlementType": "software"
         },
@@ -160,18 +149,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
           },
             "productId": "DG7GMGF0DWLG",
             "quantity": 1,
-            "entitledArtifacts": [
-              {
-                "link": {
-                  "uri": "/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/productkey/groups/2caf524395724e638ef64e109f1f79ca/lineitems/0095a02f-1b12-4bb3-a805-f2b71b055ea7/items/DG7GMGF0DWLG:0002:0095a02f-1b12-4bb3-a805-f2b71b055ea7",
-                  "method": "GET",
-                  "headers": []
-                },
-                "reason": "",
-                "state": "Active",
-                "artifactType": "product_key"
-              }
-            ],
+            "entitledArtifacts": [],
             "skuId": "0002",
             "entitlementType": "software"
           }
@@ -182,18 +160,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
         },
         "productId": "DG7GMGF0DWTK",
         "quantity": 1,
-        "entitledArtifacts": [
-          {
-            "link": {
-              "uri": "/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/productkey/groups/2caf524395724e638ef64e109f1f79ca/lineitems/0095a02f-1b12-4bb3-a805-f2b71b055ea7/items/DG7GMGF0DWTK:0002:0095a02f-1b12-4bb3-a805-f2b71b055ea7",
-              "method": "GET",
-              "headers": []
-            },
-            "reason": "",
-            "state": "Active",
-            "artifactType": "product_key"
-          }
-        ],
+        "entitledArtifacts": [],
         "skuId": "0002",
         "entitlementType": "software"
     }
@@ -201,57 +168,14 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
   "attributes": {
     "objectType": "Collection"
   }
-}
+}  
 ```
+
 
 ## <span id="AdditionalExamples"></span><span id="additionalexamples"></span>Additional Examples   
 
-
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
-### <span id="ProductKeyExample"></span><span id="productkeyexample"></span><span id="PRODUCTKEYEXAMPLE"></span>Retrieve software product key details from an entitlement. 
-
-**C# example**
-
-To retrieve more details related to the software product key from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = product_key.
-
-```CSharp
-ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.Get();
-
-((ProductKeyArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ProductKey)).Link.InvokeAsync<ProductKeyArtifactDetails>(partnerOperations)
-```   
-
-**Request example**
-
-```
-GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/productkey/groups/2caf524395724e638ef64e109f1f79ca/lineitems/0095a02f-1b12-4bb3-a805-f2b71b055ea7/items/DG7GMGF0DWTK:0002:0095a02f-1b12-4bb3-a805-f2b71b055ea7 HTTP/1.1
-Authorization: Bearer <Token>
-Accept: application/json
-MS-RequestId: 43d5d020-5318-482a-912e-12dcaed50b40
-MS-CorrelationId: 1820804f-56b8-47b0-93a0-1b162ac50409
-X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
-Host: api.partnercenter.microsoft.com 
-```
-
-**Response example**
-
-```
-HTTP/1.1 200 OK
-Content-Length: 368
-Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 1820804f-56b8-47b0-93a0-1b162ac50409
-MS-RequestId: 43d5d020-5318-482a-912e-12dcaed50b40
-X-Locale: en-US
-MS-CV: YNrxOt3wPEync2an.0
-MS-ServerId: 000004
-Date: Wed, 06 Jun 2018 22:53:18 GMT
-
-{
-    "type": "product_key",
-    "productKey": "8F9FN-2JWYW-12345-67890-XWRTF"
-}
-```
 
 ### <span id="VirtualMachineReservationExample"></span><span id="virtualmachinereservationexample"></span><span id="VIRTUALMACHINERESERVATIONEXAMPLE"></span>Retrieve virtual machine reservation details from an entitlement. 
 
@@ -259,7 +183,7 @@ Date: Wed, 06 Jun 2018 22:53:18 GMT
 
 To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance.
 
-```CSharp
+```csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.Get();
 
 ((VirtualMachineReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.VirtualMachineReservedInstance)).Link.InvokeAsync<VirtualMachineReservedInstanceArtifactDetails>(partnerOperations)
@@ -280,7 +204,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example**
 
-```
+```json
 HTTP/1.1 200 OK
 Content-Length: 368
 Content-Type: application/json; charset=utf-8

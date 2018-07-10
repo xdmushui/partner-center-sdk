@@ -76,7 +76,6 @@
 #### [Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)
 #### [Get a list of add-ons for a subscription](get-a-list-of-add-ons-for-a-subscription.md) 
 #### [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md) 
-#### [Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)   
 #### [Get a list of offer categories by market](get-a-list-of-offer-categories-by-country-and-locale.md)
 #### [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md)
 #### [Get a list of products](get-a-list-of-products.md) 
