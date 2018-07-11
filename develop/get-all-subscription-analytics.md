@@ -106,6 +106,8 @@ Each response comes with an HTTP status code that indicates success or failure a
     "deprovisionedDate": null,
     "lastRenewalDate": "2018-02-10T02:39:57.729",
     "licenseCount": 2
+    "partnerName": "A Microsoft partner"
+    "providerName": "An indirect reseller"
 }
 ```
 

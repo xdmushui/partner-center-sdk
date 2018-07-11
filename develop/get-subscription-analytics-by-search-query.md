@@ -53,7 +53,7 @@ Use the following required path parameter to identify your organization and filt
 
 **Filter syntax**
 
-The filter parameter must be composed as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
+The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
 
 An unencoded example looks like this:
 -   String: ?filter=Field operator ‘Value’
@@ -63,7 +63,7 @@ An unencoded example looks like this:
 
 **Filter fields**
 
-The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or**.
+The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
 The following are examples of filter strings: 
 ```
@@ -95,7 +95,8 @@ The following table shows a list of the supported fields and support operators f
 | lastUsageDate | eq, ne, gt, lt, ge, le | The date that the subscription was last used. The default value is null. |
 | deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
-
+| partnerName | string | Name of the partner for whom the subscription was bought |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 
 **Request headers** 
 

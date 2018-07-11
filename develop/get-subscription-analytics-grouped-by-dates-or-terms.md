@@ -54,7 +54,7 @@ Use the following required path parameters to identify your organization and to 
 
 **GroupBy syntax**
 
-The filter parameter must be composed as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
+The group by parameter must be composed as a series of comma separated, field values.
 
 An unencoded example looks like this:
 ```
@@ -84,7 +84,8 @@ The following table shows a list of the supported fields for group by.
 | lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |  
 | deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |  
 | lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |  
-
+| partnerName | string | Name of the partner for whom the subscription was bought |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 
 **Filter fields**
 

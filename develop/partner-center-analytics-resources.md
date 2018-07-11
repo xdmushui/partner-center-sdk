@@ -133,6 +133,8 @@ Represents all of the analytical data for a subscription.
 | lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed The default value is null. |
 | licenseCount | number | The total number of licenses. |
 | subscriptionCount | number | The number of subscriptions. Note: This value will only appear in the response of an aggregation query. |
+| partnerName | string | Name of the partner for whom the subscription was bought |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 
 
 ## <span id="Search_Analytics"></span><span id="search_analytics"></span><span id="SEARCH_ANALYTICS"></span>Search analytics
