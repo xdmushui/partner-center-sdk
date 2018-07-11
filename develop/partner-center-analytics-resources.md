@@ -121,7 +121,8 @@ Represents all of the analytical data for a subscription.
 | autoRenewEnabled | boolean | A value indicating whether the subscription is renewed automatically. |
 | partnerId | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
 | friendlyName | string | The name of the subscription. |
-| creationDate | string in UTC date time format | The date the subscription was created. |
+| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.| creationDate | string in UTC date time format | The date the subscription was created. |
 | effectiveStartDate | string in UTC date time format | The date the subscription starts. |
 | commitmentEndDate | string in UTC date time format | The date the subscription ends. |
 | currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |
@@ -133,8 +134,7 @@ Represents all of the analytical data for a subscription.
 | lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed The default value is null. |
 | licenseCount | number | The total number of licenses. |
 | subscriptionCount | number | The number of subscriptions. Note: This value will only appear in the response of an aggregation query. |
-| partnerName | string | Name of the partner for whom the subscription was bought |  
-| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
+
 
 
 ## <span id="Search_Analytics"></span><span id="search_analytics"></span><span id="SEARCH_ANALYTICS"></span>Search analytics

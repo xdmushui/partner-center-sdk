@@ -86,6 +86,8 @@ The following table shows a list of the supported fields and support operators f
 | autoRenewEnabled | eq,ne | A value indicating whether the subscription is renewed automatically. |
 | partnerId | eq,ne | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
 | friendlyName | contains | The name of the subscription. |
+| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 | creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
 | effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
 | commitmentEndDate | eq, ne, gt, lt, ge, le  | The date the subscription ends. |
@@ -95,8 +97,7 @@ The following table shows a list of the supported fields and support operators f
 | lastUsageDate | eq, ne, gt, lt, ge, le | The date that the subscription was last used. The default value is null. |
 | deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
-| partnerName | string | Name of the partner for whom the subscription was bought |  
-| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
+
 
 **Request headers** 
 

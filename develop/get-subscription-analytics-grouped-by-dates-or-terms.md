@@ -75,6 +75,8 @@ The following table shows a list of the supported fields for group by.
 | autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |  
 | partnerId	 | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |  
 | friendlyName | string | The name of the subscription. |  
+| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 | creationDate | string in UTC date time format | The date the subscription was created. |  
 | effectiveStartDate | string in UTC date time format | The date the subscription starts. |  
 | commitmentEndDate | string in UTC date time format | The date the subscription ends. |  
@@ -84,8 +86,6 @@ The following table shows a list of the supported fields for group by.
 | lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |  
 | deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |  
 | lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |  
-| partnerName | string | Name of the partner for whom the subscription was bought |  
-| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 
 **Filter fields**
 
