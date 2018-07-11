@@ -95,8 +95,10 @@ Each response comes with an HTTP status code that indicates success or failure a
     "autoRenewEnabled": true,
     "partnerId": "3B33E682-00C3-41EE-9DD2-A548ADF56438",
     "friendlyName": "FULL OFFICE SUITE",
+    "partnerName": "Partner Name",
+    "providerName": "Provider Name",
     "creationDate": "2016-02-04T19:29:38.037",
-    "effectiveStartDate": "2016-02-04T00:00:00",
+   "effectiveStartDate": "2016-02-04T00:00:00",
     "commitmentEndDate": "2019-02-10T00:00:00",
     "currentStateEndDate": "2019-02-10T00:00:00",
     "trialToPaidConversionDate": null,
@@ -106,8 +108,6 @@ Each response comes with an HTTP status code that indicates success or failure a
     "deprovisionedDate": null,
     "lastRenewalDate": "2018-02-10T02:39:57.729",
     "licenseCount": 2
-    "partnerName": "A Microsoft partner"
-    "providerName": "An indirect reseller"
 }
 ```
 
