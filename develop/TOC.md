@@ -103,6 +103,7 @@
 #### [Make a one-time purchase](make-a-one-time-purchase.md)   
 #### [Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)
 #### [Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md) 
+#### [Purchase catalog items](purchase-catalog-items.md) 
 #### [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 #### [Register a subscription](register-a-subscription.md)
 #### [Suspend a subscription](suspend-a-subscription.md)

@@ -162,6 +162,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)</p></li>
 <li><p>[Get an order by ID](get-an-order-by-id.md)</p></li>
 <li><p>[Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)</p></li>
+<li><p>[Purchase catalog items](purchase-catalog-items.md)</p></li>
 </ul>
 <p>Enable a subscription for Azure Reserved VM Instance purchases</p>
 <ul>
