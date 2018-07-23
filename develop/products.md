@@ -82,24 +82,7 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 
 
 
-## <span id="SkuDownloadOptions"></span><span id="skudownloadoptions"></span><span id="SKUDOWNLOADOPTIONS"></span>SkuDownloadOptions
-
-
-Represents the download options available for a SKU. 
-
-| Property                  | Type                | Description                                                                         |
-|---------------------------|---------------------|-------------------------------------------------------------------------------------|
-| OptionTitle               | string              | The title of the downloadable artifact.                                             |
-| CPUandFileType            | string              | The file format of the downloadable artifact. Example: 64 Bit, ISO                  |
-| LanguageCode              | string              | The language code of the downloadable artifact. Example: pt-BR.                     |
-| LanguageName              | string              | The full language name. Example: Portuguese (Brazil).                               |
-| FileSize                  | string              | The size of the downloadable artifact in bytes.                                     |
-| DownloadLink              | Link                | The link used to retrieve the actual product-sku download link for the selected filetype and language code. |   
-
-
-
 ## <span id="Availability"></span><span id="availability"></span><span id="AVAILABILITY"></span>Availability
-
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
 
@@ -118,7 +101,6 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 
 ## <span id="InventoryCheckRequest"></span><span id="inventorycheckrequest"></span><span id="INVENTORYCHECKREQUEST"></span>InventoryCheckRequest
 
-
 Represents a request to check inventory against certain catalog items. 
 
 | Property         | Type                                                | Description                                                                                 |
@@ -130,7 +112,6 @@ Represents a request to check inventory against certain catalog items.
 
 
 ## <span id="InventoryItem"></span><span id="inventoryitem"></span><span id="INVENTORYITEM"></span>InventoryItem
-
 
 Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
 
@@ -145,7 +126,6 @@ Represents a single item in an inventory check operation. This resource is used 
 
 ## <span id="InventoryRestriction"></span><span id="inventoryrestriction"></span><span id="INVENTORYRESTRICTION"></span>InventoryRestriction
 
-
 Represents the details of an inventory restriction. This is only applicable for inventory check output results, not for input requests.
 
 | Property         | Type                  | Description                                                                                 |
@@ -158,7 +138,6 @@ Represents the details of an inventory restriction. This is only applicable for 
 
 ## <span id="billingCycleType"></span><span id="billingcycletype"></span><span id="BILLINGCYCLETYPE"></span>BillingCycleType
 
-
 An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate a type of billing cycle.
 
 | Value              | Position     | Description                                                                                |
@@ -168,8 +147,4 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
-
-
-
-
 

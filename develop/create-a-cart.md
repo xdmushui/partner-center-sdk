@@ -108,7 +108,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
 | catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
 | friendlyName         | string                      | No           | Optional. The friendly name for the item defined by the partner to help disambiguate.              |
-| quantity             | int                         | Yes          | The number of licenses for a license-based subscription or instances for an Azure reservation.     |
+| quantity             | int                         | Yes          | The number of licenses or instances.     |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
 | participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |

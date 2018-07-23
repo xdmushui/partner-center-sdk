@@ -43,7 +43,6 @@ Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  |
-
  
 
 **URI parameter**

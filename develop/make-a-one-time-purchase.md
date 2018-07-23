@@ -68,7 +68,6 @@ Before making a one-time purchase, complete the following steps:
     -   [Get a product using the product ID](get-a-product-by-id.md)
     -   [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
     -   [Get a SKU using the SKU ID](get-a-sku-by-id.md)
-    -   [Get a list of download options for a SKU](get-a-list-of-download-options-for-a-sku.md)   
 
 2.  Check the inventory for a SKU. This step is only needed for SKUs that are tagged with an **InventoryCheck** prerequisite.
 
