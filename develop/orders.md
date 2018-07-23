@@ -30,17 +30,17 @@ A partner places an order when a customer wants to buy a subscription from a lis
 
 Describes a partner's order.
 
-| Property            | Type                                                           | Description                                                 |
-|---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
-| id                  | string                                                         | An order identifier that is supplied upon successful creation of the order.                                   |
-|referenceCustomerId  | string                                                         | The customer identifier. |
-| billingCycle        | string                                                         | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
-| lineItems           | array of [OrderLineItem](#orderlineitem) resources             | An itemized list of the offers the customer is purchasing including the quantity.        |
-| currencyCode        | string                                                         | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
-| creationDate        | datetime                                                       | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
-| status              | string                                                         | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](#orderstatus).        |
-| links               | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
-| attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the Order.       |
+| Property           | Type                                               | Description                                                 |
+|--------------------|----------------------------------------------------|-------------------------------------------------------------|
+| id                 | string                                             | An order identifier that is supplied upon successful creation of the order.                                   |
+|referenceCustomerId | string                                             | The customer identifier. |
+| billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
+| currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
+| creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
+| status             | string                                             | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](#orderstatus).        |
+| links              | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
+| attributes         | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the Order.       |
 
 
 
@@ -109,15 +109,13 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 Represents the provisioning status of an [OrderLineItem](#orderlineitem).
 
-| Property                           | Type                                | Description                                                                                |
+| Property                        | Type                                | Description                                                                                |
 |------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------|
-| lineItemNumber                     | int                                 | The unique line number of the order line item. Values range from 0 to count-1.             |
-| status                             | string                              | The provisioning status of the order line item. Values include: Fulfilled, Unfulfilled,  PrefulfillmentPending.  |
-| quantityProvisioningInformation    | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)>   | A list of quantity provisioning status information for the order line item. |
-
-
-
-
+| lineItemNumber                  | int                                 | The unique line number of the order line item. Values range from 0 to count-1.             |
+| status                          | string                              | The provisioning status of the order line item. Values include:</br></br>"Fulfilled": Fulfillment of the order is successfully completed and the user will be able to use the reservations</br></br>"Unfulfilled": Not fulfilled due to cancellation</br></br>"PrefulfillmentPending": Your request is still processing, fulfillment is not yet complete |
+| quantityProvisioningInformation | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)> | A list of quantity provisioning status information for the order line item. |
+  
+  
 ## <span id="quantityProvisioningStatus"></span><span id="quantityprovisioningstatus"></span><span id="QUANTITYPROVISIONINGSTATUS"></span>QuantityProvisioningStatus 
 
 
