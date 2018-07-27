@@ -28,7 +28,7 @@ If you run automated build verification tests, conduct testing in production, or
 
 Note that this means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials.
 
-If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reserved-vm-instances.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
+If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reservations.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
 
 | Product Title  | Effective Date  | Sku Title                                               | Region [ArmRegionName] | Instance Key [ArmSkuName] | Duration | Consumption Meter Id       |
 |----------------|-----------------|---------------------------------------------------------|------------------------|--------------|----------|----------------------------|
