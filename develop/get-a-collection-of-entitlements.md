@@ -2,8 +2,8 @@
 title: Get a collection of entitlements
 description: How to get a collection of entitlements.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.author: v-thpr
-ms.date: 12/15/2017
+ms.author: mhopkins
+ms.date: 07/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -115,17 +115,20 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
       "entitledArtifacts": [
         {
           "link": {
-            "uri": "/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/virtualmachinereservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336",
+            "uri": "/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/reservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336",
             "method": "GET",
             "headers": []
           },
           "resourceId": "ebf2e74b-630e-4a09-857d-a1f6c6351336",
-          "artifactType": "virtual_machine_reserved_instance"
+          "artifactType": "reservedinstance"
         }
       ],
       "skuId": "007J",
       "skuTitle": "Reserved VM Instance, Standard_F2, US East 2, 1 Year",
-      "entitlementType": "virtual_machine_reserved_instance"
+      "entitlementType": "reservedinstance"
+      "dynamicAttributes": {
+               "reservationType": "virtualmachines"
+        }
     },    
     {
       "includedEntitlements": [
@@ -176,15 +179,15 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
-
-### <span id="VirtualMachineReservationExample"></span><span id="virtualmachinereservationexample"></span><span id="VIRTUALMACHINERESERVATIONEXAMPLE"></span>Retrieve virtual machine reservation details from an entitlement. 
+### <span id="VirtualMachineReservationExample_SDK_1.8"></span><span id="virtualmachinereservationexample_sdk_1.8"></span><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"></span>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
 
 **C# example**   
 
-To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance.
+To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
 
 ```csharp
-ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.Get();
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“VirtualMachineReservedInstance”).Get();
+
 
 ((VirtualMachineReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.VirtualMachineReservedInstance)).Link.InvokeAsync<VirtualMachineReservedInstanceArtifactDetails>(partnerOperations)
 ```
@@ -229,5 +232,61 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
   ]
 }
 ```
+
+### <span id="ReservationExample_SDK_1.9"></span><span id="reservationexample_sdk_1.9"></span><span id="RESERVATIONEXAMPLE_SDK_1.9"></span>Retrieve reservation details from an entitlement by using SDK V1.9  
+
+**C# example**  
+
+To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
+
+```csharp
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“ReservedInstance”).Get();  
+
+((ReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ReservedInstance)).Link.InvokeAsync<ReservedInstanceArtifactDetails>(partnerOperations);
+```
+
+**Request example**
+
+```
+GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/reservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336 HTTP/1.1
+Authorization: Bearer <Token>
+Accept: application/json
+MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
+MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
+X-Locale: en-US
+MS-PartnerCenter-Client: Partner Center .NET SDK
+Host: api.partnercenter.microsoft.com 
+```
+
+**Response example**  
+
+```json
+HTTP/1.1 200 OK
+Content-Length: 368
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
+MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
+X-Locale: en-US
+MS-CV: yrdTGsZ7IU2v9okv.0
+MS-ServerId: 000002
+Date: Mon, 19 Mar 2018 07:45:14 GMT
+
+{
+  "type": "reservedinstance",
+  "virtualMachineReservations": [
+    {
+      "reservationId": "99f320db-c029-4c1b-a157-dad76e4481b6",
+      "scopeType": "Shared",
+      "quantity": 1,
+      "expiryDateTime": "2019-02-23T00:00:00",
+      "effectiveDateTime": "2018-02-23T18:15:24.6724884Z",
+      "provisioningState": "Created"
+    }
+  ]
+}
+```
+
+### API Consumers  
+Partners who are using the API to query virtual machine reserved instance entitlements – Update the request URI from **/customers/{customerId}/entitlements to /customers/{customerId}/entitlements?entitlementType=virtualmachinereservedinstance** to maintain backward compatibility. In order to consume virtual machine or Azure SQL with enhanced contract, update the request URI to **/customers/{customerId}/entitlements?entitlementType=reservedinstance**.
 
 
