@@ -98,7 +98,7 @@ The artifact associated with an Azure Reserved Instance entitlement. It inherits
 
 | Property   | Type                           | Description                                        |
 |------------|--------------------------------|----------------------------------------------------|
-| link       | [Link](utility-resources#link) | The link to get all associated artifact details.   |
+| link       | [Link](./utility-resources.md#link) | The link to get all associated artifact details.   |
 | resourceID | string                         | The ID of the Azure reservation order or resource. |
 
 
