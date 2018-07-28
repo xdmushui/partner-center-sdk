@@ -133,7 +133,7 @@ All of the following scenarios can be completed three different ways:
 <td><p>[Place orders](place-orders.md)</p></td>
 <td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
-<li><p>[Purchase Azure Reserved VM Instances](purchase-azure-reserved-vm-instances.md)</p></li>
+<li><p>[Purchase Azure reservations](purchase-azure-reservations.md)</p></li>
 </ul>
 <p>Make a one-time purchase</p>
 <ul>

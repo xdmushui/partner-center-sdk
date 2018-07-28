@@ -1,9 +1,9 @@
 ---
 title: Register a subscription
-description: Register an existing subscription so that it is enabled for ordering Azure Reserved VM Instances.
-ms.assetid: 
-ms.author: v-thpr
-ms.date: 03/19/2018
+description: Register an existing subscription so that it is enabled for ordering Azure reservations.
+ms.assetid: 9B853BF2-855C-4EB3-BBE5-7ECC1336AE08
+ms.author: mhopkins
+ms.date: 07/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -16,9 +16,9 @@ ms.technology: partner-center-sdk
 
 -   Partner Center
 
-Register an existing [Subscription](subscriptions.md) so that it is enabled for ordering Azure Reserved VM Instances.  
+Register an existing [Subscription](subscriptions.md) so that it is enabled for ordering Azure reservations.  
 
-To purchase an Azure Reserved VM Instance you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. 
+To purchase an Azure reservation you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure reservations. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
