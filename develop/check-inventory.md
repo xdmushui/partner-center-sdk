@@ -2,8 +2,8 @@
 title: Check inventory
 description: Check the inventory for a specific set of catalog items.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
-ms.date: 03/20/2018
+ms.author: mhopkins
+ms.date: 07/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -40,12 +40,13 @@ string productId;
 // Build the inventory check request details object.
 var inventoryCheckRequest = new InventoryCheckRequest()
 {
-	TargetItems = new InventoryItem[]{ new InventoryItem { ProductId = productId } },
-	InventoryContext = new Dictionary<string, string>()
-	{
-		{ “customerId”, customerId },
-		{ “azureSubscriptionId”, subscriptionId }
-	}
+    TargetItems = new InventoryItem[]{ new InventoryItem { ProductId = productId } },
+    InventoryContext = new Dictionary<string, string>()
+    {
+      { "customerId", customerId },
+      { "azureSubscriptionId", subscriptionId }
+      { "armRegionName", armRegionName }
+    }
 };
 
 // Get the inventory results.
@@ -93,7 +94,7 @@ X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
 
-{"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","azureSubscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75"}}
+{"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","azureSubscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75","armRegionName":"Europe"}}
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response

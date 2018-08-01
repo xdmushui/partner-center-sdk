@@ -1,9 +1,9 @@
 ---
 title: Products
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.  
-ms.assetid: 
-ms.author: v-thpr
-ms.date: 03/22/2018
+ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
+ms.author: mhopkins
+ms.date: 07/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -64,21 +64,21 @@ Contains a list of links for a [Product](#product).
 
 Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product. 
 
-| Property        | Type                          | Description                                                                          |
-|-----------------|-------------------------------|--------------------------------------------------------------------------------------|
-| id              | string                        | The ID for this SKU. This ID is unique only within the context of its parent product. |
-| title           | string                        | The title of the SKU.                                                                |
-| description     | string                        | The description of the SKU.                                                          |
-| productId       | string                        | The ID of the parent [Product](#product) that contains this SKU.                     |
-| minimumQuantity | int                           | The minimum quantity allowed for purchase.                                           |
-| maximumQuantity | int                           | The maximum quantity allowed for purchase.                                           |
-| isTrial         | bool                          | Indicates whether this SKU is a trial item.                                          |
-| supportedBillingCycles  | array of strings      | The list of supported billing cycles for this SKU. Supported values are the member names found in [BillingCycleType](#billingcycletype). |
-| purchasePrerequisites   | array of strings      | The list of prerequisite steps or actions that are needed prior to purchasing this item. The supported values are:<br/>  InventoryCheck - Indicates that the item's inventory should be evaluated before attempting to purchase this item.<br/> AzureSubscriptionRegistration - Indicates that an Azure subscription is needed and must be registered before attempting to purchase this item.  |
-| inventoryVariables      | array of strings      | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> CustomerId - The ID of the customerthat the purchase would be for.<br/> AzureSubscriptionId - The ID of the Azure Subscription that would be used for an Azure Reserved VM Instance purchase.  |
-| provisioningVariables   | array of strings      | The list of variables that must be provided into the provisioning context of a [cart line item](cart.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure Reserved VM Instance purchase: "Single", "Shared".<br/> AzureSubscriptionId - The ID of the Azure Subscription that would be used for an Azure Reserved VM Instance purchase.<br/> Duration - The duration of the Azure Reserved VM Instance: "1Year", "3Year".  |
-| dynamicAttributes       | key/value pairs       | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+| Property               | Type             | Description                                                                           |
+|------------------------|------------------|---------------------------------------------------------------------------------------|
+| id                     | string           | The ID for this SKU. This ID is unique only within the context of its parent product. |
+| title                  | string           | The title of the SKU.                                                                 |
+| description            | string           | The description of the SKU.                                                           |
+| productId              | string           | The ID of the parent [Product](#product) that contains this SKU.                      |
+| minimumQuantity        | int              | The minimum quantity allowed for purchase.                                            |
+| maximumQuantity        | int              | The maximum quantity allowed for purchase.                                            |
+| isTrial                | bool             | Indicates whether this SKU is a trial item.                                           |
+| supportedBillingCycles | array of strings | The list of supported billing cycles for this SKU. Supported values are the member names found in [BillingCycleType](#billingcycletype). |
+| purchasePrerequisites  | array of strings | The list of prerequisite steps or actions that are needed prior to purchasing this item. The supported values are:<br/>  "InventoryCheck" – Indicates that the item's inventory should be evaluated before attempting to purchase this item.<br/> "AzureSubscriptionRegistration" – Indicates that an Azure subscription is needed and must be registered before attempting to purchase this item.  |
+| inventoryVariables     | array of strings | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> "CustomerId" – The ID of the customer that the purchase would be for.<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.</br> "ArmRegionName" – The region for which to verify inventory. This value must match the “ArmRegionName” from the SKU’s DynamicAttributes. |
+| provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
+| dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
+| links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
 
 

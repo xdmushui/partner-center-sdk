@@ -2,8 +2,8 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
-ms.date: 03/20/2018
+ms.author: mhopkins
+ms.date: 07/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -56,7 +56,7 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> Azure - Includes all Azure items.<br/> OnlineServices - Includes all online service items.<br/> Software - Includes all software items.<br/>                       |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "OnlineServices" – Includes all online service items<br/> "Software" – Includes all software items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
 
  
