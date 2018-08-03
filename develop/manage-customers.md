@@ -23,7 +23,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Create a customer**
 
--   [Create a customer](create-a-customer.md)
+- [Manage customers](#manage-customers)
 
 -   [Request a reseller relationship](request-reseller-relationship.md) 
 
@@ -60,6 +60,12 @@ This section describes the ways that Cloud Solution Provider partners can use th
 -   [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
 
 -   [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)   
+
+-   [Confirm customer acceptance of Microsoft Cloud agreement](confirm-customer-consent.md)
+  
+-   [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md)
+ 
+-   [Get confirmation of customer acceptance of Microsoft Cloud agreement](get-confirmation-of-customer-consent.md)
 
 **Manage user accounts and assign licenses**
 
