@@ -108,6 +108,9 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a customer's company profile](get-a-customer-s-company-profile.md)</p></li>
 <li><p>[Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)</p></li>
 <li><p>[Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)</p></li>
+<li><p>[Confirm customer acceptance of Microsoft Cloud agreement](confirm-customer-consent.md)</p></li>
+<li><p>[Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md)</p></li>
+<li><p>[Get confirmation of customer acceptance of Microsoft Cloud agreement](get-confirmation-of-customer-consent.md)</p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>

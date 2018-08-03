@@ -48,16 +48,15 @@ Partner Center uses Azure AD for authentication, and to use the Partner Center A
 
 ## <span id="managedApp"></span><span id="managedapp"></span><span id="MANAGEDAPP"></span>Authentication with App credentials and the managed API
 
-
 The following code shows how to get and use App authentication using the Partner Center managed API.
 
 **Add Azure AD information to your project**
 
 1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Secret, and Domain depending on whether you're using the integration sandbox or the primary account.
 
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
+    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
 
-    ```CSharp
+    ``` csharp
     private static class PartnerApplicationConfiguration
     {
         public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
@@ -69,9 +68,9 @@ The following code shows how to get and use App authentication using the Partner
     }
     ```
 
-2.  Add code to manage your tokens.
+1.  Add code to manage your tokens.
 
-    ```CSharp
+    ``` csharp
     public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
     {
         // Get a user Azure AD Token.
@@ -89,7 +88,7 @@ The following code shows how to get and use App authentication using the Partner
 
     Use the following code instead for Partner Center for Microsoft Cloud Germany.
 
-    ```CSharp
+    ``` csharp
     // Use the following code for Partner Center for Microsoft Cloud Germany.
     public static string Authority = "https://login.microsoftonline.de";
     public static string ResourceUrl = "https://graph.cloudapi.de";
@@ -112,9 +111,9 @@ The following code shows how to get and use App authentication using the Partner
     }
     ```
 
-3.  Get your token and use it to call the managed API. The following example retrieves a list of offer objects and then displays each offer identifier and name on the console.
+2.  Get your token and use it to call the managed API. The following example retrieves a list of offer objects and then displays each offer identifier and name on the console.
 
-    ```CSharp
+    ``` csharp
     // Gets a list of offers using the SDK.
     public static void GetOffersUsingAppCredentials()
     {
@@ -138,9 +137,9 @@ The following code shows how to get and use App authentication using the Partner
 
 1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Secret, and Domain depending on whether you're using the integration sandbox or primary account.
 
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
+    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
 
-    ```CSharp
+    ``` csharp
     private static class PartnerApplicationConfiguration
     {
         public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
@@ -154,7 +153,7 @@ The following code shows how to get and use App authentication using the Partner
 
 2.  Add code to manage your tokens.
 
-    ```CSharp
+    ``` csharp
     // Given the reseller domain, clientid and clientsecret of the app, this method helps to retrieve the AD token.
     //
     // Parameters:
@@ -212,7 +211,7 @@ The following code shows how to get and use App authentication using the Partner
     }
     ```
    
-    ```CSharp
+    ``` csharp
     // Deprecated: DO NOT use this code
     //
     // Gets the partner center app credential token.
@@ -269,7 +268,7 @@ The following code shows how to get and use App authentication using the Partner
 
 3.  Get your token and use it to call the REST API. The following example retrieves a list of offer objects and then displays information about each offer.
 
-    ```CSharp
+    ``` csharp
     // Gets a list of offers using the REST API.
     public static void GetOffersWithAppCredentials()
     {
@@ -320,9 +319,9 @@ The following code shows how to get and use App+User authentication using the Pa
 
 1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Domain, user name and password depending on whether you're using the integration sandbox or the primary account.
 
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
+    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
 
-    ```CSharp
+    ``` csharp
     private static class PartnerUserConfiguration
     {
         public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
@@ -337,7 +336,7 @@ The following code shows how to get and use App+User authentication using the Pa
 
 2.  Add code to manage your tokens.
 
-    ```CSharp
+    ``` csharp
     // Sign the user into Azure AD and get token.
     // Returns: User token.
     public static AuthenticationResult UserLogin()
@@ -379,7 +378,7 @@ The following code shows how to get and use App+User authentication using the Pa
 
 3.  Get your token and use it to call the managed API.
 
-    ```CSharp
+    ``` csharp
     public static void GetCustomersWithUserCredentials()
     {
         IAggregatePartner partner = GetPartnerCenterTokenWithUserCredentials();
@@ -404,9 +403,9 @@ The following code shows how to get and use App+User authentication using the Pa
 
 1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Domain, user name and password depending on whether you're using the integration sandbox or the primary account.
 
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government.
+    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
 
-    ```CSharp
+    ``` csharp
     private static class PartnerUserConfiguration
     {
         public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
@@ -421,7 +420,7 @@ The following code shows how to get and use App+User authentication using the Pa
 
 2.  Add code to manage your tokens.
 
-    ```CSharp
+    ``` csharp
     // Given the reseller domain, clientid and username/password of the app, this method helps to retrieve the AD token.
     //
     // Parameters:
@@ -483,7 +482,7 @@ The following code shows how to get and use App+User authentication using the Pa
     }
     ```
 
-    ```CSharp
+    ``` csharp
     // Deprecated: DO NOT use this code
     //
     // Gets the partner center App+User token.
@@ -539,7 +538,7 @@ The following code shows how to get and use App+User authentication using the Pa
 
 3.  Get your token and use it to call the REST API.
 
-    ```CSharp
+    ``` csharp
     // Gets a list of customers using App+User credentials.
     public static void GetCustomersUsingUserCredentials()
     {
@@ -578,10 +577,16 @@ The following code shows how to get and use App+User authentication using the Pa
     }
     ```
 
- 
+
+## <span id="AuthorityAndResourceURLs"></span><span id="authorityandresourceurls"></span><span id="AUTHORITYANDRESOURCEURLS"></span>Authority and Resource URLs
+
+The following table lists the appropiate Authority, Graph Resource URL, and Partner Center Resource URL values for the various clouds when using App and App+User credentials for authentication.
+
+| Cloud name                                           | Authority                        | Graph Resource URL             | Partner Center Resource URL                         |  
+|------------------------------------------------------|----------------------------------|--------------------------------|-----------------------------------------------------|  
+| Partner Center                                       | https://login.windows.net        | https://graph.windows.net      | https://api.partnercenter.microsoft.com             | 
+| Partner Center for Microsoft Cloud Germany           | https://login.microsoftonline.de | https://graph.cloudapi.de      | https://api.partnercenter.microsoft.com             |  
+| Partner Center operated by 21Vianet                  | https://login.chinacloudapi.cn   | https://graph.chinacloudapi.cn | https://partner.partnercenterapi.microsoftonline.cn |  
+| Partner Center for Microsoft Cloud for US Government | https://login.microsoftonline.us | https://graph.windows.net      | https://api.partnercenter.microsoft.com             |  
 
  
-
-
-
-
