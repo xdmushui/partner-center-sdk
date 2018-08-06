@@ -2,7 +2,7 @@
 title: Get invoice summaries
 description: Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges. 
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -32,7 +32,7 @@ Gets an **InvoiceSummaries** resource that contains an invoice summary for each 
 
 To retrieve an [**InvoiceSummaries**](invoice.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
 
-```CSharp
+``` csharp
 // IAggregatePartner scopedPartnerOperations;
 
 // Get the invoice summaries collection.
@@ -90,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 256
 Content-Type: application/json; charset=utf-8

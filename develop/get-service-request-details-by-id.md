@@ -2,7 +2,7 @@
 title: Get service request details by ID.
 description: How to retrieve the details of an existing customer service request by ID.
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 02/06/2018
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ How to retrieve the details of an existing customer service request using the se
 
 To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // ServiceRequest existingServiceRequest as ServiceRequest;
 
@@ -98,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 566
 Content-Type: application/json; charset=utf-8

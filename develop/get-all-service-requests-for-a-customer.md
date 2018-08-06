@@ -2,7 +2,7 @@
 title: Get all service requests for a customer
 description: Gets all of a customer's service requests.
 ms.assetid: 21F01038-EE51-4FB3-8BE5-9086DBD0F393
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -33,7 +33,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 To display a list of all of a customer's service requests, use your **IAggregatePartner.Customers** collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ServiceRequests**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicerequests) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string customerId as string;
 
@@ -92,7 +92,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 742
 Content-Type: application/json

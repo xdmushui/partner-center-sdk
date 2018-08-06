@@ -2,7 +2,7 @@
 title: Get user roles for a customer
 description: Get a list of all the roles/permissions attached to a user account. Variations include getting a list of all permissions across all user accounts for a customer, and getting a list of users that have a given role.
 ms.assetid: 304A1C1F-6280-40E9-A96B-F87ECA657FF3
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -29,7 +29,7 @@ Get a list of all the roles/permissions attached to a user account. Variations i
 
 To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or **GetAsync()**method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 
@@ -40,7 +40,7 @@ var directoryRoles = partnerOperations.Customers.ById(selectedCustomerId).Direct
 
 To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or **GetAsync()**method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 // string selectedDirectoryRoleId;
@@ -102,7 +102,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json

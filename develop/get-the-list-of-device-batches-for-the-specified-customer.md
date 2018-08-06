@@ -2,7 +2,7 @@
 title: Get a list of device batches for the specified customer
 description: How to retrieve a collection of device batches for the specified customer.
 ms.assetid: 46865031-E067-4FE3-9EC1-FE18F49F137A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -32,7 +32,7 @@ Each device batch contains summary status information about devices that have be
 
 To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.getasync) method to retrieve the collection.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string selectedCustomerId;
 
@@ -94,7 +94,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 339
 Content-Type: application/json; charset=utf-8

@@ -4,7 +4,7 @@ description:
     Describes an individual Partner Center user, their personal and account
     information, and the permissions they have within Partner Center.
 ms.assetid: A2DEDDAB-C4DA-4ECA-931F-2054AB005973
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

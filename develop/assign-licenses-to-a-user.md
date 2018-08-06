@@ -2,7 +2,7 @@
 title: Assign licenses to a user
 description: How to assign licenses to a customer user.
 ms.assetid: 872C7444-DF89-4EB5-8C1E-1D8E2934A40E
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -36,18 +36,18 @@ A license assignment request must contain licenses from a single license group. 
 Here are the steps to assign licenses through code:
 
 1.  Instantiate a [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object. You use this object to specify the product SKU and service plans to assign.
-    ```CSharp
+    ``` csharp
     LicenseAssignment license = new LicenseAssignment();
     ```
 
 2.  Populate the object properties as shown below. This code assumes that you already have the product SKU ID, and that all of the available service plans will be assigned (i.e. none will be excluded).
-    ```CSharp
+    ``` csharp
     license.SkuId = selectedProductSkuId;
     license.ExcludedPlans = null;
     ```
 
 3.  If you don't have the product SKU ID, you need to retrieve the collection of subscribed SKUs and get the product SKU ID from one of them. Here is an example if you know the product SKU name.
-    ```CSharp
+    ``` csharp
     var customerSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get();
     var sku = customerSubscribedSkus.Items.Where(n => n.ProductSku.Name == "Office 365 Enterprise E3").First();
     license.SkuId = sku.ProductSku.Id;
@@ -55,19 +55,19 @@ Here are the steps to assign licenses through code:
     ```
 
 4.  Next, instantiate a new list of type [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment), and add the license object. You can assign more than one license by adding each individually to the list. The licenses included in this list must be from the same license group.
-    ```CSharp
+    ``` csharp
     List<LicenseAssignment> licenseList = new List<LicenseAssignment>();
     licenseList.Add(license);
     ```
 
 5.  Create a [**LicenseUpdate**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate.licensestoassign) property.
-    ```CSharp
+    ``` csharp
     LicenseUpdate updateLicense = new LicenseUpdate();
     updateLicense.LicensesToAssign = licenseList;
     ```
 
 6.  Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object as shown below to assign the licenses.
-    ```CSharp
+    ``` csharp
     var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).LicenseUpdates.Create(updateLicense);
     ```
 
@@ -80,7 +80,7 @@ Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/
 
 Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object to assign the license.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations; 
 // string selectedCustomerUserId;
 // string selectedCustomerId;

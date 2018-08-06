@@ -2,7 +2,7 @@
 title: Get an availability by ID
 description: Gets an availability for the specified product and SKU using an availability ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: partner-center
@@ -32,7 +32,7 @@ Gets an availability for the specified product and SKU using an availability ID.
 
 To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string countryCode;
 string productId; 
@@ -108,7 +108,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: Microsoft-IIS/10.0

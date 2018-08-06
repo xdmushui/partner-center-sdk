@@ -2,7 +2,7 @@
 title: Get partner billing profile
 description: Gets an object representing the partner's billing profile.
 ms.assetid: E5BAC2C4-8C58-4B5D-8FA9-C445896EEC4A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ Gets an object representing the partner's billing profile.
 
 To get a partner billing profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 BillingProfile billingProfile = partnerOperations.Profiles.BillingProfile.Get();
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 568
 Content-Type: application/json; charset=utf-8

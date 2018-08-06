@@ -2,7 +2,7 @@
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
 ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -39,7 +39,7 @@ Next, obtain an interface to order operations by calling the [**IAggregatePartne
 
 Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string customerId;
 // string offerId;
@@ -299,7 +299,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 831
 Content-Type: application/json; charset=utf-8

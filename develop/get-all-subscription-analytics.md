@@ -38,7 +38,7 @@ How to get all the subscription analytics information for your customers.
 
 | Method | Request URI |
 |--------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions HTTP/1.1 |
  
 
 **URI parameters**
@@ -83,7 +83,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 {
     "customerTenantId": "76906668-27FC-4F5B-A35C-75A9823E13AF",
     "customerName": "TESTORG65656565",

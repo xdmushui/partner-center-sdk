@@ -2,7 +2,7 @@
 title: Change the quantity of a subscription
 description: Updates a Subscription to increase or decrease the quantity of licenses.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.assetid: 10535C45-63BF-4E75-A6E5-E03ADC1DF8DC
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -35,7 +35,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 To change the quantity of a customer's subscription, first [Get the subscription](get-a-subscription-by-id.md), then change the subscription's [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.quantity) property. Once the change is made, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method. Then, finish by calling the **Patch()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var customerId;
 // var subscriptionId;
@@ -128,7 +128,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

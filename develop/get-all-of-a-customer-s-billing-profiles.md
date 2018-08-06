@@ -2,7 +2,7 @@
 title: Get a customer's billing profile
 description: Gets the billing profile of a customer.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.assetid: 32914A31-87CC-4F9D-869C-CAFEDA2CAE41
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -34,7 +34,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 To get a customer's billing profile, use your [**IPartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, followed by the [**Billing**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.billing) property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var selectedCustomerId as string;
 
@@ -93,7 +93,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1206
 Content-Type: application/json

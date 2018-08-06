@@ -2,7 +2,7 @@
 title: Get licenses assigned to a user by license group
 description: How to get a list of user assigned licenses for the specified license groups.
 ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ How to get a list of user assigned licenses for the specified license groups.
 
 To check which licenses are assigned to a user from specified license groups, start by instantiating a [List](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx) of type [**LicenseGroupId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Then, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the user ID to identify the user. Then, get an interface to customer user license operations from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.licenses) property. Finally, pass the list of license groups to the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.getasync) method to retrieve the collection of licenses assigned to the user.
 
-```CSharp
+``` csharp
 // string selectedCustomerUserId;
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
@@ -105,7 +105,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76

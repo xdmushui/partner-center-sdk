@@ -2,7 +2,7 @@
 title: Remove a reseller relationship with a customer
 description: How to remove a reseller relationship with a customer that you no longer have transactions with. 
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 01/12/2018
 ms.topic: article
 ms.prod: partner-center
@@ -40,7 +40,7 @@ After confirming that all active Azure Reserved VM Instances for that customer a
 To re-establish the relationship, repeat the process of [requesting a reseller relationship](https://docs.microsoft.com/en-us/partner-center/develop/request-reseller-relationship). 
 
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 // Prompt the user the enter the customer ID.
@@ -142,7 +142,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 MS-RequestId: 7988dde4-b516-472c-b226-6d53fb18f04e
 MS-CorrelationId: 9b4bf2ca-f374-4d51-9113-781ca87b8380

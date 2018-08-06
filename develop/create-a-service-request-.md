@@ -2,7 +2,7 @@
 title: Create a service request
 description: How to create a partner center service request.
 ms.assetid: 16DA9836-7052-4103-82D4-933E5EEB7E71
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ How to create a partner center service request.
 
 To create a service request, first create and populate a [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity, and support topic id. To add additional information, the [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object supports an optional collection of [**Notes**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.notes), but does not support links to files for uploading. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the locale of the organization creating the service request (the agent locale). 
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string supportTopicId;
 
@@ -154,7 +154,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 721
 Content-Type: application/json; charset=utf-8

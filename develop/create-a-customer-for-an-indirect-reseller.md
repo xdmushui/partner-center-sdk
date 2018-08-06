@@ -2,7 +2,7 @@
 title: Create a customer for an indirect reseller
 description: How an indirect provider can create a customer for an indirect reseller.
 ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -32,7 +32,7 @@ To add a new customer for an indirect reseller, start by instantiating a new [**
 
 Then, use the [**IAggregatePartners.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var indirectResellerId;
 var customerToCreate = new Customer()
@@ -197,7 +197,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 1085
 Content-Type: application/json; charset=utf-8

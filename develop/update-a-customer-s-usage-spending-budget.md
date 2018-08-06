@@ -2,7 +2,7 @@
 title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 02/05/2018
 ms.topic: article
 ms.prod: partner-center
@@ -38,7 +38,7 @@ method with the specified customer's ID. Then access the [**UsageBudget**](https
 property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
 [**PatchAsync()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
@@ -117,7 +117,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 12014
 Content-Type: application/json

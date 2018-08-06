@@ -29,7 +29,7 @@ How to get a collection of entitlements.
 
 To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
 
@@ -90,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```json
+``` json
 HTTP/1.1 200 OK
 Content-Length: 103778
 Content-Type: application/json; charset=utf-8
@@ -185,7 +185,7 @@ The following examples show you how to retrieve information about products and r
 
 To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
 
-```csharp
+``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“VirtualMachineReservedInstance”).Get();
 
 
@@ -207,7 +207,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example**
 
-```json
+``` json
 HTTP/1.1 200 OK
 Content-Length: 368
 Content-Type: application/json; charset=utf-8
@@ -239,7 +239,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 
 To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
 
-```csharp
+``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“ReservedInstance”).Get();  
 
 ((ReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ReservedInstance)).Link.InvokeAsync<ReservedInstanceArtifactDetails>(partnerOperations);
@@ -260,7 +260,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example**  
 
-```json
+``` json
 HTTP/1.1 200 OK
 Content-Length: 368
 Content-Type: application/json; charset=utf-8

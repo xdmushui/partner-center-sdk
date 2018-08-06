@@ -2,7 +2,7 @@
 title: Get a record of Partner Center activity
 description: How to get a record of operations performed by a partner user or application over a period of time.
 ms.assetid: C24054DA-3E31-4BCD-BEB5-085564C20C58
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -38,7 +38,7 @@ Next, use the [**AuditRecords**](https://docs.microsoft.com/dotnet/api/microsoft
 
 Once you have the initial page of items, use the [**Enumerators.AuditRecords.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) method to create an enumerator that you can use to iterate through the remaining pages.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 var startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 01);
@@ -187,7 +187,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 2859
 Content-Type: application/json; charset=utf-8

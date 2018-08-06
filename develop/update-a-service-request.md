@@ -2,7 +2,7 @@
 title: Update a service request
 description: How to update an existing customer service request that a Cloud Solution Provider has filed with Microsoft on the customer's behalf.
 ms.assetid: 09C13775-739B-4CB9-9442-456E17F91452
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -33,7 +33,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 To update a customer's service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method with the service request id to identify and return the service request interface. Then call the [**IServiceRequest.Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) or [**PatchAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) method to update the service request. To provide the updated values, create a new, empty [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object and set only the property values that you want to change. Then pass that object in the call to the Patch or PatchAsync method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // ServiceRequest existingServiceRequest;
 
@@ -129,7 +129,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 566
 Content-Type: application/json; charset=utf-8

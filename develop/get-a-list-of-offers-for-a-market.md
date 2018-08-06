@@ -2,7 +2,7 @@
 title: Get a list of offers for a market
 description: Gets a collection that contains all the offers for a specific market.
 ms.assetid: 9251B841-498D-4B20-A90B-EB493A8FF212
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ Gets a collection that contains all the offers for a specific market.
 
 To get a list of offers in a given market, use your **IAggregatePartner.Offers** collection, select the market by country, and call the **Get()** or **Get Async()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get();
@@ -91,7 +91,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 26584
 Content-Type: application/json

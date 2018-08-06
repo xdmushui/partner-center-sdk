@@ -2,7 +2,7 @@
 title: DeviceDeployment
 description: Describes resources related to device deployment.
 ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

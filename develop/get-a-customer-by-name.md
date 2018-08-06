@@ -2,7 +2,7 @@
 title: Get a list of customers filtered by a search field
 description: Gets a collection of Customer resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
 ms.assetid: 7D5D8C83-1DBD-4C54-8CDA-FE0CAC911D14
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -36,7 +36,7 @@ Next, instantiate an [**iQuery**](https://docs.microsoft.com/dotnet/api/microsof
 
 Finally, to execute the filter and get the result, first use [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Then call the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) method.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 
 // Specify the partial string to filter by (to match Contoso).
@@ -131,7 +131,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1839
 Content-Type: application/json; charset=utf-8

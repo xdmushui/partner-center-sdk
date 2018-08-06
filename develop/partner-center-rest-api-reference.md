@@ -6,7 +6,7 @@ description:
     systems that manage customer accounts, place orders, manage
     subscriptions, and handle support requests.
 ms.assetid: 25191A95-52BB-4E33-A63C-5D00FAF55806
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

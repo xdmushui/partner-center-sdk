@@ -2,7 +2,7 @@
 title: Update the partner legal business profile
 description: How to update the partner legal business profile.
 ms.assetid: DEB60680-145D-47C5-BB19-374752D45236
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -33,7 +33,7 @@ To update the partner legal business profile, first instantiate a **LegalBusines
 
 Next, get an interface to the partner profile operations collection from the **IAggregatePartner.Profiles** property. Then, retrieve the value of the **LegalBusinessProfile** property to get an interface to legal business profile operations. Finally, call the [**Update**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.update) or [**UpdateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.updateasync) method with the changed object to update the profile.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 var legalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfile.Get();
@@ -138,7 +138,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1157
 Content-Type: application/json; charset=utf-8

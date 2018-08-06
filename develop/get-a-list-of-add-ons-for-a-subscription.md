@@ -2,7 +2,7 @@
 title: Get a list of add-ons for a subscription
 description: Gets a collection of add-ons that a customer has chosen to add to their Subscription.
 ms.assetid: F10823A2-CA77-4F80-9ED4-CFB4E4343049
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -33,7 +33,7 @@ Gets a collection of add-ons that a customer has chosen to add to their [Subscri
 
 To get the list of add-ons for a customer's subscription, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method. Finish by calling the [**Addons**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.addons) property, followed by [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionaddoncollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionaddoncollection.getasync).
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var selectedCustomerId as string;
 // var selectedSubscription Subscription;
@@ -96,7 +96,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 73754
 Content-Type: application/json

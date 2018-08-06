@@ -2,7 +2,7 @@
 title: Create user accounts for a customer
 description: Create a new user account for your customer.
 ms.assetid: E46AB186-F4E1-4A00-AE62-28A843F9C288
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -29,7 +29,7 @@ Create a new user account for your customer.
 
 To obtain a new user account for a customer, create a new **CustomerUser** object with the relevant user information. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, followed by the **Create** method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 // var SelectedCustomer;
@@ -113,7 +113,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json

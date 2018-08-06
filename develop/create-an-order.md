@@ -2,7 +2,7 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -41,7 +41,7 @@ Next, obtain an interface to order operations by calling the [**IAggregatePartne
 
 Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](orders.md) object.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
 string offerId;
@@ -188,7 +188,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 788
 Content-Type: application/json; charset=utf-8

@@ -2,7 +2,7 @@
 title: Get invoice statement
 description: Retrieves an invoice statement using the invoice ID.
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -32,7 +32,7 @@ Retrieves an invoice statement using the invoice ID.
 
 To get an invoice statement by ID, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Documents()** and **Statement()** methods to access the invoice statement. Finally, call the **Get()** or **GetAsync()** methods.
 
-```CSharp
+``` csharp
 // IPartner scopedPartnerOperations;
 // string selectedInvoiceId;
 
@@ -91,7 +91,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 219753
 Content-Type: application/json; charset=utf-8

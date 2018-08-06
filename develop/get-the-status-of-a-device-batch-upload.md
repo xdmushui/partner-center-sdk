@@ -2,7 +2,7 @@
 title: Get the status of a device batch upload
 description: How to get the status of a device batch upload for a specified customer.
 ms.assetid: 2965869E-824A-497E-9A77-6FC1BA18C55B
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ How to get the status of a device batch upload for a specified customer.
 
 To get the status of a device batch upload, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, call the [**BatchUploadStatus.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatuscollection.byid) method with the batch tracking ID to get an interface to batch upload status operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatus.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatus.getasync) method to retrieve the status.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations; 
 string selectedCustomerId; 
 string selectedTrackingId; 
@@ -95,7 +95,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 400
 MS-CorrelationId: 4a5002a2-0c1b-4e57-b491-dbcf19c0e7b8

@@ -4,7 +4,7 @@ description:
     Describes a product listed in the reseller catalog that they can offer
     to their customers.
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

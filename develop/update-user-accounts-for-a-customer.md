@@ -2,7 +2,7 @@
 title: Update user accounts for a customer
 description: Update details in an existing user account for your customer.
 ms.assetid: 26E79662-2376-4208-A645-20069DBE0457
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -29,7 +29,7 @@ Update details in an existing user account for your customer.
 
 To update the details for a specified customer user, first retrieve the specified customer ID and user to update. Then, create an updated version of the user in a new **CustomerUser** object. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, the **ById()** method, followed by the **Patch()** method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // customerUser specifiedUser;
 // IAggregatePartner partnerOperations;
@@ -108,7 +108,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json

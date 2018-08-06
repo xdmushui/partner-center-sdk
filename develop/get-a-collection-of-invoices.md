@@ -2,7 +2,7 @@
 title: Get a collection of invoices
 description: How to retrieve a collection of the partner's invoices.
 ms.assetid: B5392987-3D2E-493B-9F97-A20055D5D46A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -35,7 +35,7 @@ To get a paged collection of invoices, first call the [**BuildIndexedQuery**](ht
 
 Next, use the [**Enumerators**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.enumerators) property to get an interface to the collection of supported resource collection enumerators, and then call [**Invoices.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) to create an enumerator for traversing the collection of invoices. Finally, use the enumerator to retrieve and work with each page of invoices as shown in the following code example. Each call to the [**Next**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.enumerators.iresourcecollectionenumerator-1.next) method sends a request for the next page of invoices based on the page size.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // int invoicePageSize;
 
@@ -130,7 +130,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 256
 Content-Type: application/json; charset=utf-8

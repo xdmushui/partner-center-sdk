@@ -2,7 +2,7 @@
 title: Get support profile
 description: Gets an object representing a user's support profile.
 ms.assetid: 7161B81C-09E7-46C8-8EF4-214B3ED76FB7
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -30,7 +30,7 @@ Gets an object representing a user's support profile.
 
 To get your support profile, use your **IAggregatePartner.Profiles** collection. Call the [**SupportProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 SupportProfile supportProfile = partnerOperations.Profiles.SupportProfile.Get();
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 502
 Content-Type: application/json

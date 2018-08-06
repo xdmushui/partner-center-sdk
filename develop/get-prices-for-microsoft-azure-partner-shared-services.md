@@ -2,7 +2,7 @@
 title: Get prices for Microsoft Azure Partner Shared Services
 description: How to get an Azure Rate Card with prices for Microsoft Azure Partner Shared Services.
 ms.assetid: B5B2F63A-D33F-4D76-8917-9952E6355746
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -76,7 +76,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1545508
 Content-Type: application/json; charset=utf-8

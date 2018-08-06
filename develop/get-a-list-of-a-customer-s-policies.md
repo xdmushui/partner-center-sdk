@@ -2,7 +2,7 @@
 title: Get a list of a customer's policies
 description: How to retrieve a collection of the specified customer's configuration policies.
 ms.assetid: 37C40EFC-7BC9-4111-BB9E-27018B583391
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -30,7 +30,7 @@ How to retrieve a collection of the specified customer's configuration policies.
 
 To get a list of all of a customer's policies, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Next, retrieve the [**ConfigurationPolicies**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.configurationpolicies) property to get an interface to configuration policy collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.getasync) method to retrieve the collection of policies.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string selectedCustomerId;
 
@@ -92,7 +92,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1221
 Content-Type: application/json; charset=utf-8

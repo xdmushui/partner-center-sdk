@@ -2,7 +2,7 @@
 title: Update an organization profile
 description: Updates a partner's billing profile.
 ms.assetid: 8EC7E1A8-883A-4BF2-BAD7-36A0E043FCA3
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ Updates a partner's billing profile.
 
 To update your organization profile, retrieve the profile and make any necessary changes. Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the **Update()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 OrganizationProfile organizationProfile = partnerOperations.Profiles.OrganizationProfile.Get();
@@ -118,7 +118,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 648
 Content-Type: application/json; charset=utf-8

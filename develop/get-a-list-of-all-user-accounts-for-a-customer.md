@@ -2,7 +2,7 @@
 title: Get a list of all user accounts for a customer
 description: Get a list of all user accounts that belong to one of your customers. To look up a single user account by ID, see Get a user account by ID.
 ms.assetid: B6F79138-D0CD-4344-9233-D8031FDD41BF
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -29,7 +29,7 @@ Get a list of all user accounts that belong to one of your customers. To look up
 
 To retrieve the collection of all user accounts for a specified customer, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the specified customer ID to identify the customer. Then call the [**Users.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.getasync) method to retrieve the collection.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
@@ -91,7 +91,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1030
 Content-Type: application/json; charset=utf-8

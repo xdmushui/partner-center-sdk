@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: How to get a collection of invoice line item details for the specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -40,7 +40,7 @@ To get a collection of line items that correspond to an InvoiceDetail instance, 
 
 Finally, create an enumerator to traverse the collection as shown in the following example.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // int invoicePageSize;
 // string invoiceId;

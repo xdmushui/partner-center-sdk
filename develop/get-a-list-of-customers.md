@@ -2,7 +2,7 @@
 title: Get a list of customers
 description: Gets a collection of resources representing all the partner's customers.In the Partner Center dashboard, this operation can be performed by selecting either View Customers under Customer management on the main page, or selecting Customers in the sidebar.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 5/23/2018
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To get a list of all customers, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
 
-```csharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 var allCustomers = new List<Customer>();
@@ -96,7 +96,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 15650
 Content-Type: application/json

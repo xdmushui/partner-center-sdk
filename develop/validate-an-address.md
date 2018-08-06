@@ -2,7 +2,7 @@
 title: Validate an address
 description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -33,7 +33,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartners.Validations** property, and call the **IsAddressValid** method with the address object.
 
-```CSharp
+``` csharp
 // Create an address to validate.
 Address address = new Address()
 {

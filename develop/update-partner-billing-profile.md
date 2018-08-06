@@ -2,7 +2,7 @@
 title: Update the partner billing profile
 description: Updates a partner's billing profile.
 ms.assetid: F924B390-90C6-43B3-BB12-F4831464EC1F
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -31,7 +31,7 @@ Updates a partner's billing profile
 
 To update a partner billing profile, retrieve the existing profile. Once you have updated the profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the **Update()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 BillingProfile existingBillingProfile = partnerOperations.Profiles.BillingProfile.Get();
@@ -120,7 +120,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 568
 Content-Type: application/json; charset=utf-8

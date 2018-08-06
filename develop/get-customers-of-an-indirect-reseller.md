@@ -2,7 +2,7 @@
 title: Get customers of an indirect reseller
 description: How to get a list of the customers of an indirect reseller.
 ms.assetid: 2920F056-E6B8-4C66-9EEA-4577BEC034F9
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
@@ -35,7 +35,7 @@ To execute the filter and get the result, first use [**IAggregatePartner.Custome
 
 To create an enumerator for traversing paged results, get the customer collection enumerator factory interface from the [**IAggregatePartner.Enumerators.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.enumerators.iresourcecollectionenumeratorcontainer.customers) property, and then call [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create), as shown in the code below, passing the variable that holds the customer collection.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string indirectResellerId;
 
@@ -135,7 +135,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 2273
 Content-Type: application/json; charset=utf-8

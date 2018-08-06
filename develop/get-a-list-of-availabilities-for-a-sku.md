@@ -2,7 +2,7 @@
 title: Get a list of availabilities for a SKU
 description: Gets a collection of availabilities for the specified product and SKU.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: partner-center
@@ -30,7 +30,7 @@ Gets a collection of availabilities for the specified product and SKU.
 
 To get the list of [availabilities](products.md#availability) for a [SKU](products.md#sku), start by using following the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific sku's operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the operations for availabilities. Finally, call **Get()** or **GetAsync()** to retrieve a collection of the availabilities for this SKU. Optionally, you can use the **ByTargetSegment()** method to filter the availabilities by target segment before calling **Get()** or **GetAsync()**.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string countryCode;
 string productId; 
@@ -107,7 +107,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: Microsoft-IIS/10.0
