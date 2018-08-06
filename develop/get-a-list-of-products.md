@@ -28,7 +28,7 @@ Gets a collection of products.
 
 To get a list of products, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, select the catalog view by using the **ByTargetView()** method, and optionally select the target segment by using the **ByTargetSegment()** method. Finally, call the **Get()** or **GetAsync()** method to return the collection. 
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 
 // Get the products for the specified catalog view.
@@ -98,7 +98,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 {
     "totalCount": 19,
     "items": [

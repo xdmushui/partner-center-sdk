@@ -32,7 +32,7 @@ Gets a [collection resource](https://msdn.microsoft.com/library/partnercenter/mt
 
 To get a subscription's resource usage information, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property. Finish by calling the **Get()** or **GetAsync()** methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var selectedCustomerId as string;
 // var selectedSubscriptionID as string;
@@ -93,7 +93,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 12014
 Content-Type: application/json

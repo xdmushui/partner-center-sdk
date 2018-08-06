@@ -31,7 +31,7 @@ Gets a collection that contains all the offer categories in a given country/regi
 
 To get a list of offer categories in a given country/region and locale, use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection, call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context, and inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 ResourceCollection<OfferCategory> offerCategoryResults = partnerOperations.With(RequestContextFactory.Instance.Create()).OfferCategories.ByCountry("US").Get();
@@ -92,7 +92,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1184
 Content-Type: application/json

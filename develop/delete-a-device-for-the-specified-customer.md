@@ -32,7 +32,7 @@ How to delete a device belonging to the specified customer.
 
 To delete a device for the specified customer, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to retrieve an interface to operations on the customer. Next, call the [**DeviceBatches.ById**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.byid) method with the device batch identifier to get an interface to operations for the specified batch. Then, call the [**Devices.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicecollection.byid) method to get an interface to operation on the specified device. Finally, call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevice.delete) or [**DeleteAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevice.deleteasync) method to delete the device from the batch.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string selectedCustomerId;
 string selectedDeviceBatchId;
@@ -98,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 394d96d0-05b2-4b02-b907-0697632ee3bb

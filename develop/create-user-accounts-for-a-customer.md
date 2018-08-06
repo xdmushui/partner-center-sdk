@@ -29,7 +29,7 @@ Create a new user account for your customer.
 
 To obtain a new user account for a customer, create a new **CustomerUser** object with the relevant user information. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, followed by the **Create** method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 // var SelectedCustomer;
@@ -113,7 +113,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json

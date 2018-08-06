@@ -38,7 +38,7 @@ method with the specified customer's ID. Then access the [**UsageBudget**](https
 property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
 [**PatchAsync()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
@@ -117,7 +117,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 12014
 Content-Type: application/json

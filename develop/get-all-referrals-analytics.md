@@ -80,7 +80,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 {
   "id": "112310",
   "status": "Accepted",

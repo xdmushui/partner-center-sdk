@@ -35,7 +35,7 @@ To Checkout an order for a customer, get the cart using the **Get()** method by 
 Finally, call the **Create** or **CreateAsync()** method to create the order.
 
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
 string cartId;
@@ -102,7 +102,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 764
 Content-Type: application/json; charset=utf-8

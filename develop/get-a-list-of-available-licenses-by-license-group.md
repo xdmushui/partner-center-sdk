@@ -30,7 +30,7 @@ How to get a list of licenses for the specified license groups available to user
 
 To get a list of available licenses for the specified license groups, start by instantiating a [List](https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx) of type [**LicenseGroupId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get the value of the [**SubscribedSkus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscribedskus) property to retrieve an interface to customer subscribed SKU collection operations. Finally, pass the list of license groups to the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to retrieve the list of subscribed SKUs with details on available license units.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 
@@ -102,7 +102,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 4328
 Content-Type: application/json; charset=utf-8

@@ -29,7 +29,7 @@ Gets a collection of SKUs for a particular product.
 
 To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Finally, call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product. Optionally, you can use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string countryCode;
 string productId;
@@ -105,7 +105,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: Microsoft-IIS/10.0

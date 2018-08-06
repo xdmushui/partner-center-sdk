@@ -83,7 +83,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 {
     "customerTenantId": "76906668-27FC-4F5B-A35C-75A9823E13AF",
     "customerName": "TESTORG65656565",

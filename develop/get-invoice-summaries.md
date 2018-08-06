@@ -32,7 +32,7 @@ Gets an **InvoiceSummaries** resource that contains an invoice summary for each 
 
 To retrieve an [**InvoiceSummaries**](invoice.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
 
-```CSharp
+``` csharp
 // IAggregatePartner scopedPartnerOperations;
 
 // Get the invoice summaries collection.
@@ -90,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 256
 Content-Type: application/json; charset=utf-8

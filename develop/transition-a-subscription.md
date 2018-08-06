@@ -33,7 +33,7 @@ Upgrades a customer's subscription to a specified target subscription.
 
 To upgrade a customer's subscription, first [get that's customer's subscription](get-a-subscription-by-id.md). Then, obtain a list of upgrades for that subscription by calling the **Upgrades** property followed by the **Get()** or **GetAsync()** methods. Choose a target upgrade from that list of upgrades, and then call the **Upgrades** property of the initial subscription, followed by the **Create()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 // string subscriptionIdForUpgrade;
@@ -160,7 +160,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 138
 Content-Type: application/json

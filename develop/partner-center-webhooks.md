@@ -151,7 +151,7 @@ host: api.partnercenter.microsoft.com
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 183
@@ -194,7 +194,7 @@ Content-Length: 219
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -234,7 +234,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 341
@@ -280,7 +280,7 @@ Content-Length: 258
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -323,7 +323,7 @@ Content-Length:
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 181
@@ -359,7 +359,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**     
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 469
@@ -390,7 +390,7 @@ X-Locale: en-US
 
 **Sample Callback Controller signature (ASP.NET)**     
 
-```csharp
+``` csharp
 [AuthorizeSignature]
 [Route("webhooks/callback")]
 public IHttpActionResult Post(PartnerResourceChangeCallBack callback)
@@ -399,7 +399,7 @@ public IHttpActionResult Post(PartnerResourceChangeCallBack callback)
 **Signature Validation**      
 The following example shows how to add an Authorization Attribute to the controller that is receiving callbacks from Webhook events.
 
-```csharp
+``` csharp
 namespace Webhooks.Security
 {
     using System;

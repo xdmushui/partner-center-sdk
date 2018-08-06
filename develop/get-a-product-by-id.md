@@ -29,7 +29,7 @@ Gets the specified product resource using a product ID.
 
 To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product. 
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 
 Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z0BQ3Q").Get();
@@ -92,7 +92,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1918
 Content-Type: application/json

@@ -30,7 +30,7 @@ Gets an object representing a user's support profile.
 
 To get your support profile, use your **IAggregatePartner.Profiles** collection. Call the [**SupportProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 SupportProfile supportProfile = partnerOperations.Profiles.SupportProfile.Get();
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 502
 Content-Type: application/json

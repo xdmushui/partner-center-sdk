@@ -29,7 +29,7 @@ Get a list of all the roles/permissions attached to a user account. Variations i
 
 To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or **GetAsync()**method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 
@@ -40,7 +40,7 @@ var directoryRoles = partnerOperations.Customers.ById(selectedCustomerId).Direct
 
 To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or **GetAsync()**method.
 
-```CSharp
+``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 // string selectedDirectoryRoleId;
@@ -102,7 +102,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json

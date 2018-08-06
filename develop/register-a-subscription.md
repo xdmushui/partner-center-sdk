@@ -34,7 +34,7 @@ To register a customer's subscription, retrieve an interface to subscription ope
 
 Finally, call the **Registration.Register()** method to register the subscription and retrieve a URI that can be used to get the subscription registration status. For more information, see [Get subscription registration status](get-subscription-registration-status.md).
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var selectedCustomerId;
 // var selectedSubscriptionId;
@@ -99,7 +99,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 202 Accepted
 Content-Length: 0
 Location: /customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus

@@ -31,7 +31,7 @@ Gets an object representing the partner's MPN profile.
 
 To get a partner network profile, use your **IAggregatePartner.Profiles** collection and call the **MpnProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 mpnProfile = partnerOperations.Profiles.MpnProfile.Get();
@@ -80,7 +80,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8

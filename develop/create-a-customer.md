@@ -39,7 +39,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To add a customer, instantiate a new [Customer](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [BillingProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [CompanyProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Then, add it to your [IAggregatePartners.Customers](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [Create()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [CreateAsync()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 var partnerOperations = this.Context.UserPartnerOperations;
 
@@ -181,7 +181,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 834
 Content-Type: application/json; charset=utf-8

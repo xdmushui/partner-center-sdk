@@ -28,7 +28,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To retrieve aggregated data on licenses deployment, first get an interface to partner level analytics collection operations from the [**IAggregatePartner.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the partner level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.ipartneranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**PartnerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesusageinsights) objects.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 var partnerLicensesUsageAnalytics = partnerOperations.Analytics.Licenses.Usage.Get();
@@ -76,7 +76,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1156
 Content-Type: application/json; charset=utf-8

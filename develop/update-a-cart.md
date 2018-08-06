@@ -36,7 +36,7 @@ Finally, call the **Put()** or **PutAsync()** method to create the order.
 
 
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
 string cartId;
@@ -155,7 +155,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 201 Created
 Content-Length: 764
 Content-Type: application/json; charset=utf-8

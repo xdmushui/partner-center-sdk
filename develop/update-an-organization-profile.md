@@ -31,7 +31,7 @@ Updates a partner's billing profile.
 
 To update your organization profile, retrieve the profile and make any necessary changes. Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the **Update()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 OrganizationProfile organizationProfile = partnerOperations.Profiles.OrganizationProfile.Get();
@@ -118,7 +118,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 648
 Content-Type: application/json; charset=utf-8

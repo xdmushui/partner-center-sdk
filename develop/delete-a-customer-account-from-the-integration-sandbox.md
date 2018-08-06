@@ -42,7 +42,7 @@ For each [**Entitlement**](entitlement.md) in the collection, use the [**entitle
 
 To ensure that all orders are cancelled, the following example uses a loop to poll each order until it's status is "Cancelled". When all orders are cancelled, call the **Delete** method for the customer.
 
-```CSharp
+``` csharp
 // IPartnerCredentials tipAccountCredentials;
 // Customer tenant Id to be deleted.
 // string customerTenantId;
@@ -134,7 +134,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd

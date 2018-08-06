@@ -28,7 +28,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To retrieve aggregated data on deployment for a specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then get an interface to customer level analytics collection operations from the [**Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.analytics) property. Next, retrieve an interface to the customer level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.icustomeranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**CustomerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.customerlicensesusageinsights) objects.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string customerIdToRetrieve;
 
@@ -88,7 +88,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1726
 Content-Type: application/json; charset=utf-8

@@ -31,7 +31,7 @@ Gets an object representing the partner's organization profile.
 
 To get your organization profile, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.getasync) methods.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 OrganizationProfile organizationProfile = partnerOperations.Profiles.OrganizationProfile.Get();
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 648
 Content-Type: application/json; charset=utf-8
