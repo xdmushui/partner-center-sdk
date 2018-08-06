@@ -31,7 +31,7 @@ Gets a collection that contains all the offers for a specific market.
 
 To get a list of offers in a given market, use your **IAggregatePartner.Offers** collection, select the market by country, and call the **Get()** or **Get Async()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get();

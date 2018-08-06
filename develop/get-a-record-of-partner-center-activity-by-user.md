@@ -38,7 +38,7 @@ Next, use the [**AuditRecords**](https://docs.microsoft.com/dotnet/api/microsoft
 
 Once you have the initial page of items, use the [**Enumerators.AuditRecords.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) method to create an enumerator that you can use to iterate through the remaining pages.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 var startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 01);

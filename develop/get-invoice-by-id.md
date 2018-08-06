@@ -32,7 +32,7 @@ Retrieves a given invoice using the invoice ID.
 
 To get an invoice by ID, use your **IPartner.Invoices** collection and call the **ById()** method, then call the **Get()** or **GetAsync()** methods.
 
-```CSharp
+``` csharp
 // IPartner scopedPartnerOperations;
 // string selectedInvoiceId;
 

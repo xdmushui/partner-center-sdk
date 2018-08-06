@@ -31,7 +31,7 @@ Updates a partner's billing profile
 
 To update a partner billing profile, retrieve the existing profile. Once you have updated the profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the **Update()** method.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 BillingProfile existingBillingProfile = partnerOperations.Profiles.BillingProfile.Get();

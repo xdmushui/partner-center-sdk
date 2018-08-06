@@ -32,7 +32,7 @@ To add a new customer for an indirect reseller, start by instantiating a new [**
 
 Then, use the [**IAggregatePartners.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // var indirectResellerId;
 var customerToCreate = new Customer()

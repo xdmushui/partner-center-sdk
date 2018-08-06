@@ -35,7 +35,7 @@ To Checkout an order for a customer, get the cart using the **Get()** method by 
 Finally, call the **Create** or **CreateAsync()** method to create the order.
 
 
-```CSharp
+``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
 string cartId;

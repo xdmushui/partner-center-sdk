@@ -40,7 +40,7 @@ After confirming that all active Azure Reserved VM Instances for that customer a
 To re-establish the relationship, repeat the process of [requesting a reseller relationship](https://docs.microsoft.com/en-us/partner-center/develop/request-reseller-relationship). 
 
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 
 // Prompt the user the enter the customer ID.

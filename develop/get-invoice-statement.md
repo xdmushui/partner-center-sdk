@@ -32,7 +32,7 @@ Retrieves an invoice statement using the invoice ID.
 
 To get an invoice statement by ID, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Documents()** and **Statement()** methods to access the invoice statement. Finally, call the **Get()** or **GetAsync()** methods.
 
-```CSharp
+``` csharp
 // IPartner scopedPartnerOperations;
 // string selectedInvoiceId;
 

@@ -31,7 +31,7 @@ How to retrieve the details of an existing customer service request using the se
 
 To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // ServiceRequest existingServiceRequest as ServiceRequest;
 

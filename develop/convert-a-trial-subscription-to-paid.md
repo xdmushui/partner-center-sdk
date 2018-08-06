@@ -34,27 +34,27 @@ To convert a trial subscription to paid, you must first obtain a collection of t
 Here are the steps to convert a trial subscription through code:
 
 1.  Get an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
-    ```CSharp
+    ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
 2.  Get a collection of the available conversion offers. For more information and details on the request/response for this method, see [Get a list of trial conversion offers](get-a-list-of-trial-conversion-offers.md).
-    ```CSharp
+    ``` csharp
     var conversions = subscriptionOperations.Conversions.Get();
     ```
 
 3.  Choose a conversion offer. The following code chooses the first conversion offer in the collection.
-    ```CSharp
+    ``` csharp
     var selectedConversion = conversions.Items.ToList()[0];
     ```
 
 4.  Optionally, specify the number of licenses to purchase. The default is the number of licenses in the trial subscription.
-    ```CSharp
+    ``` csharp
     selectedConversion.Quantity = 10;
     ```
 
 5.  Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to convert the trial subscription to paid.
-    ```CSharp
+    ``` csharp
     var convertResult = subscriptionOperations.Conversions.Create(selectedConversion);
     ```
 
@@ -67,7 +67,7 @@ Next, use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.
 
 Having selected a conversion offer, the next step is to use the reference to the subscription operations interface that you saved in a local variable and use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions. Then pass the selected conversion offer object to the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to attempt the trial conversion.
 
-```CSharp
+``` csharp
 // IAggregatePartner partnerOperations;
 // string customerId;
 // string subscriptionId; 

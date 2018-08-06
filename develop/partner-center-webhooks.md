@@ -390,7 +390,7 @@ X-Locale: en-US
 
 **Sample Callback Controller signature (ASP.NET)**     
 
-```csharp
+``` csharp
 [AuthorizeSignature]
 [Route("webhooks/callback")]
 public IHttpActionResult Post(PartnerResourceChangeCallBack callback)
@@ -399,7 +399,7 @@ public IHttpActionResult Post(PartnerResourceChangeCallBack callback)
 **Signature Validation**      
 The following example shows how to add an Authorization Attribute to the controller that is receiving callbacks from Webhook events.
 
-```csharp
+``` csharp
 namespace Webhooks.Security
 {
     using System;
