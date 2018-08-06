@@ -2,7 +2,7 @@
 title: Get licenses assigned to a user by license group
 description: How to get a list of user assigned licenses for the specified license groups.
 ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

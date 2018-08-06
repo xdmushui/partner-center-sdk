@@ -2,7 +2,7 @@
 title: Get service request details by ID.
 description: How to retrieve the details of an existing customer service request by ID.
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 02/06/2018
 ms.topic: article
 ms.prod: partner-center

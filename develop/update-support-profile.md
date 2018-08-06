@@ -2,7 +2,7 @@
 title: Update support profile
 description: Updates a user's support profile.
 ms.assetid: 3F98BD1D-2490-4F0B-A8FF-7D80B7E0690E
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

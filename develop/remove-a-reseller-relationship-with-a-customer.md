@@ -2,7 +2,7 @@
 title: Remove a reseller relationship with a customer
 description: How to remove a reseller relationship with a customer that you no longer have transactions with. 
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 01/12/2018
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: Get add-ons for an offer ID
 description: How to get the add-ons for an offer ID.
 ms.assetid: 647EBB14-7ABF-47A4-A342-7A691D8B2BA4
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

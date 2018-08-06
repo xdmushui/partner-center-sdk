@@ -2,7 +2,7 @@
 title: Associate a Partner Center Account with an Active Azure Subscription Account
 description: The following topic describes how to associate an existing Partner Center account with an active Azure subscription account.
 ms.assetid: A12C3DF9-B05E-4E32-9F33-CAE19F99A9AE
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

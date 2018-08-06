@@ -1,7 +1,7 @@
 ---
 title: Partner Center Managed API Reference
 description: The Partner Center SDK includes a managed API and a REST API for partners to use to manage customer, subscription, and order data.
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

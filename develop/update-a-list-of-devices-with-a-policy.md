@@ -2,7 +2,7 @@
 title: Update a list of devices with a policy
 description: How to update a list of devices with a configuration policy for the specified customer.
 ms.assetid: D68DAE8B-EFBC-4C71-8CB4-3ADA8D45DDBA
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

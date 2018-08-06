@@ -2,7 +2,7 @@
 title: Suspend a subscription
 description: Suspends a Subscription resource that matches the customer and subscription ID due to fraud or non-payment.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.assetid: 2800933A-A480-4C79-8298-84217DD5A350
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

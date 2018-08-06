@@ -2,7 +2,7 @@
 title: Get a list of all user accounts for a customer
 description: Get a list of all user accounts that belong to one of your customers. To look up a single user account by ID, see Get a user account by ID.
 ms.assetid: B6F79138-D0CD-4344-9233-D8031FDD41BF
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

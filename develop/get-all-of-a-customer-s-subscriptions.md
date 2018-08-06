@@ -2,7 +2,7 @@
 title: Get a customer's subscriptions
 description: How to get a collection of a customer's subscriptions.
 ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

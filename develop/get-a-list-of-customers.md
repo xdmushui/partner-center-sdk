@@ -2,7 +2,7 @@
 title: Get a list of customers
 description: Gets a collection of resources representing all the partner's customers.In the Partner Center dashboard, this operation can be performed by selecting either View Customers under Customer management on the main page, or selecting Customers in the sidebar.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 5/23/2018
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: Get all of a customer's orders
 description: Gets a collection of all the orders for a specified customer.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

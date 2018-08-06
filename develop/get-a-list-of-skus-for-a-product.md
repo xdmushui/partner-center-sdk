@@ -2,7 +2,7 @@
 title: Get a list of SKUs for a product
 description: Gets a collection of SKUs for the specified product.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: partner-center

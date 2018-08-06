@@ -2,7 +2,7 @@
 title: Get subscription analytics by search query
 description: How to get subscription analytics information filtered by a search query. 
 ms.assetid: 
-ms.author: v-thpr   
+ms.author: mhopkins   
 robots: noindex,nofollow   
 ms.date: 05/10/2018
 ms.topic: article

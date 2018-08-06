@@ -2,7 +2,7 @@
 title: Get the partner's current account balance
 description: Retrieves the partner's current account balance. A summary of the balance and total charges of an invoice for both recurring and one-time charges.
 ms.assetid: 130C8230-6284-4B1F-8741-CA92E1ECA30F
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

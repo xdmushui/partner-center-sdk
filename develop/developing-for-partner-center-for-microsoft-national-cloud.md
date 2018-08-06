@@ -5,7 +5,7 @@ MS-HAID:
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
 ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
 description: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

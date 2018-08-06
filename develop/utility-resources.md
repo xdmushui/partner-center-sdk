@@ -4,7 +4,7 @@ description:
     The Partner Center REST API contains many resources which describe
     general-purpose data models used throughout the SDK.
 ms.assetid: C77219B9-FFDD-4779-AE15-5B15BA7BA863
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

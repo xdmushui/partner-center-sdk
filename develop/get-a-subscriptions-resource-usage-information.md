@@ -2,7 +2,7 @@
 title: Get a subscription's resource usage information
 description: Gets a collection resource that contains a list of services within a customer's subscription and their associated rated usage information.
 ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

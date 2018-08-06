@@ -2,7 +2,7 @@
 title: Relationships
 description: Describes resources related to relationships.
 ms.assetid: F6157FE3-7C9D-4A8F-AC11-6F4007594C3D
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

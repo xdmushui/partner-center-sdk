@@ -2,7 +2,7 @@
 title: Get a usage summary for all of a customer's subscriptions
 description: Gets a CustomerUsageSummary resource that represent the customer's usage of a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

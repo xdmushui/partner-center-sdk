@@ -2,7 +2,7 @@
 title: Restore a deleted user for a customer
 description: How to restore a deleted User by customer ID and user ID.
 ms.assetid: A48A4718-6EAF-4FC8-8B44-F3FDCA2B3298
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
