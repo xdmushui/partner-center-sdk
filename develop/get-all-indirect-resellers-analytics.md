@@ -38,7 +38,7 @@ How to get all the indirect resellers analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers HTTP/1.1 |
 
  
 
@@ -244,7 +244,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/indirectresellers
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/indirectresellers HTTP 1.1
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json
