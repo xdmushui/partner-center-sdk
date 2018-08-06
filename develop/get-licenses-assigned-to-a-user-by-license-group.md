@@ -105,7 +105,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76

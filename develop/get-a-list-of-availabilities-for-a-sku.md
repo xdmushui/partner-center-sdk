@@ -107,7 +107,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: Microsoft-IIS/10.0

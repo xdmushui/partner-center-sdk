@@ -98,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 394d96d0-05b2-4b02-b907-0697632ee3bb

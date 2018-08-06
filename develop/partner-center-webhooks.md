@@ -151,7 +151,7 @@ host: api.partnercenter.microsoft.com
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 183
@@ -194,7 +194,7 @@ Content-Length: 219
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -234,7 +234,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 341
@@ -280,7 +280,7 @@ Content-Length: 258
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -323,7 +323,7 @@ Content-Length:
 
 **Response example**   
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 181
@@ -359,7 +359,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**     
 
-```
+``` json
 HTTP/1.1 200
 Status: 200
 Content-Length: 469

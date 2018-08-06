@@ -92,7 +92,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 200 OK
 Content-Length: 1918
 Content-Type: application/json

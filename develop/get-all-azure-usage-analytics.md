@@ -218,7 +218,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 {
   "customerTenantId": "39A1DFAC-4969-4F31-AF94-D76588189CFE",
   "customerName": "A",

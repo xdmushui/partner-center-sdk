@@ -98,7 +98,7 @@ This method returns the following error codes:
 
 **Response example**
 
-```
+``` json
 {
     "totalCount": 19,
     "items": [

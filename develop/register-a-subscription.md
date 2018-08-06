@@ -99,7 +99,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-```
+``` json
 HTTP/1.1 202 Accepted
 Content-Length: 0
 Location: /customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus
