@@ -63,7 +63,6 @@ application.
 <td>string</td>
 <td>The type of resource acted upon by the operation. Possible values: 
 <ul>
-<li>&quot;undefined&quot;</li>
 <li>&quot;customer&quot;</li>
 <li>&quot;customer_user&quot;</li>
 <li>&quot;order&quot;</li>
@@ -94,7 +93,6 @@ application.
 <td>string</td>
 <td>The type of operation performed. Possible values:
 <ul>
-<li>&quot;undefined&quot;</li>
 <li>&quot;update_customer_qualification&quot;</li>
 <li>&quot;update_subscription&quot;</li>
 <li>&quot;upgrade_subscription&quot;</li>
