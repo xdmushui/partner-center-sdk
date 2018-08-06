@@ -2,7 +2,7 @@
 title: Purchase an add-on to a subscription
 description: How to purchase an add-on to an existing subscription.
 ms.assetid: 743520E5-0501-4403-B977-5E6D3E32DEC3
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

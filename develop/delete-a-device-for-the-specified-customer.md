@@ -2,7 +2,7 @@
 title: Delete a device for the specified customer
 description: How to delete a device belonging to the specified customer.
 ms.assetid: 44F06D4B-E9DE-470F-BAE2-15205CC7C699
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

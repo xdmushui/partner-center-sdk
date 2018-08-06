@@ -2,7 +2,7 @@
 title: Transition a subscription
 description: Upgrades a customer's subscription to a specified target subscription.
 ms.assetid: 54618BC1-6AF7-4518-925B-8A6A4C926CE7
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: Device deployment
 description: The Partner Center APIs provide access to zero-touch deployment features so you can simplify secure device setup for your customers. For more information, see the topics listed here.
 ms.assetid: 7403E326-5A33-4B39-9364-40D1E5CD2DE1
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

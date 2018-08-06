@@ -2,7 +2,7 @@
 title: Partner Center supported languages and locales
 description: List of ISO2 and ISO3 supported locales for Partner Center. 
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 01/23/2018
 ms.topic: article
 ms.prod: partner-center

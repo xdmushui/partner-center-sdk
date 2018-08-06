@@ -2,7 +2,7 @@
 title: Get the partner legal business profile
 description: How to get a partner's legal business profile.
 ms.assetid: 84A7C363-FD19-457B-8C45-A6E4E254712B
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

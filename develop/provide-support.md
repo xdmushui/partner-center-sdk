@@ -2,7 +2,7 @@
 title: Provide support
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage support and service requests.
 ms.assetid: 2E92EEA0-13D6-4FAB-896F-F95C65E7B495
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

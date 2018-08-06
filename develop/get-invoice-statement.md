@@ -2,7 +2,7 @@
 title: Get invoice statement
 description: Retrieves an invoice statement using the invoice ID.
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

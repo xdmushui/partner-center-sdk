@@ -2,7 +2,7 @@
 title: Get a customer's service costs summary
 description: Gets a customer's service costs for the specified billing period.
 ms.assetid: 99B250F7-6C29-4BC3-8427-0DF178D7BE68
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

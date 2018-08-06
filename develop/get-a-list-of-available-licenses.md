@@ -2,7 +2,7 @@
 title: Get a list of available licenses
 description: How to get a list of licenses available to users of the specified customer.
 ms.assetid: E0915C58-92D1-4BFA-88F2-0710C6B0AB0D
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

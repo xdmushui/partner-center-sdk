@@ -2,7 +2,7 @@
 title: Update a customer's billing profile
 description: Updates a customer's billing profile, including the address associated with the profile.
 ms.assetid: 77B8E08D-01C8-4BF7-A281-C8AEF0340DDC
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

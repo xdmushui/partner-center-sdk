@@ -5,7 +5,7 @@ description:
     privileges. Partners can provide support for and file service requests
     on the behalf of their managed services.
 ms.assetid: B05E9585-72E4-4330-8721-A88EC4C193D7
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

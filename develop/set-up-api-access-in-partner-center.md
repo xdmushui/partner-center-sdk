@@ -2,7 +2,7 @@
 title: Set up API access in Partner Center
 description: This topic describes the accounts you need to develop against the Partner Center SDK, how to create an integration sandbox account, and how to test in the integration sandbox.
 ms.assetid: 182A6831-6F00-4762-9A86-327BF87EA6AC
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: View deleted users for a customer
 description: Gets a list of deleted CustomerUser resources for a customer by customer ID. You can optionally set a page size. You must supply a filter.
 ms.assetid: B2248C7D-0F68-4F52-9249-D3168C2F6E83
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

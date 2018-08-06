@@ -4,7 +4,7 @@ description:
     The following HTTP request and response headers are supported by the
     Partner Center REST API.
 ms.assetid: 38A43A4C-EC31-4554-A747-0DC04B77CB99
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

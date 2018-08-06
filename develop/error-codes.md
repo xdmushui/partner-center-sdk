@@ -5,7 +5,7 @@ description:
     code that indicates whether your request was successful or why it
     failed.
 ms.assetid: 08AC1F2E-5847-4AD8-AE5B-0173C5DB589A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

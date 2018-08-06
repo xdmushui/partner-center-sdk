@@ -2,7 +2,7 @@
 title: Remove a customer user from a role
 description: How to remove a user from a directory role within a customer account.
 ms.assetid: 5129AB77-0A66-47A3-8DE8-1AC23C53F81A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: Get a list of a customer's policies
 description: How to retrieve a collection of the specified customer's configuration policies.
 ms.assetid: 37C40EFC-7BC9-4111-BB9E-27018B583391
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

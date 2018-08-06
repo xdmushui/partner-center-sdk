@@ -2,7 +2,7 @@
 title: Join the Partner Center API and SDK Early Adopter Program 
 description: Explains how Partners can collaborate with Microsoft on the development of Partner features and capabilities.
 ms.assetid: 
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 02/23/2018
 ms.topic: article
 ms.prod: partner-center

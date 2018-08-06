@@ -4,7 +4,7 @@ description:
     The resources defined here contain data used to report on usage,
     deployment, and consumption.
 ms.assetid: 1FEB08D6-AD0C-4B01-B7A8-AE05C914912B
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

@@ -5,7 +5,7 @@ description:
     billing. These subscriptions have daily and monthly usage records, along
     with a usage summary for each pay period.
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

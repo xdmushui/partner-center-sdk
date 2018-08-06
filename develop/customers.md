@@ -5,7 +5,7 @@ description:
     can be any person, employee, or organization that wishes to do business
     with Microsoft and Microsoft's resellers.).
 ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

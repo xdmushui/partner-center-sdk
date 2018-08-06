@@ -2,7 +2,7 @@
 title: Reset user password for a customer
 description: Resetting a password is very similar to updating other details in an existing user account for your customer.
 ms.assetid: DECACEE1-2492-4D2F-B4CF-ED93220B406A
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

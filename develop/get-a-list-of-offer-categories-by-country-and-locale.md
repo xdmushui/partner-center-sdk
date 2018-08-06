@@ -2,7 +2,7 @@
 title: Get a list of offer categories by market
 description: Gets a collection that contains all the offer categories in a given country/region and locale.
 ms.assetid: 69174433-74C6-4294-ACAA-C2CE3D69CFEE
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center

@@ -2,7 +2,7 @@
 title: Get a list of availabilities for a SKU
 description: Gets a collection of availabilities for the specified product and SKU.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: v-thpr
+ms.author: mhopkins
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: partner-center
