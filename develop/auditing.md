@@ -2,8 +2,8 @@
 title: Auditing
 description: The resources detailed here are used with audit operations.
 ms.assetid: FEF0BED4-2CEB-46D2-9365-D7D3C50AF0E3
-ms.author: v-thpr
-ms.date: 12/15/2017
+ms.author: mhopkins
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -61,7 +61,23 @@ application.
 <tr class="odd">
 <td>resourceType</td>
 <td>string</td>
-<td>The type of resource acted upon by the operation. Possible values: &quot;customer&quot;, &quot;customer_user&quot;, &quot;order&quot;, &quot;subscription&quot;, &quot;license&quot;, or &quot;third_party_add_on.&quot;</td>
+<td>The type of resource acted upon by the operation. Possible values: 
+<ul>
+<li>&quot;undefined&quot;</li>
+<li>&quot;customer&quot;</li>
+<li>&quot;customer_user&quot;</li>
+<li>&quot;order&quot;</li>
+<li>&quot;subscription&quot;</li>
+<li>&quot;license&quot;</li>
+<li>&quot;third_party_add_on&quot;</li>
+<li>&quot;mpn_association&quot;</li>
+<li>&quot;transfer&quot;</li>
+<li>&quot;application&quot;</li>
+<li>&quot;application_credential&quot;</li>
+<li>&quot;partner_user&quot;</li>
+<li>&quot;partner_relationship&quot;</li>
+</ul>
+</td>
 </tr>
 <tr class="even">
 <td>resourceOldValue</td>
@@ -78,13 +94,17 @@ application.
 <td>string</td>
 <td>The type of operation performed. Possible values:
 <ul>
+<li>&quot;undefined&quot;</li>
 <li>&quot;update_customer_qualification&quot;</li>
 <li>&quot;update_subscription&quot;</li>
 <li>&quot;upgrade_subscription&quot;</li>
+<li>&quot;convert_trial_subscription&quot;</li>
 <li>&quot;add_customer&quot;</li>
 <li>&quot;update_customer_billing_profile&quot;</li>
+<li>&quot;update_customer_partner_contract_company_name&quot;</li>
 <li>&quot;update_customer_spending_budget&quot;</li>
 <li>&quot;delete_customer&quot; (sandbox integration accounts only)</li>
+<li>&quot;remove_partner_customer_relationship&quot;</li>
 <li>&quot;create_order&quot;</li>
 <li>&quot;update_order&quot;</li>
 <li>&quot;create_customer_user&quot;</li>
@@ -94,7 +114,20 @@ application.
 <li>&quot;reset_customer_user_password&quot;</li>
 <li>&quot;update_customer_user_principal_name&quot;</li>
 <li>&quot;restore_customer_user&quot;</li>
-</ul></td>
+<li>&quot;create_mpn_association&quot;</li>
+<li>&quot;update_mpn_association&quot;</li>
+<li>&quot;update_sfb_customer_user_licenses&quot;</li>
+<li>&quot;update_transfer&quot;</li>
+<li>&quot;create_partner_relationship&quot;</li>
+<li>&quot;register_application&quot;</li>
+<li>&quot;unregister_pplication&quot;</li>
+<li>&quot;add_application_credential&quot;</li>
+<li>&quot;remove_application_credential&quot;</li>
+<li>&quot;create_partner_user&quot;</li>
+<li>&quot;update_partner_user&quot;</li>
+<li>&quot;remove_partner_user&quot;</li>
+</ul>
+</td>
 </tr>
 <tr class="odd">
 <td>operationDate</td>
