@@ -38,7 +38,7 @@ How to get all the search analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/search |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/search HTTP/1.1 |
 
  
 
@@ -64,7 +64,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/search
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/search HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json

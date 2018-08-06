@@ -37,7 +37,7 @@ How to get all the referrals analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals HTTP/1.1 |
  
 
 **URI parameters**
@@ -62,7 +62,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json

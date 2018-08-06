@@ -38,7 +38,7 @@ How to get all the Azure usage analytics information for your customers.
 
 | Method  | Request URI |
 |---------|-------------|
-| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure |
+| **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure HTTP/1.1 |
 
  
 
@@ -200,7 +200,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/usage/azure
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/usage/azure HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json
