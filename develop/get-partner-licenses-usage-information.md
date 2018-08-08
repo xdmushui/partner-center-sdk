@@ -86,7 +86,7 @@ MS-CV: wk0/vjugzEe0Z9cv.0
 MS-ServerId: 101112012
 Date: Wed, 15 Mar 2017 01:18:26 GMT
 
-﻿ {
+{
     "totalCount": 5,
     "items": [{
             "proratedLicensesUsagePercent": 0.0,

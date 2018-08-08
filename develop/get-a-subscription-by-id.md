@@ -106,7 +106,7 @@ MS-CV: 7v11Wa//5EuGEo+A.0
 MS-ServerId: 202010406
 Date: Fri, 27 Jan 2017 21:51:40 GMT
 
-﻿ {
+{
     "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99", 
     "entitlementId": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",
     "offerId": "MS-AZR-0145P",
@@ -155,7 +155,7 @@ MS-CV: cmde2DtbuUWi8JLq.0
 MS-ServerId: 201022015
 Date: Fri, 27 Jan 2017 00:12:53 GMT
 
-﻿ {
+{
     "id": "968BA1CF-C146-4ADF-A300-308DCF718EEE",
     "offerId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
     "offerName": "Exchange Online Archiving for Exchange Online",

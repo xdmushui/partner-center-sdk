@@ -114,7 +114,7 @@ MS-CV: 3TLmR9gz6EaCVCjR.0
 MS-ServerId: 101112616
 Date: Fri, 20 Jan 2017 19:13:14 GMT
 
-﻿ {
+{
     "totalCount": 1,
     "items": [{
             "usageLocation": "US",

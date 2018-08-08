@@ -105,7 +105,7 @@ MS-CV: P8xjUcSeY0ithZ9S.0
 MS-ServerId: 202010406
 Date: Wed, 01 Feb 2017 22:37:58 GMT
 
-﻿ {
+{
     "totalCount": 2,
     "items": [{
             "id": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",

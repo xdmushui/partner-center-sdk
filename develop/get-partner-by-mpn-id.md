@@ -107,7 +107,7 @@ MS-CV: s2GvkNgZsUSadxQX.0
 MS-ServerId: 030011719
 Date: Thu, 13 Apr 2017 18:13:40 GMT
 
-﻿ {
+{
     "mpnId": "4391507",
     "profileType": "MpnProfile",
     "links": {

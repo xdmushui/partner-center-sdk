@@ -106,7 +106,7 @@ MS-CV: InswEQre402koceL.0
 MS-ServerId: 030020344
 Date: Thu, 20 Apr 2017 19:23:39 GMT
 
-﻿ {
+{
     "skuId": "6FD2C87F-B296-42F0-B197-1E91E994B900",
     "status": "success",
     "quantity": 5,

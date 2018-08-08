@@ -139,7 +139,7 @@ MS-CV: rjLONPum/Uq94UQA.0
 MS-ServerId: 030011719
 Date: Mon, 09 Jan 2017 23:31:15 GMT
 
-﻿ {
+{
     "title": "TrialSR",
     "description": "Ignore this SR",
     "severity": "critical",
