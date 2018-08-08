@@ -97,7 +97,7 @@ MS-CV: deEp2Wy6DUitMCYA.0
 MS-ServerId: 102030524
 Date: Wed, 15 Mar 2017 01:19:18 GMT
 
-﻿ {
+{
     "totalCount": 3,
     "items": [{
             "customerName": "DT DEMO CSP CUSTOMER 005",

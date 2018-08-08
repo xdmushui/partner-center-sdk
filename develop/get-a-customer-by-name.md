@@ -141,7 +141,7 @@ MS-CV: n0lMNyJtaUC802pO.0
 MS-ServerId: 202010223
 Date: Fri, 24 Feb 2017 22:08:20 GMT
 
-﻿ {
+{
     "totalCount": 3,
     "items": [{
             "id": "c5757d70-06f3-4f23-8367-5a9e55019f94",

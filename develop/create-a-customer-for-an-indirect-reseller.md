@@ -207,7 +207,7 @@ MS-CV: Yy/YaA0gYEmfQyR/.0
 MS-ServerId: 030020525
 Date: Tue, 06 Jun 2017 23:11:40 GMT
 
-﻿ {
+{
     "id": "626099fe-17af-4756-9fd0-6a73b7127859",
     "commerceId": "626099fe-17af-4756-9fd0-6a73b7127859",
     "companyProfile": {

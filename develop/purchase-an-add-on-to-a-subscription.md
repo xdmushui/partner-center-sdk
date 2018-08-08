@@ -230,7 +230,7 @@ MS-CV: WtFy3zI8V0u2lnT9.0
 MS-ServerId: 020021921
 Date: Wed, 25 Jan 2017 23:01:08 GMT
 
-﻿ {
+{
     "id": "cf3b0e37-be0b-4cdd-b584-d1a97d98a922",
     "referenceCustomerId": "4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04",
     "billingCycle": "none",

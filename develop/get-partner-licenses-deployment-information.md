@@ -86,7 +86,7 @@ MS-CV: f0trvmq8mEScHcFS.0
 MS-ServerId: 102030524
 Date: Tue, 14 Mar 2017 17:55:01 GMT
 
-﻿ {
+{
     "totalCount": 2,
     "items": [{
             "proratedDeploymentPercent": 0.0,

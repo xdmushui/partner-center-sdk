@@ -148,7 +148,7 @@ MS-CV: KZLU42qJ4EObO75q.0
 MS-ServerId: 030020643
 Date: Tue, 21 Mar 2017 22:03:15 GMT
 
-﻿ {
+{
     "companyName": "Lucerne Publishing",
     "address": {
         "country": "US",

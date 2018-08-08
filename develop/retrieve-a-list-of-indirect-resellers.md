@@ -121,7 +121,7 @@ MS-CV: b21Ll1miM0yFMPQQ.0
 MS-ServerId: 030020643
 Date: Wed, 05 Apr 2017 21:08:44 GMT
 
-﻿ {
+{
     "totalCount": 2,
     "items": [{
             "id": "484e548c-f5f3-4528-93a9-c16c6373cb59",
