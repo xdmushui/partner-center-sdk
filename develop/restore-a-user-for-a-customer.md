@@ -131,7 +131,7 @@ MS-CV: ZTeBriO7mEaiM13+.0
 MS-ServerId: 101112616
 Date: Fri, 20 Jan 2017 22:24:55 GMT
 
-﻿ {
+{
     "usageLocation": "US",
     "id": "a45f1416-3300-4f65-9e8d-f123b397a4ea",
     "userPrincipalName": "e83763f7f2204ac384cfcd49f79f2749@dtdemocspcustomer005.onmicrosoft.com",

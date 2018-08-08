@@ -62,7 +62,7 @@ None.
 **Request example**
 
 ```
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions HTTP/1.1
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions
 Authorization: Bearer <token>
 Accept: application/json
 Content-Type: application/json

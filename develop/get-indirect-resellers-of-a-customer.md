@@ -100,7 +100,7 @@ MS-CV: plJP3ufU0UqXMeuh.0
 MS-ServerId: 020021921
 Date: Fri, 07 Apr 2017 23:42:11 GMT
 
-﻿ {
+{
     "totalCount": 1,
     "items": [{
             "id": "484e548c-f5f3-4528-93a9-c16c6373cb59",

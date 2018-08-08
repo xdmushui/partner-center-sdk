@@ -107,7 +107,7 @@ MS-CV: LdFhumtx6Ea0Kl5Z.0
 MS-ServerId: 101112202
 Date: Thu, 13 Apr 2017 20:58:08 GMT
 
-﻿ {
+{
     "totalCount": 1,
     "items": [{
             "id": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",

@@ -100,7 +100,7 @@ MS-CV: CYBB8PXMsEukJBIn.0
 MS-ServerId: 201021413
 Date: Wed, 01 Feb 2017 00:13:45 GMT
 
-﻿ {
+{
     "locale": "en-US",
     "currency": "USD",
     "isTaxIncluded": false,

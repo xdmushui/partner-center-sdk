@@ -191,7 +191,7 @@ MS-CV: ObwhuhD2tUKJoM+Z.0
 MS-ServerId: 202010223
 Date: Tue, 14 Feb 2017 20:06:02 GMT
 
-﻿ {
+{
     "id": "dfd8cc0a-c592-468c-8461-869a38d24738",
     "commerceId": "0a4ce58a-6f96-4273-8035-d9c7d31b9ba4",
     "companyProfile": {

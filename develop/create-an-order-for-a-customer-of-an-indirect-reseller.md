@@ -309,7 +309,7 @@ MS-CV: Nd3Oum/L5EywtKQK.0
 MS-ServerId: 020021921
 Date: Mon, 10 Apr 2017 23:02:24 GMT
 
-﻿ {
+{
     "id": "3eddcac6-63b2-4c40-b0b6-f47e18301492",
     "referenceCustomerId": "c501c3c4-d776-40ef-9ecf-9cefb59442c1",
     "billingCycle": "monthly",

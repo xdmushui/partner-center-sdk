@@ -185,7 +185,7 @@ MS-CV: 5AnzcZQrvUqCq3kd.0
 MS-ServerId: 030020525
 Date: Thu, 20 Apr 2017 21:50:39 GMT
 
-﻿ {
+{
     "licensesToAssign": [{
             "skuId": "f8a1db68-be16-40ed-86d5-cb42ce701560"
         }

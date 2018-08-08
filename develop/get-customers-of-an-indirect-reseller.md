@@ -145,7 +145,7 @@ MS-CV: XI2/vIHmIEGVlGL9.0
 MS-ServerId: 101112012
 Date: Tue, 11 Apr 2017 23:31:28 GMT
 
-﻿ {
+{
     "totalCount": 2,
     "items": [{
             "id": "53eb21cb-6b2d-4ee5-9e92-27dfc927e93c",
