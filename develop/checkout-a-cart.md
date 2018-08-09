@@ -7,6 +7,7 @@ ms.date: 03/19/18
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Checkout a cart

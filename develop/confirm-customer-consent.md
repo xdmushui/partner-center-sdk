@@ -7,6 +7,7 @@ ms.date: 8/02/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Confirm customer acceptance of Microsoft Cloud agreement
