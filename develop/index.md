@@ -122,12 +122,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
-                        </div>
-                    </div>
+                <div class="card">                    
                     <div class="cardText">
                         <h3>Activity log card</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
@@ -151,7 +146,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/agreement" data-linktype="external">Agreement resource</a></p>
-                        <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/agreement-metadatas" data-linktype="external">AgreementMetaData resource</a></p>
+                        <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/agreement-metadata" data-linktype="external">AgreementMetaData resource</a></p>
                     </div>
                 </div>
             </div>
@@ -161,11 +156,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Entitlements card</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-a-collection-of-entitlements" data-linktype="external">Get a collection of entitlements</a></p>
@@ -183,11 +173,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Subscriptions card</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/purchase-catalog-items" data-linktype="external">Purchase catalog items</a></p>
