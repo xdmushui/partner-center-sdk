@@ -31,7 +31,6 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 > * Belarus
 > * Brazil
 > * China
-> * Hong Kong
 > * India
 > * Indonesia
 > * Kazakhstan
