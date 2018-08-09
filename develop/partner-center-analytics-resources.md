@@ -9,6 +9,7 @@ ms.date: 06/11/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Partner Center Analytics - Resources

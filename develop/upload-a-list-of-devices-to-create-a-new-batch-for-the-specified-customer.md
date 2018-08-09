@@ -7,6 +7,7 @@ ms.date: 12/15/2017
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Upload a list of devices to create a new batch for the specified customer

@@ -9,6 +9,7 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Get all referrals analytics information

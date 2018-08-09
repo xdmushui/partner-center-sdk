@@ -7,6 +7,7 @@ ms.date: 3/06/2017
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Add a verified domain for a customer
