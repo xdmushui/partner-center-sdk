@@ -72,7 +72,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     </li>
 </ul>
 <hr />
-
 <ul id="products2" class="cardsZ cols cols3 panelContent">
     <li>
         <div class="cardSize">
@@ -112,7 +111,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     </li>
 </ul>
 <hr />
-
 <ul id="whatsnew" class="cardsF cols cols3 panelContent">
     <li>
         <div class="container">
@@ -135,11 +133,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
-                        </div>
-                    </div>
                     <div class="cardText">
                         <h3>Agreements card</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud agreement</a></p>
