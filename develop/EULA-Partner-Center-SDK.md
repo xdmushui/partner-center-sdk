@@ -1,3 +1,14 @@
+---
+title: Microsoft Partner Center SDK End User License Agreement (EULA)
+description: Microsoft Partner Center SDK End User License Agreement (EULA)
+ms.author: mhopkins
+ms.date: 08/09/2018
+ms.topic: article
+ms.prod: partner-center
+ms.technology: partner-center-sdk
+ms.localizationpriority: high
+---
+
 # MICROSOFT SOFTWARE LICENSE TERMS   
 
 ### MICROSOFT PARTNER CENTER SOFTWARE DEVELOPMENT KIT (SDK)

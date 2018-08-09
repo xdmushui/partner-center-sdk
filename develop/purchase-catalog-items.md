@@ -8,6 +8,7 @@ ms.date: 07/12/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Purchase catalog items

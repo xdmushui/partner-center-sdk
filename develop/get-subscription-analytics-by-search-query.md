@@ -8,6 +8,7 @@ ms.date: 05/10/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Get subscription analytics information filtered by a search query

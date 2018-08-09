@@ -7,6 +7,7 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Partner Center supported languages and locales

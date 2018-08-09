@@ -7,6 +7,7 @@ ms.date: 02/05/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
+ms.localizationpriority: medium
 ---
 
 # Update a customer's usage spending budget
