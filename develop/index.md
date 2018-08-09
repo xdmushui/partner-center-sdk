@@ -113,7 +113,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 </ul>
 <hr />
 
-<ul id="whatsnew" class="cardsF">
+<ul id="whatsnew" class="cardsF cols cols3 panelContent">
     <li>
         <div class="container">
             <h2>What's New</h2>
@@ -125,7 +125,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img alt="" src="images/i_sync.svg" data-linktype="relative-path">
+                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
                         </div>
                     </div>
                     <div class="cardText">
@@ -142,7 +142,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img alt="" src="images/i_sync.svg" data-linktype="relative-path">
+                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
                         </div>
                     </div>
                     <div class="cardText">
@@ -163,7 +163,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img alt="" src="images/i_sync.svg" data-linktype="relative-path">
+                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
                         </div>
                     </div>
                     <div class="cardText">
@@ -185,7 +185,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img alt="" src="images/i_sync.svg" data-linktype="relative-path">
+                            <img alt="" src="https://docs.microsoft.com/en-us/media/common/i_whats-new.svg" data-linktype="relative-path">
                         </div>
                     </div>
                     <div class="cardText">
