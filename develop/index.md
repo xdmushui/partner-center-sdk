@@ -111,7 +111,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         </div>
     </li>
 </ul>
-<hr />
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
