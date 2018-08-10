@@ -111,13 +111,10 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         </div>
     </li>
 </ul>
+<hr />
 
+<h2>What's New</h2>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
-    <li>
-        <div class="container">
-            <h2>What's New</h2>
-        </div>
-    </li>
     <li>
         <div class="cardSize">
             <div class="cardPadding">
