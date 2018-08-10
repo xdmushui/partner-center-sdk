@@ -114,6 +114,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What's New</h2>
+<p>The following topics are new or updated for Partner Center SDK version 1.9.</p>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
         <div class="cardSize">
