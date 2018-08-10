@@ -72,6 +72,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     </li>
 </ul>
 <hr />
+
 <ul id="products2" class="cardsZ cols cols3 panelContent">
     <li>
         <div class="cardSize">
@@ -111,7 +112,8 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     </li>
 </ul>
 <hr />
-<ul id="whatsnew" class="cardsF cols cols3 panelContent">
+
+<ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
         <div class="container">
             <h2>What's New</h2>
@@ -120,21 +122,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <div class="card">                    
-                    <div class="cardText">
-                        <h3>Activity log card</h3>
-                        <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Agreements card</h3>
+                        <h3>Agreements</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud agreement</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
@@ -150,7 +140,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Entitlements card</h3>
+                        <h3>Entitlements</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-a-collection-of-entitlements" data-linktype="external">Get a collection of entitlements</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/make-a-one-time-purchase" data-linktype="external">Make a one-time purchase</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/create-a-cart" data-linktype="external">Create a cart</a></p>
@@ -167,12 +157,24 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Subscriptions card</h3>
+                        <h3>Subscriptions</h3>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/purchase-catalog-items" data-linktype="external">Purchase catalog items</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/check-inventory" data-linktype="external">Check inventory</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/get-a-list-of-products" data-linktype="external">Get a list of products</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/purchase-azure-reservations" data-linktype="external">Purchase Azure reservations</a></p>
                         <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/register-a-subscription" data-linktype="external">Register a subscription</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">                    
+                    <div class="cardText">
+                        <h3>Activity log</h3>
+                        <p><a href="https://docs.microsoft.com/en-us/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
                     </div>
                 </div>
             </div>
