@@ -199,6 +199,20 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
+<td>[Referrals](Referrals.md)</td>
+<td><ul>
+<li>Referral</li>
+<li>ReferralStatus</li>
+<li>ReferralSource</li>
+<li>CustomerProfile</li>
+<li>Address</li>
+<li>Contact</li>
+<li>CustomerRequirements</li>
+<li>Participant</li>
+<li>ParticipantStatus</li>
+</ul></td>
+</tr>
+<tr class="even">
 <td>[Relationships](relationships.md)</td>
 <td><ul>
 <li>PartnerRelationship</li>
