@@ -1,0 +1,10 @@
+{
+    "redirections": 
+	[
+        {
+            "source_path": "develop/purchase-azure-reserved-vm-instances.md",
+            "redirect_url": "develop/purchase-azure-reservations",
+            "redirect_document_id": true
+        }
+	]
+}
