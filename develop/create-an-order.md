@@ -189,7 +189,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 788
 Content-Type: application/json; charset=utf-8

@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get invoice by ID
 
-
 **Applies To**
 
 -   Partner Center
@@ -44,7 +43,6 @@ var invoice = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Get();
 
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
 
-
 **Request syntax**
 
 | Method  | Request URI                                                                   |
@@ -73,7 +71,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/<invoice-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -92,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 676
 Content-Type: application/json; charset=utf-8
@@ -138,11 +136,3 @@ Date: Thu, 24 Mar 2016 05:22:14 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
