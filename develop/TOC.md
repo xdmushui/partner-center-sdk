@@ -77,6 +77,8 @@
 #### [Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)
 #### [Update user accounts for a customer](update-user-accounts-for-a-customer.md)
 #### [View deleted users for a customer](view-a-deleted-user.md)
+### [Referrals](referrals.md)
+#### [Create a referral](create-a-referral.md)
 ### [Place orders](place-orders.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 #### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)
