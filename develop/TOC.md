@@ -180,7 +180,7 @@
 #### [Order](orders.md)
 #### [Profile](profiles.md)
 #### [Products](products.md)
-#### [Referrals](referrals.md)
+#### [Referrals](referral.md)
 #### [Relationships](relationships.md)
 #### [ServiceCosts](servicecosts.md)
 #### [ServiceRequest](servicerequest.md)
