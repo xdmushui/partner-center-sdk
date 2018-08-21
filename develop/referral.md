@@ -29,11 +29,11 @@ Represents the referral.
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| Status                | [ReferralStatus](referrals.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | [ReferralSource](referrals.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
-| CustomerProfile       | [CustomerProfile](referrals.md#CustomerProfile)   | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referrals.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referrals.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+| Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
+| ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
+| Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
@@ -71,7 +71,7 @@ Represents the referral details
 | Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
 | DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
 | ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
-| Requirements          | [ReferralRequirements](referrals.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
+| Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
 
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
@@ -80,10 +80,10 @@ Contains the customer requirements
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| IndustryFocus   | [Tag](referrals.md#tag)                                       | The industries the customer is in                    |
-| Products        | [Tag](referrals.md#tag)                                       | The products the customer is interested in           |
-| ServiceTypes    | [Tag](referrals.md#tag)                                       | The services the customer is interested in           |
-| Solutions       | [Tag](referrals.md#tag)                                       | The solutions the customer is interestd in           |
+| IndustryFocus   | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
+| Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
+| ServiceTypes    | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
+| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interestd in           |
 
 
 
@@ -96,9 +96,9 @@ Contains the customer contact information
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
 | Id              | string                                                        | The Id for this CustomerProfile                      |
 | Name            | string                                                        | The customer first and last name                     |
-| Address         | [Address](referrals.md#address)                               | The address of the customer                          |
+| Address         | [Address](referral.md#address)                               | The address of the customer                          |
 | Size            | string                                                        | The number of employees at the customers organization|
-| Contacts        | [ParticipantUser](referrals.md#participantuser)               | The contact information for an individual in the customer organization                    |
+| Contacts        | [ParticipantUser](referral.md#participantuser)               | The contact information for an individual in the customer organization                    |
 
 
 
@@ -145,8 +145,8 @@ Describes the the referrals information for a given participant
 | OrganizationId            | string                                                | The unique identifier of the organization that created the participant|
 | LocationId                | string                                                | The unique identifier of the location for the organization that created the participant|
 | OrganizationName          | string                                                | The organization name that created the participant                    |
-| Users                     | [ParticipantUser](referrals.md#ParticipantUser)       | List of individuals at the customer organization                       |
-| Status                    | [ParticipantStatus](referrals.md#ParticipantStatus)   | Status of the participants referral                                   |
+| Users                     | [ParticipantUser](referral.md#ParticipantUser)       | List of individuals at the customer organization                       |
+| Status                    | [ParticipantStatus](referral.md#ParticipantStatus)   | Status of the participants referral                                   |
 | InvitedByParticipantId    | string                                                | ParticipantId of person                                               |
 | ReferralView              | link                                                  |                                                                       |
 
