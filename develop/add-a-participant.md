@@ -1,6 +1,6 @@
 ---
-title: Create a referral
-description: How to create a referral
+title: Add a participant
+description: Add a participant
 ms.assetid: 
 ms.author: mhopkins
 ms.date: 10/01/18
@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Create a referral
+# Get a referral by id
 
 
 **Applies To**
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-How to create a referral
+Add a participant
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -30,7 +30,7 @@ How to create a referral
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To do: Describe in english how to create a referral
+To do: Describe in english how to add a participant
 
 
 ``` csharp

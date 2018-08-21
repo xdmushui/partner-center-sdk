@@ -1,5 +1,5 @@
 ---
-title: Create a referral
+title: Get a referral by id
 description: How to create a referral
 ms.assetid: 
 ms.author: mhopkins
@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Create a referral
+# Get a referral by id
 
 
 **Applies To**
@@ -44,7 +44,7 @@ To do: Describe in english how to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/                                                    |
+| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}                                        |
 
  
 **Request headers**
@@ -70,45 +70,12 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```json
-POST https://api.partner.microsoft.com/v2/referrals HTTP/1.1
+GET https://api.partner.microsoft.com/v2/referrals/{referralId} HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Length: 691
 Content-Type: application/json
-{
-	"Referral" : {
-		"ReferralSource":"",
-		"CustomerProfile": {
-	        "Name": "Contoso Corporation",
-	        "Address": {
-	            "AddressLine1": "1 Contoso Way",
-	            "AddressLine2": "Suite 200",
-	            "City": "Redmond",
-	            "State": "WA",
-	            "Region": "PNW",
-	            "Country": "US",
-	            "PostalCode": "98052"
-	        }
-        },
-        "Details": {
-		    "Notes": "",
-	        "DealValue": "",
-	        "ClosingDate": "",
-	        "Requirements": {
-		        "IndustryFocus": "",
-                "Products": "",
-		        "ServiceTypes": "",
-		        "Solutions": ""		        
-	        }
-	    },
-        "Participants": {
-            "OrganizationName": "",
-            "Users": {
-
-            }
-        }
-	}
-}
+ 
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
