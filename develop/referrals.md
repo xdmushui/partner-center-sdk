@@ -17,15 +17,15 @@ ms.localizationpriority: medium
 
 -   Partner Center
 
-This section describes the ways that partners can use the [Partner Center](index.md) to programmatically manage referrals.
+This section describes the ways that partners can use the [Partner Center](index.md) to programmatically manage referrals and participants.
 
-**Referral**  
+**Referrals**  
 -   [Create a referral](create-a-referral.md) 
 -   [Get a list of all referrals](get-a-list-of-referrals.md) 
--   [Get a referral by Id](get-a-referral-by-Id.md) 
+-   [Get a referral by ID](get-a-referral-by-Id.md) 
 -   [Update referral status](update-referral-status.md)
 
 **Participants**
--   [Add a participant](add-a-participant.md) 
+-   [Create a participant](create-a-participant.md) 
 -   [Get a list of participants](get-a-list-of-participants.md) 
--   [Get a participant by Id](get-a-participant-by-id.md) 
+-   [Get a participant by ID](get-a-participant-by-id.md) 

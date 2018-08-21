@@ -34,7 +34,7 @@ To do: Describe in english how to create a referral
 
 
 ``` csharp
-<enter code here>
+<to do>
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
@@ -63,14 +63,14 @@ This table describes the [Referral](referral.md) properties in the request body.
 GET https://api.partner.microsoft.com/v2/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
-Content-Length: 691
 Content-Type: application/json
  
+<to do>
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
-If successful, this method returns the populated [Referral](referral.md) resource in the response body.
+If successful, the response body contains a collection of [Referral](referral.md) resources in the response body.
 
 **Response success and error codes**
 
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` json
-<enter code here>
+<to do>
 ```
 
  

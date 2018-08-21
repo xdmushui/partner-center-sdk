@@ -34,7 +34,7 @@ To do: Describe in english how Update referral status
 
 
 ``` csharp
-<enter code here>
+<to do>
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
@@ -71,9 +71,9 @@ This table describes the [Referral](referral.md) properties in the request body.
 POST https://api.partner.microsoft.com/v2/referrals/{referralId} HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
-Content-Length: 691
 Content-Type: application/json
  
+ <to do>
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
@@ -87,7 +87,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` json
-<enter code here>
+<to do>
 ```
 
  

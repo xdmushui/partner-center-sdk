@@ -34,7 +34,7 @@ To do: Describe in english how to add a participant
 
 
 ``` csharp
-<enter code here>
+<to do>
 ```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
@@ -66,14 +66,14 @@ This table describes the [Participant](referral.md#participant) properties in th
 POST https://api.partner.microsoft.com/v2/referrals/{referralId}/participants HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
-Content-Length: 691
 Content-Type: application/json
  
+ <to do>
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
-If successful, this method returns the populated [Referral](referral.md) resource in the response body.
+If successful, this API returns a [Participant](referral.md#participant) resource.
 
 **Response success and error codes**
 
