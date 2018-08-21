@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a referral by id
+# Add a participant
 
 
 **Applies To**
@@ -44,7 +44,7 @@ To do: Describe in english how to add a participant
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/                                                    |
+| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants                           |
 
  
 **Request headers**
@@ -55,60 +55,20 @@ To do: Describe in english how to add a participant
 
 This table describes the [Referral](referral.md) properties in the request body.
 
-| Property              | Type                                              | Description                                                                                                       |
-|-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Id                    | string                                            | The ID for this Referral.                                                                                         |
-| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
-| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+
+This table describes the [Participant](referral.md#participant) properties in the request body.
+
 
 
 **Request example**
 
 ```json
-POST https://api.partner.microsoft.com/v2/referrals HTTP/1.1
+POST https://api.partner.microsoft.com/v2/referrals/{referralId}/participants HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Length: 691
 Content-Type: application/json
-{
-	"Referral" : {
-		"ReferralSource":"",
-		"CustomerProfile": {
-	        "Name": "Contoso Corporation",
-	        "Address": {
-	            "AddressLine1": "1 Contoso Way",
-	            "AddressLine2": "Suite 200",
-	            "City": "Redmond",
-	            "State": "WA",
-	            "Region": "PNW",
-	            "Country": "US",
-	            "PostalCode": "98052"
-	        }
-        },
-        "Details": {
-		    "Notes": "",
-	        "DealValue": "",
-	        "ClosingDate": "",
-	        "Requirements": {
-		        "IndustryFocus": "",
-                "Products": "",
-		        "ServiceTypes": "",
-		        "Solutions": ""		        
-	        }
-	    },
-        "Participants": {
-            "OrganizationName": "",
-            "Users": {
-
-            }
-        }
-	}
-}
+ 
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response

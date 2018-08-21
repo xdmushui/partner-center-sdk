@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a referral by id
+# Update referral status
 
 
 **Applies To**
@@ -58,8 +58,6 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
-| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
-| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
 | ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
@@ -70,7 +68,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```json
-GET https://api.partner.microsoft.com/v2/referrals/{referralId} HTTP/1.1
+POST https://api.partner.microsoft.com/v2/referrals/{referralId} HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Length: 691

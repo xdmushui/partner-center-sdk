@@ -44,7 +44,7 @@ To do: Describe in english how to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}                                        |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}                                        |
 
  
 **Request headers**
@@ -55,16 +55,6 @@ To do: Describe in english how to create a referral
 
 This table describes the [Referral](referral.md) properties in the request body.
 
-| Property              | Type                                              | Description                                                                                                       |
-|-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Id                    | string                                            | The ID for this Referral.                                                                                         |
-| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
-| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
 
 
 **Request example**

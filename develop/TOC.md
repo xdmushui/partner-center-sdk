@@ -81,7 +81,7 @@
 #### [Create a referral](create-a-referral.md)
 #### [Get a list of referrals](get-a-list-of-referrals.md) 
 #### [Get a referral by id](get-a-referral-by-id.md) 
-#### [Update a referral status](update-a-referral-status.md)
+#### [Update referral status](update-referral-status.md)
 #### [Add a participant](add-a-participant.md) 
 #### [Get a list of participants](get-a-list-of-participants.md) 
 #### [Get a participant by id](get-a-participant-by-id.md) 

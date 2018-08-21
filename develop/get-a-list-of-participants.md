@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a referral by id
+# Get a list of participants
 
 
 **Applies To**
@@ -44,7 +44,7 @@ To do: Describe in english how to Get a list of participants
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants                           |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants                           |
 
  
 **Request headers**
@@ -61,7 +61,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```json
-POST https://api.partner.microsoft.com/v2/referrals/{referralId}/participants HTTP/1.1
+GET https://api.partner.microsoft.com/v2/referrals/{referralId}/participants HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Length: 691
