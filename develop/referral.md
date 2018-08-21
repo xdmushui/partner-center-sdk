@@ -1,5 +1,5 @@
 ---
-title: Referrals
+title: Referral
 description: Resources that represents a sales lead direct from customer or Microsoft.  
 ms.author: mhopkins
 ms.date: 10/01/2018
@@ -9,7 +9,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Referrals
+# Referral
 
 
 **Applies To**
@@ -33,7 +33,7 @@ Represents the referral.
 | ReferralSource        | [ReferralSource](referrals.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
 | CustomerProfile       | [CustomerProfile](referrals.md#CustomerProfile)   | Customer contact information                                                                                      |
 | Details               | [ReferralDetails](referrals.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referrals.md#Participant)         | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+| Participants          | [Participant](referrals.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
