@@ -2,7 +2,7 @@
 title: Referrals
 description: Resources that represents a sales lead direct from customer or Microsoft.  
 ms.author: mhopkins
-ms.date: 09/03/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -33,19 +33,7 @@ Represents the referral.
 | ReferralSource        | [ReferralSource](referrals.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
 | CustomerProfile       | [CustomerProfile](referrals.md#CustomerProfile)   | Customer contact information                                                                                      |
 | Details               | [ReferralDetails](referrals.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participants](referrals.md#Participants)         | Represents the customer interest in Industry, Products, Services, Solutions                                       |
-
-## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
-
-
-Represents the referral details
-
-| Property              | Type                                                       | Description                                                                  |
-|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
-| DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
-| ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
-| Requirements          | [ReferralRequirements](referrals.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
+| Participants          | [Participant](referrals.md#Participant)         | Represents the customer interest in Industry, Products, Services, Solutions                                       |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
@@ -73,6 +61,18 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | AgentLed           | 2            | TBD                          |
 | P2P                | 3            | TBD     |
  
+## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
+
+
+Represents the referral details
+
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
+| DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
+| ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
+| Requirements          | [ReferralRequirements](referrals.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
+
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
 
@@ -145,7 +145,7 @@ Describes the the referrals information for a given participant
 | OrganizationId            | string                                                | The unique identifier of the organization that created the participant|
 | LocationId                | string                                                | The unique identifier of the location for the organization that created the participant|
 | OrganizationName          | string                                                | The organization name that created the participant                    |
-| Users                     | [ParticipantUser](referrals.md#ParticipantUser)       | List of individuals at the customer organzation                       |
+| Users                     | [ParticipantUser](referrals.md#ParticipantUser)       | List of individuals at the customer organization                       |
 | Status                    | [ParticipantStatus](referrals.md#ParticipantStatus)   | Status of the participants referral                                   |
 | InvitedByParticipantId    | string                                                | ParticipantId of person                                               |
 | ReferralView              | link                                                  |                                                                       |
