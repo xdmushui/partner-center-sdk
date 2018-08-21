@@ -24,7 +24,6 @@ Get a participant by ID
 
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
 
 ## <span id="C_"></span><span id="c_"></span>C#
