@@ -24,18 +24,28 @@ Resources that represents a sales lead direct from customer or Microsoft.
 
 Represents the referral.
 
-| Property              | Type                            | Description                                                                          |
-|-----------------------|---------------------------------|--------------------------------------------------------------------------------------|
-| id                    | string                          | The ID for this Referral.                                                            |
-| CreatedDate           | string in UTC date time format  | The date the referral was created.                                                   |
-| UpdatedDate           | string in UTC date time format                            | The date the referral was last updated.                     |
-| Status                | [ReferralStatus](referrals.md#ReferralStatus)             |                                                             |
-| ReferralSource        | [ReferralSource](referrals.md#ReferralSource)             |                                                             |
-| CustomerProfile       | [CustomerProfile](referrals.md#CustomerProfile)           |                                                             |
-| CustomerRequirements  | [CustomerRequirements](referrals.md#CustomerRequirements) |                                                             |
-| AdditionalInformation |                                                           |                                                             |
-| Activities            |                                                           |                                                             |
-| Participants          | [Participants](referrals.md#Participants)                 |                                                             |
+| Property              | Type                                              | Description                                                                                                       |
+|-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Id                    | string                                            | The ID for this Referral.                                                                                         |
+| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
+| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
+| Status                | [ReferralStatus](referrals.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
+| ReferralSource        | [ReferralSource](referrals.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
+| CustomerProfile       | [CustomerProfile](referrals.md#CustomerProfile)   | Customer contact information                                                                                      |
+| Details               | [ReferralDetails](referrals.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
+| Participants          | [Participants](referrals.md#Participants)         | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+
+## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
+
+
+Represents the referral details
+
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
+| DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
+| ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
+| Requirements          | [ReferralRequirements](referrals.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
@@ -45,11 +55,11 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
-| Pending            | 0            |                                                                            |
-| Active             | 1            |                                      |
-| Won                | 2            |                           |
-| Lost               | 3            |      |
- 
+| Pending            | 0            | Represents a referral that has not been acknowledged                                                                            |
+| Active             | 1            | TBD                                    |
+| Won                | 2            | TBD                          |
+| Lost               | 3            | Represents a referral that has been lost     |
+| Archived           | 3            | Represents an archived referral     | 
 
 ## <span id="ReferralSource"></span><span id="referralsource"></span><span id="REFERRALSOURCE"></span>ReferralSource
 
@@ -58,11 +68,23 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
-| WebDirect          | 0            |                                                                            |
-| PartnerLed         | 1            |                                      |
-| AgentLed           | 2            |                           |
-| P2P                | 3            |      |
+| WebDirect          | 0            | TBD                                                                           |
+| PartnerLed         | 1            | TBD                                     |
+| AgentLed           | 2            | TBD                          |
+| P2P                | 3            | TBD     |
  
+## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
+
+
+Contains the customer requirements
+
+| Property        | Type                                                          | Description                                          |
+|-----------------|---------------------------------------------------------------|------------------------------------------------------|
+| IndustryFocus   | [Tag](referrals.md#tag)                                       | The industries the customer is in                    |
+| Products        | [Tag](referrals.md#tag)                                       | The products the customer is interested in           |
+| ServiceTypes    | [Tag](referrals.md#tag)                                       | The services the customer is interested in           |
+| Solutions       | [Tag](referrals.md#tag)                                       | The solutions the customer is interestd in           |
+
 
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
@@ -75,7 +97,9 @@ Contains the customer contact information
 | Id              | string                                                        | The Id for this CustomerProfile                      |
 | Name            | string                                                        | The customer first and last name                     |
 | Address         | [Address](referrals.md#address)                               | The address of the customer                          |
-| Contact         | [Contact](referrals.md#contact)                               | The customer contact information                     |
+| Size            | string                                                        | The number of employees at the customers organization|
+| Contacts        | [ParticipantUser](referrals.md#participantuser)               | The contact information for an individual in the customer organization                    |
+
 
 
 ## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
@@ -102,38 +126,38 @@ Describes contact information for a specific individual.
 |-------------|--------|------------------------------|
 | FirstName   | string | The contact's first name.    |
 | LastName    | string | The contact's last name.     |
-| Email       | string | The contact's email address. |
 | PhoneNumber | string | The contact's phone number.  |
+| Email       | string | The contact's email address. |
 
 
-## <span id="CustomerRequirements"></span><span id="customerrequirements"></span><span id="CUSTOMERREQUIREMENTS"></span>CustomerRequirements
-
-
-Contains the customer requirements
-
-| Property        | Type                                                          | Description                                          |
-|-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| Industries      | list?                                                         | The industries the customer is in                    |
-| Products        | list?                                                         | The products the customer is interested in           |
-| Services        | list?                                                         | The services the customer is interested in           |
-| Solutions       | string                                                        |                                                      |
-| CustomerNeed    | string                                                        |                                                      |
 
 
 ## <span id="Participant"></span><span id="participant"></span><span id="PARTICIPANT"></span>Participant
 
 
-Describes the referral participant information.
+Describes the the referrals information for a given participant
 
-| Property                  | Type                                                          | Description                                          |
+| Property                  | Type                                                  | Description                                                           |
+|---------------------------|-------------------------------------------------------|-----------------------------------------------------------------------|
+| Id                        | string                                                | The ID for this participant                                           |
+| CreatedDateTime           | string                                                | The date and time the participant was created                         |
+| ExpirationDateTime        | string                                                | The date and time the participant referral will expire                | 
+| OrganizationId            | string                                                | The unique identifier of the organization that created the participant|
+| LocationId                | string                                                | The unique identifier of the location for the organization that created the participant|
+| OrganizationName          | string                                                | The organization name that created the participant                    |
+| Users                     | [ParticipantUser](referrals.md#ParticipantUser)       | List of individuals at the customer organzation                       |
+| Status                    | [ParticipantStatus](referrals.md#ParticipantStatus)   | Status of the participants referral                                   |
+| InvitedByParticipantId    | string                                                | ParticipantId of person                                               |
+| ReferralView              | link                                                  |                                                                       |
+
+## <span id="ParticipantUser"></span><span id="participantuser"></span><span id="PARTICIPANTUSER"></span>ParticipantUser
+
+Describes the individual participant user at an organization.
+
+| Property                  | Type                                         | Description                                          |
 |---------------------------|----------------------------------------------|------------------------------------------------------|
-| Id                        | string                                                        |                                                      |
-| OrganizationId            | string                                                        |                                                      |
-| Users                     |                                                          |                                                      |
-| InvitedByParticipantId    |                                         |                                                      |
-| ReferralActivities        | link?                                       |                                                      |
-| ReferralView              | link?                                       |                                                      |
-| Status                    | [ParticipantStatus](referrals.md#ParticipantStatus) |                                                    |
+| TBD
+
 
 ## <span id="ParticipantStatus"></span><span id="participantstatus"></span><span id="PARTICIPANTSTATUS"></span>ParticipantStatus
 
@@ -142,8 +166,17 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                                                               |
 |--------------------|--------------|-------------------------------------------------------------------------------------------|
-| Invited            | 0            |                                                                                           |
-| Accepted           | 1            |                                                                                           |
-| Rejected           | 2            |                           |
-| Expired            | 3            |      |
-| Missed             | 3            |      |
+| Invited            | 0            | Indicates that the participant has been invited                                           |
+| Accepted           | 1            | Indicates that the participant has accepted the referral                                  |
+| Rejected           | 2            | Indicates that the participant has rejected the referral                                  |
+| Expired            | 3            | Indicates that the participant did not take action on the referral                        |
+| Missed             | 4            | Indicates that the participant did not see the referral                                   |
+
+## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
+
+
+Describes the tag.
+
+| Property                  | Type                                                  | Description                                                   |
+|---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
+| Id                        | string                                                | The ID for this tag                                           |
