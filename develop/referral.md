@@ -83,7 +83,7 @@ Contains the customer requirements
 | IndustryFocus   | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
 | Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
 | ServiceTypes    | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
-| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interestd in           |
+| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in           |
 
 
 
@@ -145,8 +145,8 @@ Describes the the referrals information for a given participant
 | OrganizationId            | string                                                | The unique identifier of the organization that created the participant|
 | LocationId                | string                                                | The unique identifier of the location for the organization that created the participant|
 | OrganizationName          | string                                                | The organization name that created the participant                    |
-| Users                     | [ParticipantUser](referral.md#ParticipantUser)       | List of individuals at the customer organization                       |
-| Status                    | [ParticipantStatus](referral.md#ParticipantStatus)   | Status of the participants referral                                   |
+| Users                     | [ParticipantUser](referral.md#ParticipantUser)        | List of individuals at the customer organization                      |
+| Status                    | [ParticipantStatus](referral.md#ParticipantStatus)    | Status of the participants referral                                   |
 | InvitedByParticipantId    | string                                                | ParticipantId of person                                               |
 | ReferralView              | link                                                  |                                                                       |
 
@@ -180,6 +180,7 @@ Describes the tag.
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
 | Id                        | string                                                | The ID for this tag                                           |
+
 ### Products
 
 ``` json
@@ -247,7 +248,7 @@ Describes the tag.
 ]
 ```
 
-### ServiceType
+### ServiceTypes
 
 ``` json
 [

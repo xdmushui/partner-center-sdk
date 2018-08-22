@@ -134,6 +134,17 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
+<td><p>[Manage customer accounts](manage-customers.md)</p></td>
+<td><p>Create a customer</p>
+<ul>
+<li><p>[Create a customer](create-a-customer.md)</p></li>
+<li><p>[Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md)</p></li>
+<li><p>[Retrieve a relationship request URL](request-reseller-relationship.md)</p></li>
+<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li> 
+</ul>
+</td>
+</tr>
+<tr>
 <td><p>[Place orders](place-orders.md)</p></td>
 <td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
