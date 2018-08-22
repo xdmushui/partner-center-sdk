@@ -43,7 +43,7 @@ To do: Describe in english how to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/                                                    |
+| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/                                                    |
 
  
 **Request headers**
@@ -66,7 +66,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```json
-POST https://api.partner.microsoft.com/v2/referrals HTTP/1.1
+POST https://api.partner.microsoft.com/v1/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

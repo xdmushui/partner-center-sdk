@@ -43,7 +43,7 @@ To do: Describe in english how to Get a list of participants
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants                           |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/{referralId}/participants                           |
 
  
 **Request headers**
@@ -58,7 +58,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```json
-GET https://api.partner.microsoft.com/v2/referrals/{referralId}/participants HTTP/1.1
+GET https://api.partner.microsoft.com/v1/referrals/{referralId}/participants HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

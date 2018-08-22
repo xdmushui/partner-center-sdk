@@ -27,10 +27,12 @@ Represents the referral.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
+| EngagementId          | string                                            | The EngagementID for this Referral.                                                                                         |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
+| ReferralSource        | string                                             |      |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | TBD   |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
 | Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
@@ -45,22 +47,20 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
 | Pending            | 0            | Represents a referral that has not been acknowledged                                                                            |
 | Active             | 1            | TBD                                    |
-| Won                | 2            | TBD                          |
+| Won                | 2            | TBD                           |
 | Lost               | 3            | Represents a referral that has been lost     |
-| Archived           | 3            | Represents an archived referral     | 
+| Inactive           | 4            | Represents an inactive referral     | 
 
-## <span id="ReferralSource"></span><span id="referralsource"></span><span id="REFERRALSOURCE"></span>ReferralSource
+## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source.
+Represents the referral type
 
-| Value              | Position     | Description                                                                                |
-|--------------------|--------------|--------------------------------------------------------------------------------------------|
-| WebDirect          | 0            | TBD                                                                           |
-| PartnerLed         | 1            | TBD                                     |
-| AgentLed           | 2            | TBD                          |
-| P2P                | 3            | TBD     |
- 
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| to do                 | string                                                     |                 |
+
+
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
 
 
