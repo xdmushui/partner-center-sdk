@@ -180,3 +180,306 @@ Describes the tag.
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
 | Id                        | string                                                | The ID for this tag                                           |
+### Products
+
+``` json
+[
+  {
+    "id": "Azure"
+  },
+  {
+    "id": "EnterpriseMobilityAndSecurity"
+  },
+  {
+    "id": "Exchange"
+  },
+  {
+    "id": "DeveloperTools"
+  },
+  {
+    "id": "Dynamics365Business"
+  },
+  {
+    "id": "Dynamics365Enterprise"
+  },
+  {
+    "id": "DynamicsAX,GP,NAV,SL"
+  },
+  {
+    "id": "Microsoft365"
+  },
+  {
+    "id": "Office"
+  },
+  {
+    "id": "PowerBI"
+  },
+  {
+    "id": "Project"
+  },
+  {
+    "id": "SharePoint"
+  },
+  {
+    "id": "SkypeForBusiness"
+  },
+  {
+    "id": "Surface"
+  },
+  {
+    "id": "SurfaceHub"
+  },
+  {
+    "id": "SQL"
+  },
+  {
+    "id": "Teams"
+  },
+  {
+    "id": "Visio"
+  },
+  {
+    "id": "Windows"
+  },
+  {
+    "id": "Yammer"
+  }
+]
+```
+
+### ServiceType
+
+``` json
+[
+  {
+    "id": "ConsultingAndProfessional"
+  },
+  {
+    "id": "CustomSolution(ISV)"
+  },
+  {
+    "id": "DeploymentOrMigration"
+  },
+  {
+    "id": "Hardware"
+  },
+  {
+    "id": "Integration"
+  },
+  {
+    "id": "IPServices(ISV)"
+  },
+  {
+    "id": "LearningAndCertification"
+  },
+  {
+    "id": "Licensing"
+  },
+  {
+    "id": "ManagedServices"
+  },
+  {
+    "id": "ProjectServices"
+  }
+]
+```
+
+### IndustryFocus
+
+``` json
+[
+  {
+    "id": "Agriculture, Forestry, & Fishing"
+  },
+  {
+    "id": "Communications & Media"
+  },
+  {
+    "id": "Education"
+  },
+  {
+    "id": "Financial Services"
+  },
+  {
+    "id": "Government"
+  },
+  {
+    "id": "Healthcare"
+  },
+  {
+    "id": "Hospitality"
+  },
+  {
+    "id": "Manufacturing"
+  },
+  {
+    "id": "Power & Utilities"
+  },
+  {
+    "id": "Public Safety and National Security"
+  },
+  {
+    "id": "Retail & Consumer Goods"
+  },
+  {
+    "id": "Services"
+  },
+  {
+    "id": "Travel & Transportation"
+  },
+  {
+    "id": "Wholesale & Distribution"
+  }
+]
+```
+
+### Solutions
+
+``` json
+[
+  {
+    "id": "AdvancedAnalytics"
+  },
+  {
+    "id": "ApplicationIntegration"
+  },
+  {
+    "id": "ArtificialIntelligence"
+  },
+  {
+    "id": "AzureSecurityOperationManagement"
+  },
+  {
+    "id": "AzureStack"
+  },
+  {
+    "id": "BackupDisasterRecovery"
+  },
+  {
+    "id": "BigData"
+  },
+  {
+    "id": "Blockchain"
+  },
+  {
+    "id": "Chatbot"
+  },
+  {
+    "id": "CloudDatabaseMigration"
+  },
+  {
+    "id": "CloudMigration"
+  },
+  {
+    "id": "CloudVoice"
+  },
+  {
+    "id": "CognitiveServices"
+  },
+  {
+    "id": "CompetitiveDatabaseMigration"
+  },
+  {
+    "id": "Containers"
+  },
+  {
+    "id": "DataWarehouse"
+  },
+  {
+    "id": "DatabaseonLinux"
+  },
+  {
+    "id": "DevelopmentandTest"
+  },
+  {
+    "id": "DevOps"
+  },
+  {
+    "id": "DigitalMedia"
+  },
+  {
+    "id": "Dynamics365forCustomerService"
+  },
+  {
+    "id": "Dynamics365forFieldService"
+  },
+  {
+    "id": "Dynamics365forFinanceOperations"
+  },
+  {
+    "id": "Dynamics365forRetail"
+  },
+  {
+    "id": "Dynamics365forSales"
+  },
+  {
+    "id": "Dynamics365forTalent"
+  },
+  {
+    "id": "DynamicsonAzure"
+  },
+  {
+    "id": "EnterpriseBusinessIntelligence"
+  },
+  {
+    "id": "Gaming"
+  },
+  {
+    "id": "HighPerformanceComputing"
+  },
+  {
+    "id": "HybridStorage"
+  },
+  {
+    "id": "IdentityandAccessManagement"
+  },
+  {
+    "id": "InformationManagement"
+  },
+  {
+    "id": "InternetofThings"
+  },
+  {
+    "id": "MachineLearning"
+  },
+  {
+    "id": "Microserviceapplications"
+  },
+  {
+    "id": "MobileApplications"
+  },
+  {
+    "id": "MySQLPostgresMigrationtoAzure"
+  },
+  {
+    "id": "Networking"
+  },
+  {
+    "id": "NoSQLMigration"
+  },
+  {
+    "id": "RedhatonAzure"
+  },
+  {
+    "id": "RegulatoryComplianceGDPR"
+  },
+  {
+    "id": "SAPonAzure"
+  },
+  {
+    "id": "ServerlessComputing"
+  },
+  {
+    "id": "SharepointonAzure"
+  },
+  {
+    "id": "SQLServerUpgrade"
+  },
+  {
+    "id": "ThreatProtection"
+  },
+  {
+    "id": "WebDevelopment"
+  }
+]
+```

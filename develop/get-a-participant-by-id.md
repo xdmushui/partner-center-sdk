@@ -43,7 +43,7 @@ To do: Describe in english how to Get a participant by id
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants/{participantId}           |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v2/referrals/{referralId}/participants/{participantId}            |
 
  
 **Request headers**
