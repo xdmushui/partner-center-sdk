@@ -134,13 +134,19 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p>[Manage customer accounts](manage-customers.md)</p></td>
-<td><p>Create a customer</p>
+<td><p>[Referrals](referrals.md)</p></td>
+<td><p>Referrals</p>
 <ul>
-<li><p>[Create a customer](create-a-customer.md)</p></li>
-<li><p>[Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md)</p></li>
-<li><p>[Retrieve a relationship request URL](request-reseller-relationship.md)</p></li>
-<li><p>[Remove a reseller relationship with a customer](remove-a-reseller-relationship-with-a-customer.md)</p></li> 
+<li><p>[Create a referral](create-a-referral.md) </p></li>
+<li><p>[Get a list of all referrals](get-a-list-of-referrals.md) </p></li>
+<li><p>[Get a referral by ID](get-a-referral-by-Id.md) </p></li>
+<li><p>[Update referral status](update-referral-status.md)</p></li> 
+</ul>
+<p>Participants</p>
+<ul>
+<li><p>[Create a participant](create-a-participant.md)</p></li>
+<li><p>[Get a list of participants](get-a-list-of-participants.md)</p></li>
+<li><p>[Get a participant by ID](get-a-participant-by-id.md)</p></li>
 </ul>
 </td>
 </tr>
