@@ -57,7 +57,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | [ReferralSource](referral.md#ReferralSource)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral source. |
+| ReferralSource        | string     										| An string with values that indicate the referral source. |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
 | Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
@@ -83,7 +83,14 @@ Content-Type: application/json
 	            "Region": "PNW",
 	            "Country": "US",
 	            "PostalCode": "98052"
-	        }
+			},
+			"Size": "51to250employees",
+			"Contacts": {
+				"FirstName": "Susie",
+				"LastName": "Johnson",
+				"PhoneNumber": "",
+				"Email": "susie.johnson@contoso.com"
+			}
         },
         "Details": {
 		    "Notes": "",
@@ -97,10 +104,21 @@ Content-Type: application/json
 	        }
 	    },
         "Participants": {
-            "OrganizationName": "",
-            "Users": {
-
-            }
+            "OrganizationName": "Proseware Partner Inc.",
+            "Users": [
+				{
+					"FirstName": "John",
+					"LastName": "Doe",
+					"PhoneNumber": "123-456-7890",
+					"Email": "john.doe@proswarepartner.com"
+				},
+				{
+					"FirstName": "Jane",
+					"LastName": "Smith",
+					"PhoneNumber": "123-098-7654",
+					"Email": "jane.smith@proswarepartner.com"
+				},
+			]
         }
 	}
 }
@@ -117,7 +135,70 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` json
-<to do>
+{
+	"Referral" : {
+		"id": "001da786-f1a8-40f8-a74d-1ef6041f7218",
+		"ReferralSource":"",
+		"CustomerProfile": {
+	        "Name": "Contoso Corporation",
+	        "Address": {
+	            "AddressLine1": "1 Contoso Way",
+	            "AddressLine2": "Suite 200",
+	            "City": "Redmond",
+	            "State": "WA",
+	            "Region": "PNW",
+	            "Country": "US",
+	            "PostalCode": "98052"
+			},
+			"Size": "51to250employees",
+			"Contacts": {
+				"FirstName": "Susie",
+				"LastName": "Johnson",
+				"PhoneNumber": "",
+				"Email": "susie.johnson@contoso.com"
+			}
+        },
+        "Details": {
+		    "Notes": "",
+	        "DealValue": "",
+	        "ClosingDate": "",
+	        "Requirements": {
+		        "IndustryFocus": "",
+                "Products": "",
+		        "ServiceTypes": "",
+		        "Solutions": ""		        
+	        }
+	    },
+        "Participants": {
+            "OrganizationName": "Proseware Partner Inc.",
+            "Users": [
+				{
+					"FirstName": "John",
+					"LastName": "Doe",
+					"PhoneNumber": "123-456-7890",
+					"Email": "john.doe@proswarepartner.com"
+				},
+				{
+					"FirstName": "Jane",
+					"LastName": "Smith",
+					"PhoneNumber": "123-098-7654",
+					"Email": "jane.smith@proswarepartner.com"
+				},
+			]
+		},		
+		"links": {
+			"referrals": {
+				"uri": "/referrals/001da786-f1a8-40f8-a74d-1ef6041f7218",
+				"method": "GET",
+				"body": null,
+				"headers": []
+			}
+		},
+		"attributes": {
+			"objectType": "Referral"
+		}
+	}
+}
 ```
 
  

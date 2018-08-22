@@ -483,4 +483,42 @@ Describes the tag.
     "id": "WebDevelopment"
   }
 ]
+
+### Customer Size
+
+[
+  {
+    "id": "1to50employees"
+  },
+  {
+    "id": "51to500employees"
+  },
+  {
+    "id": "Morethan500employees"
+  },
+  {
+    "id": "1to9employees"
+  },
+  {
+    "id": "10to50employees"
+  },
+  {
+    "id": "51to250employees"
+  },
+  {
+    "id": "251to1000employees"
+  },
+  {
+    "id": "1001to5000employees"
+  },
+  {
+    "id": "5001to10000employees"
+  },
+  {
+    "id": "10001to20000employees"
+  },
+  {
+    "id": "Morethan20000employees"
+  }
+]
 ```
