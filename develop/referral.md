@@ -30,12 +30,12 @@ Represents the referral.
 | EngagementId          | string                                            | The EngagementID for this Referral.                                                                                         |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | string                                             |      |
+| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
+| ReferralSource        | string                                            |      |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | TBD   |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information                                                                                      |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date                                                                 |
+| Participants          | [Participant](referral.md#Participant)            | Represents the customer interest in Industry, Products, Services, Solutions                                       |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
@@ -45,11 +45,12 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
-| Pending            | 0            | Represents a referral that has not been acknowledged                                                                            |
-| Active             | 1            | TBD                                    |
-| Won                | 2            | TBD                           |
-| Lost               | 3            | Represents a referral that has been lost     |
-| Inactive           | 4            | Represents an inactive referral     | 
+| Pending            | 0            | Represents a new referrals  |
+| Validated          | 1            | Represents a referral that has been acknowledged  |
+| Active             | 2            | Represents a referral that has been accepted  |
+| Won                | 3            | Represents a referral that has been won  |
+| Lost               | 4            | Represents a referral that has been lost  |
+| Inactive           | 5            | Represents an inactive referral | 
 
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
@@ -80,9 +81,9 @@ Contains the customer requirements
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| IndustryFocus   | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
+| Industries      | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
 | Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
-| ServiceTypes    | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
+| Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
 | Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in           |
 
 
@@ -248,7 +249,7 @@ Describes the tag.
 ]
 ```
 
-### ServiceTypes
+### Services
 
 ``` json
 [
@@ -285,7 +286,7 @@ Describes the tag.
 ]
 ```
 
-### IndustryFocus
+### Industries
 
 ``` json
 [

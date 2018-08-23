@@ -110,13 +110,13 @@ Content-Type: application/json
 					"FirstName": "John",
 					"LastName": "Doe",
 					"PhoneNumber": "123-456-7890",
-					"Email": "john.doe@proswarepartner.com"
+					"Email": "john.doe@prosewarepartner.com"
 				},
 				{
 					"FirstName": "Jane",
 					"LastName": "Smith",
 					"PhoneNumber": "123-098-7654",
-					"Email": "jane.smith@proswarepartner.com"
+					"Email": "jane.smith@prosewarepartner.com"
 				},
 			]
         }
@@ -176,13 +176,13 @@ Each response comes with an HTTP status code that indicates success or failure a
 					"FirstName": "John",
 					"LastName": "Doe",
 					"PhoneNumber": "123-456-7890",
-					"Email": "john.doe@proswarepartner.com"
+					"Email": "john.doe@prosewarepartner.com"
 				},
 				{
 					"FirstName": "Jane",
 					"LastName": "Smith",
 					"PhoneNumber": "123-098-7654",
-					"Email": "jane.smith@proswarepartner.com"
+					"Email": "jane.smith@prosewarepartner.com"
 				},
 			]
 		},		
