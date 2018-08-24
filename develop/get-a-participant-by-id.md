@@ -26,16 +26,6 @@ Get a participant by ID
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 
-## <span id="C_"></span><span id="c_"></span>C#
-
-
-To do: Describe in english how to Get a participant by id
-
-
-``` csharp
-<to do>
-```
-
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 
