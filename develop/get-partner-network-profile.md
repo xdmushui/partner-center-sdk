@@ -61,7 +61,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/profiles/mpn HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -81,7 +81,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -105,11 +105,3 @@ Date: Mon, 21 Mar 2016 05:51:29 GMT
 }
 
 ```
-
- 
-
- 
-
-
-
-

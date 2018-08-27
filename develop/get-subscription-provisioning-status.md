@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get subscription provisioning status
 
-
 **Applies To**
 
 -   Partner Center
@@ -76,7 +75,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/34828C05-C16C-4D6F-9CFC-4D2650EF19A1/provisioningstatus HTTP/1.1
 Accept: application/json, text/plain, */*
 Authorization: Bearer <token>
@@ -97,7 +96,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -120,14 +119,5 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 
 ## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Remarks
 
-
 -   During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) is set to "pending".
 -   The status field is updated every fifteen minutes.
-
- 
-
- 
-
-
-
-

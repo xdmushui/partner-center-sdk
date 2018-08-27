@@ -135,18 +135,10 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 Date: Wed, 16 Mar 2016 00:43:02 GMT
 ```
-
- 
-
- 
-
-
-
-

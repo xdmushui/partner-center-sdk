@@ -143,7 +143,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 MS-RequestId: 7988dde4-b516-472c-b226-6d53fb18f04e
 MS-CorrelationId: 9b4bf2ca-f374-4d51-9113-781ca87b8380
