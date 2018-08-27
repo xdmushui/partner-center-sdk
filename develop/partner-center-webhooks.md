@@ -113,7 +113,7 @@ The following table describes the properties of a Partner Center event.
 
 The following sample shows the structure of a Partner Center event.
 
-```
+```http
 {
     "EventName": "test-created",
     "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f",
@@ -264,7 +264,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 PUT /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOR…
