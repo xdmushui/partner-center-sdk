@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get the partner legal business profile
 
-
 **Applies To**
 
 -   Partner Center
@@ -24,11 +23,9 @@ How to get a partner's legal business profile.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 ## <span id="C_"></span><span id="c_"></span>C#
-
 
 To get the partner legal business profile, first get an interface to the collection of partner profile operations from the **IAggregatePartner.Profiles** property. Then, get the value of the **LegalBusinessProfile** property to retrieve an interface to legal business profile operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.get) or the [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.getasync) method to retrieve the profile.
 
@@ -61,7 +58,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/profiles/legalbusiness?vettingVersion=Current HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -74,7 +71,6 @@ Connection: Keep-Alive
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, this method returns a **LegalBusinessProfile** object in the response body.
 
 **Response success and error codes**
@@ -83,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1151
 Content-Type: application/json; charset=utf-8
@@ -136,11 +132,3 @@ Date: Tue, 21 Mar 2017 17:29:52 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
