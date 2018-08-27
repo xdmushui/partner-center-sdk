@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get address formatting rules by market
 
-
 **Applies To**
 
 -   Partner Center
@@ -62,7 +61,6 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
-
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
@@ -76,7 +74,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1856
 Content-Type: application/json
@@ -123,13 +121,4 @@ Date: Wed, 25 Nov 2015 06:36:47 GMT
         "objectType": "CountryInformation"
     }
 }
-
 ```
-
- 
-
- 
-
-
-
-

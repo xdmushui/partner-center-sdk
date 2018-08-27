@@ -103,7 +103,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json
@@ -128,11 +128,3 @@ Date: June 24 2016 22:00:25 PST
       "attributes": { "objectType": "Collection" }
 }
 ```
-
- 
-
- 
-
-
-
-

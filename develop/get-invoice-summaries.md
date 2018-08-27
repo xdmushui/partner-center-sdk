@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get invoice summaries
 
-
 **Applies To**
 
 -   Partner Center
@@ -54,7 +53,6 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].Bal
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summaries HTTP/1.1     |
 
- 
 
 **URI parameter**
 
@@ -82,7 +80,6 @@ Connection: Keep-Alive
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
-
 If successful, this method returns an [InvoiceSummaries](invoice.md#invoicesummaries) resource in the response body.
 
 **Response success and error codes**
@@ -91,7 +88,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 256
 Content-Type: application/json; charset=utf-8
@@ -245,11 +242,3 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

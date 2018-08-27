@@ -82,7 +82,6 @@ MS-CorrelationId: 03d6064a-f048-4aee-8892-ed46dc5c8bee
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
-
 If successful, this method returns a collection of **Managed Service** objects in the response body.
 
 **Response success and error codes**
@@ -91,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 10588
 Content-Type: application/json
@@ -152,11 +151,3 @@ Date: Mon, 23 Nov 2015 18:02:12 GMT
         }
     }
 ```
-
- 
-
- 
-
-
-
-

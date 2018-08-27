@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get indirect resellers of a customer
 
-
 **Applies To**
 
 -   Partner Center
@@ -82,7 +81,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains a collection of [PartnerRelationship](relationships.md) resources to identify the resellers.
 
 **Response success and error codes**
@@ -91,7 +89,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 264
 Content-Type: application/json; charset=utf-8
@@ -118,11 +116,3 @@ Date: Fri, 07 Apr 2017 23:42:11 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

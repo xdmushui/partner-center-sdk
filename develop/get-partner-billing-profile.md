@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get partner billing profile
 
-
 **Applies To**
 
 -   Partner Center
@@ -80,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 568
 Content-Type: application/json; charset=utf-8
@@ -119,11 +118,3 @@ Date: Tue, 22 Mar 2016 17:10:02 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

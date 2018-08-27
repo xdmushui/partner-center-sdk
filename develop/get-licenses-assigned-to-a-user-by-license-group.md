@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get licenses assigned to a user by license group
 
-
 **Applies To**
 
 -   Partner Center
@@ -52,7 +51,6 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
 
-
 **Request syntax**
 
 | Method  | Request URI                                                                                                                                            |
@@ -61,7 +59,6 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses?licenseGroupIds=Group2 HTTP/1.1                        |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
- 
 
 **URI parameter**
 
@@ -97,7 +94,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
 
-
 If successful, the response body contains the collection of [License](licenses.md#license) resources.
 
 **Response success and error codes**
@@ -106,7 +102,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
@@ -164,7 +160,7 @@ Date: June 24 2016 22:00:25 PST
 
 If no matching licenses can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 71
 Content-Type: application/json; charset=utf-8
@@ -182,11 +178,3 @@ Date: Fri, 09 Jun 2017 22:50:11 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

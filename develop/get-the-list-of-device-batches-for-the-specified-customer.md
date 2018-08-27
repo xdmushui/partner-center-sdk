@@ -34,8 +34,8 @@ Each device batch contains summary status information about devices that have be
 To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.getasync) method to retrieve the collection.
 
 ``` csharp
-IAggregatePartner partnerOperations;
-string selectedCustomerId;
+// IAggregatePartner partnerOperations;
+// string selectedCustomerId;
 
 var devicesBatches = 
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.Get();
@@ -86,7 +86,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains the collection of [DeviceBatch](devicedeployment.md#devicebatch) resources.
 
 **Response success and error codes**
@@ -95,7 +94,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 339
 Content-Type: application/json; charset=utf-8
@@ -127,11 +126,3 @@ Date: Tue, 25 Jul 2017 17:52:41 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

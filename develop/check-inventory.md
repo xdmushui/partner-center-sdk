@@ -121,7 +121,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1021
 Content-Type: application/json; charset=utf-8

@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 # Get subscription registration status 
 
-
 **Applies To**
 
 -   Partner Center
@@ -42,17 +41,13 @@ To get the registration status of a subscription, begin by using the [**IAggrega
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).RegistrationStatus.Get();
 ```
 
-
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
-
 
 **Request syntax**
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus HTTP/1.1 |
-
- 
 
 **URI parameters**
 
@@ -64,7 +59,6 @@ Use the following path parameters to identify the customer and subscription.
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
  
-
 **Request headers**
 
 -   See [Headers](headers.md) for more information.
@@ -89,7 +83,6 @@ Connection: Keep-Alive
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
-
 If successful, the response body contains a [SubscriptionRegistrationStatus](subscriptions.md#subscriptionregistrationstatus) resource.  
 
 **Response success and error codes**
@@ -98,7 +91,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -115,11 +108,3 @@ MS-ServerId: 030020344
     }
 }
 ```
-
- 
-
- 
-
-
-
-

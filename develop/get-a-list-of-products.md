@@ -99,7 +99,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 {
     "totalCount": 19,
     "items": [
