@@ -98,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example (success)**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 159
 Content-Type: application/json; charset=utf-8
@@ -126,7 +126,7 @@ Date: Thu, 13 Apr 2017 18:13:40 GMT
 
 **Response example (failure)**
 
-```
+```http
 HTTP/1.1 404 Not Found
 Content-Length: 124
 Content-Type: application/json; charset=utf-8

@@ -97,7 +97,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example for a standard subscription**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 833
 Content-Type: application/json; charset=utf-8
@@ -146,7 +146,7 @@ Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 The response for an add-on subscription includes the parent subscription ID in the body and in the links.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 1132
 Content-Type: application/json; charset=utf-8

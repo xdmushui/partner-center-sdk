@@ -142,7 +142,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response - validation succeeded example**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 0
 MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
@@ -154,7 +154,7 @@ Date: Mon, 13 Mar 2017 23:56:12 GMT
 
 **Response - validation failed example**
 
-```
+```http
 HTTP/1.1 400 Bad Request
 Content-Length: 418
 Content-Type: application/json; charset=utf-8

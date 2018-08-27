@@ -103,7 +103,7 @@ None.
 
 **Request example (encoded)**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter=%7B%22Field%22%3A%22IndirectReseller%22%2C%22Value%22%3A%22484e548c-f5f3-4528-93a9-c16c6373cb59%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -115,7 +115,7 @@ Host: api.partnercenter.microsoft.com
 
 **Request example (decoded)**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter={"Field":"IndirectReseller","Value":"484e548c-f5f3-4528-93a9-c16c6373cb59","Operator":"starts_with"} HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

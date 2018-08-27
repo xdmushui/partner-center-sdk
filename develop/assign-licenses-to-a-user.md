@@ -176,7 +176,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example (success)**
 
-```
+```http
 HTTP/1.1 201 Created
 Content-Length: 139
 Content-Type: application/json; charset=utf-8
@@ -200,7 +200,7 @@ Date: Thu, 20 Apr 2017 21:50:39 GMT
 
 **Response example (license is not available)**
 
-```
+```http
 HTTP/1.1 400 Bad Request
 Content-Length: 341
 Content-Type: application/json; charset=utf-8

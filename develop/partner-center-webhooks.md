@@ -57,7 +57,7 @@ To receive events from Partner Center, you must expose a publicly accessible end
 
 The following sample shows an event posted from Partner Center.
 
-```
+```http
 POST /webhooks/callback
 Content-Type: application/json
 Authorization: Signature VOhcjRqA4f7u/4R29ohEzwRZibZdzfgG5/w4fHUnu8FHauBEVch8m2+5OgjLZRL33CIQpmqr2t0FsGF0UdmCR2OdY7rrAh/6QUW+u+jRUCV1s62M76jbVpTTGShmrANxnl8gz4LsbY260LAsDHufd6ab4oejerx1Ey9sFC+xwVTa+J4qGgeyIepeu4YCM0oB2RFS9rRB2F1s1OeAAPEhG7olp8B00Jss3PQrpLGOoAr5+fnQp8GOK8IdKF1/abUIyyvHxEjL76l7DVQN58pIJg4YC+pLs8pi6sTKvOdSVyCnjf+uYQWwmmWujSHfyU37j2Fzz16PJyWH41K8ZXJJkw==
@@ -142,7 +142,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/events
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration/events
 content-type: application/json
 authorization: Bearer eyJ0e…….
@@ -178,7 +178,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 POST /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer eyJ0e…..
@@ -224,7 +224,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer …
@@ -299,7 +299,6 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 ```
 
 
-
 ### <span id="ValidationEvents"></span><span id="validationevents"></span><span id="VALIDATIONEVENTS"></span>Send a test event to validate your registration   
 
 Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event. 
@@ -312,7 +311,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 **Request example**   
 
-```
+```http
 POST /webhooks/v1/registration/validationEvents
 MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
 Authorization: Bearer …
@@ -349,7 +348,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration/validationEvents/04af2aea-d413-42db-824e-f328001484d1
 MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
 Authorization: Bearer …

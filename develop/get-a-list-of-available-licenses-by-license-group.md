@@ -239,7 +239,7 @@ Date: Sat, 10 Jun 2017 00:19:44 GMT
 
 If no matching subscribed SKUs can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 71
 Content-Type: application/json; charset=utf-8
