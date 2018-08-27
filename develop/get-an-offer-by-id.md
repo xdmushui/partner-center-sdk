@@ -75,7 +75,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/offers/<offer-id>?country=<country-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

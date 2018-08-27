@@ -128,7 +128,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers HTTP/1.1
 Authorization: Bearer <token>
 MS-RequestId: d628adbe-b7ee-412e-ac55-58f22b4ba2f4

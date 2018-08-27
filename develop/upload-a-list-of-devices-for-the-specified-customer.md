@@ -109,7 +109,7 @@ The request body must contain an array of [Device](devicedeployment.md#device) o
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/c7f3c849-129f-4b85-a96d-4f8e88b315a3/deviceBatches/Test/devices HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

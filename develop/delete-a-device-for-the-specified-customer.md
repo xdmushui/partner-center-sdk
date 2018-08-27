@@ -77,7 +77,7 @@ None
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/deviceBatches/testbatch/devices/7b11cd8b-dd1e-4840-8c4a-84215e4de782 HTTP/1.1
 Authorization: Bearer <token> 
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d

@@ -106,7 +106,7 @@ The request body must contain a [DevicePolicyUpdateRequest](devicedeployment.md#
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/c7f3c849-129f-4b85-a96d-4f8e88b315a3/DevicePolicyUpdates HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

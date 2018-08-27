@@ -72,7 +72,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
 Authorization: Bearer 
 Accept: application/json

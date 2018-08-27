@@ -74,7 +74,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders?billingType=onetime HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

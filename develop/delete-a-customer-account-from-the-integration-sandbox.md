@@ -116,7 +116,7 @@ None.
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1
 Accept: application/json
 MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5

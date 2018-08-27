@@ -70,7 +70,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/65726577-c208-40fd-9735-8c85ac9cac68/servicecosts/mostrecent HTTP/1.1
 Authorization: Bearer <authorization token>
 Accept: application/json

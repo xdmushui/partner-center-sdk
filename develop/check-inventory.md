@@ -85,7 +85,7 @@ The inventory request details, consisting of an [InventoryCheckRequest](products
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/extensions/product/checkinventory?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

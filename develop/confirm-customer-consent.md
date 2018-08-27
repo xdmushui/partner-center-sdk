@@ -140,7 +140,7 @@ This table describes the minimum required fields to create an **Agreement** reso
   
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/agreements HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json

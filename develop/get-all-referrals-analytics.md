@@ -59,7 +59,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

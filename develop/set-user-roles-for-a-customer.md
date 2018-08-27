@@ -91,7 +91,7 @@ This table describes the required properties in the request body.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/directoryroles/f023fd81-a637-4b56-95fd-791ac0226033/usermembers HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

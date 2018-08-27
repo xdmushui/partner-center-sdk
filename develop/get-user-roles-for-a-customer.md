@@ -84,7 +84,7 @@ Use the following query parameter to identify the correct customer.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/users/<user-id>/directoryroles HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

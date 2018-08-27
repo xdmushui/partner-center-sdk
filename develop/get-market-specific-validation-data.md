@@ -56,7 +56,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/countryvalidationrules/{isocode-id} HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json

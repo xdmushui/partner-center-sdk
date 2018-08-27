@@ -77,7 +77,7 @@ The request body should contain a [ServiceRequest](servicerequest.md) resource. 
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

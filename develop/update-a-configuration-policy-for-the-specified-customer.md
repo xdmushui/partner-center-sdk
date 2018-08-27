@@ -95,7 +95,7 @@ The request body must contain an object that provides the policy information.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json

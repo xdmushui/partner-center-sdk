@@ -136,7 +136,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json

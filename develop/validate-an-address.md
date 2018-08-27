@@ -109,7 +109,7 @@ This table describes the required properties in the request body.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer <token> 

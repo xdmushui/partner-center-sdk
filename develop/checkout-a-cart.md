@@ -76,7 +76,7 @@ None.
 
 **Request example**
 
-```
+```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605/checkout HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

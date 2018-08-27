@@ -115,7 +115,7 @@ A **Customer** resource is required in the request body. Ensure the **Relationsh
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1
 Authorization: Bearer <token>
 Content-Length: 74

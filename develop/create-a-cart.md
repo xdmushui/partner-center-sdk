@@ -120,7 +120,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 
 **Request example**
 
-```
+```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

@@ -74,7 +74,7 @@ None.
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20/directoryroles/729827e3-9c14-49f7-bb1b-9608f156bbb8/usermembers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

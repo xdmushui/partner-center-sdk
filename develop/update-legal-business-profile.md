@@ -68,7 +68,7 @@ The legal business profile resource.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/legalbusiness HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

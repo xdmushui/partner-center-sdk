@@ -73,7 +73,7 @@ None
 
 **Request example**
 
-```
+```http
 HEAD https://api.partnercenter.microsoft.com/v1/domains/contoso.onmicrosoft.com HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

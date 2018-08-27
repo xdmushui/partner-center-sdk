@@ -127,7 +127,7 @@ A populated [Conversion](conversions.md#conversion) resource must be included in
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/488745B5-2086-4912-802C-6ABB9F7C3638/conversions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

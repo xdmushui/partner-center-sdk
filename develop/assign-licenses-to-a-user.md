@@ -138,7 +138,7 @@ You must include a [LicenseUpdate](licenses.md#licenseupdate) resource in the re
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/users/554526aa-cf5e-46fa-95df-98dbc55d8a1e/licenseupdates HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
