@@ -86,8 +86,10 @@ You must compose the filter parameter as a series of comma separated, key-value 
 
 An unencoded example looks like this:
 
-```?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}```  
-
+```http
+?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}
+```  
+  
 The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |
