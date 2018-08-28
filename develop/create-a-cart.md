@@ -109,11 +109,11 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
 | catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
 | friendlyName         | string                      | No           | Optional. The friendly name for the item defined by the partner to help disambiguate.              |
-| quantity             | int                         | Yes          | The number of licenses or instances.     |
+| quantity             | int                         | Yes          | The number of licenses or instances.                                                               |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
 | participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
-| provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
+| provisioningContext  | Dictionary<string, string>  | No           | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
