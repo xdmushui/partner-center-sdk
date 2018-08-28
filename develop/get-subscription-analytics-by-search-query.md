@@ -65,9 +65,11 @@ The filter parameter of the request contains one or more statements that filter 
 
 The following are examples of filter strings:  
  
-```autoRenewEnabled eq true```  
+```http
+autoRenewEnabled eq true
 
-```autoRenewEnabled eq true and customerMarket eq 'US'```  
+autoRenewEnabled eq true and customerMarket eq 'US'
+```  
 
 The following table shows a list of the supported fields and support operators for the filter parameter. String values must be surrounded by single quotes.
 

@@ -56,7 +56,9 @@ The group by parameter must be composed as a series of comma separated, field va
 
 An unencoded example looks like this:  
 
-```?groupby=termField1,dateField1,termField2```
+```http
+?groupby=termField1,dateField1,termField2
+```
 
 The following table shows a list of the supported fields for group by.
 
