@@ -142,7 +142,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -155,7 +155,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 2484
 Content-Type: application/json; charset=utf-8
@@ -257,7 +257,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 
 **Request example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -270,7 +270,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 2484
 Content-Type: application/json; charset=utf-8
@@ -368,7 +368,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 
 **Request example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -382,7 +382,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example 3** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 2484
 Content-Type: application/json; charset=utf-8

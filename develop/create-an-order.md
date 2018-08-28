@@ -144,7 +144,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partnercenter.microsoft.com

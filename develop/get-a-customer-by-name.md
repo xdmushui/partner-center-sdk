@@ -86,10 +86,10 @@ You must compose the filter parameter as a series of comma separated, key-value 
 
 An unencoded example looks like this:
 
-```
+```http
 ?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}
-```
-
+```  
+  
 The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |
@@ -110,7 +110,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter=%7B%22Field%22%3A%22CompanyName%22%2C%22Value%22%3A%22Cont%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

@@ -71,7 +71,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
