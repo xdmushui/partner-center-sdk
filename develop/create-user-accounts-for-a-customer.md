@@ -80,7 +80,7 @@ Use the following query parameter to identify the correct customer.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/users HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

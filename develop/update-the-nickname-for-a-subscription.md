@@ -82,7 +82,7 @@ A full **Subscription** resource is required in the request body. Ensure the **F
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

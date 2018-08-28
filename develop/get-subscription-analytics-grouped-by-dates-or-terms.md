@@ -54,8 +54,9 @@ Use the following required path parameters to identify your organization and to 
 
 The group by parameter must be composed as a series of comma separated, field values.
 
-An unencoded example looks like this:
-```
+An unencoded example looks like this:  
+
+```http
 ?groupby=termField1,dateField1,termField2
 ```
 

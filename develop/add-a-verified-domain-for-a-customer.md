@@ -124,7 +124,7 @@ This table describes the required and optional **DomainFederationSettings** prop
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*

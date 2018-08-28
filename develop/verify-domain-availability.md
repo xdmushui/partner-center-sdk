@@ -73,7 +73,7 @@ None
 
 **Request example**
 
-```
+```http
 HEAD https://api.partnercenter.microsoft.com/v1/domains/contoso.onmicrosoft.com HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -95,7 +95,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example for when the domain is already in use**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 0
 MS-CorrelationId: ec57501a-a4c3-45ee-ab2b-da4250545fc9
@@ -107,7 +107,7 @@ Date: Tue, 31 Jan 2017 22:22:35 GMT
 
 **Response example for when the domain is available**
 
-```
+```http
 HTTP/1.1 404 Not Found
 Content-Length: 0
 MS-CorrelationId: 54770745-17f0-433c-bd7b-0265e5b38f98

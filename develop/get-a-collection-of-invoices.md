@@ -109,7 +109,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices?size=200&amp;offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json

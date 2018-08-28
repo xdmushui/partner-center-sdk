@@ -163,7 +163,7 @@ None
 
 The following example will produce results that are the closest to what the reconciliation file will show for the period 7/2 - 8/1. They may not match exactly for the reasons stated in the introduction to this topic. The request that follows returns utilization data reported in the billing system between 7/2 at 12 AM (UTC) and 8/2 at 12 AM (UTC).
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-07-02T00:00:00-08:00&amp;end_time=2017-08-02T00:00:00-08:00 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

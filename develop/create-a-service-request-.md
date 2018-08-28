@@ -106,7 +106,7 @@ This table describes the required and optional properties in the request body.
 This table describes the required properties in the request body.
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/servicerequests/en-US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

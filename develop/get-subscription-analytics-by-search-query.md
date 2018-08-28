@@ -63,12 +63,13 @@ An unencoded example looks like this:
 
 The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
-The following are examples of filter strings: 
-```
+The following are examples of filter strings:  
+ 
+```http
 autoRenewEnabled eq true
 
 autoRenewEnabled eq true and customerMarket eq 'US'
-```
+```  
 
 The following table shows a list of the supported fields and support operators for the filter parameter. String values must be surrounded by single quotes.
 

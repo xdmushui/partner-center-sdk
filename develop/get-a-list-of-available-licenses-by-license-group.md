@@ -82,7 +82,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscribedskus?licenseGroupIds=Group1&amp;licenseGroupIds=Group2 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -239,7 +239,7 @@ Date: Sat, 10 Jun 2017 00:19:44 GMT
 
 If no matching subscribed SKUs can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 71
 Content-Type: application/json; charset=utf-8

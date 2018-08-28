@@ -87,7 +87,7 @@ The full resource.
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
