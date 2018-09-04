@@ -27,16 +27,21 @@ Represents the referral.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
-| EngagementId          | string                                            | The EngagementID for this Referral.                                                                                         |
+| EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
+| OrganizationId        | string                                            | The Dunn & Bradstreet ID for this customer                                                                         |
+| LocationId            | string                                            | TBD                                                                                |
+| OrganizationName      | string                                            | The EngagementID for this Referral.                                                                               |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
+| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                           |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | string                                            |      |
-| ReferralType          | [ReferralType](referral.md#ReferralType)          | TBD   |
+| ReferralSource        | string                                            | TBD     |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | TBD     |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information                                                                                      |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referral.md#Participant)            | Represents the customer interest in Industry, Products, Services, Solutions                                       |
-
+| Users                 | [User](referral.md#User)                          | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | TBD                                       |
+| InvitedByOrganizationID         | string       | TBD                                       |
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
 
@@ -45,12 +50,13 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
-| Pending            | 0            | Represents a new referrals  |
+| Pending            | 0            | Represents a new referral  |
 | Validated          | 1            | Represents a referral that has been acknowledged  |
 | Active             | 2            | Represents a referral that has been accepted  |
-| Won                | 3            | Represents a referral that has been won  |
-| Lost               | 4            | Represents a referral that has been lost  |
-| Inactive           | 5            | Represents an inactive referral | 
+| Rejected           | 3            | Represents a referral that has been rejected  |
+| Expired            | 4            | Represents a referral that has expired  |
+| Won                | 5            | Represents a referral that has been won  |
+| Lost               | 6            | Represents a referral that has been lost  |
 
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
@@ -60,6 +66,16 @@ Represents the referral type
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
 | to do                 | string                                                     |                 |
+
+
+## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
+
+
+Represents the referral invitation
+
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
 
 
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
@@ -99,7 +115,7 @@ Contains the customer contact information
 | Name            | string                                                        | The customer first and last name                     |
 | Address         | [Address](referral.md#address)                               | The address of the customer                          |
 | Size            | string                                                        | The number of employees at the customers organization|
-| Contacts        | [ParticipantUser](referral.md#participantuser)               | The contact information for an individual in the customer organization                    |
+| Contacts        | [User](referral.md#User)               | The contact information for an individual in the customer organization                    |
 
 
 
@@ -133,45 +149,15 @@ Describes contact information for a specific individual.
 
 
 
-## <span id="Participant"></span><span id="participant"></span><span id="PARTICIPANT"></span>Participant
+## <span id="User"></span><span id="user"></span><span id="USER"></span>User
 
 
-Describes the the referrals information for a given participant
+Describes the the referrals information for a given user
 
 | Property                  | Type                                                  | Description                                                           |
 |---------------------------|-------------------------------------------------------|-----------------------------------------------------------------------|
-| Id                        | string                                                | The ID for this participant                                           |
-| CreatedDateTime           | string                                                | The date and time the participant was created                         |
-| ExpirationDateTime        | string                                                | The date and time the participant referral will expire                | 
-| OrganizationId            | string                                                | The unique identifier of the organization that created the participant|
-| LocationId                | string                                                | The unique identifier of the location for the organization that created the participant|
-| OrganizationName          | string                                                | The organization name that created the participant                    |
-| Users                     | [ParticipantUser](referral.md#ParticipantUser)        | List of individuals at the customer organization                      |
-| Status                    | [ParticipantStatus](referral.md#ParticipantStatus)    | Status of the participants referral                                   |
-| InvitedByParticipantId    | string                                                | ParticipantId of person                                               |
-| ReferralView              | link                                                  |                                                                       |
 
-## <span id="ParticipantUser"></span><span id="participantuser"></span><span id="PARTICIPANTUSER"></span>ParticipantUser
-
-Describes the individual participant user at an organization.
-
-| Property                  | Type                                         | Description                                          |
-|---------------------------|----------------------------------------------|------------------------------------------------------|
-| TBD
-
-
-## <span id="ParticipantStatus"></span><span id="participantstatus"></span><span id="PARTICIPANTSTATUS"></span>ParticipantStatus
-
-
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the participant status.
-
-| Value              | Position     | Description                                                                               |
-|--------------------|--------------|-------------------------------------------------------------------------------------------|
-| Invited            | 0            | Indicates that the participant has been invited                                           |
-| Accepted           | 1            | Indicates that the participant has accepted the referral                                  |
-| Rejected           | 2            | Indicates that the participant has rejected the referral                                  |
-| Expired            | 3            | Indicates that the participant did not take action on the referral                        |
-| Missed             | 4            | Indicates that the participant did not see the referral                                   |
+[to do]
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
 
