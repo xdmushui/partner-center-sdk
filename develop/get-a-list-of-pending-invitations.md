@@ -43,7 +43,7 @@ Use the following query parameters to get a list of referrals
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
-|invitedByOrganization   | string   | No       | A string that represents a Partner account ID       |
+|invitedByOrganization   | string   | No       | A string that represents a Partner account ID  `**To do: How can partner determine their own ID?**`     |
  
 **Request headers**
 

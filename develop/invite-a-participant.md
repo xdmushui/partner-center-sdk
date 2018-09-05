@@ -42,9 +42,9 @@ Use the following query parameters to get a list of referrals
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|engagementId                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
-|organizationId   | string   | No       | A string that represents a Partner account ID. To do: what is MSFT ID       |
-|InviteContext   | string   | No       | to do       |
+|engagementId                  | string   | Yes      | A string that represents an existing engagement ID        |
+|organizationId   | string   | No       | A string that represents a Partner account ID. `To do: what is MSFT ID`       |
+|InviteContext   | string   | No       | `to do`     |
 
 **Request headers**
 
@@ -54,7 +54,7 @@ Use the following query parameters to get a list of referrals
 
 This table describes the [Referral](referral.md) properties in the request body.
 
-[to do]
+`to do`
 
 
 **Request example**
