@@ -1,6 +1,6 @@
 ---
 title: Make a one-time purchase
-description: How to make a one-time purchase of software and reservation products such as, term-based software, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.
+description: How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.
 ms.assetid: 
 ms.author: mhopkins
 ms.date: 06/07/2018
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 -   Partner Center
 
-How to make a one-time purchase of software and reservation products such as, term-based software, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
+How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
 
 >[!NOTE]
 >To purchase perpetual software, you must have been previously qualified. Contact support for more information.   
