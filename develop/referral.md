@@ -470,9 +470,11 @@ Describes the tag.
     "id": "WebDevelopment"
   }
 ]
+```
 
 ### Customer Size
 
+``` json
 [
   {
     "id": "1to50employees"
