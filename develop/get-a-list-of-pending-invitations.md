@@ -1,6 +1,6 @@
 ---
-title: Get a list of referrals
-description: How to create a referral
+title: Get a list of pending invitations
+description: Get a list of pending invitations
 ms.assetid: 
 ms.author: mhopkins
 ms.date: 10/01/18
@@ -10,7 +10,7 @@ ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a list of referrals
+# Get a list of pending invitations
 
 
 **Applies To**
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-How to create a referral
+Get a list of pending invitations
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -42,10 +42,8 @@ Use the following query parameters to get a list of referrals
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|engagementId            | string   | No       | An engagement ID       |
-|self                    | string   | No       | A string of value "true"       |
-|status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
-|invitedByOrganization   | string   | No       | An engagement ID. Will return all referrals associated to an engagement       |
+|status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
+|invitedByOrganization   | string   | No       | A string that represents a Partner account ID       |
  
 **Request headers**
 
