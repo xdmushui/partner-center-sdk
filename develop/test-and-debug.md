@@ -1,9 +1,10 @@
 ---
 title: Test and debug
 description: To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying.
+Author: Xansky
 ms.assetid: 0A84F92F-CE66-42DF-B686-4D9E6FFECB16
 ms.author: mhopkins
-ms.date: 12/15/2017
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: partner-center
 ms.technology: partner-center-sdk
@@ -24,10 +25,21 @@ To test your code, you should use your integration sandbox account in Partner Ce
 
 ## <span id="Integration_sandbox_constraints"></span><span id="integration_sandbox_constraints"></span><span id="INTEGRATION_SANDBOX_CONSTRAINTS"></span>Integration sandbox constraints
 
+If you run automated build verification tests, conduct testing in production, or perform manual testing in the integration sandbox, you may reach the maximum limits for the integration sandbox. These limits are 75 customers, 5 subscriptions per customer, and 25 seats per subscription. 
 
-If you run automated build verification tests, conduct testing in production, or perform manual testing in the integration sandbox, you may reach the maximum limits for the integration sandbox. These limits are 75 customers, 5 subscriptions per customer, 25 seats per subscription, and $200 of Azure usage per month.
+This means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials. 
 
-Note that this means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials.
+### Cloud Solution Provider (CSP) Azure subscription offers 
+CSP Azure subscription offers are no longer available by default to sandbox accounts. Partners who need access to these offers with their sandbox account must apply for access. To apply for access, reach out to your Microsoft business contact. 
+
+For partners whose sandbox accounts have been approved for CSP Azure subscription offers, the following limits apply:  
+
+ - You can have up to a maximum of 375 active subscriptions (75 customers x 5 subscriptions per customer). However, only 10 of which can be CSP Azure subscriptions.  
+ - When an CSP Azure subscription reaches $200 of Azure usage, its resources are temporarily disabled until its next billing cycle. It is still considered an active subscription and is counted towards the 375 active subscriptions limit.  
+ - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per Datacenter. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.  
+ - Only offer MS-AZR-0146P is available. Other Azure subscription offers (including MS-AZR-DE-0146P and MS-AZR-USGOV-0146P for CSP Azure subscriptions in Microsoft German Cloud and Government Cloud respectively) will not be available until further notice.  
+
+> [!Important] All existing CSP Azure subscriptions purchased with sandbox accounts prior to June 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 15 – October 31, 2018. Data associated with these subscriptions are no longer accessible after they have been deprovisioned. Partners who have valuable data stored under these subscriptions must back up the data before October 1st, 2018.
 
 If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reservations.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
 
