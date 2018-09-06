@@ -39,7 +39,7 @@ For partners whose sandbox accounts have been approved for CSP Azure subscriptio
  - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per Datacenter. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.  
  - Only offer MS-AZR-0146P is available. Other Azure subscription offers (including MS-AZR-DE-0146P and MS-AZR-USGOV-0146P for CSP Azure subscriptions in Microsoft German Cloud and Government Cloud respectively) will not be available until further notice.  
 
-> [!Important] All existing CSP Azure subscriptions purchased with sandbox accounts prior to June 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 15 – October 31, 2018. Data associated with these subscriptions are no longer accessible after they have been deprovisioned. Partners who have valuable data stored under these subscriptions must back up the data before October 1st, 2018.
+> [!Important] All existing CSP Azure subscriptions purchased with sandbox accounts prior to June 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 15 – October 31, 2018. Data associated with these subscriptions are no longer accessible after they have been deprovisioned. Partners who have valuable data stored under these subscriptions must back up the data before October 15, 2018.
 
 If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reservations.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
 
