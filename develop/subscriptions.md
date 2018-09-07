@@ -1,14 +1,8 @@
 ---
 title: Subscription
-description: 
-    A subscription lets a customer use a service for a certain period of
-    time.
+description: A subscription lets a customer use a service for a certain period of time.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -2,11 +2,7 @@
 title: Analytics
 description: You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the topics listed here.
 ms.assetid: 22C1320C-5EDF-443C-B545-88641FBA2358
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

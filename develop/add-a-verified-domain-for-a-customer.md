@@ -1,12 +1,7 @@
 ---
 title: Add a verified domain for a customer
 description: This topic explains how to add a verified domain to the list of approved domains for a customer. 
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 3/06/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 8/02/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

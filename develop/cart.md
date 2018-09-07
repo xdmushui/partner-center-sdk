@@ -1,12 +1,7 @@
 ---
 title: Cart
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/16/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

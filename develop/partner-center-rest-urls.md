@@ -1,15 +1,8 @@
 ---
 title: Partner Center REST URLs
-description: 
-    Partner Center is available in different countries and regions around
-    the world. Some versions of Partner Center might require different end
-    points for your apps to work correctly.
+description: Partner Center is available in different countries and regions around the world. Some versions of Partner Center might require different end points for your apps to work correctly.
 ms.assetid: D4E1AC16-3FB1-4192-A06A-5766BF00A6D8
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
