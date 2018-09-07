@@ -2,11 +2,7 @@
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

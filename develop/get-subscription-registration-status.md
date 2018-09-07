@@ -1,12 +1,7 @@
 ---
 title: Get subscription registration status
 description: Get the status of a subscription that has been registered for use with Azure Reserved VM Instances.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/19/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

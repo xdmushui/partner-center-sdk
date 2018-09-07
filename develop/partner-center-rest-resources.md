@@ -1,14 +1,8 @@
 ---
 title: Partner Center REST resources
-description: 
-    This section provides definitions for the JSON elements needed to create
-    requests and parse responses using the Partner Center REST API.
+description: This section provides definitions for the JSON elements needed to create requests and parse responses using the Partner Center REST API.
 ms.assetid: E7C51D19-C6A7-4A4C-9F17-B4D39195972A
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

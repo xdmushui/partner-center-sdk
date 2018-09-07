@@ -2,11 +2,7 @@
 title: Get customer licenses usage information
 description: How to get licenses deployment insights for a specific customer.
 ms.assetid: 02B98495-9FE7-4A9F-B1DD-B14563D0FF29
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Agreement
 description: Represents a Microsoft cloud customer agreement
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 8/02/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

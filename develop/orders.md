@@ -2,11 +2,7 @@
 title: Order
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
 ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

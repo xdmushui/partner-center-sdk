@@ -2,11 +2,7 @@
 title: Get customer licenses deployment information
 description: How to get licenses deployment insights for a specific customer.
 ms.assetid: 8CD6119A-868F-46A2-9730-DECB4A0BC747
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

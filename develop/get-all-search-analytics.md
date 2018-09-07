@@ -1,14 +1,8 @@
 ---
 title: Get all search analytics information
 description: How to get all the search analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
-robots: noindex,nofollow   
 ms.date: 06/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

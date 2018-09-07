@@ -1,14 +1,8 @@
 ---
 title: Get all referrals analytics information
 description: How to get all the referrals analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: C6051714-1D8A-4448-9705-12AEC9A6420E
-robots: noindex,nofollow   
 ms.date: 06/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

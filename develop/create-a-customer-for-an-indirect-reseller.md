@@ -2,11 +2,7 @@
 title: Create a customer for an indirect reseller
 description: How an indirect provider can create a customer for an indirect reseller.
 ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

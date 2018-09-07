@@ -1,15 +1,12 @@
 ---
 title: Developing for Partner Center for Microsoft National Cloud
+description: How to develop apps for Partner Center for Microsoft National Cloud
 MS-HAID:
 - 'pc\_apiv2.developing\_with\_different\_partner\_center\_versions'
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
 ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
 description: 
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -24,9 +21,10 @@ ms.localizationpriority: medium
 
 Partner Center has one set of SDK documentation. However, some functionality might not be available in the versions of Partner Center for Microsoft National Clouds. Developers need to consider the following changes to the SDK for these versions of Partner Center:
 
--   [Partner Center operated by 21Vianet](#partner_center_operated_by_21vianet)
--   [Partner Center for Microsoft Cloud Germany](#partner_center_cloud_germany)
--   [Partner Center for Microsoft Cloud for US Government](#partner_center_msftcloudUS)
+- [Developing for Partner Center for Microsoft National Cloud](#developing-for-partner-center-for-microsoft-national-cloud)
+    - [Partner Center operated by 21Vianet](#partner-center-operated-by-21vianet)
+    - [Partner Center for Microsoft Cloud Germany](#partner-center-for-microsoft-cloud-germany)
+    - [Partner Center for Microsoft Cloud for U.S. Government](#partner-center-for-microsoft-cloud-for-us-government)
 
 Each overview topic contains an **Applies To** block at the top that describes which versions of Partner Center the topic applies to. Similarly, each managed reference topic contains the version information in the **Requirements** block at the bottom.
 

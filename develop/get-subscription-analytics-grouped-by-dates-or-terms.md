@@ -1,14 +1,8 @@
 ---
 title: Get subscription analytics grouped by dates or terms
 description: How to get subscription analytics information grouped by dates or terms. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: 5D0C0649-F64D-40A9-ACCC-2077E2D2BA4E
-robots: noindex,nofollow   
 ms.date: 06/27/2018 
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

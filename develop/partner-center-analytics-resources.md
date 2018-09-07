@@ -1,14 +1,8 @@
 ---
 title: Partner Center Analytics
 description: Partner Center Analytics public API documentation.
-author: Xansky
-ms.author: mhopkins 
 ms.assetid: B605C1CD-FC40-4393-8588-55C8F0CAA51A
-robots: noindex,nofollow 
 ms.date: 06/11/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
