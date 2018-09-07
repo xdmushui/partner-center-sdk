@@ -2,11 +2,7 @@
 title: Upload a list of devices to an existing batch for the specified customer
 description: How to upload a list of information about devices to an existing batch for the specified customer. This associates the devices with a device batch already created.
 ms.assetid: 5EC2895C-1361-4EBA-9D86-7125D4FE10D3
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

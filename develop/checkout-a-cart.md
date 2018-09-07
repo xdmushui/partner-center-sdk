@@ -1,12 +1,7 @@
 ---
 title: Checkout a cart
 description: How to checkout an order for a customer in a cart.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/19/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

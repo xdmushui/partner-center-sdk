@@ -2,11 +2,7 @@
 title: Get Microsoft Partner Network profile
 description: Gets an object representing the partner's MPN profile.
 ms.assetid: 6DC85E2F-0AC8-4166-883B-CCFD19044FC1
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

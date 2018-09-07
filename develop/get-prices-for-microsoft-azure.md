@@ -2,11 +2,7 @@
 title: Get prices for Microsoft Azure
 description: How to get an Azure Rate Card with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 ms.assetid: 65262585-0F3B-4BD0-83BE-B2695C33CDB7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

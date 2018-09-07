@@ -2,11 +2,7 @@
 title: Auditing
 description: The resources detailed here are used with audit operations.
 ms.assetid: FEF0BED4-2CEB-46D2-9365-D7D3C50AF0E3
-ms.author: mhopkins
 ms.date: 08/06/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

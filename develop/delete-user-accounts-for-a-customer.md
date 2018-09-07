@@ -2,11 +2,7 @@
 title: Delete a user account for a customer
 description: How to delete an existing user account for a customer.
 ms.assetid: 12097809-A62D-4929-9F1D-08676784BA39
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

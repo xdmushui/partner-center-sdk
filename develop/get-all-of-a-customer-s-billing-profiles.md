@@ -2,11 +2,7 @@
 title: Get a customer's billing profile
 description: Gets the billing profile of a customer.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.assetid: 32914A31-87CC-4F9D-869C-CAFEDA2CAE41
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

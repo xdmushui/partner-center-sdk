@@ -2,11 +2,7 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

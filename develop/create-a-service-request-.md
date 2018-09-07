@@ -2,11 +2,7 @@
 title: Create a service request
 description: How to create a partner center service request.
 ms.assetid: 16DA9836-7052-4103-82D4-933E5EEB7E71
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

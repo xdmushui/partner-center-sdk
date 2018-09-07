@@ -2,11 +2,7 @@
 title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
-ms.author: mhopkins
 ms.date: 02/05/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: AgreementMetaData
 description: Provides metadata about all the agreement types that partners can provide confirmation of customer acceptance.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 8/03/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
