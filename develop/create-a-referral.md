@@ -33,7 +33,7 @@ How to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/                                                    |
+| **POST** | https://api.partner.microsoft.com/v1/referrals/                                                    |
 
  
 **Request headers**
@@ -44,7 +44,22 @@ How to create a referral
 
 This table describes the [Referral](referral.md) properties in the request body.
 
-[to do]
+| Property              | Type                                              | Description                                                                                                       |
+|-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Id                    | string                                            | The ID for this Referral.                                                                                         |
+| EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
+| OrganizationId        | string                                            | The Dunn & Bradstreet ID for this customer                                                                         |
+| OrganizationName      | string                                            | The organization name of the customer.                                                                               |
+| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
+| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
+| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                           |
+| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
+| ReferralSource        | string                                            | Represents the referral quality.     |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.     |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                      |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                 |
+| Team                  | [Member](referral.md#Member)                      | Represents the customer interest in Industry, Products, Services, Solutions.                                       |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents the referral invitation.                                       |
 
 
 **Request example**
@@ -54,58 +69,9 @@ POST https://api.partner.microsoft.com/v1/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
-{
-	"Referral" : {
-		"ReferralSource":"",
-		"CustomerProfile": {
-	        "Name": "Contoso Corporation",
-	        "Address": {
-	            "AddressLine1": "1 Contoso Way",
-	            "AddressLine2": "Suite 200",
-	            "City": "Redmond",
-	            "State": "WA",
-	            "Region": "PNW",
-	            "Country": "US",
-	            "PostalCode": "98052"
-			},
-			"Size": "51to250employees",
-			"Contacts": {
-				"FirstName": "Susie",
-				"LastName": "Johnson",
-				"PhoneNumber": "",
-				"Email": "susie.johnson@contoso.com"
-			}
-        },
-        "Details": {
-		    "Notes": "",
-	        "DealValue": "",
-	        "ClosingDate": "",
-	        "Requirements": {
-		        "IndustryFocus": "",
-                "Products": "",
-		        "ServiceTypes": "",
-		        "Solutions": ""		        
-	        }
-	    },
-        "Participants": {
-            "OrganizationName": "Proseware Partner Inc.",
-            "Users": [
-				{
-					"FirstName": "John",
-					"LastName": "Doe",
-					"PhoneNumber": "123-456-7890",
-					"Email": "john.doe@prosewarepartner.com"
-				},
-				{
-					"FirstName": "Jane",
-					"LastName": "Smith",
-					"PhoneNumber": "123-098-7654",
-					"Email": "jane.smith@prosewarepartner.com"
-				},
-			]
-        }
-	}
-}
+
+to do
+
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
@@ -119,70 +85,9 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` json
-{
-	"Referral" : {
-		"id": "001da786-f1a8-40f8-a74d-1ef6041f7218",
-		"ReferralSource":"",
-		"CustomerProfile": {
-	        "Name": "Contoso Corporation",
-	        "Address": {
-	            "AddressLine1": "1 Contoso Way",
-	            "AddressLine2": "Suite 200",
-	            "City": "Redmond",
-	            "State": "WA",
-	            "Region": "PNW",
-	            "Country": "US",
-	            "PostalCode": "98052"
-			},
-			"Size": "51to250employees",
-			"Contacts": {
-				"FirstName": "Susie",
-				"LastName": "Johnson",
-				"PhoneNumber": "",
-				"Email": "susie.johnson@contoso.com"
-			}
-        },
-        "Details": {
-		    "Notes": "",
-	        "DealValue": "",
-	        "ClosingDate": "",
-	        "Requirements": {
-		        "IndustryFocus": "",
-                "Products": "",
-		        "ServiceTypes": "",
-		        "Solutions": ""		        
-	        }
-	    },
-        "Participants": {
-            "OrganizationName": "Proseware Partner Inc.",
-            "Users": [
-				{
-					"FirstName": "John",
-					"LastName": "Doe",
-					"PhoneNumber": "123-456-7890",
-					"Email": "john.doe@prosewarepartner.com"
-				},
-				{
-					"FirstName": "Jane",
-					"LastName": "Smith",
-					"PhoneNumber": "123-098-7654",
-					"Email": "jane.smith@prosewarepartner.com"
-				},
-			]
-		},		
-		"links": {
-			"referrals": {
-				"uri": "/referrals/001da786-f1a8-40f8-a74d-1ef6041f7218",
-				"method": "GET",
-				"body": null,
-				"headers": []
-			}
-		},
-		"attributes": {
-			"objectType": "Referral"
-		}
-	}
-}
+
+to do
+
 ```
 
  

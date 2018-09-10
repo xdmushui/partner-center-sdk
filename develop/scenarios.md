@@ -139,17 +139,10 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p>[Create a referral](create-a-referral.md)</p></li> 
 <li><p>[Get a referral by ID](get-a-referral-by-Id.md) </p></li> 
-<li><p>[Get a list of all referrals](get-a-list-of-referrals.md) </p></li> 
-<li><p>[Get a list of referrals by status](get-a-list-of-referrals-by-status.md)</p></li> 
+<li><p>[Get a list of referrals](get-a-list-of-referrals.md) </p></li> 
 <li><p>[Update referral status](update-referral-status.md)</p></li> 
 <li><p>[Invite a participant](invite-a-participant.md)</p></li> 
 <li><p>[Get a list of pending invitations](get-a-list-of-pending-invitations.md)</p></li> 
-</ul>
-<p>Participants</p>
-<ul>
-<li><p>[Create a participant](create-a-participant.md)</p></li>
-<li><p>[Get a list of participants](get-a-list-of-participants.md)</p></li>
-<li><p>[Get a participant by ID](get-a-participant-by-id.md)</p></li>
 </ul>
 </td>
 </tr>

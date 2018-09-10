@@ -33,7 +33,7 @@ Update referral status
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/{referralId}                                        |
+| **POST** | https://api.partner.microsoft.com/v1/referrals/{referralId}                                        |
 
  
 **Request headers**
@@ -47,16 +47,25 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)     | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | string                                             | An string with values that indicate the referral source. |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)   | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)   | Customer details, notes, deal value, closing date                                                                 |
-| Participants          | [Participant](referral.md#Participant)           | Represents the customer interest in Industry, Products, Services, Solutions                                       |
+| EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
+| OrganizationId        | string                                            | The Dunn & Bradstreet ID for this customer                                                                         |
+| OrganizationName      | string                                            | The organization name of the customer.                                                                               |
+| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
+| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
+| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                           |
+| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
+| ReferralSource        | string                                            | Represents the referral quality.     |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.     |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                      |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                 |
+| Team                  | [Member](referral.md#Member)                      | Represents the customer interest in Industry, Products, Services, Solutions.                                       |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents the referral invitation.                                       |
+
 
 
 **Request example**
 
-```json
+```http
 POST https://api.partner.microsoft.com/v1/referrals/{referralId} HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
@@ -75,7 +84,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+``` http
 <to do>
 ```
 

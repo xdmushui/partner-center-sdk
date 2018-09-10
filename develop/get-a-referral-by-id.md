@@ -33,9 +33,17 @@ How to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/{referralId}                                        |
+| **GET** | https://api.partner.microsoft.com/v1/referrals/{referralId}                                        |
 
  
+**URI parameter**
+
+Use the following query parameters to get a list of referrals
+
+| Name                   | Type     | Required | Description                                                     |
+|------------------------|----------|----------|-----------------------------------------------------------------|
+|Id                      | string   | No       | A referral ID       |
+
 **Request headers**
 
 -   See [Partner Center REST headers](headers.md) for more information.

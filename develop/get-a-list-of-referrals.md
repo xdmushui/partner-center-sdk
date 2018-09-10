@@ -33,7 +33,7 @@ How to create a referral
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/                                                     |
+| **GET** | https://api.partner.microsoft.com/v1/referrals/                                                     |
 
 
 **URI parameter**
@@ -43,9 +43,9 @@ Use the following query parameters to get a list of referrals
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |engagementId            | string   | No       | An engagement ID       |
-|self                    | string   | No       | A string of value "true"       |
+|self                    | string   | No       | A string of value "true". Will return only the referrals for your organization      |
 |status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
-|invitedByOrganization   | string   | No       | An engagement ID. Will return all referrals associated to an engagement       |
+|invitedByOrganization   | string   | No       | An organization ID. Will return referrals associated to an specific organization       |
  
 **Request headers**
 
@@ -53,19 +53,18 @@ Use the following query parameters to get a list of referrals
 
 **Request body**
 
-This table describes the [Referral](referral.md) properties in the request body.
-
-
+None.
 
 **Request example**
 
-```json
+```http
 GET https://api.partner.microsoft.com/v1/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
  
 <to do>
+
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
@@ -78,7 +77,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+``` http
 <to do>
 ```
 

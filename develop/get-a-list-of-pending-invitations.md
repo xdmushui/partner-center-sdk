@@ -33,7 +33,7 @@ Get a list of pending invitations
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/referrals/                                                     |
+| **GET** | https://api.partner.microsoft.com/v1/referrals/                                                    |
 
 
 **URI parameter**
@@ -42,7 +42,8 @@ Use the following query parameters to get a list of referrals
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus)        |
+|status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus) of "Pending"        |
+|self                    | string   | No       | A string of value "true". Will return only the referrals for your organization      |
 |invitedByOrganization   | string   | No       | A string that represents a Partner account ID  `**To do: How can partner determine their own ID?**`     |
  
 **Request headers**
@@ -57,7 +58,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 
 **Request example**
 
-```json
+```http
 GET https://api.partner.microsoft.com/v1/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
@@ -76,7 +77,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+``` http
 <to do>
 ```
 
