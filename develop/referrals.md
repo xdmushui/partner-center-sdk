@@ -22,7 +22,7 @@ This section describes the ways that partners can use the [Partner Center](index
 **Referrals**  
 -   [Create a referral](create-a-referral.md)
 -   [Get a referral by ID](get-a-referral-by-Id.md) 
--   [Get a list of all referrals](get-a-list-of-referrals.md) 
+-   [Get a list of referrals](get-a-list-of-referrals.md) 
 -   [Get a list of referrals by status](get-a-list-of-referrals-by-status.md)
 -   [Update referral status](update-referral-status.md)
 -   [Invite a participant](invite-a-participant.md)

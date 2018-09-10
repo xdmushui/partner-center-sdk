@@ -29,19 +29,18 @@ Represents the referral.
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
 | OrganizationId        | string                                            | The Dunn & Bradstreet ID for this customer                                                                         |
-| LocationId            | string                                            | TBD                                                                                |
-| OrganizationName      | string                                            | The EngagementID for this Referral.                                                                               |
+| OrganizationName      | string                                            | The organization name of the customer.                                                                               |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                           |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | string                                            | TBD     |
-| ReferralType          | [ReferralType](referral.md#ReferralType)          | TBD     |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date                                                                 |
-| Users                 | [User](referral.md#User)                          | Represents the customer interest in Industry, Products, Services, Solutions                                       |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | TBD                                       |
-| InvitedByOrganizationID         | string       | TBD                                       |
+| ReferralSource        | string                                            | Represents the referral quality.     |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.     |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                      |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                 |
+| Team                  | [Member](referral.md#Member)                      | Represents the customer interest in Industry, Products, Services, Solutions.                                       |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents the referral invitation.                                       |
+
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
 
@@ -65,8 +64,8 @@ Represents the referral type
 
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| to do                 | string                                                     |                 |
-
+| Collaborative         | string                                                     | Represents a referral in which all parties involved will collaborate to close                |
+| Competitive          | string                                                      | Represents a referral in which parties involved will compete to win the customer                |
 
 ## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
 
@@ -76,7 +75,7 @@ Represents the referral invitation
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
-
+| InvitedByOrganizationId | string                                                   | The organization that sent the referral               |
 
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
 
@@ -88,7 +87,7 @@ Represents the referral details
 | Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
 | DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
 | ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
-| Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)  | Industry, products, service type, and solutions the customer is intered in   |
+| Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is intered in   |
 
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
@@ -102,7 +101,13 @@ Contains the customer requirements
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
 | Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in           |
 
+## ReferralSource
 
+``` json
+
+to do
+
+```
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
 
@@ -115,7 +120,7 @@ Contains the customer contact information
 | Name            | string                                                        | The customer first and last name                     |
 | Address         | [Address](referral.md#address)                               | The address of the customer                          |
 | Size            | string                                                        | The number of employees at the customers organization|
-| Contacts        | [User](referral.md#User)               | The contact information for an individual in the customer organization                    |
+| Team            | [Member](referral.md#Member)               | The contacts for the customer organization                    |
 
 
 
@@ -149,7 +154,7 @@ Describes contact information for a specific individual.
 
 
 
-## <span id="User"></span><span id="user"></span><span id="USER"></span>User
+## <span id="Member"></span><span id="member"></span><span id="MEMBER"></span>Member
 
 
 Describes the the referrals information for a given user
