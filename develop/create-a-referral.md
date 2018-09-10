@@ -64,7 +64,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 
 **Request example**
 
-```json
+```http
 POST https://api.partner.microsoft.com/v1/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
@@ -84,7 +84,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+``` http
 
 to do
 
