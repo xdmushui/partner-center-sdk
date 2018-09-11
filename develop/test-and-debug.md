@@ -31,11 +31,12 @@ CSP Azure subscription offers are no longer available by default to sandbox acco
 For partners whose sandbox accounts have been approved for CSP Azure subscription offers, the following limits apply:  
 
  - You can have up to a maximum of 375 active subscriptions (75 customers x 5 subscriptions per customer). However, only 10 of which can be CSP Azure subscriptions.  
- - When an CSP Azure subscription reaches $200 of Azure usage, its resources are temporarily disabled until its next billing cycle. It is still considered an active subscription and is counted towards the 375 active subscriptions limit.  
- - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per Datacenter. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.  
+ - When a CSP Azure subscription reaches $200 of Azure usage, its resources are temporarily disabled until its next billing cycle. It is still considered an active subscription and is counted towards the 375 active subscriptions limit.  
+ - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.  
  - Only offer MS-AZR-0146P is available. Other Azure subscription offers (including MS-AZR-DE-0146P and MS-AZR-USGOV-0146P for CSP Azure subscriptions in Microsoft German Cloud and Government Cloud respectively) will not be available until further notice.  
 
-> [!Important] All existing CSP Azure subscriptions purchased with sandbox accounts prior to June 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 15 – October 31, 2018. Data associated with these subscriptions are no longer accessible after they have been deprovisioned. Partners who have valuable data stored under these subscriptions must back up the data before October 15, 2018.
+> [!Important]  
+> All existing CSP Azure subscriptions purchased with sandbox accounts prior to June 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 15 – October 31, 2018. Data associated with these subscriptions are no longer accessible after they have been deprovisioned. Partners who have valuable data stored under these subscriptions must back up the data before October 15, 2018.
 
 If you are [purchasing an Azure Reserved VM Instance](purchase-azure-reservations.md) with your sandbox account, you are limited to 2 VM Instances per customer. You are also limited to selecting only from the following Azure Reserved VM Instance product SKUs: 
 
