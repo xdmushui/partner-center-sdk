@@ -2,11 +2,7 @@
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
 ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

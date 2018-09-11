@@ -2,11 +2,7 @@
 title: Convert a trial subscription to paid
 description: How to convert a trial subscription to paid.
 ms.assetid: 06EB96D7-6260-47E0-ACAE-07D4213BEBB7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

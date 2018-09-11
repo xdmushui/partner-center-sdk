@@ -1,13 +1,7 @@
 ---
 title: Partner Center webhook events
-description: 
-    Documentation for all Webhook events supported by Partner Center.
-ms.assetid: 
-ms.author: dansimp
+description: Documentation for all Webhook events supported by Partner Center.
 ms.date: 02/14/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

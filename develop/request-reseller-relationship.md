@@ -2,11 +2,7 @@
 title: Retrieve a relationship request URL
 description: How to retrieve a relationship request URL to send to a customer.
 ms.assetid: 31D9EDB2-4ABE-4C57-A394-2FF256F7D3CA
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

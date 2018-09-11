@@ -1,14 +1,8 @@
 ---
 title: Get all subscription analytics information
 description: How to get all the subscription analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: 243E54BD-EA34-400E-B9AB-D735EB46B9F6
-robots: noindex,nofollow   
 ms.date: 06/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

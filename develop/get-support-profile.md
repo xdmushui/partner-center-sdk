@@ -2,11 +2,7 @@
 title: Get support profile
 description: Gets an object representing a user's support profile.
 ms.assetid: 7161B81C-09E7-46C8-8EF4-214B3ED76FB7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -1,15 +1,8 @@
 ---
 title: ServiceRequest
-description: 
-    Partners can file service requests on behalf of their partners to report
-    disruptions services provided by Microsoft or to request other technical
-    support that they are incapable of providing.
+description: Partners can file service requests on behalf of their partners to report disruptions services provided by Microsoft or to request other technical support that they are incapable of providing.
 ms.assetid: E9FBF7D8-A7E8-4DC6-B370-8339B9EE16B7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

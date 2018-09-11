@@ -2,11 +2,7 @@
 title: Get a list of add-ons for a subscription
 description: Gets a collection of add-ons that a customer has chosen to add to their Subscription.
 ms.assetid: F10823A2-CA77-4F80-9ED4-CFB4E4343049
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

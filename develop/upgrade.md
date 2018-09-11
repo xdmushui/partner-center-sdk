@@ -1,14 +1,8 @@
 ---
 title: Upgrade
-description: 
-    Describes the resources used to upgrade a user from a source
-    subscription to a target subscription.
+description: Describes the resources used to upgrade a user from a source subscription to a target subscription.
 ms.assetid: 869007B3-D6D4-4E79-B4F0-445CA5D88D2C
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

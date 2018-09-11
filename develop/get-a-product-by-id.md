@@ -2,11 +2,7 @@
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 03/20/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
