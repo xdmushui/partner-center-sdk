@@ -3,7 +3,6 @@
 ### [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md)
 #### [Register app details for Partner Center](create-apps-for-partner-center-for-microsoft-national-clouds.md)
 ### [Partner Center samples](partner-center-samples.md)
-#### [Associate a Partner Center Account with an Active Azure Subscription Account](how-to--associate-a-partner-center-account-with-an-active-azure-subscrption-account.md)
 #### [CSP customer web storefront](csp-customer-web-storefront.md)
 #### [CSP Customer Storefront Builder Quick Start Guide](csp-customer-storefront-builder-quick-start-guide-.md)
 #### [Console test app](console-test-app.md)
