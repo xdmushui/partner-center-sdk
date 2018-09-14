@@ -24,22 +24,25 @@ Resources that represents a sales lead direct from customer or Microsoft.
 
 Represents the referral.
 
+`to do: add ExternalReferenceID and BusinessProfileID [tbd name]`
+
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
-| OrganizationId        | string                                            | The Dunn & Bradstreet ID for this customer                                                                         |
-| OrganizationName      | string                                            | The organization name of the customer.                                                                               |
+| OrganizationId        | string                                            | The organization ID of the party that received/owns the referral (Microsoft Partner Account ID / MSFT)            |
+| OrganizationName      | string                                            | The organization name of the  party that received/owns the referral .                                             |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                           |
+| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
 | ReferralSource        | string                                            | Represents the referral quality.     |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.     |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                      |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                 |
-| Team                  | [Member](referral.md#Member)                      | Represents the customer interest in Industry, Products, Services, Solutions.                                       |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents the referral invitation.                                       |
+| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
+| Consent               | [CustomerProfile](referral.md#CustomerProfile)    | Privacy consent flags for the customer `to do: update`                                                            |
+| Details               | [CustomerConsent](referral.md#CustomerConsent)    | Customer details, notes, deal value, closing date.                                                                |
+| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
@@ -47,15 +50,16 @@ Represents the referral.
 
 An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value              | Position     | Description                                                                                |
+| Value `to do: need to lock on names`             | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
-| Pending            | 0            | Represents a new referral  |
-| Validated          | 1            | Represents a referral that has been acknowledged  |
-| Active             | 2            | Represents a referral that has been accepted  |
-| Rejected           | 3            | Represents a referral that has been rejected  |
-| Expired            | 4            | Represents a referral that has expired  |
+| [new] Pending            | 0            | Represents a new referral |
+| [acknowledged] Validated       | 1            | Represents a referral that has been acknowledged  |
+| [accepted] Active             | 2            | Represents a referral that has been accepted  |
+| {skipped, declined} Rejected           | 3            | Represents a referral that has been rejected  |
+| {missed, expired} Expired            | 4            | Represents a referral that has expired  |
 | Won                | 5            | Represents a referral that has been won  |
 | Lost               | 6            | Represents a referral that has been lost  |
+
 
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
@@ -65,7 +69,7 @@ Represents the referral type
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
 | Collaborative         | string                                                     | Represents a referral in which all parties involved will collaborate to close                |
-| Competitive          | string                                                      | Represents a referral in which parties involved will compete to win the customer                |
+| Competitive           | string                                                     | Represents a referral in which parties involved will compete to win the customer                |
 
 ## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
 
@@ -85,9 +89,10 @@ Represents the referral details
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
-| DealValue             | decimal                                                    | Estimated value the referral may be worth.                                   |
-| ClosingDate           | string in UTC date time format                             | Estimated date in which the customer wants to close.                         |
+| EstimatedDealValue    | decimal                                                    | Estimated value the referral may be worth.                                   |
+| EstimatedClosingDate  | string in UTC date time format                             | Estimated date in which the order would close.                         |
 | Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is intered in   |
+
 
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
@@ -99,7 +104,7 @@ Contains the customer requirements
 | Industries      | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
 | Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
-| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in           |
+| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in `to do: change coming`          |
 
 ## ReferralSource
 
@@ -116,20 +121,28 @@ Contains the customer contact information
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| Id              | string                                                        | The Id for this CustomerProfile                      |
+| Id              | string                                                        | The Id for this CustomerProfile  `[Need to visit this]` |
 | Name            | string                                                        | The customer first and last name                     |
 | Address         | [Address](referral.md#address)                               | The address of the customer                          |
 | Size            | string                                                        | The number of employees at the customers organization|
 | Team            | [Member](referral.md#Member)               | The contacts for the customer organization                    |
 
+## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
 
+
+Contains the customer contact information `need to remove this`
+
+| Property        | Type                                                          | Description                                          |
+|-----------------|---------------------------------------------------------------|------------------------------------------------------|
+
+`to do: add details`
 
 ## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
 
 
 An address to use for the customer. For more information about the supported formats and properties in different countries/regions, see [Get address formatting rules by market](get-market-specific-validation-data.md).
 
-| Property        | Type        | Description                                                   |
+| Property        | Type        | Description          `to do: Add region?`                     |
 |-----------------|-------------|---------------------------------------------------------------|
 | AddressLine1    | string      | The first line of the address.                                |
 | AddressLine2    | string      | The second line of the address. This property is optional.    |
@@ -157,7 +170,7 @@ Describes contact information for a specific individual.
 ## <span id="Member"></span><span id="member"></span><span id="MEMBER"></span>Member
 
 
-Describes the the referrals information for a given user
+Describes the the referrals information for a given user `to do: member is a contact`
 
 | Property                  | Type                                                  | Description                                                           |
 |---------------------------|-------------------------------------------------------|-----------------------------------------------------------------------|
