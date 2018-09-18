@@ -1,6 +1,6 @@
 ---
 title: Referral
-description: Resources that represents a sales lead direct from customer or Microsoft.  
+description: Resources that represents a sales lead direct from a customer or Microsoft.  
 ms.author: mhopkins
 ms.date: 10/01/2018
 ms.topic: article
@@ -108,7 +108,7 @@ Contains the customer contact information
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| Id              | string                                                        | The Id for this CustomerProfile  `[Need to visit this]` |
+| Id              | string                                                        | The Id for this CustomerProfile  |
 | Name            | string                                                        | The customer first and last name                     |
 | Address         | [Address](referral.md#address)                               | The address of the customer                          |
 | Size            | string                                                        | The number of employees at the customers organization|
@@ -197,9 +197,9 @@ Contains the customer requirements
 | Property        | Type                                                         | Description                                          |
 |-----------------|--------------------------------------------------------------|------------------------------------------------------|
 | Industries      | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
-| Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
+| Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in          |
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
-| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in `to do: change coming`          |
+| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in          |
 
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
