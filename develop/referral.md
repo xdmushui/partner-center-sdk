@@ -81,12 +81,12 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
 
-Represents the referral type
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral type.
 
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| Collaborative         | string                                                     | Represents a referral in which all parties involved will collaborate to close                |
-| Competitive           | string                                                     | Represents a referral in which parties involved will compete to win the customer                |
+| Collaborative         | 0                                                     | Represents a referral in which all parties involved will collaborate to close                |
+| Competitive           | 1                                                     | Represents a referral in which parties involved will compete to win the customer                |
 
 ## <span id="ReferralQualifier"></span><span id="referralqualifier"></span><span id="REFERRALQUALIFIER"></span>ReferralQualifier
 
