@@ -93,12 +93,12 @@ Represents the referral type
 
 An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value `to do: need to lock on names`             | Position     | Description                                                                                |
+| Value                | Position     | Description                                                                                |
 |----------------------|--------------|--------------------------------------------------------------------------------------------|
 | None                 | 0            | Represents a referral that has no quality measure associated                               |
 | Direct               | 1            | Represents a referral that has been created directly by a customer                         |
 | MarketingQualified   | 2            | Represents a referral that has been generated via Microsoft marketing automation systems   |
-| SalesQualified       | 3            | Represents a referral that has been route from a Microsoft sales agent                     |
+| SalesQualified       | 3            | Represents a referral from a Microsoft sales agent                     |
 
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
@@ -153,12 +153,11 @@ Describes the the referrals information for a given user `to do: member is a con
 | Property                  | Type                                                  | Description                                                           |
 |---------------------------|-------------------------------------------------------|-----------------------------------------------------------------------|
 
-[to do]
 
 ## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
 
 
-Contains the customer contact information `need to remove this`
+Contains the customer contact information
 
 | Property                                         | Type      | Description                                          |
 |--------------------------------------------------|-----------|------------------------------------------------------|
