@@ -24,23 +24,26 @@ Resources that represents a sales lead direct from customer or Microsoft.
 
 Represents the referral.
 
-`to do: add ExternalReferenceID and BusinessProfileID [tbd name]`
+
 
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
-| OrganizationId        | string                                            | The organization ID of the party that received/owns the referral (Microsoft Partner Account ID / MSFT)            |
-| OrganizationName      | string                                            | The organization name of the  party that received/owns the referral .                                             |
+| OrganizationId        | string                                            | The organization ID of the party that received/owns the referral (Microsoft Partner Account ID / MSFT).           |
+| BusinessProfileId     | string                                            | The business profile ID of the organization received/owns the referral.                                           |
+| OrganizationName      | string                                            | The organization name of the  party that received/owns the referral.                                              |
+| ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| ReferralSource        | string                                            | Represents the referral quality.     |
-| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.     |
+| StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
+| ReferralQualifier     | [ReferralQualifier](referral.md#ReferralQualifier)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerProfile](referral.md#CustomerProfile)    | Privacy consent flags for the customer `to do: update`                                                            |
-| Details               | [CustomerConsent](referral.md#CustomerConsent)    | Customer details, notes, deal value, closing date.                                                                |
+| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information and ability to contact                                                   |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
 
@@ -50,15 +53,29 @@ Represents the referral.
 
 An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value `to do: need to lock on names`             | Position     | Description                                                                                |
-|--------------------|--------------|--------------------------------------------------------------------------------------------|
-| [new] Pending            | 0            | Represents a new referral |
-| [acknowledged] Validated       | 1            | Represents a referral that has been acknowledged  |
-| [accepted] Active             | 2            | Represents a referral that has been accepted  |
-| {skipped, declined} Rejected           | 3            | Represents a referral that has been rejected  |
-| {missed, expired} Expired            | 4            | Represents a referral that has expired  |
-| Won                | 5            | Represents a referral that has been won  |
-| Lost               | 6            | Represents a referral that has been lost  |
+| Value           | Position     | Description                                                                                |
+|-----------------|--------------|--------------------------------------------------------------------------------------------|
+| None            | 0            |  |
+| New             | 1            | Represents a new referral  |
+| Active          | 2            | Represents an active referral  |
+| Closed          | 3            | Represents a closed referral  |
+
+## <span id="ReferralStatusDetail"></span><span id="referralstatusdetail"></span><span id="REFERRALSTATUSDETAIL"></span>ReferralStatusDetail
+
+
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
+
+| Value           | Position     | Description                                                                                |
+|-----------------|--------------|--------------------------------------------------------------------------------------------|
+| None            | 0            |  |
+| Pending         | 1            | Represents a new referral that is pending  |
+| Received        | 2            | Represents a new referral that has been received by the receiving party  |
+| Accepted        | 3            | Represents an active accepted referral  |
+| Won             | 4            | Represents a closed referral that has been won  |
+| Lost            | 5            | Represents a closed referral that has been lost  |
+| Declined        | 6            | Represents a closed referral that has been declined  |
+| Expired         | 7            | Represents a closed referral that has expired |
+
 
 
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
@@ -71,48 +88,18 @@ Represents the referral type
 | Collaborative         | string                                                     | Represents a referral in which all parties involved will collaborate to close                |
 | Competitive           | string                                                     | Represents a referral in which parties involved will compete to win the customer                |
 
-## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
+## <span id="ReferralQualifier"></span><span id="referralqualifier"></span><span id="REFERRALQUALIFIER"></span>ReferralQualifier
 
 
-Represents the referral invitation
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Property              | Type                                                       | Description                                                                  |
-|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
-| InvitedByOrganizationId | string                                                   | The organization that sent the referral               |
+| Value `to do: need to lock on names`             | Position     | Description                                                                                |
+|----------------------|--------------|--------------------------------------------------------------------------------------------|
+| None                 | 0            | Represents a referral that has no quality measure associated                               |
+| Direct               | 1            | Represents a referral that has been created directly by a customer                         |
+| MarketingQualified   | 2            | Represents a referral that has been generated via Microsoft marketing automation systems   |
+| SalesQualified       | 3            | Represents a referral that has been route from a Microsoft sales agent                     |
 
-## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
-
-
-Represents the referral details
-
-| Property              | Type                                                       | Description                                                                  |
-|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
-| EstimatedDealValue    | decimal                                                    | Estimated value the referral may be worth.                                   |
-| EstimatedClosingDate  | string in UTC date time format                             | Estimated date in which the order would close.                         |
-| Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is intered in   |
-
-
-## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
-
-
-Contains the customer requirements
-
-| Property        | Type                                                          | Description                                          |
-|-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| Industries      | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
-| Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
-| Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
-| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in `to do: change coming`          |
-
-## ReferralSource
-
-``` json
-
-to do
-
-```
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
 
@@ -127,15 +114,6 @@ Contains the customer contact information
 | Size            | string                                                        | The number of employees at the customers organization|
 | Team            | [Member](referral.md#Member)               | The contacts for the customer organization                    |
 
-## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
-
-
-Contains the customer contact information `need to remove this`
-
-| Property        | Type                                                          | Description                                          |
-|-----------------|---------------------------------------------------------------|------------------------------------------------------|
-
-`to do: add details`
 
 ## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
 
@@ -176,6 +154,54 @@ Describes the the referrals information for a given user `to do: member is a con
 |---------------------------|-------------------------------------------------------|-----------------------------------------------------------------------|
 
 [to do]
+
+## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
+
+
+Contains the customer contact information `need to remove this`
+
+| Property                                         | Type      | Description                                          |
+|--------------------------------------------------|-----------|------------------------------------------------------|
+| ConsentToMicrosoftToShareInfoWithPartners        | boolean   | Consent provided by the customer to share their info with partners.                                                     |
+| ConsentToMicrosoftToContact                      | boolean   | Consent provided by the customer that allows Microsoft to contact the customer                                                     |
+| ConsentToMicrosoftToContactSpecificPartners      | boolean   | Consent provided by the customer to contact fewer than 3 partners                                                    |
+
+
+## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
+
+
+Represents the referral invitation
+
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
+| InvitedByOrganizationId | string                                                   | The organization ID that sent the referral               |
+
+## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
+
+
+Represents the referral details
+
+| Property              | Type                                                       | Description                                                                  |
+|-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
+| Notes                 | string                                                     | Additional details from the customer or Microsoft sales agent.               |
+| EstimatedDealValue    | decimal                                                    | Estimated value the referral may be worth.                                   |
+| EstimatedClosingDateTime  | string in UTC date time format                         | Estimated date the customer is looking to close                              |
+| Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in   |
+
+
+## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
+
+
+Contains the customer requirements
+
+| Property        | Type                                                         | Description                                          |
+|-----------------|--------------------------------------------------------------|------------------------------------------------------|
+| Industries      | [Tag](referral.md#tag)                                       | The industries the customer is in                    |
+| Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in           |
+| Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in           |
+| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in `to do: change coming`          |
+
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
 
