@@ -60,7 +60,7 @@ The following list describes the differences for partners between Partner Center
 
 -   Multichannel and multipartner and request relationship with an existing customer within Microsoft Cloud for U.S. Government scenarios do not apply. This is because Office 365 is not currently available. Microsoft Cloud for U.S. Government customers must transact with a single partner.
 
--   Partners cannot create users for their customer's organization or assign roles. Partners can read fields, but cannot write or update them. Partners must manually create or update their customers' users in the Office365 admin center or through the Azure portal. See [Azure Active Directory Documentation](https://docs.microsoft.com/en-us/azure/active-directory/).
+-   Partners cannot create users for their customer's organization or assign roles. Partners can read fields, but cannot write or update them. Partners must manually create or update their customers' users in the Azure portal. See [Azure Active Directory Documentation](https://docs.microsoft.com/en-us/azure/active-directory/).
 
 -   You cannot programmatically reset a password for a customer user or full partner user. Use the Azure portal. See [Reset the password for a user in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-users-reset-password-azure-portal). Note that in Step 1, you need to sign into the Azure portal for Microsoft Cloud for U.S. Government.
 
