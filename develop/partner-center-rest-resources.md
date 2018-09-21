@@ -203,13 +203,15 @@ samples](partner-center-samples.md) section.
 <td><ul>
 <li>Referral</li>
 <li>ReferralStatus</li>
-<li>ReferralSource</li>
+<li>ReferralStatusDetail</li>
+<li>ReferralType</li>
+<li>ReferralQualifier</li>
 <li>CustomerProfile</li>
-<li>Address</li>
-<li>Contact</li>
+<li>CustomerConsent</li>
 <li>CustomerRequirements</li>
-<li>Participant</li>
-<li>ParticipantStatus</li>
+<li>ReferralDetails</li>
+<li>Member</li>
+<li>InviteContext</li>
 </ul></td>
 </tr>
 <tr class="even">

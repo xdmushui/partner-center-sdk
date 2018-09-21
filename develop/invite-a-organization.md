@@ -1,6 +1,6 @@
 ---
-title: Invite a participant
-description: How to create a referral
+title: Invite a organization
+description: How to invite an organization
 ms.assetid: 
 ms.date: 10/01/18
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-Invite a participant
+Invite a organization
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
