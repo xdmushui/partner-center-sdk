@@ -74,7 +74,89 @@ Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
 
-to do
+{
+  {
+  "organizationId": "1",
+  "businessProfileId": "1",
+  "organizationName": "Contoso Inc",
+  "externalReferenceId": "CRMID1234567",
+  "createdDateTime": "2018-09-21T17:23:33.809Z",
+  "updatedDateTime": "2018-09-21T17:23:33.809Z",
+  "expirationDateTime": "2018-09-21T17:23:33.809Z",
+  "status": "New",
+  "statusDetail": "Pending",
+  "qualification": "SalesQualified",
+  "type": "Shared",
+  "customerProfile": {
+    "id": "string",
+    "name": "string",
+    "address": {
+      "addressLine1": "One Microsoft Way",
+      "addressLine2": "",
+      "city": "Redmond",
+      "state": "WA",
+      "postalCode": "98034",
+      "country": "US",
+      "region": ""
+    },
+    "size": "251to1000employees",
+    "team": [
+      {
+        "firstName": "Sue",
+        "lastName": "Smith",
+        "phoneNumber": "425-789-7889",
+        "email": "sue.smith@contoso.com"
+      }
+    ],
+    "ids": {
+      "duns": "1234567"
+    }
+  },
+  "consent": {
+    "consentToToShareInfoWithOthers": true,
+    "consentToContact": true,
+    "consentToMicrosoftToContactSpecificPartners": true
+  },
+  "details": {
+    "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+    "estimatedDealValue": "50000",
+    "estimatedClosingDateTime": "2018-09-21T17:23:33.810Z",
+    "requirements": {
+      "industries": [
+        {
+          "id": "Healthcare"
+        }
+      ],
+      "products": [
+        {
+          "id": "Azure"
+        }
+      ],
+      "services": [
+        {
+          "id": "DeploymentOrMigration"
+        }
+      ],
+      "solutions": [
+        {
+          "id": "DevOps"
+        }
+      ]
+    }
+  },
+  "team": [
+    {
+      "firstName": "Ryan",
+      "lastName": "Barschaw",
+      "phoneNumber": "123-456-7890",
+      "email": "rbars@microsoft.com"
+    }
+  ],
+  "inviteContext": {
+    "notes": "Hi Microsoft, I would like your support moving Contoso Inc to Dynamics 365",
+    "invitedByOrganizationId": "string"
+  }
+}
 
 ```
 

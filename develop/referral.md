@@ -85,8 +85,8 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 | Property              | Type                                                       | Description                                                                  |
 |-----------------------|------------------------------------------------------------|------------------------------------------------------------------------------|
-| Collaborative         | 0                                                     | Represents a referral in which all parties involved will collaborate to close                |
-| Competitive           | 1                                                     | Represents a referral in which parties involved will compete to win the customer                |
+| Shared                | 0                                                     | Represents a referral in which all parties involved will collaborate to close                |
+| Independent           | 1                                                     | Represents a referral in which two parties will collaborate to close                |
 
 ## <span id="ReferralQualifier"></span><span id="referralqualifier"></span><span id="REFERRALQUALIFIER"></span>ReferralQualifier
 
