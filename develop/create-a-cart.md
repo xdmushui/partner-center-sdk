@@ -107,7 +107,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | quantity             | int                         | Yes          | The number of licenses or instances.                                                               |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
-| participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
+| participants         | List of Object String pairs | No           | A collection of PartnerId on Record (MPNID) on the purchase.                                       |
 | provisioningContext  | Dictionary<string, string>  | No           | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
@@ -136,6 +136,12 @@ Expect: 100-continue
             "FriendlyName": "A_sample_Azure_RI",
             "Quantity": 2,
             "BillingCycle": "one_time",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "12345"
+                }
+            ],
             "ProvisioningContext": {
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",
@@ -183,6 +189,12 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
             "quantity": 2,
             "currencyCode": "USD",
             "billingCycle": "one_time",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "12345"
+                }
+            ],
             "provisioningContext": {
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",
