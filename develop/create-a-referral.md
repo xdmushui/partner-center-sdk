@@ -2,11 +2,7 @@
 title: Create a referral
 description: How to create a referral
 ms.assetid: 
-ms.author: mhopkins
 ms.date: 10/01/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -89,7 +85,7 @@ Content-Type: application/json
   "type": "Shared",
   "customerProfile": {
     "id": "string",
-    "name": "string",
+    "name": "Contoso Inc",
     "address": {
       "addressLine1": "One Microsoft Way",
       "addressLine2": "",
@@ -117,7 +113,7 @@ Content-Type: application/json
     "consentToContact": true,
     "consentToMicrosoftToContactSpecificPartners": true
   },
-  "details": {
+  "details": { 
     "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
     "estimatedDealValue": "50000",
     "estimatedClosingDateTime": "2018-09-21T17:23:33.810Z",
@@ -153,7 +149,7 @@ Content-Type: application/json
     }
   ],
   "inviteContext": {
-    "notes": "Hi Microsoft, I would like your support moving Contoso Inc to Dynamics 365",
+    "notes": "Hi Microsoft, I would like your support in migrating Contoso Inc to Dynamics 365",
     "invitedByOrganizationId": "string"
   }
 }

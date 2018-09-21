@@ -2,11 +2,7 @@
 title: Get a list of pending invitations
 description: Get a list of pending invitations
 ms.assetid: 
-ms.author: mhopkins
 ms.date: 10/01/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

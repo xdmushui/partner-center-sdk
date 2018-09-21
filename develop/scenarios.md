@@ -2,11 +2,7 @@
 title: Scenarios
 description: This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
 ms.assetid: D278B9D1-D5B9-4FAD-89D8-44244715D6C9
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -141,7 +137,7 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a referral by ID](get-a-referral-by-Id.md) </p></li> 
 <li><p>[Get a list of referrals](get-a-list-of-referrals.md) </p></li> 
 <li><p>[Update referral status](update-referral-status.md)</p></li> 
-<li><p>[Invite a participant](invite-a-participant.md)</p></li> 
+<li><p>[Invite a organization](invite-a-organization.md)</p></li> 
 <li><p>[Get a list of pending invitations](get-a-list-of-pending-invitations.md)</p></li> 
 </ul>
 </td>

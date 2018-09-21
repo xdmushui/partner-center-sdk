@@ -2,11 +2,7 @@
 title: Get a referral by ID
 description: How to create a referral
 ms.assetid: 
-ms.author: mhopkins
 ms.date: 10/01/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

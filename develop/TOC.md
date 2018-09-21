@@ -82,7 +82,7 @@
 #### [Get a referral by ID](get-a-referral-by-Id.md) 
 #### [Get a list of referrals](get-a-list-of-referrals.md) 
 #### [Update referral status](update-referral-status.md)
-#### [Invite a participant](invite-a-participant.md)
+#### [Invite a organization](invite-a-organization.md)
 #### [Get a list of pending invitations](get-a-list-of-pending-invitations.md)
 ### [Place orders](place-orders.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
