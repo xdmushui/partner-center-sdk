@@ -54,7 +54,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
 | StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status detail. |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
-| ReferralQualifier     | [ReferralQualifier](referral.md#ReferralQualifier)| Represents the quality of the referral.                                                                           |
+| Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
 | Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer          |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |

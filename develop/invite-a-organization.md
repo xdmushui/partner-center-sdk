@@ -42,10 +42,10 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
-| EngagementId          | string                                            | The EngagementID for this Referral.                                                                               |
+| EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
 | OrganizationId        | string                                            | The organization ID of the party that received/owns the referral (Microsoft Partner Account ID / MSFT).           |
-| BusinessProfileId     | string                                            | The business profile ID of the organization received/owns the referral.                                           |
-| OrganizationName      | string                                            | The organization name of the  party that received/owns the referral.                                              |
+| BusinessProfileId     | string                                            | The business profile ID of the organization who received/owns the referral.                                       |
+| OrganizationName      | string                                            | The organization name that received/owns the referral. Example: Store your own Dynamics 365 load/opportunity ID   |
 | ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
@@ -53,9 +53,9 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
 | StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status detail. |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
-| ReferralQualifier     | [ReferralQualifier](referral.md#ReferralQualifier)| Represents the quality of the referral.                                                                           |
+| Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information and ability to contact                                                   |
+| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer          |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
