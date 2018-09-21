@@ -66,7 +66,7 @@ Represents an error that occurs after a cart is created.
 ## <span id="cartErrorCode"></span><span id="carterrorcode"></span><span id="CARTERRORCODE"></span>CartErrorCode
 
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate a type of cart error.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of cart error.
 
 | Value                                | Position | Description                                             |
 |--------------------------------------|----------|---------------------------------------------------------|
