@@ -178,7 +178,6 @@ Represents the referral details
 
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
-
 Contains the customer requirements
 
 | Property        | Type                                                         | Description                                          |
@@ -186,7 +185,27 @@ Contains the customer requirements
 | Industries      | [Tag](referral.md#tag)                                       | The industries the customer is interested in.        |
 | Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in.          |
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in.          |
-| Solutions       | [Tag](referral.md#tag)                                       | The solutions the customer is interested in.         |
+| Solutions       | [SolutionTag](referral.md#SolutionTag)                       | Describes the solutions                              |
+
+## <span id="SolutionTag"></span><span id="solutiontag"></span><span id="SOLUTIONTAG"></span>SolutionTag
+
+Contains the solution details
+
+| Property        | Type                                         | Description                                          |
+|-----------------|----------------------------------------------|------------------------------------------------------|
+| Id              | string                                       | The ID of the solution.        |
+| Name            | string                                       | The name of the solution.          |
+| SolutionType    | [SolutionType](referral.md#SolutionType)     | The type of solution.          |
+
+## <span id="SolutionType"></span><span id="solutiontype"></span><span id="SOLUTIONTYPE"></span>SolutionType
+
+An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the solution type.
+
+| Property        | Type                                    | Description                                                     |
+|-----------------|-----------------------------------------|-----------------------------------------------------------------|
+| None            | 0                                       |                                                                 |
+| Category        | 1                                       | Leverages pre-defined solution names                            |
+| Name            | 2                                       | Allows for custom solution names to be provided in the referral |
 
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag

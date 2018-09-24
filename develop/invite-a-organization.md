@@ -6,7 +6,7 @@ ms.date: 10/01/18
 ms.localizationpriority: medium
 ---
 
-# Invite a participant
+# Invite a organization
 
 
 **Applies To**
