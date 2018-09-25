@@ -2,12 +2,11 @@
 title: Get a customer's company profile
 description: Gets the company profile of a customer.
 ms.assetid: 762C0F38-2229-464D-9CD6-6AD82135A65C
-ms.date: 12/15/2017
+ms.date: 9/21/2018
 ms.localizationpriority: medium
 ---
 
 # Get a customer's company profile
-
 
 **Applies To**
 
@@ -24,30 +23,39 @@ Gets the company profile of a customer.
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 -   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get the company profile for a customer, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then get the customer's [**ICustomerProfileCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection) interface from the [**Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, in order to access its Company property. Next, get the [**ICustomerReadonlyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1) interface from the [**ICustomerProfileCollection.Company**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.company) property, and call its [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.getasync) methods.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// var selectedCustomerID as string;
+// string customerId;
 
-var companyProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.Company.Get();
+var companyProfile = partnerOperations.Customers.ById(customerId).Profiles.Company.Get();
 ```
 
 **Sample**: [Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681). **Project**: PartnerSdk.FeatureSamples **Class**: GetCustomerCompanyProfile.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+### Java
 
+To get the company profile for a customer, call the **IAggregatePartner.getCustomers().byId** function with the customer identifier to identify the customer. Then get the customer's **ICustomerProfileCollection** interface from the [**getProfiles**] function, in order to access its Company property. Next, get the **ICustomerReadonlyProfile** interface from the **ICustomerProfileCollection.getCompany** function, and call the **get** function.
+
+```java
+// IAggregatePartner partnerOperations;
+// String customerId;
+
+CustomerCompanyProfile companyProfile = partnerOperations.getCustomers().byId(customerId).getProfiles().getCompany().get();
+```
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
 
 | Method  | Request URI                                                             |
 |---------|-------------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/profiles/company HTTP/1.1 |
-
- 
 
 **URI parameter**
 
@@ -57,7 +65,6 @@ Use the following query parameter to get the company profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
 
 **Request headers**
 
@@ -126,11 +133,3 @@ Date: Wed, 04 Jan 2017 19:48:51 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

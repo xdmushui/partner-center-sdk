@@ -29,11 +29,11 @@ allocated for a customer's usage.
 
 
 To update a customer's usage spending budget, first create a new
-[**SpendingBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
-[**IAggregatePartner.Customers**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
-property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
-[**PatchAsync()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
+[**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
+[**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
+property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
+[**PatchAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;

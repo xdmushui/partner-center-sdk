@@ -31,7 +31,7 @@ How to delete a customer account from the Testing in Production (Tip) integratio
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To delete a customer from the Tip integration sandbox, pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations. 
+To delete a customer from the Tip integration sandbox, pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations. 
 
 Next, ensure that all Azure Reserved Virtual Machine Instances and software purchase orders for that customer are cancelled. To do this, use the partner operations interface to retrieve the collection of entitlements by calling the [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, then the **Entitlements** property, and finally the **Get** or **GetAsync** method to retrieve the [**Entitlement**](entitlement.md) collection.
 

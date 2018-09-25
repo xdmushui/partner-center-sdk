@@ -2,12 +2,11 @@
 title: Get a customer by ID
 description: Gets a Customer resource that corresponds to a customer ID.
 ms.assetid: C84DF574-0E1B-418B-8AED-06C1E3BD301F
-ms.date: 12/15/2017
+ms.date: 09/21/2018
 ms.localizationpriority: medium
 ---
 
 # Get a customer by ID
-
 
 **Applies To**
 
@@ -20,12 +19,12 @@ Gets a **Customer** resource that corresponds to a customer ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 -   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get a customer by ID, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, then call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.getasync) methods.
 
@@ -37,6 +36,25 @@ Customer customerInfo = partnerOperations.Customers.ById(customerIdToRetrieve).G
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerInformation.cs
+
+### Java 
+
+To get a customer by ID, use your **IAggregatePartner.getCustomers** function, call the **byId()** function, then call the **get()** function.
+
+```java
+// IAggregatePartner partnerOperations;
+// String customerIdToRetrieve;
+
+Customer customerInfo = partnerOperations.getCustomers().byId(customerIdToRetrieve).get();
+```
+
+### PowerShell
+
+To get a customer by ID, execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command and specify the **CustomerId** parameter.
+
+```powershell
+Get-PartnerCustomer -CustomerId '2ca7de6c-c05c-46b5-b689-32e53573a97a'
+```
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
