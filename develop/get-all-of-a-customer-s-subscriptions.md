@@ -2,11 +2,7 @@
 title: Get a customer's subscriptions
 description: How to get a collection of a customer's subscriptions.
 ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -73,7 +69,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -93,7 +89,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 73754
 Content-Type: application/json

@@ -2,11 +2,7 @@
 title: Register a subscription
 description: Register an existing subscription so that it is enabled for ordering Azure reservations.
 ms.assetid: 9B853BF2-855C-4EB3-BBE5-7ECC1336AE08
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -77,7 +73,7 @@ None.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrations HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -100,7 +96,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 202 Accepted
 Content-Length: 0
 Location: /customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus

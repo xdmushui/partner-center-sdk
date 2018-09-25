@@ -2,11 +2,7 @@
 title: Update a service request
 description: How to update an existing customer service request that a Cloud Solution Provider has filed with Microsoft on the customer's behalf.
 ms.assetid: 09C13775-739B-4CB9-9442-456E17F91452
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -77,7 +73,7 @@ The request body should contain a [ServiceRequest](servicerequest.md) resource. 
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -130,7 +126,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 566
 Content-Type: application/json; charset=utf-8

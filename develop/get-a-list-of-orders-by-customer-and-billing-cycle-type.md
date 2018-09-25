@@ -2,11 +2,7 @@
 title: Get a list of orders by customer and billing cycle type
 description: Gets a collection of order resources for the specified customer and biling cycle type.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -74,7 +70,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders?billingType=onetime HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -94,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 22463
 Content-Type: application/json; charset=utf-8

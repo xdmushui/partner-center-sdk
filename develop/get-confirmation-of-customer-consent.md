@@ -1,12 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 8/02/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -46,6 +41,13 @@ var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements
 
 **Sample:** Console test app. **Project:** PartnerSDK.FeatureSamples **Class:** GetCustomerAgreement.cs  
 
+### PowerShell
+
+To retrieve confirmation of customer acceptance provided previously, execute the [**Get-PartnerCustomerAgreement**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerAgreement.md) command.
+
+```powershell
+Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'
+```
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
 
@@ -81,7 +83,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/agreements HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -101,7 +103,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 620
 Content-Type: application/json

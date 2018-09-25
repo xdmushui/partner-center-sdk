@@ -2,11 +2,7 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -72,7 +68,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
 Authorization: Bearer 
 Accept: application/json
@@ -99,7 +95,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 {
     "totalCount": 19,
     "items": [

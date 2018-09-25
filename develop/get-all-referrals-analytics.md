@@ -1,14 +1,8 @@
 ---
 title: Get all referrals analytics information
 description: How to get all the referrals analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: C6051714-1D8A-4448-9705-12AEC9A6420E
-robots: noindex,nofollow   
 ms.date: 06/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -59,7 +53,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -78,7 +72,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 {
   "id": "112310",
   "status": "Accepted",

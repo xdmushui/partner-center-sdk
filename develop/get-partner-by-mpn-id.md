@@ -2,11 +2,7 @@
 title: Verify a partner MPN ID
 description: How to verify a partner's Microsoft Partner Network identifier (MPN ID).The technique shown here verifies the partner's Microsoft Partner Network identifier by requesting the partner's MPN profile from partner center.
 ms.assetid: 95CBA254-0980-4519-B95D-1F906C321863
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -75,7 +71,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/profiles/mpn?mpnId=9999999 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -98,7 +94,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example (success)**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 159
 Content-Type: application/json; charset=utf-8
@@ -126,7 +122,7 @@ Date: Thu, 13 Apr 2017 18:13:40 GMT
 
 **Response example (failure)**
 
-```
+```http
 HTTP/1.1 404 Not Found
 Content-Length: 124
 Content-Type: application/json; charset=utf-8

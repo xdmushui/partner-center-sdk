@@ -1,14 +1,8 @@
 ---
 title: Offer
-description: 
-    Describes a product listed in the reseller catalog that they can offer
-    to their customers.
+description: Describes a product listed in the reseller catalog that they can offer to their customers.
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -41,7 +35,7 @@ to their customers.
 | uri                         | string                    | The offer URI.                                                                                                  |
 | locale                      | string                    | The locale in which the offer applies.                                                                          |
 | country                     | string                    | The country/region  where the offer applies.                                                                    |
-| category                    | [OfferCategory](offer.md#category)           | The category of the offer.                                                                   |
+| category                    | [OfferCategory](#offercategory)           | The category of the offer.                                                                   |
 | limitUnitOfMeasure          | string                    | A value that indicates the type of purchase limitation. Possible values include:<br/> "None" - There are no restrictions on the number of subscriptions based on the offer purchased.<br/> "Concurrent" - The number of subscriptions that can exist on the customer tenant at a given time, this includes subscriptions that are active or canceled. This value applies mostly to small business offers where license counts are less than 300. De-provisionioned subscriptions don’t count.<br/> "LifeTime" - The number of subscriptions that can exist for the lifetime of the customer tenant. This value is most applicable to Trials. De-provisionioned subscriptions don’t count.      |
 | limit                       | int                       | The amount of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
 | prerequisiteOffers          | string                    | The prerequisite offers.                                                                                        |

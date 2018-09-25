@@ -2,11 +2,7 @@
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
 ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -253,7 +249,7 @@ This table describes the **OrderLineItem** properties in the request body.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/c501c3c4-d776-40ef-9ecf-9cefb59442c1/orders HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -300,7 +296,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 831
 Content-Type: application/json; charset=utf-8

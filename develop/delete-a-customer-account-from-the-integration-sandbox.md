@@ -2,11 +2,7 @@
 title: Delete a customer account from the integration sandbox
 description: How to delete a customer account from the Testing in Production (Tip) integration sandbox.
 ms.assetid: B95431F6-EA7F-4C21-835F-6D6C303B05A5
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -35,7 +31,7 @@ How to delete a customer account from the Testing in Production (Tip) integratio
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To delete a customer from the Tip integration sandbox, pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations. 
+To delete a customer from the Tip integration sandbox, pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations. 
 
 Next, ensure that all Azure Reserved Virtual Machine Instances and software purchase orders for that customer are cancelled. To do this, use the partner operations interface to retrieve the collection of entitlements by calling the [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, then the **Entitlements** property, and finally the **Get** or **GetAsync** method to retrieve the [**Entitlement**](entitlement.md) collection.
 
@@ -116,7 +112,7 @@ None.
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1
 Accept: application/json
 MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
@@ -135,18 +131,10 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 Date: Wed, 16 Mar 2016 00:43:02 GMT
 ```
-
- 
-
- 
-
-
-
-

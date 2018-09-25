@@ -2,11 +2,7 @@
 title: Get all service requests for a customer
 description: Gets all of a customer's service requests.
 ms.assetid: 21F01038-EE51-4FB3-8BE5-9086DBD0F393
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -74,7 +70,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/servicerequests HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -93,7 +89,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 742
 Content-Type: application/json

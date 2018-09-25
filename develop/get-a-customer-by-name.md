@@ -2,11 +2,7 @@
 title: Get a list of customers filtered by a search field
 description: Gets a collection of Customer resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
 ms.assetid: 7D5D8C83-1DBD-4C54-8CDA-FE0CAC911D14
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -86,10 +82,10 @@ You must compose the filter parameter as a series of comma separated, key-value 
 
 An unencoded example looks like this:
 
-```
+```http
 ?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}
-```
-
+```  
+  
 The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |
@@ -110,7 +106,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter=%7B%22Field%22%3A%22CompanyName%22%2C%22Value%22%3A%22Cont%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -132,7 +128,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1839
 Content-Type: application/json; charset=utf-8

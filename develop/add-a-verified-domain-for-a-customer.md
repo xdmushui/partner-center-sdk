@@ -1,12 +1,7 @@
 ---
 title: Add a verified domain for a customer
 description: This topic explains how to add a verified domain to the list of approved domains for a customer. 
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 3/06/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -124,7 +119,7 @@ This table describes the required and optional **DomainFederationSettings** prop
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/{CustomerTenantId}/verifieddomain HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
@@ -176,7 +171,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 206
 Content-Type: application/json; charset=utf-8

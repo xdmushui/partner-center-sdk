@@ -2,16 +2,11 @@
 title: Get invoice summaries
 description: Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges. 
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get invoice summaries
-
 
 **Applies To**
 
@@ -54,7 +49,6 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].Bal
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summaries HTTP/1.1     |
 
- 
 
 **URI parameter**
 
@@ -71,7 +65,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/summaries HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -82,7 +76,6 @@ Connection: Keep-Alive
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
-
 If successful, this method returns an [InvoiceSummaries](invoice.md#invoicesummaries) resource in the response body.
 
 **Response success and error codes**
@@ -91,7 +84,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 256
 Content-Type: application/json; charset=utf-8
@@ -245,11 +238,3 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

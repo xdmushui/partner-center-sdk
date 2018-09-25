@@ -2,11 +2,7 @@
 title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
-ms.author: mhopkins
 ms.date: 02/05/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -33,11 +29,11 @@ allocated for a customer's usage.
 
 
 To update a customer's usage spending budget, first create a new
-[**SpendingBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
-[**IAggregatePartner.Customers**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
-property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
-[**PatchAsync()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
+[**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
+[**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
+property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
+[**PatchAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -87,7 +83,7 @@ The full resource.
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
@@ -118,7 +114,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 12014
 Content-Type: application/json

@@ -2,11 +2,7 @@
 title: Get a list of trial conversion offers
 description: How to retrieve a list of trial conversion offers.
 ms.assetid: 7B97505F-10B9-4ACD-9307-111FC1E7D042
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -73,7 +69,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/488745B5-2086-4912-802C-6ABB9F7C3638/conversions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -94,7 +90,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 305
 Content-Type: application/json; charset=utf-8

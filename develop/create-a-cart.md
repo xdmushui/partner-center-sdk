@@ -1,12 +1,7 @@
 ---
 title: Create a cart
 description: How to add an order for a customer in a cart.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/19/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -109,18 +104,18 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
 | catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
 | friendlyName         | string                      | No           | Optional. The friendly name for the item defined by the partner to help disambiguate.              |
-| quantity             | int                         | Yes          | The number of licenses or instances.     |
+| quantity             | int                         | Yes          | The number of licenses or instances.                                                               |
 | currencyCode         | string                      | No           | The currency code.                                                                                 |
 | billingCycle         | Object                      | Yes          | The type of billing cycle set for the current period.                                              |
-| participants         | List of Object String pairs | No           | A collection of participants on the purchase.                                                      |
-| provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
+| participants         | List of Object String pairs | No           | A collection of PartnerId on Record (MPNID) on the purchase.                                       |
+| provisioningContext  | Dictionary<string, string>  | No           | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
 
 **Request example**
 
-```
+```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -141,6 +136,12 @@ Expect: 100-continue
             "FriendlyName": "A_sample_Azure_RI",
             "Quantity": 2,
             "BillingCycle": "one_time",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "12345"
+                }
+            ],
             "ProvisioningContext": {
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",
@@ -165,7 +166,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 764
 Content-Type: application/json; charset=utf-8
@@ -188,6 +189,12 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
             "quantity": 2,
             "currencyCode": "USD",
             "billingCycle": "one_time",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "12345"
+                }
+            ],
             "provisioningContext": {
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",

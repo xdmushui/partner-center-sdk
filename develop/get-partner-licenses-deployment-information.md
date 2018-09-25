@@ -2,16 +2,11 @@
 title: Get partner licenses deployment information
 description: How to get partner licenses deployment information aggregated to include all customers.
 ms.assetid: BC78F9EA-C07C-4FD5-B06D-C87E8330B6E2
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get partner licenses deployment information
-
 
 **Applies To**
 
@@ -56,7 +51,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/analytics/licenses/deployment HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -68,7 +63,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains a collection of [PartnerLicensesDeploymentInsights](analytics.md#partnerlicensesdeploymentinsights) resources that provide information about the licenses deployed.
 
 **Response success and error codes**
@@ -77,7 +71,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 487
 Content-Type: application/json; charset=utf-8
@@ -114,11 +108,3 @@ Date: Tue, 14 Mar 2017 17:55:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

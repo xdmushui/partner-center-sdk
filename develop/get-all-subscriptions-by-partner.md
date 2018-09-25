@@ -2,11 +2,7 @@
 title: Get a customer's subscriptions by partner MPN ID
 description: How to get a list of subscriptions provided by a given partner to a specified customer.
 ms.assetid: 02742789-97F0-4B9C-9948-42BF6F3D4D18
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -76,7 +72,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/c501c3c4-d776-40ef-9ecf-9cefb59442c1/subscriptions?mpn_id=4847383 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -98,7 +94,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 985
 Content-Type: application/json; charset=utf-8

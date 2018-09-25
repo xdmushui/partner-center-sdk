@@ -92,7 +92,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>API reference</h3>
-                        <p>Detailed reference info for the managed and REST APIs for Partner Center.<br /><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=partnercenter-1.8.0">Partner Center Managed API</a><br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
+                        <p>Detailed reference info for the managed and REST APIs for Partner Center.<br /><a href="https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest">Partner Center Managed API</a><br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
                     </div>
                 </div>
             </div>
@@ -105,6 +105,73 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Swagger reference</h3>
                         <p>Swagger API reference for Cloud Solution Provider (CSP) partners that manage customer accounts, place orders, manage subscriptions, billing, handle support requests and more.<br /><a href="https://apidocs.microsoft.com/services/partnercenter">Partner Center Swagger reference</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<hr />
+
+<h2>What's New</h2>
+<p>The following topics are new or updated for Partner Center SDK version 1.9.</p>
+<ul id="whatsnew" class="cardsF cols cols2 panelContent">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Agreements</h3>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud agreement</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/agreement" data-linktype="external">Agreement resource</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/agreement-metadata" data-linktype="external">AgreementMetaData resource</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Entitlements</h3>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-a-collection-of-entitlements" data-linktype="external">Get a collection of entitlements</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/make-a-one-time-purchase" data-linktype="external">Make a one-time purchase</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/create-a-cart" data-linktype="external">Create a cart</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/products" data-linktype="external">Products resource</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/entitlement" data-linktype="external">Entitlement resource</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external">Cart resource</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+	<li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Subscriptions</h3>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/purchase-catalog-items" data-linktype="external">Purchase catalog items</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/check-inventory" data-linktype="external">Check inventory</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-products" data-linktype="external">Get a list of products</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/purchase-azure-reservations" data-linktype="external">Purchase Azure reservations</a></p>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/register-a-subscription" data-linktype="external">Register a subscription</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">                    
+                    <div class="cardText">
+                        <h3>Activity log</h3>
+                        <p><a href="https://docs.microsoft.com/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
                     </div>
                 </div>
             </div>

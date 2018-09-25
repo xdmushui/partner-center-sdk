@@ -1,15 +1,8 @@
 ---
 title: Partner Center REST error codes
-description: 
-    Partner Center REST APIs return a JSON object that contains a status
-    code that indicates whether your request was successful or why it
-    failed.
+description: Partner Center REST APIs return a JSON object that contains a status code that indicates whether your request was successful or why it failed.
 ms.assetid: 08AC1F2E-5847-4AD8-AE5B-0173C5DB589A
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

@@ -2,11 +2,7 @@
 title: Check inventory
 description: Check the inventory for a specific set of catalog items.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -85,7 +81,7 @@ The inventory request details, consisting of an [InventoryCheckRequest](products
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/extensions/product/checkinventory?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -121,7 +117,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1021
 Content-Type: application/json; charset=utf-8

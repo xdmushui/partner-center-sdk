@@ -2,11 +2,7 @@
 title: Update a configuration policy for the specified customer
 description: How to update the specified configuration policy for the specified customer.
 ms.assetid: E2B91AC4-B8E8-4A77-AFB7-0CCEF5136621
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -95,7 +91,7 @@ The request body must contain an object that provides the policy information.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -127,7 +123,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 421
 Content-Type: application/json; charset=utf-8

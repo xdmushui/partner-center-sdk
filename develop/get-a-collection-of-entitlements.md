@@ -2,11 +2,7 @@
 title: Get a collection of entitlements
 description: How to get a collection of entitlements.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -69,7 +65,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/entitlements HTTP/1.1
 Authorization: Bearer <Token>
 Accept: application/json
@@ -91,7 +87,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 103778
 Content-Type: application/json; charset=utf-8
@@ -195,7 +191,7 @@ ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/virtualmachinereservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336 HTTP/1.1
 Authorization: Bearer <Token>
 Accept: application/json
@@ -208,7 +204,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 368
 Content-Type: application/json; charset=utf-8
@@ -248,7 +244,7 @@ ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/reservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336 HTTP/1.1
 Authorization: Bearer <Token>
 Accept: application/json
@@ -261,7 +257,7 @@ Host: api.partnercenter.microsoft.com
 
 **Response example**  
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 368
 Content-Type: application/json; charset=utf-8

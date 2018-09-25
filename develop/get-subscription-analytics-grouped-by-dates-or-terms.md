@@ -1,14 +1,8 @@
 ---
 title: Get subscription analytics grouped by dates or terms
 description: How to get subscription analytics information grouped by dates or terms. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: 5D0C0649-F64D-40A9-ACCC-2077E2D2BA4E
-robots: noindex,nofollow   
 ms.date: 06/27/2018 
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -54,8 +48,9 @@ Use the following required path parameters to identify your organization and to 
 
 The group by parameter must be composed as a series of comma separated, field values.
 
-An unencoded example looks like this:
-```
+An unencoded example looks like this:  
+
+```http
 ?groupby=termField1,dateField1,termField2
 ```
 
@@ -108,7 +103,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?groupBy=subscriptionType  
 Authorization: Bearer <token>
 Accept: application/json
@@ -120,7 +115,6 @@ Content-Length: 0
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
-
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources grouped by the specified terms and dates.
 
 **Response success and error codes**
@@ -129,7 +123,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -178,6 +172,6 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 }
 ```
 
-
 ## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
+
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

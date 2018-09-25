@@ -2,11 +2,7 @@
 title: Convert a trial subscription to paid
 description: How to convert a trial subscription to paid.
 ms.assetid: 06EB96D7-6260-47E0-ACAE-07D4213BEBB7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -127,7 +123,7 @@ A populated [Conversion](conversions.md#conversion) resource must be included in
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/488745B5-2086-4912-802C-6ABB9F7C3638/conversions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -162,7 +158,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 211
 Content-Type: application/json; charset=utf-8

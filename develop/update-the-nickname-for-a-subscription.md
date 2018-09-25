@@ -2,11 +2,7 @@
 title: Update the nickname for a subscription
 description: Updates the friendly name or nickname for a customer's Subscription.
 ms.assetid: 9A4431CB-1EB5-4C1C-B4D1-18B017ADD2F4
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -82,7 +78,7 @@ A full **Subscription** resource is required in the request body. Ensure the **F
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -126,7 +122,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 PATCH http://partnerapi.store.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json

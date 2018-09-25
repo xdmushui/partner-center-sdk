@@ -2,11 +2,7 @@
 title: Get an offer by ID
 description: Gets a Offer resource that matches the offer ID.
 ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -75,7 +71,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/offers/<offer-id>?country=<country-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -96,7 +92,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1918
 Content-Type: application/json

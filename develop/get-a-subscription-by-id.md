@@ -2,11 +2,7 @@
 title: Get a subscription by ID
 description: Gets a Subscription resource that matches the customer ID and the subscription ID.
 ms.assetid: 0A91755F-C5AB-4CB1-9E61-6C927F6AA5C5
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -76,7 +72,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/A356AC8C-E310-44F4-BF85-C7F29044AF99 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -97,7 +93,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example for a standard subscription**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 833
 Content-Type: application/json; charset=utf-8
@@ -146,7 +142,7 @@ Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 The response for an add-on subscription includes the parent subscription ID in the body and in the links.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 1132
 Content-Type: application/json; charset=utf-8

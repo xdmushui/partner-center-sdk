@@ -2,11 +2,7 @@
 title: Get user roles for a customer
 description: Get a list of all the roles/permissions attached to a user account. Variations include getting a list of all permissions across all user accounts for a customer, and getting a list of users that have a given role.
 ms.assetid: 304A1C1F-6280-40E9-A96B-F87ECA657FF3
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -84,7 +80,7 @@ Use the following query parameter to identify the correct customer.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/users/<user-id>/directoryroles HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -103,7 +99,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 31942
 Content-Type: application/json
@@ -128,11 +124,3 @@ Date: June 24 2016 22:00:25 PST
       "attributes": { "objectType": "Collection" }
 }
 ```
-
- 
-
- 
-
-
-
-

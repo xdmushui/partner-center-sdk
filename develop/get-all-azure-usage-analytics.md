@@ -1,14 +1,8 @@
 ---
 title: Get all Azure usage analytics information
 description: How to get all the Azure usage analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: CDBD04A4-BA34-49B8-9815-7C19253E6C70
-robots: noindex,nofollow   
 ms.date: 06/22/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -197,7 +191,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/usage/azure HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -216,7 +210,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 {
   "customerTenantId": "39A1DFAC-4969-4F31-AF94-D76588189CFE",
   "customerName": "A",

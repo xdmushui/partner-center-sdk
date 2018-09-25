@@ -1,13 +1,7 @@
 ---
 title: Partner Center webhook events
-description: 
-    Documentation for all Webhook events supported by Partner Center.
-ms.assetid: 
-ms.author: dansimp
+description: Documentation for all Webhook events supported by Partner Center.
 ms.date: 02/14/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -95,7 +89,7 @@ This event is raised when the specified subscription changes. A Subscription Upd
 
 ### <span id="thresholdExceededEvent"></span><span id="THRESHOLDEXCEEDEDEVENT"></span>Threshold Exceeded Event
 
-This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/en-us/partner-center/set-an-azure-spending-budget-for-your-customers).
+This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 **Properties**
 

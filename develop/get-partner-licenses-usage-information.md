@@ -2,16 +2,11 @@
 title: Get partner licenses usage information
 description: How to get partner licenses usage information aggregated to include all customers.
 ms.assetid: 87BCC8FC-5C29-4245-8607-BB62ABC03EDE
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get partner licenses usage information
-
 
 **Applies To**
 
@@ -56,7 +51,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/analytics/licenses/usage HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -68,7 +63,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains a collection of [PartnerLicensesUsageInsights](analytics.md#partnerlicensesusageinsights) resources that provide information about the licenses used.
 
 **Response success and error codes**
@@ -77,7 +71,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1156
 Content-Type: application/json; charset=utf-8
@@ -141,11 +135,3 @@ Date: Wed, 15 Mar 2017 01:18:26 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

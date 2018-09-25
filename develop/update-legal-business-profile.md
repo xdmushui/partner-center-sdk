@@ -2,11 +2,7 @@
 title: Update the partner legal business profile
 description: How to update the partner legal business profile.
 ms.assetid: DEB60680-145D-47C5-BB19-374752D45236
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -68,7 +64,7 @@ The legal business profile resource.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/legalbusiness HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -139,7 +135,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1157
 Content-Type: application/json; charset=utf-8

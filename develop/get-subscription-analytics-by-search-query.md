@@ -1,13 +1,7 @@
 ---
 title: Get subscription analytics by search query
 description: How to get subscription analytics information filtered by a search query. 
-ms.assetid: 
-ms.author: mhopkins   
-robots: noindex,nofollow   
 ms.date: 05/10/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -63,12 +57,13 @@ An unencoded example looks like this:
 
 The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
-The following are examples of filter strings: 
-```
+The following are examples of filter strings:  
+ 
+```http
 autoRenewEnabled eq true
 
 autoRenewEnabled eq true and customerMarket eq 'US'
-```
+```  
 
 The following table shows a list of the supported fields and support operators for the filter parameter. String values must be surrounded by single quotes.
 
@@ -107,7 +102,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?filter=autoRenewEnabled eq true
 Authorization: Bearer <token>
 Accept: application/json
@@ -128,7 +123,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -160,6 +155,6 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 }
 ```
 
-
 ## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
+
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

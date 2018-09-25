@@ -2,11 +2,7 @@
 title: Get a list of a customer's policies
 description: How to retrieve a collection of the specified customer's configuration policies.
 ms.assetid: 37C40EFC-7BC9-4111-BB9E-27018B583391
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -71,7 +67,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -93,7 +89,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1221
 Content-Type: application/json; charset=utf-8

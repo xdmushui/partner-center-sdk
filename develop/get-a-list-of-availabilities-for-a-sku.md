@@ -2,11 +2,7 @@
 title: Get a list of availabilities for a SKU
 description: Gets a collection of availabilities for the specified product and SKU.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 03/20/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -79,7 +75,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET http:// api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&segment=commercial HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -108,7 +104,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Server: Microsoft-IIS/10.0

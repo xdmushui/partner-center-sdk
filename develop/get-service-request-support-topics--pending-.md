@@ -2,11 +2,7 @@
 title: Get service request support topics
 description: Gets a collection of items representing valid topics for service requests.
 ms.assetid: 50A61342-70C4-49F5-BEA2-2754338CF5A1
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -58,7 +54,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/servicerequests/supporttopics HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -78,7 +74,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 4982
 Content-Type: application/json
@@ -109,11 +105,3 @@ Date: Fri, 29 Jan 2016 22:31:36 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -2,11 +2,7 @@
 title: Purchase an add-on to a subscription
 description: How to purchase an add-on to an existing subscription.
 ms.assetid: 743520E5-0501-4403-B977-5E6D3E32DEC3
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -175,7 +171,7 @@ The following tables describe the properties in the request body.
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -221,7 +217,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1135
 Content-Type: application/json; charset=utf-8

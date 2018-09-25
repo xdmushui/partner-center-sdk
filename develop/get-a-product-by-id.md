@@ -2,11 +2,7 @@
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.author: mhopkins
 ms.date: 03/20/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -67,7 +63,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/products/{product-id}?country=US HTTP/1.1
 Authorization: Bearer 
 Accept: application/json
@@ -93,7 +89,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1918
 Content-Type: application/json

@@ -2,16 +2,11 @@
 title: Get indirect resellers of a customer
 description: How to get a list of the indirect resellers that have a relationship with a specified customer.
 ms.assetid: C3C4BE9A-97E8-41AD-AB28-6F9CB7DCE475
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get indirect resellers of a customer
-
 
 **Applies To**
 
@@ -70,7 +65,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/c501c3c4-d776-40ef-9ecf-9cefb59442c1/relationships HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -82,7 +77,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains a collection of [PartnerRelationship](relationships.md) resources to identify the resellers.
 
 **Response success and error codes**
@@ -91,7 +85,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 264
 Content-Type: application/json; charset=utf-8
@@ -118,11 +112,3 @@ Date: Fri, 07 Apr 2017 23:42:11 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

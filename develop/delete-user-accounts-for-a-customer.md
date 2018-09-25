@@ -2,11 +2,7 @@
 title: Delete a user account for a customer
 description: How to delete an existing user account for a customer.
 ms.assetid: 12097809-A62D-4929-9F1D-08676784BA39
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -78,7 +74,7 @@ None.
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users/a45f1416-3300-4f65-9e8d-f123b397a4ea HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -100,7 +96,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 709c0b80-016c-4662-b29f-697fdf03e87a
@@ -109,11 +105,3 @@ MS-CV: 90KUJA7HKEaG8wHu.0
 MS-ServerId: 101112616
 Date: Tue, 24 Jan 2017 23:27:18 GMT
 ```
-
- 
-
- 
-
-
-
-

@@ -5,11 +5,7 @@ MS-HAID:
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_cloud\_germany'
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_national\_clouds'
 ms.assetid: 73C5926A-0DEB-42E5-8982-7E44A2031F0B
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +20,7 @@ ms.localizationpriority: medium
 Developers must register details about their application with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
 
 >[!NOTE]
->For Partner Center for Microsoft Cloud for US Government, you currently must manage applications through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/en-us/powershell/module/Azuread/?view=azureadps-2.0#applications).
+>For Partner Center for Microsoft Cloud for US Government, you currently must manage applications through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0#applications).
 
  
 
@@ -38,7 +34,7 @@ For web applications, use the following procedure to register your app ID.
 **Create or update your web app**
 
 1.  Go to App registrations in the Active directory section of the Azure portal.
-2.  Create or update your Web application as explained in [Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration).
+2.  Create or update your Web application as explained in [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration).
 
 **Configure API access permissions**
 
@@ -85,7 +81,7 @@ Native applications do not need to be registered to partner center. But these ap
 **Create Native application**
 
 1.  Go to **App registrations** in the Active directory section of the Azure portal
-2.  Create or update your Web application as explained in [Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration)
+2.  Create or update your Web application as explained in [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
 **Configure API access permissions**
 

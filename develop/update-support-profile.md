@@ -2,11 +2,7 @@
 title: Update support profile
 description: Updates a user's support profile.
 ms.assetid: 3F98BD1D-2490-4F0B-A8FF-7D80B7E0690E
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -69,7 +65,7 @@ The full support profile resource.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/supportprofile HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -102,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 502
 Content-Type: application/json

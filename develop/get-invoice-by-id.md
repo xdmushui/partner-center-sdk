@@ -2,16 +2,11 @@
 title: Get invoice by ID
 description: Retrieves a given invoice using the invoice ID.
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get invoice by ID
-
 
 **Applies To**
 
@@ -44,7 +39,6 @@ var invoice = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Get();
 
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
 
-
 **Request syntax**
 
 | Method  | Request URI                                                                   |
@@ -73,7 +67,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/<invoice-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -92,7 +86,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 676
 Content-Type: application/json; charset=utf-8
@@ -138,11 +132,3 @@ Date: Thu, 24 Mar 2016 05:22:14 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

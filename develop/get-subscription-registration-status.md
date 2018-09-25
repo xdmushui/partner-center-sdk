@@ -1,17 +1,11 @@
 ---
 title: Get subscription registration status
 description: Get the status of a subscription that has been registered for use with Azure Reserved VM Instances.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/19/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get subscription registration status 
-
 
 **Applies To**
 
@@ -42,17 +36,13 @@ To get the registration status of a subscription, begin by using the [**IAggrega
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).RegistrationStatus.Get();
 ```
 
-
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
-
 
 **Request syntax**
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus HTTP/1.1 |
-
- 
 
 **URI parameters**
 
@@ -64,7 +54,6 @@ Use the following path parameters to identify the customer and subscription.
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
  
-
 **Request headers**
 
 -   See [Headers](headers.md) for more information.
@@ -75,7 +64,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -89,7 +78,6 @@ Connection: Keep-Alive
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
-
 If successful, the response body contains a [SubscriptionRegistrationStatus](subscriptions.md#subscriptionregistrationstatus) resource.  
 
 **Response success and error codes**
@@ -98,7 +86,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 177
 Content-Type: application/json; charset=utf-8
@@ -115,11 +103,3 @@ MS-ServerId: 030020344
     }
 }
 ```
-
- 
-
- 
-
-
-
-

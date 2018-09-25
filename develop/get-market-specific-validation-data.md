@@ -2,16 +2,11 @@
 title: Get address formatting rules by market
 description: Get the expected address format based on the iso code for the market.
 ms.assetid: B02B3ECF-8020-4818-872F-9D70DCBC0228
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
 # Get address formatting rules by market
-
 
 **Applies To**
 
@@ -56,13 +51,12 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/countryvalidationrules/{isocode-id} HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
-
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
@@ -76,7 +70,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1856
 Content-Type: application/json
@@ -123,13 +117,4 @@ Date: Wed, 25 Nov 2015 06:36:47 GMT
         "objectType": "CountryInformation"
     }
 }
-
 ```
-
- 
-
- 
-
-
-
-

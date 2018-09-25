@@ -2,11 +2,7 @@
 title: Update a customer's billing profile
 description: Updates a customer's billing profile, including the address associated with the profile.
 ms.assetid: 77B8E08D-01C8-4BF7-A281-C8AEF0340DDC
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -78,7 +74,7 @@ The full resource.
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/profiles/billing HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -133,7 +129,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 1210
 Content-Type: application/json

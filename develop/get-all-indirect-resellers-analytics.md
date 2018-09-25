@@ -1,14 +1,8 @@
 ---
 title: Get all indirect resellers analytics information
 description: How to get all the indirect resellers analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
-robots: noindex,nofollow   
 ms.date: 06/22/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -241,7 +235,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/indirectresellers HTTP 1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -260,7 +254,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 { 
     "partnerTenantId": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE", 
     "id": "1111111", 

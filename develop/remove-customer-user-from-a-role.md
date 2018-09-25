@@ -2,11 +2,7 @@
 title: Remove a customer user from a role
 description: How to remove a user from a directory role within a customer account.
 ms.assetid: 5129AB77-0A66-47A3-8DE8-1AC23C53F81A
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -74,7 +70,7 @@ None.
 
 **Request example**
 
-```
+```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20/directoryroles/729827e3-9c14-49f7-bb1b-9608f156bbb8/usermembers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -97,7 +93,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 90bda268-7929-4ad6-be01-89c5af5fc504

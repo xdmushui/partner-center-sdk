@@ -2,11 +2,7 @@
 title: CSP Customer Storefront Builder Quick Start Guide
 description: Create an online marketplace to sell cloud solution provider (CSP) offers by using the CSP Customer Storefront Builder.
 ms.assetid: 333EE80D-E49E-4E89-87FB-3F02AC48C236
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -26,10 +22,10 @@ The CSP Customer Storefront Builder helps partners easily create an online marke
 
 This website is fully owned, supported, and maintained by partners, and Microsoft does not collect any data or telemetry from the site. The CSP Customer Storefront Builder creates a website for the partner that is fully compliant with the [Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/)(PCI DSS).
 
-The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
+The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
 >[!NOTE]
->You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
+>You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
  
 
@@ -93,7 +89,7 @@ The CSP Customer Storefront Builder is intended as a quick way to create a websi
 -   Any payment related information added in the CSP Customer Storefront Builder is not stored or maintained in Partner Center.
 -   PayPal payment configuration will work in any geographies where PayPal is available. PayPal availability and support is solely controlled by PayPal, and may be discontinued at any time by PayPal.
 -   PayU payment configuration will work only in India currently. PayU availability and support is solely controlled by PayU and may be discontinued at any time by PayU.
--   Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/en-us/partner/EULA_Partner_Center_SDK).
+-   Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
 ## <span id="Additional_resources"></span><span id="additional_resources"></span><span id="ADDITIONAL_RESOURCES"></span>Additional resources
 

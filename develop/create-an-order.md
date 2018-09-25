@@ -2,11 +2,7 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -144,7 +140,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partnercenter.microsoft.com
@@ -189,7 +185,7 @@ This method returns the following error codes:
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 788
 Content-Type: application/json; charset=utf-8

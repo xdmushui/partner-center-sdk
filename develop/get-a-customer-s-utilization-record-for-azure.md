@@ -2,11 +2,7 @@
 title: Get a customer's utilization records for Azure
 description: Gets the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
-ms.author: mhopkins
-ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
+ms.date: 9/21/2018
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +19,7 @@ Gets the utilization records of a customer's Azure subscription for a specified 
 
 This Azure utilization API provides access to utilization records for a time period that represents when the utilization was reported in the billing system. It provides access to the same utilization data that is used to create and calculate the reconciliation file, but it does not have knowledge of billing system reconciliation file logic. Consequently, you should not expect reconciliation file summary results to exactly match the result retrieved from this API for the same time period.
 
-For example, the billing system takes the same utilization data and then applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for, but in the next reconciliation file. The lateness rules of how the partner is billed are documented [here](https://msdn.microsoft.com/en-US/library/azure/mt219001).
+For example, the billing system takes the same utilization data and then applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for, but in the next reconciliation file. The lateness rules of how the partner is billed are documented [here](https://msdn.microsoft.com/library/azure/mt219001).
 
 This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
 
@@ -163,7 +159,7 @@ None
 
 The following example will produce results that are the closest to what the reconciliation file will show for the period 7/2 - 8/1. They may not match exactly for the reasons stated in the introduction to this topic. The request that follows returns utilization data reported in the billing system between 7/2 at 12 AM (UTC) and 8/2 at 12 AM (UTC).
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-07-02T00:00:00-08:00&amp;end_time=2017-08-02T00:00:00-08:00 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -184,7 +180,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 2630
 Content-Type: application/json; charset=utf-8
@@ -194,82 +190,78 @@ MS-CV: PjuGoYrw806o6A3Y.0
 MS-ServerId: 030020525
 Date: Fri, 04 Aug 2017 23:48:28 GMT
 
-﻿{
-    "totalCount": 2,
-    "items": [{
-            "usageStartTime": "2017-06-07T17:00:00-07:00",
-            "usageEndTime": "2017-06-08T17:00:00-07:00",
-            "resource": {
-                "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
-                "name": "Storage Admin",
-                "category": "Storage",
-                "subcategory": "Block Blob",
-                "region": "Azure Stack" 
-            },
-            "quantity": 0.217790327034891,
-            "unit": "1 GB/Hr",
-            "infoFields": {},
-            "instanceData": {
-                "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount", 
-                "location": "azurestack",
-                "partNumber": "",
-                "orderNumber": "",
-                "additionalInfo": { 
-                    "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857", 
-                    "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027", 
-                    "azureStack.Location": "local", 
-                    "azureStack.EventDateTime": "06/05/2017 06:00:00"
-                }
-            },
-            "attributes": {
-                "objectType": "AzureUtilizationRecord"
-            }
-        }, {
-            "usageStartTime": "2017-06-07T17:00:00-07:00",
-            "usageEndTime": "2017-06-08T17:00:00-07:00",
-            "resource": {
-                "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
-                "name": "Storage Admin",
-                "category": "Storage",
-                "subcategory": "Block Blob",
-                "region": "Azure Stack" 
-            },
-            "quantity": 0.217790327034891,
-            "unit": "1 GB/Hr",
-            "infoFields": {},
-            "instanceData": {
-                "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount", 
-                "location": "azurestack",
-                "partNumber": "",
-                "orderNumber": "",
-                "additionalInfo": { 
-                    "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857", 
-                    "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027", 
-                    "azureStack.Location": "local", 
-                    "azureStack.EventDateTime": "06/05/2017 06:00:00"
-                }
-            "attributes": {
-                "objectType": "AzureUtilizationRecord"
-            }
-        } 
-    ],
-    "links": {
-        "self": {
-            "uri": "customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-06-10T00:00:00Z&amp;end_time=2017-07-09T00:00:00Z&amp;granularity=Daily&amp;show_details=True&amp;size=1000",
-            "method": "GET",
-            "headers": []
+{
+  "totalCount": 2,
+  "items": [
+    {
+      "usageStartTime": "2017-06-07T17:00:00-07:00",
+      "usageEndTime": "2017-06-08T17:00:00-07:00",
+      "resource": {
+        "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
+        "name": "Storage Admin",
+        "category": "Storage",
+        "subcategory": "Block Blob",
+        "region": "Azure Stack"
+      },
+      "quantity": 0.217790327034891,
+      "unit": "1 GB/Hr",
+      "infoFields": {},
+      "instanceData": {
+        "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount",
+        "location": "azurestack",
+        "partNumber": "",
+        "orderNumber": "",
+        "additionalInfo": {
+          "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857",
+          "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027",
+          "azureStack.Location": "local",
+          "azureStack.EventDateTime": "06/05/2017 06:00:00"
         }
+      },
+      "attributes": {
+        "objectType": "AzureUtilizationRecord"
+      }
     },
-    "attributes": {
+    {
+      "usageStartTime": "2017-06-07T17:00:00-07:00",
+      "usageEndTime": "2017-06-08T17:00:00-07:00",
+      "resource": {
+        "id": "8767aeb3-6909-4db2-9927-3f51e9a9085e",
+        "name": "Storage Admin",
+        "category": "Storage",
+        "subcategory": "Block Blob",
+        "region": "Azure Stack"
+      },
+      "quantity": 0.217790327034891,
+      "unit": "1 GB/Hr",
+      "infoFields": {},
+      "instanceData": {
+        "resourceUri": "/subscriptions/ab7e2384-eeee-489a-a14f-1eb41ddd261d/resourcegroups/system.local/providers/Microsoft.Storage/storageaccounts/srphealthaccount",
+        "location": "azurestack",
+        "partNumber": "",
+        "orderNumber": "",
+        "additionalInfo": {
+          "azureStack.MeterId": "09F8879E-87E9-4305-A572-4B7BE209F857",
+          "azureStack.SubscriptionId": "dbd1aa30-e40d-4436-b465-3a8bc11df027",
+          "azureStack.Location": "local",
+          "azureStack.EventDateTime": "06/05/2017 06:00:00"
+        },
+        "attributes": {
+          "objectType": "AzureUtilizationRecord"
+        }
+      },
+
+      "links": {
+        "self": {
+          "uri": "customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-06-10T00:00:00Z&amp;end_time=2017-07-09T00:00:00Z&amp;granularity=Daily&amp;show_details=True&amp;size=1000",
+          "method": "GET",
+          "headers": []
+        }
+      },
+      "attributes": {
         "objectType": "Collection"
+      }
     }
+  ]
 }
 ```
-
- 
-
- 
-
-
-
-

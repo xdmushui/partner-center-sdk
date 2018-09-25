@@ -2,11 +2,7 @@
 title: Get a record of Partner Center activity
 description: How to get a record of operations performed by a partner user or application over a period of time.
 ms.assetid: C24054DA-3E31-4BCD-BEB5-085564C20C58
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -166,7 +162,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=6/1/2017%2012:00:00%20AM&amp;filter=%7B%22Field%22:%22CustomerId%22,%22Value%22:%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22,%22Operator%22:%22equals%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -188,7 +184,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 2859
 Content-Type: application/json; charset=utf-8

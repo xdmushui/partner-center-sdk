@@ -2,11 +2,7 @@
 title: Retrieve a customer's configuration policy
 description: How to retrieve the specified configuration policy for the specified customer.
 ms.assetid: A26B5CDA-C23C-4DC3-BC56-A27F3DDDCFB1
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -75,7 +71,7 @@ None
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -97,7 +93,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 443
 MS-CorrelationId: abe150cf-c677-435c-b5d5-b34899a6d1ec

@@ -2,11 +2,7 @@
 title: CSP customer web storefront
 description: This site shows a working online store that your customers could use to buy subscriptions to Microsoft products. To make it work for you, configure the offers, add branding, and add a payment method.
 ms.assetid: 0726B1CA-97A1-42E6-92AD-25787BFE0C67
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

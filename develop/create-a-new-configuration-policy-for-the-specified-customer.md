@@ -2,11 +2,7 @@
 title: Create a new configuration policy for the specified customer
 description: How to create a new configuration policy for the specified customer.
 ms.assetid: 95649991-A950-4F43-87E8-3EB1E7D06FCD
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -90,7 +86,7 @@ The request body must contain an object with the configuration policy informatio
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com//v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -120,7 +116,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 404
 Content-Type: application/json; charset=utf-8

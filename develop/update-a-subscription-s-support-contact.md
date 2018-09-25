@@ -2,11 +2,7 @@
 title: Update a subscription's support contact
 description: How to update a subscription's support contact to one of the partner’s value added resellers.
 ms.assetid: 6DE6EF60-6F8B-46F2-8278-CD706081B180
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -85,7 +81,7 @@ You must include a populated [SupportContact](subscriptions.md#supportcontact) r
 
 **Request example**
 
-```
+```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/C8D8FBAB-6A62-44DC-BE50-B7C74E43A296/supportcontact HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -125,7 +121,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 328
 Content-Type: application/json; charset=utf-8

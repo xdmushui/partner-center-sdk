@@ -1,14 +1,8 @@
 ---
 title: Get all subscription analytics information
 description: How to get all the subscription analytics information. 
-author: Xansky
-ms.author: mhopkins   
 ms.assetid: 243E54BD-EA34-400E-B9AB-D735EB46B9F6
-robots: noindex,nofollow   
 ms.date: 06/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -62,7 +56,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions
 Authorization: Bearer <token>
 Accept: application/json
@@ -81,7 +75,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 {
     "customerTenantId": "76906668-27FC-4F5B-A35C-75A9823E13AF",
     "customerName": "TESTORG65656565",

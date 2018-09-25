@@ -1,12 +1,7 @@
 ---
 title: Get service request details by ID.
 description: How to retrieve the details of an existing customer service request by ID.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 02/06/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -30,7 +25,7 @@ How to retrieve the details of an existing customer service request using the se
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
+To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -76,7 +71,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -99,7 +94,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 566
 Content-Type: application/json; charset=utf-8
@@ -136,4 +131,3 @@ Date: Mon, 09 Jan 2017 23:31:15 GMT
     }
 }
 ```
-

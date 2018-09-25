@@ -2,11 +2,7 @@
 title: Validate an address
 description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -109,7 +105,7 @@ This table describes the required properties in the request body.
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer <token> 
@@ -142,7 +138,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response - validation succeeded example**
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Length: 0
 MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
@@ -154,7 +150,7 @@ Date: Mon, 13 Mar 2017 23:56:12 GMT
 
 **Response - validation failed example**
 
-```
+```http
 HTTP/1.1 400 Bad Request
 Content-Length: 418
 Content-Type: application/json; charset=utf-8

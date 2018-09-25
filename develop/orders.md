@@ -2,11 +2,7 @@
 title: Order
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
 ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -93,7 +89,7 @@ Represents the full subscription associated with the order.
 ## <span id="orderStatus"></span><span id="orderstatus"></span><span id="ORDERSTATUS"></span>OrderStatus
 
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the state of the order.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the state of the order.
 
 | Value              | Position     | Description                                     |
 |--------------------|--------------|-------------------------------------------------|

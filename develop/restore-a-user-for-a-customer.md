@@ -2,11 +2,7 @@
 title: Restore a deleted user for a customer
 description: How to restore a deleted User by customer ID and user ID.
 ms.assetid: A48A4718-6EAF-4FC8-8B44-F3FDCA2B3298
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -91,7 +87,7 @@ This table describes the required properties in the request body.
 
 **Request example**
 
-```
+```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users/a45f1416-3300-4f65-9e8d-f123b397a4ea HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -122,7 +118,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 465
 Content-Type: application/json; charset=utf-8

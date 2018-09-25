@@ -2,11 +2,7 @@
 title: Create a customer
 description: This topic explains how to create a new customer. If you are an indirect provider and you want to create a customer for an indirect reseller, please see Create a customer for an indirect reseller.
 ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -115,7 +111,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | Name             | Type                                     | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | email            | string                                   | The customer's email address.                                                                                                                                                                                   |
-| culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/en-us/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
+| culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
 | language         | string                                   | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
 | company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
@@ -136,7 +132,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 **Request example**
 
-```
+```http
 POST https://api.partnercenter.microsoft.com/v1/customers HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
@@ -182,7 +178,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 834
 Content-Type: application/json; charset=utf-8

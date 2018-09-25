@@ -2,11 +2,7 @@
 title: Entitlement
 description: Describes resources related to entitlement.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.author: mhopkins
 ms.date: 07/27/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -63,7 +59,7 @@ Represents the details of an entitlement quantity.
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the type of entitlement.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement.
 
 | Value | Description |
 |-------|-------------|
@@ -86,7 +82,7 @@ The artifact associated with the entitlement.
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
 
 | Value                          | Description                                                                             |
 |--------------------------------| ----------------------------------------------------------------------------------------|

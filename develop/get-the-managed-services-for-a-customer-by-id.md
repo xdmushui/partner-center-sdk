@@ -2,11 +2,7 @@
 title: Get the managed services for a customer by ID
 description: Gets the managed services for a customer. In other words, get links to all of the customer's subscriptions for which you have delegated admin privileges. You can use these links to provide support and file service requests with Microsoft.
 ms.assetid: 32554787-4232-4574-9FC9-5E9F26411233
-ms.author: mhopkins
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -72,7 +68,7 @@ None.
 
 **Request example**
 
-```
+```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/managedservices HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -82,7 +78,6 @@ MS-CorrelationId: 03d6064a-f048-4aee-8892-ed46dc5c8bee
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
-
 If successful, this method returns a collection of **Managed Service** objects in the response body.
 
 **Response success and error codes**
@@ -91,7 +86,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 200 OK
 Content-Length: 10588
 Content-Type: application/json
@@ -152,11 +147,3 @@ Date: Mon, 23 Nov 2015 18:02:12 GMT
         }
     }
 ```
-
- 
-
- 
-
-
-
-

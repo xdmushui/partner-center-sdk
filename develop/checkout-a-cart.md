@@ -1,12 +1,7 @@
 ---
 title: Checkout a cart
 description: How to checkout an order for a customer in a cart.
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 03/19/18
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -76,7 +71,7 @@ None.
 
 **Request example**
 
-```
+```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605/checkout HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
@@ -103,7 +98,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 **Response example**
 
-``` json
+```http
 HTTP/1.1 201 Created
 Content-Length: 764
 Content-Type: application/json; charset=utf-8

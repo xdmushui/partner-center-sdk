@@ -1,12 +1,7 @@
 ---
 title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
-ms.assetid: 
-ms.author: mhopkins
 ms.date: 02/26/2018
-ms.topic: article
-ms.prod: partner-center
-ms.technology: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -38,7 +33,7 @@ Partners can select from Webhook events, like the following, that are supported 
 
 -   **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
-    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/en-us/partner-center/set-an-azure-spending-budget-for-your-customers).
+    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to “real time” as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 
@@ -57,7 +52,7 @@ To receive events from Partner Center, you must expose a publicly accessible end
 
 The following sample shows an event posted from Partner Center.
 
-```
+```http
 POST /webhooks/callback
 Content-Type: application/json
 Authorization: Signature VOhcjRqA4f7u/4R29ohEzwRZibZdzfgG5/w4fHUnu8FHauBEVch8m2+5OgjLZRL33CIQpmqr2t0FsGF0UdmCR2OdY7rrAh/6QUW+u+jRUCV1s62M76jbVpTTGShmrANxnl8gz4LsbY260LAsDHufd6ab4oejerx1Ey9sFC+xwVTa+J4qGgeyIepeu4YCM0oB2RFS9rRB2F1s1OeAAPEhG7olp8B00Jss3PQrpLGOoAr5+fnQp8GOK8IdKF1/abUIyyvHxEjL76l7DVQN58pIJg4YC+pLs8pi6sTKvOdSVyCnjf+uYQWwmmWujSHfyU37j2Fzz16PJyWH41K8ZXJJkw==
@@ -113,7 +108,7 @@ The following table describes the properties of a Partner Center event.
 
 The following sample shows the structure of a Partner Center event.
 
-```
+```http
 {
     "EventName": "test-created",
     "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/c0bfd694-3075-4ec5-9a3c-733d3a890a1f",
@@ -142,7 +137,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/events
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration/events
 content-type: application/json
 authorization: Bearer eyJ0e…….
@@ -152,7 +147,7 @@ host: api.partnercenter.microsoft.com
 
 **Response example**   
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 183
@@ -178,7 +173,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 POST /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer eyJ0e…..
@@ -195,7 +190,7 @@ Content-Length: 219
 
 **Response example**   
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -224,7 +219,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer …
@@ -235,7 +230,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**   
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 341
@@ -264,7 +259,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 **Request example**   
 
-```
+```http
 PUT /webhooks/v1/registration
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOR…
@@ -281,7 +276,7 @@ Content-Length: 258
 
 **Response example**   
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 346
@@ -299,7 +294,6 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 ```
 
 
-
 ### <span id="ValidationEvents"></span><span id="validationevents"></span><span id="VALIDATIONEVENTS"></span>Send a test event to validate your registration   
 
 Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event. 
@@ -312,7 +306,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 **Request example**   
 
-```
+```http
 POST /webhooks/v1/registration/validationEvents
 MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
 Authorization: Bearer …
@@ -324,7 +318,7 @@ Content-Length:
 
 **Response example**   
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 181
@@ -349,7 +343,7 @@ https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvent
 
 **Request example**   
 
-```
+```http
 GET /webhooks/v1/registration/validationEvents/04af2aea-d413-42db-824e-f328001484d1
 MS-CorrelationId: 3ef0202b-9d00-4f75-9cff-15420f7612b3
 Authorization: Bearer …
@@ -360,7 +354,7 @@ Accept-Encoding: gzip, deflate
 
 **Response example**     
 
-``` json
+```http
 HTTP/1.1 200
 Status: 200
 Content-Length: 469
