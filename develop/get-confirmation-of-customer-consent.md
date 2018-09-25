@@ -41,6 +41,13 @@ var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements
 
 **Sample:** Console test app. **Project:** PartnerSDK.FeatureSamples **Class:** GetCustomerAgreement.cs  
 
+### PowerShell
+
+To retrieve confirmation of customer acceptance provided previously, execute the [**Get-PartnerCustomerAgreement**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerAgreement.md) command.
+
+```powershell
+Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'
+```
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
 
