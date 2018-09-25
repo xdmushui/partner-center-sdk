@@ -33,7 +33,7 @@ Partners can select from Webhook events, like the following, that are supported 
 
 -   **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
-    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/en-us/partner-center/set-an-azure-spending-budget-for-your-customers).
+    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to “real time” as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 

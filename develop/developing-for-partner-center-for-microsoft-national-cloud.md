@@ -21,15 +21,14 @@ ms.localizationpriority: medium
 
 Partner Center has one set of SDK documentation. However, some functionality might not be available in the versions of Partner Center for Microsoft National Clouds. Developers need to consider the following changes to the SDK for these versions of Partner Center:
 
-- [Developing for Partner Center for Microsoft National Cloud](#developing-for-partner-center-for-microsoft-national-cloud)
-    - [Partner Center operated by 21Vianet](#partner-center-operated-by-21vianet)
-    - [Partner Center for Microsoft Cloud Germany](#partner-center-for-microsoft-cloud-germany)
-    - [Partner Center for Microsoft Cloud for U.S. Government](#partner-center-for-microsoft-cloud-for-us-government)
+- [Partner Center operated by 21Vianet](#partner-center-operated-by-21vianet)
+- [Partner Center for Microsoft Cloud Germany](#partner-center-for-microsoft-cloud-germany)
+- [Partner Center for Microsoft Cloud for U.S. Government](#partner-center-for-microsoft-cloud-for-us-government)
 
 Each overview topic contains an **Applies To** block at the top that describes which versions of Partner Center the topic applies to. Similarly, each managed reference topic contains the version information in the **Requirements** block at the bottom.
 
-## <span id="partner_center_operated_by_21vianet"></span><span id="PARTNER_CENTER_OPERATED_BY_21VIANET"></span>Partner Center operated by 21Vianet
 
+## <span id="partner-center-operated-by-21vianet"></span><span id="PARTNER-CENTER-OPERATED-BY-21VIANET"></span>Partner Center operated by 21Vianet
 
 The following list describes the differences for partners between Partner Center and Partner Center operated by 21Vianet:
 
@@ -38,8 +37,8 @@ The following list describes the differences for partners between Partner Center
 -   You cannot manage the licenses for your customer's user. Instead, your customers must use the Office365 admin center to manage their licenses.
 -   All support requests are managed through Partner Center operated by 21Vianet. Service requests and service updates do not apply.
 
-## <span id="partner_center_cloud_germany"></span><span id="PARTNER_CENTER_CLOUD_GERMANY"></span>Partner Center for Microsoft Cloud Germany
 
+## <span id="partner-center-for-microsoft-cloud-germany"></span><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-GERMANY"></span>Partner Center for Microsoft Cloud Germany
 
 The following list describes the differences for partners between Partner Center and Partner Center for Microsoft Cloud Germany:
 
@@ -51,8 +50,8 @@ The following list describes the differences for partners between Partner Center
 -   You cannot programmatically reset a password for a customer user or full partner user. Use the Office365 admin center or Azure portal. See [Reset the password for a user in Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-users-reset-password-azure-portal/). Note that in Step 1, you need to sign into the Azure portal for Microsoft Cloud Germany.
 -   App ID creation. Developers who want to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud Germany must register their app ID manually. See [Register app details for Partner Center for Microsoft National Cloud] (https://msdn.microsoft.com/en-us/library/partnercenter/mt745084.aspx).   
 
-## <span id="partner_center_msftcloudUS"></span><span id="partner_center_msftcloudus"></span><span id="PARTNER_CENTER_MSFTCLOUDUS"></span>Partner Center for Microsoft Cloud for U.S. Government
 
+## <span id="partner-center-for-microsoft-cloud-for-us-government"></span><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-FOR-US-GOVERNMENT"></span>Partner Center for Microsoft Cloud for U.S. Government
 
 -   Office 365 subscriptions are not currently available for Partner Center for Microsoft Cloud for US Government.
 
@@ -67,11 +66,3 @@ The following list describes the differences for partners between Partner Center
 -   REST endpoints for Partner Center for Microsoft Cloud for US Government are the same as for Partner Center: https://api.partnercenter.microsoft.com.
 
 -   App ID creation. Developers who want to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud for US Government must register their app ID manually. See [Register app details for Partner Center for Microsoft National Cloud] (https://msdn.microsoft.com/en-us/library/partnercenter/mt745084.aspx).
-
- 
-
- 
-
-
-
-
