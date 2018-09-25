@@ -27,7 +27,7 @@ Describes a cart.
 | lastModifiedTimeStamp | DateTime         | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart. |
 | expirationTimeStamp   | DateTime         | The date the cart will expire, in date-time format. Applied upon successful creation of cart.          |
 | lastModifiedUser      | string           | The user who last updated the cart. Applied upon successful creation of cart.                          |
-| lineItems             | Array of objects | An Array of [CartLineItem](#cart-line-item) resources.                                                 |
+| lineItems             | Array of objects | An Array of [CartLineItem](#cartlineitem) resources.                                                 |
 
 
 
