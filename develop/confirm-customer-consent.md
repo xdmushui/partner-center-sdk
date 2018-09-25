@@ -77,14 +77,14 @@ Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agree
 
 ### PowerShell
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
-```powershell
+1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.  
+```powershell  
 $agreement = Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudAgreement'} | Select-Object -First 1
-```
-2. Execute the [**New-PartnerCustomerAgreement**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerAgreement.md) command 
-```powershell
+```  
+2. Execute the [**New-PartnerCustomerAgreement**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerAgreement.md) command  
+```powershell  
 New-PartnerCustomerAgreement -TemplateId $agreement.TemplateId -AgreementType MicrosoftCloudAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec' -ContactEmail 'someemail@outlook.com' -ContactFirstName 'Tania' -ContactLastName 'Carr'
-```
+```  
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
 
