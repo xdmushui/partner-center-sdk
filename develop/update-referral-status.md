@@ -1,7 +1,6 @@
 ---
 title: Update referral status
-description: How to create a referral
-ms.assetid: 
+description: How to to update a referral's status
 ms.date: 10/01/18
 ms.localizationpriority: medium
 ---
@@ -14,10 +13,10 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-Update referral status
+This topic explains how to update a referral's status.
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
-
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
@@ -56,10 +55,10 @@ This table describes the [Referral](referral.md) properties in the request body.
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer          |
+| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer.         |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
-| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
+| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 **Status & StatusDetail transition states**
 
@@ -93,11 +92,3 @@ Each response comes with an HTTP status code that indicates success or failure a
 ``` http
 <to do>
 ```
-
- 
-
- 
-
-
-
-

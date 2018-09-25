@@ -1,7 +1,6 @@
 ---
 title: Get a list of pending invitations
 description: Get a list of pending invitations
-ms.assetid: 
 ms.date: 10/01/18
 ms.localizationpriority: medium
 ---
@@ -14,16 +13,15 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-Get a list of pending invitations
+This topic explains how to get a list of pending invitations.
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
-
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
-
 
 **Request syntax**
 
@@ -31,16 +29,15 @@ Get a list of pending invitations
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **GET** | https://api.partner.microsoft.com/v1/referrals/                                                    |
 
-
 **URI parameter**
 
 Use the following query parameters to get a list of referrals
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus) of "Pending"        |
-|self                    | string   | No       | A string of value "true". Will return only the referrals for your organization      |
-|invitedByOrganization   | string   | No       | A string that represents a Partner account ID  `**To do: How can partner determine their own ID?**`     |
+|status                  | string   | Yes      | A string that represents a [ReferralStatus](referral.md#ReferralStatus) of "Pending".       |
+|self                    | string   | No       | A string of value "true" will return only the referrals for your organization.     |
+|invitedByOrganization   | string   | No       | A string that represents a Partner account ID.  `**To do: How can partner determine their own ID?**`     |
  
 **Request headers**
 
@@ -49,8 +46,6 @@ Use the following query parameters to get a list of referrals
 **Request body**
 
 This table describes the [Referral](referral.md) properties in the request body.
-
-
 
 **Request example**
 
@@ -62,6 +57,7 @@ Content-Type: application/json
  
 <to do>
 ```
+
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
@@ -76,11 +72,3 @@ Each response comes with an HTTP status code that indicates success or failure a
 ``` http
 <to do>
 ```
-
- 
-
- 
-
-
-
-

@@ -1,7 +1,6 @@
 ---
 title: Create a referral
 description: How to create a referral
-ms.assetid: 
 ms.date: 10/01/18
 ms.localizationpriority: medium
 ---
@@ -14,23 +13,21 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-How to create a referral
+This topic explains how to create a referral.
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
-
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
-
 **Request syntax**
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **POST** | https://api.partner.microsoft.com/v1/referrals/                                                    |
-
  
 **Request headers**
 
@@ -56,10 +53,10 @@ This table describes the [Referral](referral.md) properties in the request body.
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer          |
+| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer.         |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
-| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
+| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
 **Request example**
@@ -91,7 +88,7 @@ Content-Type: application/json
       "addressLine2": "",
       "city": "Redmond",
       "state": "WA",
-      "postalCode": "98034",
+      "postalCode": "98052",
       "country": "US",
       "region": ""
     },
@@ -153,8 +150,8 @@ Content-Type: application/json
     "invitedByOrganizationId": "string"
   }
 }
-
 ```
+
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
@@ -167,15 +164,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` http
-
 to do
-
 ```
-
- 
-
- 
-
-
-
-
