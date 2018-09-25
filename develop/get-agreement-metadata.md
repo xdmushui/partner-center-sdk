@@ -101,7 +101,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
         {
             "templateId": "998b88de-aa99-4388-a42c-1b3517d49490",
             "agreementType": "MicrosoftCloudAgreement",
-            "agreementLink": "https://docs.microsoft.com/en-us/partner-center/agreements",
+            "agreementLink": "https://docs.microsoft.com/partner-center/agreements",
             "versionRank": 0
         }
     ],

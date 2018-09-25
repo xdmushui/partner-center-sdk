@@ -7,12 +7,11 @@ ms.localizationpriority: medium
 
 # Referral
 
-
 **Applies To**
 
 -   Partner Center
 
-Resources that represents a sales lead direct from a customer, Microsoft or another partner.   
+Resources that represent a sales lead direct from a customer, Microsoft, or another partner.   
 
 
 ## <span id="Referral"></span><span id="referral"></span><span id="REFERRAL"></span>Referral
@@ -23,28 +22,27 @@ Represents the referral.
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
-| OrganizationId        | string                                            | The organization ID of the party that received/owns the referral (Microsoft Partner Account ID / MSFT).           |
-| BusinessProfileId     | string                                            | The business profile ID of the organization who received/owns the referral.                                       |
-| OrganizationName      | string                                            | The organization name that received/owns the referral. Example: Store your own Dynamics 365 load/opportunity ID   |
+| OrganizationId        | string                                            | The organization ID of the party that owns the referral (Microsoft Partner Account ID / MSFT).           |
+| BusinessProfileId     | string                                            | The business profile ID of the organization that owns the referral.                                       |
+| OrganizationName      | string                                            | The organization name that owns the referral. Example: Store your own Dynamics 365 lead/opportunity ID   |
 | ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status. |
-| StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
+| StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer          |
+| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer.         |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
-| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement                                 |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement   |
+| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
+| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
 
-
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
 | Value           | Position     | Description                                                                                |
 |-----------------|--------------|--------------------------------------------------------------------------------------------|
@@ -53,10 +51,10 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | Active          | 2            | Represents an active referral.                                                             |
 | Closed          | 3            | Represents a closed referral.                                                              |
 
+
 ## <span id="ReferralStatusDetail"></span><span id="referralstatusdetail"></span><span id="REFERRALSTATUSDETAIL"></span>ReferralStatusDetail
 
-
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
 | Value           | Position     | Description                                                                                |
 |-----------------|--------------|--------------------------------------------------------------------------------------------|
@@ -77,20 +75,20 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 | Active                | Active, Closed                | Accepted                              |
 | Closed                | Closed                        | Won, Lost, Declined, Expired          |
 
+
 ## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
 
-
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral type.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral type.
 
 | Property              | Type                                                  | Description                                                                     |
 |-----------------------|-------------------------------------------------------|---------------------------------------------------------------------------------|
 | Shared                | 0                                                     | Represents a referral in which all parties involved will collaborate to close.  |
 | Independent           | 1                                                     | Represents a referral in which two parties will collaborate to close.           |
 
+
 ## <span id="ReferralQualification"></span><span id="referralqualification"></span><span id="REFERRALQUALIFICATION"></span>ReferralQualification
 
-
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the referral status.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
 | Value                | Position     | Description                                                                                 |
 |----------------------|--------------|---------------------------------------------------------------------------------------------|
@@ -102,8 +100,7 @@ An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values t
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
 
-
-Contains the customer contact information
+Contains the customer contact information.
 
 | Property        | Type                                                          | Description                                             |
 |-----------------|---------------------------------------------------------------|---------------------------------------------------------|
@@ -116,18 +113,17 @@ Contains the customer contact information
 
 ## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
 
-
 An address to use for the customer. For more information about the supported formats and properties in different countries/regions, see [Get address formatting rules by market](get-market-specific-validation-data.md).
 
 | Property        | Type        | Description                                                   |
 |-----------------|-------------|---------------------------------------------------------------|
 | AddressLine1    | string      | The first line of the address.                                |
 | AddressLine2    | string      | The second line of the address. This property is optional.    |
-| City            | string      | The City.                                                     |
-| State           | string      | The State.                                                    |
-| PostalCode      | string      | The Zip code or postal code                                   |
+| City            | string      | The city.                                                     |
+| State           | string      | The state.                                                    |
+| PostalCode      | string      | The zip code or postal code                                   |
 | Country         | string      | The country/region in ISO country code format.                |
-| Region          | string      | The Region.                                                   |
+| Region          | string      | The region.                                                   |
 
 
 ## <span id="Member"></span><span id="member"></span><span id="MEMBER"></span>Member
@@ -141,10 +137,10 @@ Describes contact information for a specific individual.
 | PhoneNumber | string | The contact's phone number.  |
 | Email       | string | The contact's email address. |
 
+
 ## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
 
-
-Consent flags around sharing information with other organizations and allowing them to contact the customer
+Consent flags around sharing information with other organizations and allowing them to contact the customer.
 
 | Property                                         | Type      | Description                                                                                |
 |--------------------------------------------------|-----------|--------------------------------------------------------------------------------------------|
@@ -155,18 +151,17 @@ Consent flags around sharing information with other organizations and allowing t
 
 ## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
 
-
-Additional information that can be shared when inviting another organizations 
+Additional information that can be shared when inviting another organizations. 
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes that the receiving organization will receive.                |
 | InvitedByOrganizationId | string                                                   | The organization ID that sent the referral.                                   |
 
+
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
 
-
-Represents the referral details
+Represents the referral details.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -178,7 +173,7 @@ Represents the referral details
 
 ## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
 
-Contains the customer requirements
+Contains the customer requirements.
 
 | Property        | Type                                                         | Description                                          |
 |-----------------|--------------------------------------------------------------|------------------------------------------------------|
@@ -189,7 +184,7 @@ Contains the customer requirements
 
 ## <span id="SolutionTag"></span><span id="solutiontag"></span><span id="SOLUTIONTAG"></span>SolutionTag
 
-Contains the solution details
+Contains the solution details.
 
 | Property        | Type                                         | Description                                          |
 |-----------------|----------------------------------------------|------------------------------------------------------|
@@ -199,23 +194,23 @@ Contains the solution details
 
 ## <span id="SolutionType"></span><span id="solutiontype"></span><span id="SOLUTIONTYPE"></span>SolutionType
 
-An [Enum](https://docs.microsoft.com/en-us/dotnet/api/system.enum) with values that indicate the solution type.
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
 
 | Property        | Type                                    | Description                                                     |
 |-----------------|-----------------------------------------|-----------------------------------------------------------------|
 | None            | 0                                       |                                                                 |
-| Category        | 1                                       | Leverages pre-defined solution names                            |
-| Name            | 2                                       | Allows for custom solution names to be provided in the referral |
+| Category        | 1                                       | Leverages pre-defined solution names.                            |
+| Name            | 2                                       | Allows for custom solution names to be provided in the referral. |
 
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
-
 
 Describes the tag.
 
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
 | Id                        | string                                                | The ID for this tag.                                          |
+
 
 ### Products
 
@@ -284,6 +279,7 @@ Describes the tag.
 ]
 ```
 
+
 ### Services
 
 ``` json
@@ -320,6 +316,7 @@ Describes the tag.
   }
 ]
 ```
+
 
 ### Industries
 
@@ -369,6 +366,7 @@ Describes the tag.
   }
 ]
 ```
+
 
 ### Solutions
 
@@ -520,6 +518,7 @@ Describes the tag.
   }
 ]
 ```
+
 
 ### Customer Size
 
