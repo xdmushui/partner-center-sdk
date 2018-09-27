@@ -49,7 +49,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/v1/referrals/{referralId} HTTP/1.1
+GET https://api.partner.microsoft.com/v1/referrals/fa2ebe8d-754c-4d43-baa1-c31688a9c8ff HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
