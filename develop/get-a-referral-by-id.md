@@ -54,7 +54,6 @@ Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
 
-<to do>
 ```
 
 
@@ -69,5 +68,100 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` http
-<to do>
+{
+    "id": "fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
+    "engagementId": "5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+    "organizationId": "msft",
+    "organizationName": "Microsoft",
+    "externalReferenceId": "mycrmid1234",
+    "createdDateTime": "2018-09-26T22:50:17.9817213Z",
+    "updatedDateTime": "2018-09-26T22:50:17.9817213Z",
+    "expirationDateTime": "2018-10-04T00:00:00Z",
+    "status": "Active",
+    "statusDetail": "Accepted",
+    "qualification": "SalesQualified",
+    "type": "Shared",
+    "customerProfile": {
+        "name": "Contoso Inc",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "size": "10to50employees",
+        "team": [
+            {
+                "firstName": "Sue",
+                "lastName": "Smith",
+                "phoneNumber": "1234567890",
+                "email": "sue.smith@contoso.com"
+            },
+            {
+                "firstName": "Joe",
+                "lastName": "Hansen",
+                "phoneNumber": "4035698759",
+                "email": "joe.hansen@contoso.com"
+            }
+        ],
+        "ids": {}
+    },
+    "consent": {
+        "consentToToShareInfoWithOthers": true,
+        "consentToContact": true,
+        "consentToMicrosoftToContactSpecificPartners": true
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+        "requirements": {
+            "industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+            "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+                {
+                    "name": "Business Insights and Analytics",
+                    "type": "Name",
+                    "id": "SOL-34104-EBA"
+                }
+            ]
+        }
+    },
+    "team": [
+        {
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
+        }
+    ],
+    "links": {
+        "relatedReferrals": {
+            "uri": "/v2/referrals/?engagementId=5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/v2/referrals/fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Referral"
+    }
+}
 ```

@@ -67,88 +67,79 @@ Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
 
-{
-  {
-  "organizationId": "1",
-  "businessProfileId": "1",
-  "organizationName": "Contoso Inc",
-  "externalReferenceId": "CRMID1234567",
-  "createdDateTime": "2018-09-21T17:23:33.809Z",
-  "updatedDateTime": "2018-09-21T17:23:33.809Z",
-  "expirationDateTime": "2018-09-21T17:23:33.809Z",
-  "status": "New",
-  "statusDetail": "Pending",
-  "qualification": "SalesQualified",
-  "type": "Shared",
-  "customerProfile": {
-    "id": "string",
-    "name": "Contoso Inc",
-    "address": {
-      "addressLine1": "One Microsoft Way",
-      "addressLine2": "",
-      "city": "Redmond",
-      "state": "WA",
-      "postalCode": "98052",
-      "country": "US",
-      "region": ""
+{  
+    "ExternalReferenceId": "MyCRMID1234",
+    "status": "Active",
+    "statusDetail":"Pending",
+    "Type": "Shared",
+    "Qualification": "SalesQualified",
+    "customerProfile": {
+        "name": "Contoso Inc",
+        "size": "10to50employees",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "team": [
+            {
+                "firstName": "Sue",
+                "lastName": "Smith",
+                "phoneNumber": "1234567890",
+                "email": "sue.smith@contoso.com"
+            },
+            {
+                "firstName": "Joe",
+                "lastName": "Hansen",
+                "phoneNumber": "4035698759",
+                "email": "joe.hansen@contoso.com"
+            }
+        ]
     },
-    "size": "251to1000employees",
+    "consent": {
+    	"ConsentToToShareInfoWithOthers": "true",
+    	"ConsentToContact": "true",
+    	"ConsentToMicrosoftToContactSpecificPartners": "true"
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+        "dealValue": 50000,
+        "requirements": {
+         "Industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+             "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+            	{   "id": "SOL-34104-EBA",
+                	"name": "Business Insights and Analytics",
+                    "type": "Name"
+                }
+            ]
+        }
+    },
     "team": [
-      {
-        "firstName": "Sue",
-        "lastName": "Smith",
-        "phoneNumber": "425-789-7889",
-        "email": "sue.smith@contoso.com"
-      }
-    ],
-    "ids": {
-      "duns": "1234567"
-    }
-  },
-  "consent": {
-    "consentToToShareInfoWithOthers": true,
-    "consentToContact": true,
-    "consentToMicrosoftToContactSpecificPartners": true
-  },
-  "details": { 
-    "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
-    "estimatedDealValue": "50000",
-    "estimatedClosingDateTime": "2018-09-21T17:23:33.810Z",
-    "requirements": {
-      "industries": [
-        {
-          "id": "Healthcare"
+    	{
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
         }
-      ],
-      "products": [
-        {
-          "id": "Azure"
-        }
-      ],
-      "services": [
-        {
-          "id": "DeploymentOrMigration"
-        }
-      ],
-      "solutions": [
-        {
-          "id": "DevOps"
-        }
-      ]
-    }
-  },
-  "team": [
-    {
-      "firstName": "Ryan",
-      "lastName": "Barschaw",
-      "phoneNumber": "123-456-7890",
-      "email": "rbars@microsoft.com"
-    }
-  ],
-  "inviteContext": {
-    "notes": "Hi Microsoft, I would like your support in migrating Contoso Inc to Dynamics 365",
-    "invitedByOrganizationId": "string"
-  }
+    ]
+    
 }
 ```
 
@@ -164,5 +155,100 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` http
-to do
+{
+    "id": "fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
+    "engagementId": "5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+    "organizationId": "msft",
+    "organizationName": "Microsoft",
+    "externalReferenceId": "mycrmid1234",
+    "createdDateTime": "2018-09-26T22:50:17.9817213Z",
+    "updatedDateTime": "2018-09-26T22:50:17.9817213Z",
+    "expirationDateTime": "2018-10-04T00:00:00Z",
+    "status": "Active",
+    "statusDetail": "Accepted",
+    "qualification": "SalesQualified",
+    "type": "Shared",
+    "customerProfile": {
+        "name": "Contoso Inc",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "size": "10to50employees",
+        "team": [
+            {
+                "firstName": "Sue",
+                "lastName": "Smith",
+                "phoneNumber": "1234567890",
+                "email": "sue.smith@contoso.com"
+            },
+            {
+                "firstName": "Joe",
+                "lastName": "Hansen",
+                "phoneNumber": "4035698759",
+                "email": "joe.hansen@contoso.com"
+            }
+        ],
+        "ids": {}
+    },
+    "consent": {
+        "consentToToShareInfoWithOthers": true,
+        "consentToContact": true,
+        "consentToMicrosoftToContactSpecificPartners": true
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+        "requirements": {
+            "industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+            "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+                {
+                    "name": "Business Insights and Analytics",
+                    "type": "Name",
+                    "id": "SOL-34104-EBA"
+                }
+            ]
+        }
+    },
+    "team": [
+        {
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
+        }
+    ],
+    "links": {
+        "relatedReferrals": {
+            "uri": "/v2/referrals/?engagementId=5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/v2/referrals/fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Referral"
+    }
+}
 ```

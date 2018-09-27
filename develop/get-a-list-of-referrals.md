@@ -51,12 +51,11 @@ None.
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/v1/referrals HTTP/1.1
+GET https://api.partner.microsoft.com/v1/referrals?pageSize=20&self=true&status=Active HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
- 
-<to do>
+
 ```
 
 
