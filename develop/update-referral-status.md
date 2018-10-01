@@ -28,7 +28,7 @@ This topic explains how to update a referral's status.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/v1/referrals/{referralId}                                        |
+| **POST** | https://api.partner.microsoft.com/referrals/{{Id}}/?api-version=v1.0                                       |
 
  
 **Request headers**
@@ -71,12 +71,68 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/v1/referrals/{referralId} HTTP/1.1
+POST https://api.partner.microsoft.com/referrals/0dad14a1-6e51-4e93-bde8-1c749b95f454/?api-version=v1.0 HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
  
- <to do>
+ {
+    "id": "0dad14a1-6e51-4e93-bde8-1c749b95f454",
+    "organizationId": "msft",
+    "organizationName": "Microsoft",
+    "externalReferenceId": "mycrmid1234",
+    "createdDateTime": "2018-10-01T18:17:36.254263Z",
+    "updatedDateTime": "2018-10-01T18:17:36.254263Z",
+    "expirationDateTime": "2018-10-09T00:00:00Z",
+    "status": "Closed",
+    "statusDetail": "Won",
+    "qualification": "SalesQualified",
+    "type": "Shared",
+    "customerProfile": {
+        "name": "AdventureWorks",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "size": "10to50employees",
+        "team": [
+            {
+                "firstName": "John",
+                "lastName": "Doe",
+                "phoneNumber": "1234567890",
+                "email": "john.doe@adventure-works.com"
+            },
+            {
+                "firstName": "Dawn",
+                "lastName": "Smith",
+                "phoneNumber": "4035698759",
+                "email": "dawn.smith@adventure-works.com"
+            }
+        ],
+        "ids": {}
+    },
+    "consent": {
+        "consentToToShareInfoWithOthers": true,
+        "consentToContact": true,
+        "consentToMicrosoftToContactSpecificPartners": true
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
+        "requirements": {}
+    },
+    "team": [
+        {
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
+        }
+    ]
+}
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
@@ -90,5 +146,77 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ``` http
-<to do>
+{
+    "id": "0dad14a1-6e51-4e93-bde8-1c749b95f454",
+    "engagementId": "74511a80-1602-4349-9174-3b020bba2e81",
+    "organizationId": "msft",
+    "organizationName": "Microsoft",
+    "externalReferenceId": "mycrmid1234",
+    "createdDateTime": "2018-10-01T18:30:56.247848Z",
+    "updatedDateTime": "2018-10-01T18:30:56.247848Z",
+    "expirationDateTime": "2018-10-09T00:00:00Z",
+    "status": "Closed",
+    "statusDetail": "Won",
+    "qualification": "SalesQualified",
+    "type": "Shared",
+    "customerProfile": {
+        "name": "AdventureWorks",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "size": "10to50employees",
+        "team": [
+            {
+                "firstName": "John",
+                "lastName": "Doe",
+                "phoneNumber": "1234567890",
+                "email": "john.doe@adventure-works.com"
+            },
+            {
+                "firstName": "Dawn",
+                "lastName": "Smith",
+                "phoneNumber": "4035698759",
+                "email": "dawn.smith@adventure-works.com"
+            }
+        ],
+        "ids": {}
+    },
+    "consent": {
+        "consentToToShareInfoWithOthers": true,
+        "consentToContact": true,
+        "consentToMicrosoftToContactSpecificPartners": true
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
+        "requirements": {}
+    },
+    "team": [
+        {
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
+        }
+    ],
+    "links": {
+        "relatedReferrals": {
+            "uri": "/v2/referrals/?engagementId=74511a80-1602-4349-9174-3b020bba2e81",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/v2/referrals/0dad14a1-6e51-4e93-bde8-1c749b95f454",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Referral"
+    }
+}
 ```

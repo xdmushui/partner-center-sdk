@@ -27,7 +27,7 @@ This topic explains how to create a referral.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/v1/referrals/                                                    |
+| **POST** | https://api.partner.microsoft.com/referrals?api-version=v1.0                                                   |
  
 **Request headers**
 
@@ -62,7 +62,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/v1/referrals HTTP/1.1
+POST https://api.partner.microsoft.com/referrals?api-version=v1.0 HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
@@ -156,14 +156,14 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ``` http
 {
-    "id": "fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
-    "engagementId": "5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+    "id": "0d43414c-fb9f-4ca0-9b8d-29deb70364cf",
+    "engagementId": "29c3f916-8840-4565-b584-48ccafe0b835",
     "organizationId": "msft",
     "organizationName": "Microsoft",
     "externalReferenceId": "mycrmid1234",
-    "createdDateTime": "2018-09-26T22:50:17.9817213Z",
-    "updatedDateTime": "2018-09-26T22:50:17.9817213Z",
-    "expirationDateTime": "2018-10-04T00:00:00Z",
+    "createdDateTime": "2018-10-01T18:01:32.8796627Z",
+    "updatedDateTime": "2018-10-01T18:01:32.8796627Z",
+    "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Active",
     "statusDetail": "Accepted",
     "qualification": "SalesQualified",
@@ -202,30 +202,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     },
     "details": {
         "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
-        "requirements": {
-            "industries": [
-                {
-                    "id": "Manufacturing"
-                }
-            ],
-            "products": [
-                {
-                    "id": "Dynamics365Enterprise"
-                }
-            ],
-            "services": [
-                {
-                    "id": "DeploymentOrMigration"
-                }
-            ],
-            "solutions": [
-                {
-                    "name": "Business Insights and Analytics",
-                    "type": "Name",
-                    "id": "SOL-34104-EBA"
-                }
-            ]
-        }
+        "requirements": {}
     },
     "team": [
         {
@@ -237,12 +214,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     ],
     "links": {
         "relatedReferrals": {
-            "uri": "/v2/referrals/?engagementId=5357cdc2-743e-4dd5-89c6-f3731f8b69ce",
+            "uri": "/v2/referrals/?engagementId=29c3f916-8840-4565-b584-48ccafe0b835",
             "method": "GET",
             "headers": []
         },
         "self": {
-            "uri": "/v2/referrals/fa2ebe8d-754c-4d43-baa1-c31688a9c8ff",
+            "uri": "/v2/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf",
             "method": "GET",
             "headers": []
         }

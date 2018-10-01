@@ -138,7 +138,6 @@ All of the following scenarios can be completed three different ways:
 <li><p>[Get a list of referrals](get-a-list-of-referrals.md) </p></li> 
 <li><p>[Update referral status](update-referral-status.md)</p></li> 
 <li><p>[Invite an organization](invite-an-organization.md)</p></li> 
-<li><p>[Get a list of pending invitations](get-a-list-of-pending-invitations.md)</p></li> 
 </ul>
 </td>
 </tr>

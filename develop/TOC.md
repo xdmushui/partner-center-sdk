@@ -82,7 +82,6 @@
 #### [Get a list of referrals](get-a-list-of-referrals.md) 
 #### [Update referral status](update-referral-status.md)
 #### [Invite an organization](invite-an-organization.md)
-#### [Get a list of pending invitations](get-a-list-of-pending-invitations.md)
 ### [Place orders](place-orders.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 #### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)

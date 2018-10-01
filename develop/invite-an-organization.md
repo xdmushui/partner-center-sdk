@@ -27,7 +27,7 @@ This topic explains how to invite an organization
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/v1/referrals/                                                    |
+| **POST** | https://api.partner.microsoft.com/referrals?api-version=v1.0                                                    |
 
 **Request headers**
 
@@ -62,12 +62,90 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/v1/referrals HTTP/1.1
+POST https://api.partner.microsoft.com/referrals?api-version=v1.0 HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
 
-<to do>
+{  
+    "engagementId": "bde8552b-958b-4663-8a7b-96fae3d009b3",
+    "organizationId": "msft",
+    "organizationName": "Microsoft",
+    "ExternalReferenceId": "MyCRMID1234",
+    "status": "New",
+    "statusDetail":"Pending",
+    "Type": "Shared",
+    "Qualification": "SalesQualified",
+    "customerProfile": {
+        "name": "AdventureWorks",
+        "size": "10to50employees",
+        "address": {
+            "addressLine1": "One Microsoft Way",
+            "addressLine2": "34",
+            "city": "Redmond",
+            "state": "WA",
+            "postalCode": "98052",
+            "country": "US"
+        },
+        "team": [
+            {
+                "firstName": "John",
+                "lastName": "Doe",
+                "phoneNumber": "1234567890",
+                "email": "john.doe@adventure-works.com"
+            },
+            {
+                "firstName": "Dawn",
+                "lastName": "Smith",
+                "phoneNumber": "4035698759",
+                "email": "dawn.smith@adventure-works.com"
+            }
+        ]
+    },
+    "consent": {
+    	"ConsentToToShareInfoWithOthers": "true",
+    	"ConsentToContact": "true",
+    	"ConsentToMicrosoftToContactSpecificPartners": "true"
+    },
+    "details": {
+        "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
+        "dealValue": 15000,
+        "requirements": {
+         "Industries": [
+                {
+                    "id": "Retail & Consumer Goods"
+                }
+            ],
+             "products": [
+                {
+                    "id": "Microsoft365"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+            	{   "id": "SOL-34104-EBA",
+                	"name": "Business Insights and Analytics",
+                    "type": "Name"
+                }
+            ]
+        }
+    },
+    "team": [
+    	{
+            "firstName": "Luke",
+            "lastName": "Johnson",
+            "phoneNumber": "1231231234",
+            "email": "luke.johnson@fabrikam.com"
+        }
+    ],
+    "inviteContext" : {
+    	"notes": "Hi Microsoft, I would like your support in co-selling with Adventure Works."
+    }
+}
 ```
 
 
