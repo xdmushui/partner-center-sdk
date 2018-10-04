@@ -2,12 +2,11 @@
 title: Get an organization profile
 description: Gets an object representing the partner's organization profile.
 ms.assetid: 2AA159F1-CC84-4367-A2AF-DFA4C8B0E673
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get an organization profile
-
 
 **Applies To**
 
@@ -20,15 +19,15 @@ Gets an object representing the partner's organization profile.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get your organization profile, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.getasync) methods.
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
 
 OrganizationProfile organizationProfile = partnerOperations.Profiles.OrganizationProfile.Get();
@@ -36,16 +35,31 @@ OrganizationProfile organizationProfile = partnerOperations.Profiles.Organizatio
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: GetOrganizationProfile.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+### Java
 
+To get your organization profile, use your **IAggregatePartner.getProfiles** function and call the **getOrganizationProfile** function. Finally, call the **get()** function.
+
+```java
+// IAggregatePartner partnerOperations;
+
+OrganizationProfile organizationProfile = partnerOperations.getProfiles().getOrganizationProfile().get();
+```
+
+### PowerShell
+
+To get your organiztion profile, execute the [**Get-PartnerOrganizationProfile**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOrganizationProfile.md) command. 
+
+```powershell
+Get-PartnerOrganizationProfile
+```
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
 
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/organization HTTP/1.1 |
-
- 
 
 **Request headers**
 
@@ -66,7 +80,6 @@ MS-CorrelationId: 1bb03149-88d2-4bc2-9cc1-d6e83890fa9e
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If successful, this method returns an **OrganizationProfile** object in the response body.
 
@@ -117,11 +130,3 @@ Date: Tue, 22 Mar 2016 17:11:06 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

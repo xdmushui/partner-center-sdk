@@ -1,54 +1,68 @@
 ---
 title: Checkout a cart
 description: How to checkout an order for a customer in a cart.
-ms.date: 03/19/18
+ms.date: 09/30/2018
 ms.localizationpriority: medium
 ---
 
 # Checkout a cart
 
-
 **Applies To**
 
 -   Partner Center
-
 
 How to checkout an order for a customer in a cart. 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 -   A Cart ID for an existing cart.
 
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
-## <span id="C_"></span><span id="c_"></span>C#
+### C#
 
+To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **Create** or **CreateAsync** functions to complete the order. 
 
-To Checkout an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID’s using the **ById()** function. 
-
-Finally, call the **Create** or **CreateAsync()** method to create the order.
-
-
-``` csharp
-IAggregatePartner partnerOperations;
-string customerId;
-string cartId;
+```csharp
+// IAggregatePartner partnerOperations;
+// string customerId;
+// string cartId;
 
 var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checkout();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java 
 
+To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **create** function to complete the order. 
+
+```java
+// IAggregatePartner partnerOperations;
+// String customerId;
+// String cartId;
+
+Cart cart = partnerOperations.getCustomers().byId(customerId).getCart().byId(cartId).checkout();
+```
+
+### PowerShell
+
+To checkout an order for a customer, execute the [**Submit-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Submit-PartnerCustomerCart.md) to complete the order.
+
+```powershell
+# $customerId
+# $cartId
+
+Submit-PartnerCustomerCart -CartId $cartId -CustomerId $customerId
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id}/checkout HTTP/1.1              |
-
- 
+| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id}/checkout HTTP/1.1     |
 
 **URI parameters**
 
@@ -59,7 +73,6 @@ Use the following path parameters to identify the customer and specify the cart 
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
 
- 
 
 **Request headers**
 
@@ -88,7 +101,6 @@ No-Content-Body
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
-
 
 If successful, the response body contains the populated [CartCheckoutResult](cart.md#cartcheckoutresult) resource.
 
@@ -154,11 +166,3 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

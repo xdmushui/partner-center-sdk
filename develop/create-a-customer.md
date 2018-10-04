@@ -8,7 +8,6 @@ ms.localizationpriority: medium
 
 # Create a customer
 
-
 **Applies To**
 
 -   Partner Center
@@ -28,16 +27,17 @@ Once the customer is created, save the customer ID and Azure AD details for futu
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
-To add a customer, instantiate a new [Customer](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [BillingProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [CompanyProfile](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Then, add it to your [IAggregatePartners.Customers](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [Create()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [CreateAsync()](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
+To add a customer, instantiate a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Then, add it to your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
+
 var partnerOperations = this.Context.UserPartnerOperations;
 
 var customerToCreate = new Customer()
@@ -74,8 +74,54 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateCustomer.cs
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+### Java
 
+To create a new customer create a new instance of the **CustomerBillingProfile** and the **CustomerCompanyProfile** objects. Be sure to populate the required fields. Then, create the customer by calling the **IAggregatePartner.getCustomers().create** function.
+
+```java
+// IAggregatePartner partnerOperations;
+
+Address address = new Address();
+
+address.setFirstName( "Gena" );
+address.setLastName( "Soto" );
+address.setAddressLine1( "One Microsoft Way" );
+address.setCity( "Redmond" );
+address.setState( "WA" );
+address.setCountry( "US" );
+address.setPostalCode( "98052" );
+address.setPhoneNumber( "4255550101" );
+
+CustomerBillingProfile billingProfile = new CustomerBillingProfile();
+
+billingProfile.setCulture( "en-US" );
+billingProfile.setEmail( "gena@wingtiptoys.com" );
+billingProfile.setLanguage( "en" );
+billingProfile.setCompanyName( "Wingtip Toys" + new Random().nextInt() );
+billingProfile.setDefaultAddress( address );
+
+CustomerCompanyProfile companyProfile = new CustomerCompanyProfile();
+
+companyProfile.setDomain( "WingtipToys" + Math.abs( new Random().nextInt() ) + ".onmicrosoft.com" );
+
+Customer customerToCreate = new Customer();
+
+customerToCreate.setBillingProfile( billingProfile );
+customerToCreate.setCompanyProfile( companyProfile );
+
+Customer newCustomer = partnerOperations.getCustomers().create( customerToCreate );
+```
+
+### PowerShell
+
+To create a customer execute the [**New-ParnterCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md) command. 
+
+```powershell
+New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
+
+```
+
+## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
 
 **Request syntax**
 

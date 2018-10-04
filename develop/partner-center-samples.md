@@ -2,12 +2,11 @@
 title: Partner Center samples
 description: To help you get up and running quickly with the Partner Center APIs, we provide a sample program, C\ managed code snippets, and REST sample requests and responses.
 ms.assetid: FBE67405-88E2-42F4-B456-D4602A2719F5
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Partner Center samples
-
 
 **Applies To**
 
@@ -25,12 +24,16 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
   </thead>
   <tbody>
     <tr>
-      <td>C# code snippets</td>
-      <td>For pointers and C# code snippets that show how to use the Partner Center managed API to manage customer accounts, get analytics, place orders, manage billing and subscriptions, provide support, and manage accounts and profiles, see [Scenarios](scenarios.md).</td>
+      <td>Code snippets</td>
+      <td>For pointers and .NET, Java, and PowerShell code snippets that show how to use the Partner Center managed API to manage customer accounts, get analytics, place orders, manage billing and subscriptions, provide support, and manage accounts and profiles, see [Scenarios](scenarios.md).</td>
     </tr>
     <tr>
       <td>REST samples</td>
       <td>For sample requests and responses that show how to use the Partner Center REST API to manage customer accounts, get analytics, place orders, manage billing and subscriptions, provide support, and manage accounts and profiles, see [Scenarios](scenarios.md).</td>
+    </tr>
+    <tr>
+      <td>[Console test app](console-test-app.md)</td>
+      <td>This app is available in C# and Java, it provides code and some error handling for all of the scenarios listed in the scenarios section.</td>
     </tr>
     <tr>
       <td>[CSP customer web storefront](csp-customer-web-storefront.md)</td>
@@ -52,10 +55,5 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
         </ul>
       </td>
     </tr>
-    <tr>
-      <td>[Console test app](console-test-app.md)</td>
-      <td>This app provides code and some error handling for all of the scenarios listed in the Scenarios section.</td>
-    </tr>
   </tbody>
 </table>
-
