@@ -38,8 +38,8 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 
 To get a list of products, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, select the catalog view by using the **byTargetView()** function, and optionally select the target segment by using the **byTargetSegment()** function. Finally, call the **get()** function to return the collection. 
 
-```csharp
-IAggregatePartner partnerOperations;
+```java
+// IAggregatePartner partnerOperations;
 
 // Get the products for the specified catalog view.
 ResourceCollection<Products> products = partnerOperations.getProducts().byCountry("US").byTargetView("Azure").get();

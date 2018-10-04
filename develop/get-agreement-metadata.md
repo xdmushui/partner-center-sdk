@@ -42,7 +42,7 @@ AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr
 
 To retrieve agreement metadata for Microsoft Cloud Agreement, first call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 
-``` csharp
+```java
 // IAggregatePartner partnerOperations;
 
 ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreements().get();
