@@ -2,12 +2,11 @@
 title: Verify a partner MPN ID
 description: How to verify a partner's Microsoft Partner Network identifier (MPN ID).The technique shown here verifies the partner's Microsoft Partner Network identifier by requesting the partner's MPN profile from partner center.
 ms.assetid: 95CBA254-0980-4519-B95D-1F906C321863
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Verify a partner MPN ID
-
 
 **Applies To**
 
@@ -22,12 +21,10 @@ The technique shown here verifies the partner's Microsoft Partner Network identi
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 -   The partner MPN ID to verify. If you omit this value, the request retrieves the MPN profile of the signed-in partner.
 
 ## <span id="C_"></span><span id="c_"></span>C#
-
 
 To verify a partner's MPN ID, first retrieve an interface to partner profile collection operations from the [**IAggregatePartner.Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.profiles) property. Then get an interface to MPN profile operations from the [**MpnProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ipartnerprofilecollection.mpnprofile) property. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.getasync) methods with the MPN ID to retrieve the MPN profile. If you omit the MPN ID from the Get or GetAsync call, the request attempts to retrieve the MPN profile of the signed-in partner.
 
@@ -49,8 +46,6 @@ var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 |---------|-------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/mpn?mpnId={mpn-id} HTTP/1.1 |
 
- 
-
 **URI parameter**
 
 Provide the following query parameter to identify the partner. If you omit this query parameter, the request returns the MPN profile of the signed-in partner.
@@ -58,8 +53,6 @@ Provide the following query parameter to identify the partner. If you omit this 
 | Name   | Type | Required | Description                                                 |
 |--------|------|----------|-------------------------------------------------------------|
 | mpn-id | int  | No       | A Microsoft Partner Network ID that identifies the partner. |
-
- 
 
 **Request headers**
 
@@ -84,7 +77,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
-
 
 If successful, the response body contains the [MpnProfile](profiles.md#mpnprofile) resource for the partner.
 
@@ -139,11 +131,3 @@ Date: Thu, 13 Apr 2017 18:26:51 GMT
     "source": "PartnerFD"
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -7,7 +7,6 @@ ms.localizationpriority: medium
 
 # Get confirmation of customer acceptance of Microsoft Cloud agreement
 
-
 **Applies To**
 
 -   Partner Center
@@ -18,13 +17,11 @@ ms.localizationpriority: medium
 > -   Partner Center for Microsoft Cloud Germany
 > -   Partner Center for Microsoft Cloud for US Government
 
-
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
  - If you are using Partner Center SDK, version 1.9 or newer is required. 
  - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with App+User credentials only. 
  - A customer ID (customer-tenant-id). 
-
 
 ## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
@@ -32,14 +29,25 @@ ms.localizationpriority: medium
 
 To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's ID. Then, get the **Agreements** property, followed by calling the **Get** or **GetAsync** methods.
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
-// string selectedCustomerId;
+// String selectedCustomerId;
 
 var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Get();
 ```
 
 **Sample:** Console test app. **Project:** PartnerSDK.FeatureSamples **Class:** GetCustomerAgreement.cs  
+
+### Java 
+
+To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, get the **getAgreements** function, followed by calling the **get** function.
+
+```java
+// IAggregatePartner partnerOperations;
+// String selectedCustomerId;
+
+ResourceCollection<Agreement> agreements = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().get();
+```
 
 ### PowerShell
 
@@ -124,7 +132,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
             "templateId":"998b88de-aa99-4388-a42c-1b3517d49490",
             "dateAgreed":"2018-07-28T00:00:00",
             "type":"MicrosoftCloudAgreement",
-            "agreementLink":"https://docs.microsoft.com/en-us/partner-center/agreements"
+            "agreementLink":"https://docs.microsoft.com/partner-center/agreements"
         },
         {
             "primaryContact":
@@ -137,7 +145,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
             "templateId":"998b88de-aa99-4388-a42c-1b3517d49490",
             "dateAgreed":"2017-08-01T00:00:00",
             "type":"MicrosoftCloudAgreement",
-            "agreementLink":"https://docs.microsoft.com/en-us/partner-center/agreements"
+            "agreementLink":"https://docs.microsoft.com/partner-center/agreements"
         }
     ]
 }

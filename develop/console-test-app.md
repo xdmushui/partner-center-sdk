@@ -1,13 +1,12 @@
 ---
 title: Console test app
-description: The Console test app provides sample codes for all of the scenarios supported by the Partner Center APIs. You can also use it for testing.
+description: This console test app provides sample codes for all of the scenarios supported by the Partner Center APIs. You can also use it for testing.
 ms.assetid: 56F5B4C6-CE87-4D13-9D8C-09F38E946292
-ms.date: 12/15/2017
+ms.date: 09/30/2018
 ms.localizationpriority: medium
 ---
 
 # Console test app
-
 
 **Applies To**
 
@@ -16,19 +15,31 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-The Console test app provides sample codes for all of the scenarios supported by the Partner Center APIs. You can also use it for testing.
+The console test app is provided in C# and Java, it provides sample codes for all of the scenarios supported by the Partner Center APIs. You can also use it for testing.
 
 ## <span id="Get_the_code"></span><span id="get_the_code"></span><span id="GET_THE_CODE"></span>Get the code
 
+### .NET
 
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=746682)
 
-## <span id="What_to_change"></span><span id="what_to_change"></span><span id="WHAT_TO_CHANGE"></span>What to change
-
-
-Before you build the application, update the values in the App.config file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production (TiP).
+Before you build the application, update the values in the *App.config* file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production.
 
 Under **ScenarioSettings** in the App.config file, you can set parameters that will be automatically passed into the scenarios that you run.
+
+To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.cs* file.
+
+### Java
+
+[Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=2026887)
+
+Before you build the application, update the values in the *SamplesConfigurations.json* file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production.
+
+Under **ScenarioSettings** in the *SamplesConfiguration.json* file, you can set parameters that will be automatically passed into the scenarios that you run.
+
+To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.java* file.
+
+## <span id="What_to_change"></span><span id="what_to_change"></span><span id="WHAT_TO_CHANGE"></span>What to change
 
 <table>
 <colgroup>
@@ -106,15 +117,3 @@ All of these settings specify the amount of entries per page when retrieving pag
 </tr>
 </tbody>
 </table>
-
- 
-
-To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in Program.cs.
-
- 
-
- 
-
-
-
-

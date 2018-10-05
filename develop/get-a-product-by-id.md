@@ -2,12 +2,11 @@
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 09/28/2018
 ms.localizationpriority: medium
 ---
 
 # Get a product by ID
-
 
 **Applies To**
 
@@ -17,30 +16,46 @@ Gets the specified product resource using a product ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A product ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product. 
 
-``` csharp
-IAggregatePartner partnerOperations;
+```csharp
+// IAggregatePartner partnerOperations;
 
 Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z0BQ3Q").Get();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java
 
+To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product. 
+
+```java
+// IAggregatePartner partnerOperations;
+
+Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZH318Z0BQ3Q").get();
+```
+
+### PowerShell
+
+To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
+
+```powershell
+Get-PartnerProduct -ProductId 'DZH318Z0BQ3Q'
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  |
- 
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  | 
 
 **URI parameter**
 
@@ -51,7 +66,6 @@ Use the following path parameters to get the specified product.
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | country                | string   | Yes      | A country/region ID.                                            |
 
- 
 
 **Request headers**
 
@@ -86,7 +100,6 @@ This method returns the following error codes:
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                     |
 
-
 **Response example**
 
 ```http
@@ -119,11 +132,3 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

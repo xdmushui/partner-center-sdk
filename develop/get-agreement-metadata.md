@@ -28,14 +28,34 @@ ms.localizationpriority: medium
 
 ### C#
 
-To retrieve agreement metadata for Microsoft Cloud Agreement, first retrieve the **IAggregatePartner.AgreementDetails** collection by calling the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+To retrieve agreement metadata for Microsoft Cloud Agreement, first retrieve the **IAggregatePartner.AgreementDetails** collection and then call the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
 
 var agreements = partnerOperations.AgreementDetails.Get();
 
 AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr => agr.AgreementType == AgreementType.MicrosoftCloudAgreement);
+```
+
+### Java
+
+To retrieve agreement metadata for Microsoft Cloud Agreement, first call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+
+```java
+// IAggregatePartner partnerOperations;
+
+ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreements().get();
+
+AgreementMetaData microsoftCloudAgreement;
+
+for (AgreementMetaData metadata : agreements) 
+{
+    if(metadata.getAgreementType() == AgreementType.MicrosoftCloudAgreement)
+    {
+        microsoftCloudAgreement = metadata;
+    }
+}
 ```
 
 ### PowerShell
@@ -101,7 +121,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
         {
             "templateId": "998b88de-aa99-4388-a42c-1b3517d49490",
             "agreementType": "MicrosoftCloudAgreement",
-            "agreementLink": "https://docs.microsoft.com/en-us/partner-center/agreements",
+            "agreementLink": "https://docs.microsoft.com/partner-center/agreements",
             "versionRank": 0
         }
     ],
