@@ -2,12 +2,11 @@
 title: Get an offer by ID
 description: Gets a Offer resource that matches the offer ID.
 ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get an offer by ID
-
 
 **Applies To**
 
@@ -20,28 +19,51 @@ Gets an **Offer** resource that matches the offer ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   An offer ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country with a call to **ByCountry()**, and then call the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
 
-``` csharp
+```csharp
 // IAggretagePartner partnerOperations;
+// string countryCode;
+// string offerId;
 
-// retrieve the offer ID
-var offers = state[FeatureSamplesApplication.OffersKey] as List<Offer>;
-
-var offerDetails = partnerOperations.Offers.ByCountry("US").ById(offers[0].Id).Get();
+// retrieve the offer 
+var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: OfferDetails.cs
+**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
+
+### Java
+
+To find a specific offer by ID, use your **IAggregatePartner.getOffers** function, establish the country with a call to the **byCountry()** function, and then call the **byID()** function. Then call the **get()** function.
+
+```java
+// IAggretagePartner partnerOperations;
+// String countryCode;
+// String offerId;
+
+// Retrieve the offer
+Offer offer = partnerOperations.getOffers().byCountry(countryCode).byId(offerId).get();
+```
+
+### PowerShell
+
+To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOffer.md) command, and specify the **CountryCode** and **OfferId** parameters.
+
+```powershell
+# $countryCode
+# $offerId
+
+Get-PartnerOffer -Country $countryCode -OfferId $offerId
+```
 
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
-
 
 **Request syntax**
 
@@ -49,16 +71,12 @@ var offerDetails = partnerOperations.Offers.ByCountry("US").ById(offers[0].Id).G
 |---------|------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}?country={country-id} HTTP/1.1 |
 
- 
-
 **URI parameter**
 
 | Name           | Type       | Required | Description                           |
 |----------------|------------|----------|---------------------------------------|
 | **offer-id**   | **guid**   | Y        | A GUID that corresponds to the offer. |
 | **country-id** | **string** | Y        | The country/region ID.                |
-
- 
 
 **Request headers**
 
@@ -82,7 +100,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If successful, this method returns an **Offer** resource in the response body.
 
@@ -145,11 +162,3 @@ Date: Mon, 23 Nov 2015 23:13:01 GMT
 }
 
 ```
-
- 
-
- 
-
-
-
-
