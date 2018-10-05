@@ -2,12 +2,11 @@
 title: Get prices for Microsoft Azure Partner Shared Services
 description: How to get an Azure Rate Card with prices for Microsoft Azure Partner Shared Services.
 ms.assetid: B5B2F63A-D33F-4D76-8917-9952E6355746
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get prices for Microsoft Azure Partner Shared Services
-
 
 **Applies To**
 
@@ -19,8 +18,37 @@ How to get an [Azure Rate Card](azure-rate-card.md) with prices for Microsoft Az
 
 Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C# 
+
+To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.getshared) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+var azureRateCard = partner.RateCards.Azure.GetShared();
+```
+
+### Java 
+
+To obtain the Azure Rate Card, call the **IAzureRateCard.getShared** function to return rate card details that contains the Azure prices.
+
+```java
+// IAggregatePartner partnerOperations;
+
+AzureRateCard azureRateCard = partner.getRateCards().getAzure().getShared();
+```
+
+### PowerShell
+
+To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command and specify the **SharedServices** parameter to retrun rate card details that contains the Azure prices.
+
+```powershell
+Get-PartnerAzureRateCard -SharedServices
+```
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
 
@@ -28,16 +56,12 @@ Prices differ by market and currency, and this API takes location into considera
 |---------|---------------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure-shared?currency={currency}&region={region} |
 
- 
-
 **URI parameters**
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is the currency associated with the market in the partner profile. |
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is the country/region code set in the partner profile.        |
-
- 
 
 If the optional X-Locale header is included in the request, its value determines the language used for the details in the response.
 
@@ -63,7 +87,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card.md) resource.
 

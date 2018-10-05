@@ -23,7 +23,8 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
- - If you are using Partner Center SDK, version 1.9 or newer is required. 
+ - If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
+ - If you are using the Partner Center Java SDK, version 1.8 or newer is required. 
  - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with App+User credentials only. 
  - A customer ID (customer-tenant-id). 
  - Date when customer accepted the Microsoft Cloud Agreement. 
@@ -42,7 +43,7 @@ To confirm or reconfirm that a customer has accepted to the Microsoft Cloud Agre
 
 1.	Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
-``` csharp
+```csharp
 /// IAggregatePartner partnerOperations;
 
 var agreements = partnerOperations.Agreements.Get();
@@ -74,6 +75,51 @@ Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agree
 ```
 
 **Sample:** Console test app. **Project:** PartnerSDK.FeatureSamples **Class:** CreateCustomerAgreement.cs  
+
+### Java
+
+To confirm or reconfirm that a customer has accepted to the Microsoft Cloud Agreement:
+
+1.	Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
+
+```java
+/// IAggregatePartner partnerOperations;
+
+ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreements().get();
+
+AgreementMetaData microsoftCloudAgreement;
+
+for (AgreementMetaData metadata : agreements) 
+{
+    if(metadata.getAgreementType() == AgreementType.MicrosoftCloudAgreement)
+    {
+        microsoftCloudAgreement = metadata;
+    }
+}
+```
+
+2. Create a new **Agreement** object containing details of the confirmation. Then use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, call the **getAgreements** property, followed by calling the **create** function.
+
+```java
+// String selectedCustomerId;
+
+Contact primaryContact = new Contact(); 
+
+primaryContact.setEmail("SomeEmail@outlook.com");
+primaryContact.setFirstName("Tania");
+primaryContact.setLastName("Carr");
+primaryContact.setPhoneNumber("1234567890");
+
+Agreement agreementToCreate = new Agreement(); 
+
+agreementToCreate.setContact(primaryContact);
+agreementToCreate.setDateAgreed(new DateTime());
+agreementToCreate.setTemplateId(microsoftCloudAgreement.getTemplateId());
+agreementToCreate.setType(AgreementType.MicrosoftCloudAgreement);
+agreementToCreate.setUserId("3d6f2c09-eb40-48ca-a4b3-d24c9c007531");
+
+Agreement agreement = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().create(agreementToCreate);
+```
 
 ### PowerShell
 

@@ -8,7 +8,6 @@ ms.localizationpriority: medium
 
 # Get an availability by ID 
 
-
 **Applies To**
 
 -   Partner Center
@@ -17,19 +16,18 @@ Gets an availability for the specified product and SKU using an availability ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A product ID. 
 -   A SKU ID. 
 -   An availability ID. 
 
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
-## <span id="C_"></span><span id="c_"></span>C#
-
+### C# 
 
 To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
 
-``` csharp
+```csharp
 IAggregatePartner partnerOperations;
 string countryCode;
 string productId; 
@@ -40,16 +38,36 @@ string availabilityId;
 var availability = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.ById(availabilityId).Get();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java
 
+To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **getAvailabilities** function to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **byId()** function to get the operations for that specific availability and then call the **get()** function to retrieve the availability details.
+
+```java
+IAggregatePartner partnerOperations;
+String countryCode;
+String productId; 
+String skuId;
+String availabilityId;
+
+// Get the availability details.
+Availability availability = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().byId(skuId).getAvailabilities().byId(availabilityId).get();
+```
+
+### PowerShell
+
+To get details of a specific [availability](products.md#availability), execute the [**Get-PartnerProductAvailability**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductAvailability.md) and specify the **AvailabilityId**, **CountryCode**, **ProductId**, and **SkuId** parameters to retrieve the availability details.
+
+```powershell
+Get-PartnerProductAvailability -Product $productId -SkuId $skuId -AvailabilityId $availabilityId
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                                                |
+| Method  | Request URI |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities/{availability-id}?country={country-code} HTTP/1.1         |
-
- 
 
 **URI parameter**
 
@@ -63,7 +81,6 @@ Use the following path and query parameters to get a specific availability using
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
  
-
 **Request headers**
 
 -   See [Headers](headers.md) for more information.
@@ -87,7 +104,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-
 If successful, the response body contains a collection of [SKU](products.md#sku) resources.
 
 **Response success and error codes**
@@ -101,7 +117,6 @@ This method returns the following error codes:
 | 404                  | 400013       | Product was not found.                                                                                    |
 | 404                  | 400018       | Sku was not found.                                                                                        |
 | 404                  | 400019       | Availability not found.                                                                                   |
-
 
 **Response example**
 
@@ -137,4 +152,3 @@ Content-Length: 440
     }
 }
 ```
-

@@ -7,36 +7,32 @@ ms.localizationpriority: medium
 
 # Create a cart
 
-
 **Applies To**
 
 -   Partner Center
-
 
 How to add an order for a customer in a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
-## <span id="C_"></span><span id="c_"></span>C#
+### C# 
 
-
-To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the Cart's LineItems property. Each cart line item contains the purchase information for one Product. You must have at least one cart line item. 
+To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's LineItems property. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
 
 Next, obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
 
-Finally, call the **Create** or **CreateAsync** method to create the order.
+Finally, call the **Create** or **CreateAsync** method to create the cart.
 
-
-``` csharp
-IAggregatePartner partnerOperations;
-string customerId;
-string catalogItemId;
-string subscriptionId;
+```csharp
+// IAggregatePartner partnerOperations;
+// string customerId;
+// string subscriptionId;
+// string catalogItemId;
 
 var cart = new Cart()
 {
@@ -58,16 +54,75 @@ var cart = new Cart()
 var createdCart = partnerOperations.Customers.ById(customerId).Cart.Create(cart);
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java
 
+To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
+
+Next, obtain an interface to cart operations by calling the **IAggregatePartner.getCustomers().byId** function with the customer ID to identify the customer, and then retrieving the interface from the **getCart** function.
+
+Finally, call the **create** function to create the cart.
+
+```java
+// IAggregatePartner partnerOperations;
+// String customerId;
+// String subscriptionId;
+// String catalogItemId;
+
+CartLineItem lineItem = new CartLineItem();
+
+lineItem.setBillingCycle(BillingCycleType.OneTime);
+lineItem.setCatalogItemId(catalogItemId);
+lineItem.setFriendlyName("Sample RI Purchase");
+lineItem.setQuantity(1);
+
+Map<String, String> provisioningContext = new HashMap<String,String>();
+
+provisioningContext.put("duration", "3Years");
+provisioningContext.put("scope", "shared"); 
+provisioningContext.put("subscriptionId", subscriptionId);
+
+lineItem.setProvisioningContext(provisioningContext);
+
+List<CartLineItem> lineItemList = new ArrayList<CartLineItem>();
+lineItemList.add(lineItem);
+
+Cart cart = new Cart();
+cart.setLineItems(lineItemList);
+
+Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().create(cart);
+```
+
+### PowerShell
+
+To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
+
+Finally, execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
+
+```powershell
+# $customerId
+# $subscriptionId
+# $catalogItemId
+
+$lineItem = New-Object -TypeName Microsoft.Store.PartnerCenter.PowerShell.Models.Carts.PSCartLineItem
+
+$lineItem.BillingCycle = 'OneTime'
+$lineItem.CatalogItemId = $catalogItemId
+$lineItem.FriendlyName = 'Sample RI Purchase'
+$lineItem.ProvisioningContext.Add('duration', '1Year')
+$lineItem.ProvisioningContext.Add('scope', 'shared')
+$lineItem.ProvisioningContext.Add('subscriptionId', $subsciptionId)
+$lineItem.Quantity = 10
+
+New-PartnerCustomerCart -CustomerId $customerId -LineItems $lineItem
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts HTTP/1.1                        |
-
- 
 
 **URI parameter**
 
@@ -77,8 +132,6 @@ Use the following path parameter to identify the customer.
 |-----------------|----------|----------|------------------------------------------------------------------------|
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 
- 
-
 **Request headers**
 
 -   See [Partner Center REST headers](headers.md) for more information.
@@ -87,7 +140,7 @@ Use the following path parameter to identify the customer.
 
 This table describes the [Cart](cart.md) properties in the request body.
 
-| Property              | Type             | Required        | Description                                                                                               |
+| Property              | Type             | Required        | Description |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | id                    | string           | No              | A cart identifier that is supplied upon successful creation of the cart.                                  |
 | creationTimeStamp     | DateTime         | No              | The date the cart was created, in date-time format. Applied upon successful creation of the cart.         |
@@ -96,10 +149,9 @@ This table describes the [Cart](cart.md) properties in the request body.
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                             |
 
-
 This table describes the [CartLineItem](cart.md#cartlineitem) properties in the request body.
 
-| Property             | Type                        | Required     | Description                                                                                        |
+| Property             | Type                        | Required     | Description |
 |----------------------|-----------------------------|--------------|----------------------------------------------------------------------------------------------------|
 | id                   | string                      | No           | A Unique identifier for a cart line item. Applied upon successful creation of cart.                |
 | catalogId            | string                      | Yes          | The catalog item identifier.                                                                       |
@@ -111,8 +163,6 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | provisioningContext  | Dictionary<string, string>  | No           | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
-
-
 **Request example**
 
 ```http
@@ -156,7 +206,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
-
 
 If successful, this method returns the populated [Cart](cart.md) resource in the response body.
 
@@ -215,11 +264,3 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

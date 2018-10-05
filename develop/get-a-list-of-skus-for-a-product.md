@@ -2,12 +2,11 @@
 title: Get a list of SKUs for a product
 description: Gets a collection of SKUs for the specified product.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 09/28/2018
 ms.localizationpriority: medium
 ---
 
 # Get a list of SKUs for a product
-
 
 **Applies To**
 
@@ -17,17 +16,18 @@ Gets a collection of SKUs for a particular product.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A product ID. 
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Finally, call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product. Optionally, you can use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
 ``` csharp
 IAggregatePartner partnerOperations;
+
 string countryCode;
 string productId;
 string targetSegment;
@@ -39,8 +39,40 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Sku
 var segmentSkus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ByTargetSegment(targetSegment).Get();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java 
 
+To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **getSkus** function to obtain an interface with the available operations for SKUs. Finally, call the **get()** function to retrieve a collection of the available SKUs for the product. Optionally, you can use the **byTargetSegment()** function to filter the SKUs by target segment before calling the **get()** function.
+
+```java
+// IAggregatePartner partnerOperations;
+
+// String countryCode;
+// String productId;
+// String targetSegment;
+
+// Get the available SKUs.
+ResourceCollection<Sku> skus = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().get();
+
+// Get the available SKUs, filtered by target segment.
+var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().byTargetSegment(targetSegment).get();
+```
+
+### PowerShell 
+
+To get the list of SKUs for a product, execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command. Optionally, you can specify the **Segment** parameter to filter the SKUs by target segment.
+
+```powershell
+# $productId 
+# $targetSegment 
+
+# Get the available SKUs.
+Get-PartnerProductSku -ProudctId $productId 
+
+# Get the available SKUs, filtered by target segment.
+Get-PartnerProductSku -ProductId $productId -Segment $targetSegment
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
