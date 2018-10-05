@@ -2,12 +2,11 @@
 title: Get prices for Microsoft Azure
 description: How to get an Azure Rate Card with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 ms.assetid: 65262585-0F3B-4BD0-83BE-B2695C33CDB7
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get prices for Microsoft Azure
-
 
 **Applies To**
 
@@ -21,20 +20,39 @@ To track usage and help predict your monthly bill and the bills for individual c
 
 Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
-``` csharp
-IPartner partner = PartnerService.Instance.CreatePartnerOperations(credentials);
+```csharp
+// IAggregatePartner partnerOperations;
+
 var azureRateCard = partner.RateCards.Azure.Get();
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+### Java
 
+To obtain the Azure Rate Card, call the **IAzureRateCard.get** function to return rate card details that contains the Azure prices.
+
+```java
+// IAggregatePartner partnerOperations;
+
+AzureRateCard azureRateCard = partner.getRateCards().getAzure().get();
+```
+
+### PowerShell
+
+To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command to retrun rate card details that contains the Azure prices.
+
+```powershell
+Get-PartnerAzureRateCard
+```
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
 
@@ -42,16 +60,12 @@ var azureRateCard = partner.RateCards.Azure.Get();
 |---------|--------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure?currency={currency}&region={region} |
 
- 
-
 **URI parameters**
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is the currency associated with the market in the partner profile. |
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is the country/region code set in the partner profile.        |
-
- 
 
 If the optional X-Locale header is included in the Request, its value determines the language used for the details in the response.
 

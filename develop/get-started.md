@@ -2,12 +2,11 @@
 title: Get started
 description: The Partner Center SDK includes a managed API and a REST API for partners to use to manage customer, subscription, and order data.
 ms.assetid: D9A91032-CA5B-4CD2-ADBA-6C5513E05D32
-ms.date: 05/18/2018
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get started
-
 
 **Applies To**
 
@@ -27,16 +26,13 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 
 ## <span id="Determine_your_version_of_Partner_Center"></span><span id="determine_your_version_of_partner_center"></span><span id="DETERMINE_YOUR_VERSION_OF_PARTNER_CENTER"></span>Determine your version of Partner Center
 
-
 Some versions of Partner Center do not have the entire SDK available. For more information, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
 
 ## <span id="Get_the_samples"></span><span id="get_the_samples"></span><span id="GET_THE_SAMPLES"></span>Get the samples
 
-
 For more information about C# snippets, REST samples, and the sample app, see [Partner Center samples](partner-center-samples.md).
 
 ## <span id="sdk_test_vs_prod"></span><span id="SDK_TEST_VS_PROD"></span>Test vs. production
-
 
 While you are initially writing and testing your code, you should use your integration sandbox account (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying. For more information about this testing environment, see [Set up API access in Partner Center](set-up-api-access-in-partner-center.md).
 
@@ -45,7 +41,6 @@ When your solution is tested and ready to use on real customer accounts, you'll 
 For tips and suggestions about testing and debugging, including more information about Test-in-Production (TiP) and the Integration Sandbox, see [Test and debug](test-and-debug.md).
 
 ## <span id="sdk_config_auth"></span><span id="SDK_CONFIG_AUTH"></span>Configure your authentication
-
 
 To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).   
 
@@ -56,12 +51,4 @@ Partners can get support at the [Partner Center SDK Yammer group](http://go.micr
 
 ## <span id="Early_adopter_program"></span><span id="early_adopter_program"></span><span id="EARLY_ADOPTER_PROGRAM"></span>Join the Partner Center API and SDK Early Adopter Program
 
-
 To find out how you can collaborate with Microsoft on the development of Partner features and capabilities, see [Join the Partner Center API and SDK Early Adopter Program](early-adopter-program.md).
- 
-
- 
-
-
-
-

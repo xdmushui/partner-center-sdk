@@ -2,12 +2,11 @@
 title: Validate an address
 description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
-ms.date: 12/15/2017
+ms.date: 09/30/2018
 ms.localizationpriority: medium
 ---
 
 # Validate an address
-
 
 **Applies To**
 
@@ -22,15 +21,17 @@ The address validation API should only be used for pre-validation of customer pr
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
-To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartners.Validations** property, and call the **IsAddressValid** method with the address object.
+To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.Validations** property, and call the **IsAddressValid** method with the address object.
 
-``` csharp
+```csharp
+// IAggregatePartner partnerOperations;
+
 // Create an address to validate.
 Address address = new Address()
 {
@@ -73,16 +74,55 @@ catch (PartnerException exception)
 }
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+### Java
 
+To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.getValidations** function, and call the **isAddressValid** method with the address object.
+
+```java
+// IAggregatePartner partnerOperations;
+
+// Create an address to validate.
+Address address = new Address();
+
+address.setAddressLine1("One Microsoft Way");
+address.setCity("Redmond");
+address.setState("WA");
+address.setCountry("US");
+address.setPostalCode("98052");
+
+try
+{
+    // Validate the address
+    Boolean validationResult = partnerOperations.getValidations().isAddressValid(address);
+
+    System.out.println(validationResult ? "The address is valid." : "Invalid address");
+}
+catch (Exception exception)
+{
+    System.out.println("Address is invalid");
+    
+    if (! StringHelper.isNullOrWhiteSpace(exception.getMessage()))
+    {
+        System.out.println(exception.getMessage());
+    }
+}
+```
+
+### PowerShell 
+
+To validate an address, execute the [**Test-PartnerAddress**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Test-PartnerAddress.md) with the address parameters populated.
+
+```powershell
+Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Country 'US' -PostalCode '98004' -State 'WA'
+```
+
+## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
 
 **Request syntax**
 
 | Method   | Request URI                                                                 |
 |----------|-----------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/validations/address HTTP/1.1 |
-
- 
 
 **Request headers**
 
@@ -100,8 +140,6 @@ This table describes the required properties in the request body.
 | state        | string | Y        | The state.                                                 |
 | postalcode   | string | Y        | The postal code.                                           |
 | country      | string | Y        | The two-character ISO alpha-2 country code.                |
-
- 
 
 **Request example**
 
@@ -126,7 +164,6 @@ Content-Length: 129
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If successful, the method returns a status code 200 as demonstrated in the Response - validation succeeded example shown below.
 
@@ -167,11 +204,3 @@ Date: Tue, 14 Mar 2017 01:57:55 GMT
     "source": "PartnerFD"
 }
 ```
-
- 
-
- 
-
-
-
-

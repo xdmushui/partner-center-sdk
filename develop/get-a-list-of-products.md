@@ -2,12 +2,11 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 07/27/2018
+ms.date: 09/28/2018
 ms.localizationpriority: medium
 ---
 
 # Get a list of products
-
 
 **Applies To**
 
@@ -17,15 +16,15 @@ Gets a collection of products.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get a list of products, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, select the catalog view by using the **ByTargetView()** method, and optionally select the target segment by using the **ByTargetSegment()** method. Finally, call the **Get()** or **GetAsync()** method to return the collection. 
 
-``` csharp
+```csharp
 IAggregatePartner partnerOperations;
 
 // Get the products for the specified catalog view.
@@ -35,16 +34,35 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("Azure").ByTargetSegment("commercial").Get();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java
 
+To get a list of products, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, select the catalog view by using the **byTargetView()** function, and optionally select the target segment by using the **byTargetSegment()** function. Finally, call the **get()** function to return the collection. 
+
+```java
+// IAggregatePartner partnerOperations;
+
+// Get the products for the specified catalog view.
+ResourceCollection<Products> products = partnerOperations.getProducts().byCountry("US").byTargetView("Azure").get();
+
+// Get the products filtered by target view and target segment.
+ResourceCollection<Products> products = partnerOperations.getProducts().byCountry("US").byTargetView("Azure").byTargetSegment("commercial").get();
+```
+
+### PowerShell
+
+To get a list of products, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command. You can select the catalog by specifing the **Catalog** parameter, and optionally select the target segement by specifying the **Segment** parameter. 
+
+```powershell
+Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
 | Method  | Request URI                                                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------- |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1    |
-
- 
 
 **URI parameters**
 
@@ -55,8 +73,6 @@ Use the following path and query parameters to get a list of products.
 | country                | string   | Yes      | The country/region ID.                                                  |
 | targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "OnlineServices" – Includes all online service items<br/> "Software" – Includes all software items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
-
- 
 
 **Request headers**
 
@@ -77,7 +93,6 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If successful, the response body contains a collection of [Product](products.md#product) resources.
 
@@ -134,11 +149,3 @@ This method returns the following error codes:
     }
 }
 ```
-
- 
-
- 
-
-
-
-
