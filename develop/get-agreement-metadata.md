@@ -28,14 +28,34 @@ ms.localizationpriority: medium
 
 ### C#
 
-To retrieve agreement metadata for Microsoft Cloud Agreement, first retrieve the **IAggregatePartner.AgreementDetails** collection by calling the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+To retrieve agreement metadata for Microsoft Cloud Agreement, first retrieve the **IAggregatePartner.AgreementDetails** collection and then call the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
 
 var agreements = partnerOperations.AgreementDetails.Get();
 
 AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr => agr.AgreementType == AgreementType.MicrosoftCloudAgreement);
+```
+
+### Java
+
+To retrieve agreement metadata for Microsoft Cloud Agreement, first call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+
+```java
+// IAggregatePartner partnerOperations;
+
+ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreements().get();
+
+AgreementMetaData microsoftCloudAgreement;
+
+for (AgreementMetaData metadata : agreements) 
+{
+    if(metadata.getAgreementType() == AgreementType.MicrosoftCloudAgreement)
+    {
+        microsoftCloudAgreement = metadata;
+    }
+}
 ```
 
 ### PowerShell
