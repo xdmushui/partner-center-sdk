@@ -20,26 +20,51 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 -   Submit your order.
 -   Make sure your order is fulfilled. 
 
+
 > [!NOTE]  
-> Azure Reserved VM Instances are not available in the following markets:  
-> * Argentina
-> * Azerbaijan
-> * Belarus
-> * Brazil
-> * China
-> * India
-> * Indonesia
-> * Kazakhstan
-> * Liechtenstein
-> * Malaysia
-> * Mexico
-> * Russia
-> * Saudi Arabia
-> * South Africa
-> * South Korea
-> * Taiwan
-> * Turkey
-> * Ukraine
+> Azure reservations are not available in the following markets  
+>  
+> | &nbsp; |
+> |--------------------------------|-----------------------------------|------------------------------------------|
+> | Åland Islands                  | Greenland                         | Palau                                    |
+> | American Samoa                 | Grenada                           | Papua New Guinea                         |
+> | Andorra                        | Guadeloupe                        | Pitcairn Islands                         |
+> | Anguilla                       | Guam                              | Reunion                                  |
+> | Antarctica                     | Guernsey                          | Russian Federation                       |
+> | Antigua and Barbuda            | Guinea                            | Saba                                     |
+> | Aruba                          | Guinea-Bissau                     | Saint Barthélemy                         |
+> | Azerbaijan                     | Guyana                            | Saint Lucia                              |
+> | Belarus                        | Haiti                             | Saint Martin                             |
+> | Benin                          | Heard Island and McDonald Islands | Saint Pierre and Miquelon                |
+> | Bhutan                         | India                             | Saint Vincent and the Grenadines         |
+> | Bonaire                        | Isle of Man                       | Samoa                                    |
+> | Bouvet Island                  | Jan Mayen                         | San Marino                               |
+> | Brazil                         | Jersey                            | São Tomé and Príncipe                    |
+> | British Indian Ocean Territory | Kazakhstan                        | Seychelles                               |
+> | British Virgin Islands         | Kiribati                          | Sierra Leone                             |
+> | Burkina Faso                   | Korea, Republic of                | Sint Eustatius                           |
+> | Burundi                        | Kosovo                            | Sint Maarten                             |
+> | Cambodia                       | Laos                              | Solomon Islands                          |
+> | Central African Republic       | Lesotho                           | Somalia                                  |
+> | Chad                           | Liberia                           | South Georgia and South Sandwich Islands |
+> | China                          | Madagascar                        | South Sudan                              |
+> | Christmas Island               | Malawi                            | St Helena, Ascension, Tristan da Cunha   |
+> | Cocos (Keeling) Islands        | Maldives                          | Suriname                                 |
+> | Comoros                        | Mali                              | Svalbard                                 |
+> | Congo                          | Marshall Islands                  | Swaziland                                |
+> | Congo (DRC)                    | Martinique                        | Taiwan                                   |
+> | Cook Islands                   | Mauritania                        | Timor-Leste                              |
+> | Djibouti                       | Mayotte                           | Togo                                     |
+> | Dominica                       | Micronesia                        | Tokelau                                  |
+> | Equatorial Guinea              | Montserrat                        | Tonga                                    |
+> | Eritrea                        | Mozambique                        | Turks and Caicos Islands                 |
+> | Falkland Islands               | Myanmar                           | Tuvalu                                   |
+> | French Guiana                  | Nauru                             | U.S. Outlying Islands                    |
+> | French Polynesia               | New Caledonia                     | Ukraine                                  |
+> | French Southern Territories    | Niger                             | Vanuatu                                  |
+> | Gabon                          | Niue                              | Vatican City                             |
+> | Gambia                         | Norfolk Island                    | Wallis and Futuna                        |
+> | Gibraltar                      | Northern Mariana Islands          | Yemen                                    |
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
