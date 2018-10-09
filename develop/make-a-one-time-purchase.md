@@ -10,6 +10,8 @@ ms.localizationpriority: medium
 **Applies To**
 
 -   Partner Center
+-   Partner Center for Microsoft Cloud for US Government
+
 
 How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
 

@@ -12,6 +12,7 @@ ms.localizationpriority: medium
 **Applies To**
 
 -   Partner Center
+-   Partner Center for Microsoft Cloud for US Government
 
 
 To purchase an Azure reservation using the Partner Center API, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
