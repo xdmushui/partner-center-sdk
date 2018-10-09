@@ -18,7 +18,7 @@ How to make a one-time purchase of software and reservation products such as sof
 > [!NOTE]  
 > Azure reservations are not available in the following markets:  
 >  
-> | &nbsp; | Unavailable Markets | &nbsp; |
+> | Unavailable Markets | &nbsp; | &nbsp; |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Palau                                    |
 > | American Samoa                 | Grenada                           | Papua New Guinea                         |
