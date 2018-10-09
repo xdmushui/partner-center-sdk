@@ -16,10 +16,12 @@ ms.localizationpriority: medium
 
 
 To purchase an Azure reservation using the Partner Center API, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
+
 -   Get a list of offers for a market. 
 -   Create an order for an CSP Azure subscription.
 -   Submit your order.
 -   Make sure your order is fulfilled. 
+
 
 > [!NOTE]  
 > Azure reservations are not available in the following markets:  
