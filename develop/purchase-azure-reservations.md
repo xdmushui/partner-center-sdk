@@ -20,11 +20,10 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 -   Submit your order.
 -   Make sure your order is fulfilled. 
 
-
 > [!NOTE]  
-> Azure reservations are not available in the following markets  
+> Azure reservations are not available in the following markets:  
 >  
-> | &nbsp; |
+> | &nbsp; | Unavailable Markets | &nbsp; |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Palau                                    |
 > | American Samoa                 | Grenada                           | Papua New Guinea                         |
@@ -65,7 +64,7 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 > | Gabon                          | Niue                              | Vatican City                             |
 > | Gambia                         | Norfolk Island                    | Wallis and Futuna                        |
 > | Gibraltar                      | Northern Mariana Islands          | Yemen                                    |
-
+>  
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 

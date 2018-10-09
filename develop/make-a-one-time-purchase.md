@@ -14,9 +14,9 @@ ms.localizationpriority: medium
 How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
 
 > [!NOTE]  
-> Azure reservations are not available in the following markets  
+> Azure reservations are not available in the following markets:  
 >  
-> | &nbsp; |
+> | &nbsp; | Unavailable Markets | &nbsp; |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Palau                                    |
 > | American Samoa                 | Grenada                           | Papua New Guinea                         |
@@ -57,6 +57,7 @@ How to make a one-time purchase of software and reservation products such as sof
 > | Gabon                          | Niue                              | Vatican City                             |
 > | Gambia                         | Norfolk Island                    | Wallis and Futuna                        |
 > | Gibraltar                      | Northern Mariana Islands          | Yemen                                    |
+>  
 
 
 >[!NOTE]
