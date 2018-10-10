@@ -105,7 +105,7 @@ Contains the customer contact information.
 | Property        | Type                                                          | Description                                             |
 |-----------------|---------------------------------------------------------------|---------------------------------------------------------|
 | Id              | string                                                        | The Id for this CustomerProfile.                        |
-| Name            | string                                                        | The customer first and last name.                       |
+| Name            | string                                                        | The customer organization name.                         |
 | Address         | [Address](referral.md#address)                                | The address of the customer.                            |
 | Size            | string                                                        | The number of employees at the customers organization.  |
 | Team            | [Member](referral.md#Member)                                  | The contacts for the customer organization.             |
@@ -156,7 +156,7 @@ Additional information that can be shared when inviting another organizations.
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes that the receiving organization will receive.                |
-| InvitedByOrganizationId | string                                                   | The organization ID that sent the referral.                                   |
+| InvitedByOrganizationId | string                                                   | The organization ID that sent the referral. (Microsoft Partner Account ID / MSFT).                                    |
 
 
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails

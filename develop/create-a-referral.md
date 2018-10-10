@@ -27,7 +27,7 @@ This topic explains how to create a referral.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/referrals?api-version=v1.0                                                   |
+| **POST** | https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0                                                   |
  
 **Request headers**
 
@@ -40,10 +40,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
-| EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
-| OrganizationId        | string                                            | The organization ID of the party that owns the referral (Microsoft Partner Account ID / MSFT).           |
 | BusinessProfileId     | string                                            | The business profile ID of the organization that owns the referral.                                       |
-| OrganizationName      | string                                            | The organization name that owns the referral. Example: Store your own Dynamics 365 lead/opportunity ID   |
 | ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
@@ -62,7 +59,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/referrals?api-version=v1.0 HTTP/1.1
+POST https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0 HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

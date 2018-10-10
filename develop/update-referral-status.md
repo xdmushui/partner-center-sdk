@@ -28,7 +28,7 @@ This topic explains how to update a referral's status.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/referrals/{{Id}}/?api-version=v1.0                                       |
+| **PUT** | https://api.partner.microsoft.com/engagements/referrals/{Id}/?api-version=v1.0                                       |
 
  
 **Request headers**
@@ -71,13 +71,13 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/referrals/0dad14a1-6e51-4e93-bde8-1c749b95f454/?api-version=v1.0 HTTP/1.1
+PUT https://api.partner.microsoft.com/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c/?api-version=v1.0 HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
  
  {
-    "id": "0dad14a1-6e51-4e93-bde8-1c749b95f454",
+    "id": "49d90c72-3326-4f61-aacc-2cb57970448c",
     "organizationId": "msft",
     "organizationName": "Microsoft",
     "externalReferenceId": "mycrmid1234",
@@ -147,13 +147,13 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ``` http
 {
-    "id": "0dad14a1-6e51-4e93-bde8-1c749b95f454",
-    "engagementId": "74511a80-1602-4349-9174-3b020bba2e81",
+    "id": "49d90c72-3326-4f61-aacc-2cb57970448c",
+    "engagementId": "a9c8c67f-6b29-4a80-abf8-2b07a41b7902",
     "organizationId": "msft",
     "organizationName": "Microsoft",
     "externalReferenceId": "mycrmid1234",
-    "createdDateTime": "2018-10-01T18:30:56.247848Z",
-    "updatedDateTime": "2018-10-01T18:30:56.247848Z",
+    "createdDateTime": "2018-10-01T20:51:16.8337242Z",
+    "updatedDateTime": "2018-10-01T20:51:16.8337242Z",
     "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Closed",
     "statusDetail": "Won",
@@ -205,12 +205,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     ],
     "links": {
         "relatedReferrals": {
-            "uri": "/v2/referrals/?engagementId=74511a80-1602-4349-9174-3b020bba2e81",
+            "uri": "/v2/referrals/?engagementId=a9c8c67f-6b29-4a80-abf8-2b07a41b7902",
             "method": "GET",
             "headers": []
         },
         "self": {
-            "uri": "/v2/referrals/0dad14a1-6e51-4e93-bde8-1c749b95f454",
+            "uri": "/v2/referrals/49d90c72-3326-4f61-aacc-2cb57970448c",
             "method": "GET",
             "headers": []
         }
