@@ -1,6 +1,6 @@
 ---
-title: Get a customer's validations
-description: How to get a collection of a customer's validations.
+title: Get a customer's Government Community Cloud validation
+description: How to get a customer's Government Community Cloud validation.
 ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
 ms.date: 09/12/2018
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of a customer's validations. Validations are required to access the government community cloud.
+How to get a collection of a customer's Government Community Cloud validation. Validations are required to access the government community cloud.
 
 If you are interested in having your organization or your customers organization approved for Office 365 Government GCC for CSP, please see [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria](https://docs.microsoft.com/partner-center/csp-gcc-validate).  
 
@@ -24,6 +24,8 @@ If you are interested in having your organization or your customers organization
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+-   Confirmed validation after filling out form [here](https://products.office.com/en-US/government/eligibility-validation?ReqType=CSPPartner).
+-   A customer with a Government Community Cloud qualification.
 -   A customer identifier.
 
 
@@ -35,7 +37,7 @@ To get a list of all of a customer's validations, first use the [**IAggregatePar
 // IAggregatePartner partnerOperations;
 // string customerId;
 
-var customerSubscriptions = partnerOperations.Customers.ById(customerId).Validations.Get();
+var customerValidation = partnerOperations.Customers.ById(customerId).Validations.Get();
 ```
 
 
@@ -78,7 +80,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-If successful, this method returns a collection of [Validation](validations.md) resources in the response body.
+If successful, this method returns a [Validation](validations.md) resources in the response body.
 
 **Response success and error codes**
 
@@ -95,5 +97,10 @@ MS-RequestId:
 Date: Wed, 19 Aug 2018 05:43:06 GMT
 
 {
+  "partnerId": "<partner-tenant-id>",
+  "customerId": "<customer-tenant-id>",
+  "validationId": "12345",
+  "organizationName": "Contoso, Inc.",
+  "eTag": "W/\"datetime'2018-10-10T18%3A49%3A57.5100996Z'\""
 }
 ```
