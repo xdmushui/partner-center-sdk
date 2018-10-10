@@ -1,6 +1,6 @@
 ---
 title: Get a customer's qualification
-description: How to get a collection of a customer's qualification.
+description: How to get a customer's qualification.
 ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
 ms.date: 09/12/2018
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of a customer's qualification.  
+How to get a customer's qualification.  
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -33,7 +33,7 @@ To get a customer's qualification, first use the [**IAggregatePartner.Customers.
 // IAggregatePartner partnerOperations;
 // string customerId;
 
-var customerSubscriptions = partnerOperations.Customers.ById(customerId).Qualification.Get();
+var customerQualification = partnerOperations.Customers.ById(customerId).Qualification.Get();
 ```
 
 
@@ -76,7 +76,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-If successful, this method returns a collection of [Qualification](qualification.md) resources in the response body.
+If successful, this method returns a collection of [Qualification](qualification.md) resources in the response body.  Below is an example of the GET call on a customer with the Education qualification.
 
 **Response success and error codes**
 
@@ -93,5 +93,6 @@ MS-RequestId:
 Date: Wed, 19 Aug 2018 05:43:06 GMT
 
 {
+    "education"
 }
 ```
