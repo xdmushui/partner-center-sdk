@@ -67,5 +67,5 @@ The following table lists the locales (language – country/region), languages, 
 | zh-cn	     | Chinese (Simplified)    | CN                  | CHN                       | China                       |
 | zh-sg	     | Chinese (Simplified)    | SG                  | SGP                       | Singapore                   |
 | zh-tw	     | Chinese (Traditional)   | TW                  | TWN                       | Taiwan                      |
- 
+ 
 

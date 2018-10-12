@@ -45,7 +45,7 @@ var devices =
 |---------|------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches/{devicebatch-id}/devices HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -56,7 +56,7 @@ Use the following path parameters when creating the request.
 | customer-id    | string | Yes      | A GUID-formatted string that identifies the customer. |
 | devicebatch-id | string | Yes      | A string identifier that identifies the device batch. |
 
- 
+ 
 
 **Request headers**
 
@@ -140,9 +140,9 @@ Date: Tue, 25 Jul 2017 17:52:41 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

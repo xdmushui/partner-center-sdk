@@ -32,7 +32,7 @@ This resource represents the products to which the customer has right to use bec
 | entitlementType | string | The type of entitlement. (Updated to string from [EntitlementType](#entitlementtype) in SDK 1.8.) |
 | entitledArtifacts | IEnumerable<[Artifact](#artifact)> | The list of artifacts associated with the entitlement. |
 | IncludedEntitlements | IEnumerable<[Entitlement](#artifact)> | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
- 
+
 
 ## <span id="ReferenceOrder"></span><span id="referenceorder"></span><span id="REFERENCEORDER"></span>ReferenceOrder
 
@@ -103,11 +103,11 @@ The artifact associated with an Azure Reserved Instance entitlement. It inherits
 
 Represents the entity returned upon invocation of the Azure Reserved Instance artifact link. 
 
-| Property     | Type                     | Description                                                   |
-|--------------|--------------------------|---------------------------------------------------------------|
-| type         | string                   | The type of artifact.                                         |
-| reservations | IEnumerable<Reservation> | Indicates the Azure resource or reservation order identifier. |
 
+|   Property   |           Type           |                          Description                          |
+|--------------|--------------------------|---------------------------------------------------------------|
+|     type     |          string          |                     The type of artifact.                     |
+| reservations | IEnumerable<Reservation> | Indicates the Azure resource or reservation order identifier. |
 
 ## <span id="Reservation"></span><span id="reservation"></span><span id="RESERVATION"></span>Reservation
 
@@ -118,10 +118,10 @@ Represents an individual reservation.
 | reservationId     | string                         | The ID of the reservation.                                         |
 | scopeType         | string                         | The type of scope associated with the virtual machine reservation. |
 | displayName       | string                         | The display name of the reservation.                               |
-| appliedScopes	    | IEnumerable                    | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.) |
-| quantity	        | int                            | The number of virtual machines in the reservation.                 |
-| expiryDateTime	| string in UTC date-time format | The expiry date of the reservation.                                |
-| effectiveDateTime	| string in UTC date-time format | The effective date of the reservation.                             |
+| appliedScopes     | IEnumerable                    | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.) |
+| quantity          | int                            | The number of virtual machines in the reservation.                 |
+| expiryDateTime    | string in UTC date-time format | The expiry date of the reservation.                                |
+| effectiveDateTime | string in UTC date-time format | The effective date of the reservation.                             |
 | provisioningState | string                         | The provisioning state of the reservation.                         |
 
 
@@ -158,14 +158,15 @@ Represents the entity returned upon invocation of the Azure Reserved Virtual Mac
 
 Represents an individual virtual machine reservation.
 
-| Property          | Type                           | Description                                                        |
-|-------------------|--------------------------------|--------------------------------------------------------------------|
-| reservationId     | string                         | The ID of the reservation.                                         |
-| scopeType         | string                         | The type of scope associated with the virtual machine reservation. |
-| displayName       | string                         | The display name of the reservation.                               |
-| appliedScopes     | IEnumerable<string>            | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.) |
-| quantity          | int                            | The number of virtual machines in the reservation.                 |
-| expiryDateTime    | string in UTC date-time format | The expiry date of the reservation.                                |
-| effectiveDateTime | string in UTC date-time format | The effective date of the reservation.                             |
-| provisioningState | string                         | The provisioning state of the reservation.                         |
+
+|     Property      |              Type              |                                                Description                                                 |
+|-------------------|--------------------------------|------------------------------------------------------------------------------------------------------------|
+|   reservationId   |             string             |                                         The ID of the reservation.                                         |
+|     scopeType     |             string             |                     The type of scope associated with the virtual machine reservation.                     |
+|    displayName    |             string             |                                    The display name of the reservation.                                    |
+|   appliedScopes   |      IEnumerable<string>       | The list of applied scopes associated with the reservation. (Only available when scopeType is not shared.) |
+|     quantity      |              int               |                             The number of virtual machines in the reservation.                             |
+|  expiryDateTime   | string in UTC date-time format |                                    The expiry date of the reservation.                                     |
+| effectiveDateTime | string in UTC date-time format |                                   The effective date of the reservation.                                   |
+| provisioningState |             string             |                                 The provisioning state of the reservation.                                 |
 

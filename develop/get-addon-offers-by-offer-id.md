@@ -48,7 +48,7 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}/addons?country={country-code} HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -59,7 +59,7 @@ Use the following parameters to provide the offer ID and country code.
 | **offer-id** | **guid**   | Y        | A GUID that identifies the offer. |
 | **country**  | **string** | Y        | The country code (e.g. US).       |
 
- 
+ 
 
 **Request headers**
 
@@ -205,9 +205,9 @@ Date: Wed, 01 Feb 2017 22:37:58 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

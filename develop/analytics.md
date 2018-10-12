@@ -30,7 +30,7 @@ Contains partner level insights about license deployment.
 | channel                   | string                                                         | The channel name of the service (e.g. reseller).                                    |
 | attributes                | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesDeploymentInsights" |
 
- 
+ 
 
 ## <span id="PartnerLicensesUsageInsights"></span><span id="partnerlicensesusageinsights"></span><span id="PARTNERLICENSESUSAGEINSIGHTS"></span>PartnerLicensesUsageInsights
 
@@ -46,7 +46,7 @@ Contains partner level insights about license usage.
 | channel                      | string                                                         | The channel name of the service (e.g. reseller).                               |
 | attributes                   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesUsageInsights" |
 
- 
+ 
 
 ## <span id="CustomerLicensesDeploymentInsights"></span><span id="customerlicensesdeploymentinsights"></span><span id="CUSTOMERLICENSESDEPLOYMENTINSIGHTS"></span>CustomerLicensesDeploymentInsights
 
@@ -67,7 +67,7 @@ Contains customer level insights about license deployment.
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                     |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesDeploymentInsights" |
 
- 
+ 
 
 ## <span id="CustomerLicensesUsageInsights"></span><span id="customerlicensesusageinsights"></span><span id="CUSTOMERLICENSESUSAGEINSIGHTS"></span>CustomerLicensesUsageInsights
 
@@ -90,11 +90,11 @@ Contains customer level insights about license usage.
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesUsageInsights" |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

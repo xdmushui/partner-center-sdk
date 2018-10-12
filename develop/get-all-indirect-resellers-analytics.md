@@ -32,7 +32,7 @@ How to get all the indirect resellers analytics information for your customers.
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -150,16 +150,16 @@ How to get all the indirect resellers analytics information for your customers.
 				<li><em>latestSubscriptionDeprovisionedDate</em></li>
 			</ul>
 			<p><strong>Example:</strong></br>
-			  <code>.../indirectresellers?filter=market eq 'US'</code></p>
+              <code>.../indirectresellers?filter=market eq &#39;US&#39;</code></p>
 			<p><strong>Example:</strong></br>
-				<code>.../indirectresellers?filter=market eq 'US' or (firstSubscriptionCreationDate le cast('2018-01-01',Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast('2018-04-01',Edm.DateTimeOffset))</code>
+                <code>.../indirectresellers?filter=market eq &#39;US&#39; or (firstSubscriptionCreationDate le cast(&#39;2018-01-01&#39;,Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast(&#39;2018-04-01&#39;,Edm.DateTimeOffset))</code>
 			</p>
 	    </td>
 	</tr>
 	<tr>
 		<td>aggregationLevel</td>
 		<td>string</td>
-		<td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: "day", "week", or "month". If unspecified, the default is "day".</p>
+        <td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: &quot;day&quot;, &quot;week&quot;, or &quot;month&quot;. If unspecified, the default is &quot;day&quot;.</p>
 		<p><em>aggregationLevel</em> is not supported without a <strong>groupby</strong>. <em>aggregationLevel</em> applies to all <strong>datefields</strong> present in the <strong>groupby</strong></p>
 		</td>
 	</tr>
@@ -169,22 +169,22 @@ How to get all the indirect resellers analytics information for your customers.
 		<td>
 			<p>A statement that orders the result data values for each install. The syntax is <code>...&amp;orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
 			<ul>
-				<li>"partnerTenantId"</li> 
-				<li>"id"</li> 
-				<li>"name"</li> 
-				<li>"market"</li> 
-				<li>"firstSubscriptionCreationDate"</li> 
-				<li>"latestSubscriptionCreationDate"</li> 
-				<li>"firstSubscriptionEndDate"</li> 
-				<li>"latestSubscriptionEndDate"</li> 
-				<li>"firstSubscriptionSuspendedDate"</li> 
-				<li>"latestSubscriptionSuspendedDate"</li> 
-				<li>"firstSubscriptionDeprovisionedDate"</li> 
-				<li>"latestSubscriptionDeprovisionedDate"</li>
-				<li>"subscriptionCount"</li> 
-				<li>"licenseCount"</li>
+                <li>&quot;partnerTenantId&quot;</li> 
+                <li>&quot;id&quot;</li> 
+                <li>&quot;name&quot;</li> 
+                <li>&quot;market&quot;</li> 
+                <li>&quot;firstSubscriptionCreationDate&quot;</li> 
+                <li>&quot;latestSubscriptionCreationDate&quot;</li> 
+                <li>&quot;firstSubscriptionEndDate&quot;</li> 
+                <li>&quot;latestSubscriptionEndDate&quot;</li> 
+                <li>&quot;firstSubscriptionSuspendedDate&quot;</li> 
+                <li>&quot;latestSubscriptionSuspendedDate&quot;</li> 
+                <li>&quot;firstSubscriptionDeprovisionedDate&quot;</li> 
+                <li>&quot;latestSubscriptionDeprovisionedDate&quot;</li>
+                <li>&quot;subscriptionCount&quot;</li> 
+                <li>&quot;licenseCount&quot;</li>
 			</ul>
-			<p>The <em>order</em> parameter is optional, and can be "asc" or "desc" to specify ascending or descending order for each field. The default is "asc".</p>
+            <p>The <em>order</em> parameter is optional, and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field. The default is &quot;asc&quot;.</p>
 			<p><strong>Example:</strong></br> 
 				<code>...&amp;orderby=market,subscriptionCount</code>
 			</p> 
@@ -223,7 +223,7 @@ How to get all the indirect resellers analytics information for your customers.
 	</tr>
 </tbody>
 </table>
- 
+ 
 
 **Request headers**
 

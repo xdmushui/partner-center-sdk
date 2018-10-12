@@ -43,7 +43,7 @@ var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get
 |--------|-------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                            |
 
- 
+ 
 
 **URI parameters**
 
@@ -53,7 +53,7 @@ Use the following path and query parameters when creating the request.
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 

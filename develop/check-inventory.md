@@ -59,7 +59,7 @@ var inventoryResults = partnerOperations.Extensions.Product.ByCountry(countryCod
 |----------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/extensions/product/checkInventory?country={country-code} HTTP/1.1                        |
 
- 
+ 
 
 **URI parameter**
 
@@ -69,7 +69,7 @@ Use the following query parameter to check the inventory.
 |------------------------|----------|----------|-----------------------------------------------------------------|
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
- 
+ 
 
 **Request headers**
 
@@ -170,9 +170,9 @@ X-Locale: en-US
 ]
 ```
 
- 
+ 
 
- 
+ 
 
 
 

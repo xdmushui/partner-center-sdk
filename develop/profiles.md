@@ -35,7 +35,7 @@ Describes a partner's billing profile.
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.            |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
 
- 
+ 
 
 ## <span id="LegalBusinessProfile"></span><span id="legalbusinessprofile"></span><span id="LEGALBUSINESSPROFILE"></span>LegalBusinessProfile
 
@@ -55,7 +55,7 @@ Describes a partner's legal business profile.
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
 | attributes             | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |
 
- 
+ 
 
 ## <span id="MpnProfile"></span><span id="mpnprofile"></span><span id="MPNPROFILE"></span>MpnProfile
 
@@ -70,7 +70,7 @@ Describes a partner's Microsoft Partner Network profile.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
- 
+ 
 
 ## <span id="OrganizationProfile"></span><span id="organizationprofile"></span><span id="ORGANIZATIONPROFILE"></span>OrganizationProfile
 
@@ -91,7 +91,7 @@ Describes a partner's organization profile.
 | links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                       |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                  |
 
- 
+ 
 
 ## <span id="SupportProfile"></span><span id="supportprofile"></span><span id="SUPPORTPROFILE"></span>SupportProfile
 
@@ -107,11 +107,11 @@ Describes a partner's support profile.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

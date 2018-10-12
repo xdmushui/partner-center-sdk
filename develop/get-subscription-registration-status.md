@@ -53,7 +53,7 @@ Use the following path parameters to identify the customer and subscription.
 | customer-id             | string     | Yes      | A GUID formatted string that identifies the customer.         |
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
- 
+ 
 **Request headers**
 
 -   See [Headers](headers.md) for more information.

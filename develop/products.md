@@ -42,7 +42,7 @@ Represents the type of a product.
 | displayName     | string                        | The display name for this type.                                                      |
 | subType         | [ItemType](#itemtype)         | Optional. An object that describes a sub-type categorization for this item type.     |
 
- 
+ 
 
 ## <span id="ProductLinks"></span><span id="productlinks"></span><span id="PRODUCTLINKS"></span>ProductLinks
 

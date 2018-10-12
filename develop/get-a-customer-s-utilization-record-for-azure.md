@@ -111,9 +111,10 @@ Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -Subscription
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                                                                                                          |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True|False}&size={page-size} |
+
+| Method  |                                                                                         Request URI                                                                                          |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True |
 
 **URI parameters**
 

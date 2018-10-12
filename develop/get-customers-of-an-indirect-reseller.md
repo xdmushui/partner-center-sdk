@@ -76,7 +76,7 @@ while (customersEnumerator.HasValue)
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size}?filter={filter} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -87,7 +87,7 @@ Use the following query parameters to create the request.
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional.                                                                                                                                                                                                                |
 | filter | filter | Yes      | The query that filters the search. To retrieve customers for a specified indirect reseller, you must insert the indirect reseller identifier and include and encode the following string: {"Field":"IndirectReseller","Value":"{indirect reseller identifier}","Operator":"starts\_with"}. |
 
- 
+ 
 
 **Request headers**
 
@@ -208,9 +208,9 @@ Date: Tue, 11 Apr 2017 23:31:28 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

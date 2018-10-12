@@ -61,7 +61,7 @@ Get-PartnerMpnProfile
 |---------|----------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/mpn HTTP/1.1 |
 
- 
+ 
 **Request headers**
 
 -   See [Headers](headers.md) for more information.
