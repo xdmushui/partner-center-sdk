@@ -117,10 +117,10 @@ This method returns the following error codes:
         {
             "id": "DZH318Z0BQ3Q",
             "title": "DSv2 Series",
-            "description": "Persistent storage disks are billed separately from virtual machines. To use premium storage disks, use the variant “Dsv2” virtual machines. The pricing and billing meters for Dsv2 sizes are the same as Dv2-series.  ",
+            "description": "Persistent storage disks are billed separately from virtual machines. To use premium storage disks, use the variant "Dsv2" virtual machines. The pricing and billing meters for Dsv2 sizes are the same as Dv2-series.  ",
             "productType": {
-                “id”: "Azure",
-                “displayName”: “Azure”,
+                "id": "Azure",
+                "displayName": "Azure",
             }, 
             "links": {
                 "skus": {

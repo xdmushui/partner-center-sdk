@@ -34,7 +34,7 @@ Describes invoice related resources.
 | amendments      | array of [Invoice](#invoice) objects                           | The amendments to this invoice.                                                                                                                                                                      |
 | documentType    | string                                                         | The document type of the invoice: "Credit Note", "Invoice".                                                                                                                           |
 | amendsOf        | string                                                         | The reference number of the document of which this document is an amendment.                                                                                                                                  |
-| invoiceType     | string                                                         | The type of invoice: "recurring", “one\_time".                                                                                                                                                        |
+| invoiceType     | string                                                         | The type of invoice: "recurring", "one\_time".                                                                                                                                                        |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                  |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                             |
 
@@ -97,7 +97,7 @@ Represent a summary of the individual details for an invoice type (for example, 
 
 | Property            | Type                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| invoiceType         | string                                                         | The type of invoice: "recurring", “one\_time".                                       |
+| invoiceType         | string                                                         | The type of invoice: "recurring", "one\_time".                                       |
 | summary             | [InvoiceSummary](#invoicesummary) object                       | The summary of the invoice per invoice type.                                         |
  
 

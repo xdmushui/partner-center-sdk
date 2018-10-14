@@ -85,7 +85,7 @@ The request body must contain an object that provides the policy information.
 | category        | string           | Yes      | No        | The policy category.                                                                                                                                     |
 | description     | string           | No       | Yes       | The policy description.                                                                                                                                  |
 | devicesAssigned | number           | No       | No        | The number of devices.                                                                                                                                   |
-| policySettings  | array of strings | Yes      | Yes       | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip \_oem\_registration,”skip\_eula". |
+| policySettings  | array of strings | Yes      | Yes       | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip \_oem\_registration,"skip\_eula". |
 
  
 

@@ -22,7 +22,7 @@ Partners can select from Webhook events, like the following, that are supported 
 
 -   **Test Event ("test-created")**
 
-    This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to “test-created” events and data older than 7 days will be purged.
+    This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
 
 -   **Subscription Updated Event ("subscription-updated")**
 
@@ -35,7 +35,7 @@ Partners can select from Webhook events, like the following, that are supported 
 
     This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 
-Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to “real time” as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
+Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
@@ -72,7 +72,7 @@ Content-Length: 195
 ```
 
 >[!NOTE] 
->The Authorization header has a scheme of “Signature”. This is a base64 encoded signature of the content.
+>The Authorization header has a scheme of "Signature". This is a base64 encoded signature of the content.
 
 ## <span id="AuthenticateCallback"></span><span id="authenticatecallback"></span><span id="AUTHENTICATECALLBACK"></span>How to authenticate the callback
 
@@ -82,7 +82,7 @@ To authenticate the callback event received from Partner Center, do the followin
 1.	Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
 2.	Download the certificate used to sign the content (x-ms-certificate-url).
 3.	Verify the Certificate Chain.
-4.	Verify the “Organization” of the certificate.
+4.	Verify the "Organization" of the certificate.
 5.	Read the content with UTF8 encoding into a buffer.
 6.	Create an RSA Crypto Provider.
 7.	Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
@@ -124,7 +124,7 @@ The following sample shows the structure of a Partner Center event.
 
 **Authentication**   
 
-All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. You must acquire an access token to access “<https://api.partnercenter.microsoft.com”>. This is the same token that is used to access the rest of the Partner Center APIs.
+All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. You must acquire an access token to access https://api.partnercenter.microsoft.com. This is the same token that is used to access the rest of the Partner Center APIs.
 
 
  
@@ -296,7 +296,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 ### <span id="ValidationEvents"></span><span id="validationevents"></span><span id="VALIDATIONEVENTS"></span>Send a test event to validate your registration   
 
-Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the “test-created” event, using the registration API, before sending a validation event. 
+Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event. 
 
 >[!NOTE]
 >There is a throttle limit of 2 requests per minute when posting a validation event. 
