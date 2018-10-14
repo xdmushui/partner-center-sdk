@@ -31,7 +31,7 @@ Get the expected address format based on the iso code for the market.
 |---------|---------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/countryvalidationrules/{isocode-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -39,7 +39,7 @@ Get the expected address format based on the iso code for the market.
 |----------------|------------|----------|-------------------------------------|
 | **isocode-id** | **string** | Y        | The two-character ISO country code. |
 
- 
+ 
 
 **Request headers**
 

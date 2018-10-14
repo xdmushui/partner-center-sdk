@@ -47,7 +47,7 @@ var customerSubscriptions = partnerOperations.Customers.ById(customerId).Subscri
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -57,7 +57,7 @@ This table lists the required query parameter to get all the subscriptions.
 |--------------------|--------|----------|-------------------------------------------------------|
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -136,9 +136,9 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

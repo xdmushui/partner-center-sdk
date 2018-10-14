@@ -45,7 +45,7 @@ ResourceCollection<OfferCategory> offerCategoryResults = partnerOperations.With(
 |---------|----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offercategories?country={country-id} HTTP/1.1 |
 
- 
+
 
 **URI parameter**
 
@@ -55,7 +55,7 @@ This table lists the required query parameters to get the offer categories.
 |----------------|------------|----------|------------------------|
 | **country-id** | **string** | Y        | The country/region ID. |
 
- 
+
 
 **Request headers**
 
@@ -143,12 +143,11 @@ Date: Thu, 26 Nov 2015 00:07:10 GMT
         "objectType": "Collection"
     }
 }
-
 ```
 
- 
 
- 
+
+
 
 
 

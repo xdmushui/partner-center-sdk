@@ -56,7 +56,7 @@ response.
 | data        | array  | Only returned for some error types. A list of error objects.                                                                                           |
 | source      | string | Always returned. The source of the error.                                                                                                              |
 
- 
+ 
 
 ```
 {

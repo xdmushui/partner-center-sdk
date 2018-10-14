@@ -51,7 +51,7 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 |---------|-----------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/addons HTTP/1.1 |
 
- 
+
 
 **URI parameter**
 
@@ -62,7 +62,7 @@ This table lists the required query parameter to get the list of add-ons for the
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
+
 
 **Request headers**
 
@@ -138,12 +138,11 @@ Date: Wed, 25 Nov 2015 05:50:45 GMT
         "objectType": "Collection"
     }
 }
-
 ```
 
- 
 
- 
+
+
 
 
 

@@ -44,7 +44,7 @@ var customerRelationshipRequest = partnerOperations.Customers.RelationshipReques
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/relationshiprequests HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 
@@ -96,9 +96,9 @@ Date: Fri, 19 May 2017 22:32:07 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

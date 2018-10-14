@@ -111,7 +111,7 @@ var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 |----------|----------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenseupdates HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -122,7 +122,7 @@ Use the following path parameters to identify the customer and user.
 | customer-id | string | Yes      | A GUID formatted ID that identifies the customer. |
 | user-id     | string | Yes      | A GUID formatted ID that identifies the user.     |
 
- 
+ 
 
 **Request headers**
 
@@ -214,9 +214,9 @@ Date: Thu, 20 Apr 2017 22:12:36 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

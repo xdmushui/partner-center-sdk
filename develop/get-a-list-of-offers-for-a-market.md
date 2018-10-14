@@ -45,7 +45,7 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 |---------|--------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
- 
+ 
 
 **URI parameter**
 
@@ -55,7 +55,7 @@ This table lists the required query parameters to get the offers.
 |----------------|------------|----------|------------------------|
 | **country-id** | **string** | Y        | The country/region ID. |
 
- 
+ 
 
 **Request headers**
 
@@ -164,9 +164,9 @@ Date: Mon, 23 Nov 2015 23:20:44 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

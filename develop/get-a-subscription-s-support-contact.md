@@ -49,7 +49,7 @@ var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/supportcontact HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -60,7 +60,7 @@ Use the following path parameters to identify the customer and subscription.
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.           |
 | subscription-id | string | Yes      | A GUID formatted string that identifies the trial subscription. |
 
- 
+ 
 
 **Request headers**
 
@@ -120,9 +120,9 @@ Date: Tue, 20 Jun 2017 19:30:19 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

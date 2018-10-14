@@ -34,7 +34,7 @@ specified customer during the billing period.
 | links            | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                              |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                         |
 
- 
+ 
 
 ## <span id="ServiceCostLineItem"></span><span id="servicecostlineitem"></span><span id="SERVICECOSTLINEITEM"></span>ServiceCostLineItem
 
@@ -62,7 +62,7 @@ Describes a single item purchased by the customer.
 | customerId               | string                         | The id of the customer making the purchase.                          |
 | customerName             | string                         | The name of the customer making the purchase.                        |
 
- 
+ 
 
 ## <span id="ServiceCostsSummaryLinks"></span><span id="servicecostssummarylinks"></span><span id="SERVICECOSTSSUMMARYLINKS"></span>ServiceCostsSummaryLinks
 
@@ -72,11 +72,11 @@ Describes a single item purchased by the customer.
 | serviceCostLineItems | [Link](utility-resources.md#link) | The URI to retrieve the line items. |
 | self                 | [Link](utility-resources.md#link) | The self URI.                       |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

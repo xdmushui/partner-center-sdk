@@ -22,7 +22,7 @@ Developers must register details about their application with Azure AD through t
 >[!NOTE]
 >For Partner Center for Microsoft Cloud for US Government, you currently must manage applications through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0#applications).
 
- 
+ 
 
 Be aware of the following additional requirements when you create an app for Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government.
 
@@ -53,7 +53,7 @@ For web applications, use the following procedure to register your app ID.
 3.  Save and copy the secret key value         
     **Note** This value will not be shown again once you leave this page.
 
-     
+     
 
 You should have the following details from the web app configuration:
 
@@ -76,7 +76,7 @@ Native applications do not need to be registered to partner center. But these ap
 >[!NOTE]
 >Before creating native application in the Azure management portal, log in into partner center using the admin user credentials from the partner tenant. This creates the settings on the tenant to enable application permissions.
 
- 
+ 
 
 **Create Native application**
 
@@ -106,9 +106,9 @@ Note the application ID in the Properties of your app.
 
 You do not need to register native apps in Partner Center, however the native app must be admin consented . Note the application ID of your native app.
 
- 
+ 
 
- 
+ 
 
 
 

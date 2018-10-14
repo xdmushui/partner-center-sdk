@@ -47,7 +47,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBilli
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type} HTTP/1.1  |
 
- 
+ 
 
 **URI parameters**
 
@@ -58,7 +58,7 @@ This table lists the required query parameters to get a collection of orders by 
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 | billing-cycle-type     | string   | No       | A string corresponding to the billing cycle type.         |
 
- 
+ 
 
 **Request headers**
 
@@ -192,9 +192,9 @@ Date: Thu, 15 Mar 2018 20:44:40 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

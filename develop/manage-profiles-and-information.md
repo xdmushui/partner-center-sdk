@@ -44,9 +44,9 @@ Work with other partners
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 
- 
+ 
 
- 
+ 
 
 
 

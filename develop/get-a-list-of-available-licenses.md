@@ -44,7 +44,7 @@ var customerUserSubscribedSkus = partnerOperations.Customers.ById(selectedCustom
 |---------|------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -54,7 +54,7 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -189,9 +189,9 @@ Date: Fri, 09 Jun 2017 17:50:46 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

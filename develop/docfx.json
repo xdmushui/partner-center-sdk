@@ -34,14 +34,15 @@
       "uhfHeaderId": "MSDocsHeader-Partner-Center",
       "breadcrumb_path": "/partner-center/develop/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-	  "author": "Xansky",
-	  "ms.author": "mhopkins",
+      "author": "Xansky",
+      "ms.author": "mhopkins",
       "ms.topic": "article",
       "ms.prod": "partner-center",
       "ms.technology": "partner-center-sdk"
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "partner-center-sdk"
+    "dest": "partner-center-sdk",
+    "markdownEngineName": "markdig"
   }
 }
