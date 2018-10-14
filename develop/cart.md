@@ -49,7 +49,7 @@ Represents one item contained in a cart.
 | orderGroup           | string                      | A group to indicate which items can be placed together.                               |
 | error                | Object                      | Applied after cart is created in case of an error.                                    |
 
- 
+ 
 
 ## <span id="cartError"></span><span id="carterror"></span><span id="CARTERROR"></span>CartError
 
@@ -92,7 +92,7 @@ Represents the result of a cart checkout.
 |-------------|---------------------------------------------------|---------------------------------|
 | orders      | List of [Order](orders.md#order) objects.         | The collection of orders.       |
 | orderErrors | List of [OrderError](cart.md#ordererror) objects. | The collection of order errors. |
- 
+ 
 
 
 ## <span id="orderError"></span><span id="ordererror"></span><span id="ORDERERROR"></span>OrderError

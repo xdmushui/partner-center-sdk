@@ -33,7 +33,7 @@ Describes the behavior of an individual upgrade resource.
 | UpgradeErrors | array of UpgradeErrors | Reasons the upgrade cannot be performed, if applicable.                                      |
 | Attributes    | ResourceAttributes     | The metadata attributes corresponding to the upgrade.                                        |
 
- 
+ 
 
 ## <span id="UpgradeError"></span><span id="upgradeerror"></span><span id="UPGRADEERROR"></span>UpgradeError
 
@@ -47,7 +47,7 @@ Describes a reason why an upgrade cannot be performed.
 | AdditionalDetails | string             | Additional details regarding the error.                                                                                                                                                                                                                                                                                                                                                         |
 | Attributes        | ResourceAttributes | The metadata attributes corresponding to the error.                                                                                                                                                                                                                                                                                                                                             |
 
- 
+ 
 
 ## <span id="UpgradeResult"></span><span id="upgraderesult"></span><span id="UPGRADERESULT"></span>UpgradeResult
 
@@ -63,7 +63,7 @@ Describes a the result of the subscription upgrade process.
 | LicenseErrors        | array of UserLicenseErrrors | Errors encountered while attempted to migrate user licenses, if applicable.          |
 | Attributes           | ResourceAttributes          | The metadata attributes corresponding to the license.                                |
 
- 
+ 
 
 ## <span id="UserLicenseError"></span><span id="userlicenseerror"></span><span id="USERLICENSEERROR"></span>UserLicenseError
 
@@ -78,11 +78,11 @@ Describes errors arising from failed user license transfer.
 | Errors       | array of ServiceFaults | A list of exceptions thrown when trying to perform user license transfer. |
 | Attributes   | ResourceAttributes     | The metadata attributes corresponding to the license.                     |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

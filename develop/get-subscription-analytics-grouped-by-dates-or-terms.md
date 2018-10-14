@@ -33,7 +33,7 @@ How to get subscription analytics information for your customers grouped by date
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?groupby={groupby_queries} |
 
- 
+ 
 **URI parameters**
 
 Use the following required path parameters to identify your organization and to group the results.
@@ -42,7 +42,7 @@ Use the following required path parameters to identify your organization and to 
 |------|------|----------|-------------|
 | groupby_queries | pairs of strings and dateTime | Yes | The terms and dates to filter the result. |
 
- 
+ 
 
 **GroupBy syntax**
 

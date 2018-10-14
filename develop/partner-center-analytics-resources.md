@@ -35,7 +35,7 @@ This scenario returns your analytics information in a collection of [Azure usage
 ## <span id="Azure_Usage"></span><span id="azure_usage"></span><span id="AZURE_USAGE"></span>Azure usage resource
 
 Represents all of the analytical data for Azure usage.
- 
+
 | Property | Type | Description |
 |----------|------|-------------|
 | CustomerTenantId | string | The customer tenant identifier. |
@@ -65,7 +65,7 @@ This scenario returns your analytics information in a collection of [indirect re
 ## <span id="Indirect_Resellers"></span><span id="indirect_resellers"></span><span id="IDIRECT_RESELLERS"></span>Indirect resellers resource
 
 Represents all of the analytical data for indirect resellers.
- 
+
 | Property | Type | Description |
 |----------|------|-------------|
 | partnerTenantId | string | The Tenant ID of the partner for which you want to retrieve indirect resellers data. |
@@ -100,34 +100,33 @@ All of these scenarios return your analytics information in a collection of [Sub
 
 
 Represents all of the analytical data for a subscription.
- 
-| Property | Type | Description |
-|----------|------|-------------|
-| customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |
-| customerName | string | The name of the customer. |
-| customerMarket | string | The country/region that the customer does business in. |
-| id | string | The subscription identifier. |
-| status | string | The subscription status: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
-| productName | string | The name of the product. |
-| subscriptionType | string | The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
-| autoRenewEnabled | boolean | A value indicating whether the subscription is renewed automatically. |
-| partnerId | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
-| friendlyName | string | The name of the subscription. |
-| partnerName | string | Name of the partner for whom the subscription was purchased |  
-| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.| creationDate | string in UTC date time format | The date the subscription was created. |
-| effectiveStartDate | string in UTC date time format | The date the subscription starts. |
-| commitmentEndDate | string in UTC date time format | The date the subscription ends. |
-| currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |
-| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null. |
-| trialStartDate | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |
-| trialEndDate | string in UTC date time format | The date that the trial period for the subscription ends. The default value is null. |
-| lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |
-| deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |
-| lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed The default value is null. |
-| licenseCount | number | The total number of licenses. |
-| subscriptionCount | number | The number of subscriptions. Note: This value will only appear in the response of an aggregation query. |
 
 
+|         Property          |              Type              |                                                                      Description                                                                       |
+|---------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     customerTenantId      |             string             |                                              A GUID-formatted string that identifies the customer tenant.                                              |
+|       customerName        |             string             |                                                               The name of the customer.                                                                |
+|      customerMarket       |             string             |                                                 The country/region that the customer does business in.                                                 |
+|            id             |             string             |                                                              The subscription identifier.                                                              |
+|          status           |             string             |                                          The subscription status: "ACTIVE", "SUSPENDED", or "DEPROVISIONED".                                           |
+|        productName        |             string             |                                                                The name of the product.                                                                |
+|     subscriptionType      |             string             |       The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".       |
+|     autoRenewEnabled      |            boolean             |                                         A value indicating whether the subscription is renewed automatically.                                          |
+|         partnerId         |             string             | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+|       friendlyName        |             string             |                                                             The name of the subscription.                                                              |
+|        partnerName        |             string             |                                              Name of the partner for whom the subscription was purchased                                               |
+|       providerName        |             string             |            When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.             |
+|    effectiveStartDate     | string in UTC date time format |                                                           The date the subscription starts.                                                            |
+|     commitmentEndDate     | string in UTC date time format |                                                            The date the subscription ends.                                                             |
+|    currentStateEndDate    | string in UTC date time format |                                           The date that the current status of the subscription will change.                                            |
+| trialToPaidConversionDate | string in UTC date time format |                                 The date that the subscription converts from trial to paid. The default value is null.                                 |
+|      trialStartDate       | string in UTC date time format |                                The date that the trial period for the subscription started. The default value is null.                                 |
+|       trialEndDate        | string in UTC date time format |                                  The date that the trial period for the subscription ends. The default value is null.                                  |
+|       lastUsageDate       | string in UTC date time format |                                        The date that the subscription was last used. The default value is null.                                        |
+|     deprovisionedDate     | string in UTC date time format |                                      The date that the subscription was deprovisioned. The default value is null.                                      |
+|      lastRenewalDate      | string in UTC date time format |                                       The date that the subscription was last renewed The default value is null.                                       |
+|       licenseCount        |             number             |                                                             The total number of licenses.                                                              |
+|     subscriptionCount     |             number             |                        The number of subscriptions. Note: This value will only appear in the response of an aggregation query.                         |
 
 ## <span id="Search_Analytics"></span><span id="search_analytics"></span><span id="SEARCH_ANALYTICS"></span>Search analytics
 
@@ -182,7 +181,7 @@ This scenario returns your analytics information in a collection of [Referrals](
 ## <span id="Referrals"></span><span id="referrals"></span><span id="REFERRALS"></span>Referrals resource
 
 Represents all of the analytical data for a referral.
- 
+
 | Property | Type | Description |
 |----------|------|-------------|
 | id | string | The customer tenant identifier.  |

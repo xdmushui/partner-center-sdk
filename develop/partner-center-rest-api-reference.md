@@ -40,11 +40,11 @@ finding the sample code.
 | [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md)                 | Lists the locales, languages, and country/region codes that are supported in the Partner Center APIs. |
 | [Partner Center webhooks](partner-center-webhooks.md)             | How to receive events, authenticate a callback, and use the Partner Center webhook APIs to create, view, and update an event registration.                  |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

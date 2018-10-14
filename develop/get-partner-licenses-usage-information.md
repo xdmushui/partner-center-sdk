@@ -39,7 +39,7 @@ var partnerLicensesUsageAnalytics = partnerOperations.Analytics.Licenses.Usage.G
 |---------|----------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/licenses/usage HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 

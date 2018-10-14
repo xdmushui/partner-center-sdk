@@ -76,7 +76,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 |----------|-------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 
@@ -92,7 +92,7 @@ This table describes the required properties in the request body.
 | [CompanyProfile](#companyprofile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
 | [AssociatedPartnerId](customers.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
- 
+ 
 
 ### <span id="billingProfile"></span><span id="billingprofile"></span><span id="BILLINGPROFILE"></span>
 
@@ -108,7 +108,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
- 
+ 
 
 ### <span id="companyProfile"></span><span id="companyprofile"></span><span id="COMPANYPROFILE"></span>
 
@@ -120,7 +120,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 |--------|--------|----------|--------------------------------------------------------------|
 | domain | string | .Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
 
- 
+ 
 
 **Request example**
 
@@ -256,9 +256,9 @@ Date: Tue, 06 Jun 2017 23:11:40 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

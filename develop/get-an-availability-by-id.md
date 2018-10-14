@@ -80,7 +80,7 @@ Use the following path and query parameters to get a specific availability using
 | availability-id        | string   | Yes      | A GUID formatted string that identifies the availability.       |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
- 
+ 
 **Request headers**
 
 -   See [Headers](headers.md) for more information.

@@ -58,7 +58,7 @@ An order contains an itemized list of offers, and each item is represented as an
 | provisioningContext  | Dictionary<string, string>                | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
 | links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the order line item.                                                                                                                                                                                |
 
- 
+ 
 
 ## <span id="orderLinks"></span><span id="orderlinks"></span><span id="ORDERLINKS"></span>OrderLinks
 
@@ -83,9 +83,9 @@ Represents the full subscription associated with the order.
 | sku                | [Link](utility-resources.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
 | subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
 
- 
+ 
 
- 
+ 
 ## <span id="orderStatus"></span><span id="orderstatus"></span><span id="ORDERSTATUS"></span>OrderStatus
 
 
@@ -123,7 +123,7 @@ Represents the provisioning status by quantity.
 | quantity                           | int                                          | The number of items.                                 |
 | status                             | string                                       | The status of the number of items.                   |
 
- 
+ 
 
 
 

@@ -55,7 +55,7 @@ var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).Dire
 |----------|-----------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -66,7 +66,7 @@ Use the following URI parameters to identify the correct customer and role. To i
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **role-id**            | **guid** | Y        | The value is a GUID formatted **role-id** that identifies the role to assign to the user.                                                              |
 
- 
+ 
 
 **Request headers**
 
@@ -83,7 +83,7 @@ This table describes the required properties in the request body.
 | **UserPrincipalName** | **string** | Y        | The name of the user principal.        |
 | **Attributes**        | **object** | Y        | Contains "ObjectType":"UserMember"     |
 
- 
+ 
 
 **Request example**
 
@@ -141,9 +141,9 @@ Date: Tue, 20 Dec 2016 23:36:55 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

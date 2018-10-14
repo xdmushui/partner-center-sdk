@@ -27,7 +27,7 @@ The CSP Customer Storefront Builder code is subject to the license available in 
 >[!NOTE]
 >You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
- 
+ 
 
 ## <span id="How_can_partners_use_the_CSP_Customer_Storefront_Builder__"></span><span id="how_can_partners_use_the_csp_customer_storefront_builder__"></span><span id="HOW_CAN_PARTNERS_USE_THE_CSP_CUSTOMER_STOREFRONT_BUILDER__"></span>How can partners use the CSP Customer Storefront Builder?
 
@@ -62,8 +62,8 @@ The process for creating a website is shown in the following table.
 <ul>
 <li>Branding - Your company name, logo, contacts, and more.</li>
 <li>Offers - View all CSP offers and select the offers you want your customers to view and purchase. Personalize offer information and add your price.</li>
-<li>PayPal Payment Configuration - Add your PayPal payment account information. If you do not have a PayPal account, you can go to PayPal.com and create a new account. This account will be used for PayPal to credit the payments made by customers. Microsoft is not responsible for the relationship between partners and PayPal. Use of PayPal may require the partner or partner's customers to agree to additional terms.</li>
-<li>For India: PayU Payment Configuration - Add your PayU Money payment account information. If you do not have a PayU Money account, you can go to PayUmoney.com and create a new account. This account will be used for PayU to credit the payments made by customers. Microsoft is not responsible for the relationship between partners and PayU. Use of PayU may require the partner or partner's customers to agree to additional terms.</li>
+<li>PayPal Payment Configuration - Add your PayPal payment account information. If you do not have a PayPal account, you can go to PayPal.com and create a new account. This account will be used for PayPal to credit the payments made by customers. Microsoft is not responsible for the relationship between partners and PayPal. Use of PayPal may require the partner or partner&#39;s customers to agree to additional terms.</li>
+<li>For India: PayU Payment Configuration - Add your PayU Money payment account information. If you do not have a PayU Money account, you can go to PayUmoney.com and create a new account. This account will be used for PayU to credit the payments made by customers. Microsoft is not responsible for the relationship between partners and PayU. Use of PayU may require the partner or partner&#39;s customers to agree to additional terms.</li>
 </ul></li>
 </ul></td>
 <td><ul>
@@ -74,7 +74,7 @@ The process for creating a website is shown in the following table.
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="Considerations"></span><span id="considerations"></span><span id="CONSIDERATIONS"></span>Considerations
 
@@ -209,7 +209,7 @@ To enhance or customize your CSP Customer Storefront:
 | GB           | United Kingdom |
 | US           | United States  |
 
- 
+ 
 
 ## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
 
@@ -220,9 +220,9 @@ To enhance or customize your CSP Customer Storefront:
 [Console test app](console-test-app.md)
 
 
- 
+ 
 
- 
+ 
 
 
 
