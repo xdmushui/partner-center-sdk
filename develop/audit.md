@@ -21,9 +21,9 @@ Get detailed historical audit records of operations performed by a partner user 
 
 -   [Get a record of Partner Center activity](get-a-record-of-partner-center-activity-by-user.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -50,7 +50,7 @@ var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(prod
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities?country={country-code}&targetSegment={target-segment} HTTP/1.1     |
 
- 
+ 
 
 **URI parameter**
 
@@ -63,7 +63,7 @@ Use the following path and query parameters to get a list of availabilities for 
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
 
- 
+ 
 
 **Request headers**
 

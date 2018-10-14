@@ -90,7 +90,7 @@ tipAccountPartnerOperations.Customers.ById(customerTenantId).Delete();
 |------------|----------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -100,7 +100,7 @@ Use the following query parameter to delete a customer.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+ 
 
 **Request headers**
 

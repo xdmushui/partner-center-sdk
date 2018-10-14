@@ -60,9 +60,9 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 
- 
+ 
 
- 
+ 
 
 
 

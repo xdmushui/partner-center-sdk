@@ -40,7 +40,7 @@ Describes an individual user.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
- 
+ 
 
 ## <span id="CustomerUser"></span><span id="customeruser"></span><span id="CUSTOMERUSER"></span>CustomerUser
 
@@ -65,7 +65,7 @@ Describes a customer user.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
- 
+ 
 
 ## <span id="UserCredentials"></span><span id="usercredentials"></span><span id="USERCREDENTIALS"></span>UserCredentials
 
@@ -77,7 +77,7 @@ Describes a user's login credentials.
 | userName | string                                             | The name of the user.                |
 | password | [SecureString](utility-resources.md#securestring) | The user's securely stored password. |
 
- 
+ 
 
 ## <span id="UserMember"></span><span id="usermember"></span><span id="USERMEMBER"></span>UserMember
 
@@ -92,11 +92,11 @@ Describes a user's member information.
 | id                | string                                                         | The identifier of the member.      |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.           |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

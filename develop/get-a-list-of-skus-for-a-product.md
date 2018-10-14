@@ -80,7 +80,7 @@ Get-PartnerProductSku -ProductId $productId -Segment $targetSegment
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus?country={country-code}&targetSegment={target-segment} HTTP/1.1  |
 
- 
+ 
 
 **URI parameter**
 
@@ -92,7 +92,7 @@ Use the following path and query parameters to get a list of SKUs for a product.
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
 
- 
+ 
 
 **Request headers**
 
@@ -250,9 +250,9 @@ Content-Length: 50917
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

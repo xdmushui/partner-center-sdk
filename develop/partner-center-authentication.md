@@ -586,4 +586,4 @@ The following table lists the appropiate Authority, Graph Resource URL, and Part
 | Partner Center operated by 21Vianet                  | https://login.chinacloudapi.cn   | https://graph.chinacloudapi.cn | https://partner.partnercenterapi.microsoftonline.cn |  
 | Partner Center for Microsoft Cloud for US Government | https://login.microsoftonline.us | https://graph.windows.net      | https://api.partnercenter.microsoft.com             |  
 
- 
+ 

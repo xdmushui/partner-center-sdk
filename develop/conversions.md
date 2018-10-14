@@ -70,7 +70,7 @@ subscription.
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="ConversionError"></span><span id="conversionerror"></span><span id="CONVERSIONERROR"></span>ConversionError
 
@@ -106,7 +106,7 @@ Represents an error that occurred during conversion.
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="ConversionResult"></span><span id="conversionresult"></span><span id="CONVERSIONRESULT"></span>ConversionResult
 
@@ -120,11 +120,11 @@ Represents the result of performing a subscription conversion.
 | targetOfferId  | string                              | The offer identifier for the target offer.                             |
 | error          | [ConversionError](#conversionerror) | The error encountered while attempting the conversion, if applicable.. |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

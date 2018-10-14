@@ -37,7 +37,7 @@ current month.
 | LastModifiedDate | date               | The date the usage data was last modified.                               |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the usage record.               |
 
- 
+ 
 
 ## <span id="CustomerUsageSummary"></span><span id="customerusagesummary"></span><span id="CUSTOMERUSAGESUMMARY"></span>CustomerUsageSummary
 
@@ -58,7 +58,7 @@ period.
 | Links            | ResourceLinks      | The resource links corresponding to the usage summary.                                                           |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the usage summary.                                                      |
 
- 
+ 
 
 ## <span id="PartnerUsageSummary"></span><span id="partnerusagesummary"></span><span id="PARTNERUSAGESUMMARY"></span>PartnerUsageSummary
 
@@ -81,7 +81,7 @@ Represents a partner-level summary of usage budgeting for all customers.
 | Links                                | ResourceLinks      | The resource links corresponding to the usage summary.                                                           |
 | Attributes                           | ResourceAttributes | The metadata attributes corresponding to the usage summary.                                                      |
 
- 
+ 
 
 ## <span id="SpendingBudget"></span><span id="spendingbudget"></span><span id="SPENDINGBUDGET"></span>SpendingBudget
 
@@ -94,11 +94,11 @@ subscriptions.
 | Amount     | Double             | The allocated budget. If the value is null, there is no spending budget allocated to this customer. |
 | Attributes | ResourceAttributes | The metadata attributes corresponding to the budget.                                                |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

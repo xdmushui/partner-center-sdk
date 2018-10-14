@@ -41,7 +41,7 @@ var customerLicensesDeploymentAnalytics = partnerOperations.Customers.ById(custo
 |---------|----------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/analytics/licenses/usage HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -51,7 +51,7 @@ Use the following path parameter to identify the customer.
 |-------------|------|----------|------------------------------------------------------------|
 | customer-id | guid | Yes      | A GUID formatted customer-id that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -170,9 +170,9 @@ Date: Wed, 15 Mar 2017 01:19:58 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

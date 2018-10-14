@@ -118,7 +118,6 @@ To create a customer execute the [**New-ParnterCustomer**](https://github.com/Mi
 
 ```powershell
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
-
 ```
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
@@ -129,7 +128,7 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 |----------|-------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers HTTP/1.1 |
 
- 
+
 
 **Request headers**
 
@@ -146,7 +145,7 @@ This table describes the required properties in the request body.
 | [BillingProfile](#billingprofile) | object | The customer's billing profile information. |
 | [CompanyProfile](#companyprofile) | object | The customer's company profile information. |
 
- 
+
 
 ### <span id="billingProfile"></span><span id="billingprofile"></span><span id="BILLINGPROFILE"></span>
 
@@ -162,7 +161,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
- 
+
 
 ### <span id="companyProfile"></span><span id="companyprofile"></span><span id="COMPANYPROFILE"></span>
 
@@ -174,7 +173,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 |--------|--------|--------------------------------------------------------------|
 | domain | string | The customer's domain name, such as contoso.onmicrosoft.com. |
 
- 
+
 
 **Request example**
 
@@ -276,9 +275,9 @@ Date: Tue, 14 Feb 2017 20:06:02 GMT
 }
 ```
 
- 
 
- 
+
+
 
 
 

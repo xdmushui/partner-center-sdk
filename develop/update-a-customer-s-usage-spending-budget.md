@@ -59,7 +59,7 @@ var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudg
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
- 
+ 
 
 **URI parameter**
 
@@ -69,7 +69,7 @@ Use the following query parameter to update the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+ 
 
 **Request headers**
 

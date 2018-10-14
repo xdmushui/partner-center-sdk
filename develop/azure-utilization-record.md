@@ -50,7 +50,7 @@ Describes the properties of an Azure Utilization Record resource.
 | instanceData   | object                                    | No       | Contains an [AzureInstanceData](#azureinstancedata) object that contains key-value pairs of instance level details. This property is optional and may not be included.                  |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | Yes      | The metadata attributes. Contains "objectType": "AzureUtilizationRecord"                                                                                                                |
 
- 
+ 
 
 ## <span id="AzureResource"></span><span id="azureresource"></span><span id="AZURERESOURCE"></span>AzureResource
 
@@ -65,7 +65,7 @@ Describes the properties of an Azure Resource.
 | subcategory | string | No       | The sub-category of the consumed resource. This property is optional.               |
 | region      | string | No       | The region of the consumed resource. This property is optional.                     |
 
- 
+ 
 
 ## <span id="AzureInstanceData"></span><span id="azureinstancedata"></span><span id="AZUREINSTANCEDATA"></span>AzureInstanceData
 
@@ -80,7 +80,7 @@ Describes the properties of an Azure Instance Data resource.
 | orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for Azure Marketplace. This may be an empty string.          |
 | tags           | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
 | additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          | 
- 
+ 
 
 ## <span id="Operations_on_the_AzureUtilizationRecord_resource"></span><span id="operations_on_the_azureutilizationrecord_resource"></span><span id="OPERATIONS_ON_THE_AZUREUTILIZATIONRECORD_RESOURCE"></span>Operations on the AzureUtilizationRecord resource
 
@@ -88,9 +88,9 @@ Describes the properties of an Azure Instance Data resource.
 -   [Get a customer's utilization records for
     Azure](get-a-customer-s-utilization-record-for-azure.md)
 
- 
+ 
 
- 
+ 
 
 
 

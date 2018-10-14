@@ -46,7 +46,7 @@ var usageSummary = partnerOperations.Customers.ById(selectedCustomerId).UsageSum
 |---------|-----------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1 |
 
- 
+
 
 **URI parameter**
 
@@ -56,7 +56,7 @@ This table lists the required query parameter to get the customer's rated usage 
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 
- 
+
 
 **Request headers**
 
@@ -74,7 +74,6 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
-
 ```
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
@@ -123,9 +122,9 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
 }
 ```
 
- 
 
- 
+
+
 
 
 

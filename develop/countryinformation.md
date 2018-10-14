@@ -46,7 +46,7 @@ Descriptive metadata for a country/region.
 | CountryCallingCodesList       | array of strings   | The calling codes supported in the country/region.                                                 |
 | Attributes                    | ResourceAttributes | The metadata attributes corresponding to the CountryInformation resource.                          |
 
- 
+ 
 
 ## <span id="CountryValidationRules"></span><span id="countryvalidationrules"></span><span id="COUNTRYVALIDATIONRULES"></span>CountryValidationRules
 
@@ -74,11 +74,11 @@ Describes the address formatting rules for a country/region.
 | CountryCallingCodesList | array of strings   | The calling codes supported in the country/region.                                                 |
 | Attributes              | ResourceAttributes | The metadata attributes corresponding to the CountryInformation resource.                          |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -47,7 +47,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 |----------|--------------------------------------------------------------------------|
 | **HEAD** | [*{baseURL}*](partner-center-rest-urls.md)/v1/domains/{domain} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -57,7 +57,7 @@ Use the following query parameter to verify domain availability.
 |------------|------------|----------|-----------------------------------------------|
 | **domain** | **string** | Y        | A string that identifies the domain to check. |
 
- 
+ 
 
 **Request headers**
 
@@ -113,9 +113,9 @@ MS-ServerId: 202010406
 Date: Tue, 31 Jan 2017 22:36:01 GMT
 ```
 
- 
+ 
 
- 
+ 
 
 
 

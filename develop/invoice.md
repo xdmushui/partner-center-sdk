@@ -34,11 +34,11 @@ Describes invoice related resources.
 | amendments      | array of [Invoice](#invoice) objects                           | The amendments to this invoice.                                                                                                                                                                      |
 | documentType    | string                                                         | The document type of the invoice: "Credit Note", "Invoice".                                                                                                                           |
 | amendsOf        | string                                                         | The reference number of the document of which this document is an amendment.                                                                                                                                  |
-| invoiceType     | string                                                         | The type of invoice: "recurring", “one\_time".                                                                                                                                                        |
+| invoiceType     | string                                                         | The type of invoice: "recurring", "one\_time".                                                                                                                                                        |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                  |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                             |
 
- 
+ 
 
 ## <span id="InvoiceDetail"></span><span id="invoicedetail"></span><span id="INVOICEDETAIL"></span>InvoiceDetail
 
@@ -53,7 +53,7 @@ represented by an InvoiceDetail resource.
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                               |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                          |
 
- 
+ 
 
 ## <span id="InvoiceLineItem"></span><span id="invoicelineitem"></span><span id="INVOICELINEITEM"></span>InvoiceLineItem
 
@@ -67,7 +67,7 @@ InvoiceLineItem.
 | billingProvider     | string                                                         | The billing provider: "none", "office", "azure" or "azure\_data\_market".            |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                             |
 
- 
+ 
 
 ## <span id="InvoiceSummary"></span><span id="invoicesummary"></span><span id="INVOICESUMMARY"></span>InvoiceSummary
 
@@ -88,7 +88,7 @@ Describes a summary of the balance and total charges of an invoice.
 | links                    | [ResourceLinks](utility-resources.md#resourcelinks)            | The resource links.                                                   |
 | attributes               | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                              |
 
- 
+ 
 
 ## <span id="InvoiceSummaryDetail"></span><span id="invoicesummarydetail"></span><span id="INVOICESUMMARYDETAIL"></span>InvoiceSummaryDetail
 
@@ -97,11 +97,11 @@ Represent a summary of the individual details for an invoice type (for example, 
 
 | Property            | Type                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| invoiceType         | string                                                         | The type of invoice: "recurring", “one\_time".                                       |
+| invoiceType         | string                                                         | The type of invoice: "recurring", "one\_time".                                       |
 | summary             | [InvoiceSummary](#invoicesummary) object                       | The summary of the invoice per invoice type.                                         |
- 
+ 
 
- 
+ 
 ## <span id="InvoiceSummaries"></span><span id="invoicesummaries"></span><span id="INVOICESUMMARIES"></span>InvoiceSummaries
 
 
