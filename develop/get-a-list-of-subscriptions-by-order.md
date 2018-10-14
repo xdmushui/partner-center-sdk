@@ -49,7 +49,7 @@ ResourceCollection<Subscription> customerSubscriptions = partnerOperations.Custo
 |---------|-------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions?order\_id={id-for-order} HTTP/1.1 |
 
- 
+
 
 **URI parameter**
 
@@ -60,7 +60,7 @@ This table lists the required query parameter to get all the subscriptions.
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 | **id-for-order**       | **guid** | Y        | A GUID corresponding to the order.    |
 
- 
+
 
 **Request headers**
 
@@ -137,12 +137,11 @@ Date: Wed, 25 Nov 2015 05:50:45 GMT
         "objectType": "Collection"
     }
 }
-
 ```
 
- 
 
- 
+
+
 
 
 

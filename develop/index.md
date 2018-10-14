@@ -155,7 +155,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 </ul>
 <hr />
 
-<h2>What's New</h2>
+<h2>What&#39;s New</h2>
 <p>The following topics are new or updated for Partner Center SDK version 1.9.</p>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
@@ -191,7 +191,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             </div>
         </div>
     </li>
-	<li>
+    <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -210,8 +210,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <div class="card">                    
-                    <div class="cardText">
+                <div class="card"><br/>                    <div class="cardText">
                         <h3>Activity log</h3>
                         <p><a href="https://docs.microsoft.com/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
                     </div>

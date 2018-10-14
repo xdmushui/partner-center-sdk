@@ -25,7 +25,7 @@ The following webhook events are supported by Partner Center.
 
 ### <span id="testEvent"></span><span id="TESTEVENT"></span>Test Event
 
-This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to “test-created” events and data older than 7 days will be purged.
+This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
 
 >[!NOTE]
 >There is a throttle limit of 2 requests per minute when posting a test-created event.

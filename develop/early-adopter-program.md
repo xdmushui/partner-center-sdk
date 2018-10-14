@@ -37,29 +37,29 @@ Participants can provide feedback and communicate with subject matter experts (S
 
 You must be an existing CSP partner or an approved platform vendor to join the program.
 
-1.  Join the yammer group. 
-In Yammer, select [Partner Center Early Adopter Program Yammer](https://www.yammer.com/cloudpartnercommunity/#/threads/inGroup?type=in_group&feedId=5944712&view=all) to apply and join the group. It will take us some time to review your application. We’ll email you when you’ve been approved to join the group. 
+1. Join the yammer group. 
+   In Yammer, select [Partner Center Early Adopter Program Yammer](https://www.yammer.com/cloudpartnercommunity/#/threads/inGroup?type=in_group&feedId=5944712&view=all) to apply and join the group. It will take us some time to review your application. We’ll email you when you’ve been approved to join the group. 
 
-    >[!NOTE]
-    >You may be required to join the Microsoft Cloud Yammer Community network before you can join the Partner Center Early Adopter Program Yammer group. 
+   >[!NOTE]
+   >You may be required to join the Microsoft Cloud Yammer Community network before you can join the Partner Center Early Adopter Program Yammer group. 
 
-2.  Send us an email
-Email your Microsoft ID, or your TiP (Testing in Production) sandbox account, and your primary domain to [pctap@microsoft.com](mailto:pctap@microsoft.com).
+2. Send us an email
+   Email your Microsoft ID, or your TiP (Testing in Production) sandbox account, and your primary domain to [pctap@microsoft.com](mailto:pctap@microsoft.com).
 
-    >[!NOTE]
-    >You can find your Microsoft ID on the **Organization Profile** page in the **Account Settings** menu.
+   >[!NOTE]
+   >You can find your Microsoft ID on the **Organization Profile** page in the **Account Settings** menu.
 
-3.  Participate
-Commit to actively participating in the program by test driving the early bits, engaging with Microsoft, and providing feedback.
-Engaged with others in the early adopter community.
+3. Participate
+   Commit to actively participating in the program by test driving the early bits, engaging with Microsoft, and providing feedback.
+   Engaged with others in the early adopter community.
 
-    >[!IMPORTANT]
-    >Microsoft reserves the right to remove inactive partners from the program. 
+   >[!IMPORTANT]
+   >Microsoft reserves the right to remove inactive partners from the program. 
 
 
- 
+ 
 
- 
+ 
 
 
 

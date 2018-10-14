@@ -48,7 +48,7 @@ var usageRecords = partnerOperations.Customers.ById(selectedCustomerId).Subscrip
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/usagerecords/resources HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -59,7 +59,7 @@ This table lists the required query parameter to get the rated usage information
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
+ 
 
 **Request headers**
 
@@ -139,9 +139,9 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

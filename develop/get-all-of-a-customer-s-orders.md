@@ -47,7 +47,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders HTTP/1.1  |
 
- 
+ 
 
 **URI parameter**
 
@@ -57,7 +57,7 @@ Use the following query parameter to get all orders.
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 
- 
+ 
 
 **Request headers**
 
@@ -196,9 +196,9 @@ Date: Thu, 15 Mar 2018 20:44:40 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

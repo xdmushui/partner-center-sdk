@@ -49,7 +49,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.ById(selected
 |------------|------------------------------------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches/{devicebatch-id}/devices/{device-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -61,7 +61,7 @@ Use the following path parameters when creating the request.
 | devicebatch-id | string | Yes      | The device batch identifier of the batch that contains the device. |
 | device-id      | string | Yes      | The device identifier.                                             |
 
- 
+ 
 
 **Request headers**
 

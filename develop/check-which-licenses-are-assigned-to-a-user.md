@@ -46,7 +46,7 @@ var customerUserAssignedLicenses = partnerOperations.Customers.ById(selectedCust
 |---------|----------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -57,7 +57,7 @@ Use the following path parameters to identify the customer and user.
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
 | user-id     | string | Yes      | A GUID formatted string that identifies the user.     |
 
- 
+ 
 
 **Request headers**
 
@@ -152,9 +152,9 @@ Date: Fri, 09 Jun 2017 00:29:24 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

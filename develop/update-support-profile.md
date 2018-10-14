@@ -53,7 +53,7 @@ SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile
 |---------|---------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1 |
 
- 
+
 
 **Request headers**
 
@@ -84,7 +84,6 @@ Expect: 100-continue
         "ObjectType": "PartnerSupportProfile"
     }
 }
-
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
@@ -122,12 +121,11 @@ Date: Wed, 25 Nov 2015 07:16:18 GMT
         "objectType": "PartnerSupportProfile"
     }
 }
-
 ```
 
- 
 
- 
+
+
 
 
 

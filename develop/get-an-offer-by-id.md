@@ -160,5 +160,4 @@ Date: Mon, 23 Nov 2015 23:13:01 GMT
         "objectType": "Offer"
     }
 }
-
 ```

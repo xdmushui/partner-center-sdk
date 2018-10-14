@@ -48,9 +48,9 @@ Work with and upload device batches and device metadata.
 
 -   [Delete a device for the specified customer](delete-a-device-for-the-specified-customer.md)
 
- 
+ 
 
- 
+ 
 
 
 

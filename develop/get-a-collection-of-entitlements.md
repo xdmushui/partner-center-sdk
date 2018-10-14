@@ -43,7 +43,7 @@ var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get
 |--------|-------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                            |
 
- 
+ 
 
 **URI parameters**
 
@@ -53,7 +53,7 @@ Use the following path and query parameters when creating the request.
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -183,7 +183,7 @@ The following examples show you how to retrieve information about products and r
 To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
 
 ``` csharp
-ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“VirtualMachineReservedInstance”).Get();
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("VirtualMachineReservedInstance").Get();
 
 
 ((VirtualMachineReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.VirtualMachineReservedInstance)).Link.InvokeAsync<VirtualMachineReservedInstanceArtifactDetails>(partnerOperations)
@@ -237,7 +237,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
 
 ``` csharp
-ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType(“ReservedInstance”).Get();  
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("ReservedInstance").Get();  
 
 ((ReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ReservedInstance)).Link.InvokeAsync<ReservedInstanceArtifactDetails>(partnerOperations);
 ```

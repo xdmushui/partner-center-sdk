@@ -99,7 +99,7 @@ Use the first syntax to return a full list of every line item for the given invo
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               |
 
- 
+ 
 
 **URI parameters**
 
@@ -114,7 +114,7 @@ Use the following URI and query parameters when creating the request.
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
 | seekOperation          | string | No       | If billing-provider = "OneTime", set seekOperation=Next to get the next page of invoice line items. |
 
- 
+ 
 
 **Request headers**
 
@@ -434,9 +434,9 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

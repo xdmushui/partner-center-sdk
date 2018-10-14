@@ -55,7 +55,7 @@ User createdUser = partnerOperations.Customers.ById(selectedCustomerId).Users.Cr
 |----------|----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -66,7 +66,7 @@ Use the following query parameter to identify the correct customer.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                       |
 
- 
+ 
 
 **Request headers**
 
@@ -119,30 +119,30 @@ MS-RequestId: b1317092-f087-471e-a637-f66523b2b94c
 Date: June 24 2016 22:00:25 PST
 
 {
-  "usageLocation": "country/region code",
-  "id": "4b10bf41-ab11-40e3-8c53-cd67849b50de",
-  "userPrincipalName": "userid@domain.onmicrosoft.com",
-  "firstName": "First",
-  "lastName": "Last",
-  "displayName": "User name",
+  "usageLocation": "country/region code",
+  "id": "4b10bf41-ab11-40e3-8c53-cd67849b50de",
+  "userPrincipalName": "userid@domain.onmicrosoft.com",
+  "firstName": "First",
+  "lastName": "Last",
+  "displayName": "User name",
   "immutableId": "Some unique ID",    
-  "passwordProfile": {
-    "forceChangePassword": true,
-    "password": "abCD123*"
-  },
-  "lastDirectorySyncTime": null,
-  "userDomainType": "none",
-  "state": "active",
-  "softDeletionTime": null,
-  "attributes": {
-    "objectType": "CustomerUser"
-  }
+  "passwordProfile": {
+    "forceChangePassword": true,
+    "password": "abCD123*"
+  },
+  "lastDirectorySyncTime": null,
+  "userDomainType": "none",
+  "state": "active",
+  "softDeletionTime": null,
+  "attributes": {
+    "objectType": "CustomerUser"
+  }
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 
