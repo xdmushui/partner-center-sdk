@@ -140,7 +140,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
                 "firstName":"Tania",
                 "lastName":"Carr",
                 "email":"SomeEmail@Outlook.com"
-                “phoneNumber:"1234567890"
+                "phoneNumber:"1234567890"
             },
             "templateId":"998b88de-aa99-4388-a42c-1b3517d49490",
             "dateAgreed":"2017-08-01T00:00:00",

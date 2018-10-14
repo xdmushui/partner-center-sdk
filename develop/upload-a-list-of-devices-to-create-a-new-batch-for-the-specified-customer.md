@@ -73,7 +73,7 @@ var trackingLocation =
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -83,7 +83,7 @@ Use the following path parameters when creating the request.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -152,9 +152,9 @@ MS-ServerId: 030020525
 Date: Thu, 28 Sep 2017 20:35:35 GMT
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -48,7 +48,7 @@ request is progressing.
 | CountryCode      | string                                                        | The country corresponding to the service request.                                    |
 | Attributes       | ResourceAttributes                                            | The metadata attributes corresponding to the service request.                        |
 
- 
+ 
 
 ## <span id="ServiceRequestContact"></span><span id="servicerequestcontact"></span><span id="SERVICEREQUESTCONTACT"></span>ServiceRequestContact
 
@@ -64,7 +64,7 @@ Describes a contact that creates or modifies a service request.
 | Email        | string                                                    | The email of the contact.                              |
 | PhoneNumber  | string                                                    | The phone number of the contact.                       |
 
- 
+ 
 
 ## <span id="ServiceRequestNote"></span><span id="servicerequestnote"></span><span id="SERVICEREQUESTNOTE"></span>ServiceRequestNote
 
@@ -77,7 +77,7 @@ Describes a note attached to a service request.
 | CreatedDate   | date   | The date and time when the note was created. |
 | Text          | string | The text of the note.                        |
 
- 
+ 
 
 ## <span id="ServiceRequestOrganization"></span><span id="servicerequestorganization"></span><span id="SERVICEREQUESTORGANIZATION"></span>ServiceRequestOrganization
 
@@ -90,7 +90,7 @@ Describes the organization for which the service request is created.
 | Name        | string | The name of the organization.         |
 | PhoneNumber | string | The phone number of the organization. |
 
- 
+ 
 
 ## <span id="SupportTopic"></span><span id="supporttopic"></span><span id="SUPPORTTOPIC"></span>SupportTopic
 
@@ -105,11 +105,11 @@ ensure that they are processed quickly and effectively.
 | Id          | string             | The unique id of the support topic.                           |
 | Attributes  | ResourceAttributes | The metadata attributes corresponding to the service request. |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

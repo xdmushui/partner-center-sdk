@@ -24,7 +24,7 @@ Get a list of all the roles/permissions attached to a user account. Variations i
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or **GetAsync()**method.
+To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or <strong>GetAsync()</strong>method.
 
 ``` csharp
 // string selectedCustomerId;
@@ -35,7 +35,7 @@ var directoryRoles = partnerOperations.Customers.ById(selectedCustomerId).Direct
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerDirectoryRoles.cs
 
-To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or **GetAsync()**method.
+To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or <strong>GetAsync()</strong>method.
 
 ``` csharp
 // string selectedCustomerId;
@@ -58,7 +58,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles HTTP/1.1                 |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers    |
 
- 
+ 
 
 **URI parameter**
 
@@ -70,7 +70,7 @@ Use the following query parameter to identify the correct customer.
 | **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                                                                            |
 | **role-id**            | **guid** | N        | The value is a GUID formatted **role-id** that belongs to a type of role. You can get these ids by querying all the directory roles for a customer, across all user accounts. (The second scenario, above). |
 
- 
+ 
 
 **Request headers**
 

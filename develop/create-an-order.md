@@ -77,7 +77,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/orders HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -87,7 +87,7 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|------------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted customer-id that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -119,7 +119,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 >[!NOTE]
 >The partnerIdOnRecord should only be provided when an indirect provider places an order on behalf of an indirect reseller. It's used to store the Microsoft Partner Network ID of the indirect reseller only (never the ID of the indirect provider).
 
- 
+ 
 
 ## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
 
@@ -136,7 +136,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
 | links                | [OrderLineItemLinks](orders.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
- 
+ 
 
 **Request example**
 
@@ -232,9 +232,9 @@ Date: Thu, 15 Mar 2018 22:30:02 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -71,7 +71,7 @@ This table describes the required properties in the request body.
 | VerifiedDomainName                                    | string | Yes                                           | The verified domain name. |
 | [Domain](#domain)                                     | object | Yes                                           | Contains the domain information. |
 | [DomainFederationSettings](#domainfederationsettings) | object | Yes (If AuthenticationType = "Federated")     | The domain federation settings to be used if the domain is a "Federated" domain and not a "Managed" domain. |
- 
+ 
 
 ### <span id="domain"></span><span id="domain"></span><span id="DOMAIN"></span>
 
@@ -114,7 +114,7 @@ This table describes the required and optional **DomainFederationSettings** prop
 | SigningCertificateUpdateStatus         | string           | No      | Indicates the update status of the Signing certificate. |
 | SigningCertificateUpdateStatus         | nullable boolean | No      | Indicates whether the IDP STS supports MFA. Supported values: True, False, Null.|
 
- 
+ 
 
 
 **Request example**

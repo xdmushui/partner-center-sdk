@@ -44,7 +44,7 @@ BillingProfile billingProfile = partnerOperations.Profiles.BillingProfile.Get();
 |---------|--------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/billing HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 

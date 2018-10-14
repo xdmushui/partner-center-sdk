@@ -32,18 +32,18 @@ How to get all the search analytics information for your customers.
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/search HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| filter | string | Returns data matching the filter condition. </br> **Example:**</br> `.../search?filter=field eq 'value'`|
-| groupby | string | Supports both terms and dates. Short circuit logic to limit the number of buckets. </br> **Example:**</br> `.../search?groupby=termField1,dateField1,termField2` |
-| aggregationLevel | string |	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*. </br> **Example:**</br>  `.../search?groupby=termField1,dateField1,termField2&aggregationLevel=day` | No |
-| top | string | The page limit is 10000. Takes any value less than 10000.  </br> **Example:**</br>  `.../search?top=100` |
-| skip | string | Number of rows to skip. </br> **Example:**</br> `.../search?top=100&skip=100` |
 
+|    Parameter     |  Type  |                                                                                                                   Description                                                                                                                    |
+|------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      filter      | string |                                                                     Returns data matching the filter condition. </br> **Example:**</br> `.../search?filter=field eq 'value'`                                                                     |
+|     groupby      | string |                                         Supports both terms and dates. Short circuit logic to limit the number of buckets. </br> **Example:**</br> `.../search?groupby=termField1,dateField1,termField2`                                         |
+| aggregationLevel | string | The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*. </br> **Example:**</br>  `.../search?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
+|       top        | string |                                                                     The page limit is 10000. Takes any value less than 10000.  </br> **Example:**</br>  `.../search?top=100`                                                                     |
+|       skip       | string |                                                                                  Number of rows to skip. </br> **Example:**</br> `.../search?top=100&skip=100`                                                                                   |
   
 **Request headers**
 

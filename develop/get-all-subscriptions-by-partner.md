@@ -80,7 +80,7 @@ Use the following path and query parameters to identify the customer and partner
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer.       |
 | mpn-id      | int    | Yes      | A Microsoft Partner Network ID that identifies the partner. |
 
- 
+ 
 **Request headers**
 
 -   See [Partner Center REST headers](headers.md) for more information.

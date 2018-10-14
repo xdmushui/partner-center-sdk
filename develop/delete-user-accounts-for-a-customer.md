@@ -51,7 +51,7 @@ partnerOperations.Customers.ById(selectedCustomerId).Users.ById(customerUserIdTo
 |------------|--------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -62,7 +62,7 @@ Use the following query parameter to identify the customer and user.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer. |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                          |
 
- 
+ 
 
 **Request headers**
 

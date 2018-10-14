@@ -43,7 +43,7 @@ var serviceCostsSummary = partnerOperations.Customers.ById(selectedCustomerId).S
 |---------|---------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/servicecosts/{billing-period} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -54,7 +54,7 @@ Use the following path parameters to identify the customer and the billing perio
 | customer-id    | guid   | Yes      | A GUID formatted customer-id that identifies the customer.                                                                       |
 | billing-period | string | Yes      | An indicator that represents the billing period. The only supported value is MostRecent. The case of the string does not matter. |
 
- 
+ 
 
 **Request headers**
 
@@ -123,9 +123,9 @@ Date: Fri, 02 Dec 2016 18: 54: 38 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

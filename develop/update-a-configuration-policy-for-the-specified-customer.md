@@ -57,7 +57,7 @@ ConfigurationPolicy updatedConfigurationPolicy =
 |---------|------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -68,7 +68,7 @@ Use the following path parameters when creating the request.
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer.         |
 | policy-id   | string | Yes      | A GUID-formatted string that identifies the policy to update. |
 
- 
+ 
 
 **Request headers**
 
@@ -85,9 +85,9 @@ The request body must contain an object that provides the policy information.
 | category        | string           | Yes      | No        | The policy category.                                                                                                                                     |
 | description     | string           | No       | Yes       | The policy description.                                                                                                                                  |
 | devicesAssigned | number           | No       | No        | The number of devices.                                                                                                                                   |
-| policySettings  | array of strings | Yes      | Yes       | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip \_oem\_registration,”skip\_eula". |
+| policySettings  | array of strings | Yes      | Yes       | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip \_oem\_registration,"skip\_eula". |
 
- 
+ 
 
 **Request example**
 
@@ -148,9 +148,9 @@ Date: Tue, 25 Jul 2017 18:10:29 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 
