@@ -46,7 +46,7 @@ To help you integrate and test your API integration, Partner Center supports two
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="Set__up_your_accounts"></span><span id="set__up_your_accounts"></span><span id="SET__UP_YOUR_ACCOUNTS"></span>Set up your accounts
 
@@ -60,7 +60,7 @@ To help you integrate and test your API integration, Partner Center supports two
     >[!NOTE]
     >If you don't see an Integration sandbox option, you might not have a global admin account, or the integration sandbox has already been set up and you're using an integration sandbox account.
 
-     
+     
 
 3.  Fill in the contact information for the integration sandbox admin account, and then click **Set up account**. You might need to wait a few minutes for the account to be created.
 
@@ -113,7 +113,7 @@ To write code and test code in Partner Center, you'll need to set up authenticat
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="runTestedCode"></span><span id="runtestedcode"></span><span id="RUNTESTEDCODE"></span>Use your solution for real customer data
 
@@ -126,9 +126,9 @@ To write code and test code in Partner Center, you'll need to set up authenticat
 
 2.  After you replace the integration security token with the one for your primary Partner Center account, the rest of your code should work correctly.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -32,7 +32,7 @@ How to get all the Azure usage analytics information for your customers.
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -96,10 +96,10 @@ How to get all the Azure usage analytics information for your customers.
           <li><em>serviceType</em></li>
         </ul>
         <p><strong>Example:</strong></br>
-          <code>.../usage/azure?filter=meterCategory eq 'Data Management'</code>
+          <code>.../usage/azure?filter=meterCategory eq &#39;Data Management&#39;</code>
         </p>
         <p><strong>Example:</strong></br>
-          <code>.../usage/azure?filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))</code>
+          <code>.../usage/azure?filter=meterCategory eq &#39;Data Management&#39; or (usageDate le cast(&#39;2018-01-01&#39;, Edm.DateTimeOffset) and usageDate le cast(&#39;2018-04-01&#39;, Edm.DateTimeOffset))</code>
         </p>
       </td>
     </tr>
@@ -111,7 +111,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: "day", "week", or "month". If unspecified, the default is "day".</p>
+        <p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: &quot;day&quot;, &quot;week&quot;, or &quot;month&quot;. If unspecified, the default is &quot;day&quot;.</p>
       <p>The <em>aggregationLevel</em> parameter is not supported without a <em>groupby</em>. The <em>aggregationLevel</em> parameter applies to all date fields present in the <em>groupby</em>.</p>
       </td>
     </tr>
@@ -125,21 +125,21 @@ How to get all the Azure usage analytics information for your customers.
       <td>
         <p>A statement that orders the result data values for each install. The syntax is <code>...&amp;orderby=field [order],field [order],...</code> The <em>field</em> parameter can be one of the following strings:</p>
         <ul>
-          <li>"customerTenantId"</li>
-          <li>"customerName"</li>
-          <li>"subscriptionId"</li>
-          <li>"subscriptionName"</li>
-          <li>"usageDate"</li>
-          <li>"resourceLocation"</li>
-          <li>"meterCategory"</li>
-          <li>"meterSubcategory"</li>
-          <li>"meterUnit"</li>
-          <li>"reservationOrderId"</li>
-          <li>"reservationId"</li>
-          <li>"consumptionMeterId"</li>
-          <li>"serviceType"</li>
+          <li>&quot;customerTenantId&quot;</li>
+          <li>&quot;customerName&quot;</li>
+          <li>&quot;subscriptionId&quot;</li>
+          <li>&quot;subscriptionName&quot;</li>
+          <li>&quot;usageDate&quot;</li>
+          <li>&quot;resourceLocation&quot;</li>
+          <li>&quot;meterCategory&quot;</li>
+          <li>&quot;meterSubcategory&quot;</li>
+          <li>&quot;meterUnit&quot;</li>
+          <li>&quot;reservationOrderId&quot;</li>
+          <li>&quot;reservationId&quot;</li>
+          <li>&quot;consumptionMeterId&quot;</li>
+          <li>&quot;serviceType&quot;</li>
         </ul>
-        <p>The <em>order</em> parameter is optional and can be "asc" or "desc" to specify ascending or descending order for each field, respectively. The default is "asc".</p>
+        <p>The <em>order</em> parameter is optional and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field, respectively. The default is &quot;asc&quot;.</p>
         <p><strong>Example:</strong><br/> 
           <code>...&amp;orderby=meterCategory,meterUnit</code>
         </p>

@@ -54,7 +54,7 @@ ServiceRequest serviceRequest = partnerOperations.ServiceRequests.Create(service
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{agent-locale} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -64,7 +64,7 @@ Use the following URI parameter to identify the agent locale.
 |------------------|------------|----------|--------------------------------------------------------------|
 | **agent-locale** | **string** | Y        | The locale of the organization creating the service request. |
 
- 
+ 
 
 **Request headers**
 
@@ -97,7 +97,7 @@ This table describes the required and optional properties in the request body.
 | CountryCode      | string                                                                      | N        | The country corresponding to the service request.                                    |
 | Attributes       | object                                                                      | N        | Contains "ObjectType": "ServiceRequest".                                             |
 
- 
+ 
 
 This table describes the required properties in the request body.
 **Request example**
@@ -194,9 +194,9 @@ Date: Thu, 22 Dec 2016 20:31:14 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

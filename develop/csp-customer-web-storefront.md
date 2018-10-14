@@ -54,9 +54,9 @@ These are stored as a set of **MicrosoftOffer**s in the **OfferCatalogViewModel*
 
 The app currently uses a PayPal gateway, implemented in PayPalGateway.cs.
 
- 
+ 
 
- 
+ 
 
 
 

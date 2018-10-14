@@ -32,7 +32,7 @@ How to get subscription analytics information for your customers filtered by a s
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?filter={filter_string} |
 
- 
+ 
 
 **URI parameters**
 
@@ -41,7 +41,7 @@ Use the following required path parameter to identify your organization and filt
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | filter_string | string | Yes | The filter to apply to the subscription analytics. See the Filter syntax and Filter fields sections for the syntax, fields, and operators to use in this parameter. |
- 
+ 
 
 **Filter syntax**
 

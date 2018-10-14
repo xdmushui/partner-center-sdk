@@ -65,7 +65,7 @@ Get-PartnerCustomer -CustomerId '2ca7de6c-c05c-46b5-b689-32e53573a97a'
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -75,7 +75,7 @@ Use the following query parameter to a specific customer.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+ 
 
 **Request headers**
 
@@ -113,89 +113,89 @@ Content-Type: application/json; charset=utf-8
 MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9
 MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
 {
-  "id": "eebd1b55-5360-4438-a11d-5c06918c3014",
-  "commerceId": "99e6a635-48e7-424d-9059-c9db944e3c54",
-  "companyProfile": {
-    "tenantId": "eebd1b55-5360-4438-a11d-5c06918c3014",
-    "domain": "abcdefgh1234.ccsctp.net",
-    "companyName": "1kl as kjk",
-    "address": {
-      "country": "US",
-      "region": "wa",
-      "city": "redmond",
-      "addressLine1": "1 ms way",
-      "postalCode": "98052",
-      "phoneNumber": "1234567890"
-    },
-    "email": "a@a.com",
-    "links": {
-      "self": {
-        "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/company",
-        "method": "GET",
-        "headers": [
-          
-        ]
-      }
-    },
-    "attributes": {
-      "objectType": "CustomerCompanyProfile"
-    }
-  },
-  "billingProfile": {
-    "id": "eeada110-69d6-4cc9-b093-75feb7ca9d3f",
-    "firstName": "Jasond0d89d776d03471c819bf772191ed728",
-    "lastName": "kjkAJJAAAAAAAAAAAAAAAAAAAA",
-    "email": "a@a.com",
-    "culture": "en-US",
-    "language": "en",
-    "companyName": "1kl as kjkAAAAAAAAAAAAAAAJJJJJJJJJJJAAAAAJJJJJJJJJJJAAJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJAJJJJJAJJAAAAJAJJAAAAAAAAAAAAAAAAAAAA",
-    "defaultAddress": {
-      "country": "US",
-      "city": "redmond",
-      "state": "WA",
-      "addressLine1": "1 ms way",
-      "postalCode": "98052",
-      "firstName": "1kl as",
-      "lastName": "kjk",
-      "phoneNumber": "1234567890"
-    },
-    "links": {
-      "self": {
-        "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/billing",
-        "method": "GET",
-        "headers": [
-          
-        ]
-      }
-    },
-    "attributes": {
-      "etag": "-4242348048554929329",
-      "objectType": "CustomerBillingProfile"
-    }
-  },
-  "relationshipToPartner": "reseller",
-  "allowDelegatedAccess": true,
-  "customDomains": [
-    "abcdefgh1234.ccsctp.net"
-  ],
-  "links": {
-    "self": {
-      "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014",
-      "method": "GET",
-      "headers": [
-        
-      ]
-    }
-  },
-  "attributes": {
-    "objectType": "Customer"
-  }
+  "id": "eebd1b55-5360-4438-a11d-5c06918c3014",
+  "commerceId": "99e6a635-48e7-424d-9059-c9db944e3c54",
+  "companyProfile": {
+    "tenantId": "eebd1b55-5360-4438-a11d-5c06918c3014",
+    "domain": "abcdefgh1234.ccsctp.net",
+    "companyName": "1kl as kjk",
+    "address": {
+      "country": "US",
+      "region": "wa",
+      "city": "redmond",
+      "addressLine1": "1 ms way",
+      "postalCode": "98052",
+      "phoneNumber": "1234567890"
+    },
+    "email": "a@a.com",
+    "links": {
+      "self": {
+        "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/company",
+        "method": "GET",
+        "headers": [
+          
+        ]
+      }
+    },
+    "attributes": {
+      "objectType": "CustomerCompanyProfile"
+    }
+  },
+  "billingProfile": {
+    "id": "eeada110-69d6-4cc9-b093-75feb7ca9d3f",
+    "firstName": "Jasond0d89d776d03471c819bf772191ed728",
+    "lastName": "kjkAJJAAAAAAAAAAAAAAAAAAAA",
+    "email": "a@a.com",
+    "culture": "en-US",
+    "language": "en",
+    "companyName": "1kl as kjkAAAAAAAAAAAAAAAJJJJJJJJJJJAAAAAJJJJJJJJJJJAAJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJAJJJJJAJJAAAAJAJJAAAAAAAAAAAAAAAAAAAA",
+    "defaultAddress": {
+      "country": "US",
+      "city": "redmond",
+      "state": "WA",
+      "addressLine1": "1 ms way",
+      "postalCode": "98052",
+      "firstName": "1kl as",
+      "lastName": "kjk",
+      "phoneNumber": "1234567890"
+    },
+    "links": {
+      "self": {
+        "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/billing",
+        "method": "GET",
+        "headers": [
+          
+        ]
+      }
+    },
+    "attributes": {
+      "etag": "-4242348048554929329",
+      "objectType": "CustomerBillingProfile"
+    }
+  },
+  "relationshipToPartner": "reseller",
+  "allowDelegatedAccess": true,
+  "customDomains": [
+    "abcdefgh1234.ccsctp.net"
+  ],
+  "links": {
+    "self": {
+      "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014",
+      "method": "GET",
+      "headers": [
+        
+      ]
+    }
+  },
+  "attributes": {
+    "objectType": "Customer"
+  }
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

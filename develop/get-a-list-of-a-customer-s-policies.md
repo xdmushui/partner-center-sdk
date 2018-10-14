@@ -45,7 +45,7 @@ var configPolicies = partnerOperations.Customers.ById(selectedCustomerId).Config
 |---------|------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -55,7 +55,7 @@ Use the following path parameters when creating the request.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -145,9 +145,9 @@ Date: Tue, 25 Jul 2017 18:07:49 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

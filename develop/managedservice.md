@@ -33,7 +33,7 @@ Describes a managed service.
 | Links      | ManagedServiceLinks | The resource links corresponding to the managed service. |
 | Attributes | ResourceAttributes  | The metadata attributes corresponding to the agreement.  |
 
- 
+ 
 
 ## <span id="ManagedServiceLinks"></span><span id="managedservicelinks"></span><span id="MANAGEDSERVICELINKS"></span>ManagedServiceLinks
 
@@ -50,11 +50,11 @@ permissions to provide support for the service.
 | Next          | Link | The next page of items.     |
 | Previous      | Link | The previous page of items. |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

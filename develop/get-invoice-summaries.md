@@ -53,7 +53,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].Bal
 **URI parameter**
 
 None.
- 
+ 
 
 **Request headers**
 

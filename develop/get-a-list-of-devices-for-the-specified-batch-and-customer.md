@@ -45,7 +45,7 @@ var devices =
 |---------|------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches/{devicebatch-id}/devices HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -56,7 +56,7 @@ Use the following path parameters when creating the request.
 | customer-id    | string | Yes      | A GUID-formatted string that identifies the customer. |
 | devicebatch-id | string | Yes      | A string identifier that identifies the device batch. |
 
- 
+ 
 
 **Request headers**
 
@@ -106,7 +106,7 @@ Date: Tue, 25 Jul 2017 17:52:41 GMT
             "id": "7c141ea9-2816-4e15-a819-53f6856499ff",
             "serialNumber": "2R9-ZNP67",
             "productKey": "00329-00000-0003-AA6069",
-            "modelName": "Precision WorkStation T7500”,
+            "modelName": "Precision WorkStation T7500",
             "oemManufacturerName":"Dell Inc.",
             "policies":[{
                     "key": "o_o_b_e",
@@ -114,7 +114,7 @@ Date: Tue, 25 Jul 2017 17:52:41 GMT
                 }
             ],
             "uploadedDate":"2017-08-09T14:43:26.0092288-07:00",
-            " attributes”: {
+            " attributes": {
                 "objectType": "Device"
             }
         }, {
@@ -140,9 +140,9 @@ Date: Tue, 25 Jul 2017 17:52:41 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

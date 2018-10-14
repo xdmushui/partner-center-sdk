@@ -57,7 +57,6 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 07029132-385d-416f-a9a6-df5e9e4c78d3
 MS-CorrelationId: 20604323-50bf-4738-9968-c5486ab32be0
-
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
@@ -94,5 +93,4 @@ Date: Wed, 25 Nov 2015 07:16:17 GMT
         "objectType": "PartnerSupportProfile"
     }
 }
-
 ```

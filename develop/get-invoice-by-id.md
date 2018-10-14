@@ -45,7 +45,7 @@ var invoice = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Get();
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -55,7 +55,7 @@ Use the following query parameter to get the invoice.
 |----------------|------------|----------|----------------------------------------------------------------------------------------------------|
 | **invoice-id** | **string** | Yes      | The value is an **invoice-id** that allows the reseller to filter the results for a given invoice. |
 
- 
+ 
 
 **Request headers**
 

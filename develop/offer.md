@@ -56,7 +56,7 @@ to their customers.
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
- 
+ 
 
 ## <span id="OfferCategory"></span><span id="offercategory"></span><span id="OFFERCATEGORY"></span>OfferCategory
 
@@ -75,7 +75,7 @@ line.
 | links      | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
 
- 
+ 
 
 ## <span id="OfferLinks"></span><span id="offerlinks"></span><span id="OFFERLINKS"></span>OfferLinks
 
@@ -106,9 +106,9 @@ features and targeted at different customer needs.
 | Unit     | string | The product unit.        |
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -33,6 +33,6 @@ Represents the details of certification provided by the partner.
 | templateId     |string                          |Unique identifier of the agreement that the customer accepted. Currently, the only supported value is "998b88de-aa99-4388-a42c-1b3517d49490", which is the unique identifier for the Microsoft Cloud Agreement.                             |
 | type           |AgreementType enum              | Agreement type. Currently, the only supported value is "MicrosoftCloudAgreement". |
 | agreementLink  | string                         | URL to the agreement template.                                                    |
-  
+  
 
 

@@ -63,7 +63,7 @@ var customers = partnerOperations.Customers.Query(myQuery);
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size}&filter={filter} HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -74,7 +74,7 @@ Use the following query parameters.
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional. |
 | filter | filter | Yes      | The filter to apply to customers. This must be an encoded string.              |
 
- 
+ 
 
 **Filter Syntax**
 
@@ -94,7 +94,7 @@ The following table describes the required key-value pairs:
 | Value    | The value to filter by. The case of the value is ignored.                                                                |
 | Operator | The operator to apply. The only supported value for this customer scenario is "starts\_with".                            |
 
- 
+ 
 
 **Request headers**
 
@@ -239,9 +239,9 @@ Date: Fri, 24 Feb 2017 22:08:20 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 
