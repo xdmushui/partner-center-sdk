@@ -1,32 +1,31 @@
 ---
 title: Get agreement metadata for Microsoft Cloud Agreement
 description: This topic explains how to get agreement metadata for Microsoft Cloud Agreement. 
-ms.date: 9/21/2018
+ms.date: 10/14/2018
 ms.localizationpriority: medium
 ---
 
 # Get agreement metadata for Microsoft Cloud Agreement
 
-
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 > [!NOTE]  
 > The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
-> -   Partner Center operated by 21Vianet
-> -   Partner Center for Microsoft Cloud Germany
-> -   Partner Center for Microsoft Cloud for US Government
+> - Partner Center operated by 21Vianet
+> - Partner Center for Microsoft Cloud Germany
+> - Partner Center for Microsoft Cloud for US Government
 
+## Prerequisites
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+- If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
+- If you are using the Partner Center Java SDK, version 1.8 or newer is required.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
- - If you are using Partner Center SDK, version 1.9 or newer is required. 
- - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with App+User credentials only. 
+## Examples
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
-
-### C#
+### .NET
 
 To retrieve agreement metadata for Microsoft Cloud Agreement, first retrieve the **IAggregatePartner.AgreementDetails** collection and then call the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 
@@ -37,6 +36,10 @@ var agreements = partnerOperations.AgreementDetails.Get();
 
 AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr => agr.AgreementType == AgreementType.MicrosoftCloudAgreement);
 ```
+
+#### .NET Sample
+
+A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 ### Java
 
@@ -49,7 +52,7 @@ ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreemen
 
 AgreementMetaData microsoftCloudAgreement;
 
-for (AgreementMetaData metadata : agreements) 
+for (AgreementMetaData metadata : agreements)
 {
     if(metadata.getAgreementType() == AgreementType.MicrosoftCloudAgreement)
     {
@@ -57,6 +60,10 @@ for (AgreementMetaData metadata : agreements)
     }
 }
 ```
+
+#### Java Sample
+
+A complete sample can be found in the [GetAgreementDetails](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetAgreementDetails.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
 ### PowerShell
 
@@ -76,32 +83,27 @@ To retrieve agreement metadata for Microsoft Cloud Agreement, first create a RES
 |--------|---------------------------------------------------------------------|
 | GET    | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/agreements HTTP/1.1 |
 
-
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
-
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
 None.
 
-
 **Request example**
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/agreements HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 ```
 
-
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 If successful, this method returns a collection of **AgreementMetaData** resources in the response body.
-
 
 **Response success and error codes**
 
