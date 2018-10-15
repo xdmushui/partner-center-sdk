@@ -1,7 +1,7 @@
 ---
 title: Make a one-time purchase
 description: How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.
-ms.date: 06/07/2018
+ms.date: 10/09/2018
 ms.localizationpriority: medium
 ---
 
@@ -10,8 +10,57 @@ ms.localizationpriority: medium
 **Applies To**
 
 -   Partner Center
+-   Partner Center for Microsoft Cloud for US Government
+
 
 How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.   
+
+> [!NOTE]  
+> Software subscriptions are not available in the following markets:  
+>  
+> | Unavailable Markets | &nbsp; | &nbsp; |
+> |--------------------------------|-----------------------------------|------------------------------------------|
+> | Åland Islands                  | Greenland                         | Palau                                    |
+> | American Samoa                 | Grenada                           | Papua New Guinea                         |
+> | Andorra                        | Guadeloupe                        | Pitcairn Islands                         |
+> | Anguilla                       | Guam                              | Reunion                                  |
+> | Antarctica                     | Guernsey                          | Russian Federation                       |
+> | Antigua and Barbuda            | Guinea                            | Saba                                     |
+> | Aruba                          | Guinea-Bissau                     | Saint Barthélemy                         |
+> | Azerbaijan                     | Guyana                            | Saint Lucia                              |
+> | Belarus                        | Haiti                             | Saint Martin                             |
+> | Benin                          | Heard Island and McDonald Islands | Saint Pierre and Miquelon                |
+> | Bhutan                         | India                             | Saint Vincent and the Grenadines         |
+> | Bonaire                        | Isle of Man                       | Samoa                                    |
+> | Bouvet Island                  | Jan Mayen                         | San Marino                               |
+> | Brazil                         | Jersey                            | São Tomé and Príncipe                    |
+> | British Indian Ocean Territory | Kazakhstan                        | Seychelles                               |
+> | British Virgin Islands         | Kiribati                          | Sierra Leone                             |
+> | Burkina Faso                   | Korea, Republic of                | Sint Eustatius                           |
+> | Burundi                        | Kosovo                            | Sint Maarten                             |
+> | Cambodia                       | Laos                              | Solomon Islands                          |
+> | Central African Republic       | Lesotho                           | Somalia                                  |
+> | Chad                           | Liberia                           | South Georgia and South Sandwich Islands |
+> | China                          | Madagascar                        | South Sudan                              |
+> | Christmas Island               | Malawi                            | St Helena, Ascension, Tristan da Cunha   |
+> | Cocos (Keeling) Islands        | Maldives                          | Suriname                                 |
+> | Comoros                        | Mali                              | Svalbard                                 |
+> | Congo                          | Marshall Islands                  | Swaziland                                |
+> | Congo (DRC)                    | Martinique                        | Taiwan                                   |
+> | Cook Islands                   | Mauritania                        | Timor-Leste                              |
+> | Djibouti                       | Mayotte                           | Togo                                     |
+> | Dominica                       | Micronesia                        | Tokelau                                  |
+> | Equatorial Guinea              | Montserrat                        | Tonga                                    |
+> | Eritrea                        | Mozambique                        | Turks and Caicos Islands                 |
+> | Falkland Islands               | Myanmar                           | Tuvalu                                   |
+> | French Guiana                  | Nauru                             | U.S. Outlying Islands                    |
+> | French Polynesia               | New Caledonia                     | Ukraine                                  |
+> | French Southern Territories    | Niger                             | Vanuatu                                  |
+> | Gabon                          | Niue                              | Vatican City                             |
+> | Gambia                         | Norfolk Island                    | Wallis and Futuna                        |
+> | Gibraltar                      | Northern Mariana Islands          | Yemen                                    |
+>  
+
 
 >[!NOTE]
 >To purchase perpetual software, you must have been previously qualified. Contact support for more information.   
