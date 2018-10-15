@@ -129,23 +129,23 @@ The following table describes the required key-value pairs:
 <tbody>
 <tr class="odd">
 <td>Field</td>
-<td>The field to filter. The supported values can be found in <a href="#request" data-raw-source="[Request syntax](#request)">Request syntax</a>.</td>
+<td>The field to filter. The supported values can be found in <a href="#request">Request syntax</a>.</td>
 </tr>
 <tr class="even">
 <td>Value</td>
-<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#request" data-raw-source="[Request syntax](#request)">Request syntax</a>:
+<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#request">Request syntax</a>:
 <ul>
 <li><p>searchSubstring - Replace with the name of the company. You can enter a substring to match part of the company name (e.g. &quot;bri&quot; will match &quot;Fabrikam, Inc.&quot;).</p>
 <p>Example: &quot;Value&quot;:&quot;bri&quot;</p></li>
 <li><p>customerId - Replace with a GUID formatted string that represents the customer identifier.</p>
 <p>Example: &quot;Value&quot;:&quot;0c39d6d5-c70d-4c55-bc02-f620844f3fd1&quot;</p></li>
-<li><p>resourceType - Replace with the type of resource for which to retrieve audit records (e.g. Subscription). The available resource types are defined in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype" data-raw-source="[&lt;strong&gt;ResourceType&lt;/strong&gt;](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype)"><strong>ResourceType</strong></a>.</p>
+<li><p>resourceType - Replace with the type of resource for which to retrieve audit records (e.g. Subscription). The available resource types are defined in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype"><strong>ResourceType</strong></a>.</p>
 <p>Example: &quot;Value&quot;:&quot;Subscription&quot;</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>Operator</td>
-<td>The operator to apply. The supported operators can be found in <a href="#request" data-raw-source="[Request syntax](#request)">Request syntax</a>.</td>
+<td>The operator to apply. The supported operators can be found in <a href="#request">Request syntax</a>.</td>
 </tr>
 </tbody>
 </table>
