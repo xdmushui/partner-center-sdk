@@ -39,11 +39,11 @@ versions of Partner Center:
 <td><p>Partner Center</p>
 <p>Partner Center for Microsoft Cloud Germany</p>
 <p>Partner Center for Microsoft Cloud for US Government</p></td>
-<td><em><a href="https://api.partnercenter.microsoft.com" data-raw-source="https://api.partnercenter.microsoft.com">https://api.partnercenter.microsoft.com</a></em></td>
+<td><em><a href="https://api.partnercenter.microsoft.com">https://api.partnercenter.microsoft.com</a></em></td>
 </tr>
 <tr class="even">
 <td>Partner Center operated by 21Vianet</td>
-<td><em><a href="https://partner.partnercenterapi.microsoftonline.cn" data-raw-source="https://partner.partnercenterapi.microsoftonline.cn">https://partner.partnercenterapi.microsoftonline.cn</a></em></td>
+<td><em><a href="https://partner.partnercenterapi.microsoftonline.cn">https://partner.partnercenterapi.microsoftonline.cn</a></em></td>
 </tr>
 </tbody>
 </table>
