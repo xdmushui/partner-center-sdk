@@ -132,7 +132,7 @@ it with devices.
 </tr>
 <tr class="even">
 <td>devices</td>
-<td>array of <a href="#device" data-raw-source="[Device](#device)">Device</a> objects</td>
+<td>array of <a href="#device">Device</a> objects</td>
 <td>Each object specifies a device.
 <p>The following combinations of fields for identifying a device are accepted:</p>
 <ul>
@@ -146,7 +146,7 @@ it with devices.
 </tr>
 <tr class="odd">
 <td>attributes</td>
-<td><a href="utility-resources.md#resourceattributes" data-raw-source="[ResourceAttributes](utility-resources.md#resourceattributes)">ResourceAttributes</a></td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>
@@ -176,7 +176,7 @@ policy.
 <tbody>
 <tr class="odd">
 <td>devices</td>
-<td>array of <a href="#device" data-raw-source="[Device](#device)">Device</a> objects</td>
+<td>array of <a href="#device">Device</a> objects</td>
 <td>Each object specifies a device. The following properties are required:
 <ul>
 <li>Id.</li>
@@ -185,7 +185,7 @@ policy.
 </tr>
 <tr class="even">
 <td>attributes</td>
-<td><a href="utility-resources.md#resourceattributes" data-raw-source="[ResourceAttributes](utility-resources.md#resourceattributes)">ResourceAttributes</a></td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>
