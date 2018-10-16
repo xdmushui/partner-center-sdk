@@ -136,7 +136,7 @@ This table describes the **Order** properties in the request body.
 <td>billingCycle</td>
 <td>string</td>
 <td>No</td>
-<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype" data-raw-source="[&lt;strong&gt;BillingCycleType&lt;/strong&gt;](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype)"><strong>BillingCycleType</strong></a>.
+<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype"><strong>BillingCycleType</strong></a>.
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>
@@ -148,7 +148,7 @@ This table describes the **Order** properties in the request body.
 <td>lineItems</td>
 <td>array of objects</td>
 <td>Yes</td>
-<td>An array of <a href="#orderlineitem" data-raw-source="[OrderLineItem](#orderlineitem)">OrderLineItem</a> resources.</td>
+<td>An array of <a href="#orderlineitem">OrderLineItem</a> resources.</td>
 </tr>
 <tr class="odd">
 <td>creationDate</td>
