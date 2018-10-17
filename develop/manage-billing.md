@@ -18,33 +18,25 @@ ms.localizationpriority: medium
 
 This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
 
+**Billing Cycle:**
+- [Change the billing cycle](change-the-billing-cycle.md)
+
 **Azure rates and utilization:**
-
--   [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md)
-
--   [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
+- [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md)
+- [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 
 **Invoices:**
-
--   [Get the reseller's current account balance](get-the-reseller-s-current-account-balance.md)
-
--   [Get invoice by ID](get-invoice-by-id.md)
-
--   [Get invoice line items](get-invoiceline-items.md)
-
--   [Get invoice statement](get-invoice-statement.md) 
-
--   [Get invoice summaries](get-invoice-summaries.md)
-
--   [Get a collection of invoices](get-a-collection-of-invoices.md)
+- [Get the reseller's current account balance](get-the-reseller-s-current-account-balance.md)
+- [Get invoice by ID](get-invoice-by-id.md)
+- [Get invoice line items](get-invoiceline-items.md)
+- [Get invoice statement](get-invoice-statement.md) 
+- [Get invoice summaries](get-invoice-summaries.md)
+- [Get a collection of invoices](get-a-collection-of-invoices.md)
 
 **Azure spending budget:**
-
--   [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
-
--   [Get usage data for all subscriptions](https://msdn.microsoft.com/library/partnercenter/mt651644.aspx)
-
--   [Get usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
+- [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
+- [Get usage data for all subscriptions](https://msdn.microsoft.com/library/partnercenter/mt651644.aspx)
+- [Get usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 

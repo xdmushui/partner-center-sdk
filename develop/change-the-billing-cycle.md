@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Updates an [Order](order.md) from monthly to annual billing or from annual to monthly billing.
+Updates an [Order](orders.md) from monthly to annual billing or from annual to monthly billing.
 
 In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
 

@@ -189,7 +189,7 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="manage-invoices.md">Manage billing</a></p></td>
+<td><p><a href="manage-billing.md">Manage billing</a></p></td>
 <td><p>Get Azure rates and utilization records</p>
 <ul>
 <li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
