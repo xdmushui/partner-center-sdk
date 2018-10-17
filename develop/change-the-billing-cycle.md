@@ -1,8 +1,7 @@
 ---
 title: Change the billing cycle
 description: Updates a subscription from monthly to annual billing or from annual to monthly billing.
-ms.assetid: 
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.localizationpriority: medium
 ---
 
@@ -11,27 +10,26 @@ ms.localizationpriority: medium
 
 **Applies To**
 
-<!-- TODO: Verify that this is the correct Applies To values -->
 -   Partner Center
 -   Partner Center operated by 21Vianet
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-Updates a [Subscription](subscriptions.md) from monthly to annual billing or from annual to monthly billing.
+Updates an [Order](order.md) from monthly to annual billing or from annual to monthly billing.
 
-In the Partner Center dashboard, this operation can be performed by... <!-- TODO: Link to Pete's new doc -->
+In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-<!-- TODO: Is this all correct?-->
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
-- A subscription ID.
+- An order ID.
 
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To change the frequency of the billing cycle... <!-- TODO: Fill out this description and add a C# code snippet -->
+To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
 <!-- TODO: Add code snippet here -->
 ``` csharp
@@ -43,21 +41,19 @@ To change the frequency of the billing cycle... <!-- TODO: Fill out this descrip
 
 **Request syntax**
 
-<!-- TODO: Update with the correct request URI -->
 | Method    | Request URI                                                                                                               |
 |-----------|---------------------------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
  
 **URI parameter**
 
-<!-- TODO: Update with any required parameters or delete this section if there are no parameters -->
 This table lists the required query parameter to change the quantity of the subscription.
 
-| Name                    | Type     | Required | Description                               |
-|-------------------------|----------|----------|-------------------------------------------|
-| **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
-| **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
+| Name                   | Type | Required | Description                                                          |
+|------------------------|------|----------|----------------------------------------------------------------------|
+| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |
+| **order-id**           | GUID |    Y     | The order identifier                                                 |
  
 
 **Request headers**
@@ -67,28 +63,79 @@ This table lists the required query parameter to change the quantity of the subs
 
 **Request body**
 
-<!-- TODO: Verify that these are the correct request body requirements -->
-A full **Subscription** resource is required in the request body. Ensure that the **billingCycle** property has been updated.
+The following tables describe the properties in the request body.
 
 
-**Request examples**
+## <span id="order"></span><span id="ORDER"></span>Order
 
-**Update to annual billing**
-<!-- TODO: Add a request example to change to annual billing -->
+| Property           | Type             | Required | Description                                                                |
+|--------------------|------------------|----------|----------------------------------------------------------------------------|
+| Id                 | string           |    N     | An order identifier that is supplied upon successful creation of the order |
+|ReferenceCustomerId | string           |    Y     | The customer identifier                                                    |
+| BillingCycle       | string           |    Y     | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). |
+| LineItems          | array of objects |    Y     | An array of [OrderLineItem](#orderlineitem) resources                      |
+| CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
+| Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
+
+
+## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+
+| Property             | Type   | Required | Description                                                                        |
+|----------------------|--------|----------|------------------------------------------------------------------------------------|
+| LineItemNumber       | number |    Y     | The line item number, starting with 0                                              |
+| OfferId              | string |    Y     | The ID of the offer                                                                |
+| SubscriptionId       | string |    N     | The ID of the subscription                                                         |
+| ParentSubscriptionId | string |    Y     | The ID of the parent subscription in an add-on offer. Applies to PATCH only        |
+| FriendlyName         | string |    N     | The friendly name for the subscription defined by the partner to help disambiguate |
+| Quantity             | number |    Y     | The number of licenses or instances                                                |
+| PartnerIdOnRecord    | string |    N     | The MPN ID of the partner of record                                                |
+| Attributes           | Object |    N     | Contains "ObjectType": "OrderLineItem"                                             |
+
+
+**Request example**
+
+Update to annual billing
+
 ```http
+PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
+Authorization: Bearer <token> 
+Accept: application/json
+MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
+MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
+X-Locale: en-US
+Content-Type: application/json
+Host: api.partnercenter.microsoft.com
+Content-Length: 414
+Expect: 100-continue
 
+{
+    "Id": null,
+    "ReferenceCustomerId": "4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04",
+    "BillingCycle" : "Annual",
+    "LineItems": [{
+            "LineItemNumber": 0,
+            "OfferId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
+            "SubscriptionId": null,
+            "ParentSubscriptionId": "1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+            "FriendlyName": "Some friendly name",
+            "Quantity": 2,
+            "PartnerIdOnRecord": null,
+            "Attributes": {
+                "ObjectType": "OrderLineItem"
+            }
+        }
+    ],
+    "CreationDate": null,
+    "Attributes": {
+        "ObjectType": "Order"
+    }
+}
 ```
 
-**Update to monthly billing**
-<!-- TODO: Add a request example to change to monthly billing -->
-```http
-
-```
 
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
-If successful, this method returns <!-- TODO: Add what is returned -->  in the response body.
-
+If successful, this method returns the updated subscription order in the response body.
 
 **Response success and error codes**
 
@@ -96,9 +143,60 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 
 **Response example**
-<!-- Do we need multiple response examples for both annual and monthly? -->
 
-<!-- TODO: Update with an example of a response -->
 ```http
+HTTP/1.1 200 OK
+Content-Length: 1135
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
+MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
+MS-CV: WtFy3zI8V0u2lnT9.0
+MS-ServerId: 020021921
+Date: Wed, 25 Jan 2017 23:01:08 GMT
 
+{
+    "id": "cf3b0e37-be0b-4cdd-b584-d1a97d98a922",
+    "referenceCustomerId": "4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04",
+    "billingCycle": "Annual",
+    "lineItems": [{
+            "lineItemNumber": 0,
+            "offerId": "195416C1-3447-423A-B37B-EE59A99A19C4",
+            "subscriptionId": "1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+            "friendlyName": "new offer purchase",
+            "quantity": 5,
+            "links": {
+                "subscription": {
+                    "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+                    "method": "GET",
+                    "headers": []
+                }
+            }
+        }, {
+            "lineItemNumber": 1,
+            "offerId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
+            "subscriptionId": "968BA1CF-C146-4ADF-A300-308DCF718EEE",
+            "friendlyName": "Some friendly name",
+            "quantity": 2,
+            "links": {
+                "subscription": {
+                    "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/968BA1CF-C146-4ADF-A300-308DCF718EEE",
+                    "method": "GET",
+                    "headers": []
+                }
+            }
+        }
+    ],
+    "creationDate": "2017-01-25T14:53:12.093-08:00",
+    "links": {
+        "self": {
+            "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/cf3b0e37-be0b-4cdd-b584-d1a97d98a922",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "etag": "eyJpZCI6ImNmM2IwZTM3LWJlMGItNGNkZC1iNTg0LWQxYTk3ZDk4YTkyMiIsInZlcnNpb24iOjJ9",
+        "objectType": "Order"
+    }
+}
 ```
