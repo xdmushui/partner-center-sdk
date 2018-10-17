@@ -33,7 +33,28 @@ To change the frequency of the billing cycle, update the [**Order.BillingCycle**
 
 <!-- TODO: Add code snippet here -->
 ``` csharp
+IAggregatePartner partnerOperations;
+string customerId;
+string offerId;
 
+var order = new Order()
+{
+    ReferenceCustomerId = customerId,
+    BillingCycle = BillingCycleType.Annual,
+    LineItems = new List<OrderLineItem>()
+    {
+        new OrderLineItem()
+        {
+            LineItemNumber = 0,
+            OfferId = offerId,
+            SubscriptionId = null,
+            ParentSubscriptionId = "1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+            Quantity = 1
+        }
+    }
+};
+
+var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Patch(order);
 ```
 
 
@@ -41,8 +62,8 @@ To change the frequency of the billing cycle, update the [**Order.BillingCycle**
 
 **Request syntax**
 
-| Method    | Request URI                                                                                                               |
-|-----------|---------------------------------------------------------------------------------------------------------------------------|
+| Method    | Request URI                                                                                             |
+|-----------|---------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
  
@@ -50,11 +71,11 @@ To change the frequency of the billing cycle, update the [**Order.BillingCycle**
 
 This table lists the required query parameter to change the quantity of the subscription.
 
-| Name                   | Type | Required | Description                                                          |
-|------------------------|------|----------|----------------------------------------------------------------------|
-| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |
-| **order-id**           | GUID |    Y     | The order identifier                                                 |
- 
+| Name                   | Type | Required | Description                                                          |  
+|------------------------|------|----------|----------------------------------------------------------------------|  
+| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |  
+| **order-id**           | GUID |    Y     | The order identifier                                                 |  
+
 
 **Request headers**
 
