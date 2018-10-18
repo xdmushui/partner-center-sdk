@@ -1,18 +1,18 @@
 ---
-title: Enable multi-factor authentication in your Partner Center apps and control panels
-description: Configure your Partner Center apps and control panels for multi-factor authentication.
+title: Enable multi-factor authentication
+description: Configure your Partner Center and control panel apps for multi-factor authentication.
 ms.date: 10/18/2018
 ms.localizationpriority: medium
 ---
 
-# Enable multi-factor authentication in your Partner Center apps and control panels
+# Enable multi-factor authentication
 
 
 **Applies To**
 
 -   Partner Center
 
-Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture. CSP partners as well as control panel vendors can rely on the new model to elevate security for Partner Center API integration calls. This will help all parties including Microsoft, CSP partners and control panel vendors to protect their infrastructure and customer data from security risks.
+Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture. You can rely on the new model to elevate security for Partner Center API integration calls. This will help all parties including Microsoft, CSP partners, and control panel vendors to protect their infrastructure and customer data from security risks.
 
 
 ## <span id="scope"></span><span id="SCOPE"></span>Scope
