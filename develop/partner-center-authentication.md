@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 > Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
 Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. 
 > 
-> For more information, see [Enable multi-factor authentication in your Partner Center apps and control panels](enable-multi-factor-authentication.md).
+> For more information, see [Enable multi-factor authentication](enable-multi-factor-authentication.md).
 
 
 Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. This requires three steps:
