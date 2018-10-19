@@ -1,13 +1,13 @@
 ---
-title: Get a customer's Government Community Cloud validation
-description: How to get a customer's Government Community Cloud validation.
+title: Get a partner's Government Community Cloud validations
+description: How to get a partner's Government Community Cloud validations.
 ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
 ms.date: 09/12/2018
 ms.localizationpriority: medium
 ---
 
 
-# Get a customer's validations
+# Get a partner's validation codes
 
 **Applies To**
 
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of a customer's Government Community Cloud validation. Validations are required to access the government community cloud.
+How to get a collection of a partner's Government Community Cloud validation. Validations are required to access the government community cloud.
 
 If you are interested in having your organization or your customers organization approved for Office 365 Government GCC for CSP, please see [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria](https://docs.microsoft.com/partner-center/csp-gcc-validate).  
 
@@ -31,13 +31,12 @@ If you are interested in having your organization or your customers organization
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To get a list of all of a customer's validations, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to identify the customer. Then use the [**Validations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.validations) property to retrieve an interface to validation collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) methods to retrieve the customer's validations collection.
+To get a list of all of a partner's validations, first use the [**IAggregatePartner.Validations**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.validations.ivalidations?view=partnercenter-dotnet-latest) method with the customer identifier to identify the customer. Then use the [**Validations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.validations) property to retrieve an interface to validation collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) methods to retrieve the customer's validations collection.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// string customerId;
 
-var customerValidation = partnerOperations.Customers.ById(customerId).Validations.Get();
+var gccValidations = partnerOperations.Validations.GetValidationCodes();
 ```
 
 
@@ -47,16 +46,8 @@ var customerValidation = partnerOperations.Customers.ById(customerId).Validation
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/validations HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/all/validations HTTP/1.1 |
 
- 
-**URI parameter**
-
-This table lists the required query parameter to get all the validations.
-
-| Name               | Type   | Required | Description                                           |
-|--------------------|--------|----------|-------------------------------------------------------|
-| customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
 **Request headers**
 
@@ -69,12 +60,15 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/validations HTTP/1.1
-Authorization: Bearer <token>
+GET https://api.partnercenter.microsoft.com/v1/customers/all/validations HTTP/1.1
 Accept: application/json
-MS-RequestId: 
-MS-CorrelationId: 
-Connection: Keep-Alive
+Content-Type: application/json
+cache-control: no-cache
+Authorization: Bearer <token>
+Host: api.partnercenter.microsoft.com
+cookie: MarketplaceSelectedLocale=en-US; LocalizationRouteName=artemissite
+accept-encoding: gzip, deflate
+Connection: close
 ```
 
 
@@ -90,17 +84,32 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 
+Content-Length: 434
 Content-Type: application/json
-MS-CorrelationId: 
-MS-RequestId: 
-Date: Wed, 19 Aug 2018 05:43:06 GMT
+MS-CorrelationId: 283b9b70-963a-4159-9920-f2bdf7ab7fce
+MS-RequestId: 7266f5f6-30ca-4672-9eb6-6c9d6dd0e9d3
+X-Locale: en-US,en-US
+MS-CV: wR5itJ70YEWmVtNh.0
+MS-ServerId: 000000
+Date: Fri, 19 Oct 2018 17:52:05 GMT
+Connection: close
 
-{
-  "partnerId": "<partner-tenant-id>",
-  "customerId": "<customer-tenant-id>",
-  "validationId": "12345",
-  "organizationName": "Contoso, Inc.",
-  "eTag": "W/\"datetime'2018-10-10T18%3A49%3A57.5100996Z'\""
-}
+[
+  {
+    "partnerId": "9daaeb1c-4195-4db5-9f1d-509eb70c8c2d",
+    "organizationName": "Contoso, Inc.",
+    "validationId": "12345",
+    "maxCreates": 5,
+    "remainingCreates": 4,
+    "eTag": "W/\"datetime'2018-10-10T18%3A49%3A58.727348Z'\""
+  },
+  {
+    "partnerId": "9daaeb1c-4195-4db5-9f1d-509eb70c8c2d",
+    "organizationName": "Contoso, Inc. Finance Department",
+    "validationId": "987654",
+    "maxCreates": 5,
+    "remainingCreates": 5,
+    "eTag": "W/\"datetime'2018-10-19T17%3A51%3A45.6584512Z'\""
+  }
+]
 ```

@@ -26,20 +26,15 @@ Updates a customer's qualification.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To update a customer's qualification, retrieve the qualification and update the properties as necessary. Then, retrieve your [**IPartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, and then call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, followed by the [**Billing**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.billing) property. Then, finish by calling the [**Update()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofile-1.update) or [**UpdateAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofile-1.updateasync) methods.
+To update a customer's qualification, retrieve the qualification and update the properties as necessary. First, with an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest), use the following.
 
 ``` csharp
-// IAggregatePartner partnerOperations;
-// var selectedCustomerId as string;
+// CustomerQualification is an enum
 
-var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.Billing.Get();
-
-// Apply changes to profile;
-
-billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.Billing.Update(billingProfile);
+var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.Education);
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpdateCustomerBillingProfile.cs
+**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
@@ -48,7 +43,7 @@ billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.B
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
+| **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification HTTP/1.1 |
 
 
 **URI parameter**
@@ -58,66 +53,39 @@ Use the following query parameter to update the qualification.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| **code**               | **int**  | N        | Needed for Government Community Cloud.  For more information, visit HERE.                                                                                                                                                       |
+
 
 **Request headers**
 
--   **If-Match**: "&lt;ETag&gt;" is required for concurrency detection.
 -   See [Headers](headers.md) for more information.
 
 **Request body**
 
-The full resource.
+[Customer Qualification](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification?view=partnercenter-dotnet-latest)
 
 **Request example**
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification HTTP/1.1
-Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: ff85f13a-eb65-4b8e-9b67-05beb0565410
-MS-CorrelationId: ff1b757d-cfaf-463a-b48b-0f96d05e95d7
 Content-Type: application/json
-Content-Length: 639
-Expect: 100-continue
+cache-control: no-cache
+Authorization: Bearer <token>
+User-Agent: PostmanRuntime/7.3.0
+Host: api.partnercenter.microsoft.com
+cookie:
+accept-encoding: gzip, deflate
+content-length: 1
+Connection: close
 
-{
-    "Id": "a58ceba5-60ac-48e4-a0bc-2a855811807a",
-    "FirstName": "FirstName",
-    "LastName": "LastName",
-    "Email": "email@sample.com",
-    "Culture": "en-US",
-    "Language": "en",
-    "CompanyName": "CompanyName",
-    "DefaultAddress": {
-        "Country": "US",
-        "Region": null,
-        "City": "Redmond",
-        "State": "WA",
-        "AddressLine1": "One Microsoft Way",
-        "AddressLine2": null,
-        "PostalCode": "98052",
-        "FirstName": "FirstName",
-        "LastName": "LastName",
-        "PhoneNumber": "4255555555"
-    },
-    "Links": {
-        "Self": {
-            "Uri": "/v1/customers/<customer-tenant-id>/profiles/billing",
-            "Method": "GET",
-            "Headers": []
-        }
-    },
-    "Attributes": {
-        "Etag": "<etag>",
-        "ObjectType": "CustomerBillingProfile"
-    }
-}
+1
 ```
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
 
 
-If successful, this method returns updated [Profile](profiles.md) resource properties in the response body. This call requires an ETag for concurrency detection.
+If successful, this method returns updated [qualification](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification?view=partnercenter-dotnet-latest) in the response body.
 
 **Response success and error codes**
 
@@ -127,40 +95,15 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 1210
+Content-Length: 14
 Content-Type: application/json
-MS-CorrelationId: ff1b757d-cfaf-463a-b48b-0f96d05e95d7
-MS-RequestId: ff85f13a-eb65-4b8e-9b67-05beb0565410
-Date: Mon, 23 Nov 2015 18:20:43 GMT
+MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
+MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
+X-Locale: en-US,en-US
+MS-CV: mEFQl0suzEGQRSIt.0
+MS-ServerId: 00000A
+Date: Fri, 19 Oct 2018 16:46:23 GMT
+Connection: close
 
-{
-    "id": "a58ceba5-60ac-48e4-a0bc-2a855811807a",
-    "firstName": "FirstName",
-    "lastName": "LastName",
-    "email": "email@sample.com",
-    "culture": "en-US",
-    "language": "en",
-    "companyName": "companyName",
-    "defaultAddress": {
-        "country": "US",
-        "city": "Redmond",
-        "state": "WA",
-        "addressLine1": "One Microsoft Way",
-        "postalCode": "98052",
-        "firstName": "FirstName",
-        "lastName": "LastName",
-        "phoneNumber": "4255555555"
-    },
-    "links": {
-        "self": {
-            "uri": "/v1/customers/<customer-tenant-id>/profiles/billing",
-            "method": "GET",
-            "headers": []
-        }
-    },
-    "attributes": {
-        "etag": "<etag>",
-        "objectType": "CustomerBillingProfile"
-    }
-}
+"education"
 ```
