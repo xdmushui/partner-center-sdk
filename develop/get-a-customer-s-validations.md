@@ -35,7 +35,6 @@ To get a list of all of a partner's validations, first use the [**IAggregatePart
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// string customerId;
 
 var gccValidations = partnerOperations.Validations.GetValidationCodes();
 ```
