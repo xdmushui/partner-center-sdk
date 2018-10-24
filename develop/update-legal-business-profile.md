@@ -52,7 +52,7 @@ var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfil
 |---------|--------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/legalbusiness HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 
@@ -189,9 +189,9 @@ Date: Tue, 21 Mar 2017 22:03:15 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

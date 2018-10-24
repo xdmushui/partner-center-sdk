@@ -32,7 +32,7 @@ samples](partner-center-samples.md) section.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>[Analytics](analytics.md)</td>
+<td><a href="analytics.md">Analytics</a></td>
 <td><ul>
 <li>PartnerLicensesDeploymentInsights</li>
 <li>PartnerLicensesUsageInsights</li>
@@ -41,13 +41,13 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Auditing](auditing.md)</td>
+<td><a href="auditing.md">Auditing</a></td>
 <td><ul>
 <li>AuditRecord</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Azure Rate Card](azure-rate-card.md)</td>
+<td><a href="azure-rate-card.md">Azure Rate Card</a></td>
 <td><ul>
 <li>AzureRateCard</li>
 <li>AzureMeter</li>
@@ -55,7 +55,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Azure Utilization Record](azure-utilization-record.md)</td>
+<td><a href="azure-utilization-record.md">Azure Utilization Record</a></td>
 <td><ul>
 <li>AzureUtilizationRecord</li>
 <li>AzureResource</li>
@@ -63,7 +63,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Cart](cart.md)</td>
+<td><a href="cart.md">Cart</a></td>
 <td><ul>
 <li>Cart</li>
 <li>CartLineItem</li>
@@ -71,7 +71,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Conversions](conversions.md)</td>
+<td><a href="conversions.md">Conversions</a></td>
 <td><ul>
 <li>Conversion</li>
 <li>ConversionError</li>
@@ -79,14 +79,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[CountryInformation](countryinformation.md)</td>
+<td><a href="countryinformation.md">CountryInformation</a></td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Customer](customers.md)</td>
+<td><a href="customers.md">Customer</a></td>
 <td><ul>
 <li>Customer</li>
 <li>CustomerCompanyProfile</li>
@@ -95,7 +95,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Customer Usage Budgeting](customer-usage.md)</td>
+<td><a href="customer-usage.md">Customer Usage Budgeting</a></td>
 <td><ul>
 <li>CustomerMonthlyUsageRecord</li>
 <li>CustomerUsageSummary</li>
@@ -104,7 +104,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Entitlement](entitlement.md)</td>
+<td><a href="entitlement.md">Entitlement</a></td>
 <td><ul>
 <li>Entitlement</li>
 <li>ReferenceOrder</li>
@@ -117,7 +117,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Invoice](invoice.md)</td>
+<td><a href="invoice.md">Invoice</a></td>
 <td><ul>
 <li>Invoice</li>
 <li>InvoiceDetail</li>
@@ -131,7 +131,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[License](licenses.md)</td>
+<td><a href="licenses.md">License</a></td>
 <td><ul>
 <li>License</li>
 <li>LicenseUpdate</li>
@@ -143,14 +143,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[ManagedService](managedservice.md)</td>
+<td><a href="managedservice.md">ManagedService</a></td>
 <td><ul>
 <li>ManagedService</li>
 <li>ManagedServiceLinks</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Offer](offer.md)</td>
+<td><a href="offer.md">Offer</a></td>
 <td><ul>
 <li>Offer</li>
 <li>OfferCategory</li>
@@ -159,7 +159,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Order](orders.md)</td>
+<td><a href="orders.md">Order</a></td>
 <td><ul>
 <li>Order</li>
 <li>OrderLineItem</li>
@@ -169,7 +169,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Profile](profiles.md)</td>
+<td><a href="profiles.md">Profile</a></td>
 <td><ul>
 <li>BillingProfile</li>
 <li>LegalBusinessProfile</li>
@@ -179,7 +179,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Products](products.md)</td>
+<td><a href="products.md">Products</a></td>
 <td><ul>
 <li>Product</li>
 <li>ItemType</li>
@@ -216,7 +216,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[ServiceCosts](servicecosts.md)</td>
+<td><a href="servicecosts.md">ServiceCosts</a></td>
 <td><ul>
 <li>ServiceCostsSummary</li>
 <li>ServiceCostsLineItem</li>
@@ -224,7 +224,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[ServiceRequest](servicerequest.md)</td>
+<td><a href="servicerequest.md">ServiceRequest</a></td>
 <td><ul>
 <li>ServiceRequest</li>
 <li>ServiceRequestContact</li>
@@ -234,7 +234,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Subscription](subscriptions.md)</td>
+<td><a href="subscriptions.md">Subscription</a></td>
 <td><ul>
 <li>Subscription</li>
 <li>SubscriptionLinks</li>
@@ -245,7 +245,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[Subscription Usage](subscriptionusage.md)</td>
+<td><a href="subscriptionusage.md">Subscription Usage</a></td>
 <td><ul>
 <li>SubscriptionDailyUsageRecord <em>(Obsolete)</em></li>
 <li>SubscriptionMonthlyUsageRecord</li>
@@ -253,7 +253,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Upgrade](upgrade.md)</td>
+<td><a href="upgrade.md">Upgrade</a></td>
 <td><ul>
 <li>Upgrade</li>
 <li>UpgradeError</li>
@@ -262,7 +262,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td>[User](user.md)</td>
+<td><a href="user.md">User</a></td>
 <td><ul>
 <li>User</li>
 <li>CustomerUser</li>
@@ -271,7 +271,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td>[Utility Resources](utility-resources.md)</td>
+<td><a href="utility-resources.md">Utility Resources</a></td>
 <td><ul>
 <li>Address</li>
 <li>Contact</li>
@@ -286,13 +286,3 @@ samples](partner-center-samples.md) section.
 </tr>
 </tbody>
 </table>
-
- 
-
- 
-
- 
-
-
-
-

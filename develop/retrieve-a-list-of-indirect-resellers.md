@@ -42,7 +42,7 @@ var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipT
 |---------|----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/relationships?relationship\_type=IsIndirectCloudSolutionProviderOf HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -68,14 +68,14 @@ Use the following query parameter to identify the relationship type.
 <td>relationship_type</td>
 <td>string</td>
 <td>Yes</td>
-<td>The value is the string representation of one of the member names found in [<strong>PartnerRelationshipType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype).
+<td>The value is the string representation of one of the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype"><strong>PartnerRelationshipType</strong></a>.
 <p>If the partner is signed in as a provider and you want to get a list of the indirect resellers with whom they have established a relationship, use IsIndirectCloudSolutionProviderOf.</p>
 <p>If the partner is signed in as a reseller and you want to get a list of the indirect providers with whom they have established a relationship, use IsIndirectResellerOf.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 **Request headers**
 
@@ -148,9 +148,9 @@ Date: Wed, 05 Apr 2017 21:08:44 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -81,7 +81,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/orders HTTP/1.1 |
 
- 
+ 
 
 **URI parameters**
 
@@ -91,7 +91,7 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -136,19 +136,19 @@ This table describes the **Order** properties in the request body.
 <td>billingCycle</td>
 <td>string</td>
 <td>No</td>
-<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [<strong>BillingCycleType</strong>](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype).
+<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype"><strong>BillingCycleType</strong></a>.
 <div class="alert">
 <strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
 <td>lineItems</td>
 <td>array of objects</td>
 <td>Yes</td>
-<td>An array of [OrderLineItem](#orderlineitem) resources.</td>
+<td>An array of <a href="#orderlineitem">OrderLineItem</a> resources.</td>
 </tr>
 <tr class="odd">
 <td>creationDate</td>
@@ -165,7 +165,7 @@ This table describes the **Order** properties in the request body.
 </tbody>
 </table>
 
- 
+ 
 
 This table describes the **OrderLineItem** properties in the request body.
 
@@ -233,7 +233,7 @@ This table describes the **OrderLineItem** properties in the request body.
 <strong>Note</strong>  Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller is not recorded and as a consequence incentive calculations may not include the sale.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -245,7 +245,7 @@ This table describes the **OrderLineItem** properties in the request body.
 </tbody>
 </table>
 
- 
+ 
 
 **Request example**
 
@@ -341,9 +341,9 @@ Date: Mon, 10 Apr 2017 23:02:24 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

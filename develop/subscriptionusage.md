@@ -27,7 +27,7 @@ with a usage summary for each pay period.
 >[Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md) and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 >instead.
 
- 
+ 
 
 Describes how much a subscription is used in a single day.
 
@@ -41,7 +41,7 @@ Describes how much a subscription is used in a single day.
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
- 
+ 
 
 ## <span id="SubscriptionMonthlyUsageRecord"></span><span id="subscriptionmonthlyusagerecord"></span><span id="SUBSCRIPTIONMONTHLYUSAGERECORD"></span>SubscriptionMonthlyUsageRecord
 
@@ -60,7 +60,7 @@ Describes how much a subscription is used in a single month.
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
- 
+ 
 
 ## <span id="SubscriptionUsageSummary"></span><span id="subscriptionusagesummary"></span><span id="SUBSCRIPTIONUSAGESUMMARY"></span>SubscriptionUsageSummary
 
@@ -80,11 +80,11 @@ billing period.
 | Links            | ResourceLinks      | The resource links corresponding to the SubscriptionUsageSummary.                                                      |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the SubscriptionUsageSummary.                                                 |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

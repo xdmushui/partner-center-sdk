@@ -50,7 +50,7 @@ BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.Billing
 |---------|--------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/billing HTTP/1.1 |
 
- 
+ 
 
 **Request headers**
 
@@ -160,9 +160,9 @@ Date: Mon, 21 Mar 2016 05:47:16 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

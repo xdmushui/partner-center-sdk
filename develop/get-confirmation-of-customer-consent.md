@@ -1,45 +1,60 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 8/02/2018
+ms.date: 10/14/2018
 ms.localizationpriority: medium
 ---
 
 # Get confirmation of customer acceptance of Microsoft Cloud agreement
 
-
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 > [!NOTE]  
 > The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
-> -   Partner Center operated by 21Vianet
-> -   Partner Center for Microsoft Cloud Germany
-> -   Partner Center for Microsoft Cloud for US Government
+> - Partner Center operated by 21Vianet
+> - Partner Center for Microsoft Cloud Germany
+> - Partner Center for Microsoft Cloud for US Government
 
+## Prerequisites
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+- If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
+- If you are using the Partner Center Java SDK, version 1.8 or newer is required.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer ID (customer-tenant-id).
 
- - If you are using Partner Center SDK, version 1.9 or newer is required. 
- - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with App+User credentials only. 
- - A customer ID (customer-tenant-id). 
+## Examples
 
+### .NET
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's identifier. Then, get the **Agreements** property, followed by calling the **Get** or **GetAsync** methods.
 
-### C#
-
-To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's ID. Then, get the **Agreements** property, followed by calling the **Get** or **GetAsync** methods.
-
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
 var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Get();
 ```
 
-**Sample:** Console test app. **Project:** PartnerSDK.FeatureSamples **Class:** GetCustomerAgreement.cs  
+#### .NET Sample
+
+A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+### Java
+
+To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, get the **getAgreements** function, followed by calling the **get** function.
+
+```java
+// IAggregatePartner partnerOperations;
+// String selectedCustomerId;
+
+ResourceCollection<Agreement> agreements = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().get();
+```
+
+#### Java Sample
+
+A complete sample can be found in the [GetCustomerAgreements](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetCustomerAgreements.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
 ### PowerShell
 
@@ -59,8 +74,6 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 |--------|--------------------------------------------------------------------------------------------------|
 | GET    | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/agreements HTTP/1.1 |
 
-
-
 **URI parameter**
 
 Use the following query parameter to specify the customer you are confirming.
@@ -69,17 +82,13 @@ Use the following query parameter to specify the customer you are confirming.
 |------------------|------|----------|-------------------------------------------------------------------------------------------|
 | CustomerTenantId | GUID | Y        | The value is a GUID formatted **CustomerTenantId** that allows you to specify a customer. |
 
-
-
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
-
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
 None.
-
 
 **Request example**
 
@@ -91,11 +100,9 @@ MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 ```
 
-
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
 
 If successful, this method returns a collection of **Agreement** resources in the response body.
-
 
 **Response success and error codes**
 
@@ -132,7 +139,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
                 "firstName":"Tania",
                 "lastName":"Carr",
                 "email":"SomeEmail@Outlook.com"
-                “phoneNumber:"1234567890"
+                "phoneNumber:"1234567890"
             },
             "templateId":"998b88de-aa99-4388-a42c-1b3517d49490",
             "dateAgreed":"2017-08-01T00:00:00",

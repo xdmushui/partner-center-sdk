@@ -45,7 +45,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | effectiveStartDate          | string in UTC date time format                           | Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.     |
 | commitmentEndDate           | string in UTC date time format                           | The commitment end date for this subscription, in date-time format. For subscriptions which are not autorenewable, this represents a date far, far away in the future. |
 | status                      | string                                                   | The subscription status: "none", "active", "suspended", or "deleted".     |
-| autoRenewEnabled            | boolean                                                  | Gets or sets a value indicating whether the subscription is renewed automatically. |
+| autoRenewEnabled            | boolean                                                  | Gets a value indicating whether the subscription is renewed automatically. |
 | billingType                 | string                                                   | Specifies how the subscription is billed: "none", "usage", or "license".  |
 | billingCycle                | string                                                   | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](products.md#billingcycletype). **Note** The annual billing feature is not yet generally available. Support for annual billing is coming soon. |
 | partnerId                   | string                                                   | The MPN ID of the reseller of record, used in the indirect partner model. |
@@ -55,7 +55,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | orderId                     | string                                                   | The ID of the order that was placed to begin the subscription.            |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes)             | The metadata attributes corresponding to the subscription.                |
 
- 
+ 
 
 ## <span id="SubscriptionLinks"></span><span id="subscriptionlinks"></span><span id="SUBSCRIPTIONLINKS"></span>SubscriptionLinks
 
@@ -70,7 +70,7 @@ Describes the collection of links attached to a subscription resource.
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
 
- 
+ 
 
 ## <span id="SubscriptionProvisioningStatus"></span><span id="subscriptionprovisioningstatus"></span><span id="SUBSCRIPTIONPROVISIONINGSTATUS"></span>SubscriptionProvisioningStatus
 
@@ -85,7 +85,7 @@ Provides information about the provisioning status of a subscription.
 | endDate    | string in UTC date time format                                 | The end date of the subscription.                                    |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                             |
 
- 
+ 
 
 ## <span id="SubscriptionRegistrationStatus"></span><span id="subscriptionregistrationstatus"></span><span id="SUBSCRIPTIONREGISTRATIONSTATUS"></span>SubscriptionRegistrationStatus
 
@@ -123,11 +123,11 @@ Returns a link that can be used to query the registration status of a subscripti
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | httpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus" |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

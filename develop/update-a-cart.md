@@ -53,7 +53,7 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 |---------|-------------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id} HTTP/1.1              |
 
- 
+ 
 
 **URI parameters**
 
@@ -64,7 +64,7 @@ Use the following path parameters to identify the customer, and specify the cart
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
 
- 
+ 
 
 **Request headers**
 
@@ -195,9 +195,9 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

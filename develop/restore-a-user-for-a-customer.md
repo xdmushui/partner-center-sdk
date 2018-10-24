@@ -57,7 +57,7 @@ var restoredCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 |-----------|--------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -68,7 +68,7 @@ Use the following query parameters to specify the customer id and user id.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results to a given customer. |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                         |
 
- 
+ 
 
 **Request headers**
 
@@ -83,7 +83,7 @@ This table describes the required properties in the request body.
 | State      | string | Y        | The user state. To restore a deleted user, this must contain "active". |
 | Attributes | object | N        | Contains "ObjectType": "CustomerUser".                                 |
 
- 
+ 
 
 **Request example**
 
@@ -150,9 +150,9 @@ Date: Fri, 20 Jan 2017 22:24:55 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

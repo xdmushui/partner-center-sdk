@@ -56,7 +56,7 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.Q
 |---------|-------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users?size={size}&filter={filter} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -68,7 +68,7 @@ Use the following path and query parameters when creating the request.
 | size        | int    | No       | The number of results to be displayed at one time. This parameter is optional.                                                                                                     |
 | filter      | filter | Yes      | The query that filters the user search. To retrieve deleted users, you must include and encode the following string: {"Field":"UserState","Value":"Inactive","Operator":"equals"}. |
 
- 
+ 
 
 **Request headers**
 
@@ -148,9 +148,9 @@ Date: Fri, 20 Jan 2017 19:13:14 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

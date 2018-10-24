@@ -39,25 +39,25 @@ versions of Partner Center:
 <td><p>Partner Center</p>
 <p>Partner Center for Microsoft Cloud Germany</p>
 <p>Partner Center for Microsoft Cloud for US Government</p></td>
-<td><em>https://api.partnercenter.microsoft.com</em></td>
+<td><em><a href="https://api.partnercenter.microsoft.com">https://api.partnercenter.microsoft.com</a></em></td>
 </tr>
 <tr class="even">
 <td>Partner Center operated by 21Vianet</td>
-<td><em>https://partner.partnercenterapi.microsoftonline.cn</em></td>
+<td><em><a href="https://partner.partnercenterapi.microsoftonline.cn">https://partner.partnercenterapi.microsoftonline.cn</a></em></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 >[!NOTE]
 >The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.   
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

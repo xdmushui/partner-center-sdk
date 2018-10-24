@@ -48,7 +48,7 @@ ConfigurationPolicy retrievedConfigurationPolicy =
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -59,7 +59,7 @@ Use the following path and query parameters when creating the request.
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 | policy-id   | string | Yes      | A GUID-formatted string that identifies the policy.   |
 
- 
+ 
 
 **Request headers**
 
@@ -117,9 +117,9 @@ Date: Tue, 25 Jul 2017 18:08:27 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

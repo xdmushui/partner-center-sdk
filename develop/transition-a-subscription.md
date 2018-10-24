@@ -51,7 +51,7 @@ UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerI
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades HTTP/1.1 |
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-target}/upgrades HTTP/1.1       |
 
- 
+ 
 
 **URI parameter**
 
@@ -63,7 +63,7 @@ Use the following query parameter to transition the subscription.
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 | **id-for-target**       | **guid** | Y        | A GUID corresponding to the target subscription.  |
 
- 
+ 
 
 **Request headers**
 
@@ -258,9 +258,9 @@ Date: Fri, 29 Jan 2016 20:44:21 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

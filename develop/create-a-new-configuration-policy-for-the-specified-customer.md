@@ -55,7 +55,7 @@ var createdConfigurationPolicy =
 |----------|------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -65,7 +65,7 @@ Use the following path parameters when creating the request.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+ 
 
 **Request headers**
 
@@ -82,7 +82,7 @@ The request body must contain an object with the configuration policy informatio
 | description    | string           | No       | The policy description.          |
 | policySettings | array of strings | Yes      | The policy settings.             |
 
- 
+ 
 
 **Request example**
 
@@ -141,9 +141,9 @@ Date: Tue, 25 Jul 2017 18:07:36 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

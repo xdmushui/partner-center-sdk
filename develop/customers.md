@@ -44,7 +44,7 @@ Describes a customer resource.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)             | The resource links contained within the profile.                                                                                             |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes)   | The metadata attributes corresponding to the profile.                                                                                        |
 
- 
+ 
 
 ## <span id="customerCompanyProfile"></span><span id="customercompanyprofile"></span><span id="CUSTOMERCOMPANYPROFILE"></span>CustomerCompanyProfile
 
@@ -59,7 +59,7 @@ Additional information about the company or organization.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                  |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                             |
 
- 
+ 
 
 ## <span id="customerBillingProfile"></span><span id="customerbillingprofile"></span><span id="CUSTOMERBILLINGPROFILE"></span>CustomerBillingProfile
 
@@ -79,7 +79,7 @@ Additional information used for billing the customer.
 | links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                                                                                       |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                  |
 
- 
+ 
 
 ## <span id="CustomerRelationshipRequest"></span><span id="customerrelationshiprequest"></span><span id="CUSTOMERRELATIONSHIPREQUEST"></span>CustomerRelationshipRequest
 
@@ -92,11 +92,11 @@ relationship with a partner.
 | url        | string                                                         | The URL used by the customer to establish a relationship with a partner. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the relationship request.       |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

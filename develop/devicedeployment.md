@@ -33,7 +33,7 @@ Provides information about a configuration policy.
 | lastModifiedDate     | string in UTC date-time format                                 | The date and time the policy was last modified.                                                                                                           |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                  |
 
- 
+ 
 
 ## <span id="Device"></span><span id="device"></span><span id="DEVICE"></span>Device
 
@@ -53,7 +53,7 @@ Provides information about a device.
 | allowedOperations   | array of strings                                               | The list of HTTP methods allowed on a device sync as GET, PATCH, DELETE. |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                 |
 
- 
+ 
 
 ## <span id="BatchUploadDetails"></span><span id="batchuploaddetails"></span><span id="BATCHUPLOADDETAILS"></span>BatchUploadDetails
 
@@ -70,7 +70,7 @@ device in a list of devices.
 | devicesStatus   | array of [DeviceUploadDetails](#deviceuploaddetails) resources | An array of objects that specify the status of each device information upload.                       |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                             |
 
- 
+ 
 
 ## <span id="DeviceUploadDetails"></span><span id="deviceuploaddetails"></span><span id="DEVICEUPLOADDETAILS"></span>DeviceUploadDetails
 
@@ -87,7 +87,7 @@ Describes the status of an upload of information about a device.
 | errorDescription | string                                                         | If the device upload fails, the HTTP error description.                                           |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                          |
 
- 
+ 
 
 ## <span id="DeviceBatch"></span><span id="devicebatch"></span><span id="DEVICEBATCH"></span>DeviceBatch
 
@@ -103,7 +103,7 @@ Represents a collection of devices.
 | devicesLink  | [Link](utility-resources.md#link)                             | A link to the devices contained in this batch.                        |
 | attributes   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                              |
 
- 
+ 
 
 ## <span id="DeviceBatchCreationRequest"></span><span id="devicebatchcreationrequest"></span><span id="DEVICEBATCHCREATIONREQUEST"></span>DeviceBatchCreationRequest
 
@@ -132,7 +132,7 @@ it with devices.
 </tr>
 <tr class="even">
 <td>devices</td>
-<td>array of [Device](#device) objects</td>
+<td>array of <a href="#device">Device</a> objects</td>
 <td>Each object specifies a device.
 <p>The following combinations of fields for identifying a device are accepted:</p>
 <ul>
@@ -146,13 +146,13 @@ it with devices.
 </tr>
 <tr class="odd">
 <td>attributes</td>
-<td>[ResourceAttributes](utility-resources.md#resourceattributes)</td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <span id="DevicePolicyUpdateRequest"></span><span id="devicepolicyupdaterequest"></span><span id="DEVICEPOLICYUPDATEREQUEST"></span>DevicePolicyUpdateRequest
 
@@ -176,7 +176,7 @@ policy.
 <tbody>
 <tr class="odd">
 <td>devices</td>
-<td>array of [Device](#device) objects</td>
+<td>array of <a href="#device">Device</a> objects</td>
 <td>Each object specifies a device. The following properties are required:
 <ul>
 <li>Id.</li>
@@ -185,17 +185,17 @@ policy.
 </tr>
 <tr class="even">
 <td>attributes</td>
-<td>[ResourceAttributes](utility-resources.md#resourceattributes)</td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

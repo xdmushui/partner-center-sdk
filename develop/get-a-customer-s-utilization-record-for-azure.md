@@ -2,12 +2,11 @@
 title: Get a customer's utilization records for Azure
 description: Gets the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
-ms.date: 9/21/2018
+ms.date: 9/28/2018
 ms.localizationpriority: medium
 ---
 
 # Get a customer's utilization records for Azure
-
 
 **Applies To**
 
@@ -25,17 +24,18 @@ This REST API is paged. If the response payload is larger than a single page, yo
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone app and App+User credentials.
 -   A customer identifier.
 -   A subscription identifier.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To obtain the Azure Utilization Records, you first need a customer ID and a subscription ID. You then call the [**IAzureUtilizationCollection.Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.utilization.iazureutilizationcollection.query) method to return a [**ResourceCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.resourcecollection-1) that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
 
-``` csharp
+```csharp
+// IAggregatePartner partnerOperations;
 // string customerId;
 // string subscriptionId;
 
@@ -49,32 +49,72 @@ var utilizationRecords = partner.Customers[customerId].Subscriptions[subscriptio
 
 // Create an Azure utilization enumerator which will aid us in traversing the utilization pages.
 var utilizationRecordEnumerator = partner.Enumerators.Utilization.Azure.Create(utilizationRecords);
-int pageNumber = 1;
 
 while (utilizationRecordEnumerator.HasValue)
 {
-    // Get the next page.
-    utilizationRecordEnumerator.Next();
- 
     // 
     // Insert code here to work with this page.
     //
-    pageNumber++;
+
+    // Get the next page.
+    utilizationRecordEnumerator.Next();
 }
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureSubscriptionUtilization.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+### Java
 
+To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the **IAzureUtilizationCollection.query** function to return a **ResourceCollection** that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
+
+```java
+// IAggregatePartner partnerOperations;
+// String customerId;
+// String subscriptionId;
+
+ResourceCollection<AzureUtilizationRecord> utilizationRecords = partnerOperations.getCustomers()
+  .byId(customerId).getSubscriptions().byId(subscriptionId)
+  .getUtilization().getAzure().query(
+      new DateTime().minusYears(1), 
+      new DateTime(), 
+      AzureUtilizationGranularity.Daily, 
+      true, 
+      100);
+
+// Create an Azure utilization enumerator which will aid us in traversing the utilization pages
+IResourceCollectionEnumerator<ResourceCollection<AzureUtilizationRecord>> utilizationRecordEnumerator = 
+    partnerOperations.getEnumerators().getUtilization().getAzure().create(utilizationRecords);
+
+while (utilizationRecordEnumerator.hasValue())
+{
+    // 
+    // Insert code here to work with this page.
+    //
+
+    // get the next page
+    utilizationRecordEnumerator.next();
+}
+```
+
+### PowerShell
+
+To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the [**Get-PartnerCustomerSubscriptionUtilization**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerSubscriptionUtilization.md). This command will return all records available for the specified period of time.
+
+```powershell
+# $customerId
+# $subscriptionId
+
+Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -SubscriptionId $subscriptionId -StartDate (Get-Date).AddDays(-2).ToUniversalTime() -Granularity Hourly -ShowDetails
+```
+
+## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
 
-| Method  | Request URI                                                                                                                                                                                                          |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True|False}&size={page-size} |
 
- 
+| Method  |                                                                                         Request URI                                                                                          |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True |
 
 **URI parameters**
 
@@ -144,8 +184,6 @@ Use the following path and query parameters to get the utilization records.
 </tr>
 </tbody>
 </table>
-
- 
 
 **Request headers**
 

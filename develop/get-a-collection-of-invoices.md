@@ -82,7 +82,7 @@ For a slightly different example, see **Sample**: [Console test app](console-tes
 |---------|----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices?size={size}&offset={offset} HTTP/1.1  |
 
- 
+ 
 
 **URI parameters**
 
@@ -93,7 +93,7 @@ Use the following query parameters when creating the request.
 | size   | int  | No       | The number of invoice resources to return in the response. This parameter is optional. |
 | offset | int  | No       | The zero-based index of the first invoice to return.                                   |
 
- 
+ 
 
 **Request headers**
 
@@ -255,9 +255,9 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

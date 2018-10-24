@@ -46,7 +46,7 @@ Describes the properties of an Azure Rate Card resource.
 | offerTerms    | array of objects                          | Array of [AzureOfferTerm](#azureofferterm) objects.               |
 | attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Contains "objectType": "AzureRateCard"   |
 
- 
+ 
 
 ## <span id="AzureMeter"></span><span id="azuremeter"></span><span id="AZUREMETER"></span>AzureMeter
 
@@ -64,7 +64,7 @@ Describes the properties of an Azure Rate Card resource.
 | includedQuantity | number           | Meter quantity that is included free of charge.                                               |
 | effectiveDate    | string           | The date this meter is in effect.                                                             |
 
- 
+ 
 
 ## <span id="AzureOfferTerm"></span><span id="azureofferterm"></span><span id="AZUREOFFERTERM"></span>AzureOfferTerm
 
@@ -76,16 +76,16 @@ Describes the properties of an Azure Rate Card resource.
 | excludedMeterIds | array of strings | Meters excluded from the offer, if any. |
 | effectiveDate    | string           | The date the offer is in effect.        |
 
- 
+ 
 
 ## <span id="Operations_on_the_AzureRateCard_resource"></span><span id="operations_on_the_azureratecard_resource"></span><span id="OPERATIONS_ON_THE_AZURERATECARD_RESOURCE"></span>Operations on the AzureRateCard resource
 
 
 -   [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 
- 
+ 
 
- 
+ 
 
 
 

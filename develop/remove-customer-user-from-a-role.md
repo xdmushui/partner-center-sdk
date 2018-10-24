@@ -46,7 +46,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers/{user-ID} HTTP/1.1 |
 
- 
+ 
 
 **URI parameter**
 
@@ -58,7 +58,7 @@ Use the following URI parameters to identify the correct customer, role and user
 | **role-id**            | **guid** | Y        | The value is a GUID formatted **role-id** that identifies the role.                |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that identifies a single user account.   |
 
- 
+ 
 
 **Request headers**
 
@@ -103,9 +103,9 @@ MS-ServerId: 101112616
 Date: Tue, 20 Dec 2016 23:16:35 GMT
 ```
 
- 
+ 
 
- 
+ 
 
 
 

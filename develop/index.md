@@ -24,14 +24,55 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Get the SDK</h3>
-                            <p>Download the Partner Center SDK to build the same features provided in Partner Center in your own applications.</p>
+                            <h3>Get the .NET SDK</h3>
+                            <p>Download the Partner Center .NET SDK to build the same features provided in Partner Dashboard in your own applications.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </a>
     </li>
+    <li>
+        <a href="https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.0/jar">
+            <div class="cardSize">
+                <div class="cardPadding">
+                    <div class="card">
+                        <div class="cardImageOuter">
+                            <div class="cardImage bgdAccent1">
+                                <img alt="" src="https://docs.microsoft.com/visualstudio/images/vs_web-1.svg" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText">
+                            <h3>Get the Java SDK</h3>
+                            <p>Download the Partner Center Java SDK to build the same features provided in Partner Dashboard in your own applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.powershellgallery.com/packages/PartnerCenter">
+            <div class="cardSize">
+                <div class="cardPadding">
+                    <div class="card">
+                        <div class="cardImageOuter">
+                            <div class="cardImage bgdAccent1">
+                                <img alt="" hieght="50%" width="50%" src="https://docs.microsoft.com/visualstudio/images/vs_features-4.svg" data-linktype="external">
+                            </div>
+                        </div>
+                        <div class="cardText">
+                            <h3>Get the PowerShell module</h3>
+                            <p>Install the Partner Center PowerShell module to develop scripts that provide the same features provided in Partner Dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
         <a href="https://docs.microsoft.com/partner-center/develop/partner-center-samples">
             <div class="cardSize">
@@ -71,6 +112,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         </a>
     </li>
 </ul>
+
 <hr />
 
 <ul id="products2" class="cardsZ cols cols3 panelContent">
@@ -113,7 +155,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 </ul>
 <hr />
 
-<h2>What's New</h2>
+<h2>What&#39;s New</h2>
 <p>The following topics are new or updated for Partner Center SDK version 1.9.</p>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
@@ -149,7 +191,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             </div>
         </div>
     </li>
-	<li>
+    <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -168,8 +210,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <div class="card">                    
-                    <div class="cardText">
+                <div class="card"><br/>                    <div class="cardText">
                         <h3>Activity log</h3>
                         <p><a href="https://docs.microsoft.com/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
                     </div>

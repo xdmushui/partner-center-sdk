@@ -2,12 +2,11 @@
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 12/15/2017
+ms.date: 09/29/2018
 ms.localizationpriority: medium
 ---
 
 # Get an order by ID
-
 
 **Applies To**
 
@@ -20,17 +19,17 @@ Gets an [Order](orders.md) resource that matches the customer and order ID.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
-
 -   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 -   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 -   An order ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
 
+### C#
 
 To get a customer's order by ID, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method once more. Finish by calling [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.getasync).
 
-``` csharp
+```csharp
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 // string selectedOrderId;
@@ -40,8 +39,30 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+### Java
 
+To get a customer's order by ID, use your **IAggregatePartner.getCustomers** function and call the **byId()** function. Then call the **getOrders** function, followed by the **byID()** funnction once more. Finish by calling the **get()** function.
+
+```java
+// IAggregatePartner partnerOperations;
+// String selectedCustomerId;
+// String selectedOrderId;
+
+Order order = partnerOperations.getCustomers().byId(selectedCustomerId).getOrders().byId(selectedOrderId).get();
+```
+
+### PowerShell
+
+To get a customer's order by ID, execute the [**Get-PartnerCustomerOrder**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerOrder.md) command, and specify the **CustomerId** and **OrderId** paramaeters.
+
+```powershell 
+# $selectedCustomerId
+# $selectedOrderId
+
+Get-PartnerCustomerOrder -CustomerId $selectedCustomerId -OrderId $selectedOrderId
+```
+
+## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
 **Request syntax**
 
@@ -49,7 +70,7 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 |---------|--------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order} HTTP/1.1  |
 
- 
+ 
 
 **URI parameter**
 
@@ -60,7 +81,7 @@ This table lists the required query parameters to get an order by ID.
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer. |
 | id-for-order           | string   | Yes      | A string corresponding to the order ID.                |
 
- 
+ 
 
 **Request headers**
 
@@ -82,7 +103,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
-
 
 If successful, this method returns an [Order](orders.md) resource in the response body.
 
@@ -139,11 +159,3 @@ Date: Thu, 15 Mar 2018 22:05:30 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

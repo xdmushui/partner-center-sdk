@@ -30,7 +30,7 @@ Represents a relationship between two partners.
 | state            | string                                                         | The state of the relationship (e.g. "active").                                                                                                 |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                       |
 
- 
+ 
 
 ## <span id="RelationshipRequest"></span><span id="relationshiprequest"></span><span id="RELATIONSHIPREQUEST"></span>RelationshipRequest
 
@@ -43,11 +43,11 @@ partner.
 | url        | string                                                         | The relationship request URL. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.      |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 
