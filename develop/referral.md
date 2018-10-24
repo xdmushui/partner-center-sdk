@@ -31,7 +31,7 @@ Represents the referral.
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
 | StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral marked as lost? |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
