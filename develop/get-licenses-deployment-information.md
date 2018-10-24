@@ -20,17 +20,6 @@ How to get licenses deployment information aggregated to include all customers.
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
 
-## <span id="C_"></span><span id="c_"></span>C#
-
-To retrieve aggregated data on licenses deployment, first get an interface to analytics collection operations from the [**IAggregateCustomer.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.icustomerlicensesanalyticscollection) property. Finally, call the [**Deployment.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses deployment. If the method succeeds you'll get a collection of [**PartnerLicensesDeploymentInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesdeploymentinsights) objects.
-
-``` csharp
-// IAggregatePartner partnerOperations;
-
-var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.Deployment.Get();
-```
-
-
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
 **Request syntax**
@@ -45,7 +34,7 @@ var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.De
 -   See [Partner Center REST headers](headers.md) for more information.  
 
 
-**Request body**
+**URI parameters**
 
 | Parameter         | Type     | Description | Required |  
 |-------------------|----------|-------------|----------|  
@@ -56,23 +45,31 @@ var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.De
 | processedDateTime | DateTime | One can specify the date from which usage data was processed. Defaults to the latest date when the data was processed | No | 
 
 
-
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/analytics/commercial/deployment/license/ HTTP/1.1
-Authorization: Bearer <token>
-Accept: application/json
-MS-RequestId: 25b6edd5-1f53-456b-b48c-c64f60ec2dda
-MS-CorrelationId: 6492b9d6-5629-429b-934c-040b1946e760
-X-Locale: en-US
-Host: api.partnercenter.microsoft.com
+
 ```
 
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-If successful, the response body contains a collection of [CustomerLicensesDeploymentInsights](analytics.md#customerlicensesdeploymentinsights) resources that provide information about the licenses deployed.
+If successful, the response body contains the following fields containing data about the licenses deployed.
+
+| Field             | Type     | Description                           |
+|-------------------|----------|---------------------------------------|
+| serviceCode       | string   | Service Code                          |
+| serviceName       | string   | Service Name                          |
+| channel           | string   | Channel name, reseller                |
+| customerTenantId  | string   | Unique identifier for the customer    |
+| customerName      | string   | Customer name                         |
+| productId         | string   | Unique identifier for the product     |
+| productName       | string   | Product name                          |
+| licensesDeployed  | long     | Number of licenses deployed           |
+| licensesSold      | long     | Number of licenses sold               |
+| processedDateTime | DateTime | Date when the data was last processed |
+
+
 
 **Response success and error codes**
 
@@ -81,43 +78,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ```http
-HTTP/1.1 200 OK
-Content-Length: 950
-Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 6492b9d6-5629-429b-934c-040b1946e760
-MS-RequestId: 25b6edd5-1f53-456b-b48c-c64f60ec2dda
-MS-CV: f0trvmq8mEScHcFS.0
-MS-ServerId: 102030524
-Date: Tue, 14 Mar 2017 17:55:01 GMT
 
-{
-  "Value": [
-    {
-      "processedDateTime": "2018-10-02T00:00:00",
-      "serviceCode": "o365",
-      "serviceName": "Microsoft Office 365",
-      "channel": "reseller",
-      "customerTenantId": "4F9D7DF5-8EBD-4973-B221-013976C1078A",
-      "customerName": "LARACHOTEST123",
-      "productId": "D42C793F-6C78-4F43-92CA-E8F6A02B035F",
-      "productName": "SKYPE FOR BUSINESS ONLINE (PLAN 2)",
-      "licensesDeployed": 0,
-      "licensesSold": 2
-    },
-    {
-      "processedDateTime": "2018-10-02T00:00:00",
-      "serviceCode": "o365",
-      "serviceName": "Microsoft Office 365",
-      "channel": "reseller",
-      "customerTenantId": "4FD49354-715A-4B49-9079-A77AE978D1DC",
-      "customerName": "TESTORG",
-      "productId": "CDD28E44-67E3-425E-BE4C-737FAB2899D3",
-      "productName": "OFFICE 365 BUSINESS",
-      "licensesDeployed": 0,
-      "licensesSold": 2
-    }
-],
-  "@nextLink": null,
-  "TotalCount": 2
-}
 ```
