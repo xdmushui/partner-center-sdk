@@ -33,12 +33,13 @@ This topic explains how to create a referral.
 
 Use the following query parameters to get a list of referrals
 
-| Name                   | Type     | Required | Description                                                     |
+| Name                   | Type     | Required | Description                                                    |
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |engagementId            | string   | No       | An engagement ID.       |
 |self                    | string   | No       | A string of value "true" will return only the referrals for your organization.     |
 |status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).        |
-|invitedByOrganization   | string   | No       | An organization ID. Will return referrals associated with a specific organization. To invite Microsoft use "MSFT".   |
+|pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum. |
+|invitedByOrganization   | string   | No       | An organization ID. Will return referrals associated with a specific organization. |
  
 **Request headers**
 

@@ -149,6 +149,16 @@ Describes contact information for a specific individual.
 | LastName    | string | The contact's last name.     |
 | PhoneNumber | string | The contact's phone number.  |
 | Email       | string | The contact's email address. |
+| ContactPreference       | [ContactPreference](referral.md#ContactPreference) | The contact's preference for receiving email notifications. |
+
+## <span id="ContactPreference"></span><span id="contactpreference"></span><span id="CONTACTPREFERENCE"></span>ContactPreference
+
+Describes contact preferences for receiving email notifications.
+
+| Property    | Type   | Description                  |
+|-------------|--------|------------------------------|
+| Locale   | string | The locale of the email notification.    |
+| DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
 ## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
