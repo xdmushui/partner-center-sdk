@@ -27,7 +27,7 @@ This topic explains how to create a referral.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0                                                   |
+| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals                                                   |
  
 **Request headers**
 
@@ -59,7 +59,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-POST https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0 HTTP/1.1
+POST https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

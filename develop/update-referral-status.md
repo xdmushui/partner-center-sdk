@@ -28,7 +28,7 @@ This topic explains how to update a referral's status.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **PUT** | https://api.partner.microsoft.com/engagements/referrals/{Id}/?api-version=v1.0                                       |
+| **PUT** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}                                      |
 
  
 **Request headers**
@@ -71,7 +71,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-PUT https://api.partner.microsoft.com/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c/?api-version=v1.0 HTTP/1.1
+PUT https://api.partner.microsoft.com/v1.0/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

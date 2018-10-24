@@ -27,7 +27,7 @@ This topic explains how to create a referral.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0&pageSize=2&self=true&status=Active                                                     |
+| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active                                                     |
 
 **URI parameter**
 
@@ -52,7 +52,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/engagements/referrals?api-version=v1.0&pageSize=2&self=true&status=Active HTTP/1.1
+GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
