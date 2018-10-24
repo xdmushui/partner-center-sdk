@@ -54,7 +54,7 @@ To help you integrate and test your API integration, Partner Center supports two
     >[!NOTE]
     >If you don't see an Integration sandbox option, you might not have a global admin account, or the integration sandbox has already been set up and you're using an integration sandbox account.
 
-4.  Fill in the contact information for the integration sandbox admin account, and then click **Set up account**. You might need to wait a few minutes for the account to be created.
+4.  Fill in the contact information for the integration sandbox admin account, and then click **Create account**. You might need to wait a few minutes for the account to be created.
 
 5.  After you see the confirmation message, sign out of Partner Dashboard, then sign back in with your new integration sandbox admin account, in the form *username*@*domain* and with the password you just specified.
 
@@ -72,9 +72,9 @@ After your account is set up, you must enable API access before you can use the 
 
 3.  On the **Account settings** page, select **App management**.
 
-4.  Select an existing app or create a new app with default settings. Existing apps show up only if the Azure AD account has existing apps.
+4. If you do not already have an existing app, add a new web app. If you have an existing web app, click the **Add key** button.
 
-5.  On the confirmation page, copy the app registration information, especially the **Key** if you're creating a Web App, and store it in a safe place.
+5.  Copy the app registration information, especially the **Key** if you're creating a Web App, and store it in a safe place.
 
 6.  Sign out of Partner Dashboard, then sign back in with your integration sandbox account. Repeat steps 2-5 to enable API access in the integration sandbox.
 
