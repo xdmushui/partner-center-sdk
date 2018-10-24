@@ -20,17 +20,16 @@ How to get licenses deployment information aggregated to include all customers.
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
 
-<!-- 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To retrieve aggregated data on licenses deployment, first get an interface to partner level analytics collection operations from the [**IAggregatePartner.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the partner level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.ipartneranalyticscollection.licenses) property. Finally, call the [**Deployment.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses deployment. If the method succeeds you'll get a collection of [**PartnerLicensesDeploymentInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesdeploymentinsights) objects.
+To retrieve aggregated data on licenses deployment, first get an interface to analytics collection operations from the [**IAggregateCustomer.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.icustomerlicensesanalyticscollection) property. Finally, call the [**Deployment.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses deployment. If the method succeeds you'll get a collection of [**PartnerLicensesDeploymentInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesdeploymentinsights) objects.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
 
 var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.Deployment.Get();
 ```
- -->
+
 
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
@@ -83,7 +82,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 487
+Content-Length: 950
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: 6492b9d6-5629-429b-934c-040b1946e760
 MS-RequestId: 25b6edd5-1f53-456b-b48c-c64f60ec2dda

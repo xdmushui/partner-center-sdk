@@ -1,18 +1,18 @@
 ---
-title: Get partner licenses usage information
-description: How to get partner licenses usage information aggregated to include all customers.
+title: Get licenses usage information
+description: How to get licenses usage information aggregated to include all customers.
 ms.assetid: 87BCC8FC-5C29-4245-8607-BB62ABC03EDE
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Get partner licenses usage information
+# Get licenses usage information
 
 **Applies To**
 
 -   Partner Center
 
-How to get partner licenses usage information aggregated to include all customers.
+How to get licenses usage information aggregated to include all customers.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -22,7 +22,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 ## <span id="C_"></span><span id="c_"></span>C#
 
 
-To retrieve aggregated data on licenses deployment, first get an interface to partner level analytics collection operations from the [**IAggregatePartner.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the partner level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.ipartneranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**PartnerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesusageinsights) objects.
+To retrieve aggregated data on licenses deployment, first get an interface to analytics collection operations from the [**IAggregatePartner.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.ipartneranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**PartnerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesusageinsights) objects.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
