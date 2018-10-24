@@ -111,6 +111,17 @@ Contains the customer contact information.
 | Address         | [Address](referral.md#address)                                | The address of the customer.                            |
 | Size            | string                                                        | The number of employees at the customers organization.  |
 | Team            | [Member](referral.md#Member)                                  | The contacts for the customer organization.             |
+| Ids            | [CustomerProfileType](referral.md#CustomerProfileType)                      | External ID's for the customer.             |
+
+## <span id="CustomerProfileType"></span><span id="customerprofiletype"></span><span id="CUSTOMERPROFILETYPE"></span>CustomerProfileType
+
+Contains the External ID's for the customer. 
+
+| Property        | Type                                                          | Description                                             |
+|-----------------|---------------------------------------------------------------|---------------------------------------------------------|
+| Duns            | string                                                        | The Dun & Bradstreet number for the customer. https://www.dnb.com/duns-number                        |
+| External        | string                                                        | A customer ID unique to your organization.                      |
+
 
 
 ## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
