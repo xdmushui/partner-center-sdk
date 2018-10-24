@@ -197,7 +197,7 @@ samples](partner-center-samples.md) section.
 <td><ul>
 <li>Referral</li>
 <li>ReferralStatus</li>
-<li>ReferralStatusDetail</li>
+<li>ReferralSubstatus</li>
 <li>ReferralType</li>
 <li>ReferralQualifier</li>
 <li>CustomerProfile</li>

@@ -83,7 +83,7 @@ Each response comes with an HTTP status code that indicates success or failure a
             "updatedDateTime": "2018-10-01T18:09:24.3590344Z",
             "expirationDateTime": "2018-10-09T00:00:00Z",
             "status": "Active",
-            "statusDetail": "Accepted",
+            "Substatus": "Accepted",
             "qualification": "SalesQualified",
             "type": "Shared",
             "customerProfile": {
@@ -156,7 +156,7 @@ Each response comes with an HTTP status code that indicates success or failure a
             "updatedDateTime": "2018-10-01T18:17:14.7383089Z",
             "expirationDateTime": "2018-10-09T00:00:00Z",
             "status": "Active",
-            "statusDetail": "Accepted",
+            "Substatus": "Accepted",
             "qualification": "SalesQualified",
             "type": "Shared",
             "customerProfile": {

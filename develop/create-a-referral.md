@@ -46,7 +46,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
@@ -67,7 +67,7 @@ Content-Type: application/json
 {  
     "ExternalReferenceId": "MyCRMID1234",
     "status": "Active",
-    "statusDetail":"Pending",
+    "Substatus":"Pending",
     "Type": "Shared",
     "Qualification": "SalesQualified",
     "customerProfile": {
@@ -162,7 +162,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     "updatedDateTime": "2018-10-01T18:01:32.8796627Z",
     "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Active",
-    "statusDetail": "Accepted",
+    "Substatus": "Accepted",
     "qualification": "SalesQualified",
     "type": "Shared",
     "customerProfile": {

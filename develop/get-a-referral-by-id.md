@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-This topic explains how to create a referral.
+This topic explains how to get a referral by ID.
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -71,16 +71,16 @@ Each response comes with an HTTP status code that indicates success or failure a
 {
     "id": "0d43414c-fb9f-4ca0-9b8d-29deb70364cf",
     "engagementId": "29c3f916-8840-4565-b584-48ccafe0b835",
-    "organizationId": "msft",
-    "organizationName": "Microsoft",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "organizationName": "Fabrikam Partner Inc",
     "externalReferenceId": "mycrmid1234",
     "createdDateTime": "2018-10-01T18:01:32.8796627Z",
     "updatedDateTime": "2018-10-01T18:01:32.8796627Z",
     "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Active",
-    "statusDetail": "Accepted",
+    "Substatus": "Accepted",
     "qualification": "SalesQualified",
-    "type": "Shared",
+    "type": "Independent",
     "customerProfile": {
         "name": "Contoso Inc",
         "address": {

@@ -51,7 +51,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| StatusDetail          | [ReferralStatusDetail](referral.md#ReferralStatusDetail)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
@@ -60,9 +60,9 @@ This table describes the [Referral](referral.md) properties in the request body.
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
-**Status & StatusDetail transition states**
+**Status & Substatus transition states**
 
-| Status                | Allowed Status Transition     | Allowed StatusDetail                  |
+| Status                | Allowed Status Transition     | Allowed Substatus                  |
 |-----------------------|-------------------------------|---------------------------------------|
 | New                   | New, Active, Closed           | Pending, Received                     |
 | Active                | Active, Closed                | Accepted                              |
@@ -85,7 +85,8 @@ Content-Type: application/json
     "updatedDateTime": "2018-10-01T18:17:36.254263Z",
     "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Closed",
-    "statusDetail": "Won",
+    "Substatus": "Won",
+    "StatusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
     "type": "Shared",
     "customerProfile": {
@@ -156,7 +157,8 @@ Each response comes with an HTTP status code that indicates success or failure a
     "updatedDateTime": "2018-10-01T20:51:16.8337242Z",
     "expirationDateTime": "2018-10-09T00:00:00Z",
     "status": "Closed",
-    "statusDetail": "Won",
+    "Substatus": "Won",
+    "StatusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
     "type": "Shared",
     "customerProfile": {
