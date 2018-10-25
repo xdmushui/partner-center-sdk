@@ -119,7 +119,7 @@ Contains the External ID's for the customer.
 
 | Property        | Type                                                          | Description                                             |
 |-----------------|---------------------------------------------------------------|---------------------------------------------------------|
-| Duns            | string                                                        | The Dun & Bradstreet number for the customer. https://www.dnb.com/duns-number                        |
+| Duns            | string                                                        | The [Dun & Bradstreet number](https://www.dnb.com/duns-number ) for the customer.                        |
 | External        | string                                                        | A customer ID unique to your organization.                      |
 
 
@@ -157,7 +157,7 @@ Describes contact preferences for receiving email notifications.
 
 | Property    | Type   | Description                  |
 |-------------|--------|------------------------------|
-| Locale   | string | The locale of the email notification. AllCultures, NeutralCultures, and SpecificCultures are supported https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures |
+| Locale   | string | The locale of the email notification. [AllCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_AllCultures), [NeutralCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures), and [SpecificCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_SpecificCultures) are supported  |
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
@@ -190,7 +190,7 @@ Represents the referral details.
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
 | DealValue             | decimal                                                    | Value of the referral.                                    |
-| Currency              | string                                                    | The ISO 4217 currency symbol https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2                                   |
+| Currency              | string                                                    | The [ISO 4217 currency symbol](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2)                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
 | Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 
@@ -301,10 +301,10 @@ Describes the tag.
 
 | Value        |
 |-----------------|
- |AdvancedAnalytics|
-    |ApplicationIntegration|
-    |ArtificialIntelligence|
-    |AzureSecurityOperationManagement|
+|AdvancedAnalytics|
+|ApplicationIntegration|
+|ArtificialIntelligence|
+|AzureSecurityOperationManagement|
     |AzureStack|
     |BackupDisasterRecovery|
     |BigData|
