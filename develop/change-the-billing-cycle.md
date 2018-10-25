@@ -19,6 +19,12 @@ Updates an [Order](orders.md) from monthly to annual billing or from annual to m
 
 In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
 
+**Out of Scope**  
+- Changing the billing cycle for trials
+- Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
+- Changing the billing cycles for inactive subscriptions
+- Changing billing cycles for Microsoft online services license-based subscriptions
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
