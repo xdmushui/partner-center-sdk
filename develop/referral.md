@@ -23,7 +23,7 @@ Represents the referral.
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
 | Name                  | string                                            | The name of the Referral.                 |
-| OrganizationId        | [profiles](referral.md#OrganizationProfile)       | The organization ID of the party that owns the referral.           |
+| OrganizationId        | string                                            | The [organization ID(profile.md#OrganizationProfile) of the party that owns the referral.           |
 | BusinessProfileId     | string                                            | The business profile ID of the organization that owns the referral.                                       |
 | OrganizationName      | string                                            | The organization name that owns the referral. Example: Store your own Dynamics 365 lead/opportunity ID   |
 | ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
