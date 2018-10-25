@@ -45,7 +45,7 @@ Use the following query parameters to get a list of referrals
 **Request body**
 
 This table describes the [Referral](referral.md) properties in the request body.
-
+    
 **Request example**
 
 ```http

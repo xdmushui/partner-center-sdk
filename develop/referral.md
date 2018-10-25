@@ -238,348 +238,131 @@ Describes the tag.
 
 ### Products
 
-``` json
-[
-  {
-    "id": "Azure"
-  },
-  {
-    "id": "EnterpriseMobilityAndSecurity"
-  },
-  {
-    "id": "Exchange"
-  },
-  {
-    "id": "DeveloperTools"
-  },
-  {
-    "id": "Dynamics365Business"
-  },
-  {
-    "id": "Dynamics365Enterprise"
-  },
-  {
-    "id": "DynamicsAX,GP,NAV,SL"
-  },
-  {
-    "id": "Microsoft365"
-  },
-  {
-    "id": "Office"
-  },
-  {
-    "id": "PowerBI"
-  },
-  {
-    "id": "Project"
-  },
-  {
-    "id": "SharePoint"
-  },
-  {
-    "id": "SkypeForBusiness"
-  },
-  {
-    "id": "Surface"
-  },
-  {
-    "id": "SurfaceHub"
-  },
-  {
-    "id": "SQL"
-  },
-  {
-    "id": "Teams"
-  },
-  {
-    "id": "Visio"
-  },
-  {
-    "id": "Windows"
-  },
-  {
-    "id": "Yammer"
-  }
-]
-```
-
+| Value        |
+|-----------------|
+|Azure|
+|EnterpriseMobilityAndSecurity|
+|Exchange|
+|DeveloperTools|
+|Dynamics365Business|
+|Dynamics365Enterprise|
+|DynamicsAX,GP,NAV,SL|
+|Microsoft365|
+|Office|
+|PowerBI|
+|Project|
+|SharePoint|
+|SkypeForBusiness|
+|Surface|
+|SurfaceHub|
+|SQL|
+|Teams|
+|Visio|
+|Windows|
+|Yammer|
 
 ### Services
 
-``` json
-[
-  {
-    "id": "ConsultingAndProfessional"
-  },
-  {
-    "id": "CustomSolution(ISV)"
-  },
-  {
-    "id": "DeploymentOrMigration"
-  },
-  {
-    "id": "Hardware"
-  },
-  {
-    "id": "Integration"
-  },
-  {
-    "id": "IPServices(ISV)"
-  },
-  {
-    "id": "LearningAndCertification"
-  },
-  {
-    "id": "Licensing"
-  },
-  {
-    "id": "ManagedServices"
-  },
-  {
-    "id": "ProjectServices"
-  }
-]
-```
+| Value        |
+|-----------------|
+|ConsultingAndProfessional|
+|CustomSolution(ISV)|
+|DeploymentOrMigration|
+|Hardware|
+|Integration|
+|IPServices(ISV)|
+|LearningAndCertification|
+|Licensing|
+|ManagedServices|
+|ProjectServices|
 
 
 ### Industries
 
-``` json
-[
-  {
-    "id": "Agriculture, Forestry, & Fishing"
-  },
-  {
-    "id": "Communications & Media"
-  },
-  {
-    "id": "Education"
-  },
-  {
-    "id": "Financial Services"
-  },
-  {
-    "id": "Government"
-  },
-  {
-    "id": "Healthcare"
-  },
-  {
-    "id": "Hospitality"
-  },
-  {
-    "id": "Manufacturing"
-  },
-  {
-    "id": "Power & Utilities"
-  },
-  {
-    "id": "Public Safety and National Security"
-  },
-  {
-    "id": "Retail & Consumer Goods"
-  },
-  {
-    "id": "Services"
-  },
-  {
-    "id": "Travel & Transportation"
-  },
-  {
-    "id": "Wholesale & Distribution"
-  }
-]
-```
+| Value        |
+|-----------------|
+|Agriculture, Forestry, & Fishing|
+|Communications & Media|
+|Education|
+|Financial Services|
+|Government|
+|Healthcare|
+|Hospitality|
+|Manufacturing|
+|Power & Utilities|
+|Public Safety and National Security|
+|Retail & Consumer Goods|
+|Services|
+|Travel & Transportation|
+|Wholesale & Distribution|
 
 
 ### Solutions
 
-``` json
-[
-  {
-    "id": "AdvancedAnalytics"
-  },
-  {
-    "id": "ApplicationIntegration"
-  },
-  {
-    "id": "ArtificialIntelligence"
-  },
-  {
-    "id": "AzureSecurityOperationManagement"
-  },
-  {
-    "id": "AzureStack"
-  },
-  {
-    "id": "BackupDisasterRecovery"
-  },
-  {
-    "id": "BigData"
-  },
-  {
-    "id": "Blockchain"
-  },
-  {
-    "id": "Chatbot"
-  },
-  {
-    "id": "CloudDatabaseMigration"
-  },
-  {
-    "id": "CloudMigration"
-  },
-  {
-    "id": "CloudVoice"
-  },
-  {
-    "id": "CognitiveServices"
-  },
-  {
-    "id": "CompetitiveDatabaseMigration"
-  },
-  {
-    "id": "Containers"
-  },
-  {
-    "id": "DataWarehouse"
-  },
-  {
-    "id": "DatabaseonLinux"
-  },
-  {
-    "id": "DevelopmentandTest"
-  },
-  {
-    "id": "DevOps"
-  },
-  {
-    "id": "DigitalMedia"
-  },
-  {
-    "id": "Dynamics365forCustomerService"
-  },
-  {
-    "id": "Dynamics365forFieldService"
-  },
-  {
-    "id": "Dynamics365forFinanceOperations"
-  },
-  {
-    "id": "Dynamics365forRetail"
-  },
-  {
-    "id": "Dynamics365forSales"
-  },
-  {
-    "id": "Dynamics365forTalent"
-  },
-  {
-    "id": "DynamicsonAzure"
-  },
-  {
-    "id": "EnterpriseBusinessIntelligence"
-  },
-  {
-    "id": "Gaming"
-  },
-  {
-    "id": "HighPerformanceComputing"
-  },
-  {
-    "id": "HybridStorage"
-  },
-  {
-    "id": "IdentityandAccessManagement"
-  },
-  {
-    "id": "InformationManagement"
-  },
-  {
-    "id": "InternetofThings"
-  },
-  {
-    "id": "MachineLearning"
-  },
-  {
-    "id": "Microserviceapplications"
-  },
-  {
-    "id": "MobileApplications"
-  },
-  {
-    "id": "MySQLPostgresMigrationtoAzure"
-  },
-  {
-    "id": "Networking"
-  },
-  {
-    "id": "NoSQLMigration"
-  },
-  {
-    "id": "RedhatonAzure"
-  },
-  {
-    "id": "RegulatoryComplianceGDPR"
-  },
-  {
-    "id": "SAPonAzure"
-  },
-  {
-    "id": "ServerlessComputing"
-  },
-  {
-    "id": "SharepointonAzure"
-  },
-  {
-    "id": "SQLServerUpgrade"
-  },
-  {
-    "id": "ThreatProtection"
-  },
-  {
-    "id": "WebDevelopment"
-  }
-]
-```
+| Value        |
+|-----------------|
+ |AdvancedAnalytics|
+    |ApplicationIntegration|
+    |ArtificialIntelligence|
+    |AzureSecurityOperationManagement|
+    |AzureStack|
+    |BackupDisasterRecovery|
+    |BigData|
+    |Blockchain|
+    |Chatbot|
+    |CloudDatabaseMigration|
+    |CloudMigration|
+    |CloudVoice|
+    |CognitiveServices|
+    |CompetitiveDatabaseMigration|
+    |Containers|
+    |DataWarehouse|
+    |DatabaseonLinux|
+    |DevelopmentandTest|
+    |DevOps|
+    |DigitalMedia|
+    |Dynamics365forCustomerService|
+    |Dynamics365forFieldService|
+    |Dynamics365forFinanceOperations|
+    |Dynamics365forRetail|
+    |Dynamics365forSales|
+    |Dynamics365forTalent|
+    |DynamicsonAzure|
+    |EnterpriseBusinessIntelligence|
+    |Gaming|
+    |HighPerformanceComputing|
+    |HybridStorage|
+    |IdentityandAccessManagement|
+    |InformationManagement|
+    |InternetofThings|
+    |MachineLearning|
+    |Microserviceapplications|
+    |MobileApplications|
+    |MySQLPostgresMigrationtoAzure|
+    |Networking|
+    |NoSQLMigration|
+    |RedhatonAzure|
+    |RegulatoryComplianceGDPR|
+    |SAPonAzure|
+    |ServerlessComputing|
+    |SharepointonAzure|
+    |SQLServerUpgrade|
+    |ThreatProtection|
+    |WebDevelopment|
 
 
 ### Customer Size
 
-``` json
-[
-  {
-    "id": "1to50employees"
-  },
-  {
-    "id": "51to500employees"
-  },
-  {
-    "id": "Morethan500employees"
-  },
-  {
-    "id": "1to9employees"
-  },
-  {
-    "id": "10to50employees"
-  },
-  {
-    "id": "51to250employees"
-  },
-  {
-    "id": "251to1000employees"
-  },
-  {
-    "id": "1001to5000employees"
-  },
-  {
-    "id": "5001to10000employees"
-  },
-  {
-    "id": "10001to20000employees"
-  },
-  {
-    "id": "Morethan20000employees"
-  }
-]
-```
+| Value        |
+|-----------------|
+|    1to50employees|
+|    51to500employees|
+|    Morethan500employees|
+|    1to9employees|
+|    10to50employees|
+|    51to250employees|
+|    251to1000employees|
+|    1001to5000employees|
+|    5001to10000employees|
+|    10001to20000employees|
+|    Morethan20000employees|
