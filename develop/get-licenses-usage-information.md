@@ -1,8 +1,7 @@
 ---
 title: Get licenses usage information
-description: How to get licenses usage information aggregated to include all customers.
-ms.assetid: 87BCC8FC-5C29-4245-8607-BB62ABC03EDE
-ms.date: 12/15/2017
+description:How to get licenses usage information at the workload level for Office and Dynamics.
+ms.date: 10/25/2018
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +11,7 @@ ms.localizationpriority: medium
 
 -   Partner Center
 
-How to get licenses usage information aggregated to include all customers.
+How to get licenses usage information at the workload level for Office and Dynamics.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -24,8 +23,8 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 **Request syntax**
 
-| Method  | Request URI                                                                      |
-|---------|----------------------------------------------------------------------------------|
+| Method  | Request URI                                                                                |
+|---------|--------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/usage/license/ HTTP/1.1 |
 
  
@@ -44,11 +43,16 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 | processedDateTime | DateTime | One can specify the date from which usage data was processed. Defaults to the latest date when the data was processed | No | 
 
 
-
 **Request example**
 
 ```http
-
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/commercial/usage/license?filter=customerTenantId%20eq%20%270112A436-B14E-4888-967B-CA4BB2CF1234%27 HTTP 1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: bad5f75f-fd44-43ab-9325-bbc79dcba9da
+MS-CorrelationId: 9cbdf63c-2608-4ad8-b0a9-abae27d859d9
+X-Locale: en-US
+Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
@@ -78,5 +82,45 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ```http
+HTTP/1.1 200 OK 
+Content-Length: 487 
+Content-Type: application/json; charset=utf-8 
+MS-CorrelationId: 9cbdf63c-2608-4ad8-b0a9-abae27d859d9 
+MS-RequestId: bad5f75f-fd44-43ab-9325-bbc79dcba9da 
+MS-CV: f0trvmq8mEScHcFS.0 
+MS-ServerId: 4 
+Date: Wed, 24 Oct 2018 22:37:18 GMT
 
+{
+  
+"Value": [
+    {
+      "processedDateTime": "2018-10-14T00:00:00",
+      "workloadCode": "SPO",
+      "workloadName": "SharePoint",
+      "serviceCode": "o365",
+      "serviceName": "Microsoft Office 365",
+      "channel": "reseller",
+      "customerTenantId": "0112A436-B14E-4888-967B-CA4BB2CF1234",
+      "customerName": "TEST COMPANY",
+      "productId": "6FD2C87F-B296-42F0-B197-1E91E994B900",
+      "productName": "OFFICE 365 ENTERPRISE E3",
+      "licenseActive": 0,
+      "licensesQualified": 1
+    },
+    {
+      "processedDateTime": "2018-10-14T00:00:00",
+      "workloadCode": "EXO",
+      "workloadName": "Exchange",
+      "serviceCode": "o365",
+      "serviceName": "Microsoft Office 365",
+      "channel": "reseller",
+      "customerTenantId": "0112A436-B14E-4888-967B-CA4BB2CF1234",
+      "customerName": "TEST COMPANY",
+      "productId": "45A2423B-E884-448D-A831-D9E139C52D2F",
+      "productName": "EXCHANGE ONLINE PROTECTION",
+      "licenseActive": 0,
+      "licensesQualified": 1
+    }
+}
 ```

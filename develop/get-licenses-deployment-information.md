@@ -1,8 +1,7 @@
 ---
 title: Get licenses deployment information
-description: How to get licenses deployment information aggregated to include all customers.
-ms.assetid: BC78F9EA-C07C-4FD5-B06D-C87E8330B6E2
-ms.date: 12/15/2017
+description: How to get deployment information for Office and Dynamics licenses.
+ms.date: 10/25/2018
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +11,7 @@ ms.localizationpriority: medium
 
 -   Partner Center
 
-How to get licenses deployment information aggregated to include all customers.
+How to get deployment information for Office and Dynamics licenses.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -33,7 +32,6 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 -   See [Partner Center REST headers](headers.md) for more information.  
 
-
 **URI parameters**
 
 | Parameter         | Type     | Description | Required |  
@@ -48,7 +46,13 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 **Request example**
 
 ```http
-
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/commercial/deployment/license?filter=customerTenantId%20eq%20%270112A436-B14E-4888-967B-CA4BB2CF1234%27 HTTP 1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: bad5f75f-fd44-43ab-9325-bbc79dcba9da
+MS-CorrelationId: 9cbdf63c-2608-4ad8-b0a9-abae27d859d9
+X-Locale: en-US
+Host: api.partnercenter.microsoft.com
 ```
 
 
@@ -78,5 +82,43 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Response example**
 
 ```http
-
+HTTP/1.1 200 OK 
+Content-Length: 487 
+Content-Type: application/json; charset=utf-8 
+MS-CorrelationId: 9cbdf63c-2608-4ad8-b0a9-abae27d859d9 
+MS-RequestId: bad5f75f-fd44-43ab-9325-bbc79dcba9da 
+MS-CV: f0trvmq8mEScHcFS.0 
+MS-ServerId: 4 
+Date: Wed, 24 Oct 2018 22:37:18 GMT
+{
+  "Value": [
+   
+{
+      "processedDateTime": "2018-10-14T00:00:00",
+      "serviceCode": "crm",
+      "serviceName": "Microsoft Dynamics",
+      "channel": "reseller",
+      "customerTenantId": "0112A436-B14E-4888-967B-CA4BB2CF1234",
+      "customerName": "TEST COMPANY",
+      "productId": "54B84594-9C77-4499-8D65-5E0D5F410E78",
+      "productName": "DYNAMICS AX TASK",
+      "licensesDeployed": 0,
+      "licensesSold": 9
+    },
+    {
+      "processedDateTime": "2018-10-14T00:00:00",
+      "serviceCode": "o365",
+      "serviceName": "Microsoft Office 365",
+      "channel": "reseller",
+      "customerTenantId": "0112A436-B14E-4888-967B-CA4BB2CF1234",
+      "customerName": "TEST COMPANY",
+      "productId": "D3B4FE1F-9992-4930-8ACB-CA6EC609365E",
+      "productName": "DOMESTIC AND INTERNATIONAL CALLING PLAN",
+      "licensesDeployed": 0,
+      "licensesSold": 5
+    }
+],
+  "@nextLink": null,
+  "TotalCount": 2
+}
 ```
