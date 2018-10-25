@@ -23,7 +23,7 @@ Represents the referral.
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
 | Name                  | string                                            | The name of the Referral.                 |
-| OrganizationId        | string                                            | The organization ID of the party that owns the referral (Microsoft Partner Account ID / MSFT).           |
+| OrganizationId        | [profiles](referral.md#OrganizationProfile)       | The organization ID of the party that owns the referral.           |
 | BusinessProfileId     | string                                            | The business profile ID of the organization that owns the referral.                                       |
 | OrganizationName      | string                                            | The organization name that owns the referral. Example: Store your own Dynamics 365 lead/opportunity ID   |
 | ExternalReferenceId   | string                                            | An external identifier for the referral.                                                                          |
@@ -32,12 +32,12 @@ Represents the referral.
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
 | Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
-| StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral marked as lost? |
+| StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral lost? |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
 | Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer.         |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, closing date.                                                                |
+| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
@@ -62,7 +62,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 |-----------------|--------------|--------------------------------------------------------------------------------------------|
 | None            | 0            |                                                                                            |
 | Pending         | 1            | Represents a new referral that is pending.                                                 |
-| Received        | 2            | Represents a new referral that has been received by the receiving party.                   |
+| Received        | 2            | Represents a new referral that has been received.                   |
 | Accepted        | 3            | Represents an active accepted referral.                                                    |
 | Won             | 4            | Represents a closed referral that has been won.                                            |
 | Lost            | 5            | Represents a closed referral that has been lost.                                           |
@@ -71,7 +71,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 **Status & Substatus transition states**
 
-| Status                | Allowed Status Transition     | Allowed Status Details                |
+| Status                | Allowed Status Transition     | Allowed Substatus                |
 |-----------------------|-------------------------------|---------------------------------------|
 | New                   | New, Active, Closed           | Pending, Received                     |
 | Active                | Active, Closed                | Accepted                              |
@@ -178,8 +178,8 @@ Additional information that can be shared when inviting another organizations.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Notes                 | string                                                     | Additional notes that the receiving organization will receive.                |
-| InvitedByOrganizationId | string                                                   | The organization ID that sent the referral. (Microsoft Partner Account ID / MSFT).                                    |
+| Notes                 | string                                                     | Additional notes for the receiving organization.                |
+| InvitedByOrganizationId | [profiles](referral.md#OrganizationProfile)              | The organization ID that sent the referral.                                   |
 
 
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
@@ -188,7 +188,7 @@ Represents the referral details.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Notes                 | string                                                     | Additional notes that the receiving organization will receive.                |
+| Notes                 | string                                                     | Additional notes for the receiving organization.                |
 | DealValue             | decimal                                                    | Value of the referral.                                    |
 | Currency              | string                                                    | The ISO 4217 currency symbol https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
@@ -204,7 +204,7 @@ Contains the customer requirements.
 | Industries      | [Tag](referral.md#tag)                                       | The industries the customer is interested in.        |
 | Products        | [Tag](referral.md#tag)                                       | The products the customer is interested in.          |
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in.          |
-| Solutions       | [SolutionTag](referral.md#SolutionTag)                       | Describes the solutions                              |
+| Solutions       | [SolutionTag](referral.md#SolutionTag)                       | The solutions the customer is interested in.                             |
 
 ## <span id="SolutionTag"></span><span id="solutiontag"></span><span id="SOLUTIONTAG"></span>SolutionTag
 
