@@ -157,7 +157,7 @@ Describes contact preferences for receiving email notifications.
 
 | Property    | Type   | Description                  |
 |-------------|--------|------------------------------|
-| Locale   | string | The locale of the email notification.    |
+| Locale   | string | The locale of the email notification. AllCultures, NeutralCultures, and SpecificCultures are supported https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures |
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
@@ -190,7 +190,7 @@ Represents the referral details.
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes that the receiving organization will receive.                |
 | DealValue             | decimal                                                    | Value of the referral.                                    |
-| Currency              | string                                                    | Currency of the referral.                                    |
+| Currency              | string                                                    | The ISO 4217 currency symbol https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
 | Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 

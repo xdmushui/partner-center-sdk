@@ -27,7 +27,7 @@ This topic explains how to get a referral by ID.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/engagements/referrals/{Id}/?api-version=v1.0                                        |
+| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}                                     |
 
  
 **URI parameter**
@@ -49,7 +49,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/engagements/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf/?api-version=v1.0 HTTP/1.1
+GET https://api.partner.microsoft.com/v1.0/engagements/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

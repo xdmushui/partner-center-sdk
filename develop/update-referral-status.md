@@ -43,6 +43,7 @@ This table describes the [Referral](referral.md) properties in the request body.
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Id                    | string                                            | The ID for this Referral.                                                                                         |
 | EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
+| Name                  | string                                            | The name of the Referral.                 |
 | OrganizationId        | string                                            | The organization ID of the party that owns the referral (Microsoft Partner Account ID / MSFT).           |
 | BusinessProfileId     | string                                            | The business profile ID of the organization that owns the referral.                                       |
 | OrganizationName      | string                                            | The organization name that owns the referral. Example: Store your own Dynamics 365 lead/opportunity ID   |
@@ -51,7 +52,8 @@ This table describes the [Referral](referral.md) properties in the request body.
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
 | Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status detail. |
+| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
+| StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral marked as lost? |
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
