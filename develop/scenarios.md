@@ -133,11 +133,9 @@ All of the following scenarios can be completed three different ways:
 <td><p><a href="referrals.md">Referrals</a></p></td>
 <td><p>Referrals</p>
 <ul>
-<li><p><a href="create-a-referral.md">Create a referral</a></p></li> 
 <li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
 <li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
 <li><p><a href="update-referral-status.md">Update referral status</a></p></li> 
-<li><p><a href="invite-an-organization.md">Invite an organization</a></p></li> 
 </ul>
 </td>
 </tr>
