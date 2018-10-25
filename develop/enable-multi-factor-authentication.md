@@ -32,16 +32,16 @@ For answers to frequently asked questions about this change to multi-factor auth
 ## <span id=""/><span id=""/>Secure application model
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data. 
 
-Download the [Secure application model]() document for an overview and details of the new authentication framework. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
+Download the [Secure application model](https://www.yammer.com/cloudpartnercommunity/#/files/155759395) document for an overview and details of the new authentication framework. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
  
 ### <span id="how-to-for-cpv"/><span id="How-To-for-CPV"/><span id="HOW-TO-FOR-CPV"/>How to for control panel vendors (CPV)
 
-Download the [sample application and overview for control panel vendors]() for an example of how to implement multi-factor authentication in your control panel app. 
+Download the [CPV overview document](https://www.yammer.com/cloudpartnercommunity/#/files/155760136) and [sample application for control panel vendors](https://www.yammer.com/cloudpartnercommunity/#/files/154857341) for an example of how to implement multi-factor authentication in your control panel app. 
 
 
 ### <span id="how-to-for-csp"/><span id="How-To-for-CSP"/><span id="HOW-TO-FOR-CSP"/>How to for cloud solution provider partners (CSP)
 
-Download the [sample application and overview for cloud solution provider partners]() for an example of how to implement multi-factor authentication in your Partner Center app. 
+Download the [CSP overview document](https://www.yammer.com/cloudpartnercommunity/#/files/155760135) and [sample application for cloud solution provider partners](https://www.yammer.com/cloudpartnercommunity/#/files/154857342) for an example of how to implement multi-factor authentication in your Partner Center app. 
 
 ## <span id="implement-mfa"/><span id="IMPLEMENT-MFA"/>Implement multi-factor authentication
 
