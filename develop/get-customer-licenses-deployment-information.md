@@ -15,6 +15,10 @@ ms.localizationpriority: medium
 
 How to get licenses deployment insights for a specific customer.
 
+> [!NOTE]
+> This scenario is superceded by [Get licenses deployment information](get-licenses-deployment-information.md).
+
+
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 
