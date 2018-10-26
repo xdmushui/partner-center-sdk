@@ -47,6 +47,8 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="get-all-subscription-analytics.md">Get all subscription analytics information</a></p></li>
 <li><p><a href="get-subscription-analytics-by-search-query.md">Get subscription analytics information filtered by a search query</a></p></li>
 <li><p><a href="get-subscription-analytics-grouped-by-dates-or-terms.md">Get subscription analytics information grouped by dates or terms</a></p></li>
+<li><p><a href="get-licenses-deployment-information.md">Get licenses deployment information</a></p></li>
+<li><p><a href="get-licenses-usage-information.md">Get licenses usage information</a></p></li>
 <li><p><a href="get-customer-licenses-deployment-information.md">Get customer licenses deployment information</a></p></li>
 <li><p><a href="get-customer-licenses-usage-information.md">Get customer licenses usage information</a></p></li>
 <li><p><a href="get-partner-licenses-deployment-information.md">Get partner licenses deployment information</a></p></li>

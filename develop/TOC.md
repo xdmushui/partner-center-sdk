@@ -20,6 +20,8 @@
 #### [Get all subscription analytics information](get-all-subscription-analytics.md)  
 #### [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)  
 #### [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)  
+#### [Get licenses deployment information](get-licenses-deployment-information.md)
+#### [Get licenses usage information](get-licenses-usage-information.md)
 #### [Get customer licenses deployment information](get-customer-licenses-deployment-information.md)
 #### [Get customer licenses usage information](get-customer-licenses-usage-information.md)
 #### [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)
