@@ -14,6 +14,10 @@ ms.localizationpriority: medium
 
 How to get partner licenses usage information aggregated to include all customers.
 
+> [!NOTE]
+> This scenario is superceded by [Get licenses usage information](get-licenses-usage-information.md).
+
+
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 
