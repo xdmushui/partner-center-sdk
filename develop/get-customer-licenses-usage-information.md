@@ -15,8 +15,11 @@ ms.localizationpriority: medium
 
 How to get licenses deployment insights for a specific customer.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+> [!NOTE]
+> This scenario is superceded by [Get licenses usage information](get-licenses-usage-information.md).
 
+
+## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
