@@ -240,3 +240,15 @@ Each response comes with an HTTP status code that indicates success or failure a
     }
 }
 ```
+
+**Response example**
+In the above example pageSize=2 is passed in the querystring and will only return two results. If there are more items a "MS-ContinuationToken" key/value is returned. To get the next page of records pass the MS-ContinuationToken in the header.
+
+```http
+GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
+Authorization: Bearer <token>
+Host: api.partner.microsoft.com
+Content-Type: application/json
+ContinuationToken: 8GWNiKD4N/PCmdR5cpsz8Sxc9GYLmFJnanfGLSaQB2e5Rrxtp4OGy37p4nsnWM0Mp7PW4ZzNriCnUSNS8DohFta2M6j09OpKmVx7js/uEiMUE1AryHHgr+fdW8QU8xdeIDG5bSe72VbqEDUTUYLZgTcBeZWBcZLt30mHSW4A5tmJl4VWywKlgEdH6PpfjBQB0Z0EnW14isS7+zDAHOc4Jq+9j8/nDkSE7zEz/Ot+BTHGB2ky+ILLhQ39QQq+elGEcjLtFmrNWyYDUFR5HBe7c+IppL+Kk2lwAekVPuOeq3CfksYkCQgxiPgb8s/oOheCJBeu7rl7KhPnIkHUN2XzagLfBzJLAsPobgoiVzTHtqc9n47kuktHqmAhSv37V4RlxoADmUSzpUs6xT6sfwWBFAEeSlzvBVekvDe1S10sChID4xpaJxcBxMfXQT739E82iVHlWbdDJhAWrKlq1mlIO0ERCxYpr3N32mhNImo/Qs0=
+
+```
