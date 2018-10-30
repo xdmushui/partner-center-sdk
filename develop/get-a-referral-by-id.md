@@ -69,20 +69,20 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ``` http
 {
-    "id": "0d43414c-fb9f-4ca0-9b8d-29deb70364cf",
-    "engagementId": "29c3f916-8840-4565-b584-48ccafe0b835",
+    "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
+    "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
     "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
-    "organizationName": "Fabrikam Partner Inc",
-    "externalReferenceId": "mycrmid1234",
-    "createdDateTime": "2018-10-01T18:01:32.8796627Z",
-    "updatedDateTime": "2018-10-01T18:01:32.8796627Z",
-    "expirationDateTime": "2018-10-09T00:00:00Z",
-    "status": "Active",
-    "Substatus": "Accepted",
+    "businessProfileId": "4bd11569-41e0-4a5b-b5dc-0b253ead6d1c",
+    "organizationName": "ABC Partner",
+    "createdDateTime": "2018-10-29T21:24:52.040469Z",
+    "updatedDateTime": "2018-10-29T21:24:52.040469Z",
+    "expirationDateTime": "2018-11-06T00:00:00Z",
+    "status": "New",
+    "substatus": "Pending",
     "qualification": "SalesQualified",
     "type": "Independent",
     "customerProfile": {
-        "name": "Contoso Inc",
+        "name": "Contoso Customer Inc",
         "address": {
             "addressLine1": "One Microsoft Way",
             "addressLine2": "34",
@@ -94,12 +94,20 @@ Each response comes with an HTTP status code that indicates success or failure a
         "size": "10to50employees",
         "team": [
             {
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
                 "firstName": "Sue",
                 "lastName": "Smith",
                 "phoneNumber": "1234567890",
                 "email": "sue.smith@contoso.com"
             },
             {
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
                 "firstName": "Joe",
                 "lastName": "Hansen",
                 "phoneNumber": "4035698759",
@@ -115,24 +123,59 @@ Each response comes with an HTTP status code that indicates success or failure a
     },
     "details": {
         "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
-        "requirements": {}
+        "dealValue": 50000,
+        "currency": "USD",
+        "requirements": {
+            "industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+            "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+                {
+                    "name": "Dynamics 365 for Field Service",
+                    "type": "Category",
+                    "id": "Dynamics365forFieldService"
+                }
+            ]
+        }
     },
     "team": [
         {
-            "firstName": "Luke",
-            "lastName": "Johnson",
+            "contactPreference": {
+                "locale": "en-us",
+                "disableNotifications": false
+            },
+            "firstName": "John",
+            "lastName": "Doe",
             "phoneNumber": "1231231234",
-            "email": "luke.johnson@fabrikam.com"
+            "email": "john.doe@microsoft.com"
         }
     ],
+    "inviteContext": {
+        "notes": "Hi ABC Partner, Can you help this customer? Thanks, John @ Microsoft",
+        "invitedBy": {
+            "organizationId": "msft"
+        }
+    },
     "links": {
         "relatedReferrals": {
-            "uri": "/v2/referrals/?engagementId=29c3f916-8840-4565-b584-48ccafe0b835",
+            "uri": "/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454&api-version=v1.0",
             "method": "GET",
             "headers": []
         },
         "self": {
-            "uri": "/v2/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf",
+            "uri": "/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9?api-version=v1.0",
             "method": "GET",
             "headers": []
         }

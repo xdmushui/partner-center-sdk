@@ -75,22 +75,100 @@ Each response comes with an HTTP status code that indicates success or failure a
 ``` http
 {
     "totalCount": 2,
-    "items": [        
+    "items": [
         {
-            "id": "e491c7e7-9e8c-4309-acd4-d4c1826ae17d",
-            "engagementId": "e312414d-718a-4685-be09-83fe323a012a",
-            "organizationId": "msft",
-            "organizationName": "Microsoft",
-            "externalReferenceId": "mycrmid1234",
-            "createdDateTime": "2018-10-01T18:09:24.3590344Z",
-            "updatedDateTime": "2018-10-01T18:09:24.3590344Z",
-            "expirationDateTime": "2018-10-09T00:00:00Z",
-            "status": "Active",
-            "Substatus": "Accepted",
-            "qualification": "SalesQualified",
-            "type": "Shared",
+            "id": "c5fbb3b6-be74-4795-9fb5-4324c73fed37",
+            "engagementId": "65edc0b5-3485-41b7-a17e-dfa9ef4706e2",
+            "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+            "businessProfileId": "443ed2f5-c5b6-4a3f-9d11-5cfed621154a",
+            "organizationName": "ABC Partner",
+            "externalReferenceId": "",
+            "createdDateTime": "2018-10-30T21:03:42.4579542Z",
+            "updatedDateTime": "2018-10-30T21:03:42.4579542Z",
+            "expirationDateTime": "2018-11-03T00:00:00Z",
+            "status": "New",
+            "substatus": "Pending",
+            "qualification": "Direct",
+            "type": "Independent",
             "customerProfile": {
-                "name": "Contoso Inc",
+                "name": "Fabrikam Customer Inc",
+                "address": {
+                    "addressLine1": "One Microsoft Way",
+                    "addressLine2": "",
+                    "city": "Redmond",
+                    "state": "WA",
+                    "postalCode": "98052",
+                    "country": "US"
+                },
+                "size": "1to9employees",
+                "team": [
+                    {
+                        "contactPreference": {
+                            "locale": "en-US",
+                            "disableNotifications": false
+                        },
+                        "firstName": "Sue",
+                        "lastName": "Smith",
+                        "phoneNumber": "1234567890",
+                        "email": "sue.smith@fabrikam.com"
+                    }
+                ],
+                "ids": {}
+            },
+            "consent": {
+                "consentToContact": true
+            },
+            "details": {
+                "notes": "We are interested in deploying Microsoft 365 and are looking for support in training our employees. Can you help?",
+                "requirements": {
+                    "industries": [
+                        {
+                            "id": "Education"
+                        }
+                    ],
+                    "products": [
+                        {
+                            "id": "Microsoft365"
+                        }
+                    ],
+                    "services": [
+                        {
+                            "id": "LearningAndCertification"
+                        }
+                    ]
+                }
+            }
+            "links": {
+                "relatedReferrals": {
+                    "uri": "/referrals?engagementId=65edc0b5-3485-41b7-a17e-dfa9ef4706e2&api-version=v1.0",
+                    "method": "GET",
+                    "headers": []
+                },
+                "self": {
+                    "uri": "/referrals/c5fbb3b6-be74-4795-9fb5-4324c73fed37?api-version=v1.0",
+                    "method": "GET",
+                    "headers": []
+                }
+            },
+            "attributes": {
+                "objectType": "Referral"
+            }
+        },
+        {
+            "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
+            "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
+            "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+            "businessProfileId": "4bd11569-41e0-4a5b-b5dc-0b253ead6d1c",
+            "organizationName": "ABC Partner",
+            "createdDateTime": "2018-10-29T21:24:52.040469Z",
+            "updatedDateTime": "2018-10-29T21:24:52.040469Z",
+            "expirationDateTime": "2018-11-06T00:00:00Z",
+            "status": "New",
+            "substatus": "Pending",
+            "qualification": "SalesQualified",
+            "type": "Independent",
+            "customerProfile": {
+                "name": "Contoso Customer Inc",
                 "address": {
                     "addressLine1": "One Microsoft Way",
                     "addressLine2": "34",
@@ -102,12 +180,20 @@ Each response comes with an HTTP status code that indicates success or failure a
                 "size": "10to50employees",
                 "team": [
                     {
+                        "contactPreference": {
+                            "locale": "en-US",
+                            "disableNotifications": false
+                        },
                         "firstName": "Sue",
                         "lastName": "Smith",
                         "phoneNumber": "1234567890",
                         "email": "sue.smith@contoso.com"
                     },
                     {
+                        "contactPreference": {
+                            "locale": "en-US",
+                            "disableNotifications": false
+                        },
                         "firstName": "Joe",
                         "lastName": "Hansen",
                         "phoneNumber": "4035698759",
@@ -123,97 +209,59 @@ Each response comes with an HTTP status code that indicates success or failure a
             },
             "details": {
                 "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
-                "requirements": {}
+                "dealValue": 50000,
+                "currency": "USD",
+                "requirements": {
+                    "industries": [
+                        {
+                            "id": "Manufacturing"
+                        }
+                    ],
+                    "products": [
+                        {
+                            "id": "Dynamics365Enterprise"
+                        }
+                    ],
+                    "services": [
+                        {
+                            "id": "DeploymentOrMigration"
+                        }
+                    ],
+                    "solutions": [
+                        {
+                            "name": "Dynamics 365 for Field Service",
+                            "type": "Category",
+                            "id": "Dynamics365forFieldService"
+                        }
+                    ]
+                }
             },
             "team": [
                 {
-                    "firstName": "Luke",
-                    "lastName": "Johnson",
-                    "phoneNumber": "1231231234",
-                    "email": "luke.johnson@fabrikam.com"
-                }
-            ],
-            "links": {
-                "relatedReferrals": {
-                    "uri": "/v2/referrals/?engagementId=e312414d-718a-4685-be09-83fe323a012a",
-                    "method": "GET",
-                    "headers": []
-                },
-                "self": {
-                    "uri": "/v2/referrals/e491c7e7-9e8c-4309-acd4-d4c1826ae17d",
-                    "method": "GET",
-                    "headers": []
-                }
-            },
-            "attributes": {
-                "objectType": "Referral"
-            }
-        },
-        {
-            "id": "f2f4ba01-e6ae-45b1-936b-7404a83ee04d",
-            "engagementId": "7055d680-e974-4378-aa60-456d2d57caff",
-            "organizationId": "msft",
-            "organizationName": "Microsoft",
-            "externalReferenceId": "mycrmid1234",
-            "createdDateTime": "2018-10-01T18:17:14.7383089Z",
-            "updatedDateTime": "2018-10-01T18:17:14.7383089Z",
-            "expirationDateTime": "2018-10-09T00:00:00Z",
-            "status": "Active",
-            "Substatus": "Accepted",
-            "qualification": "SalesQualified",
-            "type": "Shared",
-            "customerProfile": {
-                "name": "AdventureWorks",
-                "address": {
-                    "addressLine1": "One Microsoft Way",
-                    "addressLine2": "34",
-                    "city": "Redmond",
-                    "state": "WA",
-                    "postalCode": "98052",
-                    "country": "US"
-                },
-                "size": "10to50employees",
-                "team": [
-                    {
-                        "firstName": "John",
-                        "lastName": "Doe",
-                        "phoneNumber": "1234567890",
-                        "email": "john.doe@adventure-works.com"
+                    "contactPreference": {
+                        "locale": "en-US",
+                        "disableNotifications": false
                     },
-                    {
-                        "firstName": "Dawn",
-                        "lastName": "Smith",
-                        "phoneNumber": "4035698759",
-                        "email": "dawn.smith@adventure-works.com"
-                    }
-                ],
-                "ids": {}
-            },
-            "consent": {
-                "consentToToShareInfoWithOthers": true,
-                "consentToContact": true,
-                "consentToMicrosoftToContactSpecificPartners": true
-            },
-            "details": {
-                "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
-                "requirements": {}
-            },
-            "team": [
-                {
-                    "firstName": "Luke",
-                    "lastName": "Johnson",
+                    "firstName": "John",
+                    "lastName": "Doe",
                     "phoneNumber": "1231231234",
-                    "email": "luke.johnson@fabrikam.com"
+                    "email": "john.doe@microsoft.com"
                 }
             ],
+            "inviteContext": {
+                "notes": "Hi ABC Partner, hoping you can help this customer. Thanks, John @ Microsoft",
+                "invitedBy": {
+                    "organizationId": "msft"
+                }
+            },
             "links": {
                 "relatedReferrals": {
-                    "uri": "/v2/referrals/?engagementId=7055d680-e974-4378-aa60-456d2d57caff",
+                    "uri": "/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454&api-version=v1.0",
                     "method": "GET",
                     "headers": []
                 },
                 "self": {
-                    "uri": "/v2/referrals/f2f4ba01-e6ae-45b1-936b-7404a83ee04d",
+                    "uri": "/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9?api-version=v1.0",
                     "method": "GET",
                     "headers": []
                 }
@@ -225,12 +273,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     ],
     "links": {
         "next": {
-            "uri": "/v2/referrals/",
+            "uri": "/referrals?api-version=v1.0",
             "method": "GET",
             "headers": [
                 {
                     "key": "MS-ContinuationToken",
-                    "value": "I8mkG0aYAcwWv2+An8mkFh7QuRWhSZLenXBHNdCBRXVIqIsCbLIbCMunXURexTjlvL0AvkhUznSvuV7d9tphe5rwOorMSRKfCBQCEMkWpaYVXKpguTDGAoGT9h67jq42rbxSlRAUgZ++Xs0sNqRw+rgRpXv5oopXxonelj9LvePooI/5/7tDXwGjNzKdU3AqC3fjpdW88AMF+AgIzU8e342zTvCzZCcKMHL5JHylG1mLiZ5qLXEVXC5qQe3rlfg9gY8SphB7+PSyugR1fSkDCS+eEfhfss58LjRTTqGPa2NAhUPosEAjtQ5nDgXw26dPbR8pnY70N8Ggm8jOLjc2Sxk8AwVX+LOP1EoeQPi7zQr7zBduiGynZG3equ+FUXxkvtn7/NMhTtWCxaaHwYX+o/eaXgJan+d/Z8L3MEZDHamgIeWcaNFgsIO74Cdz7Ya51sRoYlaPZz4Wow8PXnoNjWnaF0kgn6yHX2lTw0BdH12oB4e1bKCnTts4oKg3aKWP3nAFCYsZC0PGapKNrxvyKQ=="
+                    "value": "g2q9mn5G/SJYYddorHEJ2ZLfGt9Z8XgT9kvVPbTWpBy4o6nrABKProJryRimedhKImLrIX85wa8ZViryeGjik386S+byTR1XwtDk3erWTYwoG+7Rpq+dAB2kSqj0pIPCcDd1fTOnVSRkwl+8Rk6FeMSj86BO2OW6P+1GwYzXfuecUvYJaodMS7eRM7dZFHQMR5OEVI21STM8TYVCE1aityEDBv18Y/6mRJbirj9zTcfJNPAUSEWrqmQoEoKoeV9PMQkVaWYx8KnWhrBXmpD2gM3vY1GvgPVZlhVy73g5X+G3JVZ0ol0rlPRTFHcrKXF143lEZPbnaeOCPc/Y1c3aJ8umE/LBKBjMv5Cwgq2ZtqdyignVbsCdSg/a5O43xCCmLDNVN+phhI0mvCZkWphqiMZAuH0myt6zHznMWVLTCnILsGtW4g8KDYyyK37wdW7j03+jd7SqWw8jvGSQARZxTcEhrZQ8G0tlPgwTk9ufDs6GPhE7FastVOGdzzD60aLn"
                 }
             ]
         }
@@ -241,8 +289,9 @@ Each response comes with an HTTP status code that indicates success or failure a
 }
 ```
 
-**Response example**
 In the above example pageSize=2 is passed in the querystring and will only return two results. If there are more items a "MS-ContinuationToken" key/value is returned. To get the next page of records pass the MS-ContinuationToken in the header.
+
+**Response example**
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
