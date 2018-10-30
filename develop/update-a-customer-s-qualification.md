@@ -1,7 +1,7 @@
 ---
 title: Update a customer's qualification
 description: Updates a customer's qualification, including the address associated with the profile.
-ms.date: 09/12/2018
+ms.date: 10/30/2018
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +26,7 @@ Updates a customer's qualification.
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To update a customer's qualification, retrieve the qualification and update the properties as necessary. First, with an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest), use the following.
+To update a customer's qualification, call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
 ``` csharp
 // CustomerQualification is an enum
@@ -52,8 +52,8 @@ Use the following query parameter to update the qualification.
 
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **code**               | **int**  | N        | Needed for Government Community Cloud.  For more information, visit HERE.                                                                                                                                                       |
+| **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| **code**               | int  | No       | Needed for Government Community Cloud.  For more information, visit HERE.                                                                                                                                                       |
 
 
 **Request headers**
@@ -62,7 +62,7 @@ Use the following query parameter to update the qualification.
 
 **Request body**
 
-[Customer Qualification](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification?view=partnercenter-dotnet-latest)
+The integer value from the [**CustomerQualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
 
 **Request example**
 
@@ -70,22 +70,15 @@ Use the following query parameter to update the qualification.
 PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification HTTP/1.1
 Accept: application/json
 Content-Type: application/json
-cache-control: no-cache
-Authorization: Bearer <token>
-User-Agent: PostmanRuntime/7.3.0
-Host: api.partnercenter.microsoft.com
-cookie:
-accept-encoding: gzip, deflate
-content-length: 1
-Connection: close
+MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
+MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 1
 ```
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
 
-
-If successful, this method returns updated [qualification](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification?view=partnercenter-dotnet-latest) in the response body.
+If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 
 **Response success and error codes**
 
@@ -99,11 +92,10 @@ Content-Length: 14
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-X-Locale: en-US,en-US
-MS-CV: mEFQl0suzEGQRSIt.0
-MS-ServerId: 00000A
-Date: Fri, 19 Oct 2018 16:46:23 GMT
-Connection: close
-
 "education"
 ```
+
+## Related topics
+
+- [Get a customer's qualification](get-a-customer-s-qualification.md)
+- [Get a customer's validations](get-a-customer-s-validations.md)
