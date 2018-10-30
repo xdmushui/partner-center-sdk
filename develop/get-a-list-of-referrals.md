@@ -291,7 +291,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 In the above example pageSize=2 is passed in the querystring and will only return two results. If there are more items a "MS-ContinuationToken" key/value is returned. To get the next page of records pass the MS-ContinuationToken in the header.
 
-**Response example**
+**Request example**
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
