@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a customer's qualification.  
+How to get a customer's qualification.
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -74,7 +74,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-If successful, this method returns a [Qualification](qualification.md) resource in the response body.  Below is an example of the **GET** call on a customer with the **education** qualification.
+If successful, this method returns a qualification value in the response body.  Below is an example of the **GET** call on a customer with the **education** qualification.
 
 **Response success and error codes**
 
