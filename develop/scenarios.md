@@ -191,8 +191,13 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="manage-invoices.md">Manage billing</a></p></td>
-<td><p>Get Azure rates and utilization records</p>
+<td>
+<p><a href="manage-billing.md">Manage billing</a></p></td>
+<td><p>Billing cycle</p>
+<ul>
+<li><p><a href="change-the-billing-cycle.md">Change the billing cycle</a></p></li>
+</ul>
+<p>Get Azure rates and utilization records</p>
 <ul>
 <li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
 <li><p><a href="get-a-customer-s-utilization-record-for-azure.md">Get a customer&#39;s utilization records for Azure</a></p></li>
