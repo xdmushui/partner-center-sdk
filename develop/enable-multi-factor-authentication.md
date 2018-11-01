@@ -22,7 +22,7 @@ Microsoft is introducing a secure, scalable framework for authenticating cloud s
 
 This topic concerns the following actors:
 
-- Control panel vendors (CPV) - A control panel vendor is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs. A control panel vendor is not a CSP partner with direct access to the Partner dashboard or APIs.
+- Control panel vendors (CPV) - A control panel vendor is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs. A control panel vendor is not a CSP partner with direct access to the Partner Center dashboard or APIs.
 - CSP indirect providers and CSP direct partners who are using app ID + user authentication and directly integrate with Partner Center APIs.
 
 ## <span id="faq"/><span id="FAQ"/>Security requirements FAQ
