@@ -36,7 +36,7 @@ Represents the referral.
 | ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
 | Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [CustomerConsent](referral.md#CustomerConsent)    | Consent flags around sharing information with other organizations and allowing them to contact the customer.         |
+| Consent               | [Consent](referral.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
@@ -161,15 +161,14 @@ Describes contact preferences for receiving email notifications.
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
-## <span id="CustomerConsent"></span><span id="customerconsent"></span><span id="CUSTOMERCONSENT"></span>CustomerConsent
+## <span id="Consent"></span><span id="consent"></span><span id="CONSENT"></span>Consent
 
-Consent flags around sharing information with other organizations and allowing them to contact the customer.
+Consent flags around sharing information with other organizations and allowing them to contact users.
 
 | Property                                         | Type      | Description                                                                                |
 |--------------------------------------------------|-----------|--------------------------------------------------------------------------------------------|
-| ConsentToMicrosoftToShareInfoWithPartners        | boolean   | Consent provided by the customer to share their info with other organizations.             |
-| ConsentToMicrosoftToContact                      | boolean   | Consent provided by the customer that allows other organizations to contact the customer.  |
-| ConsentToMicrosoftToContactSpecificPartners      | boolean   | Consent provided by the customer to contact fewer than 3 partners.                         |
+| ConsentToToShareInfoWithOthers                   | boolean   | Indicates consent to share personally identifiable information (PII) with others.             |
+| ConsentToContact                                 | boolean   | Indicates consent to contact users.  |
 
 
 ## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
