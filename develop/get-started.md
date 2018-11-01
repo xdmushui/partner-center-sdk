@@ -42,10 +42,15 @@ For tips and suggestions about testing and debugging, including more information
 
 ## <span id="sdk_config_auth"></span><span id="SDK_CONFIG_AUTH"></span>Configure your authentication
 
-To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).   
+To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).  
+
+> [!NOTE]
+> Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
+Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. 
+> 
+> For more information, see [Enable multi-factor authentication](enable-multi-factor-authentication.md).
 
 ## <span id="Get_help"></span><span id="get_help"></span><span id="GET_HELP"></span>Get help
-
 
 Partners can get support at the [Partner Center SDK Yammer group](http://go.microsoft.com/fwlink/p/?LinkID=717360). To get more personalized help, developers can use their MPN support benefits or Premier Support.
 
