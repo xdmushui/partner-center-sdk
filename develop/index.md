@@ -123,6 +123,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Common scenarios</h3>
                         <p>Instructions and code samples for all supported tasks using the Partner Center APIs, to help you get coding quickly.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-started">Get started</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/scenarios">How-to guides</a></p>
                     </div>
                 </div>
