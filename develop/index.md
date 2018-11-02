@@ -1,16 +1,16 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: Join the Partner Center API and SDK Early Adopter Program
-description: Collaborate with Microsoft on the development of Partner features and capabilities.
+title: Microsoft Partner Center developer resources
+description: Resources for developing Microsoft Partner Center apps
 author: v-chmccl
 ms.topic: landing-page
 searchScope: []
 ---
 
-# Join the Partner Center API and SDK Early Adopter Program
+# Microsoft Partner Center developer resources
 
-Collaborate with Microsoft on the development of Partner features and capabilities. <a href="https://docs.microsoft.com/partner-center/develop/early-adopter-program">Join now</a>
+Collaborate with Microsoft on the development of Partner features and capabilities. <a href="https://docs.microsoft.com/partner-center/develop/early-adopter-program">Join the Partner Center API and SDK Early Adopter Program</a>.
 
 <ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
@@ -122,7 +122,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>Common scenarios</h3>
-                        <p>Instructions and code samples for all supported tasks using the Partner Center APIs, to help you get coding quickly.<br /><a href="https://docs.microsoft.com/partner-center/develop/scenarios">How-to guides</a></p>
+                        <p>Instructions and code samples for all supported tasks using the Partner Center APIs, to help you get coding quickly.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-started">Get started</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/scenarios">How-to guides</a></p>
                     </div>
                 </div>
             </div>
@@ -133,8 +135,11 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>API reference</h3>
-                        <p>Detailed reference info for the managed and REST APIs for Partner Center.<br /><a href="https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest">Partner Center Managed API</a><br /><a href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
+                        <h3>API references</h3><p>Detailed reference info for the Partner Center APIs.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest">Partner Center Managed API</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1">Partner Center Java API</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5">Partner Center PowerShell commands</a></p>
                     </div>
                 </div>
             </div>
@@ -146,7 +151,8 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>Swagger reference</h3>
-                        <p>Swagger API reference for Cloud Solution Provider (CSP) partners that manage customer accounts, place orders, manage subscriptions, billing, handle support requests and more.<br /><a href="https://apidocs.microsoft.com/services/partnercenter">Partner Center Swagger reference</a></p>
+                        <p>Swagger API reference for Cloud Solution Provider (CSP) partners that manage customer accounts, place orders, manage subscriptions, billing, handle support requests and more.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://apidocs.microsoft.com/services/partnercenter">Partner Center Swagger reference</a></p>
                     </div>
                 </div>
             </div>
