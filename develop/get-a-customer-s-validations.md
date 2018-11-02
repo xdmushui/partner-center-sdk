@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 **Applies To**
 
-- Partner Center for Microsoft Cloud for US Government
+- Partner Center
 
 How to get a collection of a partner's Government Community Cloud validation codes. A validation code is required to create a customer in the government community cloud.
 
