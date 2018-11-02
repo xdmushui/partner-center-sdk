@@ -27,7 +27,7 @@ This topic concerns the following actors:
 
 ## <span id="faq"/><span id="FAQ"/>Security requirements FAQ
 
-For answers to frequently asked questions about this change to multi-factor authentication, download the [Security requirements FAQ](https://assetsprod.microsoft.com/new-security-requirements-faq.pdf) document.
+For answers to frequently asked questions about this change to multi-factor authentication, download the [Security requirements FAQ](http://assetsprod.microsoft.com/security-requirements-faq.pdf) document.
 
 ## <span id=""/><span id=""/>Secure application model
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data. 
