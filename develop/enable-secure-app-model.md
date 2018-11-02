@@ -1,11 +1,11 @@
 ---
-title: Enable multi-factor authentication
-description: Configure your Partner Center and control panel apps for multi-factor authentication.
-ms.date: 10/18/2018
+title: Enable secure application model
+description: Secure your Partner Center and control panel apps.
+ms.date: 11/02/2018
 ms.localizationpriority: medium
 ---
 
-# Enable multi-factor authentication
+# Enable secure application model
 
 
 **Applies To**
