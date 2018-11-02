@@ -1,16 +1,16 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: Join the Partner Center API and SDK Early Adopter Program
-description: Collaborate with Microsoft on the development of Partner features and capabilities.
+title: Microsoft Partner Center developer resources
+description: Resources for developing Microsoft Partner Center apps
 author: v-chmccl
 ms.topic: landing-page
 searchScope: []
 ---
 
-# Join the Partner Center API and SDK Early Adopter Program
+# Microsoft Partner Center developer resources
 
-Collaborate with Microsoft on the development of Partner features and capabilities. <a href="https://docs.microsoft.com/partner-center/develop/early-adopter-program">Join now</a>
+Collaborate with Microsoft on the development of Partner features and capabilities. <a href="https://docs.microsoft.com/partner-center/develop/early-adopter-program">Join the Partner Center API and SDK Early Adopter Program</a>.
 
 <ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
