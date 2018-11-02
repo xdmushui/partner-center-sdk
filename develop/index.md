@@ -134,8 +134,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>API reference</h3>
-                        <p>Detailed reference info for the managed and REST APIs for Partner Center.</p>
+                        <h3>API reference</h3><p>Detailed reference info for the managed and REST APIs for Partner Center.</p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest">Partner Center Managed API</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference">Partner Center REST API</a></p>
                     </div>
