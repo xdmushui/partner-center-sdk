@@ -201,7 +201,7 @@ samples](partner-center-samples.md) section.
 <li>ReferralType</li>
 <li>ReferralQualification</li>
 <li>CustomerProfile</li>
-<li>CustomerConsent</li>
+<li>Consent</li>
 <li>ReferralDetails</li>
 <li>Member</li>
 <li>InviteContext</li>
