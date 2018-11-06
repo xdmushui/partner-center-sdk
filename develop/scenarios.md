@@ -36,6 +36,16 @@ All of the following scenarios can be completed three different ways:
 </colgroup>
 <tbody>
 <tr>
+<td><p><a href="referrals.md">Referrals</a></p></td>
+<td><p>Referrals</p>
+<ul>
+<li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
+<li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
+<li><p><a href="update-referral-status.md">Update referral status</a></p></li> 
+</ul>
+</td>
+</tr>	
+<tr>
 <td><p><a href="usage-analytics.md">Analytics</a></p></td>
 <td><p>Retrieve analytics</p>
 <ul>
@@ -47,6 +57,8 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="get-all-subscription-analytics.md">Get all subscription analytics information</a></p></li>
 <li><p><a href="get-subscription-analytics-by-search-query.md">Get subscription analytics information filtered by a search query</a></p></li>
 <li><p><a href="get-subscription-analytics-grouped-by-dates-or-terms.md">Get subscription analytics information grouped by dates or terms</a></p></li>
+<li><p><a href="get-licenses-deployment-information.md">Get licenses deployment information</a></p></li>
+<li><p><a href="get-licenses-usage-information.md">Get licenses usage information</a></p></li>
 <li><p><a href="get-customer-licenses-deployment-information.md">Get customer licenses deployment information</a></p></li>
 <li><p><a href="get-customer-licenses-usage-information.md">Get customer licenses usage information</a></p></li>
 <li><p><a href="get-partner-licenses-deployment-information.md">Get partner licenses deployment information</a></p></li>
@@ -130,16 +142,6 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="referrals.md">Referrals</a></p></td>
-<td><p>Referrals</p>
-<ul>
-<li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
-<li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
-<li><p><a href="update-referral-status.md">Update referral status</a></p></li> 
-</ul>
-</td>
-</tr>
-<tr>
 <td><p><a href="place-orders.md">Place orders</a></p></td>
 <td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
@@ -199,8 +201,13 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="manage-invoices.md">Manage billing</a></p></td>
-<td><p>Get Azure rates and utilization records</p>
+<td>
+<p><a href="manage-billing.md">Manage billing</a></p></td>
+<td><p>Billing cycle</p>
+<ul>
+<li><p><a href="change-the-billing-cycle.md">Change the billing cycle</a></p></li>
+</ul>
+<p>Get Azure rates and utilization records</p>
 <ul>
 <li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
 <li><p><a href="get-a-customer-s-utilization-record-for-azure.md">Get a customer&#39;s utilization records for Azure</a></p></li>
@@ -298,3 +305,11 @@ CSP partners are resellers who have customers and sell them Microsoft products f
 Subscriptions can be added, and the number of seats or add-ons can be increased or decreased. If a customer fails to pay, misuses the subscription, or engages in fraud, then Microsoft, the distributor, or the reseller are all able to suspend the subscription. It will be permanent if it's not reactivated within the limits of the CSP program.
 
 You can check which subscriptions a customer is **entitled** to use (ie, which ones are currently paid for, not suspended, and not replaced by a newer order).
+
+
+
+
+
+
+
+
