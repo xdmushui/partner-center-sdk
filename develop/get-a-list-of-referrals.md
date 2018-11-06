@@ -1,6 +1,6 @@
 ---
 title: Get a list of referrals
-description: How to create a referral
+description: How to get a list of referrals
 ms.date: 11/08/18
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-This topic explains how to create a referral.
+This topic explains how to get a list of referrals.
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -27,7 +27,7 @@ This topic explains how to create a referral.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals?pageSize=20&self=true&status=new                |
+| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals               |
 
 **URI parameter**
 
@@ -39,7 +39,7 @@ Use the following query parameters to get a list of referrals
 |self                    | string   | No       | A string of value "true" will return only the referrals for your organization.     |
 |status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).           |
 |pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.                   |
-|invitedByOrganization   | string   | No       | An [organization ID](profiles.md#OrganizationProfile). Will return referrals associated with a specific organization. |
+|invitedByOrganization   | string   | No       | An organization ID. Will return referrals associated with a specific organization. |
 
 
  
