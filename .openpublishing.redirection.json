@@ -2,14 +2,19 @@
     "redirections": 
 	[
         {
-            "source_path": "develop/purchase-azure-reserved-vm-instances.md",
-            "redirect_url": "purchase-azure-reservations",
+            "source_path": "develop/enable-multi-factor-authentication.md",
+            "redirect_url": "enable-secure-app-model",
             "redirect_document_id": true
         },
         {
             "source_path": "develop/manage-invoices.md",
             "redirect_url": "manage-billing",
             "redirect_document_id": true
-        }
+        },
+        {
+            "source_path": "develop/purchase-azure-reserved-vm-instances.md",
+            "redirect_url": "purchase-azure-reservations",
+            "redirect_document_id": true
+        }	
 	]
 }

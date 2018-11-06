@@ -1,11 +1,11 @@
 ---
-title: Enable multi-factor authentication
-description: Configure your Partner Center and control panel apps for multi-factor authentication.
-ms.date: 10/18/2018
+title: Enable secure application model
+description: Secure your Partner Center and control panel apps.
+ms.date: 11/02/2018
 ms.localizationpriority: medium
 ---
 
-# Enable multi-factor authentication
+# Enable secure application model
 
 
 **Applies To**
@@ -27,7 +27,7 @@ This topic concerns the following actors:
 
 ## <span id="faq"/><span id="FAQ"/>Security requirements FAQ
 
-For answers to frequently asked questions about this change to multi-factor authentication, download the [Security requirements FAQ](https://assetsprod.microsoft.com/new-security-requirements-faq.pdf) document.
+For answers to frequently asked questions about this change to multi-factor authentication, download the [Security requirements FAQ](http://assetsprod.microsoft.com/security-requirements-faq.pdf) document.
 
 ## <span id=""/><span id=""/>Secure application model
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data. 
