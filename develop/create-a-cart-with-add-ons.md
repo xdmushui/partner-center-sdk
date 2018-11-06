@@ -85,7 +85,7 @@ var cart = new Cart()
             new CartLineItem()
             {
                 Id = 0,
-                CatalogItemId = "A_sample_addon_item_ID",
+                CatalogItemId = "An_addon_item_ID",
                 ProvisioningContext = new Dictionary<string, string>
                 {
                     {
