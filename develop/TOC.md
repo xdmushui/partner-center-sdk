@@ -14,7 +14,7 @@
 ### [Referrals](referrals.md)
 #### [Get a referral by ID](get-a-referral-by-Id.md) 
 #### [Get a list of referrals](get-a-list-of-referrals.md) 
-#### [Update referral status](update-referral-status.md)
+#### [Update a referral](update-a-referral.md)
 ### [Analytics](usage-analytics.md)
 #### [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 #### [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)

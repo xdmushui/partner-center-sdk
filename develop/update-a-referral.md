@@ -1,6 +1,6 @@
 ---
-title: Update referral status
-description: How to to update a referral's status
+title: Update referral
+description: How to to update a referral
 ms.date: 11/08/18
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 -   Partner Center
 
 
-This topic explains how to update a referral's status.
+This topic explains how to update a referral.
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites

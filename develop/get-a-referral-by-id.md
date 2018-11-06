@@ -1,6 +1,6 @@
 ---
 title: Get a referral by ID
-description: How to create a referral
+description: How to get a referral by ID
 ms.date: 11/08/18
 ms.localizationpriority: medium
 ---
@@ -32,11 +32,11 @@ This topic explains how to get a referral by ID.
  
 **URI parameter**
 
-Use the following query parameters to get a list of referrals
+Use the following ID in the URL
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|Id                      | string   | No       | A referral ID       |
+|Id                      | string   | Yes       | A referral ID       |
 
 **Request headers**
 

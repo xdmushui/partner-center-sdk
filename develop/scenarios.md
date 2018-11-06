@@ -41,7 +41,7 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
 <li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
-<li><p><a href="update-referral-status.md">Update referral status</a></p></li> 
+<li><p><a href="update-a-referral.md">Update a referral</a></p></li> 
 </ul>
 </td>
 </tr>	

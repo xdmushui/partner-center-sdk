@@ -38,7 +38,7 @@ Represents the referral.
 | CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
 | Consent               | [Consent](referral.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
-| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
+| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved.                                |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
@@ -63,7 +63,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | None            | 0            |                                                                                            |
 | Pending         | 1            | Represents a new referral that is pending.                                                 |
 | Received        | 2            | Represents a new referral that has been received.                   |
-| Accepted        | 3            | Represents an active accepted referral.                                                    |
+| Accepted        | 3            | Represents a active referral that has been accepted.                                                    |
 | Won             | 4            | Represents a closed referral that has been won.                                            |
 | Lost            | 5            | Represents a closed referral that has been lost.                                           |
 | Declined        | 6            | Represents a closed referral that has been declined.                                       |
@@ -223,7 +223,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 |-----------------|-----------------------------------------|-----------------------------------------------------------------|
 | None            | 0                                       |                                                                 |
 | Category        | 1                                       | Leverages pre-defined solution names.                            |
-| Name            | 2                                       | Allows for custom solution names to be provided in the referral. |
+| Name            | 2                                       | Ability to reference solutions from the Microsoft catalog. |
 
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
