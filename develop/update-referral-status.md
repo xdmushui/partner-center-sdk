@@ -79,20 +79,21 @@ Host: api.partner.microsoft.com
 Content-Type: application/json
  
  {
-    "id": "49d90c72-3326-4f61-aacc-2cb57970448c",
-    "organizationId": "msft",
-    "organizationName": "Microsoft",
-    "externalReferenceId": "mycrmid1234",
-    "createdDateTime": "2018-10-01T18:17:36.254263Z",
-    "updatedDateTime": "2018-10-01T18:17:36.254263Z",
-    "expirationDateTime": "2018-10-09T00:00:00Z",
+    "id": "4111fffc-f9ee-4d53-bba6-569135228642",
+    "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "businessProfileId": "4bd11569-41e0-4a5b-b5dc-0b253ead6d1c",
+    "organizationName": "ABC Partner",
+    "createdDateTime": "2018-11-06T18:40:42.6178337Z",
+    "updatedDateTime": "2018-11-06T18:40:42.6178337Z",
+    "expirationDateTime": "2018-11-14T00:00:00Z",
     "status": "Closed",
-    "Substatus": "Won",
-    "StatusReason": "Customer engagement was a success!",
+    "substatus": "Won",
+    "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
-    "type": "Shared",
+    "type": "Independent",
     "customerProfile": {
-        "name": "AdventureWorks",
+        "name": "Contoso Customer Inc",
         "address": {
             "addressLine1": "One Microsoft Way",
             "addressLine2": "34",
@@ -104,16 +105,24 @@ Content-Type: application/json
         "size": "10to50employees",
         "team": [
             {
-                "firstName": "John",
-                "lastName": "Doe",
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
+                "firstName": "Sue",
+                "lastName": "Smith",
                 "phoneNumber": "1234567890",
-                "email": "john.doe@adventure-works.com"
+                "email": "sue.smith@contoso.com"
             },
             {
-                "firstName": "Dawn",
-                "lastName": "Smith",
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
+                "firstName": "Joe",
+                "lastName": "Hansen",
                 "phoneNumber": "4035698759",
-                "email": "dawn.smith@adventure-works.com"
+                "email": "joe.hansen@contoso.com"
             }
         ],
         "ids": {}
@@ -124,17 +133,53 @@ Content-Type: application/json
         "consentToMicrosoftToContactSpecificPartners": true
     },
     "details": {
-        "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
-        "requirements": {}
+        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+        "dealValue": 50000,
+        "currency": "USD",
+        "closingDateTime": "2018-11-14T00:00:00Z",
+        "requirements": {
+            "industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+            "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+                {
+                    "name": "Dynamics 365 for Field Service",
+                    "type": "Category",
+                    "id": "Dynamics365forFieldService"
+                }
+            ]
+        }
     },
     "team": [
         {
-            "firstName": "Luke",
-            "lastName": "Johnson",
+            "contactPreference": {
+                "locale": "en-us",
+                "disableNotifications": false
+            },
+            "firstName": "John",
+            "lastName": "Doe",
             "phoneNumber": "1231231234",
-            "email": "luke.johnson@fabrikam.com"
+            "email": "john.doe@microsoft.com"
         }
-    ]
+    ],
+    "inviteContext": {
+        "notes": "Hi ABC Partner, hoping you can help this customer. Thanks, John @ Microsoft",
+        "invitedBy": {
+            "organizationId": "msft"
+        }
+    }
 }
 ```
 
@@ -150,21 +195,21 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ``` http
 {
-    "id": "49d90c72-3326-4f61-aacc-2cb57970448c",
-    "engagementId": "a9c8c67f-6b29-4a80-abf8-2b07a41b7902",
-    "organizationId": "msft",
-    "organizationName": "Microsoft",
-    "externalReferenceId": "mycrmid1234",
-    "createdDateTime": "2018-10-01T20:51:16.8337242Z",
-    "updatedDateTime": "2018-10-01T20:51:16.8337242Z",
-    "expirationDateTime": "2018-10-09T00:00:00Z",
+    "id": "4111fffc-f9ee-4d53-bba6-569135228642",
+    "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "businessProfileId": "4bd11569-41e0-4a5b-b5dc-0b253ead6d1c",
+    "organizationName": "ABC Partner",
+    "createdDateTime": "2018-11-06T18:40:42.6178337Z",
+    "updatedDateTime": "2018-11-06T18:43:38.9948636Z",
+    "expirationDateTime": "2018-11-14T00:00:00Z",
     "status": "Closed",
-    "Substatus": "Won",
-    "StatusReason": "Customer engagement was a success!",
+    "substatus": "Won",
+    "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
-    "type": "Shared",
+    "type": "Independent",
     "customerProfile": {
-        "name": "AdventureWorks",
+        "name": "Contoso Customer Inc",
         "address": {
             "addressLine1": "One Microsoft Way",
             "addressLine2": "34",
@@ -176,16 +221,24 @@ Each response comes with an HTTP status code that indicates success or failure a
         "size": "10to50employees",
         "team": [
             {
-                "firstName": "John",
-                "lastName": "Doe",
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
+                "firstName": "Sue",
+                "lastName": "Smith",
                 "phoneNumber": "1234567890",
-                "email": "john.doe@adventure-works.com"
+                "email": "sue.smith@contoso.com"
             },
             {
-                "firstName": "Dawn",
-                "lastName": "Smith",
+                "contactPreference": {
+                    "locale": "en-us",
+                    "disableNotifications": false
+                },
+                "firstName": "Joe",
+                "lastName": "Hansen",
                 "phoneNumber": "4035698759",
-                "email": "dawn.smith@adventure-works.com"
+                "email": "joe.hansen@contoso.com"
             }
         ],
         "ids": {}
@@ -196,25 +249,60 @@ Each response comes with an HTTP status code that indicates success or failure a
         "consentToMicrosoftToContactSpecificPartners": true
     },
     "details": {
-        "notes": "Customer is looking to leverage Microsoft 365 in their bicycle store chain. They are also interested in an insights and analytics application to track sales performance.",
-        "requirements": {}
+        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
+        "dealValue": 50000,
+        "currency": "USD",
+        "requirements": {
+            "industries": [
+                {
+                    "id": "Manufacturing"
+                }
+            ],
+            "products": [
+                {
+                    "id": "Dynamics365Enterprise"
+                }
+            ],
+            "services": [
+                {
+                    "id": "DeploymentOrMigration"
+                }
+            ],
+            "solutions": [
+                {
+                    "name": "Dynamics 365 for Field Service",
+                    "type": "Category",
+                    "id": "Dynamics365forFieldService"
+                }
+            ]
+        }
     },
     "team": [
         {
-            "firstName": "Luke",
-            "lastName": "Johnson",
+            "contactPreference": {
+                "locale": "en-us",
+                "disableNotifications": false
+            },
+            "firstName": "John",
+            "lastName": "Doe",
             "phoneNumber": "1231231234",
-            "email": "luke.johnson@fabrikam.com"
+            "email": "john.doe@microsoft.com"
         }
     ],
+    "inviteContext": {
+        "notes": "Hi ABC Partner, hoping you can help this customer. Thanks, John @ Microsoft",
+        "invitedBy": {
+            "organizationId": "msft"
+        }
+    },
     "links": {
         "relatedReferrals": {
-            "uri": "/v2/referrals/?engagementId=a9c8c67f-6b29-4a80-abf8-2b07a41b7902",
+            "uri": "/referrals?engagementId=37ef26aa-1d15-4533-9f93-a69bd33ab1e5&api-version=v1.0",
             "method": "GET",
             "headers": []
         },
         "self": {
-            "uri": "/v2/referrals/49d90c72-3326-4f61-aacc-2cb57970448c",
+            "uri": "/referrals/4111fffc-f9ee-4d53-bba6-569135228642?api-version=v1.0",
             "method": "GET",
             "headers": []
         }
