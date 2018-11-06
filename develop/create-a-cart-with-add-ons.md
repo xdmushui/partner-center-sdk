@@ -41,7 +41,7 @@ var cart = new Cart()
             new CartLineItem()
             {
                 Id = 0,
-                CatalogItemId = "A base offer id",
+                CatalogItemId = "A_base_offer_ID",
                 FriendlyName = "Myofferpurchase",
                 Quantity = 3,
                 BillingCycle = BillingCycleType.Monthly,
