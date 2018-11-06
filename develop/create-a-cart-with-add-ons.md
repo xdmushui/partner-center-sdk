@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 -   Partner Center
 
-How to add an order with add-ons for a customer in a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
+How to purchase add-ons through a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -22,11 +22,13 @@ How to add an order with add-ons for a customer in a cart. For more information 
 
 ### C# 
 
-To create an order with add-ons for a customer, first instantiate a [**Cart**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart) object. Next, create a list of [**CartLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects, and assign the list to the cart's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property. Each cart line item contains a list of **AddOnItems**. 
+Follow these steps to create a cart, which will enable the purchase of both a base offer and its corresponding add-ons:
 
-Next, obtain an interface to cart operations by using [**IAggregatePartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) to call the [**ICustomerCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
-
-Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.createasync) method to create the cart.
+1. Instantiate a [**Cart**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart) object.
+2. Create a list of [**CartLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects which represent the base offer(s), and assign the list to the cart's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property.
+3. Under each base offer’s cart line item, populate the list of **AddOnItems** with other **CartLineItem** objects that each represent an add-on that will be purchased against that base offer.
+4. Obtain an interface to cart operations by using [**IAggregatePartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) to call the [**ICustomerCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
+5. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.createasync) method to create the cart.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -39,7 +41,7 @@ var cart = new Cart()
             new CartLineItem()
             {
                 Id = 0,
-                CatalogItemId = “A_sample_Offer_ID_having_addon”,
+                CatalogItemId = "A base offer id",
                 FriendlyName = "Myofferpurchase",
                 Quantity = 3,
                 BillingCycle = BillingCycleType.Monthly,
@@ -48,14 +50,14 @@ var cart = new Cart()
                     new CartLineItem
                     {
                         Id = 1,
-                        CatalogItemId = “A_sample_addon_item_ID”,
+                        CatalogItemId = "An_addon_item_ID",
                         BillingCycle = BillingCycleType.Monthly,
                         Quantity = 2,
                     },
                     new CartLineItem
                     {
                         Id = 2,
-                        CatalogItemId = “Another_sample_addon_item_ID”,
+                        CatalogItemId = "Another_addon_item_ID",
                         BillingCycle = BillingCycleType.Monthly,
                         Quantity = 3
                     }
@@ -67,7 +69,10 @@ var cart = new Cart()
 var createdCart = partnerOperations.Customers.ById(customerId).Cart.Create(cart);
 ```
 
-To append an add-on item to an existing base subscription, create a **Cart** with a new **CartLineItem** containing the parent subscription ID in the **ProvisioninContext** property, then call the **Create** or **CreateAsync** method.
+Follow these steps to create a cart which will enable the purchase of add-on(s) against existing base subscription(s):
+
+1. Create a **Cart** with a new **CartLineItem** containing the subscription ID in the **ProvisioningContext** property with key "ParentSubscriptionId".
+2. Call the **Create** or **CreateAsync** method.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -80,11 +85,11 @@ var cart = new Cart()
             new CartLineItem()
             {
                 Id = 0,
-                CatalogItemId = “A_sample_addon_item_ID”,
+                CatalogItemId = "A_sample_addon_item_ID",
                 ProvisioningContext = new Dictionary<string, string>
                 {
                     {
-                        "ParentSubscriptionId", “A_sample_existing_subscription_Id”
+                        "ParentSubscriptionId", "An_existing_subscription_Id"
                     }
                 },
                 Quantity = 1,
@@ -144,7 +149,7 @@ This table describes the [CartLineItem](cart.md#cartlineitem) properties in the 
 | participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
 | provisioningContext  | Dictionary<string, string>       | A context used for provisioning of offer.                                                                                                             |
 | orderGroup           | string                           | A group to indicate which items can be placed together.                                                                                               |
-| addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
+| addonItems           | List of **CartLineItem** objects | A collection of cart line items for add-ons that will be purchased towards the base subscription that results from the parent cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
 
 **Request example**
