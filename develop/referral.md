@@ -1,7 +1,7 @@
 ---
 title: Referral
 description: Resources that represents a sales lead direct from a customer, Microsoft or another partner.  
-ms.date: 10/01/2018
+ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Update referral status
 description: How to to update a referral's status
-ms.date: 10/01/18
+ms.date: 11/08/18
 ms.localizationpriority: medium
 ---
 
