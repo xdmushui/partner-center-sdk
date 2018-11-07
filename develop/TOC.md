@@ -87,6 +87,7 @@
 #### [Check Inventory](check-inventory.md) 
 #### [Checkout a cart](checkout-a-cart.md) 
 #### [Create a cart](create-a-cart.md)
+#### [Create a cart with add-ons](create-a-cart-with-add-ons.md)
 #### [Create an order](create-an-order.md)
 #### [Create an order for a customer of an indirect reseller](create-an-order-for-a-customer-of-an-indirect-reseller.md)
 #### [Get a list of add-ons for a subscription](get-a-list-of-add-ons-for-a-subscription.md) 

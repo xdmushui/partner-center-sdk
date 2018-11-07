@@ -160,6 +160,7 @@ All of the following scenarios can be completed three different ways:
 <p>Create an order</p>
 <ul>
 <li><p><a href="create-a-cart.md">Create a cart</a></p></li>
+<li><p><a href="create-a-cart-with-add-ons.md">Create a cart with add-ons</a></p></li>
 <li><p><a href="update-a-cart.md">Update a cart</a></p></li>
 <li><p><a href="checkout-a-cart.md">Checkout a cart</a></p></li>
 <li><p><a href="create-an-order.md">Create an order</a></p></li>
