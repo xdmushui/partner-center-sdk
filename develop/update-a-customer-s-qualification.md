@@ -14,8 +14,7 @@ ms.localizationpriority: medium
 
 Updates a customer's qualification.
 
-A partner can update a customer’s qualification to be "None", "Education", "Nonprofit", or "GovernmentCommunityCloud".
-
+A partner can update a customer’s qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -25,7 +24,7 @@ A partner can update a customer’s qualification to be "None", "Education", "No
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To update a customer's qualification to "Education" or "Nonprofit", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
+To update a customer's qualification to "Education", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
 ``` csharp
 // CustomerQualification is an enum
@@ -60,7 +59,7 @@ Use the following query parameter to update the qualification.
 | Name                   | Type | Required | Description                                                                                                                                            |
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **validationCode**     | int  | No       | Needed for Government Community Cloud.                                                                                                                 |
+| **validationCode**     | int  | No       | Only needed for Government Community Cloud.                                                                                                            |
 
 
 **Request headers**
