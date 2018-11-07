@@ -2,7 +2,7 @@
 title: Partner Center REST resources
 description: This section provides definitions for the JSON elements needed to create requests and parse responses using the Partner Center REST API.
 ms.assetid: E7C51D19-C6A7-4A4C-9F17-B4D39195972A
-ms.date: 12/15/2017
+ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 
@@ -266,6 +266,7 @@ samples](partner-center-samples.md) section.
 <li>ResourceLinks</li>
 <li>ResourceAttributes</li>
 <li>SecureString</li>
+<li>ValidationCode</li>
 </ul></td>
 </tr>
 </tbody>

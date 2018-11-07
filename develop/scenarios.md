@@ -110,6 +110,9 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="confirm-customer-consent.md">Confirm customer acceptance of Microsoft Cloud agreement</a></p></li>
 <li><p><a href="get-agreement-metadata.md">Get agreement metadata for Microsoft Cloud Agreement</a></p></li>
 <li><p><a href="get-confirmation-of-customer-consent.md">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p></li>
+<li><p><a href="get-a-partner-s-validation-codes.md">Get a partner's validation codes</a></p></li>
+<li><p><a href="get-a-customer-s-qualification.md">Get a customer's qualification</a></p></li>
+<li><p><a href="update-a-customer-s-qualification.md">Update a customer's qualification</a></p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
