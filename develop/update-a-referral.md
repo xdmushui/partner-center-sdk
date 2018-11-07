@@ -1,11 +1,11 @@
 ---
-title: Update referral
+title: Update a referral
 description: How to to update a referral
 ms.date: 11/08/18
 ms.localizationpriority: medium
 ---
 
-# Update referral status
+# Update a referral
 
 
 **Applies To**
