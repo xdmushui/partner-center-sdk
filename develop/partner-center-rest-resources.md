@@ -266,7 +266,7 @@ samples](partner-center-samples.md) section.
 <li>ResourceLinks</li>
 <li>ResourceAttributes</li>
 <li>SecureString</li>
-<li>ValidationCodes</li>
+<li>ValidationCode</li>
 </ul></td>
 </tr>
 </tbody>
