@@ -95,4 +95,4 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 ## Related topics
 
 - [Get a customer's qualification](get-a-customer-s-qualification.md)
-- [Get a customer's validations](get-a-customer-s-validations.md)
+- [Get a partner's validation codes](get-a-partner-s-validations.md)

@@ -66,7 +66,7 @@ MS-RequestId: 7266f5f6-30ca-4672-9eb6-6c9d6dd0e9d3
 
 ## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
 
-If successful, this method returns a list of validation resources in the response body.
+If successful, this method returns a list of [**ValidationCode**](utility-resources.md#validationcode) resources in the response body.
 
 **Response success and error codes**
 

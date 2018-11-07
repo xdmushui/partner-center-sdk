@@ -66,7 +66,7 @@
 #### [Get a list of customers](get-a-list-of-customers.md)
 #### [Get a list of customers filtered by a search field](get-a-customer-by-name.md) 
 #### [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md) 
-#### [Get a partner's validation codes](get-a-customer-s-validations.md)
+#### [Get a partner's validation codes](get-a-partner-s-validations.md)
 #### [Get a user account by ID](get-a-user-account-by-id.md)
 #### [Get user roles for a customer](get-user-roles-for-a-customer.md)
 #### [Remove a customer user from a role](remove-customer-user-from-a-role.md)
