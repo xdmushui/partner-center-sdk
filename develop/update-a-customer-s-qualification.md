@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Updates a customer's qualification.
 
-A partner can update a customer’s qualification to be "None", "Education", "Nonprofit", or "GovernmentCommunityCloud". If it is set to "GovernmentCommunityCloud", the partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode). 
+A partner can update a customer’s qualification to be "None", "Education", "Nonprofit", or "GovernmentCommunityCloud".
 
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
@@ -25,7 +25,7 @@ A partner can update a customer’s qualification to be "None", "Education", "No
 
 ## <span id="C_"></span><span id="c_"></span>C#
 
-To update a customer's qualification, call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
+To update a customer's qualification to "Education" or "Nonprofit", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
 ``` csharp
 // CustomerQualification is an enum
@@ -35,6 +35,14 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
+To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode). 
+``` csharp
+// CustomerQualification is an enum
+// GCC validation is type ValidationCode
+
+var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
+```
+
 
 ## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
 
@@ -42,7 +50,7 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification HTTP/1.1 |
+| **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification?code={validationCode} HTTP/1.1 |
 
 
 **URI parameter**
@@ -52,7 +60,7 @@ Use the following query parameter to update the qualification.
 | Name                   | Type | Required | Description                                                                                                                                            |
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **code**               | int  | No       | Needed for Government Community Cloud.                                                                                                                 |
+| **validationCode**     | int  | No       | Needed for Government Community Cloud.                                                                                                                 |
 
 
 **Request headers**
@@ -66,13 +74,13 @@ The integer value from the [**CustomerQualification**](https://docs.microsoft.co
 **Request example**
 
 ```http
-PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification HTTP/1.1
+PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification?code=<validation-code> HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
-1
+3
 ```
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
@@ -91,7 +99,7 @@ Content-Length: 14
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-"education"
+"governmentcommunitycloud"
 ```
 
 ## Related topics
