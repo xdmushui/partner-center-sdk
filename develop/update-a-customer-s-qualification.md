@@ -14,6 +14,8 @@ ms.localizationpriority: medium
 
 Updates a customer's qualification.
 
+A partner can update a customer’s qualification to be "None", "Education", "Nonprofit", or "GovernmentCommunityCloud". If it is set to "GovernmentCommunityCloud", the partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode). 
+
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -47,10 +49,10 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 Use the following query parameter to update the qualification.
 
-| Name                   | Type     | Required | Description                                                                                                                                            |
-|------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name                   | Type | Required | Description                                                                                                                                            |
+|------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **code**               | int  | No       | Needed for Government Community Cloud.  For more information, visit HERE.                                                                                                                                                       |
+| **code**               | int  | No       | Needed for Government Community Cloud.                                                                                                                 |
 
 
 **Request headers**
