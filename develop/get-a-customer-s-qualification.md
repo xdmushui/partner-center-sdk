@@ -1,7 +1,7 @@
 ---
 title: Get a customer's qualification
 description: How to get a customer's qualification.
-ms.date: 10/30/2018
+ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 

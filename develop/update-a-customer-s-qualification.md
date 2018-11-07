@@ -1,7 +1,7 @@
 ---
 title: Update a customer's qualification
 description: Updates a customer's qualification, including the address associated with the profile.
-ms.date: 10/30/2018
+ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 
