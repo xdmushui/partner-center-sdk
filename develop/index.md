@@ -164,7 +164,8 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <h2>What&#39;s New</h2>
 <p><strong>Partner Center .NET SDK v1.10.0 and updated REST APIs are now available!</strong></p>
 <p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.10.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
-<ul id="whatsnew" class="cardsF cols cols2 panelContent">
+<!-- <ul id="whatsnew" class="cardsF cols cols2 panelContent"> -->
+<ul id="whatsnew" class="cardsC cols cols2 panelContent">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -172,6 +173,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Subscriptions</h3>
                         <p>Updated the <strong><a href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external">Subscription</a></strong> resource with missing properties: <em>IsTrial</em>, <em>HasPurchasableAddons</em>, and <em>Actions</em></p>
+                        <p>&nbsp;</p>
                         <ul>
                             <li><a href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external"><strong>Subscription</strong> resource</a></li>
                         </ul>
@@ -187,6 +189,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Government Community Cloud</h3>
                         <p>Partner Center Office Government Community Cloud for CSP partners (GCC). Office 365 government plans are designed for the unique needs of US government organizations. These plans provide all the features and capabilities of Office 365 services in a segmented cloud environment that helps organizations comply with US government security standards.</p>
+                        <p>&nbsp;</p>
                         <ul>
                             <li><a href="https://docs.microsoft.com/partner-center/csp-gcc-overview" data-linktype="external">Partner Center Office Government Community Cloud</a></li>
                             <li><a href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></li>
@@ -206,6 +209,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Add-ons</h3>
                         <p>Create a cart with add-ons. Added support for subscription add-ons in the new <a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong></a> resource API. This capability already existed in the <a href="https://docs.microsoft.com/partner-center/develop/orders" data-linktype="external"><strong>Order</strong></a> resource API.</p>
+                        <p>&nbsp;</p>
                         <ul>
                             <li><a href="https://docs.microsoft.com/partner-center/develop/create-a-cart-with-add-ons" data-linktype="external">Create a cart with add-ons</a></li>
                             <li><a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong> resource</a></li>
@@ -222,6 +226,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="cardText">
                         <h3>Billing frequency</h3>
                         <p>Change the billing frequency for CSP partners. This feature, applicable to license-based services, enables partners to more easily align billing across their subscriptions while preserving existing billing properties like subscription IDs.</p>
+                        <p>&nbsp;</p>
                         <ul>
                             <li><a href="https://docs.microsoft.com/partner-center/develop/change-the-billing-cycle" data-linktype="external">Change the billing cycle</a></li>
                         </ul>
