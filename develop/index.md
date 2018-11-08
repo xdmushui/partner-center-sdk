@@ -184,14 +184,10 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Government Community Cloud</h3>
-                        <p>Partner Center Office Government Community Cloud for CSP partners (GCC). Office 365 government plans are designed for the unique needs of US government organizations. These plans provide all the features and capabilities of Office 365 services in a segmented cloud environment that helps organizations comply with US government security standards.</p>
+                        <h3>Billing frequency</h3>
+                        <p>Change the billing frequency for CSP partners. This feature, applicable to license-based services, enables partners to more easily align billing across their subscriptions while preserving existing billing properties like subscription IDs.</p>
                         <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/csp-gcc-overview" data-linktype="external">Partner Center Office Government Community Cloud</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/change-the-billing-cycle" data-linktype="external">Change the billing cycle</a></p>
                     </div>
                 </div>
             </div>
@@ -221,6 +217,24 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p>Change the billing frequency for CSP partners. This feature, applicable to license-based services, enables partners to more easily align billing across their subscriptions while preserving existing billing properties like subscription IDs.</p>
                         <p>&nbsp;</p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/change-the-billing-cycle" data-linktype="external">Change the billing cycle</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Government Community Cloud</h3>
+                        <p>Partner Center Office Government Community Cloud for CSP partners (GCC). Office 365 government plans are designed for the unique needs of US government organizations. These plans provide all the features and capabilities of Office 365 services in a segmented cloud environment that helps organizations comply with US government security standards.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/csp-gcc-overview" data-linktype="external">Partner Center Office Government Community Cloud</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
                     </div>
                 </div>
             </div>
