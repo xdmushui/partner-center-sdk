@@ -43,6 +43,9 @@ This section describes the ways that Cloud Solution Provider partners can use th
 -   [Confirm customer acceptance of Microsoft Cloud agreement](confirm-customer-consent.md)
 -   [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md)
 -   [Get confirmation of customer acceptance of Microsoft Cloud agreement](get-confirmation-of-customer-consent.md)
+-   [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
+-   [Get a customer's qualification](get-a-customer-s-qualification.md)
+-   [Update a customer's qualification](update-a-customer-s-qualification.md)
 
 **Manage user accounts and assign licenses**
 -   [Create user accounts for a customer](create-user-accounts-for-a-customer.md)

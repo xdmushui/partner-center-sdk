@@ -286,9 +286,7 @@ All of the following scenarios can be completed three different ways:
 </table>
 
 
-
 ## <span id="background"></span><span id="BACKGROUND"></span>Background
-
 
 ### <span id="Who_is_involved_in_the_order_process_"></span><span id="who_is_involved_in_the_order_process_"></span><span id="WHO_IS_INVOLVED_IN_THE_ORDER_PROCESS_"></span>Who is involved in the order process?
 
@@ -305,11 +303,3 @@ CSP partners are resellers who have customers and sell them Microsoft products f
 Subscriptions can be added, and the number of seats or add-ons can be increased or decreased. If a customer fails to pay, misuses the subscription, or engages in fraud, then Microsoft, the distributor, or the reseller are all able to suspend the subscription. It will be permanent if it's not reactivated within the limits of the CSP program.
 
 You can check which subscriptions a customer is **entitled** to use (ie, which ones are currently paid for, not suspended, and not replaced by a newer order).
-
-
-
-
-
-
-
-

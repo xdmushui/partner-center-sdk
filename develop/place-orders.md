@@ -42,6 +42,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Create an order**  
 -   [Create a cart](create-a-cart.md)  
+-   [Create a cart with add-ons](create-a-cart-with-add-ons.md)
 -   [Update a cart](update-a-cart.md)  
 -   [Checkout a cart](checkout-a-cart.md)  
 -   [Get an order by ID](get-an-order-by-id.md)

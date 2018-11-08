@@ -36,18 +36,19 @@ Describes a cart.
 
 Represents one item contained in a cart.
 
-| Property             | Type                        | Description                                                                           |
-|----------------------|-----------------------------|---------------------------------------------------------------------------------------|
-| id                   | string                      | A unique identifier for a cart line item. Applied upon successful creation of cart.   |
-| catalogId            | string                      | The catalog item identifier.                                                          |
-| friendlyName         | string                      | Optional. The friendly name for the item defined by the partner to help disambiguate. |
-| quantity             | int                         | The number of licenses or instances.                                                  |
-| currencyCode         | string                      | The currency code.                                                                    |
-| billingCycle         | Object                      | The type of billing cycle set for the current period.                                 |
-| participants         | List of Object String pairs | A collection of PartnerId on Record (MPNID) on the purchase.                           |
-| provisioningContext  | Dictionary<string, string>  | A context used for provisioning of offer.                                             |
-| orderGroup           | string                      | A group to indicate which items can be placed together.                               |
-| error                | Object                      | Applied after cart is created in case of an error.                                    |
+| Property             | Type                             | Description                                                                                                                                           |
+|----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id                   | string                           | A unique identifier for a cart line item. Applied upon successful creation of cart.                                                                   |
+| catalogId            | string                           | The catalog item identifier.                                                                                                                          |
+| friendlyName         | string                           | Optional. The friendly name for the item defined by the partner to help disambiguate.                                                                 |
+| quantity             | int                              | The number of licenses or instances.                                                                                                                  |
+| currencyCode         | string                           | The currency code.                                                                                                                                    |
+| billingCycle         | Object                           | The type of billing cycle set for the current period.                                                                                                 |
+| participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
+| provisioningContext  | Dictionary<string, string>       | A context used for provisioning of offer.                                                                                                             |
+| orderGroup           | string                           | A group to indicate which items can be placed together.                                                                                               |
+| addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
+| error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
 
  
 
