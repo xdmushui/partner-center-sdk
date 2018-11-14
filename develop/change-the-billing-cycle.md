@@ -60,7 +60,7 @@ var order = new Order()
     }
 };
 
-var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Patch(order);
+var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(order);
 ```
 
 
