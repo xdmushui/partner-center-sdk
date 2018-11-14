@@ -162,52 +162,18 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<p>The following topics are new or updated for Partner Center SDK version 1.9.</p>
+<p><strong>Partner Center .NET SDK v1.10.0 and updated REST APIs are now available!</strong></p>
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.10.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Agreements</h3>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud agreement</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/agreement" data-linktype="external">Agreement resource</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/agreement-metadata" data-linktype="external">AgreementMetaData resource</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Entitlements</h3>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-a-collection-of-entitlements" data-linktype="external">Get a collection of entitlements</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/make-a-one-time-purchase" data-linktype="external">Make a one-time purchase</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/create-a-cart" data-linktype="external">Create a cart</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/products" data-linktype="external">Products resource</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/entitlement" data-linktype="external">Entitlement resource</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external">Cart resource</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
                         <h3>Subscriptions</h3>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/purchase-catalog-items" data-linktype="external">Purchase catalog items</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/check-inventory" data-linktype="external">Check inventory</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-products" data-linktype="external">Get a list of products</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/purchase-azure-reservations" data-linktype="external">Purchase Azure reservations</a></p>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/register-a-subscription" data-linktype="external">Register a subscription</a></p>
+                        <p>Updated the <strong><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external">Subscription</a></strong> resource with missing properties: <em>IsTrial</em>, <em>HasPurchasableAddons</em>, and <em>Actions</em></p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external"><strong>Subscription</strong> resource</a></p>
                     </div>
                 </div>
             </div>
@@ -216,9 +182,45 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
     <li>
         <div class="cardSize">
             <div class="cardPadding">
-                <div class="card"><br/>                    <div class="cardText">
-                        <h3>Activity log</h3>
-                        <p><a href="https://docs.microsoft.com/partner-center/develop/auditing" data-linktype="external">Auditing</a></p>
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Billing frequency</h3>
+                        <p>Change the billing frequency for CSP partners. This feature, applicable to license-based services, enables partners to more easily align billing across their subscriptions while preserving existing billing properties like subscription IDs.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/change-the-billing-cycle" data-linktype="external">Change the billing cycle</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Add-ons</h3>
+                        <p>Create a cart with add-ons. Added support for subscription add-ons in the new <a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong></a> resource API. This capability already existed in the <a href="https://docs.microsoft.com/partner-center/develop/orders" data-linktype="external"><strong>Order</strong></a> resource API.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-a-cart-with-add-ons" data-linktype="external">Create a cart with add-ons</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong> resource</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Government Community Cloud</h3>
+                        <p>Partner Center Office Government Community Cloud for CSP partners (GCC). Office 365 government plans are designed for the unique needs of US government organizations. These plans provide all the features and capabilities of Office 365 services in a segmented cloud environment that helps organizations comply with US government security standards.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/csp-gcc-overview" data-linktype="external">Partner Center Office Government Community Cloud</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
                     </div>
                 </div>
             </div>

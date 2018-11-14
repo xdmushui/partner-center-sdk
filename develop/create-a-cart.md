@@ -51,7 +51,7 @@ var cart = new Cart()
     }
 };
 
-var createdCart = partnerOperations.Customers.ById(customerId).Cart.Create(cart);
+var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
 ### Java

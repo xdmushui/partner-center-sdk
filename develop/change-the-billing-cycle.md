@@ -1,30 +1,29 @@
 ---
 title: Change the billing cycle
 description: Updates a subscription from monthly to annual billing or from annual to monthly billing.
-ms.date: 10/17/2018
+ms.date: 11/14/2018
 ms.localizationpriority: medium
 ---
 
 # Change the billing cycle
 
-
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Updates an [Order](orders.md) from monthly to annual billing or from annual to monthly billing.
 
 In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
 
 **Out of Scope**  
+
 - Changing the billing cycle for trials
 - Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
 - Changing the billing cycles for inactive subscriptions
 - Changing billing cycles for Microsoft online services license-based subscriptions
-
 
 ## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
 
@@ -32,16 +31,15 @@ In the Partner Center dashboard, this operation can be performed by navigating t
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - An order ID.
 
-
 ## <span id="C_"></span><span id="c_"></span>C#
 
 To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
-<!-- TODO: Add code snippet here -->
 ``` csharp
-IAggregatePartner partnerOperations;
-string customerId;
-string offerId;
+// IAggregatePartner partnerOperations;
+// string customerId;
+// string offerId;
+// string orderId; 
 
 var order = new Order()
 {
@@ -60,9 +58,8 @@ var order = new Order()
     }
 };
 
-var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(order);
+var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orderId).Patch(order);
 ```
-
 
 ## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
 
@@ -72,7 +69,6 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 |-----------|---------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
- 
 **URI parameter**
 
 This table lists the required query parameter to change the quantity of the subscription.
@@ -82,16 +78,13 @@ This table lists the required query parameter to change the quantity of the subs
 | **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |  
 | **order-id**           | GUID |    Y     | The order identifier                                                 |  
 
-
 **Request headers**
 
--   See [Headers](headers.md) for more information.
-
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
 The following tables describe the properties in the request body.
-
 
 ## <span id="order"></span><span id="ORDER"></span>Order
 
@@ -103,7 +96,6 @@ The following tables describe the properties in the request body.
 | LineItems          | array of objects |    Y     | An array of [OrderLineItem](#orderlineitem) resources                      |
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
-
 
 ## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
 
@@ -118,14 +110,13 @@ The following tables describe the properties in the request body.
 | PartnerIdOnRecord    | string |    N     | The MPN ID of the partner of record                                                |
 | Attributes           | Object |    N     | Contains "ObjectType": "OrderLineItem"                                             |
 
-
 **Request example**
 
 Update to annual billing
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
 MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
@@ -159,7 +150,6 @@ Expect: 100-continue
 }
 ```
 
-
 ## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
 
 If successful, this method returns the updated subscription order in the response body.
@@ -167,7 +157,6 @@ If successful, this method returns the updated subscription order in the respons
 **Response success and error codes**
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
-
 
 **Response example**
 
@@ -198,7 +187,8 @@ Date: Wed, 25 Jan 2017 23:01:08 GMT
                     "headers": []
                 }
             }
-        }, {
+        },
+        {
             "lineItemNumber": 1,
             "offerId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
             "subscriptionId": "968BA1CF-C146-4ADF-A300-308DCF718EEE",
