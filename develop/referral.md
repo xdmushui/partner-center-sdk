@@ -40,34 +40,35 @@ Represents the referral.
 | Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
 | Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved.                                |
 | InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| ETag                  | string                                            | ETags are used for concurrency checking when updating resources. |
 
 
 ## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value           | Position     | Description                                                                                |
-|-----------------|--------------|--------------------------------------------------------------------------------------------|
-| None            | 0            |                                                                                            |
-| New             | 1            | Represents a new referral.                                                                 |
-| Active          | 2            | Represents an active referral.                                                             |
-| Closed          | 3            | Represents a closed referral.                                                              |
+| Value           | Description                                                                                |
+|-----------------|---------------------------------------------------------------------------------------------|
+| None            |                                                                                             |
+| New             | Represents a new referral.                                                                 |
+| Active          | Represents an active referral.                                                             |
+| Closed          | Represents a closed referral.                                                              |
 
 
 ## <span id="ReferralSubstatus"></span><span id="referralSubstatus"></span><span id="REFERRALSubstatus"></span>ReferralSubstatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value           | Position     | Description                                                                                |
-|-----------------|--------------|--------------------------------------------------------------------------------------------|
-| None            | 0            |                                                                                            |
-| Pending         | 1            | Represents a new referral that is pending.                                                 |
-| Received        | 2            | Represents a new referral that has been received.                   |
-| Accepted        | 3            | Represents a active referral that has been accepted.                                                    |
-| Won             | 4            | Represents a closed referral that has been won.                                            |
-| Lost            | 5            | Represents a closed referral that has been lost.                                           |
-| Declined        | 6            | Represents a closed referral that has been declined.                                       |
-| Expired         | 7            | Represents a closed referral that has expired.                                             |
+| Value           | Description                                                                                |
+|-----------------|--------------------------------------------------------------------------------------------|
+| None            |                                                                                            |
+| Pending         | Represents a new referral that is pending.                                                 |
+| Received        | Represents a new referral that has been received.                   |
+| Accepted        | Represents a active referral that has been accepted.                                                    |
+| Won             | Represents a closed referral that has been won.                                            |
+| Lost            | Represents a closed referral that has been lost.                                           |
+| Declined        | Represents a closed referral that has been declined.                                       |
+| Expired         | Represents a closed referral that has expired.                                             |
 
 **Status & Substatus transition states**
 
@@ -82,22 +83,22 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral type.
 
-| Property              | Type                                                  | Description                                                                     |
-|-----------------------|-------------------------------------------------------|---------------------------------------------------------------------------------|
-| Shared                | 0                                                     | Represents a referral in which all parties involved will collaborate to close.  |
-| Independent           | 1                                                     | Represents a referral in which two parties will collaborate to close.           |
+| Property              | Description                                                                     |
+|-----------------------|---------------------------------------------------------------------------------|
+| Shared                | Represents a referral in which all parties involved will collaborate to close.  |
+| Independent           | Represents a referral in which two parties will collaborate to close.           |
 
 
 ## <span id="ReferralQualification"></span><span id="referralqualification"></span><span id="REFERRALQUALIFICATION"></span>ReferralQualification
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
-| Value                | Position     | Description                                                                                 |
-|----------------------|--------------|---------------------------------------------------------------------------------------------|
-| None                 | 0            | Represents a referral that has no quality measure associated.                               |
-| Direct               | 1            | Represents a referral that has been created directly by a customer.                         |
-| MarketingQualified   | 2            | Represents a referral that has been generated via Microsoft marketing automation systems.   |
-| SalesQualified       | 3            | Represents a referral from a Microsoft sales agent.                                         |
+| Value                | Description                                                                                 |
+|----------------------|---------------------------------------------------------------------------------------------|
+| None                 | Represents a referral that has no quality measure associated.                               |
+| Direct               | Represents a referral that has been created directly by a customer.                         |
+| MarketingQualified   | Represents a referral that has been generated via Microsoft marketing automation systems.   |
+| SalesQualified       | Represents a referral from a Microsoft sales agent.                                         |
 
 
 ## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
@@ -178,8 +179,16 @@ Additional information that can be shared when inviting another organizations.
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
-| InvitedByOrganizationId | [profiles](referral.md#OrganizationProfile)              | The organization ID that sent the referral.                                   |
+| InvitedBy | [InvitedBy](referral.md#InvitedBy)                                     | The organization ID that sent the referral.                                   |
 
+## <span id="InvitedBy"></span><span id="invitedby"></span><span id="INVITEDBY"></span>InvitedBy
+
+Additional information that can be shared when inviting another organizations. 
+
+| Property              | Type                                                       | Description                                                                   |
+|-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
+| OrganizationId        | string                                                     | The organization ID that sent the referral.                |
+| OrganizationName      | string                                                     | The organization name that sent the referral.                                   |
 
 ## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
 
@@ -219,11 +228,11 @@ Contains the solution details.
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
 
-| Property        | Type                                    | Description                                                     |
-|-----------------|-----------------------------------------|-----------------------------------------------------------------|
-| None            | 0                                       |                                                                 |
-| Category        | 1                                       | Leverages pre-defined solution names.                            |
-| Name            | 2                                       | Ability to reference solutions from the Microsoft catalog. |
+| Property        | Description                                                     |
+|-----------------|-----------------------------------------------------------------|
+| None            |                                                                  |
+| Category        |  Leverages pre-defined solution names.                            |
+| Name            |  Ability to reference solutions from the Microsoft catalog. |
 
 
 ## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
