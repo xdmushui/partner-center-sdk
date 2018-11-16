@@ -27,7 +27,7 @@ This topic explains how to get a list of referrals.
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals               |
+| **GET** | https://api.partnercenter.microsoft.com/referrals/v2/referrals               |
 
 **URI parameter**
 
@@ -39,9 +39,6 @@ Use the following query parameters to get a list of referrals
 |self                    | string   | No       | A string of value "true" will return only the referrals for your organization.     |
 |status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).           |
 |pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.                   |
-|invitedByOrganization   | string   | No       | An organization ID. Will return referrals associated with a specific organization. |
-
-
  
 **Request headers**
 
@@ -54,7 +51,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
+GET https://api.partnercenter.microsoft.com/referrals/v2/referrals&pageSize=2&self=true&status=Active HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
@@ -85,7 +82,7 @@ Each response comes with an HTTP status code that indicates success or failure a
             "externalReferenceId": "",
             "createdDateTime": "2018-10-30T21:03:42.4579542Z",
             "updatedDateTime": "2018-10-30T21:03:42.4579542Z",
-            "expirationDateTime": "2018-11-03T00:00:00Z",
+            "expirationDateTime": "2018-11-13T00:00:00Z",
             "status": "New",
             "substatus": "Pending",
             "qualification": "Direct",
@@ -293,7 +290,7 @@ In the above example pageSize=2 is passed in the querystring and will only retur
 **Request example**
 
 ```http
-GET https://api.partner.microsoft.com/v1.0/engagements/referrals&pageSize=2&self=true&status=Active HTTP/1.1
+GET https://api.partnercenter.microsoft.com/referrals/v2/referrals&pageSize=2&self=true&status=Active HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
