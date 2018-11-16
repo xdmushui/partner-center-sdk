@@ -33,14 +33,12 @@ This topic explains how to get a list of referrals.
 
 Use the following query parameters to get a list of referrals
 
-
 | Name                   | Type     | Required | Description                                                                         |
 |------------------------|----------|----------|-------------------------------------------------------------------------------------|
-|engagementId            | string   | No       | An engagement ID.                                                                   |
-|self                    | string   | No       | A string of value "true" will return only the referrals for your organization.      |
-|status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).            |
-|pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.                    |
- 
+| engagementId            | string   | No       | An engagement ID.                                                                   |
+| self                    | string   | No       | A string of value "true" will return only the referrals for your organization.      |
+| status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).            |
+| pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.                    |
 
 **Request headers**
 
