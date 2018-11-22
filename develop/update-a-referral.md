@@ -129,8 +129,7 @@ Content-Type: application/json
     },
     "consent": {
         "consentToToShareInfoWithOthers": true,
-        "consentToContact": true,
-        "consentToMicrosoftToContactSpecificPartners": true
+        "consentToContact": true
     },
     "details": {
         "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
@@ -179,7 +178,8 @@ Content-Type: application/json
         "invitedBy": {
             "organizationId": "msft"
         }
-    }
+    },
+    "eTag": "\"2500ec5a-0000-0000-0000-5bf4967d0000\"",
 }
 ```
 
@@ -245,8 +245,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     },
     "consent": {
         "consentToToShareInfoWithOthers": true,
-        "consentToContact": true,
-        "consentToMicrosoftToContactSpecificPartners": true
+        "consentToContact": true
     },
     "details": {
         "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
@@ -307,6 +306,7 @@ Each response comes with an HTTP status code that indicates success or failure a
             "headers": []
         }
     },
+    "eTag": "\"2500ec5a-0000-0000-0000-5bf4967d0000\"",
     "attributes": {
         "objectType": "Referral"
     }

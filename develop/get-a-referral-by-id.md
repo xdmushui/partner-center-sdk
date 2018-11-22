@@ -118,8 +118,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     },
     "consent": {
         "consentToToShareInfoWithOthers": true,
-        "consentToContact": true,
-        "consentToMicrosoftToContactSpecificPartners": true
+        "consentToContact": true
     },
     "details": {
         "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
@@ -170,16 +169,17 @@ Each response comes with an HTTP status code that indicates success or failure a
     },
     "links": {
         "relatedReferrals": {
-            "uri": "/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454&api-version=v1.0",
+            "uri": "/referrals/v2/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
             "method": "GET",
             "headers": []
         },
         "self": {
-            "uri": "/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9?api-version=v1.0",
+            "uri": "/referrals/v2/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9",
             "method": "GET",
             "headers": []
         }
     },
+    "eTag": "\"2500ec5a-0000-0000-0000-5bf4967d0000\"",
     "attributes": {
         "objectType": "Referral"
     }

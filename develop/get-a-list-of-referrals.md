@@ -137,12 +137,12 @@ Each response comes with an HTTP status code that indicates success or failure a
             }
             "links": {
                 "relatedReferrals": {
-                    "uri": "/referrals?engagementId=65edc0b5-3485-41b7-a17e-dfa9ef4706e2&api-version=v1.0",
+                    "uri": "/referrals/v2/referrals/?engagementId=65edc0b5-3485-41b7-a17e-dfa9ef4706e2",
                     "method": "GET",
                     "headers": []
                 },
                 "self": {
-                    "uri": "/referrals/c5fbb3b6-be74-4795-9fb5-4324c73fed37?api-version=v1.0",
+                    "uri": "/referrals/v2/referrals/c5fbb3b6-be74-4795-9fb5-4324c73fed37",
                     "method": "GET",
                     "headers": []
                 }
@@ -247,17 +247,18 @@ Each response comes with an HTTP status code that indicates success or failure a
             "inviteContext": {
                 "notes": "Hi ABC Partner, hoping you can help this customer. Thanks, John @ Microsoft",
                 "invitedBy": {
-                    "organizationId": "msft"
+                    "organizationId": "msft",
+                    "organizationName": "Microsoft"
                 }
             },
             "links": {
                 "relatedReferrals": {
-                    "uri": "/v1.0/engagements/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454&api-version=v1.0",
+                    "uri": "/referrals/v2/referrals?engagementId=b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
                     "method": "GET",
                     "headers": []
                 },
                 "self": {
-                    "uri": "/v1.0/engagements/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9?api-version=v1.0",
+                    "uri": "/referrals/v2/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9",
                     "method": "GET",
                     "headers": []
                 }
@@ -269,7 +270,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     ],
     "links": {
         "next": {
-            "uri": "/v1.0/engagements/referrals?api-version=v1.0",
+            "uri": "/referrals/v2/referrals",
             "method": "GET",
             "headers": [
                 {
@@ -290,7 +291,7 @@ In the above example pageSize=2 is passed in the querystring and will only retur
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/referrals/v2/referrals&pageSize=2&self=true&status=Active HTTP/1.1
+GET https://api.partnercenter.microsoft.com/referrals/v2/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
