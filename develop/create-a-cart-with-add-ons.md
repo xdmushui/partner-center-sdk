@@ -66,7 +66,7 @@ var cart = new Cart()
         }
     };
 
-var createdCart = partnerOperations.Customers.ById(customerId).Cart.Create(cart);
+var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
 Follow these steps to create a cart which will enable the purchase of add-on(s) against existing base subscription(s):

@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 -   Partner Center for Microsoft Cloud for US Government
 
 
-> [!NOTE]
+> [!IMPORTANT]
 > Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
 Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. 
 > 
