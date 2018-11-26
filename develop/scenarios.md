@@ -36,6 +36,16 @@ All of the following scenarios can be completed three different ways:
 </colgroup>
 <tbody>
 <tr>
+<td><p><a href="referrals.md">Referrals</a></p></td>
+<td><p>Referrals</p>
+<ul>
+<li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
+<li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
+<li><p><a href="update-a-referral.md">Update a referral</a></p></li> 
+</ul>
+</td>
+</tr>	
+<tr>
 <td><p><a href="usage-analytics.md">Analytics</a></p></td>
 <td><p>Retrieve analytics</p>
 <ul>
@@ -110,9 +120,6 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="confirm-customer-consent.md">Confirm customer acceptance of Microsoft Cloud agreement</a></p></li>
 <li><p><a href="get-agreement-metadata.md">Get agreement metadata for Microsoft Cloud Agreement</a></p></li>
 <li><p><a href="get-confirmation-of-customer-consent.md">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p></li>
-<li><p><a href="get-a-partner-s-validation-codes.md">Get a partner's validation codes</a></p></li>
-<li><p><a href="get-a-customer-s-qualification.md">Get a customer's qualification</a></p></li>
-<li><p><a href="update-a-customer-s-qualification.md">Update a customer's qualification</a></p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
@@ -160,7 +167,6 @@ All of the following scenarios can be completed three different ways:
 <p>Create an order</p>
 <ul>
 <li><p><a href="create-a-cart.md">Create a cart</a></p></li>
-<li><p><a href="create-a-cart-with-add-ons.md">Create a cart with add-ons</a></p></li>
 <li><p><a href="update-a-cart.md">Update a cart</a></p></li>
 <li><p><a href="checkout-a-cart.md">Checkout a cart</a></p></li>
 <li><p><a href="create-an-order.md">Create an order</a></p></li>
@@ -280,9 +286,7 @@ All of the following scenarios can be completed three different ways:
 </table>
 
 
-
 ## <span id="background"></span><span id="BACKGROUND"></span>Background
-
 
 ### <span id="Who_is_involved_in_the_order_process_"></span><span id="who_is_involved_in_the_order_process_"></span><span id="WHO_IS_INVOLVED_IN_THE_ORDER_PROCESS_"></span>Who is involved in the order process?
 
@@ -299,11 +303,3 @@ CSP partners are resellers who have customers and sell them Microsoft products f
 Subscriptions can be added, and the number of seats or add-ons can be increased or decreased. If a customer fails to pay, misuses the subscription, or engages in fraud, then Microsoft, the distributor, or the reseller are all able to suspend the subscription. It will be permanent if it's not reactivated within the limits of the CSP program.
 
 You can check which subscriptions a customer is **entitled** to use (ie, which ones are currently paid for, not suspended, and not replaced by a newer order).
-
-
-
-
-
-
-
-
