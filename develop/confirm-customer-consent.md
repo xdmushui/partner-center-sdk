@@ -1,7 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 10/14/2018
+ms.date: 11/20/2018
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
 
 - If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with both app + user authentication only.
 - A customer ID (customer-tenant-id).
 - Date when customer accepted the Microsoft Cloud Agreement.
 - Information about the user from the organization who accepted the Microsoft Cloud Agreement, including:
@@ -180,7 +180,7 @@ This table describes the minimum required fields to create an **Agreement** reso
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
 | userId         | string | Object identifier of the logged in user in the partner tenant who is providing confirmation on behalf of the partner organization. |
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  </br> - firstName </br> - lastName</br> - email</br> - phoneNumber (optional) |
+| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  <br/> - firstName <br/> - lastName<br/> - email<br/> - phoneNumber (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Cloud Agreement by retrieving the agreement metadata for Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. |
 | type           |AgreementType enum | Agreement type accepted by the customer. Currently, the only supported value is "MicrosoftCloudAgreement". |
@@ -191,6 +191,7 @@ This table describes the minimum required fields to create an **Agreement** reso
 POST https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/agreements HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
+Content-Type: application/json
 MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 {
