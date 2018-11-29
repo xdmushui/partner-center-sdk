@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 10/14/2018
+ms.date: 11/28/2018
 ms.localizationpriority: medium
 ---
 
@@ -21,14 +21,16 @@ ms.localizationpriority: medium
 
 - If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports app + user authentication.
 - A customer ID (customer-tenant-id).
 
 ## Examples
 
-### .NET
+To retrieve confirmation of customer acceptance provided previously
 
-To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's identifier. Then, get the **Agreements** property, followed by calling the **Get** or **GetAsync** methods.
+# [.NET](#tab/dotnet)
+
+Use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's identifier. Then, get the **Agreements** property, followed by calling the **Get** or **GetAsync** methods.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -37,13 +39,11 @@ To retrieve confirmation of customer acceptance provided previously, use the **I
 var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Get();
 ```
 
-#### .NET Sample
-
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-### Java
+# [Java](#tab/java)
 
-To retrieve confirmation of customer acceptance provided previously, use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, get the **getAgreements** function, followed by calling the **get** function.
+Use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, get the **getAgreements** function, followed by calling the **get** function.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -52,19 +52,17 @@ To retrieve confirmation of customer acceptance provided previously, use the **I
 ResourceCollection<Agreement> agreements = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().get();
 ```
 
-#### Java Sample
-
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetCustomerAgreements.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
-### PowerShell
+# [PowerShell](#tab/powershell)
 
-To retrieve confirmation of customer acceptance provided previously, execute the [**Get-PartnerCustomerAgreement**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerAgreement.md) command.
+Use the [**Get-PartnerCustomerAgreement**](https://docs.microsoft.com/en-us/powershell/module/partnercenter/partner-center/get-partnercustomeragreement) command.
 
 ```powershell
 Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
+# [REST](#tab/rest)
 
 To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement, create a new **Agreement** resource with the relevant certification information.  
 
@@ -149,3 +147,5 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
     ]
 }
 ```
+
+---
