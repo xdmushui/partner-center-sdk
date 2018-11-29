@@ -39,7 +39,7 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 > | Belarus                        | Haiti                             | Saint Martin                             |
 > | Benin                          | Heard Island and McDonald Islands | Saint Pierre and Miquelon                |
 > | Bhutan                         | India                             | Saint Vincent and the Grenadines         |
-> | Bonaire                        | Isle of Man                       | Samoa                                    |
+> | Bonaire                        | Isle of Man                       | Samoan Islands                           |
 > | Bouvet Island                  | Jan Mayen                         | San Marino                               |
 > | Brazil                         | Jersey                            | São Tomé and Príncipe                    |
 > | British Indian Ocean Territory | Kazakhstan                        | Seychelles                               |

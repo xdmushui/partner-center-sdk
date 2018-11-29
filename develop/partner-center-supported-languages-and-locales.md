@@ -62,10 +62,10 @@ The following table lists the cultures and International Standards Organization 
 | Bulgaria                                 | BG                       | BGR                      | bg-BG / en-US                         |
 | Burkina Faso                             | BF                       | BFA                      | fr-FR / en-US                         |
 | Burundi                                  | BI                       | BDI                      | fr-FR / en-US                         |
+| Cabo Verde                               | CV                       | CPV                      | pt-CV / en-US                         |
 | Cambodia                                 | KH                       | KHM                      | km-KH / en-US                         |
 | Cameroon                                 | CM                       | CMR                      | fr-FR / en-US                         |
 | Canada                                   | CA                       | CAN                      | fr-CA / en-US                         |
-| Cape Verde                               | CV                       | CPV                      | pt-CV / en-US                         |
 | Cayman Islands                           | KY                       | CYM                      | en-GB / en-US                         |
 | Central African Republic                 | CF                       | CAF                      | fr-FR / en-US                         |
 | Chad                                     | TD                       | TCD                      | fr-FR / en-US                         |
@@ -96,7 +96,7 @@ The following table lists the cultures and International Standards Organization 
 | Estonia                                  | EE                       | EST                      | et-EE / en-US                         |
 | Eswatini                                 | SZ                       | SWZ                      | en-US                                 |
 | Ethiopia                                 | ET                       | ETH                      | am-ET / en-US                         |
-| Falkland Islands, The [Malvinas]         | FK                       | FLK                      | en-US                                 |
+| Falkland Islands                         | FK                       | FLK                      | en-US                                 |
 | Faroe Islands, The                       | FO                       | FRO                      | fo-FO / en-US                         |
 | Fiji                                     | FJ                       | FJI                      | en-GB / en-US                         |
 | Finland                                  | FI                       | FIN                      | fi-FI / sv-FI / en-US                 |
@@ -124,7 +124,7 @@ The following table lists the cultures and International Standards Organization 
 | Heard Island and McDonald Islands        | HM                       | HMD                      | en-US                                 |
 | Holy See, The                            | VA                       | VAT                      | it-IT / en-US                         |
 | Honduras                                 | HN                       | HND                      | es-HN / en-US                         |
-| Hong Kong                                | HK                       | HKG                      | zh-HK / en-US                         |
+| Hong Kong Special Administrative Region  | HK                       | HKG                      | zh-HK / en-US                         |
 | Hungary                                  | HU                       | HUN                      | hu-HU / en-US                         |
 | Iceland                                  | IS                       | ISL                      | is-IS / en-US                         |
 | India                                    | IN                       | IND                      | en-IN / hi-IN / en-US                 |
@@ -155,7 +155,7 @@ The following table lists the cultures and International Standards Organization 
 | Liechtenstein                            | LI                       | LIE                      | de-LI / en-US                         |
 | Lithuania                                | LT                       | LTU                      | lt-LT / en-US                         |
 | Luxembourg                               | LU                       | LUX                      | de-LU / fr-LU / en-US                 |
-| Macao                                    | MO                       | MAC                      | zh-MO / en-US                         |
+| Macao Special Administrative Region      | MO                       | MAC                      | zh-MO / en-US                         |
 | Macedonia, The former Yugoslav Republic of | MK                       | MKD                      | mk-MK / en-US                         |
 | Madagascar                               | MG                       | MDG                      | fr-FR / en-US                         |
 | Malawi                                   | MW                       | MWI                      | en-US                                 |
@@ -195,7 +195,7 @@ The following table lists the cultures and International Standards Organization 
 | Oman                                     | OM                       | OMN                      | ar-OM / en-US                         |
 | Pakistan                                 | PK                       | PAK                      | ur-PK / en-US                         |
 | Palau                                    | PW                       | PLW                      | en-US                                 |
-| Palestine, State of                      | PS                       | PSE                      | ar-SA / en-US                         |
+| Palestinian Authority                    | PS                       | PSE                      | ar-SA / en-US                         |
 | Panama                                   | PA                       | PAN                      | es-PA / en-US                         |
 | Papua New Guinea                         | PG                       | PNG                      | en-US                                 |
 | Paraguay                                 | PY                       | PRY                      | es-PY / en-US                         |
@@ -217,9 +217,9 @@ The following table lists the cultures and International Standards Organization 
 | Saint Pierre and Miquelon                | PM                       | SPM                      | fr-FR / en-US                         |
 | Saint Vincent and the Grenadines         | VC                       | VCT                      | en-US                                 |
 | Saint-Barthélemy                         | BL                       | BLM                      | fr-FR / en-US                         |
-| Samoa                                    | WS                       | WSM                      | en-US                                 |
+| Samoan Islands                           | WS                       | WSM                      | en-US                                 |
 | San Marino                               | SM                       | SMR                      | it-IT / en-US                         |
-| Sao Tome and Principe                    | ST                       | STP                      | pt-PT / en-US                         |
+| São Tomé and Príncipe                    | ST                       | STP                      | pt-PT / en-US                         |
 | Saudi Arabia                             | SA                       | SAU                      | ar-SA / en-US                         |
 | Senegal                                  | SN                       | SEN                      | wo-SN / en-US                         |
 | Serbia                                   | RS                       | SRB                      | sr-Latn-RS / sr-Cyrl-RS / en-US       |
