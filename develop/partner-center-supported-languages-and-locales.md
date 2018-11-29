@@ -22,7 +22,7 @@ In the Partner Center managed APIs, the [CountryValidationRules](https://docs.mi
 The following table lists the cultures and International Standards Organization (ISO) country codes that are supported in the Partner Center APIs. 
 
 
-| Country/Region Name                      | ISO Alpha 2 Country Code | ISO Alpha 3 Country Code | Supported Culture(s)                  |
+| Country/Region                           | ISO Alpha 2 Country Code | ISO Alpha 3 Country Code | Supported Culture(s)                  |
 |------------------------------------------|--------------------------|--------------------------|---------------------------------------|
 | Afghanistan                              | AF                       | AFG                      | ps-AF / en-US                         |
 | Åland                                    | AX                       | ALA                      | sv-SE / en-US                         |
