@@ -2,29 +2,26 @@
 title: Assign licenses to a user
 description: How to assign licenses to a customer user.
 ms.assetid: 872C7444-DF89-4EB5-8C1E-1D8E2934A40E
-ms.date: 12/15/2017
+ms.date: 11/20/2018
 ms.localizationpriority: medium
 ---
 
 # Assign licenses to a user
 
-
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to assign licenses to a customer user.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## Prerequisites
 
-
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A customer identifier. The customer should have a subscription with an available license to assign.
--   A customer user identifier. This is the user to whom to assign the license.
--   A product SKU identifier that identifies the product for the license.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A customer identifier. The customer should have a subscription with an available license to assign.
+- A customer user identifier. This is the user to whom to assign the license.
+- A product SKU identifier that identifies the product for the license.
 
 ## <span id="Assigning_licenses_through_code"></span><span id="assigning_licenses_through_code"></span><span id="ASSIGNING_LICENSES_THROUGH_CODE"></span>Assigning licenses through code
-
 
 When you assign licenses to a user you must choose from the customer's collection of subscribed SKUs. Then, having identified the products that you want to assign, you must obtain the product SKU ID for each product in order to make the assignments. Each [**SubscribedSku**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.subscribedsku) instance contains a [**ProductSku**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.subscribedsku.productsku) property from which you can reference the [**ProductSku**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.productsku) object and get the [**ID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.productsku.id).
 
@@ -32,44 +29,48 @@ A license assignment request must contain licenses from a single license group. 
 
 Here are the steps to assign licenses through code:
 
-1.  Instantiate a [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object. You use this object to specify the product SKU and service plans to assign.
+1. Instantiate a [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object. You use this object to specify the product SKU and service plans to assign.
     ``` csharp
     LicenseAssignment license = new LicenseAssignment();
     ```
 
-2.  Populate the object properties as shown below. This code assumes that you already have the product SKU ID, and that all of the available service plans will be assigned (i.e. none will be excluded).
-    ``` csharp
+2. Populate the object properties as shown below. This code assumes that you already have the product SKU ID, and that all of the available service plans will be assigned (i.e. none will be excluded).
+  
+    ```csharp
     license.SkuId = selectedProductSkuId;
     license.ExcludedPlans = null;
     ```
 
-3.  If you don't have the product SKU ID, you need to retrieve the collection of subscribed SKUs and get the product SKU ID from one of them. Here is an example if you know the product SKU name.
-    ``` csharp
+3. If you don't have the product SKU ID, you need to retrieve the collection of subscribed SKUs and get the product SKU ID from one of them. Here is an example if you know the product SKU name.
+
+    ```csharp
     var customerSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get();
     var sku = customerSubscribedSkus.Items.Where(n => n.ProductSku.Name == "Office 365 Enterprise E3").First();
     license.SkuId = sku.ProductSku.Id;
     license.ExcludedPlans = null;
     ```
 
-4.  Next, instantiate a new list of type [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment), and add the license object. You can assign more than one license by adding each individually to the list. The licenses included in this list must be from the same license group.
-    ``` csharp
+4. Next, instantiate a new list of type [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment), and add the license object. You can assign more than one license by adding each individually to the list. The licenses included in this list must be from the same license group.
+
+    ```csharp
     List<LicenseAssignment> licenseList = new List<LicenseAssignment>();
     licenseList.Add(license);
     ```
 
-5.  Create a [**LicenseUpdate**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate.licensestoassign) property.
-    ``` csharp
+5. Create a [**LicenseUpdate**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate.licensestoassign) property.
+
+    ```csharp
     LicenseUpdate updateLicense = new LicenseUpdate();
     updateLicense.LicensesToAssign = licenseList;
     ```
 
-6.  Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object as shown below to assign the licenses.
-    ``` csharp
+6. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicenseupdates.createasync) method and pass the license update object as shown below to assign the licenses.
+
+    ```csharp
     var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).LicenseUpdates.Create(updateLicense);
     ```
 
 ## <span id="C_"></span><span id="c_"></span>C#
-
 
 To assign a license to a customer user, first instantiate a [**LicenseAssignment**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment) object, and populate the [**Skuid**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment.skuid) and [**ExcludedPlans**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseassignment.excludedplans) properties. You use this object to specify the product SKU to assign and service plans to exclude. Next, instantiate a new list of type **LicenseAssignment**, and add the license object to the list. Then create a [**LicenseUpdate**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate) instance and assign the list of license assignments to the [**LicensesToAssign**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licenseupdate.licensestoassign) property.
 
@@ -104,14 +105,11 @@ var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 
 ## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
 
-
 **Request syntax**
 
 | Method   | Request URI                                                                                                    |
 |----------|----------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenseupdates HTTP/1.1 |
-
- 
 
 **URI parameters**
 
@@ -122,11 +120,9 @@ Use the following path parameters to identify the customer and user.
 | customer-id | string | Yes      | A GUID formatted ID that identifies the customer. |
 | user-id     | string | Yes      | A GUID formatted ID that identifies the user.     |
 
- 
-
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -162,7 +158,6 @@ Expect: 100-continue
 ```
 
 ## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
-
 
 If successful, an HTTP response status code 201 is returned and the response body contains a [LicenseUpdate](licenses.md#licenseupdate) resource with the license information.
 
@@ -213,11 +208,3 @@ Date: Thu, 20 Apr 2017 22:12:36 GMT
     "source": "PartnerFD"
 }
 ```
-
- 
-
- 
-
-
-
-
