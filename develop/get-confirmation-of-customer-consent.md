@@ -64,7 +64,7 @@ Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'
 
 # [REST](#tab/rest)
 
-To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement, create a new **Agreement** resource with the relevant certification information.  
+Create a new **Agreement** resource with the relevant certification information.  
 
 **Request syntax**
 
