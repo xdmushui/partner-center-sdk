@@ -2,7 +2,7 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.date: 12/15/2017
+ms.date: 11/29/2018
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,6 @@ ms.localizationpriority: medium
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
 **Creating an Order for Azure Reserved VM Instance products applies only to**
