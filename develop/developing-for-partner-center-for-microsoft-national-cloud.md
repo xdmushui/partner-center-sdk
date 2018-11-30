@@ -40,10 +40,15 @@ The following list describes the differences for partners between Partner Center
 
 ## <span id="partner-center-for-microsoft-cloud-germany"></span><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-GERMANY"></span>Partner Center for Microsoft Cloud Germany
 
+>[!IMPORTANT]
+>Based on the evolution in customers’ needs, our cloud strategy for Germany will focus on delivery of the new cloud regions in Germany that are consistent with our global cloud offering. With this focus, we will no longer be accepting new customers or deploying any new services from the currently available Microsoft Cloud Germany. Existing customers can continue to use the current cloud services available today, which we’ll maintain with necessary security updates. 
+>  
+>Moving forward, new customers have the option to use the currently available European regions or the new regions in Germany when they become available. For more information, see [Microsoft to deliver cloud services from new datacenters in Germany](https://news.microsoft.com/europe/2018/08/31/microsoft-to-deliver-cloud-services-from-new-datacentres-in-germany-in-2019-to-meet-evolving-customer-needs/). 
+
 The following list describes the differences for partners between Partner Center and Partner Center for Microsoft Cloud Germany:
 
 - Partners cannot create users for their customer's organization or assign roles. Partners can read fields, but cannot write or update them. Partners must manually create or update their customers' users in the Office365 admin center or through the Azure portal. See [Azure Active Directory Documentation](https://docs.microsoft.com/azure/active-directory/).
-- You cannot manage the licenses for your customer's users using thePartner Center for Microsoft Cloud Germany portal or APIs. Instead, you must use the Office365 admin center or Azure Active Directly Group license management (coming soon) to manage their licenses.
+- You cannot manage the licenses for your customer's users using the Partner Center for Microsoft Cloud Germany portal or APIs. Instead, you must use the Office365 admin center or Azure Active Directly Group license management (coming soon) to manage their licenses.
 
   Optionally, you can use Azure AD Graph API. See [Add or Remove Licenses from a user](https://msdn.microsoft.com/library/azure/ad/graph/api/functions-and-actions#assignLicense ). Note that for Partner Center for Microsoft Cloud Germany, the Graph endpoint should be https://graph.cloudapi.de instead of https://graph.windows.net.
 
