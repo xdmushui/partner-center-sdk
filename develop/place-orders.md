@@ -2,7 +2,7 @@
 title: Place orders
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage customer orders and subscriptions.
 ms.assetid: D4E13B95-4E27-42E5-86E4-9DBF91564209
-ms.date: 07/12/2018
+ms.date: 11/29/2018
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,6 @@ ms.localizationpriority: medium
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer orders and subscriptions.
