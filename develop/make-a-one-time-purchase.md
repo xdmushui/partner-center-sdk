@@ -31,7 +31,7 @@ How to make a one-time purchase of software and reservation products such as sof
 > | Belarus                        | Haiti                             | Saint Martin                             |
 > | Benin                          | Heard Island and McDonald Islands | Saint Pierre and Miquelon                |
 > | Bhutan                         | India                             | Saint Vincent and the Grenadines         |
-> | Bonaire                        | Isle of Man                       | Samoan Islands                           |
+> | Bonaire                        | Isle of Man                       | Samoa                                    |
 > | Bouvet Island                  | Jan Mayen                         | San Marino                               |
 > | Brazil                         | Jersey                            | São Tomé and Príncipe                    |
 > | British Indian Ocean Territory | Kazakhstan                        | Seychelles                               |
