@@ -2,7 +2,7 @@
 title: Purchase an add-on to a subscription
 description: How to purchase an add-on to an existing subscription.
 ms.assetid: 743520E5-0501-4403-B977-5E6D3E32DEC3
-ms.date: 12/15/2017
+ms.date: 11/29/2018
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,6 @@ ms.localizationpriority: medium
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
 How to purchase an add-on to an existing subscription.

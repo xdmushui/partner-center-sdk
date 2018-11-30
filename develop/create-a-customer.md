@@ -2,7 +2,7 @@
 title: Create a customer
 description: This topic explains how to create a new customer. If you are an indirect provider and you want to create a customer for an indirect reseller, please see Create a customer for an indirect reseller.
 ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.date: 12/15/2017
+ms.date: 11/29/2018
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,6 @@ ms.localizationpriority: medium
 
 -   Partner Center
 -   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
 -   Partner Center for Microsoft Cloud for US Government
 
 This topic explains how to create a new customer. If you are an indirect provider and you want to create a customer for an indirect reseller, please see [Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md).
