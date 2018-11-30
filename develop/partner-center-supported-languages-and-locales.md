@@ -25,7 +25,7 @@ The following table lists the cultures and International Standards Organization 
 | Country/Region                           | ISO Alpha 2 Country Code | ISO Alpha 3 Country Code | Supported Culture(s)                  |
 |------------------------------------------|--------------------------|--------------------------|---------------------------------------|
 | Afghanistan                              | AF                       | AFG                      | ps-AF / en-US                         |
-| Åland                                    | AX                       | ALA                      | sv-SE / en-US                         |
+| Åland Islands                            | AX                       | ALA                      | sv-SE / en-US                         |
 | Albania                                  | AL                       | ALB                      | sq-AL / en-US                         |
 | Algeria                                  | DZ                       | DZA                      | ar-DZ / en-US                         |
 | American Samoa                           | AS                       | ASM                      | en-US                                 |
@@ -51,14 +51,14 @@ The following table lists the cultures and International Standards Organization 
 | Bermuda                                  | BM                       | BMU                      | en-GB / en-US                         |
 | Bhutan                                   | BT                       | BTN                      | en-US                                 |
 | Bolivia                                  | BO                       | BOL                      | es-BO / en-US                         |
-| Bonaire, Sint Eustatius and Saba         | BQ                       | BES                      | nl-NL / en-US                         |
+| Bonaire                                  | BQ                       | BES                      | nl-NL / en-US                         |
 | Bosnia and Herzegovina                   | BA                       | BIH                      | bs-Latn-BA / en-US                    |
 | Botswana                                 | BW                       | BWA                      | en-GB / en-US                         |
 | Bouvet Island                            | BV                       | BVT                      | nb-NO / en-US                         |
 | Brazil                                   | BR                       | BRA                      | pt-BR / en-US                         |
 | British Indian Ocean Territory           | IO                       | IOT                      | en-US                                 |
 | British Virgin Islands                   | VG                       | VGB                      | en-US                                 |
-| Brunei Darussalam                        | BN                       | BRN                      | ms-BN / en-US                         |
+| Brunei                                   | BN                       | BRN                      | ms-BN / en-US                         |
 | Bulgaria                                 | BG                       | BGR                      | bg-BG / en-US                         |
 | Burkina Faso                             | BF                       | BFA                      | fr-FR / en-US                         |
 | Burundi                                  | BI                       | BDI                      | fr-FR / en-US                         |
@@ -75,8 +75,8 @@ The following table lists the cultures and International Standards Organization 
 | Cocos (Keeling) Islands                  | CC                       | CCK                      | en-US                                 |
 | Colombia                                 | CO                       | COL                      | es-CO / en-US                         |
 | Comoros                                  | KM                       | COM                      | fr-FR / en-US                         |
-| Congo (Brazzaville)                      | CG                       | COG                      | fr-FR / en-US                         |
-| Congo, The Democratic Republic of the    | CD                       | COD                      | fr-FR / en-US                         |
+| Congo                                    | CG                       | COG                      | fr-FR / en-US                         |
+| Congo (DRC)                              | CD                       | COD                      | fr-FR / en-US                         |
 | Cook Islands                             | CK                       | COK                      | en-US                                 |
 | Costa Rica                               | CR                       | CRI                      | es-CR / en-US                         |
 | Côte d'Ivoire                            | CI                       | CIV                      | fr-FR / en-US                         |
@@ -87,25 +87,25 @@ The following table lists the cultures and International Standards Organization 
 | Denmark                                  | DK                       | DNK                      | da-DK / en-US                         |
 | Djibouti                                 | DJ                       | DJI                      | fr-FR / en-US                         |
 | Dominica                                 | DM                       | DMA                      | en-US                                 |
-| Dominican Republic, The                  | DO                       | DOM                      | es-DO / en-US                         |
+| Dominican Republic                       | DO                       | DOM                      | es-DO / en-US                         |
 | Ecuador                                  | EC                       | ECU                      | es-EC / en-US                         |
 | Egypt                                    | EG                       | EGY                      | ar-EG / en-US                         |
 | El Salvador                              | SV                       | SLV                      | es-SV / en-US                         |
 | Equatorial Guinea                        | GQ                       | GNQ                      | es-ES / en-US                         |
 | Eritrea                                  | ER                       | ERI                      | ar-SA / en-US                         |
 | Estonia                                  | EE                       | EST                      | et-EE / en-US                         |
-| Eswatini                                 | SZ                       | SWZ                      | en-US                                 |
+| eSwatini                                 | SZ                       | SWZ                      | en-US                                 |
 | Ethiopia                                 | ET                       | ETH                      | am-ET / en-US                         |
 | Falkland Islands                         | FK                       | FLK                      | en-US                                 |
-| Faroe Islands, The                       | FO                       | FRO                      | fo-FO / en-US                         |
+| Faroe Islands                            | FO                       | FRO                      | fo-FO / en-US                         |
 | Fiji                                     | FJ                       | FJI                      | en-GB / en-US                         |
 | Finland                                  | FI                       | FIN                      | fi-FI / sv-FI / en-US                 |
 | France                                   | FR                       | FRA                      | fr-FR / en-US                         |
 | French Guiana                            | GF                       | GUF                      | fr-FR / en-US                         |
 | French Polynesia                         | PF                       | PYF                      | fr-FR / en-US                         |
-| French Southern Territories, The         | TF                       | ATF                      | fr-FR / en-US                         |
+| French Southern Territories              | TF                       | ATF                      | fr-FR / en-US                         |
 | Gabon                                    | GA                       | GAB                      | fr-FR / en-US                         |
-| Gambia, The                              | GM                       | GMB                      | en-US                                 |
+| Gambia                                   | GM                       | GMB                      | en-US                                 |
 | Georgia                                  | GE                       | GEO                      | ka-GE / en-US                         |
 | Germany                                  | DE                       | DEU                      | de-DE / en-US                         |
 | Ghana                                    | GH                       | GHA                      | en-GB / en-US                         |
@@ -122,9 +122,8 @@ The following table lists the cultures and International Standards Organization 
 | Guyana                                   | GY                       | GUY                      | en-US                                 |
 | Haiti                                    | HT                       | HTI                      | fr-FR / en-US                         |
 | Heard Island and McDonald Islands        | HM                       | HMD                      | en-US                                 |
-| Holy See, The                            | VA                       | VAT                      | it-IT / en-US                         |
 | Honduras                                 | HN                       | HND                      | es-HN / en-US                         |
-| Hong Kong Special Administrative Region  | HK                       | HKG                      | zh-HK / en-US                         |
+| Hong Kong SAR                            | HK                       | HKG                      | zh-HK / en-US                         |
 | Hungary                                  | HU                       | HUN                      | hu-HU / en-US                         |
 | Iceland                                  | IS                       | ISL                      | is-IS / en-US                         |
 | India                                    | IN                       | IND                      | en-IN / hi-IN / en-US                 |
@@ -135,18 +134,18 @@ The following table lists the cultures and International Standards Organization 
 | Israel                                   | IL                       | ISR                      | he-IL / en-US                         |
 | Italy                                    | IT                       | ITA                      | it-IT / en-US                         |
 | Jamaica                                  | JM                       | JAM                      | en-JM / en-US                         |
+| Jan Mayen                                | XJ                       | XJA                      | nb-NO / en-US                         |
 | Japan                                    | JP                       | JPN                      | ja-JP / en-US                         |
 | Jersey                                   | JE                       | JEY                      | en-US                                 |
-| Johnston Atoll                           | XJ                       | XJA                      | nb-NO / en-US                         |
 | Jordan                                   | JO                       | JOR                      | ar-JO / en-US                         |
 | Kazakhstan                               | KZ                       | KAZ                      | kk-KZ / en-US                         |
 | Kenya                                    | KE                       | KEN                      | sw-KE / en-US                         |
 | Kiribati                                 | KI                       | KIR                      | en-US                                 |
-| Korea, The Republic of                   | KR                       | KOR                      | ko-KR / en-US                         |
+| Korea                                    | KR                       | KOR                      | ko-KR / en-US                         |
 | Kosovo                                   | XK                       | XKS                      | en-US                                 |
 | Kuwait                                   | KW                       | KWT                      | ar-KW / en-US                         |
 | Kyrgyzstan                               | KG                       | KGZ                      | ky-KG / en-US                         |
-| Lao People's Democratic Republic, The    | LA                       | LAO                      | lo-LA / en-US                         |
+| Laos                                     | LA                       | LAO                      | lo-LA / en-US                         |
 | Latvia                                   | LV                       | LVA                      | lv-LV / en-US                         |
 | Lebanon                                  | LB                       | LBN                      | ar-LB / en-US                         |
 | Lesotho                                  | LS                       | LSO                      | en-US                                 |
@@ -155,22 +154,22 @@ The following table lists the cultures and International Standards Organization 
 | Liechtenstein                            | LI                       | LIE                      | de-LI / en-US                         |
 | Lithuania                                | LT                       | LTU                      | lt-LT / en-US                         |
 | Luxembourg                               | LU                       | LUX                      | de-LU / fr-LU / en-US                 |
-| Macao Special Administrative Region      | MO                       | MAC                      | zh-MO / en-US                         |
-| Macedonia, The former Yugoslav Republic of | MK                       | MKD                      | mk-MK / en-US                         |
+| Macao SAR                                | MO                       | MAC                      | zh-MO / en-US                         |
+| Macedonia, FYRO                          | MK                       | MKD                      | mk-MK / en-US                         |
 | Madagascar                               | MG                       | MDG                      | fr-FR / en-US                         |
 | Malawi                                   | MW                       | MWI                      | en-US                                 |
 | Malaysia                                 | MY                       | MYS                      | en-MY / en-US                         |
 | Maldives                                 | MV                       | MDV                      | dv-MV / en-US                         |
 | Mali                                     | ML                       | MLI                      | fr-FR / en-US                         |
 | Malta                                    | MT                       | MLT                      | mt-MT / en-US                         |
-| Marshall Islands, The                    | MH                       | MHL                      | en-US                                 |
+| Marshall Islands                         | MH                       | MHL                      | en-US                                 |
 | Martinique                               | MQ                       | MTQ                      | fr-FR / en-US                         |
 | Mauritania                               | MR                       | MRT                      | ar-SA / en-US                         |
 | Mauritius                                | MU                       | MUS                      | en-GB / en-US                         |
 | Mayotte                                  | YT                       | MYT                      | fr-FR / en-US                         |
 | Mexico                                   | MX                       | MEX                      | es-MX / en-US                         |
-| Micronesia, Federated States of          | FM                       | FSM                      | en-US                                 |
-| Moldova, The Republic of                 | MD                       | MDA                      | ro-RO / en-US                         |
+| Micronesia                               | FM                       | FSM                      | en-US                                 |
+| Moldova                                  | MD                       | MDA                      | ro-RO / en-US                         |
 | Monaco                                   | MC                       | MCO                      | fr-MC / en-US                         |
 | Mongolia                                 | MN                       | MNG                      | mn-MN / en-US                         |
 | Montenegro                               | ME                       | MNE                      | sr-Latn-ME / en-US                    |
@@ -186,11 +185,11 @@ The following table lists the cultures and International Standards Organization 
 | New Caledonia                            | NC                       | NCL                      | fr-FR / en-US                         |
 | New Zealand                              | NZ                       | NZL                      | en-NZ / en-US                         |
 | Nicaragua                                | NI                       | NIC                      | es-NI / en-US                         |
-| Niger, The                               | NE                       | NER                      | fr-FR / en-US                         |
+| Niger                                    | NE                       | NER                      | fr-FR / en-US                         |
 | Nigeria                                  | NG                       | NGA                      | ha-Latn-NG / en-US                    |
 | Niue                                     | NU                       | NIU                      | en-US                                 |
 | Norfolk Island                           | NF                       | NFK                      | en-US                                 |
-| Northern Mariana Islands, The            | MP                       | MNP                      | en-US                                 |
+| Northern Mariana Islands                 | MP                       | MNP                      | en-US                                 |
 | Norway                                   | NO                       | NOR                      | nb-NO / en-US                         |
 | Oman                                     | OM                       | OMN                      | ar-OM / en-US                         |
 | Pakistan                                 | PK                       | PAK                      | ur-PK / en-US                         |
@@ -200,24 +199,24 @@ The following table lists the cultures and International Standards Organization 
 | Papua New Guinea                         | PG                       | PNG                      | en-US                                 |
 | Paraguay                                 | PY                       | PRY                      | es-PY / en-US                         |
 | Peru                                     | PE                       | PER                      | es-PE / en-US                         |
-| Philippines, The                         | PH                       | PHL                      | en-PH / en-US                         |
-| Pitcairn                                 | PN                       | PCN                      | en-US                                 |
+| Philippines                              | PH                       | PHL                      | en-PH / en-US                         |
+| Pitcairn Islands                         | PN                       | PCN                      | en-US                                 |
 | Poland                                   | PL                       | POL                      | pl-PL / en-US                         |
 | Portugal                                 | PT                       | PRT                      | pt-PT / en-US                         |
 | Puerto Rico                              | PR                       | PRI                      | es-PR / en-US                         |
 | Qatar                                    | QA                       | QAT                      | ar-QA / en-US                         |
 | Réunion                                  | RE                       | REU                      | fr-FR / en-US                         |
 | Romania                                  | RO                       | ROU                      | ro-RO / en-US                         |
-| Russian Federation, The                  | RU                       | RUS                      | ru-RU / en-US                         |
+| Russia                                   | RU                       | RUS                      | ru-RU / en-US                         |
 | Rwanda                                   | RW                       | RWA                      | rw-RW / en-US                         |
-| Saint Helena, Ascension and Tristan da Cunha | SH                       | SHN                      | en-US                                 |
+| Saba                                     | XS                       | XSA                      | nl-NL / en-US                         |
 | Saint Kitts and Nevis                    | KN                       | KNA                      | en-GB / en-US                         |
 | Saint Lucia                              | LC                       | LCA                      | en-US                                 |
-| Saint Martin (French part)               | MF                       | MAF                      | fr-FR / en-US                         |
+| Saint Martin                             | MF                       | MAF                      | fr-FR / en-US                         |
 | Saint Pierre and Miquelon                | PM                       | SPM                      | fr-FR / en-US                         |
 | Saint Vincent and the Grenadines         | VC                       | VCT                      | en-US                                 |
 | Saint-Barthélemy                         | BL                       | BLM                      | fr-FR / en-US                         |
-| Samoan Islands                           | WS                       | WSM                      | en-US                                 |
+| Samoa                                    | WS                       | WSM                      | en-US                                 |
 | San Marino                               | SM                       | SMR                      | it-IT / en-US                         |
 | São Tomé and Príncipe                    | ST                       | STP                      | pt-PT / en-US                         |
 | Saudi Arabia                             | SA                       | SAU                      | ar-SA / en-US                         |
@@ -226,23 +225,25 @@ The following table lists the cultures and International Standards Organization 
 | Seychelles                               | SC                       | SYC                      | en-US                                 |
 | Sierra Leone                             | SL                       | SLE                      | en-US                                 |
 | Singapore                                | SG                       | SGP                      | en-SG / zh-SG / en-US                 |
-| Sint Maarten (Dutch part)                | SX                       | SXM                      | en-US                                 |
+| Sint Eustatius                           | XE                       | XSE                      | nl-NL / en-US                         |
+| Sint Maarten                             | SX                       | SXM                      | en-US                                 |
 | Slovakia                                 | SK                       | SVK                      | sk-SK / en-US                         |
 | Slovenia                                 | SI                       | SVN                      | sl-SI / en-US                         |
 | Solomon Islands                          | SB                       | SLB                      | en-US                                 |
 | Somalia                                  | SO                       | SOM                      | ar-SA / en-US                         |
 | South Africa                             | ZA                       | ZAF                      | en-ZA / en-US                         |
-| South Georgia and the South Sandwich Islands | GS                       | SGS                      | en-US                                 |
+| South Georgia and South Sandwich Islands | GS                       | SGS                      | en-US                                 |
 | South Sudan                              | SS                       | SSD                      | en-US                                 |
 | Spain                                    | ES                       | ESP                      | es-ES / ca-ES / eu-ES / gl-ES / en-US |
 | Sri Lanka                                | LK                       | LKA                      | si-LK / en-US                         |
+| St Helena, Ascension, Tristan da Cunha   | SH                       | SHN                      | en-US                                 |
 | Suriname                                 | SR                       | SUR                      | nl-NL                                 |
-| Svalbard and Jan Mayen                   | SJ                       | SJM                      | nb-NO / en-US                         |
+| Svalbard                                 | SJ                       | SJM                      | nb-NO / en-US                         |
 | Sweden                                   | SE                       | SWE                      | sv-SE / en-US                         |
 | Switzerland                              | CH                       | CHE                      | de-CH / fr-CH / it-CH / en-US         |
-| Taiwan, Republic of China                | TW                       | TWN                      | zh-TW / en-US                         |
+| Taiwan                                   | TW                       | TWN                      | zh-TW / en-US                         |
 | Tajikistan                               | TJ                       | TJK                      | tg-Cyrl-TJ / en-US                    |
-| Tanzania, United Republic of             | TZ                       | TZA                      | en-GB / en-US                         |
+| Tanzania                                 | TZ                       | TZA                      | en-GB / en-US                         |
 | Thailand                                 | TH                       | THA                      | th-TH / en-US                         |
 | Timor-Leste                              | TL                       | TLS                      | pt-PT / en-US                         |
 | Togo                                     | TG                       | TGO                      | fr-FR / en-US                         |
@@ -252,24 +253,23 @@ The following table lists the cultures and International Standards Organization 
 | Tunisia                                  | TN                       | TUN                      | ar-TN / en-US                         |
 | Turkey                                   | TR                       | TUR                      | tr-TR / en-US                         |
 | Turkmenistan                             | TM                       | TKM                      | tk-TM / en-US                         |
-| Turks and Caicos Islands, The            | TC                       | TCA                      | en-US                                 |
+| Turks and Caicos Islands                 | TC                       | TCA                      | en-US                                 |
 | Tuvalu                                   | TV                       | TUV                      | en-US                                 |
 | Uganda                                   | UG                       | UGA                      | en-GB / en-US                         |
 | Ukraine                                  | UA                       | UKR                      | uk-UA / en-US                         |
-| United Arab Emirates, The                | AE                       | ARE                      | ar-AE / en-US                         |
-| United Kingdom of Great Britain and Northern Ireland, The | GB                       | GBR                      | en-GB / en-US                         |
-| United States Minor Outlying Islands, The | UM                       | UMI                      | en-US                                 |
-| United States of America, The            | US                       | USA                      | en-US / es-US                         |
+| United Arab Emirates                     | AE                       | ARE                      | ar-AE / en-US                         |
+| United Kingdom                           | GB                       | GBR                      | en-GB / en-US                         |
+| U.S. Outlying Islands                    | UM                       | UMI                      | en-US                                 |
+| U.S. Virgin Islands                      | VI                       | VIR                      | en-US                                 |
+| United States                            | US                       | USA                      | en-US / es-US                         |
 | Uruguay                                  | UY                       | URY                      | es-UY / en-US                         |
 | Uzbekistan                               | UZ                       | UZB                      | uz-Latn-UZ / en-US                    |
 | Vanuatu                                  | VU                       | VUT                      | en-US                                 |
-| Venezuela, Bolivarian Republic of        | VE                       | VEN                      | es-VE / en-US                         |
-| Viet Nam                                 | VN                       | VNM                      | vi-VN / en-US                         |
-| Virgin Islands (U.S.)                    | VI                       | VIR                      | en-US                                 |
+| Vatican City                             | VA                       | VAT                      | it-IT / en-US                         |
+| Venezuela                                | VE                       | VEN                      | es-VE / en-US                         |
+| Vietnam                                  | VN                       | VNM                      | vi-VN / en-US                         |
 | Wallis and Futuna                        | WF                       | WLF                      | fr-FR / en-US                         |
 | Yemen                                    | YE                       | YEM                      | ar-YE / en-US                         |
 | Zambia                                   | ZM                       | ZMB                      | en-GB / en-US                         |
 | Zimbabwe                                 | ZW                       | ZWE                      | en-ZW / en-US                         |
-|                                          | XS                       | XSA                      | nl-NL / en-US                         |
-|                                          | XE                       | XSE                      | nl-NL / en-US                         |
 
