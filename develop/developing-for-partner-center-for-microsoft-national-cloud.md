@@ -6,7 +6,7 @@ MS-HAID:
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
 ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
 description: 
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.localizationpriority: medium
 ---
 
