@@ -88,6 +88,9 @@ To authenticate the callback event received from Partner Center, do the followin
 7.	Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
 8.	If the verification succeeds, process the message.
 
+>[!NOTE]
+    >By default, signature token will be sent in Authorization header. If you set SignatureTokenToMsSignatureHeader to true in your registration, signature toekn will be sent in x-ms-siganature header instead.
+
 ## <span id="EventModel"></span><span id="eventmodel"></span><span id="EVENTMODEL"></span>Event model
 
 
