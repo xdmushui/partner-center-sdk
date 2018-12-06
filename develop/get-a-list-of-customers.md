@@ -114,7 +114,7 @@ MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns a collection of [Customers](customers.md) resources in the response body.
+If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
 
 **Response success and error codes**
 

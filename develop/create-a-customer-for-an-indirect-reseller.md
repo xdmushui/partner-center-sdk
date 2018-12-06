@@ -90,7 +90,7 @@ This table describes the required properties in the request body.
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [BillingProfile](#billingprofile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
 | [CompanyProfile](#companyprofile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
-| [AssociatedPartnerId](customers.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
+| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
  
 
@@ -98,7 +98,7 @@ This table describes the required properties in the request body.
 
 **Billing Profile**
 
-This table describes the minimum required fields from the [CustomerBillingProfile](customers.md#customerbillingprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerBillingProfile](customer-resources.md#customerbillingprofile) resource needed to create a new customer.
 
 | Name             | Type                                     | Required | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -114,7 +114,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 **Company Profile**
 
-This table describes the minimum required fields from the [CustomerCompanyProfile](customers.md#customercompanyprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) resource needed to create a new customer.
 
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
@@ -186,7 +186,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response contains a [Customer](customers.md#customer) resource for the new customer.
+If successful, the response contains a [Customer](customer-resources.md#customer) resource for the new customer.
 
 **Response success and error codes**
 

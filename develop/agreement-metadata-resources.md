@@ -1,11 +1,11 @@
 ---
-title: AgreementMetaData resources
+title: Agreement metadata resources
 description: Provides metadata about all the agreement types that partners can provide confirmation of customer acceptance.
 ms.date: 8/03/2018
 ms.localizationpriority: medium
 ---
 
-# AgreementMetaData resources
+# Agreement metadata resources
 
 
 **Applies To**

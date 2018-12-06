@@ -79,14 +79,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="countryinformation.md">CountryInformation</a></td>
+<td><a href="country-information.md">CountryInformation</a></td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="customers.md">Customer</a></td>
+<td><a href="customer-resources.md">Customer</a></td>
 <td><ul>
 <li>Customer</li>
 <li>CustomerCompanyProfile</li>

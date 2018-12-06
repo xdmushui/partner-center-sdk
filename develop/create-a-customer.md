@@ -150,7 +150,7 @@ This table describes the required properties in the request body.
 
 **Billing Profile**
 
-This table describes the minimum required fields from the [CustomerBillingProfile](customers.md#customerbillingprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerBillingProfile](customer-resources.md#customerbillingprofile) resource needed to create a new customer.
 
 | Name             | Type                                     | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 **Company Profile**
 
-This table describes the minimum required fields from the [CustomerCompanyProfile](customers.md#customercompanyprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) resource needed to create a new customer.
 
 | Name   | Type   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
@@ -214,7 +214,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this API returns a [Customer](customers.md) resource for the new customer. Save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.
+If successful, this API returns a [Customer](customer-resources.md#customer) resource for the new customer. Save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.
 
 **Response success and error codes**
 

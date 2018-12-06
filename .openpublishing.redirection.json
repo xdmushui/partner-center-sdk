@@ -1,6 +1,26 @@
 {
     "redirections": 
-	[
+    [
+        {
+            "source_path": "develop/agreement.md",
+            "redirect_url": "agreement-resources",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "develop/agreement-metadata.md",
+            "redirect_url": "agreement-metadata-resources",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "develop/countryinformation.md",
+            "redirect_url": "country-information-resources",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "develop/customers.md",
+            "redirect_url": "customer-resources",
+            "redirect_document_id": true
+        },
         {
             "source_path": "develop/enable-multi-factor-authentication.md",
             "redirect_url": "enable-secure-app-model",
@@ -15,6 +35,13 @@
             "source_path": "develop/purchase-azure-reserved-vm-instances.md",
             "redirect_url": "purchase-azure-reservations",
             "redirect_document_id": true
-        }	
-	]
+        }
+    ]
 }
+
+
+{
+    "source_path": "develop/.md",
+    "redirect_url": "-resources",
+    "redirect_document_id": true
+},
