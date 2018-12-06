@@ -9,17 +9,17 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to checkout an order for a customer in a cart. 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
--   A Cart ID for an existing cart.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A Cart ID for an existing cart.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -56,7 +56,7 @@ To checkout an order for a customer, execute the [**Submit-PartnerCustomerCart**
 Submit-PartnerCustomerCart -CartId $cartId -CustomerId $customerId
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -76,7 +76,7 @@ Use the following path parameters to identify the customer and specify the cart 
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -100,7 +100,7 @@ Expect: 100-continue
 No-Content-Body
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, the response body contains the populated [CartCheckoutResult](cart.md#cartcheckoutresult) resource.
 

@@ -11,20 +11,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to get a subscription's support contact.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A customer identifier.
--   A subscription identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A customer identifier.
+- A subscription identifier.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get a subscription's support contact, start by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the subscription ID. Next, use the [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.supportcontact) property to obtain an interface to support contact operations, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) method to retrieve the [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.supportcontact) object.
@@ -40,7 +40,7 @@ var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionSupportContact.cs
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 
 **Request syntax**
@@ -64,7 +64,7 @@ Use the following path parameters to identify the customer and subscription.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -82,7 +82,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
 If successful, the response body contains the [SupportContact](subscriptions.md#supportcontact) resource.

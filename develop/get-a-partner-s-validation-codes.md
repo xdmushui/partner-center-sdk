@@ -17,14 +17,14 @@ How to get a collection of a partner's Government Community Cloud validation cod
 If you are interested in having your organization or your customers organization approved for Office 365 Government GCC for CSP, please see [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria](https://docs.microsoft.com/partner-center/csp-gcc-validate).  
 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   Confirmed validation after filling out form [here](https://products.office.com/en-US/government/eligibility-validation?ReqType=CSPPartner).
--   A customer without a qualification.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Confirmed validation after filling out form [here](https://products.office.com/en-US/government/eligibility-validation?ReqType=CSPPartner).
+- A customer without a qualification.
 
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 To get a list of all of a partner's validation codes, call **GetValidationCodes**.
 
@@ -36,7 +36,7 @@ var gccValidations = partnerOperations.Validations.GetValidationCodes();
 ```
 
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 **Request syntax**
 
@@ -47,7 +47,7 @@ var gccValidations = partnerOperations.Validations.GetValidationCodes();
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -64,7 +64,7 @@ MS-RequestId: 7266f5f6-30ca-4672-9eb6-6c9d6dd0e9d3
 ```
 
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, this method returns a list of [**ValidationCode**](utility-resources.md#validationcode) resources in the response body.
 

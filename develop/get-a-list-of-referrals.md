@@ -10,18 +10,18 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 
 This topic explains how to get a list of referrals.
 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -44,7 +44,7 @@ Use the following query parameters to get a list of referrals
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -61,7 +61,7 @@ Content-Type: application/json
 ```
 
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, the response body contains a collection of [Referral](referral.md) resources in the response body.
 

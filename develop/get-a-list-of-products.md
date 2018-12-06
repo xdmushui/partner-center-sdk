@@ -10,15 +10,15 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Gets a collection of products.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -56,7 +56,7 @@ To get a list of products, execute the [**Get-PartnerProduct**](https://github.c
 Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -76,7 +76,7 @@ Use the following path and query parameters to get a list of products.
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -92,7 +92,7 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, the response body contains a collection of [Product](products.md#product) resources.
 

@@ -1,21 +1,21 @@
 ---
-title: Auditing
+title: Auditing resources
 description: The resources detailed here are used with audit operations.
 ms.assetid: FEF0BED4-2CEB-46D2-9365-D7D3C50AF0E3
 ms.date: 08/06/2018
 ms.localizationpriority: medium
 ---
 
-# Auditing
+# Auditing resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 The resources detailed here are used with audit operations.
 
-## <span id="AuditRecord"></span><span id="auditrecord"></span><span id="AUDITRECORD"></span>AuditRecord
+## <span id="AuditRecord"/><span id="auditrecord"/><span id="AUDITRECORD"/>AuditRecord
 
 
 Represents a record of an operation performed by a partner user or

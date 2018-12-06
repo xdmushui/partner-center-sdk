@@ -10,25 +10,25 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud for US Government
 
 This topic explains how to create a new customer. If you are an indirect provider and you want to create a customer for an indirect reseller, please see [Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md).
 
 As a cloud solution provider (CSP) partner, when you create a customer you can place orders on behalf of the customer. When you create a customer, you also create:
 
--   An Azure Active Directory (AD) tenant object for the customer.
--   A relationship between the reseller and customer, used for delegated admin privileges.
--   A user name and password to sign in as an admin for the customer.
+- An Azure Active Directory (AD) tenant object for the customer.
+- A relationship between the reseller and customer, used for delegated admin privileges.
+- A user name and password to sign in as an admin for the customer.
 
 Once the customer is created, save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -119,7 +119,7 @@ To create a customer execute the [**New-ParnterCustomer**](https://github.com/Mi
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 **Request syntax**
 
@@ -131,9 +131,9 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 
 **Request headers**
 
--   This API is idempotent (it will not yield a different result if you call it multiple times).
--   A request ID and correlation ID are required.
--   See [Partner Center REST headers](headers.md) for more information.
+- This API is idempotent (it will not yield a different result if you call it multiple times).
+- A request ID and correlation ID are required.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -146,7 +146,7 @@ This table describes the required properties in the request body.
 
 
 
-### <span id="billingProfile"></span><span id="billingprofile"></span><span id="BILLINGPROFILE"></span>
+### <span id="billingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>
 
 **Billing Profile**
 
@@ -162,7 +162,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 
 
-### <span id="companyProfile"></span><span id="companyprofile"></span><span id="COMPANYPROFILE"></span>
+### <span id="companyProfile"/><span id="companyprofile"/><span id="COMPANYPROFILE"/>
 
 **Company Profile**
 
@@ -211,7 +211,7 @@ Connection: Keep-Alive
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, this API returns a [Customer](customers.md) resource for the new customer. Save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.

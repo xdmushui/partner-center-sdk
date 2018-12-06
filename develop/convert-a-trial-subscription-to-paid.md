@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to convert a trial subscription to paid.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A customer identifier.
--   A subscription ID for an active trial subscription.
--   An available conversion offer.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A customer identifier.
+- A subscription ID for an active trial subscription.
+- An available conversion offer.
 
-## <span id="Convert_a_trial_subscription_to_paid_through_code"></span><span id="convert_a_trial_subscription_to_paid_through_code"></span><span id="CONVERT_A_TRIAL_SUBSCRIPTION_TO_PAID_THROUGH_CODE"></span>Convert a trial subscription to paid through code
+## <span id="Convert_a_trial_subscription_to_paid_through_code"/><span id="convert_a_trial_subscription_to_paid_through_code"/><span id="CONVERT_A_TRIAL_SUBSCRIPTION_TO_PAID_THROUGH_CODE"/>Convert a trial subscription to paid through code
 
 
 To convert a trial subscription to paid, you must first obtain a collection of the trial conversions available and then choose the conversion offer that you want to purchase. The conversion offers will specify a quantity that defaults to the same number of licenses as the trial subscription. You can change that by setting the [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion.quantity) property to the number of licenses that you want to purchase. Note that regardless of the number of licenses purchased, the subscription ID of the trial is reused for the purchased licenses. Thus, the trial in effect disappears and is replaced by the purchase.
@@ -55,7 +55,7 @@ Here are the steps to convert a trial subscription through code:
     var convertResult = subscriptionOperations.Conversions.Create(selectedConversion);
     ```
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To convert a trial subscription to paid, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the trial subscription ID. Save a reference to the subscription operations interface in a local variable.
@@ -91,7 +91,7 @@ else
 }
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 
 **Request syntax**
@@ -115,7 +115,7 @@ Use the following path parameters to identify the customer and trial subscriptio
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -147,7 +147,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
 If successful, the response body contains a [ConversionResult](conversions.md#conversionresult) resource.

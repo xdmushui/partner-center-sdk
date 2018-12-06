@@ -25,13 +25,13 @@ In the Partner Center dashboard, this operation can be performed by navigating t
 - Changing the billing cycles for inactive subscriptions
 - Changing billing cycles for Microsoft online services license-based subscriptions
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - An order ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
@@ -61,7 +61,7 @@ var order = new Order()
 var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orderId).Patch(order);
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -86,7 +86,7 @@ This table lists the required query parameter to change the quantity of the subs
 
 The following tables describe the properties in the request body.
 
-## <span id="order"></span><span id="ORDER"></span>Order
+## <span id="order"/><span id="ORDER"/>Order
 
 | Property           | Type             | Required | Description                                                                |
 |--------------------|------------------|----------|----------------------------------------------------------------------------|
@@ -97,7 +97,7 @@ The following tables describe the properties in the request body.
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
 
-## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 | Property             | Type   | Required | Description                                                                        |
 |----------------------|--------|----------|------------------------------------------------------------------------------------|
@@ -150,7 +150,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
+## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 If successful, this method returns the updated subscription order in the response body.
 

@@ -10,21 +10,21 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to get a list of subscriptions provided by a given partner to a specified customer.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier.
--   A partner Microsoft Partner Network (MPN) identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer identifier.
+- A partner Microsoft Partner Network (MPN) identifier.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -63,7 +63,7 @@ To get a list of subscriptions provided by a given partner to a specified custom
 Get-PartnerCustomerSubscription -CustomerId $customerId -MpnId $partnerMpnId
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 **Request syntax**
 
@@ -83,7 +83,7 @@ Use the following path and query parameters to identify the customer and partner
  
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -102,7 +102,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, the response body contains the collection of [Subscription](subscriptions.md) resources.
 
@@ -166,5 +166,5 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 }
 ```
 
-## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
+## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

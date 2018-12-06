@@ -11,20 +11,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
 
 How to retrieve a collection of device batches for the specified customer.
 
 Each device batch contains summary status information about devices that have been enrolled in zero-touch deployment.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   The customer identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- The customer identifier.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.getasync) method to retrieve the collection.
@@ -39,7 +39,7 @@ var devicesBatches =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetDevicesBatches.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -62,7 +62,7 @@ Use the following path parameters when creating the request.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -80,7 +80,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, the response body contains the collection of [DeviceBatch](devicedeployment.md#devicebatch) resources.
 

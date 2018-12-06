@@ -10,20 +10,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Gets an [Order](orders.md) resource that matches the customer and order ID.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
--   An order ID.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- An order ID.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -62,7 +62,7 @@ To get a customer's order by ID, execute the [**Get-PartnerCustomerOrder**](http
 Get-PartnerCustomerOrder -CustomerId $selectedCustomerId -OrderId $selectedOrderId
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -85,7 +85,7 @@ This table lists the required query parameters to get an order by ID.
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -102,7 +102,7 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 Connection: Keep-Alive
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, this method returns an [Order](orders.md) resource in the response body.
 

@@ -1,26 +1,26 @@
 ---
-title: ManagedService
+title: Managed service resources
 description: Managed services are services to which a partner has delegated admin privileges. Partners can provide support for and file service requests on the behalf of their managed services.
 ms.assetid: B05E9585-72E4-4330-8721-A88EC4C193D7
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# ManagedService
+# Managed service resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Managed services are services to which a partner has delegated admin
 privileges. Partners can provide support for and file service requests
 on the behalf of their managed services.
 
-## <span id="ManagedService"></span><span id="managedservice"></span><span id="MANAGEDSERVICE"></span>ManagedService
+## <span id="ManagedService"/><span id="managedservice"/><span id="MANAGEDSERVICE"/>ManagedService
 
 
 Describes a managed service.
@@ -35,7 +35,7 @@ Describes a managed service.
 
  
 
-## <span id="ManagedServiceLinks"></span><span id="managedservicelinks"></span><span id="MANAGEDSERVICELINKS"></span>ManagedServiceLinks
+## <span id="ManagedServiceLinks"/><span id="managedservicelinks"/><span id="MANAGEDSERVICELINKS"/>ManagedServiceLinks
 
 
 Contains the links that allow the partner with delegated admin

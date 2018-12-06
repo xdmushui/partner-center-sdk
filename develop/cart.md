@@ -1,22 +1,22 @@
 ---
-title: Cart
+title: Cart resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
 ms.date: 03/16/2018
 ms.localizationpriority: medium
 ---
 
-# Cart
+# Cart resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
 
-## <span id="cart"></span><span id="CART"></span>Cart
+## <span id="cart"/><span id="CART"/>Cart
 
 Describes a cart.
 
@@ -31,7 +31,7 @@ Describes a cart.
 
 
 
-## <span id="cartLineItem"></span><span id="cartlineitem"></span><span id="CARTLINEITEM"></span>CartLineItem
+## <span id="cartLineItem"/><span id="cartlineitem"/><span id="CARTLINEITEM"/>CartLineItem
 
 
 Represents one item contained in a cart.
@@ -52,7 +52,7 @@ Represents one item contained in a cart.
 
  
 
-## <span id="cartError"></span><span id="carterror"></span><span id="CARTERROR"></span>CartError
+## <span id="cartError"/><span id="carterror"/><span id="CARTERROR"/>CartError
 
 
 Represents an error that occurs after a cart is created.
@@ -64,7 +64,7 @@ Represents an error that occurs after a cart is created.
 
 
 
-## <span id="cartErrorCode"></span><span id="carterrorcode"></span><span id="CARTERRORCODE"></span>CartErrorCode
+## <span id="cartErrorCode"/><span id="carterrorcode"/><span id="CARTERRORCODE"/>CartErrorCode
 
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of cart error.
@@ -84,7 +84,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 
 
-## <span id="cartCheckoutResult"></span><span id="cartcheckoutresult"></span><span id="CARTCHECKOUTRESULT"></span>CartCheckoutResult
+## <span id="cartCheckoutResult"/><span id="cartcheckoutresult"/><span id="CARTCHECKOUTRESULT"/>CartCheckoutResult
 
 
 Represents the result of a cart checkout.
@@ -96,7 +96,7 @@ Represents the result of a cart checkout.
  
 
 
-## <span id="orderError"></span><span id="ordererror"></span><span id="ORDERERROR"></span>OrderError
+## <span id="orderError"/><span id="ordererror"/><span id="ORDERERROR"/>OrderError
 
 
 Represents an error that occurs during a cart checkout when an order is created.

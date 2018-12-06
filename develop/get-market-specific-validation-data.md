@@ -10,19 +10,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Get the expected address format based on the iso code for the market.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -43,7 +43,7 @@ Get the expected address format based on the iso code for the market.
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -59,7 +59,7 @@ MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, this method returns a **CountryInformation** object in the response body.

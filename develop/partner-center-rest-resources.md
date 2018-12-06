@@ -11,10 +11,10 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 This section provides definitions for the JSON elements needed to create
 requests and parse responses using the Partner Center REST API. For more
@@ -22,7 +22,7 @@ information about how to use these elements, including sample code, see
 the [Scenarios](scenarios.md) section and the [Partner Center
 samples](partner-center-samples.md) section.
 
-## <span id="In_this_section"></span><span id="in_this_section"></span><span id="IN_THIS_SECTION"></span>In this section
+## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 
 <table>

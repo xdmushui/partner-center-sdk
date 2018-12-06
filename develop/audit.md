@@ -19,7 +19,7 @@ For more information, see the following topics.
 
 Get detailed historical audit records of operations performed by a partner user or application.
 
--   [Get a record of Partner Center activity](get-a-record-of-partner-center-activity-by-user.md)
+- [Get a record of Partner Center activity](get-a-record-of-partner-center-activity-by-user.md)
 
  
 

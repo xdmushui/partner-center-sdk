@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
 
 How to get the status of a device batch upload for a specified customer.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   The customer identifier.
--   The batch tracking identifier returned in the Location header when the device batch was submitted. For more information, see [Upload a list of devices for the specified customer](upload-a-list-of-devices-for-the-specified-customer.md).
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- The customer identifier.
+- The batch tracking identifier returned in the Location header when the device batch was submitted. For more information, see [Upload a list of devices for the specified customer](upload-a-list-of-devices-for-the-specified-customer.md).
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get the status of a device batch upload, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, call the [**BatchUploadStatus.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatuscollection.byid) method with the batch tracking ID to get an interface to batch upload status operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatus.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.ibatchjobstatus.getasync) method to retrieve the status.
@@ -39,7 +39,7 @@ var status =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetBatchUploadStatus.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -63,7 +63,7 @@ Use the following path parameters when creating the request.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -81,7 +81,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the response contains a [BatchUploadDetails](devicedeployment.md#batchuploaddetails) resource.

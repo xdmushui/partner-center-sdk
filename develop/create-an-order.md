@@ -11,24 +11,24 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud for US Government
 
 **Creating an Order for Azure Reserved VM Instance products applies only to**
 
--   Partner Center
+- Partner Center
 
 How to create an order for a customer. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier.
--   An offer identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer identifier.
+- An offer identifier.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To create an order for a customer, first instantiate an [**Order**](orders.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](orders.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
@@ -67,7 +67,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateOrder.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -90,13 +90,13 @@ Use the following path parameter to identify the customer.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
 This table describes the [Order](orders.md) properties in the request body.
 
-## <span id="Order"></span><span id="order"></span><span id="ORDER"></span>Order
+## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
 
 
 | Property             | Type                        | Required                        | Description                                                                   |
@@ -120,7 +120,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 
  
 
-## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 
 | Name                 | Type   | Required | Description                                                                                                                                                                                                                                |
@@ -165,7 +165,7 @@ Content-Type: application/json
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the method returns an [Order](orders.md) resource in the response body.

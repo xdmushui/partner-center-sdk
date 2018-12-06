@@ -11,20 +11,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to get a collection of invoice line item details for the specified invoice.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   An invoice identifier. This identifies the invoice for which to retrieve the line items.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
@@ -86,7 +86,7 @@ foreach (var invoiceDetail in invoice.InvoiceDetails)
 
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetInvoiceLineItems.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -118,13 +118,13 @@ Use the following URI and query parameters when creating the request.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
 None.
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
 If successful, the response contains the collection of line item details.
@@ -133,7 +133,7 @@ If successful, the response contains the collection of line item details.
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-## <span id="Request_Response_Examples"></span><span id="request_response_examples"></span><span id="REQUEST_RESPONSE_EXAMPLES"></span>Request/Response Examples
+## <span id="Request_Response_Examples"/><span id="request_response_examples"/><span id="REQUEST_RESPONSE_EXAMPLES"/>Request/Response Examples
 
 
 **Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)

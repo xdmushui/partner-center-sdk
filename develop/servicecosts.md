@@ -1,21 +1,21 @@
 ---
-title: ServiceCosts
+title: Service costs resources
 description: Describes resources related to services purchased by a customer.
 ms.assetid: 2916B7F3-06D5-4DC1-A137-CD8270258CDB
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# ServiceCosts
+# Service costs resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Describes resources related to services purchased by a customer.
 
-## <span id="ServiceCostsSummary"></span><span id="servicecostssummary"></span><span id="SERVICECOSTSSUMMARY"></span>ServiceCostsSummary
+## <span id="ServiceCostsSummary"/><span id="servicecostssummary"/><span id="SERVICECOSTSSUMMARY"/>ServiceCostsSummary
 
 
 Contains a summary that aggregates all services purchased by the
@@ -36,7 +36,7 @@ specified customer during the billing period.
 
  
 
-## <span id="ServiceCostLineItem"></span><span id="servicecostlineitem"></span><span id="SERVICECOSTLINEITEM"></span>ServiceCostLineItem
+## <span id="ServiceCostLineItem"/><span id="servicecostlineitem"/><span id="SERVICECOSTLINEITEM"/>ServiceCostLineItem
 
 
 Describes a single item purchased by the customer.
@@ -64,7 +64,7 @@ Describes a single item purchased by the customer.
 
  
 
-## <span id="ServiceCostsSummaryLinks"></span><span id="servicecostssummarylinks"></span><span id="SERVICECOSTSSUMMARYLINKS"></span>ServiceCostsSummaryLinks
+## <span id="ServiceCostsSummaryLinks"/><span id="servicecostssummarylinks"/><span id="SERVICECOSTSSUMMARYLINKS"/>ServiceCostsSummaryLinks
 
 
 | Property             | Type                               | Description                         |

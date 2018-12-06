@@ -5,7 +5,6 @@ MS-HAID:
 - 'pc\_apiv2.developing\_with\_different\_partner\_center\_versions'
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
 ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
-description: 
 ms.date: 11/30/2018
 ms.localizationpriority: medium
 ---
@@ -15,9 +14,9 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Partner Center has one set of SDK documentation. However, some functionality might not be available in the versions of Partner Center for Microsoft National Clouds. Developers need to consider the following changes to the SDK for these versions of Partner Center:
 
@@ -28,17 +27,17 @@ Partner Center has one set of SDK documentation. However, some functionality mig
 Each overview topic contains an **Applies To** block at the top that describes which versions of Partner Center the topic applies to. Similarly, each managed reference topic contains the version information in the **Requirements** block at the bottom.
 
 
-## <span id="partner-center-operated-by-21vianet"></span><span id="PARTNER-CENTER-OPERATED-BY-21VIANET"></span>Partner Center operated by 21Vianet
+## <span id="partner-center-operated-by-21vianet"/><span id="PARTNER-CENTER-OPERATED-BY-21VIANET"/>Partner Center operated by 21Vianet
 
 The following list describes the differences for partners between Partner Center and Partner Center operated by 21Vianet:
 
--   You cannot programmatically reset a password for a customer user or full partner user.
--   Subscriptions to Azure are not available.
--   You cannot manage the licenses for your customer's user. Instead, your customers must use the Office365 admin center to manage their licenses.
--   All support requests are managed through Partner Center operated by 21Vianet. Service requests and service updates do not apply.
+- You cannot programmatically reset a password for a customer user or full partner user.
+- Subscriptions to Azure are not available.
+- You cannot manage the licenses for your customer's user. Instead, your customers must use the Office365 admin center to manage their licenses.
+- All support requests are managed through Partner Center operated by 21Vianet. Service requests and service updates do not apply.
 
 
-## <span id="partner-center-for-microsoft-cloud-germany"></span><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-GERMANY"></span>Partner Center for Microsoft Cloud Germany
+## <span id="partner-center-for-microsoft-cloud-germany"/><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-GERMANY"/>Partner Center for Microsoft Cloud Germany
 
 >[!IMPORTANT]
 >Based on the evolution in customers’ needs, our cloud strategy for Germany will focus on delivery of the new cloud regions in Germany that are consistent with our global cloud offering. With this focus, we will no longer be accepting new customers or deploying any new services from the currently available Microsoft Cloud Germany. Existing customers can continue to use the current cloud services available today, which we’ll maintain with necessary security updates. 
@@ -56,7 +55,7 @@ The following list describes the differences for partners between Partner Center
 - App ID creation. Developers who want to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud Germany must register their app ID manually. See [Register app details for Partner Center for Microsoft National Cloud](https://msdn.microsoft.com/library/partnercenter/mt745084.aspx).   
 
 
-## <span id="partner-center-for-microsoft-cloud-for-us-government"></span><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-FOR-US-GOVERNMENT"></span>Partner Center for Microsoft Cloud for U.S. Government
+## <span id="partner-center-for-microsoft-cloud-for-us-government"/><span id="PARTNER-CENTER-FOR-MICROSOFT-CLOUD-FOR-US-GOVERNMENT"/>Partner Center for Microsoft Cloud for U.S. Government
 
 - Office 365 subscriptions are not currently available for Partner Center for Microsoft Cloud for US Government.
 

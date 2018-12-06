@@ -10,22 +10,22 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to get the subscription provisioning status for a customer subscription.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A customer identifier.
--   A subscription identifier.
--   Delegated admin permissions on the subscription are required to perform this operation.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A customer identifier.
+- A subscription identifier.
+- Delegated admin permissions on the subscription are required to perform this operation.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get the provisioning status of a subscription, begin by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the subscription ID. Next, use the [**ProvisioningStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.provisioningstatus) property to obtain an interface to the current subscription's provisioning status operations, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionprovisioningstatus.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionprovisioningstatus.getasync) method to retrieve the [**SubscriptionProvisioningStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionprovisioningstatus) object.
@@ -39,7 +39,7 @@ To get the provisioning status of a subscription, begin by using the [**IAggrega
 var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionID).ProvisioningStatus.Get();
 ```
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 
 **Request syntax**
@@ -63,7 +63,7 @@ Use the following path parameters to identify the customer and subscription.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -81,7 +81,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the response body contains a [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) resource.
@@ -113,7 +113,7 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 }
 ```
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Remarks
+## <span id="Remarks"/><span id="remarks"/><span id="REMARKS"/>Remarks
 
--   During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) is set to "pending".
--   The status field is updated every fifteen minutes.
+- During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) is set to "pending".
+- The status field is updated every fifteen minutes.

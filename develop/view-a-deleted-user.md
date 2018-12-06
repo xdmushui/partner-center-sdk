@@ -11,22 +11,22 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Gets a list of deleted CustomerUser resources for a customer by customer ID. You can optionally set a page size. You must supply a filter.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A customer identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A customer identifier.
 
-## <span id="What_happens_when_you_delete_a_user_account_"></span><span id="what_happens_when_you_delete_a_user_account_"></span><span id="WHAT_HAPPENS_WHEN_YOU_DELETE_A_USER_ACCOUNT_"></span>What happens when you delete a user account?
+## <span id="What_happens_when_you_delete_a_user_account_"/><span id="what_happens_when_you_delete_a_user_account_"/><span id="WHAT_HAPPENS_WHEN_YOU_DELETE_A_USER_ACCOUNT_"/>What happens when you delete a user account?
 
 
 The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. If you want to restore a deleted user account within the thirty day window, see [Restore a deleted user for a customer](restore-a-user-for-a-customer.md). Note that once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)). To get a list of deleted users that have not yet been purged, you must query for user accounts that have been set to inactive.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To retrieve a list of deleted users, construct a query that filters for customer users whose status is set to inactive. First, create the filter by instantiating a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object with the parameters as shown in the following code snippet. Then create the query using the [**BuildIndexedQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildindexedquery) method. Note that if you do not want paged results, you can use the [**BuildSimpleQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildsimplequery) method instead. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Finally, call the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.query) method to send the request.
@@ -47,7 +47,7 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.Q
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerInactiveUsers.cs
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 
 **Request syntax**
@@ -72,7 +72,7 @@ Use the following path and query parameters when creating the request.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -90,7 +90,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"></span><span id="_response"></span><span id="_RESPONSE"></span> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
 If successful, this method returns a collection of [CustomerUser](user.md#customeruser) resources in the response body.

@@ -1,25 +1,25 @@
 ---
-title: ServiceRequest
+title: Service request resources
 description: Partners can file service requests on behalf of their partners to report disruptions services provided by Microsoft or to request other technical support that they are incapable of providing.
 ms.assetid: E9FBF7D8-A7E8-4DC6-B370-8339B9EE16B7
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# ServiceRequest
+# Service request resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Partners can file service requests on behalf of their partners to report
 disruptions services provided by Microsoft or to request other technical
 support that they are incapable of providing.
 
-## <span id="ServiceRequest"></span><span id="servicerequest"></span><span id="SERVICEREQUEST"></span>ServiceRequest
+## <span id="ServiceRequest"/><span id="servicerequest"/><span id="SERVICEREQUEST"/>ServiceRequest
 
 
 Describes a service request filed by a partner, including how that
@@ -50,7 +50,7 @@ request is progressing.
 
  
 
-## <span id="ServiceRequestContact"></span><span id="servicerequestcontact"></span><span id="SERVICEREQUESTCONTACT"></span>ServiceRequestContact
+## <span id="ServiceRequestContact"/><span id="servicerequestcontact"/><span id="SERVICEREQUESTCONTACT"/>ServiceRequestContact
 
 
 Describes a contact that creates or modifies a service request.
@@ -66,7 +66,7 @@ Describes a contact that creates or modifies a service request.
 
  
 
-## <span id="ServiceRequestNote"></span><span id="servicerequestnote"></span><span id="SERVICEREQUESTNOTE"></span>ServiceRequestNote
+## <span id="ServiceRequestNote"/><span id="servicerequestnote"/><span id="SERVICEREQUESTNOTE"/>ServiceRequestNote
 
 
 Describes a note attached to a service request.
@@ -79,7 +79,7 @@ Describes a note attached to a service request.
 
  
 
-## <span id="ServiceRequestOrganization"></span><span id="servicerequestorganization"></span><span id="SERVICEREQUESTORGANIZATION"></span>ServiceRequestOrganization
+## <span id="ServiceRequestOrganization"/><span id="servicerequestorganization"/><span id="SERVICEREQUESTORGANIZATION"/>ServiceRequestOrganization
 
 
 Describes the organization for which the service request is created.
@@ -92,7 +92,7 @@ Describes the organization for which the service request is created.
 
  
 
-## <span id="SupportTopic"></span><span id="supporttopic"></span><span id="SUPPORTTOPIC"></span>SupportTopic
+## <span id="SupportTopic"/><span id="supporttopic"/><span id="SUPPORTTOPIC"/>SupportTopic
 
 
 Describes a support topic. Service requests specify a support topic to

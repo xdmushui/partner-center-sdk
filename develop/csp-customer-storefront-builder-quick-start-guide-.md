@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Create an online marketplace to sell cloud solution provider (CSP) offers by using the CSP Customer Storefront Builder.
 
-## <span id="What_is_the_CSP_Customer_Storefront_Builder__"></span><span id="what_is_the_csp_customer_storefront_builder__"></span><span id="WHAT_IS_THE_CSP_CUSTOMER_STOREFRONT_BUILDER__"></span>What is the CSP Customer Storefront Builder?
+## <span id="What_is_the_CSP_Customer_Storefront_Builder__"/><span id="what_is_the_csp_customer_storefront_builder__"/><span id="WHAT_IS_THE_CSP_CUSTOMER_STOREFRONT_BUILDER__"/>What is the CSP Customer Storefront Builder?
 
 
 The CSP Customer Storefront Builder helps partners easily create an online marketplace to sell CSP offers to their customers. Most partners and small sales organizations want to focus on selling rather than developing an online marketplace, and the Partner Center SDK sample app requires software development skills to create and deploy a website. With the CSP Customer Storefront Builder, you can quickly and easily create your own website. You can also download the site as sample code or deploy directly to your Azure subscription with a Ready to Transact website.
@@ -26,7 +26,7 @@ The CSP Customer Storefront Builder code is subject to the license available in 
 >[!NOTE]
 >You are responsible for the storefront site management, maintenance, and any issues that might result from site creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
-## <span id="How_can_partners_use_the_CSP_Customer_Storefront_Builder__"></span><span id="how_can_partners_use_the_csp_customer_storefront_builder__"></span><span id="HOW_CAN_PARTNERS_USE_THE_CSP_CUSTOMER_STOREFRONT_BUILDER__"></span>How can partners use the CSP Customer Storefront Builder?
+## <span id="How_can_partners_use_the_CSP_Customer_Storefront_Builder__"/><span id="how_can_partners_use_the_csp_customer_storefront_builder__"/><span id="HOW_CAN_PARTNERS_USE_THE_CSP_CUSTOMER_STOREFRONT_BUILDER__"/>How can partners use the CSP Customer Storefront Builder?
 
 CSP partner admins on Partner Center can deploy a CSP Customer Storefront directly from Partner Center. With minimal effort, a new website can be deployed on the partner's tenant. Once deployed, partners can use the website to configure branding, offers, and payment-related information, and then share the site URL address with customers.
 
@@ -70,7 +70,7 @@ The process for creating a website is shown in the following table.
 </tbody>
 </table>
 
-## <span id="Considerations"></span><span id="considerations"></span><span id="CONSIDERATIONS"></span>Considerations
+## <span id="Considerations"/><span id="considerations"/><span id="CONSIDERATIONS"/>Considerations
 
 The CSP Customer Storefront Builder is intended as a quick way to create a website. Be aware of the following considerations during your planning:
 
@@ -84,15 +84,15 @@ The CSP Customer Storefront Builder is intended as a quick way to create a websi
 - PayU payment configuration will work only in India currently. PayU availability and support is solely controlled by PayU and may be discontinued at any time by PayU.
 - Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
-## <span id="Additional_resources"></span><span id="additional_resources"></span><span id="ADDITIONAL_RESOURCES"></span>Additional resources
+## <span id="Additional_resources"/><span id="additional_resources"/><span id="ADDITIONAL_RESOURCES"/>Additional resources
 
 
 To enhance or customize your CSP Customer Storefront:
 
 - Download the web sample from here and make additional customizations: <https://github.com/Microsoft/Partner-Center-Storefront>
--   Use Microsoft Visual Studio 2015 (or later) to develop, build for additional changes and enhancements (including authorizations, certifications, manifest changes, and other items).
+- Use Microsoft Visual Studio 2015 (or later) to develop, build for additional changes and enhancements (including authorizations, certifications, manifest changes, and other items).
 
-## <span id="Scenario__Partner_experience"></span><span id="scenario__partner_experience"></span><span id="SCENARIO__PARTNER_EXPERIENCE"></span>Scenario: Partner experience
+## <span id="Scenario__Partner_experience"/><span id="scenario__partner_experience"/><span id="SCENARIO__PARTNER_EXPERIENCE"/>Scenario: Partner experience
 
 1. Deploy
     - A partner admin can use Partner Center to deploy the site. In Account settings, choose **Web storefront** to deploy a new website.
@@ -120,7 +120,7 @@ To enhance or customize your CSP Customer Storefront:
 
         To open a PayU Money account, go to <https://www.payumoney.com/merchant-account/#/>. 
 
-## <span id="Scenario__Customer_experience"></span><span id="scenario__customer_experience"></span><span id="SCENARIO__CUSTOMER_EXPERIENCE"></span>Scenario: Customer experience
+## <span id="Scenario__Customer_experience"/><span id="scenario__customer_experience"/><span id="SCENARIO__CUSTOMER_EXPERIENCE"/>Scenario: Customer experience
 
 1. New customer sign up and purchase
     - By default, the site is publicly available and shows the partner's catalog on the homepage.
@@ -155,7 +155,7 @@ To enhance or customize your CSP Customer Storefront:
     - Each subscription expires after one year and cannot be changed after the subscription is purchased.
     - The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for new seat will be $364. If you add one more 10 days later, the price will be $354.
 
-## <span id="Countries"></span><span id="countries"></span><span id="COUNTRIES"></span>Customers can belong to these countries:
+## <span id="Countries"/><span id="countries"/><span id="COUNTRIES"/>Customers can belong to these countries:
 
 | Country Code | Country Name   |
 |--------------|----------------|
@@ -199,7 +199,7 @@ To enhance or customize your CSP Customer Storefront:
 | GB           | United Kingdom |
 | US           | United States  |
 
-## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See Also
+## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See Also
 
 [CSP customer web storefront](csp-customer-web-storefront.md)
 

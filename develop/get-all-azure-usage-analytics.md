@@ -10,20 +10,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 
 How to get all the Azure usage analytics information for your customers. 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -183,7 +183,7 @@ How to get all the Azure usage analytics information for your customers.
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -199,7 +199,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
@@ -230,6 +230,6 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 
-## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
+## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
   - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 

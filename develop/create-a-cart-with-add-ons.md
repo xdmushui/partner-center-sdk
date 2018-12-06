@@ -9,16 +9,16 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to purchase add-ons through a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C# 
 
@@ -102,7 +102,7 @@ var createdCart = partnerOperations.Customers.ById(selectedCustomerId).Carts.Cre
 ```
 
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
@@ -120,7 +120,7 @@ Use the following path parameter to identify the customer.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -238,7 +238,7 @@ Date: Thu, 01 Nov 2018 22:29:05 GMT
 	"creationTimestamp":"2018-11-01T22:29:03.6900182Z",
 	"lastModifiedTimestamp":"2018-11-01T22:29:03.6900182Z",
 	"expirationTimestamp":"2018-11-01T22:44:05.0025799Z",
-	"lastModifiedUser":"1824b7fc-2fac-4478-b177-   66823c40ab75",
+	"lastModifiedUser":"1824b7fc-2fac-4478-b177-66823c40ab75",
 	"status":"Active",
 	"lineItems": [
 		{

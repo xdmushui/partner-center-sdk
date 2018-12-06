@@ -11,15 +11,15 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The following HTTP request and response headers are supported by the
 Partner Center REST API. Not all API calls accept all headers.
 
-## <span id="Request_headers"></span><span id="request_headers"></span><span id="REQUEST_HEADERS"></span>Request headers
+## <span id="Request_headers"/><span id="request_headers"/><span id="REQUEST_HEADERS"/>Request headers
 
 
 The following HTTP request headers are supported by the Partner Center
@@ -38,7 +38,7 @@ REST API.
 
  
 
-## <span id="Response_headers"></span><span id="response_headers"></span><span id="RESPONSE_HEADERS"></span>Response headers
+## <span id="Response_headers"/><span id="response_headers"/><span id="RESPONSE_HEADERS"/>Response headers
 
 
 The following HTTP response headers may be returned by the Partner

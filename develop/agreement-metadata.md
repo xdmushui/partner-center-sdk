@@ -1,26 +1,26 @@
 ---
-title: AgreementMetaData
+title: AgreementMetaData resources
 description: Provides metadata about all the agreement types that partners can provide confirmation of customer acceptance.
 ms.date: 8/03/2018
 ms.localizationpriority: medium
 ---
 
-# AgreementMetaData
+# AgreementMetaData resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 > [!NOTE]  
 > The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
-> -   Partner Center operated by 21Vianet
-> -   Partner Center for Microsoft Cloud Germany
-> -   Partner Center for Microsoft Cloud for US Government
+> - Partner Center operated by 21Vianet
+> - Partner Center for Microsoft Cloud Germany
+> - Partner Center for Microsoft Cloud for US Government
 
 The **AgreementMetaData** collection provides metadata about all the agreement types that partners can provide confirmation of customer acceptance. Currently, the **AgreementMetaData** collection only returns metadata for one agreement type, which is the Microsoft Cloud Agreement.
 
-## <span id="AgreementsMetaData"></span><span id="agreementmetadata"></span><span id="AGREEMENTMETADATA"></span>AgreementMetaData
+## <span id="AgreementsMetaData"/><span id="agreementmetadata"/><span id="AGREEMENTMETADATA"/>AgreementMetaData
 
 Agreement metadata returned includes the following:
 

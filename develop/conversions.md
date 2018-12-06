@@ -1,25 +1,25 @@
 ---
-title: Conversions
+title: Conversions resources
 description: Conversion resources support the conversion of a trial subscription to a paid subscription.
 ms.assetid: 4AE796E3-47D9-428B-8267-A5247B573E0C
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Conversions
+# Conversions resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Conversion resources support the conversion of a trial subscription to a
 paid subscription.
 
-## <span id="Conversion"></span><span id="conversion"></span><span id="CONVERSION"></span>Conversion
+## <span id="Conversion"/><span id="conversion"/><span id="CONVERSION"/>Conversion
 
 
 Contains information used to convert a trial subscription to a paid
@@ -72,7 +72,7 @@ subscription.
 
  
 
-## <span id="ConversionError"></span><span id="conversionerror"></span><span id="CONVERSIONERROR"></span>ConversionError
+## <span id="ConversionError"/><span id="conversionerror"/><span id="CONVERSIONERROR"/>ConversionError
 
 
 Represents an error that occurred during conversion.
@@ -108,7 +108,7 @@ Represents an error that occurred during conversion.
 
  
 
-## <span id="ConversionResult"></span><span id="conversionresult"></span><span id="CONVERSIONRESULT"></span>ConversionResult
+## <span id="ConversionResult"/><span id="conversionresult"/><span id="CONVERSIONRESULT"/>ConversionResult
 
 
 Represents the result of performing a subscription conversion.

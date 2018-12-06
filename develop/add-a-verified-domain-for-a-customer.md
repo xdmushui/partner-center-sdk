@@ -10,22 +10,22 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to add a verified domain to the list of approved domains for an existing customer.
 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer ID (CustomerTenantId). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID. 
--   You must be a Partner who is a domain registrar.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer ID (CustomerTenantId). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID. 
+- You must be a Partner who is a domain registrar.
 
-## <span id="AddingaVerifiedDomain"></span><span id="addingaverifieddomain"><span id="ADDINGAVERIFIEDDOMAIN"></span>Adding a verified domain
+## <span id="AddingaVerifiedDomain"/><span id="addingaverifieddomain"><span id="ADDINGAVERIFIEDDOMAIN"/>Adding a verified domain
 
 
 If you are a Partner who is a domain registrar, you can use the verifieddomain API to POST a new [Domain](#domain) resource to the list of domains for an existing customer. To do this, identify the customer using their CustomerTenantId, specify a value for the VerifiedDomainName property, and pass a [Domain](#domain) resource in the Request with the required Name, Capability, AuthenticationType, Status, and VerificationMethod properties included. To specify that the new [Domain](#domain) is a federated domain, set the AuthenticationType property in the [Domain](#domain) resource to "Federated", and include a [DomainFederationSettings](#domainfederationsettings) resource in the Request. If the method is successful, the Response will include a [Domain](#domain) resource for the new verified domain.
@@ -35,7 +35,7 @@ If you are a Partner who is a domain registrar, you can use the verifieddomain A
 
 When adding a custom verified domain, a domain that is not registered on onmicrosoft.com, you must set the [CustomerUser.immutableId](user.md#customeruser) property to a unique ID value for the customer you are adding the domain for. This unique identifier is required during the validation process when the domain is being verified. For more information about customer user accounts, see [create user accounts for a customer](create-user-accounts-for-a-customer.md).
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span>REST Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -58,7 +58,7 @@ Use the following query parameter to specify the customer you are adding a verif
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 
 
@@ -73,7 +73,7 @@ This table describes the required properties in the request body.
 | [DomainFederationSettings](#domainfederationsettings) | object | Yes (If AuthenticationType = "Federated")     | The domain federation settings to be used if the domain is a "Federated" domain and not a "Managed" domain. |
  
 
-### <span id="domain"></span><span id="domain"></span><span id="DOMAIN"></span>
+### <span id="domain"/><span id="domain"/><span id="DOMAIN"/>
 
 **Domain**
 
@@ -91,7 +91,7 @@ This table describes the required and optional **Domain** properties in the requ
 | VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: None, DnsRecord, Email.                                    |
 
 
-### <span id="domainFederationSettings"></span><span id="domainfederationsettings"></span><span id="DOMAINFEDERATIONSETTINGS"></span>
+### <span id="domainFederationSettings"/><span id="domainfederationsettings"/><span id="DOMAINFEDERATIONSETTINGS"/>
 
 **Domain Federation Settings**
 
@@ -160,7 +160,7 @@ X-Locale: "en-US"
 ```
 
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
 If successful, this API returns a [Domain](#domain) resource for the new verified domain.

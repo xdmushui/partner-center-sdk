@@ -1,19 +1,19 @@
 ---
-title: Azure Utilization Record
+title: Azure utilization record resources
 description: The Azure Utilization Record contains details about the utilization of an Azure subscription resource.
 ms.assetid: 4C1EEEB3-DB25-4D61-BFED-C4AB5D3BB5CF
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Azure Utilization Record
+# Azure utilization record resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The Azure Utilization Record contains details about the utilization of
 an Azure subscription resource. If you are a cloud service provider
@@ -34,7 +34,7 @@ Partner Center and your browser language, but those are customizable.
 This is especially relevant if you manage sales in multiple markets from
 a single, centralized office.
 
-## <span id="AzureUtilizationRecord"></span><span id="azureutilizationrecord"></span><span id="AZUREUTILIZATIONRECORD"></span>AzureUtilizationRecord
+## <span id="AzureUtilizationRecord"/><span id="azureutilizationrecord"/><span id="AZUREUTILIZATIONRECORD"/>AzureUtilizationRecord
 
 
 Describes the properties of an Azure Utilization Record resource.
@@ -52,7 +52,7 @@ Describes the properties of an Azure Utilization Record resource.
 
  
 
-## <span id="AzureResource"></span><span id="azureresource"></span><span id="AZURERESOURCE"></span>AzureResource
+## <span id="AzureResource"/><span id="azureresource"/><span id="AZURERESOURCE"/>AzureResource
 
 
 Describes the properties of an Azure Resource.
@@ -67,7 +67,7 @@ Describes the properties of an Azure Resource.
 
  
 
-## <span id="AzureInstanceData"></span><span id="azureinstancedata"></span><span id="AZUREINSTANCEDATA"></span>AzureInstanceData
+## <span id="AzureInstanceData"/><span id="azureinstancedata"/><span id="AZUREINSTANCEDATA"/>AzureInstanceData
 
 
 Describes the properties of an Azure Instance Data resource.
@@ -82,10 +82,10 @@ Describes the properties of an Azure Instance Data resource.
 | additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          | 
  
 
-## <span id="Operations_on_the_AzureUtilizationRecord_resource"></span><span id="operations_on_the_azureutilizationrecord_resource"></span><span id="OPERATIONS_ON_THE_AZUREUTILIZATIONRECORD_RESOURCE"></span>Operations on the AzureUtilizationRecord resource
+## <span id="Operations_on_the_AzureUtilizationRecord_resource"/><span id="operations_on_the_azureutilizationrecord_resource"/><span id="OPERATIONS_ON_THE_AZUREUTILIZATIONRECORD_RESOURCE"/>Operations on the AzureUtilizationRecord resource
 
 
--   [Get a customer's utilization records for
+- [Get a customer's utilization records for
     Azure](get-a-customer-s-utilization-record-for-azure.md)
 
  

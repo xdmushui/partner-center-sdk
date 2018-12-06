@@ -1,27 +1,27 @@
 ---
-title: Agreement
+title: Agreement resources
 description: Represents a Microsoft cloud customer agreement
 ms.date: 8/02/2018
 ms.localizationpriority: medium
 ---
 
-# Agreement
+# Agreement resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 > [!NOTE]  
 > The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
-> -   Partner Center operated by 21Vianet
-> -   Partner Center for Microsoft Cloud Germany
-> -   Partner Center for Microsoft Cloud for US Government
+> - Partner Center operated by 21Vianet
+> - Partner Center for Microsoft Cloud Germany
+> - Partner Center for Microsoft Cloud for US Government
 
 The resource defined here represents a Microsoft cloud customer agreement.
 
 
-## <span id="Agreement"></span><span id="agreement"></span><span id="AGREEMENT"></span>Agreement
+## <span id="Agreement"/><span id="agreement"/><span id="AGREEMENT"/>Agreement
 
 Represents the details of certification provided by the partner.
 

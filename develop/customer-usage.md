@@ -1,30 +1,26 @@
 ---
-title: Customer Usage Budgeting
+title: Customer usage resources
 description: Customers with usage-based subscriptions may have a monthly use budget, which sets a limit on their maximum usage and allows the partner to track their usage over time.
 ms.assetid: 268C7AF5-3A95-451F-8092-033A3E8126F2
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Customer Usage Budgeting
+# Customer usage resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
-Customers with usage-based subscriptions may have a monthly use budget,
-which sets a limit on their maximum usage and allows the partner to
-track their usage over time. Customer usage numbers are estimates, not
-final values, and they should not be used for billing purposes.
+Customers with usage-based subscriptions may have a monthly use budget, which sets a limit on their maximum usage and allows the partner to track their usage over time. Customer usage numbers are estimates, not final values, and they should not be used for billing purposes.
 
-## <span id="CustomerMonthlyUsageRecord"></span><span id="customermonthlyusagerecord"></span><span id="CUSTOMERMONTHLYUSAGERECORD"></span>CustomerMonthlyUsageRecord
+## <span id="CustomerMonthlyUsageRecord"/><span id="customermonthlyusagerecord"/><span id="CUSTOMERMONTHLYUSAGERECORD"/>CustomerMonthlyUsageRecord
 
 
-Represents the estimated monetary cost of a customer's usage in the
-current month.
+Represents the estimated monetary cost of a customer's usage in the current month.
 
 | Property         | Type               | Description                                                              |
 |------------------|--------------------|--------------------------------------------------------------------------|
@@ -39,11 +35,10 @@ current month.
 
  
 
-## <span id="CustomerUsageSummary"></span><span id="customerusagesummary"></span><span id="CUSTOMERUSAGESUMMARY"></span>CustomerUsageSummary
+## <span id="CustomerUsageSummary"/><span id="customerusagesummary"/><span id="CUSTOMERUSAGESUMMARY"/>CustomerUsageSummary
 
 
-Represents a summary of the customer's usage for an entire billing
-period.
+Represents a summary of the customer's usage for an entire billing period.
 
 | Property         | Type               | Description                                                                                                      |
 |------------------|--------------------|------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +55,7 @@ period.
 
  
 
-## <span id="PartnerUsageSummary"></span><span id="partnerusagesummary"></span><span id="PARTNERUSAGESUMMARY"></span>PartnerUsageSummary
+## <span id="PartnerUsageSummary"/><span id="partnerusagesummary"/><span id="PARTNERUSAGESUMMARY"/>PartnerUsageSummary
 
 
 Represents a partner-level summary of usage budgeting for all customers.
@@ -83,11 +78,10 @@ Represents a partner-level summary of usage budgeting for all customers.
 
  
 
-## <span id="SpendingBudget"></span><span id="spendingbudget"></span><span id="SPENDINGBUDGET"></span>SpendingBudget
+## <span id="SpendingBudget"/><span id="spendingbudget"/><span id="SPENDINGBUDGET"/>SpendingBudget
 
 
-Represents the budget allocated to this customer for usage-based
-subscriptions.
+Represents the budget allocated to this customer for usage-based subscriptions.
 
 | Property   | Type               | Description                                                                                         |
 |------------|--------------------|-----------------------------------------------------------------------------------------------------|

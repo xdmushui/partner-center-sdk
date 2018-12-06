@@ -1,21 +1,21 @@
 ---
-title: Relationships
+title: Relationships resources
 description: Describes resources related to relationships.
 ms.assetid: F6157FE3-7C9D-4A8F-AC11-6F4007594C3D
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Relationships
+# Relationships resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Describes resources related to relationships.
 
-## <span id="PartnerRelationship"></span><span id="partnerrelationship"></span><span id="PARTNERRELATIONSHIP"></span>PartnerRelationship
+## <span id="PartnerRelationship"/><span id="partnerrelationship"/><span id="PARTNERRELATIONSHIP"/>PartnerRelationship
 
 
 Represents a relationship between two partners.
@@ -32,7 +32,7 @@ Represents a relationship between two partners.
 
  
 
-## <span id="RelationshipRequest"></span><span id="relationshiprequest"></span><span id="RELATIONSHIPREQUEST"></span>RelationshipRequest
+## <span id="RelationshipRequest"/><span id="relationshiprequest"/><span id="RELATIONSHIPREQUEST"/>RelationshipRequest
 
 
 Provides the URL by which a customer can establish a relationship with a

@@ -1,20 +1,20 @@
 ---
-title: Subscription
+title: Subscription resources
 description: A subscription lets a customer use a service for a certain period of time.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Subscription
+# Subscription resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 A subscription lets a customer use a service for a certain period of
 time. Not all fields will apply to all subscriptions, and many only
@@ -26,7 +26,7 @@ suspended or cancelled.
 
 
 
-## <span id="Subscription"></span><span id="subscription"></span><span id="SUBSCRIPTION"></span>Subscription
+## <span id="Subscription"/><span id="subscription"/><span id="SUBSCRIPTION"/>Subscription
 
 
 Represents the life cycle of a subscription and includes properties that define the states throughout the subscription life cycle.
@@ -60,7 +60,7 @@ Represents the life cycle of a subscription and includes properties that define 
 
  
 
-## <span id="SubscriptionLinks"></span><span id="subscriptionlinks"></span><span id="SUBSCRIPTIONLINKS"></span>SubscriptionLinks
+## <span id="SubscriptionLinks"/><span id="subscriptionlinks"/><span id="SUBSCRIPTIONLINKS"/>SubscriptionLinks
 
 
 Describes the collection of links attached to a subscription resource.
@@ -75,7 +75,7 @@ Describes the collection of links attached to a subscription resource.
 
  
 
-## <span id="SubscriptionProvisioningStatus"></span><span id="subscriptionprovisioningstatus"></span><span id="SUBSCRIPTIONPROVISIONINGSTATUS"></span>SubscriptionProvisioningStatus
+## <span id="SubscriptionProvisioningStatus"/><span id="subscriptionprovisioningstatus"/><span id="SUBSCRIPTIONPROVISIONINGSTATUS"/>SubscriptionProvisioningStatus
 
 
 Provides information about the provisioning status of a subscription.
@@ -90,7 +90,7 @@ Provides information about the provisioning status of a subscription.
 
  
 
-## <span id="SubscriptionRegistrationStatus"></span><span id="subscriptionregistrationstatus"></span><span id="SUBSCRIPTIONREGISTRATIONSTATUS"></span>SubscriptionRegistrationStatus
+## <span id="SubscriptionRegistrationStatus"/><span id="subscriptionregistrationstatus"/><span id="SUBSCRIPTIONREGISTRATIONSTATUS"/>SubscriptionRegistrationStatus
 
 
 Describes the collection of links attached to a subscription resource.
@@ -102,7 +102,7 @@ Describes the collection of links attached to a subscription resource.
 
 
 
-## <span id="SupportContact"></span><span id="supportcontact"></span><span id="SUPPORTCONTACT"></span>SupportContact
+## <span id="SupportContact"/><span id="supportcontact"/><span id="SUPPORTCONTACT"/>SupportContact
 
 
 Represents a support contact for a customer's subscription.
@@ -117,7 +117,7 @@ Represents a support contact for a customer's subscription.
 
 
 
-## <span id="RegisterSubscription"></span><span id="registersubscription"></span><span id="REGISTERSUBSCRIPTION"></span>RegisterSubscription
+## <span id="RegisterSubscription"/><span id="registersubscription"/><span id="REGISTERSUBSCRIPTION"/>RegisterSubscription
 
 
 Returns a link that can be used to query the registration status of a subscription. The registration status is returned in the response body of a successfully accepted request to register an Azure subscription.

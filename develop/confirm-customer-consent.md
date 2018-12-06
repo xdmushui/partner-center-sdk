@@ -163,7 +163,7 @@ This table describes the required properties in the request body.
 |-----------|--------|----------------------------------------------------------------------------------------------|  
 | Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Cloud Agreement. |  
 
-### <span id="Agreement"></span><span id="agreement"></span><span id="AGREEMENT"></span>
+### <span id="Agreement"/><span id="agreement"/><span id="AGREEMENT"/>
 
 **Agreement**
 
@@ -200,7 +200,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, this method returns an **Agreement** resource.
 

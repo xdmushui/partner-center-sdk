@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Retrieves the partner's current account balance. A summary of the balance and total charges of an invoice for both recurring and one-time charges.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To retrieve your account balance, use your **IAggregatePartner.Invoices** collection, and then call the **Summary** property. Then call the **Get** function, and finally call the **BalanceAmount** property.
@@ -38,7 +38,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceSummary.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -51,7 +51,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -68,7 +68,7 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
 If successful, this method returns an [InvoiceSummary](invoice.md#invoicesummary) resource in the response.

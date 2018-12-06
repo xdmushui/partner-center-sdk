@@ -1,20 +1,20 @@
 ---
-title: Referral
-description: Resources that represents a sales lead direct from a customer, Microsoft or another partner.  
+title: Referral resources
+description: Resources that represents a sales lead direct from a customer, Microsoft, or another partner.
 ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 
-# Referral
+# Referral resources
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Resources that represent a sales lead direct from a customer, Microsoft, or another partner.   
 
 
-## <span id="Referral"></span><span id="referral"></span><span id="REFERRAL"></span>Referral
+## <span id="Referral"/><span id="referral"/><span id="REFERRAL"/>Referral
 
 Represents the referral.
 
@@ -43,7 +43,7 @@ Represents the referral.
 | ETag                  | string                                            | ETags are used and required for concurrency checking when updating resources. |
 
 
-## <span id="ReferralStatus"></span><span id="referralstatus"></span><span id="REFERRALSTATUS"></span>ReferralStatus
+## <span id="ReferralStatus"/><span id="referralstatus"/><span id="REFERRALSTATUS"/>ReferralStatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -55,7 +55,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Closed          | Represents a closed referral.                                                              |
 
 
-## <span id="ReferralSubstatus"></span><span id="referralSubstatus"></span><span id="REFERRALSubstatus"></span>ReferralSubstatus
+## <span id="ReferralSubstatus"/><span id="referralSubstatus"/><span id="REFERRALSubstatus"/>ReferralSubstatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -79,7 +79,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Closed                | Closed                        | Won, Lost, Declined, Expired          |
 
 
-## <span id="ReferralType"></span><span id="referraltype"></span><span id="REFERRALTYPE"></span>ReferralType
+## <span id="ReferralType"/><span id="referraltype"/><span id="REFERRALTYPE"/>ReferralType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral type.
 
@@ -89,7 +89,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Independent           | Represents a referral in which two parties will collaborate to close.           |
 
 
-## <span id="ReferralQualification"></span><span id="referralqualification"></span><span id="REFERRALQUALIFICATION"></span>ReferralQualification
+## <span id="ReferralQualification"/><span id="referralqualification"/><span id="REFERRALQUALIFICATION"/>ReferralQualification
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -101,46 +101,46 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | SalesQualified       | Represents a referral from a Microsoft sales agent.                                         |
 
 
-## <span id="CustomerProfile"></span><span id="customerprofile"></span><span id="CUSTOMERPROFILE"></span>CustomerProfile
+## <span id="CustomerProfile"/><span id="customerprofile"/><span id="CUSTOMERPROFILE"/>CustomerProfile
 
 Contains the customer contact information.
 
-| Property        | Type                                                          | Description                                             |
-|-----------------|---------------------------------------------------------------|---------------------------------------------------------|
-| Id              | string                                                        | The Id for this CustomerProfile.                        |
-| Name            | string                                                        | The customer organization name.                         |
-| Address         | [Address](referral.md#address)                                | The address of the customer.                            |
-| Size            | string                                                        | The number of employees at the customers organization.  |
-| Team            | [Member](referral.md#Member)                                  | The contacts for the customer organization.             |
-| Ids            | [CustomerProfileType](referral.md#CustomerProfileType)                      | External ID's for the customer.             |
+| Property | Type                                                   | Description                                            |
+|----------|--------------------------------------------------------|--------------------------------------------------------|
+| Id       | string                                                 | The Id for this CustomerProfile.                       |
+| Name     | string                                                 | The customer organization name.                        |
+| Address  | [Address](referral.md#address)                         | The address of the customer.                           |
+| Size     | string                                                 | The number of employees at the customers organization. |
+| Team     | [Member](referral.md#Member)                           | The contacts for the customer organization.            |
+| Ids      | [CustomerProfileType](referral.md#CustomerProfileType) | External ID's for the customer.                        |
 
-## <span id="CustomerProfileType"></span><span id="customerprofiletype"></span><span id="CUSTOMERPROFILETYPE"></span>CustomerProfileType
+
+## <span id="CustomerProfileType"/><span id="customerprofiletype"/><span id="CUSTOMERPROFILETYPE"/>CustomerProfileType
 
 Contains the External ID's for the customer. 
 
-| Property        | Type                                                          | Description                                             |
-|-----------------|---------------------------------------------------------------|---------------------------------------------------------|
-| Duns            | string                                                        | The [Dun & Bradstreet number](https://www.dnb.com/duns-number ) for the customer.                        |
-| External        | string                                                        | A customer ID unique to your organization.                      |
+| Property | Type   | Description                                                                           |
+|----------|--------|---------------------------------------------------------------------------------------|
+| Duns     | string | The [Dun & Bradstreet number](https://www.dnb.com/duns-number.html) for the customer. |
+| External | string | A customer ID unique to your organization.                                            |
 
 
-
-## <span id="Address"></span><span id="address"></span><span id="ADDRESS"></span>Address
+## <span id="Address"/><span id="address"/><span id="ADDRESS"/>Address
 
 An address to use for the customer. For more information about the supported formats and properties in different countries/regions, see [Get address formatting rules by market](get-market-specific-validation-data.md).
 
-| Property        | Type        | Description                                                   |
-|-----------------|-------------|---------------------------------------------------------------|
-| AddressLine1    | string      | The first line of the address.                                |
-| AddressLine2    | string      | The second line of the address. This property is optional.    |
-| City            | string      | The city.                                                     |
-| State           | string      | The state.                                                    |
-| PostalCode      | string      | The zip code or postal code                                   |
-| Country         | string      | The country/region in ISO country code format.                |
-| Region          | string      | The region.                                                   |
+| Property     | Type   | Description                                                |
+|--------------|--------|------------------------------------------------------------|
+| AddressLine1 | string | The first line of the address.                             |
+| AddressLine2 | string | The second line of the address. This property is optional. |
+| City         | string | The city.                                                  |
+| State        | string | The state.                                                 |
+| PostalCode   | string | The zip code or postal code                                |
+| Country      | string | The country/region in ISO country code format.             |
+| Region       | string | The region.                                                |
 
 
-## <span id="Member"></span><span id="member"></span><span id="MEMBER"></span>Member
+## <span id="Member"/><span id="member"/><span id="MEMBER"/>Member
 
 Describes contact information for a specific individual.
 
@@ -152,7 +152,7 @@ Describes contact information for a specific individual.
 | Email       | string | The contact's email address. |
 | ContactPreference       | [ContactPreference](referral.md#ContactPreference) | The contact's preference for receiving email notifications. |
 
-## <span id="ContactPreference"></span><span id="contactpreference"></span><span id="CONTACTPREFERENCE"></span>ContactPreference
+## <span id="ContactPreference"/><span id="contactpreference"/><span id="CONTACTPREFERENCE"/>ContactPreference
 
 Describes contact preferences for receiving email notifications.
 
@@ -162,7 +162,7 @@ Describes contact preferences for receiving email notifications.
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
-## <span id="Consent"></span><span id="consent"></span><span id="CONSENT"></span>Consent
+## <span id="Consent"/><span id="consent"/><span id="CONSENT"/>Consent
 
 Consent flags around sharing information with other organizations and allowing them to contact users.
 
@@ -172,7 +172,7 @@ Consent flags around sharing information with other organizations and allowing t
 | ConsentToContact                                 | boolean   | Indicates consent to contact users.  |
 
 
-## <span id="InviteContext"></span><span id="invitecontext"></span><span id="INVITECONTEXT"></span>InviteContext
+## <span id="InviteContext"/><span id="invitecontext"/><span id="INVITECONTEXT"/>InviteContext
 
 Additional information that can be shared when inviting another organizations. 
 
@@ -181,7 +181,7 @@ Additional information that can be shared when inviting another organizations.
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
 | InvitedBy | [InvitedBy](referral.md#InvitedBy)                                     | The organization ID that sent the referral.                                   |
 
-## <span id="InvitedBy"></span><span id="invitedby"></span><span id="INVITEDBY"></span>InvitedBy
+## <span id="InvitedBy"/><span id="invitedby"/><span id="INVITEDBY"/>InvitedBy
 
 Additional information that can be shared when inviting another organizations. 
 
@@ -190,7 +190,7 @@ Additional information that can be shared when inviting another organizations.
 | OrganizationId        | string                                                     | The organization ID that sent the referral.                |
 | OrganizationName      | string                                                     | The organization name that sent the referral.                                   |
 
-## <span id="ReferralDetails"></span><span id="referraldetails"></span><span id="REFERRALDETAILS"></span>ReferralDetails
+## <span id="ReferralDetails"/><span id="referraldetails"/><span id="REFERRALDETAILS"/>ReferralDetails
 
 Represents the referral details.
 
@@ -203,7 +203,7 @@ Represents the referral details.
 | Requirements          | [ReferralRequirements](referral.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 
 
-## <span id="ReferralRequirements"></span><span id="referralrequirements"></span><span id="REFERRALREQUIREMENTS"></span>ReferralRequirements
+## <span id="ReferralRequirements"/><span id="referralrequirements"/><span id="REFERRALREQUIREMENTS"/>ReferralRequirements
 
 Contains the customer requirements.
 
@@ -214,7 +214,7 @@ Contains the customer requirements.
 | Services        | [Tag](referral.md#tag)                                       | The services the customer is interested in.          |
 | Solutions       | [SolutionTag](referral.md#SolutionTag)                       | The solutions the customer is interested in.                             |
 
-## <span id="SolutionTag"></span><span id="solutiontag"></span><span id="SOLUTIONTAG"></span>SolutionTag
+## <span id="SolutionTag"/><span id="solutiontag"/><span id="SOLUTIONTAG"/>SolutionTag
 
 Contains the solution details.
 
@@ -224,7 +224,7 @@ Contains the solution details.
 | Name            | string                                       | The name of the solution.          |
 | SolutionType    | [SolutionType](referral.md#SolutionType)     | The type of solution.          |
 
-## <span id="SolutionType"></span><span id="solutiontype"></span><span id="SOLUTIONTYPE"></span>SolutionType
+## <span id="SolutionType"/><span id="solutiontype"/><span id="SOLUTIONTYPE"/>SolutionType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
 
@@ -235,7 +235,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Name            |  Ability to reference solutions from the Microsoft catalog. |
 
 
-## <span id="Tag"></span><span id="tag"></span><span id="TAG"></span>Tag
+## <span id="Tag"/><span id="tag"/><span id="TAG"/>Tag
 
 Describes the tag.
 

@@ -10,14 +10,14 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The console test app is provided in C# and Java, it provides sample codes for all of the scenarios supported by the Partner Center APIs. You can also use it for testing.
 
-## <span id="Get_the_code"></span><span id="get_the_code"></span><span id="GET_THE_CODE"></span>Get the code
+## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
 
 ### .NET
 
@@ -39,7 +39,7 @@ Under **ScenarioSettings** in the *SamplesConfiguration.json* file, you can set 
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.java* file.
 
-## <span id="What_to_change"></span><span id="what_to_change"></span><span id="WHAT_TO_CHANGE"></span>What to change
+## <span id="What_to_change"/><span id="what_to_change"/><span id="WHAT_TO_CHANGE"/>What to change
 
 <table>
 <colgroup>

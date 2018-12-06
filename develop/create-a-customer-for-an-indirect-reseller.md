@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How an indirect provider can create a customer for an indirect reseller.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   The tenant identifier of the indirect reseller.
--   The indirect reseller must have a partnership with the indirect provider.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- The tenant identifier of the indirect reseller.
+- The indirect reseller must have a partnership with the indirect provider.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To add a new customer for an indirect reseller, start by instantiating a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer.associatedpartnerid) property.
@@ -67,7 +67,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateCustomerforIndirectReseller.cs
 
-## <span id="_Request"></span><span id="_request"></span><span id="_REQUEST"></span> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
 
 
 **Request syntax**
@@ -80,7 +80,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -94,7 +94,7 @@ This table describes the required properties in the request body.
 
  
 
-### <span id="billingProfile"></span><span id="billingprofile"></span><span id="BILLINGPROFILE"></span>
+### <span id="billingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>
 
 **Billing Profile**
 
@@ -110,7 +110,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
  
 
-### <span id="companyProfile"></span><span id="companyprofile"></span><span id="COMPANYPROFILE"></span>
+### <span id="companyProfile"/><span id="companyprofile"/><span id="COMPANYPROFILE"/>
 
 **Company Profile**
 
@@ -183,7 +183,7 @@ Connection: Keep-Alive
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the response contains a [Customer](customers.md#customer) resource for the new customer.

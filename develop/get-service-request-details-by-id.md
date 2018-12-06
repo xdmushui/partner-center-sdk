@@ -10,19 +10,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to retrieve the details of an existing customer service request using the service request identifier. 
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A service request ID.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A service request ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
@@ -40,7 +40,7 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 )); 
 ```
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -63,7 +63,7 @@ Use the following URI parameter to get the specified service request.
 
 **Request headers**
 
--   See [Partner Center REST Headers](headers.md) for more information.
+- See [Partner Center REST Headers](headers.md) for more information.
 
 **Request body**
 
@@ -83,7 +83,7 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 0 
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
 If successful, this method returns a **Service Request** resource in the response body. 

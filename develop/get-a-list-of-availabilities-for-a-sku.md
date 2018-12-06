@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Gets a collection of availabilities for the specified product and SKU.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A product ID. 
--   A SKU ID. 
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A product ID. 
+- A SKU ID. 
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To get the list of [availabilities](products.md#availability) for a [SKU](products.md#sku), start by using following the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific sku's operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the operations for availabilities. Finally, call **Get()** or **GetAsync()** to retrieve a collection of the availabilities for this SKU. Optionally, you can use the **ByTargetSegment()** method to filter the availabilities by target segment before calling **Get()** or **GetAsync()**.
@@ -41,7 +41,7 @@ var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(prod
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.BySegment(targetSegment).Get();
 ```
 
-## <span id="REST_Request"></span><span id="rest_request"></span><span id="REST_REQUEST"></span>REST Request
+## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -67,7 +67,7 @@ Use the following path and query parameters to get a list of availabilities for 
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -86,7 +86,7 @@ MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, the response body contains a collection of [SKU](products.md#sku) resources.

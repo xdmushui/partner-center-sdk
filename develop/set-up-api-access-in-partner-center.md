@@ -11,14 +11,14 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud for US Government
--   Partner Center for Microsoft Cloud Germany
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud for US Government
+- Partner Center for Microsoft Cloud Germany
 
 This topic describes the accounts you need to develop against the Partner Center SDK, how to create an integration sandbox account, and how to test in the integration sandbox.
 
-## <span id="supportedAccountTypes"></span><span id="supportedaccounttypes"></span><span id="SUPPORTEDACCOUNTTYPES"></span>Account definitions
+## <span id="supportedAccountTypes"/><span id="supportedaccounttypes"/><span id="SUPPORTEDACCOUNTTYPES"/>Account definitions
 
 
 To help you integrate and test your API integration, Partner Center supports two kinds of accounts:
@@ -42,9 +42,9 @@ To help you integrate and test your API integration, Partner Center supports two
 </table>
 
  
-## <span id="Set__up_your_accounts"></span><span id="set__up_your_accounts"></span><span id="SET__UP_YOUR_ACCOUNTS"></span>Set up your accounts
+## <span id="Set__up_your_accounts"/><span id="set__up_your_accounts"/><span id="SET__UP_YOUR_ACCOUNTS"/>Set up your accounts
 
-<span id="createIntegrationSandbox"></span><span id="createintegrationsandbox"></span><span id="CREATEINTEGRATIONSANDBOX"></span>
+<span id="createIntegrationSandbox"/><span id="createintegrationsandbox"/><span id="CREATEINTEGRATIONSANDBOX"/>
 **Create an integration sandbox**
 
 1.  Sign in into Partner Dashboard with a global admin account. (This is your primary Partner account.)
@@ -60,7 +60,7 @@ To help you integrate and test your API integration, Partner Center supports two
 
 6.  After you sign back in with your new integration sandbox admin account, above **Current Tasks**, click **Set Up Account** to complete the sandbox account setup.
 
-<span id="enableAPIAccess"></span><span id="enableapiaccess"></span><span id="ENABLEAPIACCESS"></span>
+<span id="enableAPIAccess"/><span id="enableapiaccess"/><span id="ENABLEAPIACCESS"/>
 
 After your account is set up, you must enable API access before you can use the Partner Center SDK with the integration sandbox. You need to enable access to the API separately for both your primary Partner account and your integration sandbox account.
 
@@ -79,7 +79,7 @@ After your account is set up, you must enable API access before you can use the 
 6.  Sign out of Partner Dashboard, then sign back in with your integration sandbox account. Repeat steps 2-5 to enable API access in the integration sandbox.
 
 
-## <span id="writeTestCode"></span><span id="writetestcode"></span><span id="WRITETESTCODE"></span>Write and test code in the integration sandbox
+## <span id="writeTestCode"/><span id="writetestcode"/><span id="WRITETESTCODE"/>Write and test code in the integration sandbox
 
 To write code and test code in Partner Center, you'll need to set up authentication with Azure AD, as described in [Partner Center authentication](partner-center-authentication.md). You'll need the following pieces of information:
 
@@ -103,7 +103,7 @@ To write code and test code in Partner Center, you'll need to set up authenticat
 </table>
 
 
-## <span id="runTestedCode"></span><span id="runtestedcode"></span><span id="RUNTESTEDCODE"></span>Use your solution for real customer data
+## <span id="runTestedCode"/><span id="runtestedcode"/><span id="RUNTESTEDCODE"/>Use your solution for real customer data
 
 **Change credentials from integration sandbox to primary account**
 

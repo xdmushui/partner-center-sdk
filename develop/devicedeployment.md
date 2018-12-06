@@ -1,22 +1,22 @@
 ---
-title: DeviceDeployment
+title: Device deployment resources
 description: Describes resources related to device deployment.
 ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# DeviceDeployment
+# Device deployment resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
 
 Describes resources related to device deployment.
 
-## <span id="ConfigurationPolicy"></span><span id="configurationpolicy"></span><span id="CONFIGURATIONPOLICY"></span>ConfigurationPolicy
+## <span id="ConfigurationPolicy"/><span id="configurationpolicy"/><span id="CONFIGURATIONPOLICY"/>ConfigurationPolicy
 
 
 Provides information about a configuration policy.
@@ -35,7 +35,7 @@ Provides information about a configuration policy.
 
  
 
-## <span id="Device"></span><span id="device"></span><span id="DEVICE"></span>Device
+## <span id="Device"/><span id="device"/><span id="DEVICE"/>Device
 
 
 Provides information about a device.
@@ -55,7 +55,7 @@ Provides information about a device.
 
  
 
-## <span id="BatchUploadDetails"></span><span id="batchuploaddetails"></span><span id="BATCHUPLOADDETAILS"></span>BatchUploadDetails
+## <span id="BatchUploadDetails"/><span id="batchuploaddetails"/><span id="BATCHUPLOADDETAILS"/>BatchUploadDetails
 
 
 Describes the status of a device batch upload of information about each
@@ -72,7 +72,7 @@ device in a list of devices.
 
  
 
-## <span id="DeviceUploadDetails"></span><span id="deviceuploaddetails"></span><span id="DEVICEUPLOADDETAILS"></span>DeviceUploadDetails
+## <span id="DeviceUploadDetails"/><span id="deviceuploaddetails"/><span id="DEVICEUPLOADDETAILS"/>DeviceUploadDetails
 
 
 Describes the status of an upload of information about a device.
@@ -89,7 +89,7 @@ Describes the status of an upload of information about a device.
 
  
 
-## <span id="DeviceBatch"></span><span id="devicebatch"></span><span id="DEVICEBATCH"></span>DeviceBatch
+## <span id="DeviceBatch"/><span id="devicebatch"/><span id="DEVICEBATCH"/>DeviceBatch
 
 
 Represents a collection of devices.
@@ -105,7 +105,7 @@ Represents a collection of devices.
 
  
 
-## <span id="DeviceBatchCreationRequest"></span><span id="devicebatchcreationrequest"></span><span id="DEVICEBATCHCREATIONREQUEST"></span>DeviceBatchCreationRequest
+## <span id="DeviceBatchCreationRequest"/><span id="devicebatchcreationrequest"/><span id="DEVICEBATCHCREATIONREQUEST"/>DeviceBatchCreationRequest
 
 
 Provides the information required to create a device batch and populate
@@ -154,7 +154,7 @@ it with devices.
 
  
 
-## <span id="DevicePolicyUpdateRequest"></span><span id="devicepolicyupdaterequest"></span><span id="DEVICEPOLICYUPDATEREQUEST"></span>DevicePolicyUpdateRequest
+## <span id="DevicePolicyUpdateRequest"/><span id="devicepolicyupdaterequest"/><span id="DEVICEPOLICYUPDATEREQUEST"/>DevicePolicyUpdateRequest
 
 
 Provides the information required to update a list of devices with a

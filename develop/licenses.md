@@ -1,23 +1,23 @@
 ---
-title: License
+title: License resources
 description: Describes resources related to licenses.
 ms.assetid: 20592E06-8A87-41F4-B8B0-6F9200556FDA
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# License
+# License resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes resources related to licenses.
 
-## <span id="License"></span><span id="license"></span><span id="LICENSE"></span>License
+## <span id="License"/><span id="license"/><span id="LICENSE"/>License
 
 
 Describes a user license.
@@ -35,7 +35,7 @@ Describes a user license.
 
  
 
-## <span id="LicenseUpdate"></span><span id="licenseupdate"></span><span id="LICENSEUPDATE"></span>LicenseUpdate
+## <span id="LicenseUpdate"/><span id="licenseupdate"/><span id="LICENSEUPDATE"/>LicenseUpdate
 
 
 Provides information used to assign or remove licenses from a user.
@@ -49,7 +49,7 @@ Provides information used to assign or remove licenses from a user.
 
  
 
-## <span id="LicenseAssignment"></span><span id="licenseassignment"></span><span id="LICENSEASSIGNMENT"></span>LicenseAssignment
+## <span id="LicenseAssignment"/><span id="licenseassignment"/><span id="LICENSEASSIGNMENT"/>LicenseAssignment
 
 
 Provides information needed for a license update operation.
@@ -61,7 +61,7 @@ Provides information needed for a license update operation.
 
  
 
-## <span id="LicenseWarning"></span><span id="licensewarning"></span><span id="LICENSEWARNING"></span>LicenseWarning
+## <span id="LicenseWarning"/><span id="licensewarning"/><span id="LICENSEWARNING"/>LicenseWarning
 
 
 Contains warning information that occurred during a license update
@@ -75,7 +75,7 @@ operation.
 
  
 
-## <span id="ProductSku"></span><span id="productsku"></span><span id="PRODUCTSKU"></span>ProductSku
+## <span id="ProductSku"/><span id="productsku"/><span id="PRODUCTSKU"/>ProductSku
 
 
 Describes product details.
@@ -126,7 +126,7 @@ Describes product details.
 
  
 
-## <span id="ServicePlan"></span><span id="serviceplan"></span><span id="SERVICEPLAN"></span>ServicePlan
+## <span id="ServicePlan"/><span id="serviceplan"/><span id="SERVICEPLAN"/>ServicePlan
 
 
 Identifies a deployable service within a product SKU. A product can have
@@ -142,7 +142,7 @@ many service plans.
 
  
 
-## <span id="SubscribedSku"></span><span id="subscribedsku"></span><span id="SUBSCRIBEDSKU"></span>SubscribedSku
+## <span id="SubscribedSku"/><span id="subscribedsku"/><span id="SUBSCRIBEDSKU"/>SubscribedSku
 
 
 Describes a subscribed product owned by a tenant.

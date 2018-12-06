@@ -1,24 +1,24 @@
 ---
-title: Profile
+title: Profile resources
 description: Describes the behavior of a Cloud Solution Provider's profiles.
 ms.assetid: 42F2959B-D70D-41A7-9A50-E22A2356A339
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Profile
+# Profile resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes the behavior of a Cloud Solution Provider's profiles.
 
-## <span id="BillingProfile"></span><span id="billingprofile"></span><span id="BILLINGPROFILE"></span>BillingProfile
+## <span id="BillingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>BillingProfile
 
 
 Describes a partner's billing profile.
@@ -37,7 +37,7 @@ Describes a partner's billing profile.
 
  
 
-## <span id="LegalBusinessProfile"></span><span id="legalbusinessprofile"></span><span id="LEGALBUSINESSPROFILE"></span>LegalBusinessProfile
+## <span id="LegalBusinessProfile"/><span id="legalbusinessprofile"/><span id="LEGALBUSINESSPROFILE"/>LegalBusinessProfile
 
 
 Describes a partner's legal business profile.
@@ -57,7 +57,7 @@ Describes a partner's legal business profile.
 
  
 
-## <span id="MpnProfile"></span><span id="mpnprofile"></span><span id="MPNPROFILE"></span>MpnProfile
+## <span id="MpnProfile"/><span id="mpnprofile"/><span id="MPNPROFILE"/>MpnProfile
 
 
 Describes a partner's Microsoft Partner Network profile.
@@ -72,7 +72,7 @@ Describes a partner's Microsoft Partner Network profile.
 
  
 
-## <span id="OrganizationProfile"></span><span id="organizationprofile"></span><span id="ORGANIZATIONPROFILE"></span>OrganizationProfile
+## <span id="OrganizationProfile"/><span id="organizationprofile"/><span id="ORGANIZATIONPROFILE"/>OrganizationProfile
 
 
 Describes a partner's organization profile.
@@ -93,7 +93,7 @@ Describes a partner's organization profile.
 
  
 
-## <span id="SupportProfile"></span><span id="supportprofile"></span><span id="SUPPORTPROFILE"></span>SupportProfile
+## <span id="SupportProfile"/><span id="supportprofile"/><span id="SUPPORTPROFILE"/>SupportProfile
 
 
 Describes a partner's support profile.

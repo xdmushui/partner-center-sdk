@@ -1,23 +1,23 @@
 ---
-title: Entitlement
+title: Entitlement resources
 description: Describes resources related to entitlement.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
 ms.date: 07/27/2018
 ms.localizationpriority: medium
 ---
 
-# Entitlement
+# Entitlement resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 
-## <span id="Entitlement"></span><span id="entitlement"></span><span id="ENTITLEMENT"></span>Entitlement
+## <span id="Entitlement"/><span id="entitlement"/><span id="ENTITLEMENT"/>Entitlement
 
 
 This resource represents the products to which the customer has right to use because of partner purchase on items from the catalog. 
@@ -34,7 +34,7 @@ This resource represents the products to which the customer has right to use bec
 | IncludedEntitlements | IEnumerable<[Entitlement](#artifact)> | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
 
 
-## <span id="ReferenceOrder"></span><span id="referenceorder"></span><span id="REFERENCEORDER"></span>ReferenceOrder
+## <span id="ReferenceOrder"/><span id="referenceorder"/><span id="REFERENCEORDER"/>ReferenceOrder
 
 The order reference of an entitlement. 
 
@@ -44,7 +44,7 @@ The order reference of an entitlement.
 | lineItemId | string | The ID of the referenced order line item. |
 
 
-## <span id="QuantityDetail"></span><span id="quantitydetail"></span><span id="QUANTITYDETAIL"></span>QuantityDetail
+## <span id="QuantityDetail"/><span id="quantitydetail"/><span id="QUANTITYDETAIL"/>QuantityDetail
 
 Represents the details of an entitlement quantity.
 
@@ -54,7 +54,7 @@ Represents the details of an entitlement quantity.
 | status | string | The status of quantity. |
 
 
-## <span id="EntitlementType"></span><span id="entitlementtype"></span><span id="ENTITLEMENTTYPE"></span>EntitlementType
+## <span id="EntitlementType"/><span id="entitlementtype"/><span id="ENTITLEMENTTYPE"/>EntitlementType
 
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
@@ -67,7 +67,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | VirtualMachineReservedInstance | Indicates entitlement type related to Azure Reserved Virtual Machine Instances. |
 
 
-## <span id="Artifact"></span><span id="artifact"></span><span id="ARTIFACT"></span>Artifact
+## <span id="Artifact"/><span id="artifact"/><span id="ARTIFACT"/>Artifact
 
 The artifact associated with the entitlement.  
 
@@ -77,7 +77,7 @@ The artifact associated with the entitlement.
 | dynamicAttributes | Dictionary&lt;string, object&gt; | Dynamic attributes containing artifacttype specific values. For example when artifactType = "reservedinstance", this will contain "reservationType" = "virtualmachines" or "reservationType" = "sqldatabases" denoting virtual machine reserved instance or Azure SQL reserved instance. (Available starting in SDK v1.9) |
 
 
-## <span id="ArtifactType"></span><span id="artifacttype"></span><span id="ARTIFACTTYPE"></span>ArtifactType
+## <span id="ArtifactType"/><span id="artifacttype"/><span id="ARTIFACTTYPE"/>ArtifactType
 
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
@@ -89,7 +89,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | VirtualMachineReservedInstance | Indicates the artifact aids with retrieval of Azure Reserved Virtual Machine Instances. |
 
 
-## <span id="ReservedInstanceArtifact"></span><span id="reservedinstanceartifact"></span><span id="RESERVEDINSTANCEARTIFACT"></span>ReservedInstanceArtifact
+## <span id="ReservedInstanceArtifact"/><span id="reservedinstanceartifact"/><span id="RESERVEDINSTANCEARTIFACT"/>ReservedInstanceArtifact
 
 The artifact associated with an Azure Reserved Instance entitlement. It inherits from the [Artifact](#artifact) class. 
 
@@ -99,7 +99,7 @@ The artifact associated with an Azure Reserved Instance entitlement. It inherits
 | resourceID | string                         | The ID of the Azure reservation order or resource. |
 
 
-## <span id="ReservedInstanceArtifactDetails"></span><span id="reservedinstanceartifactdetails"></span><span id="RESERVEDINSTANCEARTIFACTDETAILS"></span>ReservedInstanceArtifactDetails
+## <span id="ReservedInstanceArtifactDetails"/><span id="reservedinstanceartifactdetails"/><span id="RESERVEDINSTANCEARTIFACTDETAILS"/>ReservedInstanceArtifactDetails
 
 Represents the entity returned upon invocation of the Azure Reserved Instance artifact link. 
 
@@ -109,7 +109,7 @@ Represents the entity returned upon invocation of the Azure Reserved Instance ar
 |     type     |          string          |                     The type of artifact.                     |
 | reservations | IEnumerable<Reservation> | Indicates the Azure resource or reservation order identifier. |
 
-## <span id="Reservation"></span><span id="reservation"></span><span id="RESERVATION"></span>Reservation
+## <span id="Reservation"/><span id="reservation"/><span id="RESERVATION"/>Reservation
 
 Represents an individual reservation.
 
@@ -125,7 +125,7 @@ Represents an individual reservation.
 | provisioningState | string                         | The provisioning state of the reservation.                         |
 
 
-## <span id="VirtualMachineReservedInstanceArtifact"></span><span id="virtualmachinereservedinstanceartifact"></span><span id="VIRTUALMACHINERESERVEDARTIFACT"></span>VirtualMachineReservedInstanceArtifact
+## <span id="VirtualMachineReservedInstanceArtifact"/><span id="virtualmachinereservedinstanceartifact"/><span id="VIRTUALMACHINERESERVEDARTIFACT"/>VirtualMachineReservedInstanceArtifact
 
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
@@ -138,7 +138,7 @@ The artifact associated with an Azure Reserved Virtual Machine Instance entitlem
 | resourceID | string                            | The ID of the Azure reservation order or resource. |
 
 
-## <span id="VirtualMachineReservedInstanceArtifactDetails"></span><span id="virtualmachinereservedinstanceartifactdetails"></span><span id="VIRTUALMACHINERESERVEDARTIFACTDETAILS"></span>VirtualMachineReservedInstanceArtifactDetails
+## <span id="VirtualMachineReservedInstanceArtifactDetails"/><span id="virtualmachinereservedinstanceartifactdetails"/><span id="VIRTUALMACHINERESERVEDARTIFACTDETAILS"/>VirtualMachineReservedInstanceArtifactDetails
 
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9
@@ -151,7 +151,7 @@ Represents the entity returned upon invocation of the Azure Reserved Virtual Mac
 | virtualMachineReservations  | IEnumerable<[VirtualMachineReservation](#virtualmachinereservation)> | Indicates the Azure resource or reservation order identifier. |
 
 
-## <span id="VirtualMachineReservation"></span><span id="virtualmachinereservation"></span><span id="VIRTUALMACHINERESERVATION"></span>VirtualMachineReservation
+## <span id="VirtualMachineReservation"/><span id="virtualmachinereservation"/><span id="VIRTUALMACHINERESERVATION"/>VirtualMachineReservation
 
 > [!IMPORTANT]  
 > Deprecated in SDK v1.9

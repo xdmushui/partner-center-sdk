@@ -1,27 +1,27 @@
 ---
-title: Offer
+title: Offer resources
 description: Describes a product listed in the reseller catalog that they can offer to their customers.
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Offer
+# Offer resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes a product listed in the reseller catalog that they can offer
 to their customers.
 
 
 
-## <span id="Offer"></span><span id="offer"></span><span id="OFFER"></span>Offer
+## <span id="Offer"/><span id="offer"/><span id="OFFER"/>Offer
 
 
 | Property                    | Type                      | Description                                                                                                                                                                |
@@ -58,7 +58,7 @@ to their customers.
 
  
 
-## <span id="OfferCategory"></span><span id="offercategory"></span><span id="OFFERCATEGORY"></span>OfferCategory
+## <span id="OfferCategory"/><span id="offercategory"/><span id="OFFERCATEGORY"/>OfferCategory
 
 
 Describes the categorization of an offer. This includes the rank or
@@ -77,7 +77,7 @@ line.
 
  
 
-## <span id="OfferLinks"></span><span id="offerlinks"></span><span id="OFFERLINKS"></span>OfferLinks
+## <span id="OfferLinks"/><span id="offerlinks"/><span id="OFFERLINKS"/>OfferLinks
 
 
 Contains links for learning more information about the offer.
@@ -91,7 +91,7 @@ Contains links for learning more information about the offer.
 
 
 
-## <span id="OfferProduct"></span><span id="offerproduct"></span><span id="OFFERPRODUCT"></span>OfferProduct
+## <span id="OfferProduct"/><span id="offerproduct"/><span id="OFFERPRODUCT"/>OfferProduct
 
 
 A product or service created by Microsoft. In some cases, may be created

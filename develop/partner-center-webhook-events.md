@@ -9,21 +9,21 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Partner Center webhook events are resource change events delivered in the form of HTTP POSTs to a registered URL. To receive an event from Partner Center, you host a callback where Partner Center can POST the event. The event is digitally signed so you can validate that it was sent from Partner Center. 
 
 For information on how to receive events, authenticate a callback, and use the Partner Center webhook APIs to create, view, and update an event registration, see [Partner Center Webhooks](partner-center-webhooks.md).
 
 
-## <span id="supportedEvents"></span><span id="SUPPORTEDEVENTS"></span>Supported Events
+## <span id="supportedEvents"/><span id="SUPPORTEDEVENTS"/>Supported Events
 
 The following webhook events are supported by Partner Center.
 
-### <span id="testEvent"></span><span id="TESTEVENT"></span>Test Event
+### <span id="testEvent"/><span id="TESTEVENT"/>Test Event
 
 This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
 
@@ -55,7 +55,7 @@ This event allows you to self-onboard and test your registration by requesting a
 ```
 
 
-### <span id="subscriptionUpdatedEvent"></span><span id="SUBSCRIPTIONUPDATEDEVENT"></span>Subscription Updated Event
+### <span id="subscriptionUpdatedEvent"/><span id="SUBSCRIPTIONUPDATEDEVENT"/>Subscription Updated Event
 
 This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API. 
 
@@ -87,7 +87,7 @@ This event is raised when the specified subscription changes. A Subscription Upd
 ```
 
 
-### <span id="thresholdExceededEvent"></span><span id="THRESHOLDEXCEEDEDEVENT"></span>Threshold Exceeded Event
+### <span id="thresholdExceededEvent"/><span id="THRESHOLDEXCEEDEDEVENT"/>Threshold Exceeded Event
 
 This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 

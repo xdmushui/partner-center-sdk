@@ -10,20 +10,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Gets an **InvoiceSummaries** resource that contains an invoice summary for each currency type. An invoice summary shows the balance and total charges of both recurring and one-time charges.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A valid Invoice ID.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A valid Invoice ID.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To retrieve an [**InvoiceSummaries**](invoice.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
@@ -40,7 +40,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].Bal
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceSummaries.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -57,7 +57,7 @@ None.
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -74,7 +74,7 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, this method returns an [InvoiceSummaries](invoice.md#invoicesummaries) resource in the response body.
 

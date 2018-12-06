@@ -1,22 +1,22 @@
 ---
-title: Analytics
+title: Analytics resources
 description: The resources defined here contain data used to report on usage, deployment, and consumption.
 ms.assetid: 1FEB08D6-AD0C-4B01-B7A8-AE05C914912B
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Analytics
+# Analytics resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 The resources defined here contain data used to report on usage,
 deployment, and consumption.
 
-## <span id="PartnerLicensesDeploymentInsights"></span><span id="partnerlicensesdeploymentinsights"></span><span id="PARTNERLICENSESDEPLOYMENTINSIGHTS"></span>PartnerLicensesDeploymentInsights
+## <span id="PartnerLicensesDeploymentInsights"/><span id="partnerlicensesdeploymentinsights"/><span id="PARTNERLICENSESDEPLOYMENTINSIGHTS"/>PartnerLicensesDeploymentInsights
 
 
 Contains partner level insights about license deployment.
@@ -32,7 +32,7 @@ Contains partner level insights about license deployment.
 
  
 
-## <span id="PartnerLicensesUsageInsights"></span><span id="partnerlicensesusageinsights"></span><span id="PARTNERLICENSESUSAGEINSIGHTS"></span>PartnerLicensesUsageInsights
+## <span id="PartnerLicensesUsageInsights"/><span id="partnerlicensesusageinsights"/><span id="PARTNERLICENSESUSAGEINSIGHTS"/>PartnerLicensesUsageInsights
 
 
 Contains partner level insights about license usage.
@@ -48,7 +48,7 @@ Contains partner level insights about license usage.
 
  
 
-## <span id="CustomerLicensesDeploymentInsights"></span><span id="customerlicensesdeploymentinsights"></span><span id="CUSTOMERLICENSESDEPLOYMENTINSIGHTS"></span>CustomerLicensesDeploymentInsights
+## <span id="CustomerLicensesDeploymentInsights"/><span id="customerlicensesdeploymentinsights"/><span id="CUSTOMERLICENSESDEPLOYMENTINSIGHTS"/>CustomerLicensesDeploymentInsights
 
 
 Contains customer level insights about license deployment.
@@ -69,7 +69,7 @@ Contains customer level insights about license deployment.
 
  
 
-## <span id="CustomerLicensesUsageInsights"></span><span id="customerlicensesusageinsights"></span><span id="CUSTOMERLICENSESUSAGEINSIGHTS"></span>CustomerLicensesUsageInsights
+## <span id="CustomerLicensesUsageInsights"/><span id="customerlicensesusageinsights"/><span id="CUSTOMERLICENSESUSAGEINSIGHTS"/>CustomerLicensesUsageInsights
 
 
 Contains customer level insights about license usage.

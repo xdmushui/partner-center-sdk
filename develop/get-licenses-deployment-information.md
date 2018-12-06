@@ -9,17 +9,17 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to get deployment information for Office and Dynamics licenses.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 **Request syntax**
 
@@ -30,7 +30,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
  
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.  
+- See [Partner Center REST headers](headers.md) for more information.  
 
 **URI parameters**
 
@@ -56,7 +56,7 @@ Host: api.partnercenter.microsoft.com
 ```
 
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, the response body contains the following fields containing data about the licenses deployed.
 

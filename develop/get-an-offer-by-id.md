@@ -10,19 +10,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Gets an **Offer** resource that matches the offer ID.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   An offer ID.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- An offer ID.
 
-## <span id="Examples"></span><span id="examples"><span id="EXAMPLES"></span>Examples
+## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
 
@@ -63,7 +63,7 @@ To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://githu
 Get-PartnerOffer -Country $countryCode -OfferId $offerId
 ```
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 **Request syntax**
 
@@ -80,8 +80,8 @@ Get-PartnerOffer -Country $countryCode -OfferId $offerId
 
 **Request headers**
 
--   A **locale-id** formatted as a string is required.
--   See [Headers](headers.md) for more information.
+- A **locale-id** formatted as a string is required.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -99,7 +99,7 @@ X-Locale: <locale-id>
 Connection: Keep-Alive
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, this method returns an **Offer** resource in the response body.
 
