@@ -14,8 +14,8 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Developers must register details about their application with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
 
@@ -26,7 +26,7 @@ Developers must register details about their application with Azure AD through t
 
 Be aware of the following additional requirements when you create an app for Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government.
 
-## <span id="Web_apps"></span><span id="web_apps"></span><span id="WEB_APPS"></span>Web apps
+## <span id="Web_apps"/><span id="web_apps"/><span id="WEB_APPS"/>Web apps
 
 
 For web applications, use the following procedure to register your app ID.
@@ -57,8 +57,8 @@ For web applications, use the following procedure to register your app ID.
 
 You should have the following details from the web app configuration:
 
--   Application ID
--   Application secret
+- Application ID
+- Application secret
 
 **Register the Web app in Partner center**
 
@@ -68,7 +68,7 @@ You should have the following details from the web app configuration:
 4.  Select the web application you created in Azure management portal
 5.  Click on **register your app**
 
-## <span id="Native_applications_"></span><span id="native_applications_"></span><span id="NATIVE_APPLICATIONS_"></span>Native applications
+## <span id="Native_applications_"/><span id="native_applications_"/><span id="NATIVE_APPLICATIONS_"/>Native applications
 
 
 Native applications do not need to be registered to partner center. But these applications need to be configured to provide access to Partner center APIs.
@@ -88,10 +88,10 @@ Native applications do not need to be registered to partner center. But these ap
 1.  Click on your application. Go to **Settings**
 2.  In API Access, click **Required permissions**
 3.  Click on **Windows Azure Active Directory permissions**. In **Delegated permissions**, select these permissions:
-    -   Sign in and read user profile
-    -   Read directory data
-    -   Access the directory as the signed-in user
-    -   Read all groups
+    - Sign in and read user profile
+    - Read directory data
+    - Access the directory as the signed-in user
+    - Read all groups
 4.  Save the permissions
 5.  Click on **Add** in **Required permissions**
 6.  Click on **Select an API**

@@ -11,35 +11,35 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Partner Center REST APIs return a JSON object that contains a status
 code that indicates whether your request was successful or why it
 failed.
 
--   Success responses: A 2xx status code indicates that the client's
+- Success responses: A 2xx status code indicates that the client's
     request was successfully received, understood, and accepted.
--   [Error responses](#pc_error_payload)
--   Error codes
-    -   400: Bad request
-    -   401: Unauthorized
-    -   403: Forbidden
-    -   404: Not found
-    -   405: Method not allowed
-    -   406: Not acceptable
-    -   409: Conflict, error code
-    -   412: Precondition failed
-    -   429: Too many requests
-    -   500: Internal server error
-    -   501: Not implemented
-    -   502: Bad gateway
-    -   503: Service unavailable
-    -   504: Gateway timeout
+- [Error responses](#pc_error_payload)
+- Error codes
+    - 400: Bad request
+    - 401: Unauthorized
+    - 403: Forbidden
+    - 404: Not found
+    - 405: Method not allowed
+    - 406: Not acceptable
+    - 409: Conflict, error code
+    - 412: Precondition failed
+    - 429: Too many requests
+    - 500: Internal server error
+    - 501: Not implemented
+    - 502: Bad gateway
+    - 503: Service unavailable
+    - 504: Gateway timeout
 
-## <span id="pc_error_payload"></span><span id="PC_ERROR_PAYLOAD"></span>Error responses
+## <span id="pc_error_payload"/><span id="PC_ERROR_PAYLOAD"/>Error responses
 
 
 Any response with a status code indicating an error (4xx or 5xx)

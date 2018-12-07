@@ -20,7 +20,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage bgdAccent1">
-                                <img alt="" src="https://docs.microsoft.com/media/illustrations/sql-database-develop.svg" data-linktype="external">
+                                <img alt="Get the .NET SDK" src="https://docs.microsoft.com/media/illustrations/sql-database-develop.svg" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText">
@@ -33,13 +33,13 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
         </a>
     </li>
     <li>
-        <a href="https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.0/jar">
+        <a href="https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage bgdAccent1">
-                                <img alt="" src="https://docs.microsoft.com/visualstudio/images/vs_web-1.svg" data-linktype="external">
+                                <img alt="Get the Java SDK" src="https://docs.microsoft.com/visualstudio/images/vs_web-1.svg" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText">
@@ -58,7 +58,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage bgdAccent1">
-                                <img alt="" hieght="50%" width="50%" src="https://docs.microsoft.com/visualstudio/images/vs_features-4.svg" data-linktype="external">
+                                <img alt="Get the PowerShell module" hieght="50%" width="50%" src="https://docs.microsoft.com/visualstudio/images/vs_features-4.svg" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText">
@@ -80,7 +80,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage bgdAccent1">
-                                <img alt="" src="https://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" data-linktype="external">
+                                <img alt="Download samples" src="https://docs.microsoft.com/media/illustrations/sql-get-started-download.svg" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText">
@@ -99,7 +99,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage bgdAccent1">
-                                <img alt="" src="https://docs.microsoft.com/visualstudio/images/vs_web-5.svg" data-linktype="external">
+                                <img alt="Get access" src="https://docs.microsoft.com/visualstudio/images/vs_web-5.svg" data-linktype="external">
                             </div>
                         </div>
                         <div class="cardText">
@@ -220,7 +220,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utilityauditing-resources.md#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
                     </div>
                 </div>
             </div>

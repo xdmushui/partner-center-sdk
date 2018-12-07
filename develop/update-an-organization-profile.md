@@ -1,6 +1,6 @@
 ---
 title: Update an organization profile
-description: Updates a partner's billing profile.
+description: Updates an organization's billing profile.
 ms.assetid: 8EC7E1A8-883A-4BF2-BAD7-36A0E043FCA3
 ms.date: 12/15/2017
 ms.localizationpriority: medium
@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Updates a partner's billing profile.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To update your organization profile, retrieve the profile and make any necessary changes. Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the **Update()** method.
@@ -41,7 +41,7 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -54,7 +54,7 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 
 **Request headers**
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -104,7 +104,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, this method returns an **OrganizationProfile** object in the response body.

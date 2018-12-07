@@ -1,22 +1,22 @@
 ---
-title: Products
+title: Products resources
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.  
 ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
 ms.date: 07/27/2018
 ms.localizationpriority: medium
 ---
 
-# Products
+# Products resources
 
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.   
 
 
-## <span id="Product"></span><span id="product"></span><span id="PRODUCT"></span>Product
+## <span id="Product"/><span id="product"/><span id="PRODUCT"/>Product
 
 
 Represents a purchasable good or service. A product by itself is not a purchasable item.
@@ -31,7 +31,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 
 
 
-## <span id="ItemType"></span><span id="itemtype"></span><span id="ITEMTYPE"></span>ItemType
+## <span id="ItemType"/><span id="itemtype"/><span id="ITEMTYPE"/>ItemType
 
 
 Represents the type of a product.
@@ -44,7 +44,7 @@ Represents the type of a product.
 
  
 
-## <span id="ProductLinks"></span><span id="productlinks"></span><span id="PRODUCTLINKS"></span>ProductLinks
+## <span id="ProductLinks"/><span id="productlinks"/><span id="PRODUCTLINKS"/>ProductLinks
 
 
 Contains a list of links for a [Product](#product).
@@ -56,7 +56,7 @@ Contains a list of links for a [Product](#product).
 
 
 
-## <span id="Sku"></span><span id="sku"></span><span id="SKU"></span>Sku
+## <span id="Sku"/><span id="sku"/><span id="SKU"/>Sku
 
 
 Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product. 
@@ -73,13 +73,13 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | supportedBillingCycles | array of strings | The list of supported billing cycles for this SKU. Supported values are the member names found in [BillingCycleType](#billingcycletype). |
 | purchasePrerequisites  | array of strings | The list of prerequisite steps or actions that are needed prior to purchasing this item. The supported values are:<br/>  "InventoryCheck" – Indicates that the item's inventory should be evaluated before attempting to purchase this item.<br/> "AzureSubscriptionRegistration" – Indicates that an Azure subscription is needed and must be registered before attempting to purchase this item.  |
 | inventoryVariables     | array of strings | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> "CustomerId" – The ID of the customer that the purchase would be for.<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.</br> "ArmRegionName" – The region for which to verify inventory. This value must match the "ArmRegionName" from the SKU’s DynamicAttributes. |
-| provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
+| provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
 
 
-## <span id="Availability"></span><span id="availability"></span><span id="AVAILABILITY"></span>Availability
+## <span id="Availability"/><span id="availability"/><span id="AVAILABILITY"/>Availability
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
 
@@ -88,7 +88,7 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | id              | string                        | The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
 | productId       | string                        | The ID of the [product](#product) that contains this availability.           |
 | skuId           | string                        | The ID of the [SKU](#sku) that contains this availability.                   |
-| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](orders.md#orderlineitem) or [CartLineItem.CatalogItemId](cart.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
+| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
 | defaultCurrency | string                        | The default currency supported for this availability.                               |
 | segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
 | country         | string                        | The country or region (in ISO country code format) where this availability applies. |
@@ -96,7 +96,7 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 
 
 
-## <span id="InventoryCheckRequest"></span><span id="inventorycheckrequest"></span><span id="INVENTORYCHECKREQUEST"></span>InventoryCheckRequest
+## <span id="InventoryCheckRequest"/><span id="inventorycheckrequest"/><span id="INVENTORYCHECKREQUEST"/>InventoryCheckRequest
 
 Represents a request to check inventory against certain catalog items. 
 
@@ -108,7 +108,7 @@ Represents a request to check inventory against certain catalog items.
 
 
 
-## <span id="InventoryItem"></span><span id="inventoryitem"></span><span id="INVENTORYITEM"></span>InventoryItem
+## <span id="InventoryItem"/><span id="inventoryitem"/><span id="INVENTORYITEM"/>InventoryItem
 
 Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
 
@@ -121,7 +121,7 @@ Represents a single item in an inventory check operation. This resource is used 
 
 
 
-## <span id="InventoryRestriction"></span><span id="inventoryrestriction"></span><span id="INVENTORYRESTRICTION"></span>InventoryRestriction
+## <span id="InventoryRestriction"/><span id="inventoryrestriction"/><span id="INVENTORYRESTRICTION"/>InventoryRestriction
 
 Represents the details of an inventory restriction. This is only applicable for inventory check output results, not for input requests.
 
@@ -133,7 +133,7 @@ Represents the details of an inventory restriction. This is only applicable for 
 
 
 
-## <span id="billingCycleType"></span><span id="billingcycletype"></span><span id="BILLINGCYCLETYPE"></span>BillingCycleType
+## <span id="billingCycleType"/><span id="billingcycletype"/><span id="BILLINGCYCLETYPE"/>BillingCycleType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of billing cycle.
 

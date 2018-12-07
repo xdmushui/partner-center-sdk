@@ -1,24 +1,24 @@
 ---
-title: CountryInformation
+title: Country information resources
 description: Descriptive metadata for a country/region.
 ms.assetid: 19460437-5611-49A1-A7E7-704420C1DE8F
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# CountryInformation
+# Country information resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Descriptive metadata for a country/region.
 
-## <span id="Properties"></span><span id="properties"></span><span id="PROPERTIES"></span>Properties
+## <span id="CountryInformation"/><span id="countryinformation"/><span id="COUNTRYINFORMATION"/>CountryInformation
 
 
 | Property                      | Type               | Description                                                                                        |
@@ -48,7 +48,7 @@ Descriptive metadata for a country/region.
 
  
 
-## <span id="CountryValidationRules"></span><span id="countryvalidationrules"></span><span id="COUNTRYVALIDATIONRULES"></span>CountryValidationRules
+## <span id="CountryValidationRules"/><span id="countryvalidationrules"/><span id="COUNTRYVALIDATIONRULES"/>CountryValidationRules
 
 
 Describes the address formatting rules for a country/region.

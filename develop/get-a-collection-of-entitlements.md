@@ -11,20 +11,20 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to get a collection of entitlements.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
--   A customer identifier.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- A customer identifier.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
-To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
+To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement-resources.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -34,7 +34,7 @@ string customerId;
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -57,7 +57,7 @@ Use the following path and query parameters when creating the request.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -76,10 +76,10 @@ MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="REST_Response"></span><span id="rest_response"></span><span id="REST_RESPONSE"></span>REST Response
+## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, the response body contains a collection of [Entitlement](entitlement.md#entitlement) resources.
+If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
 **Response success and error codes**
 
@@ -172,11 +172,11 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 ```
 
 
-## <span id="AdditionalExamples"></span><span id="additionalexamples"></span>Additional Examples   
+## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples   
 
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
-### <span id="VirtualMachineReservationExample_SDK_1.8"></span><span id="virtualmachinereservationexample_sdk_1.8"></span><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"></span>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
+### <span id="VirtualMachineReservationExample_SDK_1.8"/><span id="virtualmachinereservationexample_sdk_1.8"/><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"/>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
 
 **C# example**   
 
@@ -230,7 +230,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 }
 ```
 
-### <span id="ReservationExample_SDK_1.9"></span><span id="reservationexample_sdk_1.9"></span><span id="RESERVATIONEXAMPLE_SDK_1.9"></span>Retrieve reservation details from an entitlement by using SDK V1.9  
+### <span id="ReservationExample_SDK_1.9"/><span id="reservationexample_sdk_1.9"/><span id="RESERVATIONEXAMPLE_SDK_1.9"/>Retrieve reservation details from an entitlement by using SDK V1.9  
 
 **C# example**  
 

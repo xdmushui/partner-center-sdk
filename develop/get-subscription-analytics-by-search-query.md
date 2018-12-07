@@ -9,21 +9,21 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 
 How to get subscription analytics information for your customers filtered by a search query.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>REST Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
 **Request syntax**
@@ -48,9 +48,9 @@ Use the following required path parameter to identify your organization and filt
 The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
 
 An unencoded example looks like this:
--   String: ?filter=Field operator ‘Value’
--   Boolean: ?filter=Field operator Value
--   Contains ?filter=contains(field,’value’)
+- String: ?filter=Field operator ‘Value’
+- Boolean: ?filter=Field operator Value
+- Contains ?filter=contains(field,’value’)
 
 
 **Filter fields**
@@ -94,7 +94,7 @@ The following table shows a list of the supported fields and support operators f
 
 **Request headers** 
 
--   See [Headers](headers.md) for more information.
+- See [Headers](headers.md) for more information.
 
 **Request body**
 
@@ -112,7 +112,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>REST Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
@@ -155,6 +155,6 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 }
 ```
 
-## <span id="See_Also"></span><span id="see_also"></span><span id="SEE_ALSO"></span>See also
+## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
 
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

@@ -1,20 +1,20 @@
 ---
-title: Utility Resources
+title: Utility resources
 description: The Partner Center REST API contains many resources which describe general-purpose data models used throughout the SDK.
 ms.assetid: C77219B9-FFDD-4779-AE15-5B15BA7BA863
 ms.date: 11/08/2018
 ms.localizationpriority: medium
 ---
 
-# Utility Resources
+# Utility resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The Partner Center REST API contains many resources which describe
 general-purpose data models used throughout the SDK.

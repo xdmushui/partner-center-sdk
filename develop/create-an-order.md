@@ -11,31 +11,31 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud for US Government
 
 **Creating an Order for Azure Reserved VM Instance products applies only to**
 
--   Partner Center
+- Partner Center
 
-How to create an order for a customer. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
+How to create an order for a customer. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learningauditing-resources.md).
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
-
-
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
--   A customer identifier.
--   An offer identifier.
-
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
-To create an order for a customer, first instantiate an [**Order**](orders.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](orders.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A customer identifier.
+- An offer identifier.
+
+## <span id="C_"/><span id="c_"/>C#
+
+
+To create an order for a customer, first instantiate an [**Order**](order-resources.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](order-resources.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
 
 Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
-Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](orders.md) object.
+Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -67,7 +67,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateOrder.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -90,37 +90,37 @@ Use the following path parameter to identify the customer.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
-This table describes the [Order](orders.md) properties in the request body.
+This table describes the [Order](order-resources.md) properties in the request body.
 
-## <span id="Order"></span><span id="order"></span><span id="ORDER"></span>Order
+## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
 
 
 | Property             | Type                        | Required                        | Description                                                                   |
 |----------------------|-----------------------------|---------------------------------|-------------------------------------------------------------------------------|
 | id                   | string                      | No                              | An order identifier that is supplied upon successful creation of the order.   |
 | referenceCustomerId  | string                      | No                              | The customer identifier. |
-| billingCycle         | string                      | No                              | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
-| lineItems            | array of [OrderLineItem](orders.md#orderlineitem) resources | Yes      | An itemized list of the offers the customer is purchasing including the quantity.        |
+| billingCycle         | string                      | No                              | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](product-resources.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| lineItems            | array of [OrderLineItem](order-resources.md#orderlineitem) resources | Yes      | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode         | string                      | No                              | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate         | datetime                    | No                              | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
-| status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](orders.md#orderstatus).        |
+| status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](order-resources.md#orderstatus).        |
 | links                | [OrderLinks](utility-resources.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. | 
 
 
 
-This table describes the [OrderLineItem](orders.md#orderlineitem) properties in the request body.
+This table describes the [OrderLineItem](order-resources.md#orderlineitem) properties in the request body.
 
 >[!NOTE]
 >The partnerIdOnRecord should only be provided when an indirect provider places an order on behalf of an indirect reseller. It's used to store the Microsoft Partner Network ID of the indirect reseller only (never the ID of the indirect provider).
 
  
 
-## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 
 | Name                 | Type   | Required | Description                                                                                                                                                                                                                                |
@@ -133,7 +133,7 @@ This table describes the [OrderLineItem](orders.md#orderlineitem) properties in 
 | quantity             | int    | Yes      | The number of licenses for a license-based subscription.                                                                                                                                                                                   |
 | partnerIdOnRecord    | string | No       | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
-| links                | [OrderLineItemLinks](orders.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
+| links                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
  
 
@@ -165,10 +165,10 @@ Content-Type: application/json
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the method returns an [Order](orders.md) resource in the response body.
+If successful, the method returns an [Order](order-resources.md) resource in the response body.
 
 **Response success and error codes**
 

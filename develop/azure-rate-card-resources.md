@@ -1,19 +1,19 @@
 ---
-title: Azure Rate Card
+title: Azure rate card resources
 description: The Azure Rate Card provides real-time prices for Azure offers.
 ms.assetid: A42B4FFA-278E-41FF-B51E-E48C2CA70EEF
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Azure Rate Card
+# Azure rate card resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The Azure Rate Card provides real-time prices for Azure offers. Azure
 pricing is quite dynamic and changes frequently. Microsoft publishes
@@ -32,7 +32,7 @@ Partner Center and your browser language, but those are customizable.
 This is especially relevant if you manage sales in multiple markets from
 a single, centralized office.
 
-## <span id="AzureRateCard"></span><span id="azureratecard"></span><span id="AZURERATECARD"></span>AzureRateCard
+## <span id="AzureRateCard"/><span id="azureratecard"/><span id="AZURERATECARD"/>AzureRateCard
 
 
 Describes the properties of an Azure Rate Card resource.
@@ -48,7 +48,7 @@ Describes the properties of an Azure Rate Card resource.
 
  
 
-## <span id="AzureMeter"></span><span id="azuremeter"></span><span id="AZUREMETER"></span>AzureMeter
+## <span id="AzureMeter"/><span id="azuremeter"/><span id="AZUREMETER"/>AzureMeter
 
 
 | Property         | Type             | Description                                                                                   |
@@ -66,7 +66,7 @@ Describes the properties of an Azure Rate Card resource.
 
  
 
-## <span id="AzureOfferTerm"></span><span id="azureofferterm"></span><span id="AZUREOFFERTERM"></span>AzureOfferTerm
+## <span id="AzureOfferTerm"/><span id="azureofferterm"/><span id="AZUREOFFERTERM"/>AzureOfferTerm
 
 
 | Property         | Type             | Description                             |
@@ -78,10 +78,10 @@ Describes the properties of an Azure Rate Card resource.
 
  
 
-## <span id="Operations_on_the_AzureRateCard_resource"></span><span id="operations_on_the_azureratecard_resource"></span><span id="OPERATIONS_ON_THE_AZURERATECARD_RESOURCE"></span>Operations on the AzureRateCard resource
+## <span id="Operations_on_the_AzureRateCard_resource"/><span id="operations_on_the_azureratecard_resource"/><span id="OPERATIONS_ON_THE_AZURERATECARD_RESOURCE"/>Operations on the AzureRateCard resource
 
 
--   [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
+- [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 
  
 

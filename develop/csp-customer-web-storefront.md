@@ -14,11 +14,11 @@ ms.localizationpriority: medium
 
 This site shows a working online store that your customers could use to buy subscriptions to Microsoft products. To make it work for you, configure the offers, add branding, and add a payment method.
 
-## <span id="Get_the_code"></span><span id="get_the_code"></span><span id="GET_THE_CODE"></span>Get the code
+## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
 
 [Download the sample code](https://github.com/Microsoft/Partner-Center-Storefront)
 
-## <span id="What_to_change"></span><span id="what_to_change"></span><span id="WHAT_TO_CHANGE"></span>What to change
+## <span id="What_to_change"/><span id="what_to_change"/><span id="WHAT_TO_CHANGE"/>What to change
 
 **Authentication** Before you build the application, update the values in the Web.config file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production (TiP).
 

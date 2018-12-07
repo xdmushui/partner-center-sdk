@@ -1,20 +1,20 @@
 ---
-title: Order
+title: Order resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
 ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Order
+# Order resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
@@ -22,7 +22,7 @@ A partner places an order when a customer wants to buy a subscription from a lis
 >The Order resource has a rate limit of 500 requests per minute per tenant identifier.
 
 
-## <span id="order"></span><span id="ORDER"></span>Order
+## <span id="order"/><span id="ORDER"/>Order
 
 
 Describes a partner's order.
@@ -31,7 +31,7 @@ Describes a partner's order.
 |--------------------|----------------------------------------------------|-------------------------------------------------------------|
 | id                 | string                                             | An order identifier that is supplied upon successful creation of the order.                                   |
 |referenceCustomerId | string                                             | The customer identifier. |
-| billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](product-resources.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
 | lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
@@ -41,7 +41,7 @@ Describes a partner's order.
 
 
 
-## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 
 An order contains an itemized list of offers, and each item is represented as an OrderLineItem.
@@ -60,7 +60,7 @@ An order contains an itemized list of offers, and each item is represented as an
 
  
 
-## <span id="orderLinks"></span><span id="orderlinks"></span><span id="ORDERLINKS"></span>OrderLinks
+## <span id="orderLinks"/><span id="orderlinks"/><span id="ORDERLINKS"/>OrderLinks
 
 
 Represents the resource links corresponding to the order.
@@ -72,7 +72,7 @@ Represents the resource links corresponding to the order.
 
 
 
-## <span id="orderLineItemLinks"></span><span id="orderlineitemlinks"></span><span id="ORDERLINEITEMLINKS"></span>OrderLineItemLinks
+## <span id="orderLineItemLinks"/><span id="orderlineitemlinks"/><span id="ORDERLINEITEMLINKS"/>OrderLineItemLinks
 
 
 Represents the full subscription associated with the order.
@@ -86,7 +86,7 @@ Represents the full subscription associated with the order.
  
 
  
-## <span id="orderStatus"></span><span id="orderstatus"></span><span id="ORDERSTATUS"></span>OrderStatus
+## <span id="orderStatus"/><span id="orderstatus"/><span id="ORDERSTATUS"/>OrderStatus
 
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the state of the order.
@@ -101,7 +101,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 
 
-## <span id="orderLineItemProvisioningStatus"></span><span id="orderlineitemprovisioningstatus"></span><span id="ORDERLINEITEMPROVISIONINGSTATUS"></span>OrderLineItemProvisioningStatus 
+## <span id="orderLineItemProvisioningStatus"/><span id="orderlineitemprovisioningstatus"/><span id="ORDERLINEITEMPROVISIONINGSTATUS"/>OrderLineItemProvisioningStatus 
 
 
 Represents the provisioning status of an [OrderLineItem](#orderlineitem).
@@ -113,7 +113,7 @@ Represents the provisioning status of an [OrderLineItem](#orderlineitem).
 | quantityProvisioningInformation | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)> | A list of quantity provisioning status information for the order line item. |
   
   
-## <span id="quantityProvisioningStatus"></span><span id="quantityprovisioningstatus"></span><span id="QUANTITYPROVISIONINGSTATUS"></span>QuantityProvisioningStatus 
+## <span id="quantityProvisioningStatus"/><span id="quantityprovisioningstatus"/><span id="QUANTITYPROVISIONINGSTATUS"/>QuantityProvisioningStatus 
 
 
 Represents the provisioning status by quantity.

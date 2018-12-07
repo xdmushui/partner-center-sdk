@@ -10,28 +10,28 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center   
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government   
+- Partner Center   
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government   
 
 
 The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner’s registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center. 
 
 Partners can select from Webhook events, like the following, that are supported by Partner Center.  
 
--   **Test Event ("test-created")**
+- **Test Event ("test-created")**
 
     This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
 
--   **Subscription Updated Event ("subscription-updated")**
+- **Subscription Updated Event ("subscription-updated")**
 
     This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API. 
     
     >[!NOTE]
     >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered. 
 
--   **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
+- **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
     This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://msdn.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
 
@@ -39,14 +39,14 @@ Future Webhook events will be added for resources that change in the system that
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.   
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.   
 
 
 
-## <span id="receivingEvents"></span><span id="RECEIVINGEVENTS"></span>Receiving events from Partner Center
+## <span id="receivingEvents"/><span id="RECEIVINGEVENTS"/>Receiving events from Partner Center
 
 To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery. 
 
@@ -74,7 +74,7 @@ Content-Length: 195
 >[!NOTE] 
 >The Authorization header has a scheme of "Signature". This is a base64 encoded signature of the content.
 
-## <span id="AuthenticateCallback"></span><span id="authenticatecallback"></span><span id="AUTHENTICATECALLBACK"></span>How to authenticate the callback
+## <span id="AuthenticateCallback"/><span id="authenticatecallback"/><span id="AUTHENTICATECALLBACK"/>How to authenticate the callback
 
 
 To authenticate the callback event received from Partner Center, do the following:
@@ -91,7 +91,7 @@ To authenticate the callback event received from Partner Center, do the followin
 > [!NOTE]
 > By default, the signature token will be sent in an Authorization header. If you set **SignatureTokenToMsSignatureHeader** to true in your registration, the signature token will be sent in the x-ms-signature header instead.
 
-## <span id="EventModel"></span><span id="eventmodel"></span><span id="EVENTMODEL"></span>Event model
+## <span id="EventModel"/><span id="eventmodel"/><span id="EVENTMODEL"/>Event model
 
 
 The following table describes the properties of a Partner Center event.
@@ -122,7 +122,7 @@ The following sample shows the structure of a Partner Center event.
 ```
 
 
-## <span id="WebhookAPI"></span><span id="webhookapi"></span><span id="WEBHOOKAPI"></span>Webhook APIs   
+## <span id="WebhookAPI"/><span id="webhookapi"/><span id="WEBHOOKAPI"/>Webhook APIs   
 
 
 **Authentication**   
@@ -131,7 +131,7 @@ All calls to the Webhook APIs are authenticated using the Bearer token in the Au
 
 
  
-### <span id="GetEvents"></span><span id="getevents"></span><span id="GETEVENTS"></span>Get a list of events
+### <span id="GetEvents"/><span id="getevents"/><span id="GETEVENTS"/>Get a list of events
 
 Returns a list of the events that are currently supported by the Webhook APIs.
 
@@ -166,7 +166,7 @@ X-Locale: en-US
 
 
 
-### <span id="Registration"></span><span id="registration"></span><span id="REGISTRATION"></span>Register to receive events      
+### <span id="Registration"/><span id="registration"/><span id="REGISTRATION"/>Register to receive events      
 
 Registers a tenant to receive the specified events.
 
@@ -212,7 +212,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 
 
-### <span id="ViewRegistration"></span><span id="viewregistration"></span><span id="VIEWREGISTRATION"></span>View a registration        
+### <span id="ViewRegistration"/><span id="viewregistration"/><span id="VIEWREGISTRATION"/>View a registration        
 
 Returns the Webhooks event registration for a tenant.
 
@@ -252,7 +252,7 @@ X-Locale: en-US
 
 
 
-### <span id="UpdateEventRegistration"></span><span id="updateeventregistration"></span><span id="UPDATEEVENTREGISTRATION"></span>Update an event registration      
+### <span id="UpdateEventRegistration"/><span id="updateeventregistration"/><span id="UPDATEEVENTREGISTRATION"/>Update an event registration      
 
 Updates an existing event registration. 
 
@@ -297,7 +297,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 ```
 
 
-### <span id="ValidationEvents"></span><span id="validationevents"></span><span id="VALIDATIONEVENTS"></span>Send a test event to validate your registration   
+### <span id="ValidationEvents"/><span id="validationevents"/><span id="VALIDATIONEVENTS"/>Send a test event to validate your registration   
 
 Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event. 
 
@@ -337,7 +337,7 @@ X-Locale: en-US
 
 
 
-### <span id="GetValidation"></span><span id="getvalidation"></span><span id="GETVALIDATION"></span>Verify that the event was delivered   
+### <span id="GetValidation"/><span id="getvalidation"/><span id="GETVALIDATION"/>Verify that the event was delivered   
 
 Returns the current state of the validation event. This can be helpful for trouble shooting event delivery issues. The Response contains a result for each attempt that is made to deliver the event.
 
@@ -383,7 +383,7 @@ X-Locale: en-US
 ```
 
 
-## <span id="SignatureValidationExample"></span><span id="signaturevalidationexample"></span><span id="SIGNATUREVALIDATIONEXAMPLE"></span>Example for Signature Validation
+## <span id="SignatureValidationExample"/><span id="signaturevalidationexample"/><span id="SIGNATUREVALIDATIONEXAMPLE"/>Example for Signature Validation
 
 
 **Sample Callback Controller signature (ASP.NET)**     

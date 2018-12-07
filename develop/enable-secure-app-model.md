@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 
 ## <span id="overview"/><span id="Overview"/><span id="OVERVIEW"/>Overview

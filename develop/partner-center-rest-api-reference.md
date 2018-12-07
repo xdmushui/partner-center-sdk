@@ -11,10 +11,10 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 The Partner Center REST API helps Cloud Solution Provider partners
 integrate their existing CRM or billing software with the Microsoft
@@ -28,7 +28,7 @@ started](get-started.md) section for information about setting up your
 test and production accounts, getting authentication working, and
 finding the sample code.
 
-## <span id="In_this_section"></span><span id="in_this_section"></span><span id="IN_THIS_SECTION"></span>In this section
+## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 
 |                                                                    |                                                                                                                                                                                                                  |

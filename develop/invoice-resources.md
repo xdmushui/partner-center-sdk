@@ -1,24 +1,24 @@
 ---
-title: Invoice
+title: Invoice resources
 description: Describes invoice related resources.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Invoice
+# Invoice resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes invoice related resources.
 
-## <span id="Invoice"></span><span id="invoice"></span><span id="INVOICE"></span>Invoice
+## <span id="Invoice"/><span id="invoice"/><span id="INVOICE"/>Invoice
 
 
 | Property        | Type                                                           | Description                                                                                                                                                                                          |
@@ -40,7 +40,7 @@ Describes invoice related resources.
 
  
 
-## <span id="InvoiceDetail"></span><span id="invoicedetail"></span><span id="INVOICEDETAIL"></span>InvoiceDetail
+## <span id="InvoiceDetail"/><span id="invoicedetail"/><span id="INVOICEDETAIL"/>InvoiceDetail
 
 
 An invoice contains a collection of billed items, and each item is
@@ -55,7 +55,7 @@ represented by an InvoiceDetail resource.
 
  
 
-## <span id="InvoiceLineItem"></span><span id="invoicelineitem"></span><span id="INVOICELINEITEM"></span>InvoiceLineItem
+## <span id="InvoiceLineItem"/><span id="invoicelineitem"/><span id="INVOICELINEITEM"/>InvoiceLineItem
 
 
 Each individual charge within an invoice is represented as an
@@ -69,7 +69,7 @@ InvoiceLineItem.
 
  
 
-## <span id="InvoiceSummary"></span><span id="invoicesummary"></span><span id="INVOICESUMMARY"></span>InvoiceSummary
+## <span id="InvoiceSummary"/><span id="invoicesummary"/><span id="INVOICESUMMARY"/>InvoiceSummary
 
 
 Describes a summary of the balance and total charges of an invoice.
@@ -90,7 +90,7 @@ Describes a summary of the balance and total charges of an invoice.
 
  
 
-## <span id="InvoiceSummaryDetail"></span><span id="invoicesummarydetail"></span><span id="INVOICESUMMARYDETAIL"></span>InvoiceSummaryDetail
+## <span id="InvoiceSummaryDetail"/><span id="invoicesummarydetail"/><span id="INVOICESUMMARYDETAIL"/>InvoiceSummaryDetail
 
 
 Represent a summary of the individual details for an invoice type (for example, recurring, one\_time). 
@@ -102,7 +102,7 @@ Represent a summary of the individual details for an invoice type (for example, 
  
 
  
-## <span id="InvoiceSummaries"></span><span id="invoicesummaries"></span><span id="INVOICESUMMARIES"></span>InvoiceSummaries
+## <span id="InvoiceSummaries"/><span id="invoicesummaries"/><span id="INVOICESUMMARIES"/>InvoiceSummaries
 
 
 Represent a collection of type [InvoiceSummary](#invoicesummary) that contain the individual details for an invoice type per currency.  
@@ -113,7 +113,7 @@ Represent a collection of type [InvoiceSummary](#invoicesummary) that contain th
 
 
 
-## <span id="LicenseBasedLineItem"></span><span id="licensebasedlineitem"></span><span id="LICENSEBASEDLINEITEM"></span>LicenseBasedLineItem
+## <span id="LicenseBasedLineItem"/><span id="licensebasedlineitem"/><span id="LICENSEBASEDLINEITEM"/>LicenseBasedLineItem
 
 
 Represents an invoice billing line item for licensed based subscriptions.
@@ -154,7 +154,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 
 
 
-## <span id="UsageBasedLineItem"></span><span id="usagebasedlineitem"></span><span id="USAGEBASEDLINEITEM"></span>UsageBasedLineItem
+## <span id="UsageBasedLineItem"/><span id="usagebasedlineitem"/><span id="USAGEBASEDLINEITEM"/>UsageBasedLineItem
 
 
 Represents an invoice billing line item for usage based subscriptions.
@@ -204,7 +204,7 @@ Represents an invoice billing line item for usage based subscriptions.
 
 
 
-## <span id="InvoiceStatement"></span><span id="invoicestatement"></span><span id="INVOICESTATEMENT"></span>InvoiceStatement
+## <span id="InvoiceStatement"/><span id="invoicestatement"/><span id="INVOICESTATEMENT"/>InvoiceStatement
 
 
 Represents the operations available on an invoice statement in application/pdf.

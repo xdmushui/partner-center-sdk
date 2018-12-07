@@ -1,25 +1,25 @@
 ---
-title: Subscription Usage
+title: Subscription usage resources
 description: Describes usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Subscription Usage
+# Subscription usage resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes usage information for a specific subscription with usage-based
 billing. These subscriptions have daily and monthly usage records, along
 with a usage summary for each pay period.
 
-## <span id="SubscriptionDailyUsageRecord"></span><span id="subscriptiondailyusagerecord"></span><span id="SUBSCRIPTIONDAILYUSAGERECORD"></span>SubscriptionDailyUsageRecord
+## <span id="SubscriptionDailyUsageRecord"/><span id="subscriptiondailyusagerecord"/><span id="SUBSCRIPTIONDAILYUSAGERECORD"/>SubscriptionDailyUsageRecord
 
 
 >[!NOTE]
@@ -43,7 +43,7 @@ Describes how much a subscription is used in a single day.
 
  
 
-## <span id="SubscriptionMonthlyUsageRecord"></span><span id="subscriptionmonthlyusagerecord"></span><span id="SUBSCRIPTIONMONTHLYUSAGERECORD"></span>SubscriptionMonthlyUsageRecord
+## <span id="SubscriptionMonthlyUsageRecord"/><span id="subscriptionmonthlyusagerecord"/><span id="SUBSCRIPTIONMONTHLYUSAGERECORD"/>SubscriptionMonthlyUsageRecord
 
 
 Describes how much a subscription is used in a single month.
@@ -62,7 +62,7 @@ Describes how much a subscription is used in a single month.
 
  
 
-## <span id="SubscriptionUsageSummary"></span><span id="subscriptionusagesummary"></span><span id="SUBSCRIPTIONUSAGESUMMARY"></span>SubscriptionUsageSummary
+## <span id="SubscriptionUsageSummary"/><span id="subscriptionusagesummary"/><span id="SUBSCRIPTIONUSAGESUMMARY"/>SubscriptionUsageSummary
 
 
 Describes how much a specific subscription was used in the current

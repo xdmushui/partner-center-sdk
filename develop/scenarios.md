@@ -20,7 +20,7 @@ This section describes the ways that partners in the Cloud Solution Provider pro
 
 Note that there are different versions of Partner Center available that include different capabilities. Not all scenarios are supported in all versions of Partner Center. To learn more, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
 
-## <span id="Scenarios_supported_by_the_Partner_Center_SDK"></span><span id="scenarios_supported_by_the_partner_center_sdk"></span><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_CENTER_SDK"></span>Scenarios supported by the Partner Center SDK
+## <span id="Scenarios_supported_by_the_Partner_Center_SDK"/><span id="scenarios_supported_by_the_partner_center_sdk"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_CENTER_SDK"/>Scenarios supported by the Partner Center SDK
 
 
 All of the following scenarios can be completed three different ways:
@@ -286,17 +286,17 @@ All of the following scenarios can be completed three different ways:
 </table>
 
 
-## <span id="background"></span><span id="BACKGROUND"></span>Background
+## <span id="background"/><span id="BACKGROUND"/>Background
 
-### <span id="Who_is_involved_in_the_order_process_"></span><span id="who_is_involved_in_the_order_process_"></span><span id="WHO_IS_INVOLVED_IN_THE_ORDER_PROCESS_"></span>Who is involved in the order process?
+### <span id="Who_is_involved_in_the_order_process_"/><span id="who_is_involved_in_the_order_process_"/><span id="WHO_IS_INVOLVED_IN_THE_ORDER_PROCESS_"/>Who is involved in the order process?
 
 Microsoft, distributors, resellers, and customers. The distributors and resellers are often referred to as **partners**.
 
 Sometimes, Microsoft works directly with resellers who sell to customers. Alternately, Microsoft also works with distributors, and those distributors work with their own set or channel of resellers who sell to customers.
 
-### <span id="What_s_getting_sold_______"></span><span id="what_s_getting_sold_______"></span><span id="WHAT_S_GETTING_SOLD_______"></span>What's getting sold?
+### <span id="What_s_getting_sold_______"/><span id="what_s_getting_sold_______"/><span id="WHAT_S_GETTING_SOLD_______"/>What's getting sold?
 
-Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
+Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learningauditing-resources.md).
 
 CSP partners are resellers who have customers and sell them Microsoft products from the current offer list. After the customers sign their agreement, the reseller places an **order** for one or more offers. Some offers include **add-ons** like more space or extra features, which are tracked together with the parent offer. The orders are processed, and then the customer is able to use their **subscriptions**. Microsoft bills the reseller or distributor each month based on the number of licenses and the usage for each customer.
 

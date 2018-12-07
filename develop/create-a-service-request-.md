@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 How to create a partner center service request.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   A support topic ID. If you do not have a support topic ID, see [Get service request support topics](get-service-request-support-topics--pending-.md).
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- A support topic ID. If you do not have a support topic ID, see [Get service request support topics](get-service-request-support-topics--pending-.md).
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To create a service request, first create and populate a [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity, and support topic id. To add additional information, the [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object supports an optional collection of [**Notes**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.notes), but does not support links to files for uploading. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the locale of the organization creating the service request (the agent locale). 
@@ -45,7 +45,7 @@ ServiceRequest serviceRequest = partnerOperations.ServiceRequests.Create(service
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreatePartnerServiceRequest.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -68,7 +68,7 @@ Use the following URI parameter to identify the agent locale.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
@@ -83,17 +83,17 @@ This table describes the required and optional properties in the request body.
 | SupportTopicName | string                                                                      | N        | The name of the support topic.                                                       |
 | Id               | string                                                                      | N        | The id of the service request.                                                       |
 | Status           | string                                                                      | N        | The status of the service request: "none", "open", "closed", or "attention\_needed". |
-| Organization     | [ServiceRequestOrganization](servicerequest.md#servicerequestorganization) | N        | Organization for which the service request is created.                               |
-| PrimaryContact   | [ServiceRequestContact](servicerequest.md#servicerequestcontact)           | N        | Primary Contact on the service request.                                              |
-| LastUpdatedBy    | [ServiceRequestContact](servicerequest.md#servicerequestcontact)           | N        | "Last Updated By" contact for changes to the service request.                        |
+| Organization     | [ServiceRequestOrganization](service-request-resources.md#servicerequestorganization) | N        | Organization for which the service request is created.                               |
+| PrimaryContact   | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | Primary Contact on the service request.                                              |
+| LastUpdatedBy    | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | "Last Updated By" contact for changes to the service request.                        |
 | ProductName      | string                                                                      | N        | The name of the product that corresponds to the service request.                     |
 | ProductId        | string                                                                      | N        | The id of the product.                                                               |
 | CreatedDate      | date                                                                        | N        | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                                        | N        | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                                        | N        | The date that the service request was last closed.                                   |
 | FileLinks        | array of [FileInfo](utility-resources.md#fileinfo) resources               | N        | The collection of File Links that pertain to the service request.                    |
-| NewNote          | [ServiceRequestNote](servicerequest.md#servicerequestnote)                 | N        | A note can be added to an existing service request.                                  |
-| Notes            | array of [ServiceRequestNotes](servicerequest.md#servicerequestnote)       | N        | A collection of notes added to the service request.                                  |
+| NewNote          | [ServiceRequestNote](service-request-resources.md#servicerequestnote)                 | N        | A note can be added to an existing service request.                                  |
+| Notes            | array of [ServiceRequestNotes](service-request-resources.md#servicerequestnote)       | N        | A collection of notes added to the service request.                                  |
 | CountryCode      | string                                                                      | N        | The country corresponding to the service request.                                    |
 | Attributes       | object                                                                      | N        | Contains "ObjectType": "ServiceRequest".                                             |
 
@@ -140,7 +140,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
 If successful, this method returns the **Service Request** resource properties in the response body.

@@ -11,10 +11,10 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 
 > [!IMPORTANT]
@@ -26,21 +26,21 @@ Partner Center uses Azure AD for authentication, and to use the Partner Center A
 
 Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. This requires three steps:
 
--   **App or App+user?**
+- **App or App+user?**
 
     These two authentication styles are used depending on your end goal. If you are developing a web site, you'll probably use App+user credentials. App only credentials, meanwhile, work for both web sites and native apps.
 
     Under the **Prerequisites** heading, each [Scenario](scenarios.md) specifies whether App+user credentials, App credentials, or both are supported.
 
--   **REST or managed?**
+- **REST or managed?**
 
     The managed API helps manage your tokens so that you do not have to refresh them. Additional steps are required for the REST API to keep your tokens current.
 
--   **TiP or regular?**
+- **TiP or regular?**
 
     You will use two sets of auth tokens over the course of development: one based on your integration sandbox Partner Center account for development and testing, and a second based on your primary Partner Center account for day-to-day management of real customer data.
 
-## <span id="initial"></span><span id="INITIAL"></span>Initial setup
+## <span id="initial"/><span id="INITIAL"/>Initial setup
 
 
 **Configure authentication for Partner Center APIs**
@@ -51,7 +51,7 @@ Partner Center uses Azure AD for authentication, and to use the Partner Center A
 
 3.  In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
 
-## <span id="managedApp"></span><span id="managedapp"></span><span id="MANAGEDAPP"></span>Authentication with App credentials and the managed API
+## <span id="managedApp"/><span id="managedapp"/><span id="MANAGEDAPP"/>Authentication with App credentials and the managed API
 
 The following code shows how to get and use App authentication using the Partner Center managed API.
 
@@ -133,7 +133,7 @@ The following code shows how to get and use App authentication using the Partner
     }
     ```
 
-## <span id="RestApp"></span><span id="restapp"></span><span id="RESTAPP"></span>Authentication with App credentials and the REST API
+## <span id="RestApp"/><span id="restapp"/><span id="RESTAPP"/>Authentication with App credentials and the REST API
 
 
 The following code shows how to get and use App authentication using the Partner Center REST API.
@@ -315,7 +315,7 @@ The following code shows how to get and use App authentication using the Partner
     }
     ```
 
-## <span id="managedUser"></span><span id="manageduser"></span><span id="MANAGEDUSER"></span>Authentication with App+User credentials and the managed API
+## <span id="managedUser"/><span id="manageduser"/><span id="MANAGEDUSER"/>Authentication with App+User credentials and the managed API
 
 
 The following code shows how to get and use App+User authentication using the Partner Center managed API.
@@ -399,7 +399,7 @@ The following code shows how to get and use App+User authentication using the Pa
     }
     ```
 
-## <span id="RestUser"></span><span id="restuser"></span><span id="RESTUSER"></span>Authentication with App+User credentials and the REST API
+## <span id="RestUser"/><span id="restuser"/><span id="RESTUSER"/>Authentication with App+User credentials and the REST API
 
 
 The following code shows how to get and use App+User authentication using the Partner Center REST API.
@@ -583,7 +583,7 @@ The following code shows how to get and use App+User authentication using the Pa
     ```
 
 
-## <span id="AuthorityAndResourceURLs"></span><span id="authorityandresourceurls"></span><span id="AUTHORITYANDRESOURCEURLS"></span>Authority and Resource URLs
+## <span id="AuthorityAndResourceURLs"/><span id="authorityandresourceurls"/><span id="AUTHORITYANDRESOURCEURLS"/>Authority and Resource URLs
 
 The following table lists the appropiate Authority, Graph Resource URL, and Partner Center Resource URL values for the various clouds when using App and App+User credentials for authentication.
 

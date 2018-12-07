@@ -1,25 +1,25 @@
 ---
-title: Upgrade
+title: Upgrade resources
 description: Describes the resources used to upgrade a user from a source subscription to a target subscription.
 ms.assetid: 869007B3-D6D4-4E79-B4F0-445CA5D88D2C
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# Upgrade
+# Upgrade resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes the resources used to upgrade a user from a source
 subscription to a target subscription.
 
-## <span id="Upgrade"></span><span id="upgrade"></span><span id="UPGRADE"></span>Upgrade
+## <span id="Upgrade"/><span id="upgrade"/><span id="UPGRADE"/>Upgrade
 
 
 Describes the behavior of an individual upgrade resource.
@@ -35,7 +35,7 @@ Describes the behavior of an individual upgrade resource.
 
  
 
-## <span id="UpgradeError"></span><span id="upgradeerror"></span><span id="UPGRADEERROR"></span>UpgradeError
+## <span id="UpgradeError"/><span id="upgradeerror"/><span id="UPGRADEERROR"/>UpgradeError
 
 
 Describes a reason why an upgrade cannot be performed.
@@ -49,7 +49,7 @@ Describes a reason why an upgrade cannot be performed.
 
  
 
-## <span id="UpgradeResult"></span><span id="upgraderesult"></span><span id="UPGRADERESULT"></span>UpgradeResult
+## <span id="UpgradeResult"/><span id="upgraderesult"/><span id="UPGRADERESULT"/>UpgradeResult
 
 
 Describes a the result of the subscription upgrade process.
@@ -65,7 +65,7 @@ Describes a the result of the subscription upgrade process.
 
  
 
-## <span id="UserLicenseError"></span><span id="userlicenseerror"></span><span id="USERLICENSEERROR"></span>UserLicenseError
+## <span id="UserLicenseError"/><span id="userlicenseerror"/><span id="USERLICENSEERROR"/>UserLicenseError
 
 
 Describes errors arising from failed user license transfer.

@@ -11,10 +11,10 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 This section provides definitions for the JSON elements needed to create
 requests and parse responses using the Partner Center REST API. For more
@@ -22,7 +22,7 @@ information about how to use these elements, including sample code, see
 the [Scenarios](scenarios.md) section and the [Partner Center
 samples](partner-center-samples.md) section.
 
-## <span id="In_this_section"></span><span id="in_this_section"></span><span id="IN_THIS_SECTION"></span>In this section
+## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 
 <table>
@@ -32,7 +32,7 @@ samples](partner-center-samples.md) section.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><a href="analytics.md">Analytics</a></td>
+<td><a href="analytics-resources.md">Analytics</a></td>
 <td><ul>
 <li>PartnerLicensesDeploymentInsights</li>
 <li>PartnerLicensesUsageInsights</li>
@@ -47,7 +47,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="azure-rate-card.md">Azure Rate Card</a></td>
+<td><a href="azure-rate-card-resources.md">Azure Rate Card</a></td>
 <td><ul>
 <li>AzureRateCard</li>
 <li>AzureMeter</li>
@@ -55,7 +55,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="azure-utilization-record.md">Azure Utilization Record</a></td>
+<td><a href="azure-utilization-record-resources.md">Azure Utilization Record</a></td>
 <td><ul>
 <li>AzureUtilizationRecord</li>
 <li>AzureResource</li>
@@ -63,7 +63,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="cart.md">Cart</a></td>
+<td><a href="cart-resources.md">Cart</a></td>
 <td><ul>
 <li>Cart</li>
 <li>CartLineItem</li>
@@ -71,7 +71,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="conversions.md">Conversions</a></td>
+<td><a href="conversions-resources.md">Conversions</a></td>
 <td><ul>
 <li>Conversion</li>
 <li>ConversionError</li>
@@ -79,14 +79,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="countryinformation.md">CountryInformation</a></td>
+<td><a href="country-information-resources.md">CountryInformation</a></td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="customers.md">Customer</a></td>
+<td><a href="customer-resources.md">Customer</a></td>
 <td><ul>
 <li>Customer</li>
 <li>CustomerCompanyProfile</li>
@@ -95,7 +95,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="customer-usage.md">Customer Usage Budgeting</a></td>
+<td><a href="customer-usage-resources.md">Customer Usage Budgeting</a></td>
 <td><ul>
 <li>CustomerMonthlyUsageRecord</li>
 <li>CustomerUsageSummary</li>
@@ -104,7 +104,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="entitlement.md">Entitlement</a></td>
+<td><a href="entitlement-resources.md">Entitlement</a></td>
 <td><ul>
 <li>Entitlement</li>
 <li>ReferenceOrder</li>
@@ -117,7 +117,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="invoice.md">Invoice</a></td>
+<td><a href="invoice-resources.md">Invoice</a></td>
 <td><ul>
 <li>Invoice</li>
 <li>InvoiceDetail</li>
@@ -131,7 +131,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="licenses.md">License</a></td>
+<td><a href="license-resources.md">License</a></td>
 <td><ul>
 <li>License</li>
 <li>LicenseUpdate</li>
@@ -143,14 +143,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="managedservice.md">ManagedService</a></td>
+<td><a href="managed-service-resources.md">ManagedService</a></td>
 <td><ul>
 <li>ManagedService</li>
 <li>ManagedServiceLinks</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="offer.md">Offer</a></td>
+<td><a href="offer-resources.md">Offer</a></td>
 <td><ul>
 <li>Offer</li>
 <li>OfferCategory</li>
@@ -159,7 +159,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="orders.md">Order</a></td>
+<td><a href="order-resources.md">Order</a></td>
 <td><ul>
 <li>Order</li>
 <li>OrderLineItem</li>
@@ -169,7 +169,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="profiles.md">Profile</a></td>
+<td><a href="profile-resources.md">Profile</a></td>
 <td><ul>
 <li>BillingProfile</li>
 <li>LegalBusinessProfile</li>
@@ -179,7 +179,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="products.md">Products</a></td>
+<td><a href="product-resources.md">Products</a></td>
 <td><ul>
 <li>Product</li>
 <li>ItemType</li>
@@ -193,7 +193,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="referral.md">Referrals</a></td>
+<td><a href="referral-resources.md">Referrals</a></td>
 <td><ul>
 <li>Referral</li>
 <li>ReferralStatus</li>
@@ -208,14 +208,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="relationships.md">Relationships</a></td>
+<td><a href="relationships-resources.md">Relationships</a></td>
 <td><ul>
 <li>PartnerRelationship</li>
 <li>RelationshipRequest</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="servicecosts.md">ServiceCosts</a></td>
+<td><a href="service-costs-resources.md">ServiceCosts</a></td>
 <td><ul>
 <li>ServiceCostsSummary</li>
 <li>ServiceCostsLineItem</li>
@@ -223,7 +223,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="servicerequest.md">ServiceRequest</a></td>
+<td><a href="service-request-resources.md">ServiceRequest</a></td>
 <td><ul>
 <li>ServiceRequest</li>
 <li>ServiceRequestContact</li>
@@ -233,7 +233,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="subscriptions.md">Subscription</a></td>
+<td><a href="subscription-resources.md">Subscription</a></td>
 <td><ul>
 <li>Subscription</li>
 <li>SubscriptionLinks</li>
@@ -244,7 +244,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="subscriptionusage.md">Subscription Usage</a></td>
+<td><a href="subscription-usage-resources.md">Subscription Usage</a></td>
 <td><ul>
 <li>SubscriptionDailyUsageRecord <em>(Obsolete)</em></li>
 <li>SubscriptionMonthlyUsageRecord</li>
@@ -252,7 +252,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="upgrade.md">Upgrade</a></td>
+<td><a href="upgrade-resources.md">Upgrade</a></td>
 <td><ul>
 <li>Upgrade</li>
 <li>UpgradeError</li>
@@ -261,7 +261,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="user.md">User</a></td>
+<td><a href="user-resources.md">User</a></td>
 <td><ul>
 <li>User</li>
 <li>CustomerUser</li>

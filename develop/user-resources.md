@@ -1,25 +1,25 @@
 ---
-title: User
+title: User resources
 description: Describes an individual Partner Center user, their personal and account information, and the permissions they have within Partner Center.
 ms.assetid: A2DEDDAB-C4DA-4ECA-931F-2054AB005973
 ms.date: 12/15/2017
 ms.localizationpriority: medium
 ---
 
-# User
+# User resources
 
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Describes an individual Partner Center user, their personal and account
 information, and the permissions they have within Partner Center.
 
-## <span id="User"></span><span id="user"></span><span id="USER"></span>User
+## <span id="User"/><span id="user"/><span id="USER"/>User
 
 
 Describes an individual user.
@@ -42,7 +42,7 @@ Describes an individual user.
 
  
 
-## <span id="CustomerUser"></span><span id="customeruser"></span><span id="CUSTOMERUSER"></span>CustomerUser
+## <span id="CustomerUser"/><span id="customeruser"/><span id="CUSTOMERUSER"/>CustomerUser
 
 
 Describes a customer user.
@@ -67,7 +67,7 @@ Describes a customer user.
 
  
 
-## <span id="UserCredentials"></span><span id="usercredentials"></span><span id="USERCREDENTIALS"></span>UserCredentials
+## <span id="UserCredentials"/><span id="usercredentials"/><span id="USERCREDENTIALS"/>UserCredentials
 
 
 Describes a user's login credentials.
@@ -79,7 +79,7 @@ Describes a user's login credentials.
 
  
 
-## <span id="UserMember"></span><span id="usermember"></span><span id="USERMEMBER"></span>UserMember
+## <span id="UserMember"/><span id="usermember"/><span id="USERMEMBER"/>UserMember
 
 
 Describes a user's member information.

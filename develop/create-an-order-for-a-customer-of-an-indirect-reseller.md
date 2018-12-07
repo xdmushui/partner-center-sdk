@@ -11,19 +11,19 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
+- Partner Center
 
 How to create an order for a customer of an indirect reseller.
 
-## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>Prerequisites
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
--   Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
--   The customer identifier.
--   The offer identifier of the item to purchase.
--   The tenant identifier of the indirect reseller.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+- The customer identifier.
+- The offer identifier of the item to purchase.
+- The tenant identifier of the indirect reseller.
 
-## <span id="C_"></span><span id="c_"></span>C#
+## <span id="C_"/><span id="c_"/>C#
 
 
 To create an order for a customer of an indirect reseller, start by getting a collection of the indirect resellers that have a relationship with the signed-in partner. Then set a local variable to the item in the collection that matches the indirect reseller ID. This is so you can access the reseller's [**MpnId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
@@ -72,7 +72,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 **Sample**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: PlaceOrderForCustomer.cs
 
-## <span id="Request"></span><span id="request"></span><span id="REQUEST"></span>Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
 **Request syntax**
@@ -95,13 +95,13 @@ Use the following path parameter to identify the customer.
 
 **Request headers**
 
--   See [Partner Center REST headers](headers.md) for more information.
+- See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
 This table describes the **Order** properties in the request body.
 
-## <span id="Order"></span><span id="order"></span><span id="ORDER"></span>Order
+## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
 
 
 <table>
@@ -169,7 +169,7 @@ This table describes the **Order** properties in the request body.
 
 This table describes the **OrderLineItem** properties in the request body.
 
-## <span id="orderLineItem"></span><span id="orderlineitem"></span><span id="ORDERLINEITEM"></span>OrderLineItem
+## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 
 <table>
@@ -285,10 +285,10 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"></span><span id="response"></span><span id="RESPONSE"></span>Response
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains the populated [Order](orders.md) resource
+If successful, the response body contains the populated [Order](order-resources.md) resource
 
 **Response success and error codes**
 

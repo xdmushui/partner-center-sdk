@@ -10,29 +10,29 @@ ms.localizationpriority: medium
 
 **Applies To**
 
--   Partner Center
--   Partner Center operated by 21Vianet
--   Partner Center for Microsoft Cloud Germany
--   Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Collaborate with Microsoft on the development of Partner features and capabilities.
 
-## <span id="Get_access"></span><span id="get_access"></span><span id="GET_ACCESS"></span>Get access
+## <span id="Get_access"/><span id="get_access"/><span id="GET_ACCESS"/>Get access
 
 
 Get access to prerelease versions of the Partner Center APIs and SDK. We will announce new features and capabilities to the private Yammer group.
 
-## <span id="Participate"></span><span id="participate"></span><span id="PARTICIPATE"></span>Participate in monthly webinars
+## <span id="Participate"/><span id="participate"/><span id="PARTICIPATE"/>Participate in monthly webinars
 
 
 A monthly webinar for early adopters will be conducted to answer questions, gather feedback, share schedules and timelines, and provide support for new features. 
 
-## <span id="Get_support"></span><span id="get_support"></span><span id="GET_SUPPORT"></span>Get support from subject matter experts 
+## <span id="Get_support"/><span id="get_support"/><span id="GET_SUPPORT"/>Get support from subject matter experts 
 
 
 Participants can provide feedback and communicate with subject matter experts (SMEs) in the private Partner Center Early Adopter Program Yammer group.
 
-## <span id="Get_started"></span><span id="GET_STARTED"></span>Get Started
+## <span id="Get_started"/><span id="GET_STARTED"/>Get Started
 
 
 You must be an existing CSP partner or an approved platform vendor to join the program.
