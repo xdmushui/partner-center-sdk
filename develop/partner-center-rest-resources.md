@@ -41,7 +41,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="auditing.md">Auditing</a></td>
+<td><a href="auditing-resources.md">Auditing</a></td>
 <td><ul>
 <li>AuditRecord</li>
 </ul></td>

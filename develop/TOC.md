@@ -170,7 +170,7 @@
 #### [Agreement](agreement-resources.md)
 #### [Agreement metadata](agreement-metadata-resources.md)
 #### [Analytics](analytics-resources.md)
-#### [Auditing](auditing.md)
+#### [Auditing](auditing-resources.md)
 #### [Azure rate card](azure-rate-card-resources.md)
 #### [Azure utilization record](azure-utilization-record-resources.md)
 #### [Cart](cart-resources.md) 
