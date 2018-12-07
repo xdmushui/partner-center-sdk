@@ -44,7 +44,7 @@ Use the following ID in the URL
 
 **Request body**
 
-This table describes the [Referral](referral.md) properties in the request body.
+This table describes the [Referral](referral-resources.md) properties in the request body.
     
 **Request example**
 
@@ -59,7 +59,7 @@ Content-Type: application/json
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, this method returns the populated [Referral](referral.md) resource in the response body.
+If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
 
 **Response success and error codes**
 

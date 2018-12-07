@@ -47,7 +47,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | status               | string                                                        | The subscription status: "none", "active", "suspended", or "deleted".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Gets a value indicating whether the subscription is renewed automatically.                                                                                                    |
 | billingType          | string                                                        | Specifies how the subscription is billed: "none", "usage", or "license".                                                                                                      |
-| billingCycle         | string                                                        | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](products.md#billingcycletype). |
+| billingCycle         | string                                                        | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](product-resources.md#billingcycletype). |
 | hasPurchasableAddons | boolean                                                       | Gets or sets a value indicating whether the subscription has purchasable add-ons.                                                                                             |
 | isTrial              | boolean                                                       | A value indicating whether this is a trial subscription.                                                                                                                      |
 | actions              | array of strings                                              | Gets or sets the actions that are allowed. Possible values: "edit", "cancel"                                                                                                  |
@@ -56,7 +56,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | contractType         | string                                                        | Read-only. The type of contract: "subscription", "productKey", or "redemptionCode".                                                                                           |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
-| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
+| attributes           | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 
  
 
@@ -67,11 +67,11 @@ Describes the collection of links attached to a subscription resource.
 
 | Property           | Type                               | Description                           |
 |--------------------|------------------------------------|---------------------------------------|
-| offer              | [Link](utility-resources.md#link) | Gets or sets the offer.               |
-| parentSubscription | [Link](utility-resources.md#link) | Gets or sets the parent subscription. |
-| self               | [Link](utility-resources.md#link) | The self URI.                         |
-| next               | [Link](utility-resources.md#link) | The next page of items.               |
-| previous           | [Link](utility-resources.md#link) | The previous page of items.           |
+| offer              | [Link](utilityauditing-resources.md.md#link) | Gets or sets the offer.               |
+| parentSubscription | [Link](utilityauditing-resources.md.md#link) | Gets or sets the parent subscription. |
+| self               | [Link](utilityauditing-resources.md.md#link) | The self URI.                         |
+| next               | [Link](utilityauditing-resources.md.md#link) | The next page of items.               |
+| previous           | [Link](utilityauditing-resources.md.md#link) | The previous page of items.           |
 
  
 
@@ -86,7 +86,7 @@ Provides information about the provisioning status of a subscription.
 | status     | string                                                         | Indicates the provisioning status: "success", "pending" or "failed". |
 | quantity   | number                                                         | Provides the subscription quantity after provisioning.               |
 | endDate    | string in UTC date time format                                 | The end date of the subscription.                                    |
-| attributes | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                             |
+| attributes | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes)  | The metadata attributes.                                             |
 
  
 
@@ -112,8 +112,8 @@ Represents a support contact for a customer's subscription.
 | supportTenantId | string                                                         | A GUID formatted string that indicates the support contact's tenant identifier. |
 | supportMpnId    | string                                                         | The contact's Microsoft Partner Network (MPN) identifier.                       |
 | name            | string                                                         | The name of the support contact.                                                |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                                              |
-| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
+| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)            | The support contact related links.                                              |
+| attributes      | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
 
 
 

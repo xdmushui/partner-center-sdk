@@ -26,14 +26,14 @@ Describes a partner's billing profile.
 | Property            | Type                                                           | Description                                                 |
 |---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
 | companyName         | string                                                         | The billing company name.                                   |
-| address             | [Address](utility-resources.md#address)                       | The billing address address of the company or organization. |
-| primaryContact      | [Contact](utility-resources.md#contact)                       | The primary contact for the company or organization.        |
+| address             | [Address](utilityauditing-resources.md.md#address)                       | The billing address address of the company or organization. |
+| primaryContact      | [Contact](utilityauditing-resources.md.md#contact)                       | The primary contact for the company or organization.        |
 | purchaseOrderNumber | string                                                         | The company or organization's purchase order number.        |
 | taxId               | string                                                         | The company or organization's tax Id.                       |
 | billingCurrency     | string                                                         | The currency used by the company or organization.           |
 | profileType         | string                                                         | The partner profile type.                                   |
-| links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.            |
-| attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
+| links               | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the profile.            |
+| attributes          | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
 
  
 
@@ -45,15 +45,15 @@ Describes a partner's legal business profile.
 | Property               | Type                                                           | Description                                                                                                                                                          |
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | companyName            | string                                                         | The legal company name.                                                                                                                                              |
-| address                | [Address](utility-resources.md#address)                       | The address of the company or organization.                                                                                                                          |
-| primaryContact         | [Contact](utility-resources.md#contact)                       | The primary contact for the company or organization.                                                                                                                 |
-| companyApproverAddress | [Address](utility-resources.md#address)                       | The company approver address.                                                                                                                                        |
+| address                | [Address](utilityauditing-resources.md.md#address)                       | The address of the company or organization.                                                                                                                          |
+| primaryContact         | [Contact](utilityauditing-resources.md.md#contact)                       | The primary contact for the company or organization.                                                                                                                 |
+| companyApproverAddress | [Address](utilityauditing-resources.md.md#address)                       | The company approver address.                                                                                                                                        |
 | companyApproverEmail   | string                                                         | The company approver email.                                                                                                                                          |
 | vettingStatus          | string                                                         | The vetting status. This value is the string representation of the one of the member names found in [**VettingStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.partners.vettingstatus).           |
 | vettingSubStatus       | string                                                         | The vetting sub-status. This value is the string representation of the one of the member names found in [**VettingSubStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.partners.vettingsubstatus). |
 | profileType            | string                                                         | The partner profile type.                                                                                                                                            |
-| links                  | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
-| attributes             | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |
+| links                  | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
+| attributes             | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |
 
  
 
@@ -67,8 +67,8 @@ Describes a partner's Microsoft Partner Network profile.
 | partnerName | string                                                         | The company or organization name.                     |
 | mpnId       | string                                                         | The Microsoft Partner Network Id.                     |
 | profileType | string                                                         | The partner profile type.                             |
-| links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
-| attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
+| links       | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the profile.      |
+| attributes  | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
  
 
@@ -81,15 +81,15 @@ Describes a partner's organization profile.
 |----------------|----------------------------------------------------------------|------------------------------------------------------------------------|
 | id             | string                                                         | The organization's Id.                                                 |
 | companyName    | string                                                         | The name of the company or organization.                               |
-| defaultAddress | [Address](utility-resources.md#address)                       | The default address of the company or organization.                    |
+| defaultAddress | [Address](utilityauditing-resources.md.md#address)                       | The default address of the company or organization.                    |
 | tenantId       | string                                                         | The tenant identifier.                                                 |
 | domain         | string                                                         | The company or organization's domain.                                  |
 | email          | string                                                         | Gets or sets the parent subscription.                                  |
 | language       | string                                                         | The preferred language for communication.                              |
 | culture        | string                                                         | The preferred culture for communication and currency, such as "en-us". |
 | profileType    | string                                                         | The partner profile type.                                              |
-| links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                       |
-| attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                  |
+| links          | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the profile.                       |
+| attributes     | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the profile.                  |
 
  
 
@@ -104,8 +104,8 @@ Describes a partner's support profile.
 | telephone   | string                                                         | The phone number associated with the profile.         |
 | website     | string                                                         | The support website.                                  |
 | profileType | string                                                         | The partner profile type.                             |
-| links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
-| attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
+| links       | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the profile.      |
+| attributes  | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
  
 

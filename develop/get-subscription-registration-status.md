@@ -78,7 +78,7 @@ Connection: Keep-Alive
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
-If successful, the response body contains a [SubscriptionRegistrationStatus](subscriptions.md#subscriptionregistrationstatus) resource.  
+If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.  
 
 **Response success and error codes**
 

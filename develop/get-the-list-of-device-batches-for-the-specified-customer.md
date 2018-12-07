@@ -82,7 +82,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, the response body contains the collection of [DeviceBatch](devicedeployment.md#devicebatch) resources.
+If successful, the response body contains the collection of [DeviceBatch](device-deployment-resources.md#devicebatch) resources.
 
 **Response success and error codes**
 

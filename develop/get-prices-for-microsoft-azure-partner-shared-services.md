@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get an [Azure Rate Card](azure-rate-card.md) with prices for Microsoft Azure Partner Shared Services.
+How to get an [Azure Rate Card](azure-rate-card-resources.md) with prices for Microsoft Azure Partner Shared Services.
 
 Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
@@ -88,7 +88,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If this is successful, it returns an [Azure Rate Card](azure-rate-card.md) resource.
+If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
 **Response success and error codes**
 

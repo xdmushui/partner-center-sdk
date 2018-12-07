@@ -70,7 +70,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response contains the [RelationshipRequest](relationships.md#relationshiprequest) object.
+If successful, the response contains the [RelationshipRequest](relationships-resources.md#relationshiprequest) object.
 
 **Response success and error codes**
 

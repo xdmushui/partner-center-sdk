@@ -246,7 +246,7 @@ Content-Length: 0
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#indirect_resellers) resources.
+If successful, the response body contains a collection of [indirect resellers](partner-center-analyticsauditing-resources.md.md#indirect_resellers) resources.
 
 **Response success and error codes**
 
@@ -275,4 +275,4 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+ - [Partner Center Analytics - Resources](partner-center-analyticsauditing-resources.md.md)

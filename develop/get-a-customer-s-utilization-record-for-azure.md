@@ -210,7 +210,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record.md) resources in the response body. In some cases, the Azure utilization data is not yet ready in a dependent system and this method will return an HTTP Status Code 204 with a Retry-After header. 
+If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. In some cases, the Azure utilization data is not yet ready in a dependent system and this method will return an HTTP Status Code 204 with a Retry-After header. 
 
 **Response success and error codes**
 

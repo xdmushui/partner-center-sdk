@@ -51,8 +51,8 @@ Contains a list of links for a [Product](#product).
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| skus            | [Link](utility-resources.md#link)                             | The link for accessing the underlying SKUs.          |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
+| skus            | [Link](utilityauditing-resources.md.md#link)                             | The link for accessing the underlying SKUs.          |
+| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links contained within this resource.   |
 
 
 
@@ -73,9 +73,9 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | supportedBillingCycles | array of strings | The list of supported billing cycles for this SKU. Supported values are the member names found in [BillingCycleType](#billingcycletype). |
 | purchasePrerequisites  | array of strings | The list of prerequisite steps or actions that are needed prior to purchasing this item. The supported values are:<br/>  "InventoryCheck" – Indicates that the item's inventory should be evaluated before attempting to purchase this item.<br/> "AzureSubscriptionRegistration" – Indicates that an Azure subscription is needed and must be registered before attempting to purchase this item.  |
 | inventoryVariables     | array of strings | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> "CustomerId" – The ID of the customer that the purchase would be for.<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.</br> "ArmRegionName" – The region for which to verify inventory. This value must match the "ArmRegionName" from the SKU’s DynamicAttributes. |
-| provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
+| provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
-| links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+| links                  | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the SKU.                   |
 
 
 
@@ -88,11 +88,11 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | id              | string                        | The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
 | productId       | string                        | The ID of the [product](#product) that contains this availability.           |
 | skuId           | string                        | The ID of the [SKU](#sku) that contains this availability.                   |
-| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](orders.md#orderlineitem) or [CartLineItem.CatalogItemId](cart.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
+| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
 | defaultCurrency | string                        | The default currency supported for this availability.                               |
 | segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
 | country         | string                        | The country or region (in ISO country code format) where this availability applies. |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
+| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the availability. |
 
 
 
@@ -104,7 +104,7 @@ Represents a request to check inventory against certain catalog items.
 |------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------|
 | targetItems      | array of [InventoryItem](#inventoryitem)            | The list of catalog items that the inventory check will evaluate.                           |
 | inventoryContext | key/value pairs                                     | The dictionary of context values that are needed to carry out the inventory check(s). Each [SKU](#sku) of the products will define which values (if any) are needed to carry out this operation.  |
-| links            | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the inventory check request.                            |
+| links            | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the inventory check request.                            |
 
 
 

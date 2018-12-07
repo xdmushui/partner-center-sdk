@@ -81,7 +81,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains the collection of [ConfigurationPolicy](devicedeployment.md#configurationpolicy) resources.
+If successful, the response body contains the collection of [ConfigurationPolicy](device-deployment-resources.md#configurationpolicy) resources.
 
 **Response success and error codes**
 

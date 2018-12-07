@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Updates the friendly name or nickname for a customer's [Subscription](subscriptions.md). This name appears in Partner Center to help differentiate the subscriptions in the customer's account.
+Updates the friendly name or nickname for a customer's [Subscription](subscription-resources.md). This name appears in Partner Center to help differentiate the subscriptions in the customer's account.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription in question that you wish to rename. To finish, change the name in the **Subscription nickname** field, then select **Submit.**
 
@@ -114,7 +114,7 @@ Connection: Keep-Alive
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns updated [Subscription](subscriptions.md) resource properties in the response body.
+If successful, this method returns updated [Subscription](subscription-resources.md) resource properties in the response body.
 
 **Response success and error codes**
 

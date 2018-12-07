@@ -150,7 +150,7 @@ This table describes the required properties in the request body.
 
 **Billing Profile**
 
-This table describes the minimum required fields from the [CustomerBillingProfile](customer-resources.md#customerbillingprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerBillingProfile](customerauditing-resources.md.md#customerbillingprofile) resource needed to create a new customer.
 
 | Name             | Type                                     | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -158,7 +158,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
 | language         | string                                   | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
 | company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
-| default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
+| default\_address | [Address](utilityauditing-resources.md.md#address) | The registered address of the customer's company/organization. See the [Address](utilityauditing-resources.md.md#address) resource for information on any length limitations.                                             |
 
 
 
@@ -166,7 +166,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 **Company Profile**
 
-This table describes the minimum required fields from the [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerCompanyProfile](customerauditing-resources.md.md#customercompanyprofile) resource needed to create a new customer.
 
 | Name   | Type   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
@@ -214,7 +214,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this API returns a [Customer](customer-resources.md#customer) resource for the new customer. Save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.
+If successful, this API returns a [Customer](customerauditing-resources.md.md#customer) resource for the new customer. Save the customer ID and Azure AD details for future use with the Partner Center SDK. You will need them for use with account management, for example.
 
 **Response success and error codes**
 

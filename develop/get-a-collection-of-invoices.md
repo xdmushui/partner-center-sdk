@@ -119,7 +119,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
-If successful, the response body contains the collection of [Invoice](invoice.md#invoice) resources.
+If successful, the response body contains the collection of [Invoice](invoice-resources.md#invoice) resources.
 
 **Response success and error codes**
 

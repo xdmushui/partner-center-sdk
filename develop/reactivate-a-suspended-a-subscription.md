@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Reactivates a [Subscription](subscriptions.md) that was previously suspended for nonpayment.
+Reactivates a [Subscription](subscription-resources.md) that was previously suspended for nonpayment.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription in question that you wish to rename. To finish, choose the **Active** button, then select **Submit.**
 
@@ -115,7 +115,7 @@ Connection: Keep-Alive
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns updated [Subscription](subscriptions.md) resource properties in the response body.
+If successful, this method returns updated [Subscription](subscription-resources.md) resource properties in the response body.
 
 **Response success and error codes**
 

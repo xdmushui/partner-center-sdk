@@ -71,7 +71,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
-If successful, this method returns an [InvoiceSummary](invoice.md#invoicesummary) resource in the response.
+If successful, this method returns an [InvoiceSummary](invoice-resources.md#invoicesummary) resource in the response.
 
 **Response success and error codes**
 

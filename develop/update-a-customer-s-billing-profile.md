@@ -121,7 +121,7 @@ Expect: 100-continue
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, this method returns updated [Profile](profiles.md) resource properties in the response body. This call requires an ETag for concurrency detection.
+If successful, this method returns updated [Profile](profile-resources.md) resource properties in the response body. This call requires an ETag for concurrency detection.
 
 **Response success and error codes**
 

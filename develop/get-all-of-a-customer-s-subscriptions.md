@@ -81,7 +81,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this method returns a collection of [Subscription](subscriptions.md) resources in the response body.
+If successful, this method returns a collection of [Subscription](subscription-resources.md) resources in the response body.
 
 **Response success and error codes**
 

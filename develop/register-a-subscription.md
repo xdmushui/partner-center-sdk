@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-Register an existing [Subscription](subscriptions.md) so that it is enabled for ordering Azure reservations.  
+Register an existing [Subscription](subscription-resources.md) so that it is enabled for ordering Azure reservations.  
 
 To purchase an Azure reservation you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure reservations. 
 

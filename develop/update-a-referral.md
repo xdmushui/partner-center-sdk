@@ -37,7 +37,7 @@ This topic explains how to update a referral.
 
 **Request body**
 
-This table describes the [Referral](referral.md) properties in the request body.
+This table describes the [Referral](referral-resources.md) properties in the request body.
 
 | Property              | Type                                              | Description                                                                                                       |
 |-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -51,16 +51,16 @@ This table describes the [Referral](referral.md) properties in the request body.
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
-| Status                | [ReferralStatus](referral.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| Substatus          | [ReferralSubstatus](referral.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
+| Status                | [ReferralStatus](referral-resources.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
+| Substatus          | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
 | StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral lost? |
-| ReferralType          | [ReferralType](referral.md#ReferralType)          | Represents the referral type.                                                                                     |
-| Qualification         | [ReferralQualification](referral.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
-| CustomerProfile       | [CustomerProfile](referral.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [Consent](referral.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
-| Details               | [ReferralDetails](referral.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
-| Team                  | [Member](referral.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
-| InviteContext         | [InviteContext](referral.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| ReferralType          | [ReferralType](referral-resources.md#ReferralType)          | Represents the referral type.                                                                                     |
+| Qualification         | [ReferralQualification](referral-resources.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
+| CustomerProfile       | [CustomerProfile](referral-resources.md#CustomerProfile)    | Customer contact information.                                                                                     |
+| Consent               | [Consent](referral-resources.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
+| Details               | [ReferralDetails](referral-resources.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
+| Team                  | [Member](referral-resources.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
+| InviteContext         | [InviteContext](referral-resources.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 **Status & Substatus transition states**
 
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, this method returns the populated [Referral](referral.md) resource in the response body.
+If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
 
 **Response success and error codes**
 

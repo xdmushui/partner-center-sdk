@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get an [Azure Rate Card](azure-rate-card.md) with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
+How to get an [Azure Rate Card](azure-rate-card-resources.md) with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine this Azure Rate Card query to get prices for Microsoft Azure with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
@@ -93,7 +93,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If this is successful, it returns an [Azure Rate Card](azure-rate-card.md) resource.
+If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
 **Response success and error codes**
 

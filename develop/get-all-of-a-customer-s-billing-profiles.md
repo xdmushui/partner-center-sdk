@@ -82,7 +82,7 @@ MS-CorrelationId: 51d521b3-62db-4682-b75d-fb8ab09113b2
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns a collection of [Profile](profiles.md) resources in the response body.
+If successful, this method returns a collection of [Profile](profile-resources.md) resources in the response body.
 
 **Response success and error codes**
 

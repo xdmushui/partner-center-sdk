@@ -172,7 +172,7 @@ This table describes the minimum required fields to create an **Agreement** reso
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
 | userId         | string | Object identifier of the logged in user in the partner tenant who is providing confirmation on behalf of the partner organization. |
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  <br/> - firstName <br/> - lastName<br/> - email<br/> - phoneNumber (optional) |
+| primaryContact | [Contact](./utilityauditing-resources.md.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  <br/> - firstName <br/> - lastName<br/> - email<br/> - phoneNumber (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Cloud Agreement by retrieving the agreement metadata for Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. |
 | type           |AgreementType enum | Agreement type accepted by the customer. Currently, the only supported value is "MicrosoftCloudAgreement". |

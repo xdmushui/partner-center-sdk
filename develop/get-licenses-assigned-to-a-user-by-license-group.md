@@ -90,7 +90,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
-If successful, the response body contains the collection of [License](licenses.md#license) resources.
+If successful, the response body contains the collection of [License](license-resources.md#license) resources.
 
 **Response success and error codes**
 

@@ -119,7 +119,7 @@ Use the following path parameters to identify the customer and trial subscriptio
 
 **Request body**
 
-A populated [Conversion](conversions.md#conversion) resource must be included in the request body.
+A populated [Conversion](conversions-resources.md#conversion) resource must be included in the request body.
 
 **Request example**
 
@@ -150,7 +150,7 @@ Expect: 100-continue
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, the response body contains a [ConversionResult](conversions.md#conversionresult) resource.
+If successful, the response body contains a [ConversionResult](conversions-resources.md#conversionresult) resource.
 
 **Response success and error codes**
 

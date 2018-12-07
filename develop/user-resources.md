@@ -31,14 +31,14 @@ Describes an individual user.
 | firstName             | string                                                         | The first name of the user.                                                                                                                                                                                                |
 | lastName              | string                                                         | The last name of the user.                                                                                                                                                                                                 |
 | displayName           | string                                                         | The displayed name of the user.                                                                                                                                                                                            |
-| passwordProfile       | [PasswordProfile](utility-resources.md#passwordprofile)       | The user's password profile.                                                                                                                                                                                               |
+| passwordProfile       | [PasswordProfile](utilityauditing-resources.md.md#passwordprofile)       | The user's password profile.                                                                                                                                                                                               |
 | phoneNumber           | string                                                         | The user's phone number.                                                                                                                                                                                                   |
 | lastDirectorySyncTime | string in UTC date time format                                 | The last time that information for this user was synced between Azure Active Directory and on-premises Active Directory. A date time value only appears if Azure AD Connect sync is enabled. Otherwise, the value is null. |
 | userDomainType        | string                                                         | The user domain type: "none", "managed," or "federated".                                                                                                                                                                   |
 | state                 | string                                                         | The state of the user: "active", "inactive" (for a deleted user).                                                                                                                                                          |
 | softDeletionTime      | string in UTC date time format                                 | Represents the start of the thirty day period after which data associated with a deleted user is permanently deleted and therefore unrecoverable.                                                                          |
-| links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
-| attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
+| links                 | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
+| attributes            | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
  
 
@@ -56,14 +56,14 @@ Describes a customer user.
 | lastName              | string                                                         | The last name of the user.                                                                                                                                                                                                 |
 | displayName           | string                                                         | The displayed name of the user.                                                                                                                                                                                            |
 | immutableId           | string                                                         | The immutable id of the user.                                                                                                                                                                                              |
-| passwordProfile       | [PasswordProfile](utility-resources.md#passwordprofile)       | The user's password profile.                                                                                                                                                                                               |
+| passwordProfile       | [PasswordProfile](utilityauditing-resources.md.md#passwordprofile)       | The user's password profile.                                                                                                                                                                                               |
 | phoneNumber           | string                                                         | The user's phone number.                                                                                                                                                                                                   |
 | lastDirectorySyncTime | string in UTC date time format                                 | The last time that information for this user was synced between Azure Active Directory and on-premises Active Directory. A date time value only appears if Azure AD Connect sync is enabled. Otherwise, the value is null. |
 | userDomainType        | string                                                         | The user domain type: "none", "managed," or "federated".                                                                                                                                                                   |
 | state                 | string                                                         | The state of the user: "active", "inactive" (for a deleted user).                                                                                                                                                          |
 | softDeletionTime      | string in UTC date time format                                 | Represents the start of the thirty day period after which data associated with a deleted user is permanently deleted and therefore unrecoverable.                                                                          |
-| links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
-| attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
+| links                 | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
+| attributes            | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
  
 
@@ -75,7 +75,7 @@ Describes a user's login credentials.
 | Property | Type                                               | Description                          |
 |----------|----------------------------------------------------|--------------------------------------|
 | userName | string                                             | The name of the user.                |
-| password | [SecureString](utility-resources.md#securestring) | The user's securely stored password. |
+| password | [SecureString](utilityauditing-resources.md.md#securestring) | The user's securely stored password. |
 
  
 
@@ -90,7 +90,7 @@ Describes a user's member information.
 | userPrincipalName | string                                                         | The name of the user principal.    |
 | roleId            | string                                                         | The identifier of the user's role. |
 | id                | string                                                         | The identifier of the member.      |
-| attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.           |
+| attributes        | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.           |
 
  
 

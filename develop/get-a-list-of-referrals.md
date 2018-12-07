@@ -37,7 +37,7 @@ Use the following query parameters to get a list of referrals
 |------------------------|----------|----------|-------------------------------------------------------------------------------------|
 | engagementId            | string   | No       | An engagement ID.                                                                   |
 | self                    | string   | Yes, if there is no EngagementId provided       | A string of value "true" will return only the referrals for your organization.      |
-| status                  | string   | No       | A string that represents a [ReferralStatus](referral.md#ReferralStatus).            |
+| status                  | string   | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus).            |
 | pageSize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.                    |
 
 
@@ -63,7 +63,7 @@ Content-Type: application/json
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, the response body contains a collection of [Referral](referral.md) resources in the response body.
+If successful, the response body contains a collection of [Referral](referral-resources.md) resources in the response body.
 
 **Response success and error codes**
 

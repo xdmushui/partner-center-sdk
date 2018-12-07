@@ -26,7 +26,7 @@ Gets an **InvoiceSummaries** resource that contains an invoice summary for each 
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To retrieve an [**InvoiceSummaries**](invoice.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
+To retrieve an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice-resources.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice-resources.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
 
 ``` csharp
 // IAggregatePartner scopedPartnerOperations;
@@ -76,7 +76,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, this method returns an [InvoiceSummaries](invoice.md#invoicesummaries) resource in the response body.
+If successful, this method returns an [InvoiceSummaries](invoice-resources.md#invoicesummaries) resource in the response body.
 
 **Response success and error codes**
 

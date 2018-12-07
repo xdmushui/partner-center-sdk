@@ -95,7 +95,7 @@ After you have purchased Azure reservations, the following scenarios show you ho
 
 
 
-Once you have identified the active subscription that you want to add the Azure reservation to, you must register the subscription so that it is enabled for Azure reservations. To register an existing [Subscription](subscriptions.md) resource so that it is enabled for ordering Azure reservations, see [Register a subscription](register-a-subscription.md).
+Once you have identified the active subscription that you want to add the Azure reservation to, you must register the subscription so that it is enabled for Azure reservations. To register an existing [Subscription](subscription-resources.md) resource so that it is enabled for ordering Azure reservations, see [Register a subscription](register-a-subscription.md).
 
 After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
 
@@ -105,9 +105,9 @@ After registering your subscription, you should confirm that the registration pr
 
 Once the subscription is enabled for purchasing Azure reservations, you're ready to select products and SKUs and check their availability using the following Partner Center API models: 
 
-- [Product](products.md#product) - A grouping construct for purchasable goods or services. A product by itself is not a purchasable item.​​
-- [SKU](products.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
-- [Availability](products.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
+- [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself is not a purchasable item.​​
+- [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
+- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
 
 Before purchasing an Azure reservation, complete the following steps:
 
@@ -122,7 +122,7 @@ Before purchasing an Azure reservation, complete the following steps:
 
     - [Check Inventory](check-inventory.md) 
 
-3.  Retrieve the [availability](products.md#availability) for the [SKU](products.md#sku). You will need the **CatalogItemId** of the availability when placing the order​. To get this value, use one of the following APIs: 
+3.  Retrieve the [availability](product-resources.md#availability) for the [SKU](product-resources.md#sku). You will need the **CatalogItemId** of the availability when placing the order​. To get this value, use one of the following APIs: 
 
     - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
     - [Get an availability using the availability ID](get-an-availability-by-id.md)
@@ -133,12 +133,12 @@ Before purchasing an Azure reservation, complete the following steps:
 
 To submit your Azure reservation order, do the following:
 
-1.  Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart.md), the [cart line items](cart.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](orders.md).
+1.  Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart-resources.md), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](order-resources.md).
 
     - [Create a shopping cart](create-a-cart.md)​
     - [Update a shopping cart](update-a-cart.md)
 
-2.  Check out the cart. Checking out a cart results in the creation of an [Order](orders.md). 
+2.  Check out the cart. Checking out a cart results in the creation of an [Order](order-resources.md). 
 
     - [Checkout the cart](checkout-a-cart.md)
 
@@ -152,19 +152,19 @@ Once you have created your Azure reservation order, you can retrieve the details
 
 - To get a list of orders for a customer using the customer ID. See, [Get all of a customer's orders](get-all-of-a-customer-s-orders.md).      
 
-- To get a list of orders for a customer by [billing cycle type](products.md#billingcycletype) allowing you to list Azure reservation orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
+- To get a list of orders for a customer by [billing cycle type](product-resources.md#billingcycletype) allowing you to list Azure reservation orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
 
 ## <span id="Lifecycle_management"/><span id="lifecycle_management"/><span id="LIFECYCLE_MANAGEMENT"/>Lifecycle management
 
 
 
-As part of managing the lifecycle of your Azure reservations in Partner Center, you can retrieve information about your Azure reservation [Entitlements](entitlement.md), and get reservation details using the reservation order ID. For examples of how to do this, see [Get entitlements](get-a-collection-of-entitlements.md).   ​
+As part of managing the lifecycle of your Azure reservations in Partner Center, you can retrieve information about your Azure reservation [Entitlements](entitlement-resources.md), and get reservation details using the reservation order ID. For examples of how to do this, see [Get entitlements](get-a-collection-of-entitlements.md).   ​
 
 ## <span id="Invoice_and_reconciliation"/><span id="invoice_and_reconciliation"/><span id="INVOICE_AND_RECONCILIATION"/>Invoice and reconciliation
 
 
 
-The following scenarios show you how to programmatically view your customer's [invoices](invoice.md), and get your account balances and summaries that include one-time charges for Azure reservations.  
+The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for Azure reservations.  
 
 **Balance and payment​**    
 To get current account balance in your default currency type that is a balance of ​both recurring and one-time (Azure reservation) charges, see 

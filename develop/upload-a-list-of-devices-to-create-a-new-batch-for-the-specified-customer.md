@@ -91,7 +91,7 @@ Use the following path parameters when creating the request.
 
 **Request body**
 
-The request body must contain a [DeviceBatchCreationRequest](devicedeployment.md#devicebatchcreationrequest) resource.
+The request body must contain a [DeviceBatchCreationRequest](device-deployment-resources.md#devicebatchcreationrequest) resource.
 
 **Request example**
 

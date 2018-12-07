@@ -220,7 +220,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utilityauditing-resources.md#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
                     </div>
                 </div>
             </div>

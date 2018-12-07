@@ -78,7 +78,7 @@ Connection: Keep-Alive
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
-If successful, the response body contains the [MpnProfile](profiles.md#mpnprofile) resource for the partner.
+If successful, the response body contains the [MpnProfile](profile-resources.md#mpnprofile) resource for the partner.
 
 **Response success and error codes**
 

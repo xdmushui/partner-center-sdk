@@ -82,7 +82,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, the response body contains a collection of [Conversion](conversions.md#conversionresult) resources.
+If successful, the response body contains a collection of [Conversion](conversions-resources.md#conversionresult) resources.
 
 **Response success and error codes**
 

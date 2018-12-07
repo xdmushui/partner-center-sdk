@@ -79,7 +79,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a [ServiceCostLineItem](servicecosts.md) resource that provides information about the service costs.
+If successful, the response body contains a [ServiceCostLineItem](service-costs-resources.md) resource that provides information about the service costs.
 
 **Response success and error codes**
 

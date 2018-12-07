@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets an [Order](orders.md) resource that matches the customer and order ID.
+Gets an [Order](order-resources.md) resource that matches the customer and order ID.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -104,7 +104,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, this method returns an [Order](orders.md) resource in the response body.
+If successful, this method returns an [Order](order-resources.md) resource in the response body.
 
 **Response success and error codes**
 

@@ -79,7 +79,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, the response body contains a collection of [SubscribedSku](licenses.md#subscribedsku) resources.
+If successful, the response body contains a collection of [SubscribedSku](license-resources.md#subscribedsku) resources.
 
 **Response success and error codes**
 

@@ -83,17 +83,17 @@ This table describes the required and optional properties in the request body.
 | SupportTopicName | string                                                                      | N        | The name of the support topic.                                                       |
 | Id               | string                                                                      | N        | The id of the service request.                                                       |
 | Status           | string                                                                      | N        | The status of the service request: "none", "open", "closed", or "attention\_needed". |
-| Organization     | [ServiceRequestOrganization](servicerequest.md#servicerequestorganization) | N        | Organization for which the service request is created.                               |
-| PrimaryContact   | [ServiceRequestContact](servicerequest.md#servicerequestcontact)           | N        | Primary Contact on the service request.                                              |
-| LastUpdatedBy    | [ServiceRequestContact](servicerequest.md#servicerequestcontact)           | N        | "Last Updated By" contact for changes to the service request.                        |
+| Organization     | [ServiceRequestOrganization](service-request-resources.md#servicerequestorganization) | N        | Organization for which the service request is created.                               |
+| PrimaryContact   | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | Primary Contact on the service request.                                              |
+| LastUpdatedBy    | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | "Last Updated By" contact for changes to the service request.                        |
 | ProductName      | string                                                                      | N        | The name of the product that corresponds to the service request.                     |
 | ProductId        | string                                                                      | N        | The id of the product.                                                               |
 | CreatedDate      | date                                                                        | N        | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                                        | N        | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                                        | N        | The date that the service request was last closed.                                   |
-| FileLinks        | array of [FileInfo](utility-resources.md#fileinfo) resources               | N        | The collection of File Links that pertain to the service request.                    |
-| NewNote          | [ServiceRequestNote](servicerequest.md#servicerequestnote)                 | N        | A note can be added to an existing service request.                                  |
-| Notes            | array of [ServiceRequestNotes](servicerequest.md#servicerequestnote)       | N        | A collection of notes added to the service request.                                  |
+| FileLinks        | array of [FileInfo](utilityauditing-resources.md.md#fileinfo) resources               | N        | The collection of File Links that pertain to the service request.                    |
+| NewNote          | [ServiceRequestNote](service-request-resources.md#servicerequestnote)                 | N        | A note can be added to an existing service request.                                  |
+| Notes            | array of [ServiceRequestNotes](service-request-resources.md#servicerequestnote)       | N        | A collection of notes added to the service request.                                  |
 | CountryCode      | string                                                                      | N        | The country corresponding to the service request.                                    |
 | Attributes       | object                                                                      | N        | Contains "ObjectType": "ServiceRequest".                                             |
 

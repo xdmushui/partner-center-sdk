@@ -69,7 +69,7 @@ Use the following URI parameter to update the service request.
 
 **Request body**
 
-The request body should contain a [ServiceRequest](servicerequest.md) resource. The only required values are those to be updated.
+The request body should contain a [ServiceRequest](service-request-resources.md) resource. The only required values are those to be updated.
 
 **Request example**
 

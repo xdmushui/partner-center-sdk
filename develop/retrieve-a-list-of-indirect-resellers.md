@@ -100,7 +100,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [PartnerRelationship](relationships.md) resources to identify the resellers.
+If successful, the response body contains a collection of [PartnerRelationship](relationships-resources.md) resources to identify the resellers.
 
 **Response success and error codes**
 

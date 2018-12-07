@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Update the [spending budget](customer-usage.md#customerusagesummary)
+Update the [spending budget](customer-usage-resources.md#customerusagesummary)
 allocated for a customer's usage.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites

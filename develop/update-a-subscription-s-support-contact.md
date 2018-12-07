@@ -77,7 +77,7 @@ Use the following path parameters to identify the customer and subscription.
 
 **Request body**
 
-You must include a populated [SupportContact](subscriptions.md#supportcontact) resource in the request body. The support contact must be an existing reseller with a relationship to the partner.
+You must include a populated [SupportContact](subscription-resources.md#supportcontact) resource in the request body. The support contact must be an existing reseller with a relationship to the partner.
 
 **Request example**
 
@@ -113,7 +113,7 @@ Expect: 100-continue
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, the response body contains the [SupportContact](subscriptions.md#supportcontact) resource.
+If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.
 
 **Response success and error codes**
 

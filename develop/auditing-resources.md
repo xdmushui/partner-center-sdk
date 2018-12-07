@@ -141,7 +141,7 @@ application.
 </tr>
 <tr class="even">
 <td>attributes</td>
-<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
+<td><a href="utilityauditing-resources.md.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>

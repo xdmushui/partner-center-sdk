@@ -33,7 +33,7 @@ If you are a Partner who is a domain registrar, you can use the verifieddomain A
 
 **Custom verified domains**
 
-When adding a custom verified domain, a domain that is not registered on onmicrosoft.com, you must set the [CustomerUser.immutableId](user.md#customeruser) property to a unique ID value for the customer you are adding the domain for. This unique identifier is required during the validation process when the domain is being verified. For more information about customer user accounts, see [create user accounts for a customer](create-user-accounts-for-a-customer.md).
+When adding a custom verified domain, a domain that is not registered on onmicrosoft.com, you must set the [CustomerUser.immutableId](user-resources.md#customeruser) property to a unique ID value for the customer you are adding the domain for. This unique identifier is required during the validation process when the domain is being verified. For more information about customer user accounts, see [create user accounts for a customer](create-user-accounts-for-a-customer.md).
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/>REST Request
 

@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-How to purchase add-ons through a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
+How to purchase add-ons through a cart. For more information about what is currently available to sell, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learningauditing-resources.md).
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -124,7 +124,7 @@ Use the following path parameter to identify the customer.
 
 **Request body**
 
-This table describes the [Cart](cart.md) properties in the request body.
+This table describes the [Cart](cart-resources.md) properties in the request body.
 
 | Property              | Type             | Required        | Description |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
@@ -133,9 +133,9 @@ This table describes the [Cart](cart.md) properties in the request body.
 | lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
 | expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
-| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart.md#cartlineitem) resources.                                             |
+| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                             |
 
-This table describes the [CartLineItem](cart.md#cartlineitem) properties in the request body.
+This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
 
 | Property             | Type                             | Description                                                                                                                                           |
@@ -220,7 +220,7 @@ MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
 
 ### REST Response
 
-If successful, this method returns the populated [Cart](cart.md) resource in the response body.
+If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
 **Response example**
 
@@ -323,7 +323,7 @@ MS-CorrelationId: 182474ba-7303-4d0f-870a-8c7fba5ccc4b
 
 ### REST Response
 
-If successful, this method returns the populated [Cart](cart.md) resource in the response body.
+If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
 **Response example**
 

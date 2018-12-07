@@ -104,7 +104,7 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, the response body contains the collection of [Subscription](subscriptions.md) resources.
+If successful, the response body contains the collection of [Subscription](subscription-resources.md) resources.
 
 **Response success and error codes**
 
@@ -167,4 +167,4 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+ - [Partner Center Analytics - Resources](partner-center-analyticsauditing-resources.md.md)

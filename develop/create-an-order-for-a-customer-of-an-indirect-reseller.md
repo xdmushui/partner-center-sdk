@@ -288,7 +288,7 @@ Expect: 100-continue
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains the populated [Order](orders.md) resource
+If successful, the response body contains the populated [Order](order-resources.md) resource
 
 **Response success and error codes**
 

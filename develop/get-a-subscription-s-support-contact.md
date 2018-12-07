@@ -85,7 +85,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, the response body contains the [SupportContact](subscriptions.md#supportcontact) resource.
+If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.
 
 **Response success and error codes**
 

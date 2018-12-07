@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Updates a [Subscription](subscriptions.md) to increase or decrease the quantity of licenses.
+Updates a [Subscription](subscription-resources.md) to increase or decrease the quantity of licenses.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription in question that you wish to rename. To finish, change the value in the **Quantity** field, then select **Submit.**
 
@@ -117,7 +117,7 @@ Connection: Keep-Alive
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns updated [Subscription](subscriptions.md) resource properties in the response body.
+If successful, this method returns updated [Subscription](subscription-resources.md) resource properties in the response body.
 
 **Response success and error codes**
 

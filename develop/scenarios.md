@@ -49,7 +49,7 @@ All of the following scenarios can be completed three different ways:
 <td><p><a href="usage-analytics.md">Analytics</a></p></td>
 <td><p>Retrieve analytics</p>
 <ul>
-<li><p><a href="partner-center-analytics-resources.md">Partner Center Analytics - Resources</a></p></li>
+<li><p><a href="partner-center-analyticsauditing-resources.md.md">Partner Center Analytics - Resources</a></p></li>
 <li><p><a href="get-all-azure-usage-analytics.md">Get all Azure usage analytics information</a></p></li>
 <li><p><a href="get-all-indirect-resellers-analytics.md">Get all indirect resellers analytics information</a></p></li>
 <li><p><a href="get-all-referrals-analytics.md">Get all referrals analytics information</a></p></li>
@@ -296,7 +296,7 @@ Sometimes, Microsoft works directly with resellers who sell to customers. Altern
 
 ### <span id="What_s_getting_sold_______"/><span id="what_s_getting_sold_______"/><span id="WHAT_S_GETTING_SOLD_______"/>What's getting sold?
 
-Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learning-resources).
+Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [CSP agreements, price lists, and offers](https://msdn.microsoft.com/partner-center/csp-documents-and-learningauditing-resources.md).
 
 CSP partners are resellers who have customers and sell them Microsoft products from the current offer list. After the customers sign their agreement, the reseller places an **order** for one or more offers. Some offers include **add-ons** like more space or extra features, which are tracked together with the parent offer. The orders are processed, and then the customer is able to use their **subscriptions**. Microsoft bills the reseller or distributor each month based on the number of licenses and the usage for each customer.
 

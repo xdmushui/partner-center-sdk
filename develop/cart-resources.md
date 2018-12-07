@@ -59,7 +59,7 @@ Represents an error that occurs after a cart is created.
 
 | Property         | Type                                   | Description                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
-| errorCode        | [CartErrorCode](cart.md#carterrorcode) | The type of cart error.                                                                       |
+| errorCode        | [CartErrorCode](cart-resources.md#carterrorcode) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
 
 
@@ -91,8 +91,8 @@ Represents the result of a cart checkout.
 
 | Property    | Type                                              | Description                     |
 |-------------|---------------------------------------------------|---------------------------------|
-| orders      | List of [Order](orders.md#order) objects.         | The collection of orders.       |
-| orderErrors | List of [OrderError](cart.md#ordererror) objects. | The collection of order errors. |
+| orders      | List of [Order](order-resources.md#order) objects.         | The collection of orders.       |
+| orderErrors | List of [OrderError](cart-resources.md#ordererror) objects. | The collection of order errors. |
  
 
 

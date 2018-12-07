@@ -94,7 +94,7 @@ Use the following path and query parameters when creating the request.
 
 **Request body**
 
-The request body must contain an array of [Device](devicedeployment.md#device) objects. The following combinations of fields for identifying a device are accepted:
+The request body must contain an array of [Device](device-deployment-resources.md#device) objects. The following combinations of fields for identifying a device are accepted:
 
 - hardwareHash + productKey.
 - hardwareHash + serialNumber.

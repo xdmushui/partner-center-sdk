@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of add-ons that a customer has chosen to add to their [Subscription](subscriptions.md).
+Gets a collection of add-ons that a customer has chosen to add to their [Subscription](subscription-resources.md).
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 

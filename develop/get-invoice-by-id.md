@@ -78,7 +78,7 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 
-If successful, this method returns an [Invoice](invoice.md#invoice) resource in the response body.
+If successful, this method returns an [Invoice](invoice-resources.md#invoice) resource in the response body.
 
 **Response success and error codes**
 

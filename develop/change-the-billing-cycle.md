@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Updates an [Order](orders.md) from monthly to annual billing or from annual to monthly billing.
+Updates an [Order](order-resources.md) from monthly to annual billing or from annual to monthly billing.
 
 In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
 
@@ -92,7 +92,7 @@ The following tables describe the properties in the request body.
 |--------------------|------------------|----------|----------------------------------------------------------------------------|
 | Id                 | string           |    N     | An order identifier that is supplied upon successful creation of the order |
 |ReferenceCustomerId | string           |    Y     | The customer identifier                                                    |
-| BillingCycle       | string           |    Y     | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). |
+| BillingCycle       | string           |    Y     | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](product-resources.md#billingcycletype). |
 | LineItems          | array of objects |    Y     | An array of [OrderLineItem](#orderlineitem) resources                      |
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |

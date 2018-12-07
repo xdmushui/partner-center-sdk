@@ -31,13 +31,13 @@ Describes a partner's order.
 |--------------------|----------------------------------------------------|-------------------------------------------------------------|
 | id                 | string                                             | An order identifier that is supplied upon successful creation of the order.                                   |
 |referenceCustomerId | string                                             | The customer identifier. |
-| billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](products.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
+| billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](product-resources.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
 | lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
 | status             | string                                             | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](#orderstatus).        |
-| links              | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
-| attributes         | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the Order.       |
+| links              | [OrderLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the Order.            |
+| attributes         | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the Order.       |
 
 
 
@@ -67,8 +67,8 @@ Represents the resource links corresponding to the order.
 
 | Property           | Type                                         | Description                                                                   |
 |--------------------|----------------------------------------------|-------------------------------------------------------------------------------|
-| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve provisioning status for the order.       |
-| self               | [Link](utility-resources.md#Link)            | The link to retrieve the order resource.                                      |
+| provisioningStatus | [Link](utilityauditing-resources.md.md#Link)            | When populated, the link to retrieve provisioning status for the order.       |
+| self               | [Link](utilityauditing-resources.md.md#Link)            | The link to retrieve the order resource.                                      |
 
 
 
@@ -79,9 +79,9 @@ Represents the full subscription associated with the order.
 
 | Property           | Type                                         | Description                                                                          |
 |--------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
-| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
-| sku                | [Link](utility-resources.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
-| subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
+| provisioningStatus | [Link](utilityauditing-resources.md.md#Link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
+| sku                | [Link](utilityauditing-resources.md.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
+| subscription       | [Link](utilityauditing-resources.md.md#Link)            | When populated, the link to the full subscription information.                       |
 
  
 

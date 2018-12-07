@@ -81,7 +81,7 @@ Connection: Keep-Alive
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns a collection of [Order](orders.md) resources in the response body.
+If successful, this method returns a collection of [Order](order-resources.md) resources in the response body.
 
 **Response success and error codes**
 

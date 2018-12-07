@@ -88,7 +88,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a [Product](products.md#product) resource.
+If successful, the response body contains a [Product](product-resources.md#product) resource.
 
 **Response success and error codes**
 

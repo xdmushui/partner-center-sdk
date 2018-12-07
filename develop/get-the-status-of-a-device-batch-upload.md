@@ -84,7 +84,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response contains a [BatchUploadDetails](devicedeployment.md#batchuploaddetails) resource.
+If successful, the response contains a [BatchUploadDetails](device-deployment-resources.md#batchuploaddetails) resource.
 
 **Response success and error codes**
 

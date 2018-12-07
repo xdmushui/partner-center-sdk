@@ -24,7 +24,7 @@ How to get a collection of entitlements.
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
+To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement-resources.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -79,7 +79,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, the response body contains a collection of [Entitlement](entitlement.md#entitlement) resources.
+If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
 **Response success and error codes**
 

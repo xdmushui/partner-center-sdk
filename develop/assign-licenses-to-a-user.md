@@ -126,7 +126,7 @@ Use the following path parameters to identify the customer and user.
 
 **Request body**
 
-You must include a [LicenseUpdate](licenses.md#licenseupdate) resource in the request body that specifies the licenses to assign.
+You must include a [LicenseUpdate](license-resources.md#licenseupdate) resource in the request body that specifies the licenses to assign.
 
 **Request example**
 
@@ -159,7 +159,7 @@ Expect: 100-continue
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
-If successful, an HTTP response status code 201 is returned and the response body contains a [LicenseUpdate](licenses.md#licenseupdate) resource with the license information.
+If successful, an HTTP response status code 201 is returned and the response body contains a [LicenseUpdate](license-resources.md#licenseupdate) resource with the license information.
 
 **Response success and error codes**
 

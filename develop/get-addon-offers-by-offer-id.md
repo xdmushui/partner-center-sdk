@@ -84,7 +84,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this method returns a collection of [Offer](offer.md) objects in the response body.
+If successful, this method returns a collection of [Offer](offer-resources.md) objects in the response body.
 
 **Response success and error codes**
 

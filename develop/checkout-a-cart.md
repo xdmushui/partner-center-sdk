@@ -102,7 +102,7 @@ No-Content-Body
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, the response body contains the populated [CartCheckoutResult](cart.md#cartcheckoutresult) resource.
+If successful, the response body contains the populated [CartCheckoutResult](cart-resources.md#cartcheckoutresult) resource.
 
 **Response success and error codes**
 

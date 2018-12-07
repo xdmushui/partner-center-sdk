@@ -28,7 +28,7 @@ Contains partner level insights about license deployment.
 | processedDateTime         | string in UTC date-time format                                 | The date and time when the data was aggregated.                                     |
 | serviceName               | string                                                         | The service name (e.g. o365, crm).                                                  |
 | channel                   | string                                                         | The channel name of the service (e.g. reseller).                                    |
-| attributes                | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesDeploymentInsights" |
+| attributes                | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesDeploymentInsights" |
 
  
 
@@ -44,7 +44,7 @@ Contains partner level insights about license usage.
 | processedDateTime            | string in UTC date-time format                                 | The date and time when the data was aggregated.                                |
 | serviceName                  | string                                                         | The service name (e.g. o365, crm).                                             |
 | channel                      | string                                                         | The channel name of the service (e.g. reseller).                               |
-| attributes                   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesUsageInsights" |
+| attributes                   | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesUsageInsights" |
 
  
 
@@ -65,7 +65,7 @@ Contains customer level insights about license deployment.
 | processedDateTime | string in UTC date-time format                                 | The date and time when the data was aggregated.                                      |
 | serviceName       | string                                                         | The service name (e.g. o365, crm).                                                   |
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                     |
-| attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesDeploymentInsights" |
+| attributes        | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesDeploymentInsights" |
 
  
 
@@ -88,7 +88,7 @@ Contains customer level insights about license usage.
 | processedDateTime | string in UTC date-time format                                 | The date and time when the data was aggregated.                                 |
 | serviceName       | string                                                         | The service name (e.g. o365, crm).                                              |
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                |
-| attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesUsageInsights" |
+| attributes        | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesUsageInsights" |
 
  
 

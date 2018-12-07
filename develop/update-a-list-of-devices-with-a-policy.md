@@ -98,7 +98,7 @@ Use the following path parameters when creating the request.
 
 **Request body**
 
-The request body must contain a [DevicePolicyUpdateRequest](devicedeployment.md#devicepolicyupdaterequest) resource.
+The request body must contain a [DevicePolicyUpdateRequest](device-deployment-resources.md#devicepolicyupdaterequest) resource.
 
 **Request example**
 

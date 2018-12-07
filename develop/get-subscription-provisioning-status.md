@@ -84,7 +84,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) resource.
+If successful, the response body contains a [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) resource.
 
 **Response success and error codes**
 
@@ -115,5 +115,5 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 
 ## <span id="Remarks"/><span id="remarks"/><span id="REMARKS"/>Remarks
 
-- During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscriptions.md#subscriptionprovisioningstatus) is set to "pending".
+- During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) is set to "pending".
 - The status field is updated every fifteen minutes.

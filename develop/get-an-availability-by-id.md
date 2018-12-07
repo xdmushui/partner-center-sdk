@@ -25,7 +25,7 @@ Gets an availability for the specified product and SKU using an availability ID.
 
 ### C# 
 
-To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
+To get details of a specific [availability](product-resources.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](product-resources.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
 
 ```csharp
 IAggregatePartner partnerOperations;
@@ -40,7 +40,7 @@ var availability = partnerOperations.Products.ByCountry(countryCode).ById(produc
 
 ### Java
 
-To get details of a specific [availability](products.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](products.md#sku) operations. From the resulting interface, select the **getAvailabilities** function to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **byId()** function to get the operations for that specific availability and then call the **get()** function to retrieve the availability details.
+To get details of a specific [availability](product-resources.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](product-resources.md#sku) operations. From the resulting interface, select the **getAvailabilities** function to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **byId()** function to get the operations for that specific availability and then call the **get()** function to retrieve the availability details.
 
 ```java
 IAggregatePartner partnerOperations;
@@ -55,7 +55,7 @@ Availability availability = partnerOperations.getProducts().byCountry(countryCod
 
 ### PowerShell
 
-To get details of a specific [availability](products.md#availability), execute the [**Get-PartnerProductAvailability**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductAvailability.md) and specify the **AvailabilityId**, **CountryCode**, **ProductId**, and **SkuId** parameters to retrieve the availability details.
+To get details of a specific [availability](product-resources.md#availability), execute the [**Get-PartnerProductAvailability**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductAvailability.md) and specify the **AvailabilityId**, **CountryCode**, **ProductId**, and **SkuId** parameters to retrieve the availability details.
 
 ```powershell
 Get-PartnerProductAvailability -Product $productId -SkuId $skuId -AvailabilityId $availabilityId
@@ -104,7 +104,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, the response body contains a collection of [SKU](products.md#sku) resources.
+If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
 
 **Response success and error codes**
 

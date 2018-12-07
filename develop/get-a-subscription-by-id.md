@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a [Subscription](subscriptions.md) resource that matches the customer ID and the subscription ID.
+Gets a [Subscription](subscription-resources.md) resource that matches the customer ID and the subscription ID.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -85,7 +85,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, this method returns a [Subscription](subscriptions.md) resource in the response body.
+If successful, this method returns a [Subscription](subscription-resources.md) resource in the response body.
 
 **Response success and error codes**
 

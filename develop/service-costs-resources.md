@@ -31,8 +31,8 @@ specified customer during the billing period.
 | currencyCode     | string                                                         | Represents the currency used for the costs.                      |
 | currencySymbol   | string                                                         | The currency symbol used for the costs.                          |
 | customerId       | string                                                         | The id of the customer making the purchase.                      |
-| links            | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                              |
-| attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                         |
+| links            | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links.                                              |
+| attributes       | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                         |
 
  
 
@@ -69,8 +69,8 @@ Describes a single item purchased by the customer.
 
 | Property             | Type                               | Description                         |
 |----------------------|------------------------------------|-------------------------------------|
-| serviceCostLineItems | [Link](utility-resources.md#link) | The URI to retrieve the line items. |
-| self                 | [Link](utility-resources.md#link) | The self URI.                       |
+| serviceCostLineItems | [Link](utilityauditing-resources.md.md#link) | The URI to retrieve the line items. |
+| self                 | [Link](utilityauditing-resources.md.md#link) | The self URI.                       |
 
  
 
