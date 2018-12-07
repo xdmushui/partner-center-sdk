@@ -167,7 +167,7 @@
 ### [Partner Center REST URLs](partner-center-rest-urls.md)
 ### [Partner Center REST headers](headers.md)
 ### [Partner Center REST resources](partner-center-rest-resources.md)
-#### [Agreement](agreementauditing-resources.md.md)
+#### [Agreement](agreement-resources.md)
 #### [Agreement metadata](agreement-metadata-resources.md)
 #### [Analytics](analytics-resources.md)
 #### [Auditing](auditing.md)
