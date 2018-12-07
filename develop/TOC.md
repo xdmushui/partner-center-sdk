@@ -175,7 +175,7 @@
 #### [Azure utilization record](azure-utilization-record.md)
 #### [Cart](cart.md) 
 #### [Conversions](conversions.md)
-#### [Country information](country-information.md)
+#### [Country information](country-information-resources.md)
 #### [Customer](customer-resources.md)
 #### [Customer usage](customer-usage.md)
 #### [Device deployment](devicedeployment.md)

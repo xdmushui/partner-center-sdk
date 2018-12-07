@@ -79,7 +79,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="country-information.md">CountryInformation</a></td>
+<td><a href="country-information-resources.md">CountryInformation</a></td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
