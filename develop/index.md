@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-author: v-chmccl
+ms.date: 12/07/2018
 ms.topic: landing-page
 searchScope: []
 ---
