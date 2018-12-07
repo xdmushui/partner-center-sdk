@@ -31,7 +31,7 @@ Describes a user license.
 |--------------|----------------------------------------------------------------|----------------------------------------------------------------|
 | servicePlans | array of ServicePlan resources                                 | The collection of service plans that correspond to the license |
 | productSKU   | ProductSku                                                     | The sku of the product that corresponds to the license.        |
-| attributes   | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the license.          |
+| attributes   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the license.          |
 
  
 
@@ -45,7 +45,7 @@ Provides information used to assign or remove licenses from a user.
 | licensestoAssign | array of objects                                               | Array of [LicenseAssignment](#licenseassignment) objects. |
 | licensesToRemove | array of strings                                               | The product SKU identifiers of the licenses to remove.    |
 | licenseWarnings  | array of objects                                               | Array of [LicenseWarning](#licensewarning) objects.       |
-| attributes       | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                  |
+| attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                  |
 
  
 
@@ -158,7 +158,7 @@ Describes a subscribed product owned by a tenant.
 | productSku       | ProductSku                                                     | The product sku.                                                                                  |
 | servicePlans     | array of ServicePlan resources                                 | The collection of service plans of a product.                                                     |
 | capabilityStatus | string                                                         | The sku status of a product.                                                                      |
-| attributes       | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the resource.                                            |
+| attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the resource.                                            |
 
  
 

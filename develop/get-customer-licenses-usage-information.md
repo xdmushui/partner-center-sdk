@@ -80,7 +80,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [CustomerLicensesUsageInsights](analyticsauditing-resources.md.md#customerlicensesusageinsights) resources that provide information about licenses usage.
+If successful, the response body contains a collection of [CustomerLicensesUsageInsights](analytics-resources.md#customerlicensesusageinsights) resources that provide information about licenses usage.
 
 **Response success and error codes**
 

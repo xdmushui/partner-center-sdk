@@ -35,8 +35,8 @@ Describes invoice related resources.
 | documentType    | string                                                         | The document type of the invoice: "Credit Note", "Invoice".                                                                                                                           |
 | amendsOf        | string                                                         | The reference number of the document of which this document is an amendment.                                                                                                                                  |
 | invoiceType     | string                                                         | The type of invoice: "recurring", "one\_time".                                                                                                                                                        |
-| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links.                                                                                                                                                                                  |
-| attributes      | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                                                                                                                             |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                  |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                             |
 
  
 
@@ -50,8 +50,8 @@ represented by an InvoiceDetail resource.
 |---------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | invoiceLineItemType | string                                                         | The type of invoice detail: "none", "usage\_line\_items", "billing\_line\_items". |
 | billingProvider     | string                                                         | The billing provider: "none", "office", "azure" or "azure\_data\_market".         |
-| links               | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links.                                                               |
-| attributes          | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                          |
+| links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                               |
+| attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                          |
 
  
 
@@ -65,7 +65,7 @@ InvoiceLineItem.
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | invoiceLineItemType | string                                                         | The type of invoice line item: "none", "usage\_line\_items", "billing\_line\_items". |
 | billingProvider     | string                                                         | The billing provider: "none", "office", "azure" or "azure\_data\_market".            |
-| attributes          | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                             |
+| attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                             |
 
  
 
@@ -85,8 +85,8 @@ Describes a summary of the balance and total charges of an invoice.
 | lastPaymentAmount        | number                                                         | The amount of the last payment.                                       |
 | latestInvoiceDate        | string in UTC date-time format                                 | The date the last invoice for the customer was created.               |
 | details                  | array of [InvoiceSummaryDetail](#invoicesummarydetail) objects | The invoice summary detail.                                           |
-| links                    | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)            | The resource links.                                                   |
-| attributes               | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes)  | The metadata attributes.                                              |
+| links                    | [ResourceLinks](utility-resources.md#resourcelinks)            | The resource links.                                                   |
+| attributes               | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                              |
 
  
 

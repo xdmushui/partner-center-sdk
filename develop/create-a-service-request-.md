@@ -91,7 +91,7 @@ This table describes the required and optional properties in the request body.
 | CreatedDate      | date                                                                        | N        | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                                        | N        | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                                        | N        | The date that the service request was last closed.                                   |
-| FileLinks        | array of [FileInfo](utilityauditing-resources.md.md#fileinfo) resources               | N        | The collection of File Links that pertain to the service request.                    |
+| FileLinks        | array of [FileInfo](utility-resources.md#fileinfo) resources               | N        | The collection of File Links that pertain to the service request.                    |
 | NewNote          | [ServiceRequestNote](service-request-resources.md#servicerequestnote)                 | N        | A note can be added to an existing service request.                                  |
 | Notes            | array of [ServiceRequestNotes](service-request-resources.md#servicerequestnote)       | N        | A collection of notes added to the service request.                                  |
 | CountryCode      | string                                                                      | N        | The country corresponding to the service request.                                    |

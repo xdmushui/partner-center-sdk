@@ -90,7 +90,7 @@ This table describes the required properties in the request body.
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [BillingProfile](#billingprofile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
 | [CompanyProfile](#companyprofile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
-| [AssociatedPartnerId](customerauditing-resources.md.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
+| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
  
 
@@ -98,7 +98,7 @@ This table describes the required properties in the request body.
 
 **Billing Profile**
 
-This table describes the minimum required fields from the [CustomerBillingProfile](customerauditing-resources.md.md#customerbillingprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerBillingProfile](customer-resources.md#customerbillingprofile) resource needed to create a new customer.
 
 | Name             | Type                                     | Required | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,7 +106,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | culture          | string                                   | Yes      | Their preferred culture for communication and currency, such as "en-US". See [Table of Language Culture Names](https://msdn.microsoft.com/library/ee825488%28v=cs.20%29.aspx) for the supported cultures. |
 | language         | string                                   | Yes      | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
 | company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
-| default\_address | [Address](utilityauditing-resources.md.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utilityauditing-resources.md.md#address) resource for information on any length limitations.                                             |
+| default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
  
 
@@ -114,7 +114,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 
 **Company Profile**
 
-This table describes the minimum required fields from the [CustomerCompanyProfile](customerauditing-resources.md.md#customercompanyprofile) resource needed to create a new customer.
+This table describes the minimum required fields from the [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) resource needed to create a new customer.
 
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
@@ -186,7 +186,7 @@ Connection: Keep-Alive
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response contains a [Customer](customerauditing-resources.md.md#customer) resource for the new customer.
+If successful, the response contains a [Customer](customer-resources.md#customer) resource for the new customer.
 
 **Response success and error codes**
 

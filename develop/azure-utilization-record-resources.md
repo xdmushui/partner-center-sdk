@@ -48,7 +48,7 @@ Describes the properties of an Azure Utilization Record resource.
 | unit           | string                                    | No       | The type of quantity (hours, bytes, etc.) This property is optional                                                                                                                     |
 | infoFields     | object                                    | Yes      | Key-value pairs of instance level details. This object may be empty.                                                                                                                    |
 | instanceData   | object                                    | No       | Contains an [AzureInstanceData](#azureinstancedata) object that contains key-value pairs of instance level details. This property is optional and may not be included.                  |
-| attributes     | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | Yes      | The metadata attributes. Contains "objectType": "AzureUtilizationRecord"                                                                                                                |
+| attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | Yes      | The metadata attributes. Contains "objectType": "AzureUtilizationRecord"                                                                                                                |
 
  
 

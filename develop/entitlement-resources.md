@@ -95,7 +95,7 @@ The artifact associated with an Azure Reserved Instance entitlement. It inherits
 
 | Property   | Type                           | Description                                        |
 |------------|--------------------------------|----------------------------------------------------|
-| link       | [Link](./utilityauditing-resources.md.md#link) | The link to get all associated artifact details.   |
+| link       | [Link](./utility-resources.md#link) | The link to get all associated artifact details.   |
 | resourceID | string                         | The ID of the Azure reservation order or resource. |
 
 
@@ -134,7 +134,7 @@ The artifact associated with an Azure Reserved Virtual Machine Instance entitlem
 
 | Property   | Type                              | Description                                        |
 |------------|-----------------------------------|----------------------------------------------------|
-| link       | [Link](utilityauditing-resources.md.md#link) | The link to get all associated artifact details.   |
+| link       | [Link](utility-resources.md#link) | The link to get all associated artifact details.   |
 | resourceID | string                            | The ID of the Azure reservation order or resource. |
 
 

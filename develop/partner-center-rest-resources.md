@@ -32,7 +32,7 @@ samples](partner-center-samples.md) section.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><a href="analyticsauditing-resources.md.md">Analytics</a></td>
+<td><a href="analytics-resources.md">Analytics</a></td>
 <td><ul>
 <li>PartnerLicensesDeploymentInsights</li>
 <li>PartnerLicensesUsageInsights</li>
@@ -79,14 +79,14 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="country-informationauditing-resources.md.md">CountryInformation</a></td>
+<td><a href="country-information-resources.md">CountryInformation</a></td>
 <td><ul>
 <li>CountryInformation</li>
 <li>CountryValidationRules</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="customerauditing-resources.md.md">Customer</a></td>
+<td><a href="customer-resources.md">Customer</a></td>
 <td><ul>
 <li>Customer</li>
 <li>CustomerCompanyProfile</li>
@@ -270,7 +270,7 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="odd">
-<td><a href="utilityauditing-resources.md.md">Utility Resources</a></td>
+<td><a href="utility-resources.md">Utility Resources</a></td>
 <td><ul>
 <li>Address</li>
 <li>Contact</li>

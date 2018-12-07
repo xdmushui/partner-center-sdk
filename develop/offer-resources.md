@@ -54,7 +54,7 @@ to their customers.
 | product                     | [OfferProduct](#offerproduct)           | Gets the offer product.                                                                           |
 | unitType                    | string                    | The type of the unit.                                                                                      |
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
-| attributes                  | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
+| attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
  
 
@@ -72,8 +72,8 @@ line.
 | rank       | int                                                            | The category rank or priority compared to other categories in the same offer. This property should be set only if there is more than one offer category for a given offer. |
 | locale     | string                                                         | The locale in which the offer applies.                                                                                                                        |
 | country    | string                                                         | The country/region where the offer applies.                                                                                                                   |
-| links      | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
-| attributes | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
+| links      | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
+| attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
 
  
 

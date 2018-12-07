@@ -167,4 +167,4 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analyticsauditing-resources.md.md)
+ - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

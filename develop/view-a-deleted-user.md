@@ -93,7 +93,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
 
 
-If successful, this method returns a collection of [CustomerUser](user.md#customeruser) resources in the response body.
+If successful, this method returns a collection of [CustomerUser](user-resources.md#customeruser) resources in the response body.
 
 **Response success and error codes**
 

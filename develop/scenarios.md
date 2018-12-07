@@ -49,7 +49,7 @@ All of the following scenarios can be completed three different ways:
 <td><p><a href="usage-analytics.md">Analytics</a></p></td>
 <td><p>Retrieve analytics</p>
 <ul>
-<li><p><a href="partner-center-analyticsauditing-resources.md.md">Partner Center Analytics - Resources</a></p></li>
+<li><p><a href="partner-center-analytics-resources.md">Partner Center Analytics - Resources</a></p></li>
 <li><p><a href="get-all-azure-usage-analytics.md">Get all Azure usage analytics information</a></p></li>
 <li><p><a href="get-all-indirect-resellers-analytics.md">Get all indirect resellers analytics information</a></p></li>
 <li><p><a href="get-all-referrals-analytics.md">Get all referrals analytics information</a></p></li>

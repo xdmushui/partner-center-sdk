@@ -108,8 +108,8 @@ This table describes the [Order](order-resources.md) properties in the request b
 | currencyCode         | string                      | No                              | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate         | datetime                    | No                              | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
 | status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](order-resources.md#orderstatus).        |
-| links                | [OrderLinks](utilityauditing-resources.md.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
-| attributes           | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. | 
+| links                | [OrderLinks](utility-resources.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. | 
 
 
 
@@ -134,7 +134,7 @@ This table describes the [OrderLineItem](order-resources.md#orderlineitem) prope
 | partnerIdOnRecord    | string | No       | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
 | links                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
-| attributes           | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
  
 
 **Request example**

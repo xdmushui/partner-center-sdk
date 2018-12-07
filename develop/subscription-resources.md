@@ -56,7 +56,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | contractType         | string                                                        | Read-only. The type of contract: "subscription", "productKey", or "redemptionCode".                                                                                           |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
-| attributes           | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 
  
 
@@ -67,11 +67,11 @@ Describes the collection of links attached to a subscription resource.
 
 | Property           | Type                               | Description                           |
 |--------------------|------------------------------------|---------------------------------------|
-| offer              | [Link](utilityauditing-resources.md.md#link) | Gets or sets the offer.               |
-| parentSubscription | [Link](utilityauditing-resources.md.md#link) | Gets or sets the parent subscription. |
-| self               | [Link](utilityauditing-resources.md.md#link) | The self URI.                         |
-| next               | [Link](utilityauditing-resources.md.md#link) | The next page of items.               |
-| previous           | [Link](utilityauditing-resources.md.md#link) | The previous page of items.           |
+| offer              | [Link](utility-resources.md#link) | Gets or sets the offer.               |
+| parentSubscription | [Link](utility-resources.md#link) | Gets or sets the parent subscription. |
+| self               | [Link](utility-resources.md#link) | The self URI.                         |
+| next               | [Link](utility-resources.md#link) | The next page of items.               |
+| previous           | [Link](utility-resources.md#link) | The previous page of items.           |
 
  
 
@@ -86,7 +86,7 @@ Provides information about the provisioning status of a subscription.
 | status     | string                                                         | Indicates the provisioning status: "success", "pending" or "failed". |
 | quantity   | number                                                         | Provides the subscription quantity after provisioning.               |
 | endDate    | string in UTC date time format                                 | The end date of the subscription.                                    |
-| attributes | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes)  | The metadata attributes.                                             |
+| attributes | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                             |
 
  
 
@@ -112,8 +112,8 @@ Represents a support contact for a customer's subscription.
 | supportTenantId | string                                                         | A GUID formatted string that indicates the support contact's tenant identifier. |
 | supportMpnId    | string                                                         | The contact's Microsoft Partner Network (MPN) identifier.                       |
 | name            | string                                                         | The name of the support contact.                                                |
-| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)            | The support contact related links.                                              |
-| attributes      | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                                              |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
 
 
 

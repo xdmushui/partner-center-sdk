@@ -202,7 +202,7 @@ Content-Length: 0
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [Azure usage](partner-center-analyticsauditing-resources.md.md#azure_usage) resources.
+If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
 
 **Response success and error codes**
 
@@ -231,5 +231,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
-  - [Partner Center Analytics - Resources](partner-center-analyticsauditing-resources.md.md)
+  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 

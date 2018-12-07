@@ -28,7 +28,7 @@ Represents a relationship between two partners.
 | name             | string                                                         | The name of the partner.                                                                                                                       |
 | relationshipType | string                                                         | The type of relationship.                                                                                                                      |
 | state            | string                                                         | The state of the relationship (e.g. "active").                                                                                                 |
-| attributes       | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                                                                       |
+| attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                       |
 
  
 
@@ -41,7 +41,7 @@ partner.
 | Property   | Type                                                           | Description                   |
 |------------|----------------------------------------------------------------|-------------------------------|
 | url        | string                                                         | The relationship request URL. |
-| attributes | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.      |
+| attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.      |
 
  
 

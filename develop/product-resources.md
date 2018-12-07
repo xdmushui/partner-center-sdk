@@ -51,8 +51,8 @@ Contains a list of links for a [Product](#product).
 
 | Property        | Type                                                          | Description                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
-| skus            | [Link](utilityauditing-resources.md.md#link)                             | The link for accessing the underlying SKUs.          |
-| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks)           | The resource links contained within this resource.   |
+| skus            | [Link](utility-resources.md#link)                             | The link for accessing the underlying SKUs.          |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
 
 
 
@@ -75,7 +75,7 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | inventoryVariables     | array of strings | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> "CustomerId" – The ID of the customer that the purchase would be for.<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.</br> "ArmRegionName" – The region for which to verify inventory. This value must match the "ArmRegionName" from the SKU’s DynamicAttributes. |
 | provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope – The scope for an Azure reservation purchase: "Single", "Shared".<br/> "AzureSubscriptionId" – The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" – The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
-| links                  | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the SKU.                   |
+| links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
 
 
@@ -92,7 +92,7 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | defaultCurrency | string                        | The default currency supported for this availability.                               |
 | segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
 | country         | string                        | The country or region (in ISO country code format) where this availability applies. |
-| links           | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the availability. |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
 
 
@@ -104,7 +104,7 @@ Represents a request to check inventory against certain catalog items.
 |------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------|
 | targetItems      | array of [InventoryItem](#inventoryitem)            | The list of catalog items that the inventory check will evaluate.                           |
 | inventoryContext | key/value pairs                                     | The dictionary of context values that are needed to carry out the inventory check(s). Each [SKU](#sku) of the products will define which values (if any) are needed to carry out this operation.  |
-| links            | [ResourceLinks](utilityauditing-resources.md.md#resourcelinks) | The resource links contained within the inventory check request.                            |
+| links            | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the inventory check request.                            |
 
 
 

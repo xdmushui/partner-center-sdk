@@ -31,7 +31,7 @@ Provides information about a configuration policy.
 | policySettings       | array of strings                                               | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip\_oem\_registration", "skip\_eula". |
 | createdDate          | string in UTC date-time format                                 | The date and time the policy was created.                                                                                                                 |
 | lastModifiedDate     | string in UTC date-time format                                 | The date and time the policy was last modified.                                                                                                           |
-| attributes           | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                                                                                  |
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                  |
 
  
 
@@ -51,7 +51,7 @@ Provides information about a device.
 | policies            | array of objects                                               | The list of policies assigned to the device.                             |
 | uploadedDate        | string in UTC date-time format                                 | The date and time the device details were uploaded.                      |
 | allowedOperations   | array of strings                                               | The list of HTTP methods allowed on a device sync as GET, PATCH, DELETE. |
-| attributes          | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                 |
+| attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                 |
 
  
 
@@ -68,7 +68,7 @@ device in a list of devices.
 | startedTime     | string in UTC date-time format                                 | The date and time that the batch upload process started.                                             |
 | completedTime   | string in UTC date-time format                                 | The date and time that the batch upload process completed.                                           |
 | devicesStatus   | array of [DeviceUploadDetails](#deviceuploaddetails) resources | An array of objects that specify the status of each device information upload.                       |
-| attributes      | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                             |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                             |
 
  
 
@@ -85,7 +85,7 @@ Describes the status of an upload of information about a device.
 | status           | string                                                         | The status of the device information upload: "in-progress", "finished", "finished\_with\_errors". |
 | errorCode        | string                                                         | If the device upload fails, the HTTP status error code returned.                                  |
 | errorDescription | string                                                         | If the device upload fails, the HTTP error description.                                           |
-| attributes       | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                                                          |
+| attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                          |
 
  
 
@@ -100,8 +100,8 @@ Represents a collection of devices.
 | createdBy    | string                                                         | The name of the tenant that created the collection.                   |
 | creationDate | string in UTC date-time format                                 | The data and time that the collection was created.                    |
 | deviceCount  | number                                                         | The number of devices in the collection.                              |
-| devicesLink  | [Link](utilityauditing-resources.md.md#link)                             | A link to the devices contained in this batch.                        |
-| attributes   | [ResourceAttributes](utilityauditing-resources.md.md#resourceattributes) | The metadata attributes.                                              |
+| devicesLink  | [Link](utility-resources.md#link)                             | A link to the devices contained in this batch.                        |
+| attributes   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                              |
 
  
 
@@ -146,7 +146,7 @@ it with devices.
 </tr>
 <tr class="odd">
 <td>attributes</td>
-<td><a href="utilityauditing-resources.md.md#resourceattributes">ResourceAttributes</a></td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>
@@ -185,7 +185,7 @@ policy.
 </tr>
 <tr class="even">
 <td>attributes</td>
-<td><a href="utilityauditing-resources.md.md#resourceattributes">ResourceAttributes</a></td>
+<td><a href="utility-resources.md#resourceattributes">ResourceAttributes</a></td>
 <td>The metadata attributes.</td>
 </tr>
 </tbody>

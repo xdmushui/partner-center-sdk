@@ -98,7 +98,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, this method returns a [Customer](customerauditing-resources.md.md#customer) resource in the response body.
+If successful, this method returns a [Customer](customer-resources.md#customer) resource in the response body.
 
 **Response success and error codes**
 

@@ -42,7 +42,7 @@ request is progressing.
 | CreatedDate      | date                                                          | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                          | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                          | The date that the service request was last closed.                                   |
-| FileLinks        | array of [FileInfo](utilityauditing-resources.md.md#fileinfo) resources | The collection of File Links that pertain to the service request.                    |
+| FileLinks        | array of [FileInfo](utility-resources.md#fileinfo) resources | The collection of File Links that pertain to the service request.                    |
 | NewNote          | [ServiceRequestNote](#servicerequestnote)                     | A note can be added to an existing service request.                                  |
 | Notes            | array of [ServiceRequestNotes](#servicerequestnote)           | A collection of notes added to the service request.                                  |
 | CountryCode      | string                                                        | The country corresponding to the service request.                                    |
