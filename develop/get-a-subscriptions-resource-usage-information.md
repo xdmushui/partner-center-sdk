@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a [collection resource](https://msdn.microsoft.com/library/partnercenter/mt844538.aspx) that contains a list of services within a customer's subscription and their associated rated usage information.
+Gets a collection of [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.azureresourcemonthlyusagerecord) resources representing a list of services within a customer's subscription and their associated rated usage information.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
