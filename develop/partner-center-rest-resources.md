@@ -193,21 +193,6 @@ samples](partner-center-samples.md) section.
 </ul></td>
 </tr>
 <tr class="even">
-<td><a href="referral-resources.md">Referrals</a></td>
-<td><ul>
-<li>Referral</li>
-<li>ReferralStatus</li>
-<li>ReferralSubstatus</li>
-<li>ReferralType</li>
-<li>ReferralQualification</li>
-<li>CustomerProfile</li>
-<li>Consent</li>
-<li>ReferralDetails</li>
-<li>Member</li>
-<li>InviteContext</li>
-</ul></td>
-</tr>
-<tr class="even">
 <td><a href="relationships-resources.md">Relationships</a></td>
 <td><ul>
 <li>PartnerRelationship</li>

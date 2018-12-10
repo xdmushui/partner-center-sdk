@@ -36,16 +36,6 @@ All of the following scenarios can be completed three different ways:
 </colgroup>
 <tbody>
 <tr>
-<td><p><a href="referrals.md">Referrals</a></p></td>
-<td><p>Referrals</p>
-<ul>
-<li><p><a href="get-a-referral-by-id.md">Get a referral by ID</a></p></li> 
-<li><p><a href="get-a-list-of-referrals.md">Get a list of referrals</a></p></li> 
-<li><p><a href="update-a-referral.md">Update a referral</a></p></li> 
-</ul>
-</td>
-</tr>	
-<tr>
 <td><p><a href="usage-analytics.md">Analytics</a></p></td>
 <td><p>Retrieve analytics</p>
 <ul>
@@ -120,6 +110,9 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="confirm-customer-consent.md">Confirm customer acceptance of Microsoft Cloud agreement</a></p></li>
 <li><p><a href="get-agreement-metadata.md">Get agreement metadata for Microsoft Cloud Agreement</a></p></li>
 <li><p><a href="get-confirmation-of-customer-consent.md">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p></li>
+<li><p><a href="get-a-partner-s-validation-codes.md">Get a partner's validation codes</a></p></li>
+<li><p><a href="get-a-customer-s-qualification.md">Get a customer's qualification</a></p></li>
+<li><p><a href="update-a-customer-s-qualification.md">Update a customer's qualification</a></p></li>
 </ul>
 <p>Manage user accounts and assign licenses</p>
 <ul>
@@ -167,6 +160,7 @@ All of the following scenarios can be completed three different ways:
 <p>Create an order</p>
 <ul>
 <li><p><a href="create-a-cart.md">Create a cart</a></p></li>
+<li><p><a href="create-a-cart-with-add-ons.md">Create a cart with add-ons</a></p></li>
 <li><p><a href="update-a-cart.md">Update a cart</a></p></li>
 <li><p><a href="checkout-a-cart.md">Checkout a cart</a></p></li>
 <li><p><a href="create-an-order.md">Create an order</a></p></li>
