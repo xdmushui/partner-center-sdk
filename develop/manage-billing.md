@@ -35,7 +35,6 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Azure spending budget:**
 - [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
-- [Get usage data for all subscriptions](https://msdn.microsoft.com/library/partnercenter/mt651644.aspx)
 - [Get usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
