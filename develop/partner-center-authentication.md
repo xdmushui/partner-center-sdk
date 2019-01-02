@@ -2,12 +2,11 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 12/15/2017
+ms.date: 01/02/2019
 ms.localizationpriority: medium
 ---
 
-# Partner Center authentication
-
+# Partner Center Authentication
 
 **Applies To**
 
@@ -16,582 +15,83 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
+Partner Center utilizes Azure Active Directory for authentication. When interacting with the Partner Center API, SDK, or PowerShell module you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app only or app + user authentication can be used with the Partner Center. However, there are two important items that need to be considered
 
-> [!IMPORTANT]
-> Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
-Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. 
-> 
-> For more information, see [Enable secure application model](enable-secure-app-model.md).
+- Effective February 4, 2019 you must utilize multi-factor authentication when accessing the Partner Center API using app + user authentication. To find more information regarding this change, see [Enable secure application model](enable-secure-app-model.md)
+- Not all of the operations the Partner Center API support app only authentication. This means there certain scenarios where you will be required to use app + user authentication. Under the *Prerequisites* heading, each [Scenario](https://docs.microsoft.com/partner-center/develop/scenarios) you will find documentation that states whether app only, app + user, app only, or both are supported.
 
+## App Only Authentication
 
-Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. This requires three steps:
+If you would like to use app only authentication to access the Partner Center API, SDK, or PowerShell module then you can do so by leveraging the following
 
-- **App or App+user?**
+# [.NET](#tab/dotnet-app-only)
 
-    These two authentication styles are used depending on your end goal. If you are developing a web site, you'll probably use App+user credentials. App only credentials, meanwhile, work for both web sites and native apps.
+```csharp
+public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
+{
+    IPartnerCredentials partnerCredentials = 
+        PartnerCredentials.Instance.GenerateByApplicationCredentials(
+            PartnerApplicationConfiguration.ApplicationId, 
+            PartnerApplicationConfiguration.ApplicationSecret, 
+            PartnerApplicationConfiguration.ApplicationDomain);
 
-    Under the **Prerequisites** heading, each [Scenario](scenarios.md) specifies whether App+user credentials, App credentials, or both are supported.
+    // Create operations instance with partnerCredentials.
+    return PartnerService.Instance.CreatePartnerOperations(partnerCredentials);
+}
+```
 
-- **REST or managed?**
+# [Java](#tab/java-app-only)
 
-    The managed API helps manage your tokens so that you do not have to refresh them. Additional steps are required for the REST API to keep your tokens current.
+```java
+public IAggregatePartner getAppPartnerOperations()
+{
+    IPartnerCredentials appCredentials =
+        PartnerCredentials.getInstance().generateByApplicationCredentials(
+        PartnerApplicationConfiguration.getApplicationId(), 
+        PartnerApplicationConfiguration.getApplicationSecret(), 
+        PartnerApplicationConfiguration.getApplicationDomain());
 
-- **TiP or regular?**
+    return PartnerService.getInstance().createPartnerOperations( appCredentials );
+}
+```
 
-    You will use two sets of auth tokens over the course of development: one based on your integration sandbox Partner Center account for development and testing, and a second based on your primary Partner Center account for day-to-day management of real customer data.
+# [PowerShell](#tab/powershell-app-only)
 
-## <span id="initial"/><span id="INITIAL"/>Initial setup
+```powershell
+$credential = Get-Credential
+Connect-PartnerCenter -Credential $credential -ServicePrincipal -TenantId '<TenantId>'
+```
 
+> [!NOTE]  
+> When you are prompted for credentials specify the client identifier as the username and the client secret as the password.
 
-**Configure authentication for Partner Center APIs**
+# [REST](#tab/rest-app-only)
 
-1.  To begin, you need to make sure that you have both a primary Partner Center account, and an integration sandbox Partner Center account. For more information, see [Set up Partner Center accounts for API access](set-up-api-access-in-partner-center.md). Make note of the Azure AAD App registration ID and Secret (client secret is required for App only identification) for both your primary account and your integration sandbox account.
+**Request**
 
-2.  Sign in to Azure AD from the Azure management portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
+```http
+POST https://login.microsoftonline.com/{tenanId}/oauth2/token HTTP/1.1
+Accept: application/json
+return-client-request-id: true
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Host: login.microsoftonline.com
+Content-Length: 194
+Expect: 100-continue
 
-3.  In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
+resource=https%3A%2F%2Fgraph.windows.net&client_id={client-id-here}&client_secret={client-secret-here}&grant_type=client_credentials
+```
 
-## <span id="managedApp"/><span id="managedapp"/><span id="MANAGEDAPP"/>Authentication with App credentials and the managed API
+**Response**
 
-The following code shows how to get and use App authentication using the Partner Center managed API.
+```http
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Content-Length: 1406
 
-**Add Azure AD information to your project**
+{"token_type":"Bearer","expires_in":"3600","ext_expires_in":"3600","expires_on":"1546469802","not_before":"1546465902","resource":"https://graph.windows.net","access_token":"value-has-been-removed"}
+```
 
-1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Secret, and Domain depending on whether you're using the integration sandbox or the primary account.
-
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
-
-    ``` csharp
-    private static class PartnerApplicationConfiguration
-    {
-        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-        public static string Authority = "https://login.windows.net";
-        public static string ResourceUrl = "https://graph.windows.net";
-        public static string ApplicationId = "<web application id>";
-        public static string ApplicationSecret = "<application secret>";
-        public static string ApplicationDomain = "<partner tenant id>";
-    }
-    ```
-
-1.  Add code to manage your tokens.
-
-    ``` csharp
-    public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
-    {
-        // Get a user Azure AD Token.
-        PartnerService.Instance.ApiRootUrl = PartnerApplicationConfiguration.PartnerServiceApiRoot;
-        var partnerCredentials = 
-            PartnerCredentials.Instance.GenerateByApplicationCredentials(
-                PartnerApplicationConfiguration.ApplicationId, 
-                PartnerApplicationConfiguration.ApplicationSecret, 
-                PartnerApplicationConfiguration.ApplicationDomain);
-
-        // Create operations instance with partnerCredentials.
-        return PartnerService.Instance.CreatePartnerOperations(partnerCredentials);
-    }
-    ```
-
-    Use the following code instead for Partner Center for Microsoft Cloud Germany.
-
-    ``` csharp
-    // Use the following code for Partner Center for Microsoft Cloud Germany.
-    public static string Authority = "https://login.microsoftonline.de";
-    public static string ResourceUrl = "https://graph.cloudapi.de";
-
-    public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
-    {
-        // Get a user Azure AD Token.
-        PartnerService.Instance.ApiRootUrl = PartnerApplicationConfiguration.PartnerServiceApiRoot;
-
-        var partnerCredentials = 
-            PartnerCredentials.Instance.GenerateByApplicationCredentials(
-                PartnerApplicationConfiguration.ApplicationId, 
-                PartnerApplicationConfiguration.ApplicationSecret, 
-                PartnerApplicationConfiguration.ApplicationDomain, 
-                PartnerApplicationConfiguration.Authority, 
-                PartnerApplicationConfiguration.ResourceUrl);
-
-        // Create operations instance with partnerCredentials.
-        return PartnerService.Instance.CreatePartnerOperations(partnerCredentials);
-    }
-    ```
-
-2.  Get your token and use it to call the managed API. The following example retrieves a list of offer objects and then displays each offer identifier and name on the console.
-
-    ``` csharp
-    // Gets a list of offers using the SDK.
-    public static void GetOffersUsingAppCredentials()
-    {
-        IAggregatePartner partner = GetPartnerCenterTokenUsingAppCredentials();
-
-        // Get a list of offers.
-        var offers = partner.Offers.ByCountry("US").Get();
-        foreach (var offer in offers.Items)
-        {
-            Console.WriteLine("Offer ID:{0}, Name:{1}", offer.Id, offer.Name);
-        }
-    }
-    ```
-
-## <span id="RestApp"/><span id="restapp"/><span id="RESTAPP"/>Authentication with App credentials and the REST API
-
-
-The following code shows how to get and use App authentication using the Partner Center REST API.
-
-**Add Azure AD information to your project**
-
-1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Secret, and Domain depending on whether you're using the integration sandbox or primary account.
-
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
-
-    ``` csharp
-    private static class PartnerApplicationConfiguration
-    {
-        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-        public static string Authority = "https://login.windows.net";
-        public static string ResourceUrl = "https://graph.windows.net";
-        public static string ApplicationId = "<web application id>";
-        public static string ApplicationSecret = "<application secret>";
-        public static string ApplicationDomain = "<partner tenant id>";
-    }
-    ```
-
-2.  Add code to manage your tokens.
-
-    ``` csharp
-    // Given the reseller domain, clientid and clientsecret of the app, this method helps to retrieve the AD token.
-    //
-    // Parameters:
-    // resellerDomain - The domain of the reseller, including ".onmicrosoft.com".
-    // clientId       - The AppId from the Azure portal registered for this app.
-    // clientSecret   - The secret from the Azure portal registered for this app.
-    //
-    // Returns:
-    // The authentication token object that contains access_token and expiration time.
-    public static JObject GetADToken(string resellerDomain, string clientId, string clientSecret)
-    {
-        var request = WebRequest.Create(
-            string.Format(
-                "{0}/{1}/oauth2/token", 
-                PartnerApplicationConfiguration.Authority, 
-                resellerDomain));
-
-        request.Method = "POST";
-        request.ContentType = "application/x-www-form-urlencoded";
-        string content = string.Format(
-            "grant_type=client_credentials&client_id={0}&client_secret={1}&resource={2}",
-            clientId,
-            HttpUtility.UrlEncode(clientSecret),
-            HttpUtility.UrlEncode(PartnerApplicationConfiguration.ResourceUrl));
-
-        using (var writer = new StreamWriter(request.GetRequestStream()))
-        {
-            writer.Write(content);
-        }
-
-        try
-        {
-            var response = request.GetResponse();
-            using (var reader = new StreamReader(response.GetResponseStream()))
-            {
-                var responseContent = reader.ReadToEnd();
-                var adResponse = 
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-                return adResponse;
-            }
-
-        }
-        catch (WebException webException)
-        {
-            if (webException.Response != null)
-            {
-                using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-                {
-                    var responseContent = reader.ReadToEnd();
-                }
-            }
-        }
-
-        return null;
-    }
-    ```
-   
-    ``` csharp
-    // Deprecated: DO NOT use this code
-    //
-    // Gets the partner center app credential token.
-    // Returns: Token response from server.
-    // public static JObject GetPartnerCenterAppCredentialsToken()
-    // {
-    // Get the Azure AD token for user.
-    //    var aadToken = 
-    //        GetADToken(PartnerApplicationConfiguration.ApplicationDomain, 
-    //            PartnerApplicationConfiguration.ApplicationId, 
-    //            PartnerApplicationConfiguration.ApplicationSecret);
-    //
-    //    var request = WebRequest.Create(string.Format(
-    //        "{0}/generatetoken", 
-    //        PartnerApplicationConfiguration.PartnerServiceApiRoot));
-    //
-    //   request.Headers.Add(HttpRequestHeader.Authorization, 
-    //        "Bearer " + aadToken["access_token"].ToString());
-    //    request.Method = "POST";
-    //    request.ContentType = "application/x-www-form-urlencoded";
-    //    string content = string.Format("grant_type=jwt_token");
-    //
-    //    using (var writer = new StreamWriter(request.GetRequestStream()))
-    //    {
-    //       writer.Write(content);
-    //    }
-    //
-    //    try
-    //    {
-    //        var response = request.GetResponse();
-    //        using (var reader = new StreamReader(response.GetResponseStream()))
-    //        {
-    //            var responseContent = reader.ReadToEnd();
-    //           var adResponse = 
-    //                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-    //            return adResponse;
-    //        }
-    //
-    //    }
-    //    catch (WebException webException)
-    //    {
-    //        if (webException.Response != null)
-    //        {
-    //            using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-    //            {
-    //               var responseContent = reader.ReadToEnd();
-    //           }
-    //       }
-    //    }
-    //
-    //    return null;
-    //}
-    ```
-
-3.  Get your token and use it to call the REST API. The following example retrieves a list of offer objects and then displays information about each offer.
-
-    ``` csharp
-    // Gets a list of offers using the REST API.
-    public static void GetOffersWithAppCredentials()
-    {
-        JObject tokenObject = GetADToken(PartnerUserConfiguration.ApplicationDomain, PartnerUserConfiguration.ClientId);
-
-        // Get a list of offers.
-        var request = WebRequest.Create(
-            string.Format(
-                "{0}/v1/offers?country={1}", 
-                PartnerApplicationConfiguration.PartnerServiceApiRoot, 
-                "US"));
-
-        request.Headers.Add(HttpRequestHeader.Authorization, 
-            "Bearer " + tokenObject["access_token"].ToString());
-        request.Method = "GET";
-        
-        try
-        {
-            var response = request.GetResponse();
-            using (var reader = new StreamReader(response.GetResponseStream()))
-            {
-                var responseContent = reader.ReadToEnd();
-                var adResponse = 
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-                Console.WriteLine(adResponse.ToString());
-            }
-
-        }
-        catch (WebException webException)
-        {
-            if (webException.Response != null)
-            {
-                using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-                {
-                    var responseContent = reader.ReadToEnd();
-                }
-            }
-        }
-    }
-    ```
-
-## <span id="managedUser"/><span id="manageduser"/><span id="MANAGEDUSER"/>Authentication with App+User credentials and the managed API
-
-
-The following code shows how to get and use App+User authentication using the Partner Center managed API.
-
-**Add Azure AD information to your project**
-
-1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Domain, user name and password depending on whether you're using the integration sandbox or the primary account.
-
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
-
-    ``` csharp
-    private static class PartnerUserConfiguration
-    {
-        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-        public static string Authority = "https://login.windows.net";
-        public static string UserName = "<username>@<domainprefix>.onmicrosoft.com";
-        public static string Password = "<password>";
-        public static string ResourceUrl = "https://api.partnercenter.microsoft.com";
-        public static string ClientId = "<native app id>";
-        public static string ApplicationDomain = "<partner tenant>";
-    }
-    ```
-
-2.  Add code to manage your tokens.
-
-    ``` csharp
-    // Sign the user into Azure AD and get token.
-    // Returns: User token.
-    public static AuthenticationResult UserLogin()
-    {
-        var addAuthority = new UriBuilder(Configuration.Authority)
-        {
-            Path = Configuration.CommonDomain
-        };
-
-        UserCredential userCredentials = 
-            new UserCredential(PartnerUserConfiguration.UserName, PartnerUserConfiguration.Password);
-        AuthenticationContext authContext = 
-            new AuthenticationContext(addAuthority.Uri.AbsoluteUri);
-
-        return 
-            authContext.AcquireTokenAsync(Configuration.ResourceUrl, Configuration.ClientId, userCredentials).Result;
-    }
-
-    // Gets the partner center token using the managed API.
-    // Returns: Partner Center SDK partner interface.
-    public static IAggregatePartner GetPartnerCenterTokenWithUserCredentials()
-    {
-        // Get a user Azure AD Token.
-        var aadAuthResult = UserLogin();
-        PartnerService.Instance.ApiRootUrl = PartnerUserConfiguration.PartnerServiceApiRoot;
-        var partnerCredentials = 
-            PartnerCredentials.Instance.GenerateByUserCredentials(PartnerUserConfiguration.ClientId, 
-                new AuthenticationToken(aadAuthResult.AccessToken, aadAuthResult.ExpiresOn), async delegate
-        {
-            // Token Refresh callback.
-            aadAuthResult = UserLogin();
-            return await Task.FromResult<AuthenticationToken>(new AuthenticationToken(aadAuthResult.AccessToken, aadAuthResult.ExpiresOn));
-        });
-
-        // Get operations instance with partnerCredentials.
-        return PartnerService.Instance.CreatePartnerOperations(partnerCredentials);
-    }
-    ```
-
-3.  Get your token and use it to call the managed API.
-
-    ``` csharp
-    public static void GetCustomersWithUserCredentials()
-    {
-        IAggregatePartner partner = GetPartnerCenterTokenWithUserCredentials();
-
-        // Get a customer list.
-        var customers = partner.Customers.Get();
-        foreach (var customer in customers.Items)
-        {
-            Console.WriteLine("Customer ID:{0}, Name:{1}", 
-                customer.Id, 
-                customer.CompanyProfile.CompanyName);
-        }
-    }
-    ```
-
-## <span id="RestUser"/><span id="restuser"/><span id="RESTUSER"/>Authentication with App+User credentials and the REST API
-
-
-The following code shows how to get and use App+User authentication using the Partner Center REST API.
-
-**Add Azure AD information to your project**
-
-1.  Add the appropriate Azure AD information to your code. Choose the correct ID, Domain, user name and password depending on whether you're using the integration sandbox or the primary account.
-
-    The Authority and ResourceUrl shown below may have to be updated with appropriate values if you're using Partner Center operated by 21Vianet, Partner Center for Microsoft Cloud Germany, or Partner Center for Microsoft Cloud for US Government. See [Authority and Resource URLs](#authorityandresourceurls) for more information.
-
-    ``` csharp
-    private static class PartnerUserConfiguration
-    {
-        public static string PartnerServiceApiRoot = "https://api.partnercenter.microsoft.com";
-        public static string Authority = "https://login.windows.net";
-        public static string UserName = "<username>@<domainprefix>.onmicrosoft.com";
-        public static string Password = "<password>";
-        public static string ResourceUrl = "https://api.partnercenter.microsoft.com";
-        public static string ClientId = "<native app id>";
-        public static string ApplicationDomain = "<partner tenant>";
-    }
-    ```
-
-2.  Add code to manage your tokens.
-
-    ``` csharp
-    // Given the reseller domain, clientid and username/password of the app, this method helps to retrieve the AD token.
-    //
-    // Parameters:
-    // resellerDomain - The domain of the reseller including ".onmicrosoft.com".
-    // clientId - AppId from the Azure portal.
-    //
-    // Returns:
-    // An authentication token object that contains access_token, expiration time, and can be used to 
-    // get the authorization token from a resource.
-    public static JObject GetADToken(string resellerDomain, string clientId)
-    {
-        string loginUrl = 
-            string.Format(
-                "{0}/{1}/oauth2/token", 
-                PartnerUserConfiguration.Authority, 
-                resellerDomain);
-
-        var request = WebRequest.Create(loginUrl);
-
-        request.Method = "POST";
-        request.ContentType = "application/x-www-form-urlencoded";
-        
-        string content = string.Format(
-            "resource={0}&client_id={1}&grant_type=password&username={2}&password={3}&scope=openid", 
-            HttpUtility.UrlEncode(Configuration.ResourceUrl),
-            HttpUtility.UrlEncode(clientId),
-            HttpUtility.UrlEncode(Configuration.UserName),
-            HttpUtility.UrlEncode(Configuration.Password));
-
-        using (var writer = new StreamWriter(request.GetRequestStream()))
-        {
-            writer.Write(content);
-        }
-
-        try
-        {
-            var response = request.GetResponse();
-            using (var reader = new StreamReader(response.GetResponseStream()))
-            {
-                var responseContent = reader.ReadToEnd();
-                var adResponse = 
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-                return adResponse;
-            }
-
-        }
-        catch (WebException webException)
-        {
-            if (webException.Response != null)
-            {
-                using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-                {
-                    var responseContent = reader.ReadToEnd();
-                }
-            }
-        }
-
-        return null;
-    }
-    ```
-
-    ``` csharp
-    // Deprecated: DO NOT use this code
-    //
-    // Gets the partner center App+User token.
-    // Returns: Token response from server.
-    // public static JObject GetPartnerCenterToken()
-    // {
-    // Get Azure AD token for user.
-    //   var aadToken = 
-    //        GetADToken(PartnerUserConfiguration.ApplicationDomain, PartnerUserConfiguration.ClientId);
-    //
-    //    var request = 
-    //        WebRequest.Create(
-    //            string.Format(
-    //                "{0}/generatetoken", 
-    //                PartnerUserConfiguration.PartnerServiceApiRoot));
-    //
-    //    request.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + aadToken["access_token"].ToString());
-    //    request.Method = "POST";
-    //    request.ContentType = "application/x-www-form-urlencoded";
-    //   string content = string.Format("grant_type=jwt_token");
-    //
-    //    using (var writer = new StreamWriter(request.GetRequestStream()))
-    //    {
-    //        writer.Write(content);
-    //   }
-    //
-    //   try
-    //   {
-    //        var response = request.GetResponse();
-    //        using (var reader = new StreamReader(response.GetResponseStream()))
-    //        {
-    //            var responseContent = reader.ReadToEnd();
-    //            var adResponse = 
-    //                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-    //            return adResponse;
-    //        }
-    //
-    //    }
-    //    catch (WebException webException)
-    //    {
-    //        if (webException.Response != null)
-    //        {
-    //            using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-    //            {
-    //                var responseContent = reader.ReadToEnd();
-    //            }
-    //       }
-    //  }
-    //
-    // return null;
-    //}
-    ```
-
-3.  Get your token and use it to call the REST API.
-
-    ``` csharp
-    // Gets a list of customers using App+User credentials.
-    public static void GetCustomersUsingUserCredentials()
-    {
-        JObject tokenObject = GetADToken(PartnerUserConfiguration.ApplicationDomain, PartnerUserConfiguration.ClientId);
-
-        // Get a list of customers.
-        var request = WebRequest.Create(
-            string.Format(
-                "{0}/v1/customers", 
-                PartnerUserConfiguration.PartnerServiceApiRoot));
-
-        request.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + tokenObject["access_token"].ToString());
-        request.Method = "GET";
-        try
-        {
-            var response = request.GetResponse();
-            using (var reader = new StreamReader(response.GetResponseStream()))
-            {
-                var responseContent = reader.ReadToEnd();
-                var adResponse = 
-                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(responseContent);
-                Console.WriteLine(adResponse.ToString());
-            }
-
-        }
-        catch (WebException webException)
-        {
-            if (webException.Response != null)
-            {
-                using (var reader = new StreamReader(webException.Response.GetResponseStream()))
-                {
-                    var responseContent = reader.ReadToEnd();
-                }
-            }
-        }
-    }
-    ```
-
-
-## <span id="AuthorityAndResourceURLs"/><span id="authorityandresourceurls"/><span id="AUTHORITYANDRESOURCEURLS"/>Authority and Resource URLs
-
-The following table lists the appropiate Authority, Graph Resource URL, and Partner Center Resource URL values for the various clouds when using App and App+User credentials for authentication.
-
-| Cloud name                                           | Authority                        | Graph Resource URL             | Partner Center Resource URL                         |  
-|------------------------------------------------------|----------------------------------|--------------------------------|-----------------------------------------------------|  
-| Partner Center                                       | https://login.windows.net        | https://graph.windows.net      | https://api.partnercenter.microsoft.com             | 
-| Partner Center for Microsoft Cloud Germany           | https://login.microsoftonline.de | https://graph.cloudapi.de      | https://api.partnercenter.microsoft.com             |  
-| Partner Center operated by 21Vianet                  | https://login.chinacloudapi.cn   | https://graph.chinacloudapi.cn | https://partner.partnercenterapi.microsoftonline.cn |  
-| Partner Center for Microsoft Cloud for US Government | https://login.microsoftonline.us | https://graph.windows.net      | https://api.partnercenter.microsoft.com             |  
-
- 
+---
