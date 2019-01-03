@@ -302,3 +302,44 @@ $token = New-PartnerAccessToken -Consent -Credential $credential -Resource https
 See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) for more information.
 
 ---
+
+### Cloud Solution Provider Authentication
+
+Intentionally left blank
+
+#### Samples
+
+Intentionally left blank
+
+# [.NET](#tab/dotnet-csp-auth)
+
+Intentionally left blank
+
+# [Java](#tab/java-csp-auth)
+
+Intentionally left blank
+
+# [PowerShell](#tab/powershell-csp-auth)
+
+Intentionally left blank
+
+---
+
+### Control Panel Provider Authentication
+
+Intentionally left blank
+
+## Frequently Asked Questions
+
+### Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?
+
+No, this will not work because of how the requirement is being enforced. Each time you connecting to Partner Center you must be authenticated using multi-factor authentication.
+
+### How will the requirement for multi-factor authentication be enforced?
+
+This requirement will be enforced by ensuring the
+<http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod> claim is set to <https://schemas.microsoft.com/claims/multipleauthn>. If this claim contains a different value then authentication will be denied.
+
+### Will indirect reseller require multi-factor authentication?
+
+Yes, partners with an enrollment into the Cloud Solution Provider program, this include direct, indirect providers, and indirect resellers will need to implement the appropriate multi-factor authentication solution.
