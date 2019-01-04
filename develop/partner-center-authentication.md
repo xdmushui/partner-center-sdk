@@ -20,6 +20,14 @@ Partner Center utilizes Azure Active Directory for authentication. When interact
 - You must utilize multi-factor authentication when accessing the Partner Center API using app + user authentication. To find more information regarding this change, see [Enable secure application model](enable-secure-app-model.md)
 - Not all of the operations the Partner Center API support app only authentication. This means there certain scenarios where you will be required to use app + user authentication. Under the *Prerequisites* heading, each [Scenario](https://docs.microsoft.com/partner-center/develop/scenarios) you will find documentation that states whether app only, app + user, app only, or both are supported.
 
+## Initial setup
+
+1. To begin, you need to make sure that you have both a primary Partner Center account, and an integration sandbox Partner Center account. For more information, see [Set up Partner Center accounts for API access](set-up-api-access-in-partner-center.md). Make note of the Azure AAD App registration ID and Secret (client secret is required for App only identification) for both your primary account and your integration sandbox account.
+
+2. Sign in to Azure AD from the Azure management portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
+
+3. In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
+
 ## App Only Authentication
 
 If you would like to use app only authentication to access the Partner Center API, SDK, or PowerShell module then you can do so by leveraging the following
