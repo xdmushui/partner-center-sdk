@@ -104,7 +104,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
+If successful, the response body contains an [Availability](product-resources#availability) resource.
 
 **Response success and error codes**
 
@@ -133,16 +133,25 @@ Date: Wed, 14 Mar 2018 22:19:43 GMT
 Content-Length: 440
 
 {
-    "id": "DZH318Z0HMKQ",
+    "id": "DZH318XZXVNF",
     "productId": "DZH318Z0BQ3Q",
     "skuId": "0001",
-    "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318Z0HMKQ",
+    "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXVNF",
     "defaultCurrency": {
-        "code": "USD",
-        "symbol": "$"
+		"code": "USD",
+		"symbol": "$"
     },
     "segment": "commercial",
     "country": "US",
+    "isPurchasable": true,
+    "isRenewable": false,
+    "terms": [{
+        "duration": "P1Y",
+        "description": "1 Year Prepaid",
+        "cancellationPolicies": []
+    }],
+	"product": { ... },
+	"sku": { ... },
     "links": {
         "self": {
             "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318Z0HMKQ?country=US",

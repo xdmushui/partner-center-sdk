@@ -21,13 +21,15 @@ Resources that represent purchasable goods or services. Includes resources for d
 
 Represents a purchasable good or service. A product by itself is not a purchasable item.
 
-| Property        | Type                          | Description                                                              |
-|-----------------|-------------------------------|--------------------------------------------------------------------------|
-| id              | string                        | The ID for this product.                                                 |
-| title           | string                        | The product title.                                                       |
-| description     | string                        | The product description.                                                 |
-| productType     | [ItemType](#itemtype)         | An object that describes the type categorization(s) of this product.     |
-| links           | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
+| Property           | Type                          | Description                                                              |
+|--------------------|-------------------------------|--------------------------------------------------------------------------|
+| id                 | string                        | The ID for this product.                                                 |
+| title              | string                        | The product title.                                                       |
+| description        | string                        | The product description.                                                 |
+| productType        | [ItemType](#itemtype)         | An object that describes the type categorization(s) of this product.     |
+| isMicrosoftProduct | bool                          | Indicates whether this is a Microswoft product.                          |
+| publisherName      | string                        | The name of the product's publisher if available.                          |
+| links              | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
 
 
 
@@ -83,17 +85,52 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
 
-| Property        | Type                          | Description                                                                         |
-|-----------------|-------------------------------|-------------------------------------------------------------------------------------|
-| id              | string                        | The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
-| productId       | string                        | The ID of the [product](#product) that contains this availability.           |
-| skuId           | string                        | The ID of the [SKU](#sku) that contains this availability.                   |
-| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
-| defaultCurrency | string                        | The default currency supported for this availability.                               |
-| segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
-| country         | string                        | The country or region (in ISO country code format) where this availability applies. |
+| Property        | Type												| Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
+| id              | string												| The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
+| productId       | string												| The ID of the [product](#product) that contains this availability.           |
+| skuId           | string												| The ID of the [SKU](#sku) that contains this availability.                   |
+| catalogItemId   | string												| The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
+| defaultCurrency | string												| The default currency supported for this availability.                               |
+| segment         | string												| The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
+| country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
+| isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
+| isRenewable     | bool                                                | Indicates whether this availability is renewable. |
+| product		  | [Product](#product-resources#product)               | The product this availability corresponds to. |
+| sku		      | [Sku](#product-resources#sku)						| The SKU this availability corresponds to. |
+| terms           | array of [Term](#product-resources#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
+
+## <span id="Term"/><span id="term"/><span id="TERM"/>Term
+
+Represents a term for which the availability can be purchased. 
+
+| Property              | Type																				| Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| duration              | string																			| An ISO 8601 representation of the term's duration. The only supported values are P1Y (for 1 year) & P1M (for 1 month). |
+| description           | string																			| The description of the term.           |
+| cancellationPolicies  | array of [CancellationPolicy](#product-resources#cancellationpolicy) resources	| The set of cancellation policies that could apply after a purchase with this term.    |
+
+
+## <span id="CancellationPolicy"/><span id="cancellationpolicy"/><span id="CANCELLATIONPOLICY"/>Term
+
+Represents a cancellation policy that could apply to the purchase of a term-based availability. 
+
+| Property              | Type																  | Description                                                                         |
+|-----------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| refundOptions         | array of [RefundOption](#product-resources#refundoption) resources  | The set of refund options available under a cancellation policy.					|
+
+
+## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>Term
+
+Represents a possible refund path under a cancellation policy. 
+
+| Property          | Type	 | Description                                                                         |
+|-------------------|--------|-------------------------------------------------------------------------------------|
+| sequenceId        | int    | The number which represents the ascending order in which the refund option should be considered (relative to other refund options under the same cancellation policy).	|
+| type				| string | The type of refund. The only supported values are "Partial" and "Full"		|
+| expiresAfter      | string | The ISO 8601 representation of the duration (relative to the product activation) the refund option is applicable for.	|
 
 
 ## <span id="InventoryCheckRequest"/><span id="inventorycheckrequest"/><span id="INVENTORYCHECKREQUEST"/>InventoryCheckRequest

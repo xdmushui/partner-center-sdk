@@ -112,12 +112,18 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
 
 {
     "id": "DZH318Z0BQ3Q",
-    "title": "DSv2 Series",
-    "description": "Persistent storage disks are billed separately from virtual machines. To use premium storage disks, use the variant "Dsv2" virtual machines. The pricing and billing meters for Dsv2 sizes are the same as Dv2-series.  ",
+    "title": "Virtual Machines DSv2 Series",
+    "description": "Dsv2-series instances are the latest generation of D-series instances that will carry more powerful CPUs which are on average about 35% faster than D-series instances, and carry the same memory and disk configurations as the D-series. Dsv2-series instances are based on the latest generation 2.4 GHz Intel Xeon® E5-2673 v3 (Haswell) processor, and with Intel Turbo Boost Technology 2.0 can go to 3.2 GHz.",
     "productType": {
         "id": "Azure",
         "displayName": "Azure",
-        }, 
+        "subType": {
+			"id": "VirtualMachines",
+			"displayName": "VirtualMachines"
+        }
+    },
+    "isMicrosoftProduct": true,
+    "publisherName": "Microsoft",
     "links": {
         "skus": {
             "uri": "/products/DZH318Z0BQ3Q/skus?country=US",

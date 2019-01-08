@@ -86,7 +86,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
+If successful, the response body contains a [SKU](product-resources.md#sku) resource.
 
 **Response success and error codes**
 
