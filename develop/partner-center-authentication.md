@@ -593,5 +593,4 @@ No, this will not work because of how the requirement for multi-factor authentic
 
 ### How will the requirement for multi-factor authentication be enforced?
 
-This requirement will be enforced by ensuring the
-<http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod> claim is set to <https://schemas.microsoft.com/claims/multipleauthn>. If this claim contains a different value then authentication will be denied.
+This requirement will be enforced by ensuring that a claim of type <http://schemas.microsoft.com/claims/authnmethodsreferences> with a value of mfa is present. If it is not then authentication will be denied.
