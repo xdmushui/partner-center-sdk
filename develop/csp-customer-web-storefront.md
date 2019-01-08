@@ -14,6 +14,9 @@ ms.localizationpriority: medium
 
 This site shows a working online store that your customers could use to buy subscriptions to Microsoft products. To make it work for you, configure the offers, add branding, and add a payment method.
 
+> [!NOTE]
+> This sample applies only to the global instance of Partner Center. It does not apply to Partner Center for Microsoft Cloud Germany or to Partner Center for Microsoft Cloud for US Government.
+
 ## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
 
 [Download the sample code](https://github.com/Microsoft/Partner-Center-Storefront)
