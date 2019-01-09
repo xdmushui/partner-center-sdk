@@ -108,7 +108,7 @@ Represents a term for which the availability can be purchased.
 
 | Property              | Type																				| Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| duration              | string																			| An ISO 8601 representation of the term's duration. The only supported values are P1Y (for 1 year) & P1M (for 1 month). |
+| duration              | string																			| An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
 | description           | string																			| The description of the term.           |
 | cancellationPolicies  | array of [CancellationPolicy](#product-resources#cancellationpolicy) resources	| The set of cancellation policies that could apply after a purchase with this term.    |
 
