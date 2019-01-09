@@ -113,7 +113,7 @@ Represents a term for which the availability can be purchased.
 | cancellationPolicies  | array of [CancellationPolicy](#product-resources#cancellationpolicy) resources	| The set of cancellation policies that could apply after a purchase with this term.    |
 
 
-## <span id="CancellationPolicy"/><span id="cancellationpolicy"/><span id="CANCELLATIONPOLICY"/>Term
+## <span id="CancellationPolicy"/><span id="cancellationpolicy"/><span id="CANCELLATIONPOLICY"/>CancellationPolicy
 
 Represents a cancellation policy that could apply to the purchase of a term-based availability. 
 
@@ -122,7 +122,7 @@ Represents a cancellation policy that could apply to the purchase of a term-base
 | refundOptions         | array of [RefundOption](#product-resources#refundoption) resources  | The set of refund options available under a cancellation policy.					|
 
 
-## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>Term
+## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>RefundOption
 
 Represents a possible refund path under a cancellation policy. 
 
