@@ -82,6 +82,7 @@
 #### [Update user accounts for a customer](update-user-accounts-for-a-customer.md)
 #### [View deleted users for a customer](view-a-deleted-user.md)
 ### [Manage orders](manage-orders.md)
+#### [Cancel a subscription](cancel-a-subscription.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 #### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)
 #### [Check Inventory](check-inventory.md) 
