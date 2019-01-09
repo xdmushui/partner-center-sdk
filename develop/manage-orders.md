@@ -6,7 +6,7 @@ ms.date: 01/09/2019
 ms.localizationpriority: medium
 ---
 
-# Place orders
+# Manage orders
 
 
 **Applies To**
