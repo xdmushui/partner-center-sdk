@@ -135,7 +135,7 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="place-orders.md">Place orders</a></p></td>
+<td><p><a href="manage-orders.md">Manage orders</a></p></td>
 <td><p>Purchase Azure Reserved VM Instances</p>
 <ul>
 <li><p><a href="purchase-azure-reservations.md">Purchase Azure reservations</a></p></li>
@@ -186,12 +186,13 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="get-a-list-of-add-ons-for-a-subscription.md">Get a list of add-ons for a subscription</a></p></li>
 <li><p><a href="get-subscription-provisioning-status.md">Get subscription provisioning status</a></p></li>
 </ul>
-<p>Change, suspend, or reactivate a subscription</p>
+<p>Manage a subscription</p>
 <ul>
 <li><p><a href="change-the-quantity-of-a-subscription.md">Change the quantity of a subscription</a></p></li>
 <li><p><a href="suspend-a-subscription.md">Suspend a subscription</a></p></li>
 <li><p><a href="reactivate-a-suspended-a-subscription.md">Reactivate a suspended subscription</a></p></li>
 <li><p><a href="transition-a-subscription.md">Transition a subscription</a></p></li>
+<li><p><a href="cancel-a-subscription.md">Cancel a subscription</a></p></li>
 </ul></td>
 </tr>
 <tr>

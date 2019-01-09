@@ -102,6 +102,11 @@
 			"redirect_document_id": true
 		},
 		{
+			"source_path": "develop/place-orders.md",
+			"redirect_url": "manage-orders",
+			"redirect_document_id": true
+		},
+		{
 			"source_path": "develop/profiles.md",
 			"redirect_url": "profile-resources",
 			"redirect_document_id": true
