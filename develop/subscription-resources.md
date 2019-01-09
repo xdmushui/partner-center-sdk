@@ -59,7 +59,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | refundOptions        | array of [RefundOption](product-resources#refundoption) resources | Read-Only. The set of erfund options available under a cancellation policy.                                                                                              |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
-| termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The only supported values are P1Y (for 1 year) & P1M (for 1 month).                                                        |
+| termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 
  
