@@ -2,7 +2,7 @@
 title: Get an availability by ID
 description: Gets an availability for the specified product and SKU using an availability ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
@@ -104,7 +104,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-If successful, the response body contains an [Availability](product-resources#availability) resource.
+If successful, the response body contains an [Availability](product-resources.md#availability) resource.
 
 **Response success and error codes**
 

@@ -2,7 +2,7 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 09/28/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 

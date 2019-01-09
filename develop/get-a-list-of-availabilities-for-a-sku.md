@@ -2,7 +2,7 @@
 title: Get a list of availabilities for a SKU
 description: Gets a collection of availabilities for the specified product and SKU.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
@@ -89,7 +89,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [Availability](product-resources#availability) resources.
+If successful, the response body contains a collection of [Availability](product-resources.md#availability) resources.
 
 **Response success and error codes**
 
