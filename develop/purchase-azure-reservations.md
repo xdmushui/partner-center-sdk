@@ -8,12 +8,10 @@ ms.localizationpriority: medium
 
 # Purchase Azure reservations
 
-
 **Applies To**
 
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government
-
 
 To purchase an Azure reservation using the Partner Center API, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
 
@@ -21,7 +19,6 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 - Create an order for an CSP Azure subscription.
 - Submit your order.
 - Make sure your order is fulfilled. 
-
 
 > [!NOTE]  
 > Azure reservations are not available in the following markets:  
@@ -69,16 +66,15 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 > | Gibraltar                      | Northern Mariana Islands          | Yemen                                    |
 >  
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID for an active CSP Azure subscription.
 
+
 ## <span id="How_to_purchase_Azure_reservations"/><span id="how_to_purchase_azure_reservations"/><span id="HOW_TO_PURCHASE_AZURE_RESERVATIONS"/>How to purchase Microsoft Azure reservations
-
-
 
 Once you have identified the active CSP Azure subscription that you want to add an Azure reservation to, use the following steps to purchase it:    
 
@@ -91,17 +87,21 @@ After you have purchased Azure reservations, the following scenarios show you ho
 - [Lifecycle management](#lifecycle_management)
 - [Invoice and reconciliation](#invoice_and_reconciliation)
 
+
 ## <span id="Enablement"/><span id="enablement"/><span id="ENABLEMENT"/>Enablement
 
+Enablement means associating an existing Azure [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription to an Azure Reserved VM Instance by registering the subscription so that it is enabled for Azure reservations. Azure subscription registration is a prerequisite to purchase Azure Reserved VM Instances.
 
+A subscription is required due to the following: 
+1. To check if the customer is eligible to deploy resources and hence purchase Azure Reserved VM Instances in a region or not.
+2. To provide capacity priority for deployments on a subscription. This is applicable only to single scope Azure Reserved VM Instances with the **capacity priority** option selected.
 
 Once you have identified the active subscription that you want to add the Azure reservation to, you must register the subscription so that it is enabled for Azure reservations. To register an existing [Subscription](subscription-resources.md) resource so that it is enabled for ordering Azure reservations, see [Register a subscription](register-a-subscription.md).
 
 After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
 
+
 ## <span id="Discovery"/><span id="discovery"/><span id="DISCOVERY"/>Discovery
-
-
 
 Once the subscription is enabled for purchasing Azure reservations, you're ready to select products and SKUs and check their availability using the following Partner Center API models: 
 
@@ -127,9 +127,8 @@ Before purchasing an Azure reservation, complete the following steps:
     - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
     - [Get an availability using the availability ID](get-an-availability-by-id.md)
 
+
 ## <span id="Order_submission"/><span id="order_submission"/><span id="ORDER_SUBMISSION"/>Order submission
-
-
 
 To submit your Azure reservation order, do the following:
 
@@ -142,9 +141,8 @@ To submit your Azure reservation order, do the following:
 
     - [Checkout the cart](checkout-a-cart.md)
 
+
 ## <span id="Get_order_details"/><span id="get_order_details"/><span id="GET_ORDER_DETAILS"/>Get order details
-
-
 
 Once you have created your Azure reservation order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​ 
 
@@ -154,15 +152,13 @@ Once you have created your Azure reservation order, you can retrieve the details
 
 - To get a list of orders for a customer by [billing cycle type](product-resources.md#billingcycletype) allowing you to list Azure reservation orders (one-time charges) and annual or monthly billed orders separately. See, [Get a list of orders by customer and billing cycle type](get-a-list-of-orders-by-customer-and-billing-cycle-type.md). 
 
+
 ## <span id="Lifecycle_management"/><span id="lifecycle_management"/><span id="LIFECYCLE_MANAGEMENT"/>Lifecycle management
-
-
 
 As part of managing the lifecycle of your Azure reservations in Partner Center, you can retrieve information about your Azure reservation [Entitlements](entitlement-resources.md), and get reservation details using the reservation order ID. For examples of how to do this, see [Get entitlements](get-a-collection-of-entitlements.md).   ​
 
+
 ## <span id="Invoice_and_reconciliation"/><span id="invoice_and_reconciliation"/><span id="INVOICE_AND_RECONCILIATION"/>Invoice and reconciliation
-
-
 
 The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for Azure reservations.  
 
@@ -184,4 +180,3 @@ To get a collection of invoice line item details (Reconciliation line items) for
 
 **Download an invoice as a PDF**    
 To retrieve an invoice statement in PDF form using an invoice ID, see [Get an invoice statement](get-invoice-statement.md).
-
