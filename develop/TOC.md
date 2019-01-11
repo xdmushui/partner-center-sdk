@@ -116,6 +116,7 @@
 #### [Suspend a subscription](suspend-a-subscription.md)
 #### [Transition a subscription](transition-a-subscription.md)
 #### [Update a cart](update-a-cart.md)
+#### [Update autorenew for a subscription](update-autorenew-for-a-subscription.md)
 ### [Manage billing](manage-billing.md)
 #### [Change the billing cycle](change-the-billing-cycle.md)
 #### [Get a customer's service costs summary](get-a-customer-s-service-costs-summary.md)

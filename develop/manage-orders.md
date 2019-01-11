@@ -56,6 +56,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Manage a subscription**  
 - [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
+- [Update autorenew for a subscription](update-autorenew-for-a-subscription.md)
 - [Suspend a subscription](suspend-a-subscription.md)
 - [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 - [Transition a subscription](transition-a-subscription.md)

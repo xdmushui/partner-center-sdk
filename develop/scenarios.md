@@ -189,6 +189,7 @@ All of the following scenarios can be completed three different ways:
 <p>Manage a subscription</p>
 <ul>
 <li><p><a href="change-the-quantity-of-a-subscription.md">Change the quantity of a subscription</a></p></li>
+<li><p><a href="update-autorenew-for-a-subscription.md">Update autorenew for a subscription</a></p></li>
 <li><p><a href="suspend-a-subscription.md">Suspend a subscription</a></p></li>
 <li><p><a href="reactivate-a-suspended-a-subscription.md">Reactivate a suspended subscription</a></p></li>
 <li><p><a href="transition-a-subscription.md">Transition a subscription</a></p></li>
