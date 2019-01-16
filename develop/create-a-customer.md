@@ -28,6 +28,10 @@ Once the customer is created, save the customer ID and Azure AD details for futu
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
+> [!IMPORTANT] 
+> To create a customer tenant you must provide a valid physical address during the creation process. An address can be validated by following the steps outlined in the
+[Validate an address](validate-an-address.md) scenario.
+
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
 ### C#
