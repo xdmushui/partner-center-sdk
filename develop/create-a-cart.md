@@ -180,30 +180,56 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 496
 Expect: 100-continue
 
-{  
-   "LineItems": [  
-        {  
-            "Id":0,
-            "CatalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-            "FriendlyName": "A_sample_Azure_RI",
-            "Quantity": 2,
-            "BillingCycle": "one_time",
-            "participants": [
-                {
-                    "key": "transaction_reseller",
-                    "value": "12345"
-                }
-            ],
-            "ProvisioningContext": {
-                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
-                "scope": "shared",
-                "duration": "1Year"
-            }
-        }
-    ],
-    "Attributes": {  
-        "ObjectType": "Cart"
+{
+  "lineItems": [
+    {
+	  /* Microsoft Azure Subscription */
+      "id": 0,
+      "catalogItemId": "MS-AZR-0145P",
+      "quantity": 1,
+      "billingCycle": "monthly",
+      "termDuration": "P1Y"
+    },
+    {
+	  /* Azure Reserved Instance */
+      "id": 1,
+      "catalogItemId": "DZH318Z0BQ36:004G:DZH318Z08C0S",
+      "quantity": 1,
+      "billingCycle": "one_time",
+      "termDuration": "P1Y",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8",
+        "scope": "shared"
+      }
+    },
+    {
+	  /* Azure Reserved Instance */
+      "id": 2,
+      "catalogItemId": "DZH318Z0BQ36:004J:DZH318Z08B8X",
+      "quantity": 1,
+      "billingCycle": "one_time",
+      "termDuration": "P3Y",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8",
+        "scope": "single"
+      }
+    },
+    {
+	  /* Perpetual Software */
+      "id": 3,
+      "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
+      "quantity": 1,
+      "billingCycle": "one_time"
+    },
+    {
+	  /* SaaS */
+      "id": 4,
+      "catalogItemId": "DZH318Z0BXWC:0002:DZH318Z0BMRV",
+      "quantity": 1,
+      "billingCycle": "monthly",
+      "termDuration": "P1M"
     }
+  ]
 }
 ```
 
@@ -228,41 +254,82 @@ MS-CV: sF/wRa2ih0CzbABc.0
 MS-ServerId: 000001
 Date: Thu, 15 Mar 2018 17:15:01 GMT
 {
-    "id": "b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-    "creationTimestamp": "2018-03-15T17:15:02.3840528Z",
-    "lastModifiedTimestamp": "2018-03-15T17:15:02.3840528Z",
-    "lastModifiedUser": "2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
-    "lineItems": [
-        {
-            "id": 0,
-            "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-            "friendlyName": "My offer purchase",
-            "quantity": 2,
-            "currencyCode": "USD",
-            "billingCycle": "one_time",
-            "participants": [
-                {
-                    "key": "transaction_reseller",
-                    "value": "12345"
-                }
-            ],
-            "provisioningContext": {
-                "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
-                "scope": "shared",
-                "duration": "1Year"
-            },
-            "orderGroup": "0"
-        }
-    ],
-    "links": {
-        "self": {
-            "uri": "/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
-            "method": "GET",
-            "headers": []
-        }
+  "id": "3655b1a0-b1c9-4268-9824-577fdbc4d0be",
+  "creationTimestamp": "2019-01-16T00:45:41.6062996Z",
+  "lastModifiedTimestamp": "2019-01-16T00:45:41.6062996Z",
+  "expirationTimestamp": "2019-01-16T01:00:54.4188497Z",
+  "lastModifiedUser": "1824b7fc-2fac-4478-b177-66823c40ab75",
+  "status": "Active",
+  "lineItems": [
+    {
+      "id": 0,
+      "catalogItemId": "MS-AZR-0145P",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "billingCycle": "monthly",
+      "termDuration": "P1Y",
+      "provisioningContext": {},
+      "orderGroup": "OMS-0"
     },
-    "attributes": {
-        "objectType": "Cart"
+    {
+      "id": 1,
+      "catalogItemId": "DZH318Z0BQ36:004G:DZH318Z08C0S",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "billingCycle": "one_time",
+      "termDuration": "P1Y",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8",
+        "scope": "shared"
+      },
+      "orderGroup": "0"
+    },
+    {
+      "id": 2,
+      "catalogItemId": "DZH318Z0BQ36:004J:DZH318Z08B8X",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "billingCycle": "one_time",
+      "termDuration": "P3Y",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8",
+        "scope": "shared"
+      },
+      "orderGroup": "0"
+    },
+    {
+      "id": 3,
+      "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "billingCycle": "one_time",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8"
+      },
+      "orderGroup": "0"
+    },
+    {
+      "id": 4,
+      "catalogItemId": "DZH318Z0BXWC:0002:DZH318Z0BMRV",
+      "quantity": 1,
+      "currencyCode": "USD",
+      "billingCycle": "monthly",
+      "termDuration": "P1M",
+      "provisioningContext": {
+        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8"
+      },
+      "orderGroup": "1"
     }
+  ],
+  "links": {
+    "self": {
+      "uri": "/customers/28045616-f6b9-462f-9701-0d89b5e65c44/carts/3655b1a0-b1c9-4268-9824-577fdbc4d0be",
+      "method": "GET",
+      "headers": []
+    }
+  },
+  "attributes": {
+    "objectType": "Cart"
+  }
 }
 ```

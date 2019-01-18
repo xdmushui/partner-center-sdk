@@ -120,49 +120,112 @@ X-Locale: en-US,en-US
 MS-CV: sF/wRa2ih0CzbABc.0
 MS-ServerId: 000001
 Date: Thu, 15 Mar 2018 17:15:01 GMT
-{  
-    "orders":[  
-        {  
-            "id":"VulAvcXKPvZqsyAAaahiT7Ii0QEJuReH1",
-            "referenceCustomerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d",
-            "billingCycle":"one_time",
-            "currencyCode":"USD",
-            "lineItems":[  
-                {  
-                    "lineItemNumber":0,
-                    "offerId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
-                    "friendlyName":"A_sample_Azure_RI",
-                    "quantity":2,
-                    "links":{  
-                    "sku":{  
-                            "uri":"/products/DG7GMGF0DWTL/skus/0001?country=US",
-                            "method":"GET",
-                            "headers":[]
-                        }
-                    }
-                }
-            ],
-            "creationDate":"2018-03-15T17:10:51.2712905Z",
-            "status":"completed",
-            "links":{  
-                "provisioningStatus":{  
-                    "uri":"/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/orders/VulAvcXKPvZqsyAAaahiT7Ii0QEJuReH1/provisioningstatus",
-                    "method":"GET",
-                    "headers":[]
-                },
-                "self":{  
-                    "uri":"/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/orders/VulAvcXKPvZqsyAAaahiT7Ii0QEJuReH1",
-                    "method":"GET",
-                    "headers":[]
-                }
-            },
-            "attributes":{  
-                "objectType":"Order"
-            }
+?{
+  "orders": [
+    {
+      "id": "3c6f2530-1e31-4088-8230-dd1c31a18bce",
+      "alternateId": "3c6f2530-1e31-4088-8230-dd1c31a18bce",
+      "referenceCustomerId": "28045616-f6b9-462f-9701-0d89b5e65c44",
+      "billingCycle": "monthly",
+      "currencyCode": "USD",
+      "lineItems": [
+        {
+          "lineItemNumber": 0,
+          "offerId": "MS-AZR-0145P",
+          "subscriptionId": "EF2E1307-86E6-40E3-A794-872403FBD31C",
+          "termDuration": "P1Y",
+          "transactionType": "New",
+          "friendlyName": "Microsoft Azure",
+          "quantity": 1,
+          "links": {...}
         }
-    ],
-    "attributes":{  
-        "objectType":"CartCheckoutResult"
+      ],
+      "creationDate": "2019-01-16T00:48:44.76+00:00",
+      "status": "completed",
+      "transactionType": "UserPurchase",
+      "recordType": "Combined",
+      "links": {...},
+      ...
+    },
+    {
+      "id": "311qiN8iFwkv-XARWMvXRYAwYKMACVqv1",
+      "alternateId": "0a3624c6e47d",
+      "referenceCustomerId": "28045616-f6b9-462f-9701-0d89b5e65c44",
+      "billingCycle": "one_time",
+      "currencyCode": "USD",
+      "currencySymbol": "$",
+      "lineItems": [
+        {
+          "lineItemNumber": 0,
+          "offerId": "DZH318Z0BQ36:004G:DZH318Z08C0S",
+          "termDuration": "P1Y",
+          "transactionType": "New",
+          "friendlyName": "Reserved VM Instance, Standard_NV12, US East 2, 1 Year",
+          "quantity": 1,
+          "links": {...}
+        },
+        {
+          "lineItemNumber": 1,
+          "offerId": "DZH318Z0BQ36:004J:DZH318Z08B8X",
+          "termDuration": "P3Y",
+          "transactionType": "New",
+          "friendlyName": "Reserved VM Instance, Standard_NV12, US East 2, 3 Years",
+          "quantity": 1,
+          "links": {...}
+        },
+        {
+          "lineItemNumber": 2,
+          "offerId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
+          "termDuration": "",
+          "transactionType": "New",
+          "friendlyName": "Access 2016",
+          "quantity": 1,
+          "links": {...}
+        }
+      ],
+      "creationDate": "2019-01-16T00:48:51.6578126Z",
+      "status": "pending",
+      "transactionType": "UserPurchase",
+      "recordType": "Single",
+      "links": {...},
+      "client": {
+        "marketplaceCountry": "US",
+        "deviceFamily": "UniversalStore-PartnerCenter",
+        "name": "Partner Center Web"
+      },
+      ...
+    },
+    {
+      "id": "HVu_cO8Ea7fNRQP4ia1QTpZap-kg_7P71",
+      "alternateId": "55a4e6854d54",
+      "referenceCustomerId": "28045616-f6b9-462f-9701-0d89b5e65c44",
+      "billingCycle": "monthly",
+      "currencyCode": "USD",
+      "currencySymbol": "$",
+      "lineItems": [
+        {
+          "lineItemNumber": 0,
+          "offerId": "DZH318Z0BXWC:0002:DZH318Z0BMRV",
+          "termDuration": "P1M",
+          "transactionType": "New",
+          "friendlyName": "Barracuda WaaS - Medium Plan",
+          "quantity": 1,
+          "links": {...}
+        }
+      ],
+      "creationDate": "2019-01-16T00:48:44.4514129Z",
+      "status": "pending",
+      "transactionType": "UserPurchase",
+      "recordType": "Single",
+      "links": {...},
+      "client": {
+        "marketplaceCountry": "US",
+        "deviceFamily": "UniversalStore-PartnerCenter",
+        "name": "Partner Center Web"
+      },
+      ...
     }
+  ],
+  ...
 }
 ```
