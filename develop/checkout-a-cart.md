@@ -188,11 +188,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "transactionType": "UserPurchase",
       "recordType": "Single",
       "links": {...},
-      "client": {
-        "marketplaceCountry": "US",
-        "deviceFamily": "UniversalStore-PartnerCenter",
-        "name": "Partner Center Web"
-      },
       ...
     },
     {
@@ -218,11 +213,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "transactionType": "UserPurchase",
       "recordType": "Single",
       "links": {...},
-      "client": {
-        "marketplaceCountry": "US",
-        "deviceFamily": "UniversalStore-PartnerCenter",
-        "name": "Partner Center Web"
-      },
       ...
     }
   ],
