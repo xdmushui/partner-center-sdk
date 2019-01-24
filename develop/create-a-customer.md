@@ -30,7 +30,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 > [!IMPORTANT] 
 > To create a customer tenant you must provide a valid physical address during the creation process. An address can be validated by following the steps outlined in the
-[Validate an address](validate-an-address.md) scenario.
+[Validate an address](validate-an-address.md) scenario. If you create a customer using an invalid address in the sandbox environment, you will not be able to delete that customer tenant.
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
