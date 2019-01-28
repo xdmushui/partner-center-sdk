@@ -33,9 +33,9 @@ string customerId;
 // Get the collection of entitlements.
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
-To populate expiry dates for the entitlements to be retrieved, call the same methods above and set the optional boolean parameter **showExpiry** to true (**Get(true)** or **GetAsync(true)**). This indicates that expiry dates are required (when applicable).
+To populate expiry dates for the entitlements to be retrieved, call the same methods above and set the optional boolean parameter **showExpiry** to true **Get(true)** or **GetAsync(true)**. This indicates that entitlement expiry dates are required (when applicable).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > On-premise entitlement types do not have expiry dates.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
@@ -56,7 +56,7 @@ Use the following path and query parameters when creating the request.
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
-| entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, both types are retrieved |
+| entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, all types will be retrieved |
 | showExpiry | boolean | No | Optional flag which indicates if entitlements exipry dates are required. |
 
  
