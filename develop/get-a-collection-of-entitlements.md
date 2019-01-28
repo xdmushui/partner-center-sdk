@@ -2,7 +2,7 @@
 title: Get a collection of entitlements
 description: How to get a collection of entitlements.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 07/27/2018
+ms.date: 01/28/2019
 ms.localizationpriority: medium
 ---
 
@@ -33,6 +33,10 @@ string customerId;
 // Get the collection of entitlements.
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
+To populate expiry dates for the entitlements to be retrieved, call the same methods above and set the optional boolean parameter **showExpiry** to true (**Get(true)** or **GetAsync(true)**). This indicates that expiry dates are required (when applicable).
+
+> [!IMPORTANT]  
+> On-premise entitlement types do not have expiry dates.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -52,6 +56,8 @@ Use the following path and query parameters when creating the request.
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
+| entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, both types are retrieved |
+| showExpiry | boolean | No | Optional flag which indicates if entitlements exipry dates are required. |
 
  
 
@@ -72,7 +78,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
@@ -198,7 +203,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com 
 ```
 
@@ -251,7 +255,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com 
 ```
 
