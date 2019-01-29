@@ -2,7 +2,7 @@
 title: Get a collection of entitlements
 description: How to get a collection of entitlements.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 07/27/2018
+ms.date: 01/28/2019
 ms.localizationpriority: medium
 ---
 
@@ -33,6 +33,10 @@ string customerId;
 // Get the collection of entitlements.
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
+To populate expiry dates for the entitlements to be retrieved, call the same methods above and set the optional boolean parameter **showExpiry** to true **Get(true)** or **GetAsync(true)**. This indicates that entitlement expiry dates are required (when applicable).
+
+> [!IMPORTANT]
+> On-premise entitlement types do not have expiry dates.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -52,6 +56,8 @@ Use the following path and query parameters when creating the request.
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
+| entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, all types will be retrieved |
+| showExpiry | boolean | No | Optional flag which indicates if entitlements exipry dates are required. |
 
  
 
@@ -72,7 +78,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
@@ -121,7 +126,6 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
         }
       ],
       "skuId": "007J",
-      "skuTitle": "Reserved VM Instance, Standard_F2, US East 2, 1 Year",
       "entitlementType": "reservedinstance"
       "dynamicAttributes": {
                "reservationType": "virtualmachines"
@@ -174,6 +178,133 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 
 ## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples   
 
+The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
+
+**C# example**   
+
+To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the **Entitlements** interface and use the **Get()** or **GetAsync()** methods.
+
+``` csharp
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("software").Get(true);
+```
+
+**Request example**
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/customers/de3dcef9-9991-459c-ac71-2903d1127414/entitlements?entitlementtype=software&showExpiry=true
+Authorization: Bearer <Token>
+Accept: application/json
+MS-RequestId: 6517a410-67ce-4995-9bb7-116a52179f92
+MS-CorrelationId: d9eb8194-9b99-4057-a2fe-98bdf05f013c
+X-Locale: en-US
+Host: api.partnercenter.microsoft.com 
+```
+
+**Response example**
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1791
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: d9eb8194-9b99-4057-a2fe-98bdf05f013c
+MS-RequestId: 6517a410-67ce-4995-9bb7-116a52179f92
+X-Locale: en-US
+MS-CV: yD+4LBKePUSp/vqJ.0
+MS-ServerId: 000002
+Date: Mon, 28 Jan 2019 18:31:43 GMT
+
+{
+    "totalCount": 2,
+    "items": [
+        {
+            "includedEntitlements": [
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "0",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWM2",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0001",
+                    "entitlementType": "software"
+                },
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "0",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWMK",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0001",
+                    "entitlementType": "software"
+                }
+            ],
+            "referenceOrder": {
+                "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                "lineItemId": "0",
+                "alternateId": "8f3af3dea1ea"
+            },
+            "productId": "DG7GMGF0DWM3",
+            "quantity": 1,
+            "entitledArtifacts": [],
+            "skuId": "0002",
+            "entitlementType": "software"
+        },
+        {
+            "includedEntitlements": [
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "1",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWV1",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0002",
+                    "entitlementType": "software"
+                },
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "1",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWV2",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0002",
+                    "entitlementType": "software"
+                }
+            ],
+            "referenceOrder": {
+                "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                "lineItemId": "1",
+                "alternateId": "8f3af3dea1ea"
+            },
+            "productId": "DG7GMGF0DWBQ",
+            "quantity": 1,
+            "entitledArtifacts": [],
+            "skuId": "0003",
+            "entitlementType": "software",
+            "expiryDate": "2022-01-28T00:00:00Z"
+        }
+    ],
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+```
+
+
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
 ### <span id="VirtualMachineReservationExample_SDK_1.8"/><span id="virtualmachinereservationexample_sdk_1.8"/><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"/>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
@@ -198,7 +329,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com 
 ```
 
@@ -251,7 +381,6 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com 
 ```
 
