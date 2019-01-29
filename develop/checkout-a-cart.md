@@ -175,10 +175,9 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
         },
         {
           "lineItemNumber": 2,
-          "offerId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
-          "termDuration": "",
+          "offerId": "DG7GMGF0DWM3:0002:DG7GMGF0DT1M",
           "transactionType": "New",
-          "friendlyName": "Access 2016",
+          "friendlyName": "BizTalk Server 2016 Branch",
           "quantity": 1,
           "links": {...}
         }
