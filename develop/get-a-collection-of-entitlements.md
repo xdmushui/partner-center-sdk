@@ -182,7 +182,7 @@ The following example shows you how to retrieve a specific type of entitlements 
 
 **C# example**   
 
-To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the *Entitlements* interface and use the **Get()** or **GetAsync()** methods.
+To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the **Entitlements** interface and use the **Get()** or **GetAsync()** methods.
 
 ``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("software").Get(true);
@@ -303,6 +303,7 @@ Date: Mon, 28 Jan 2019 18:31:43 GMT
     }
 }
 ```
+
 
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
