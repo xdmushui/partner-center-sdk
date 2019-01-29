@@ -126,7 +126,6 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
         }
       ],
       "skuId": "007J",
-      "skuTitle": "Reserved VM Instance, Standard_F2, US East 2, 1 Year",
       "entitlementType": "reservedinstance"
       "dynamicAttributes": {
                "reservationType": "virtualmachines"
@@ -178,6 +177,132 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 
 
 ## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples   
+
+The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
+
+**C# example**   
+
+To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the *Entitlements* interface and use the **Get()** or **GetAsync()** methods.
+
+``` csharp
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("software").Get(true);
+```
+
+**Request example**
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/customers/de3dcef9-9991-459c-ac71-2903d1127414/entitlements?entitlementtype=software&showExpiry=true
+Authorization: Bearer <Token>
+Accept: application/json
+MS-RequestId: 6517a410-67ce-4995-9bb7-116a52179f92
+MS-CorrelationId: d9eb8194-9b99-4057-a2fe-98bdf05f013c
+X-Locale: en-US
+Host: api.partnercenter.microsoft.com 
+```
+
+**Response example**
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1791
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: d9eb8194-9b99-4057-a2fe-98bdf05f013c
+MS-RequestId: 6517a410-67ce-4995-9bb7-116a52179f92
+X-Locale: en-US
+MS-CV: yD+4LBKePUSp/vqJ.0
+MS-ServerId: 000002
+Date: Mon, 28 Jan 2019 18:31:43 GMT
+
+{
+    "totalCount": 2,
+    "items": [
+        {
+            "includedEntitlements": [
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "0",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWM2",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0001",
+                    "entitlementType": "software"
+                },
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "0",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWMK",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0001",
+                    "entitlementType": "software"
+                }
+            ],
+            "referenceOrder": {
+                "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                "lineItemId": "0",
+                "alternateId": "8f3af3dea1ea"
+            },
+            "productId": "DG7GMGF0DWM3",
+            "quantity": 1,
+            "entitledArtifacts": [],
+            "skuId": "0002",
+            "entitlementType": "software"
+        },
+        {
+            "includedEntitlements": [
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "1",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWV1",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0002",
+                    "entitlementType": "software"
+                },
+                {
+                    "includedEntitlements": [],
+                    "referenceOrder": {
+                        "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                        "lineItemId": "1",
+                        "alternateId": "8f3af3dea1ea"
+                    },
+                    "productId": "DG7GMGF0DWV2",
+                    "quantity": 1,
+                    "entitledArtifacts": [],
+                    "skuId": "0002",
+                    "entitlementType": "software"
+                }
+            ],
+            "referenceOrder": {
+                "id": "4teYMtWYEeKM77JftGLIQYMOZPTwyOEV1",
+                "lineItemId": "1",
+                "alternateId": "8f3af3dea1ea"
+            },
+            "productId": "DG7GMGF0DWBQ",
+            "quantity": 1,
+            "entitledArtifacts": [],
+            "skuId": "0003",
+            "entitlementType": "software",
+            "expiryDate": "2022-01-28T00:00:00Z"
+        }
+    ],
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+```
 
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
