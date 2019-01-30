@@ -32,26 +32,69 @@ Finally, call the **Create** or **CreateAsync** method to create the cart.
 // IAggregatePartner partnerOperations;
 // string customerId;
 // string subscriptionId;
-// string catalogItemId;
 
 var cart = new Cart()
 {
     LineItems = new List<CartLineItem>()
     {
-        catalogItemId = catalogItemId,
-        FriendlyName = "A_sample_Azure_RI",
-        Quantity = 5,
-        BillingCycle = BillingCycleType.OneTime,
-        ProvisioningContext = new Dictionary<string, string>
+        new CartLineItem()
         {
-            { "subscriptionId", subscriptionId },
-            { "scope", "shared" },
-            { "duration", "3Years" }            
-        }   
+			/* Microsoft Azure Subscription */
+            Id = 0,
+            CatalogItemId = "MS-AZR-0145P",
+            Quantity = 1,
+            BillingCycle = BillingCycleType.Monthly,
+            TermDuration = "P1Y"
+        },
+        new CartLineItem()
+        {
+			/* Azure Reserved Instance */
+            Id = 1,
+            CatalogItemId = "DZH318Z0BQ36:004G:DZH318Z08C0S",
+            Quantity = 1,
+            BillingCycle = BillingCycleType.OneTime,
+            TermDuration = "P1Y",
+            ProvisioningContext = new Dictionary<string, string>
+            {
+                { "subscriptionId", subscriptionId },
+                { "scope", "shared" }
+            }
+        },
+        new CartLineItem()
+        {
+			/* Azure Reserved Instance */
+            Id = 2,
+            CatalogItemId = "DZH318Z0BQ36:004J:DZH318Z08B8X",
+            Quantity = 1,
+            BillingCycle = BillingCycleType.OneTime,
+            TermDuration = "P3Y",
+            ProvisioningContext = new Dictionary<string, string>
+            {
+                { "subscriptionId", subscriptionId },
+                { "scope", "shared" }
+            }
+        },
+        new CartLineItem()
+        {
+			/* Perpetual Software */
+            Id = 3,
+            CatalogItemId = "DG7GMGF0DWM3:0002:DG7GMGF0DT1M",
+            Quantity = 1,
+            BillingCycle = BillingCycleType.OneTime
+        },
+        new CartLineItem()
+        {
+			/* SaaS */
+            Id = 4,
+            CatalogItemId = "DZH318Z0BXWC:0002:DZH318Z0BMRV",
+            Quantity = 1,
+            BillingCycle = BillingCycleType.Monthly,
+            TermDuration = "P1M"
+        }
     }
 };
 
-var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
+cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
 ### Java
@@ -268,7 +311,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "currencyCode": "USD",
       "billingCycle": "monthly",
       "termDuration": "P1Y",
-      "provisioningContext": {},
       "orderGroup": "OMS-0"
     },
     {
@@ -299,13 +341,10 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     },
     {
       "id": 3,
-      "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
+      "catalogItemId": "DG7GMGF0DWM3:0002:DG7GMGF0DT1M",
       "quantity": 1,
       "currencyCode": "USD",
       "billingCycle": "one_time",
-      "provisioningContext": {
-        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8"
-      },
       "orderGroup": "0"
     },
     {
@@ -315,9 +354,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "currencyCode": "USD",
       "billingCycle": "monthly",
       "termDuration": "P1M",
-      "provisioningContext": {
-        "subscriptionId": "1C461A25-F729-4FA5-AADB-280947DD05E8"
-      },
       "orderGroup": "1"
     }
   ],
