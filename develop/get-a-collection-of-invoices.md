@@ -145,6 +145,12 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
             "currencyCode": "GBP",
             "currencySymbol": "£",
             "pdfDownloadLink": "/invoices/D02005YFHI/documents/statement",
+            "taxReceipts": [
+                {
+                    "id": "123456",
+                    "taxReceiptPdfDownloadLink": "/invoices/D02005YFHI/receipts/123456/documents/statement"
+                }
+            ],
             "invoiceDetails": [
                 {
                     "invoiceLineItemType": "billing_line_items",
@@ -182,6 +188,12 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
             "currencyCode": "CHF",
             "currencySymbol": "CHF",
             "pdfDownloadLink": "/invoices/G000024130/documents/statement",
+            "taxReceipts": [
+                {
+                    "id": "234567",
+                    "taxReceiptPdfDownloadLink": "/invoices/G000024130/receipts/234567/documents/statement"
+                }
+            ],
             "invoiceDetails": [
                 {
                     "invoiceLineItemType": "billing_line_items",
