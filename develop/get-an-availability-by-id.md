@@ -92,7 +92,7 @@ None.
 **Request example**
 
 ```http
-GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318Z0HMKQ?country=US HTTP/1.1
+GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 2e12a576-ded5-437e-a5ec-dbfbcbd1624c
@@ -133,10 +133,10 @@ Date: Wed, 14 Mar 2018 22:19:43 GMT
 Content-Length: 440
 
 {
-    "id": "DZH318XZXVNF",
-    "productId": "DZH318Z0BQ3Q",
-    "skuId": "0001",
-    "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXVNF",
+	"id": "DZH318XZXPHL",
+	"productId": "DZH318Z0BQ3Q",
+	"skuId": "0001",
+	"catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXPHL",
     "defaultCurrency": {
 		"code": "USD",
 		"symbol": "$"
@@ -154,7 +154,7 @@ Content-Length: 440
 	"sku": { ... },
     "links": {
         "self": {
-            "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318Z0HMKQ?country=US",
+            "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US",
             "method": "GET",
             "headers": []
         }
