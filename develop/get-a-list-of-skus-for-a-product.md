@@ -161,7 +161,7 @@ Content-Length: 50917
                 "one_time"
             ],
             "purchasePrerequisites": [
-                "SubscriptionRegistration",
+                "AzureSubscriptionRegistration",
                 "InventoryCheck"
             ],
             "provisioningVariables": [
@@ -204,7 +204,7 @@ Content-Length: 50917
                 "one_time"
             ],
             "purchasePrerequisites": [
-                "SubscriptionRegistration",
+                "AzureSubscriptionRegistration",
                 "InventoryCheck"
             ],
             "provisioningVariables": [

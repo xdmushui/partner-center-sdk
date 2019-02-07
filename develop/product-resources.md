@@ -130,7 +130,7 @@ Represents a possible refund path under a cancellation policy.
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | sequenceId        | int    | The number which represents the ascending order in which the refund option should be considered (relative to other refund options under the same cancellation policy).	|
 | type				| string | The type of refund. The only supported values are "Partial" and "Full"		|
-| expiresAfter      | string | The ISO 8601 representation of the duration (relative to the product activation) the refund option is applicable for.	|
+| expiresAfter      | string | The ISO 8601 representation of the duration (relative to the product activation) the refund option is applicable for. If null it means there is no expiration for this option.	|
 
 
 ## <span id="InventoryCheckRequest"/><span id="inventorycheckrequest"/><span id="INVENTORYCHECKREQUEST"/>InventoryCheckRequest
