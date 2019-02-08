@@ -17,16 +17,16 @@ ms.localizationpriority: medium
 
 Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
+## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A valid Invoice ID and a corresponding receipt ID.
 
+
 ## <span id="C_"/><span id="c_"/>C#
 
-
-To get an invoice receipt statement by ID, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Receipts** collection and call **ById()** then call the **Documents()** and **Statement()** methods to access the invoice receipt statement. Finally, call the **Get()** or **GetAsync()** methods.
+To get an invoice receipt statement by ID, starting with Partner Center SDK v1.11.0, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Receipts** collection and call **ById()** then call the **Documents()** and **Statement()** methods to access the invoice receipt statement. Finally, call the **Get()** or **GetAsync()** methods.
 
 ``` csharp
 // IPartner scopedPartnerOperations;
@@ -37,24 +37,23 @@ var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs 
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
+## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 **Request syntax**
 
-| Method  | Request URI                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/receipts/{receipt-id}/documents/statement HTTP/1.1  |
-
+| Method  | Request URI                                                                                                            |
+|---------|------------------------------------------------------------------------------------------------------------------------|
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/receipts/{receipt-id}/documents/statement HTTP/1.1 |
 
 **URI parameter**
 
 Use the following query parameter to get the invoice receipt statement.
 
-| Name       | Type       | Required | Description                                                                                        |
-|------------|------------|----------|----------------------------------------------------------------------------------------------------|
-| invoice-id | string     | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
-| receipt-id | string | Yes | The value is a receipt-id that allows the reseller to filter the receipts for a given invoice. |
+| Name       | Type   | Required | Description                                                                                    |
+|------------|--------|-----------------------------------------------------------------------------------------------------------|
+| invoice-id | string | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
+| receipt-id | string | Yes      | The value is a receipt-id that allows the reseller to filter the receipts for a given invoice. |
 
  
 
@@ -76,8 +75,8 @@ MS-RequestId: 8ac25aa5-9537-4b6d-b782-aa0c8e979e99
 MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, this method returns a pdf stream in the response body.
 
