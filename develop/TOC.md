@@ -183,7 +183,6 @@
 #### [Order](order-resources.md)
 #### [Profile](profile-resources.md)
 #### [Products](product-resources.md)
-#### [Referral](referral-resources.md)
 #### [Relationships](relationships-resources.md)
 #### [Service costs](service-costs-resources.md)
 #### [Service request](service-request-resources.md)
