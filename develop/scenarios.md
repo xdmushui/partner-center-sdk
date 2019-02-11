@@ -111,12 +111,13 @@ All of the following scenarios can be completed three different ways:
 </ul>
 <p>Get invoices</p>
 <ul>
-<li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
+<li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
 <li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
 <li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
+<li><p><a href="get-invoice-receipt-statement.md">Get invoice receipt statement</a></p></li>
 <li><p><a href="get-invoice-statement.md">Get invoice statement</a></p></li>
 <li><p><a href="get-invoice-summaries.md">Get invoice summaries</a></p></li>
-<li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
+<li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
 </ul>
 <p>Check your Azure spending budget</p>
 <ul>

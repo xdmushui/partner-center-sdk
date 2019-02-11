@@ -1,7 +1,6 @@
 ---
 title: Get invoice receipt statement
 description: Retrieves an invoice receipt statement using invoice ID and the receipt ID.
-ms.assetid: B4B3C229-582F-43F8-97CC-0C9F45AEAAB0
 ms.date: 02/11/2019
 ms.localizationpriority: medium
 ---
