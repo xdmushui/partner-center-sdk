@@ -2,7 +2,7 @@
 title: Get invoice receipt statement
 description: Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 ms.assetid: B4B3C229-582F-43F8-97CC-0C9F45AEAAB0
-ms.date: 02/04/2019
+ms.date: 02/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,12 +17,10 @@ ms.localizationpriority: medium
 
 Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
-
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A valid Invoice ID and a corresponding receipt ID.
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -36,7 +34,6 @@ var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs 
-
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -54,9 +51,7 @@ Use the following query parameter to get the invoice receipt statement.
 |------------|--------|-----------------------------------------------------------------------------------------------------------|
 | invoice-id | string | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 | receipt-id | string | Yes      | The value is a receipt-id that allows the reseller to filter the receipts for a given invoice. |
-
  
-
 **Request headers**
 
 - See [Headers](headers.md) for more information.
@@ -74,7 +69,6 @@ Accept: application/json
 MS-RequestId: 8ac25aa5-9537-4b6d-b782-aa0c8e979e99
 MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 ```
-
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
