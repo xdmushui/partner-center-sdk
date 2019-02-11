@@ -14,7 +14,10 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Retrieves an invoice receipt statement using invoice ID and the receipt ID.
+Retrieves an invoice receipt statement using invoice ID and the receipt ID. 
+
+> [!IMPORTANT]
+> This feature is only applicable to Taiwan tax receipts.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
