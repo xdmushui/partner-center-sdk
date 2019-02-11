@@ -78,6 +78,58 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
+<td><p><a href="manage-profiles-and-information.md">Manage accounts and profiles</a></p></td>
+<td><p>Work with accounts and profiles</p>
+<ul>
+<li><p><a href="get-legal-business-profile.md">Get the partner legal business profile</a></p></li>
+<li><p><a href="get-an-organization-profile.md">Get an organization profile</a></p></li>
+<li><p><a href="get-partner-billing-profile.md">Get partner billing profile</a></p></li>
+<li><p><a href="get-partner-network-profile.md">Get Microsoft Partner Network profile</a></p></li>
+<li><p><a href="get-support-profile.md">Get support profile</a></p></li>
+<li><p><a href="update-legal-business-profile.md">Update the partner legal business profile</a></p></li>
+<li><p><a href="update-partner-billing-profile.md">Update the partner billing profile</a></p></li>
+<li><p><a href="update-support-profile.md">Update support profile</a></p></li>
+<li><p><a href="update-an-organization-profile.md">Update an organization profile</a></p></li>
+<li><p><a href="get-partner-by-mpn-id.md">Verify a partner MPN ID</a></p></li>
+<li><p><a href="get-all-subscriptions-by-partner.md">Get a customer&#39;s subscriptions by partner MPN ID</a></p></li>
+<li><p><a href="get-customers-of-an-indirect-reseller.md">Get customers of an indirect reseller</a></p></li>
+<li><p><a href="get-indirect-resellers-of-a-customer.md">Get indirect resellers of a customer</a></p></li>
+<li><p><a href="retrieve-a-list-of-indirect-resellers.md">Retrieve a list of indirect resellers</a></p></li>
+</ul></td>
+</tr>
+<tr>
+<td>
+<p><a href="manage-billing.md">Manage billing</a></p></td>
+<td><p>Billing cycle</p>
+<ul>
+<li><p><a href="change-the-billing-cycle.md">Change the billing cycle</a></p></li>
+</ul>
+<p>Get Azure rates and utilization records</p>
+<ul>
+<li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
+<li><p><a href="get-a-customer-s-utilization-record-for-azure.md">Get a customer&#39;s utilization records for Azure</a></p></li>
+</ul>
+<p>Get invoices</p>
+<ul>
+<li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
+<li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
+<li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
+<li><p><a href="get-invoice-statement.md">Get invoice statement</a></p></li>
+<li><p><a href="get-invoice-summaries.md">Get invoice summaries</a></p></li>
+<li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
+</ul>
+<p>Check your Azure spending budget</p>
+<ul>
+<li><p><a href="get-a-subscriptions-resource-usage-information.md">Get usage data for a subscription</a></p></li>
+<li><p><a href="get-a-customers-rated-usage-information.md">Get a usage summary for all of a customer&#39;s subscriptions</a></p></li>
+</ul>
+<p>Get service costs</p>
+<ul>
+<li><p><a href="get-a-customer-s-service-costs-summary.md">Get a customer&#39;s service costs summary</a></p></li>
+<li><p><a href="get-a-customer-s-service-costs-line-items.md">Get a customer&#39;s service costs line items</a></p></li>
+</ul></td>
+</tr>
+<tr>
 <td><p><a href="manage-customers.md">Manage customer accounts</a></p></td>
 <td><p>Create a customer</p>
 <ul>
@@ -195,38 +247,6 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td>
-<p><a href="manage-billing.md">Manage billing</a></p></td>
-<td><p>Billing cycle</p>
-<ul>
-<li><p><a href="change-the-billing-cycle.md">Change the billing cycle</a></p></li>
-</ul>
-<p>Get Azure rates and utilization records</p>
-<ul>
-<li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
-<li><p><a href="get-a-customer-s-utilization-record-for-azure.md">Get a customer&#39;s utilization records for Azure</a></p></li>
-</ul>
-<p>Get invoices</p>
-<ul>
-<li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
-<li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
-<li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
-<li><p><a href="get-invoice-statement.md">Get invoice statement</a></p></li>
-<li><p><a href="get-invoice-summaries.md">Get invoice summaries</a></p></li>
-<li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
-</ul>
-<p>Check your Azure spending budget</p>
-<ul>
-<li><p><a href="get-a-subscriptions-resource-usage-information.md">Get usage data for a subscription</a></p></li>
-<li><p><a href="get-a-customers-rated-usage-information.md">Get a usage summary for all of a customer&#39;s subscriptions</a></p></li>
-</ul>
-<p>Get service costs</p>
-<ul>
-<li><p><a href="get-a-customer-s-service-costs-summary.md">Get a customer&#39;s service costs summary</a></p></li>
-<li><p><a href="get-a-customer-s-service-costs-line-items.md">Get a customer&#39;s service costs line items</a></p></li>
-</ul></td>
-</tr>
-<tr>
 <td><p><a href="provide-support.md">Provide support</a></p></td>
 <td><p>Administer services for a customer</p>
 <ul>
@@ -247,28 +267,9 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
-<td><p><a href="manage-profiles-and-information.md">Manage accounts and profiles</a></p></td>
-<td><p>Work with accounts and profiles</p>
-<ul>
-<li><p><a href="get-legal-business-profile.md">Get the partner legal business profile</a></p></li>
-<li><p><a href="get-an-organization-profile.md">Get an organization profile</a></p></li>
-<li><p><a href="get-partner-billing-profile.md">Get partner billing profile</a></p></li>
-<li><p><a href="get-partner-network-profile.md">Get Microsoft Partner Network profile</a></p></li>
-<li><p><a href="get-support-profile.md">Get support profile</a></p></li>
-<li><p><a href="update-legal-business-profile.md">Update the partner legal business profile</a></p></li>
-<li><p><a href="update-partner-billing-profile.md">Update the partner billing profile</a></p></li>
-<li><p><a href="update-support-profile.md">Update support profile</a></p></li>
-<li><p><a href="update-an-organization-profile.md">Update an organization profile</a></p></li>
-<li><p><a href="get-partner-by-mpn-id.md">Verify a partner MPN ID</a></p></li>
-<li><p><a href="get-all-subscriptions-by-partner.md">Get a customer&#39;s subscriptions by partner MPN ID</a></p></li>
-<li><p><a href="get-customers-of-an-indirect-reseller.md">Get customers of an indirect reseller</a></p></li>
-<li><p><a href="get-indirect-resellers-of-a-customer.md">Get indirect resellers of a customer</a></p></li>
-<li><p><a href="retrieve-a-list-of-indirect-resellers.md">Retrieve a list of indirect resellers</a></p></li>
-</ul></td>
-</tr>
-<tr>
 <td><p><a href="utilities.md">Utilities</a></p></td>
-<td><ul>
+<td><p>Utilities</p>
+<ul>
 <li><p><a href="validate-an-address.md">Validate an address</a></p></li>
 <li><p><a href="get-market-specific-validation-data.md">Get address formatting rules by market</a></p></li>
 <li><p><a href="verify-domain-availability.md">Verify domain availability</a></p></li>
