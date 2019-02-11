@@ -26,12 +26,13 @@ This section describes the ways that Cloud Solution Provider partners can use th
 - [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 
 **Invoices:**
-- [Get the reseller's current account balance](get-the-reseller-s-current-account-balance.md)
+- [Get a collection of invoices](get-a-collection-of-invoices.md)
 - [Get invoice by ID](get-invoice-by-id.md)
 - [Get invoice line items](get-invoiceline-items.md)
+- [Get invoice receipt statement](get-invoice-receipt-statement.md)
 - [Get invoice statement](get-invoice-statement.md) 
 - [Get invoice summaries](get-invoice-summaries.md)
-- [Get a collection of invoices](get-a-collection-of-invoices.md)
+- [Get the reseller's current account balance](get-the-reseller-s-current-account-balance.md)
 
 **Azure spending budget:**
 - [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)

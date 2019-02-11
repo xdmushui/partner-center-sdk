@@ -64,6 +64,7 @@
 #### [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md)
 #### [Get an invoice by ID](get-invoice-by-id.md)
 #### [Get invoice line items](get-invoiceline-items.md)
+#### [Get invoice receipt statement](get-invoice-receipt-statement.md)
 #### [Get invoice statement](get-invoice-statement.md)
 #### [Get invoice summaries](get-invoice-summaries.md)
 #### [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
