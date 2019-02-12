@@ -110,28 +110,6 @@ Represents a term for which the availability can be purchased.
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | duration              | string																			| An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
 | description           | string																			| The description of the term.           |
-| cancellationPolicies  | array of [CancellationPolicy](#product-resources#cancellationpolicy) resources	| The set of cancellation policies that could apply after a purchase with this term.    |
-
-
-## <span id="CancellationPolicy"/><span id="cancellationpolicy"/><span id="CANCELLATIONPOLICY"/>CancellationPolicy
-
-Represents a cancellation policy that could apply to the purchase of a term-based availability. 
-
-| Property              | Type																  | Description                                                                         |
-|-----------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| refundOptions         | array of [RefundOption](#product-resources#refundoption) resources  | The set of refund options available under a cancellation policy.					|
-
-
-## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>RefundOption
-
-Represents a possible refund path under a cancellation policy. 
-
-| Property          | Type	 | Description                                                                         |
-|-------------------|--------|-------------------------------------------------------------------------------------|
-| sequenceId        | int    | The number which represents the ascending order in which the refund option should be considered (relative to other refund options under the same cancellation policy).	|
-| type				| string | The type of refund. The only supported values are "Partial" and "Full"		|
-| expiresAfter      | string | The ISO 8601 representation of the duration (relative to the product activation) the refund option is applicable for. If null it means there is no expiration for this option.	|
-
 
 ## <span id="InventoryCheckRequest"/><span id="inventorycheckrequest"/><span id="INVENTORYCHECKREQUEST"/>InventoryCheckRequest
 
