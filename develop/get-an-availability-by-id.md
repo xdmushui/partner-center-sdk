@@ -147,8 +147,7 @@ Content-Length: 440
     "isRenewable": false,
     "terms": [{
         "duration": "P1Y",
-        "description": "1 Year Prepaid",
-        "cancellationPolicies": []
+        "description": "1 Year Prepaid"
     }],
 	"product": { ... },
 	"sku": { ... },
