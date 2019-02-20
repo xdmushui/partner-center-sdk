@@ -18,19 +18,19 @@ In the Partner Center dashboard, this operation can be performed by selecting ei
 - Completed order with product that needs activation.
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 ### C#
-To get a line item's activation link, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method with your specified  [**OrderId**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.orders.order.id). Then, call the [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) with **ById()** method with the line item number identifier.  Finally, call the **ActivationLink()** method.
+To get a line item's activation link, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method with your specified  [**OrderId**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.orders.order.id). Then, call the [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) with **ById()** method with the line item number identifier.  Finally, call the **ActivationLinks()** method.
 ``` csharp
 // IAggregatePartner partnerOperations;
 // All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 // get the activation link for the specific line item 
-var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLink();
+var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 **Request syntax**
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customrs/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
 **Request headers**
 - See [Headers](headers.md) for more information.
 **Request body**
@@ -61,7 +61,7 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
     {
       "lineItemNumber": 0,
       "link": {
-        "uri": "https://prod-29.centralus.logic.azure.com/workflows/ae56907fb56b454b95a2f9e15eda2fa5/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2ftriggers%2fmanual%2frun&sv=1.0&sig=ZqrHd7etRkusiujFTmjmiQOaROtobK6a91x_AEwKap0&token=Fjvg6n5kT4LoCuTQprsC4oTxJdgIeMzp1S3vs%2b%2bRBIjz0%2bejVjlDE9TC7ZDQWUE7hjKMc74a6xHEDwqD6wTQh8KQxPKbKP%2fEmQ1hTqx6Zhoh88ot4K2Ng%2fSB0AtvyqwYULqZBoa3aHYgkHKG923B1Bo%2b45UWFZUQeVYJAKAkGEFp7n6YeJOCidiYEatFM2vThDxsmlEUvfZnBtTw83f%2fwJY5PEkUoBjyqHxN58ar7%2fbvlAJ2EYoi0reDEVFA4Ukt",
+        "uri": "<link populated here>",
         "method": "GET",
         "headers": [
           
