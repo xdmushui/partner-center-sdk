@@ -87,6 +87,7 @@ Represents the full subscription associated with the order.
 | provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
 | sku                | [Link](utility-resources.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
 | subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
+| activationLinks    | [Link](utility-resources.md#Link)            | When populated, the GET resource for links to activate the subscription.             |
 
  
 
