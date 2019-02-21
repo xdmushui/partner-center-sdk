@@ -80,7 +80,7 @@ This table lists the required query parameters to get an order by ID.
 |------------------------|----------|----------|--------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer. |
 | id-for-order           | string   | Yes      | A string corresponding to the order ID.                |
-| include-price          | bool     | None     | Whether to including pricing details (based on access permissions).| 
+| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).| 
 
  
 
