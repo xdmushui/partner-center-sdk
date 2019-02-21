@@ -34,7 +34,6 @@ Describes a partner's order.
 |referenceCustomerId | string                                             | The customer identifier. |
 | billingCycle       | string                                             | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [BillingCycleType](product-resources.md#billingcycletype). The default is "Monthly" or "OneTime" at order creation. This field is applied upon successful creation of the order. |
 | transactionType    | string                                             | Read-only. The transaction type of the order. Supported values are 'UserPurchase', 'SystemPurchase', or 'SystemBilling' |
-| recordType         | string                                             | Read-ony. The record type denoting whether the order resource can be utilized for future adjustments or contains combined adjusted status. Supported values are 'Single', 'combined'. |
 | lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
 | creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |

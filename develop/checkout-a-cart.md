@@ -143,7 +143,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "creationDate": "2019-01-16T00:48:44.76+00:00",
       "status": "completed",
       "transactionType": "UserPurchase",
-      "recordType": "Combined",
       "links": {...},
       ...
     },
@@ -185,7 +184,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "creationDate": "2019-01-16T00:48:51.6578126Z",
       "status": "pending",
       "transactionType": "UserPurchase",
-      "recordType": "Single",
       "links": {...},
       ...
     },
@@ -210,7 +208,6 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "creationDate": "2019-01-16T00:48:44.4514129Z",
       "status": "pending",
       "transactionType": "UserPurchase",
-      "recordType": "Single",
       "links": {...},
       ...
     }
