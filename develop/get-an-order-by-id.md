@@ -68,7 +68,7 @@ Get-PartnerCustomerOrder -CustomerId $selectedCustomerId -OrderId $selectedOrder
 
 | Method  | Request URI                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order}?{include-price}=true HTTP/1.1  |
 
  
 
@@ -80,6 +80,7 @@ This table lists the required query parameters to get an order by ID.
 |------------------------|----------|----------|--------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer. |
 | id-for-order           | string   | Yes      | A string corresponding to the order ID.                |
+| include-price          | bool     | None     | Whether to including pricing details (based on access permissions).| 
 
  
 
