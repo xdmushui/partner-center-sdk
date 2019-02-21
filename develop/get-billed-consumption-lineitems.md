@@ -62,14 +62,9 @@ while (fetchNext)
     Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
     Console.Out.WriteLine("\tPeriod: " + period);
 
-    seekBasedResourceCollection.Items.Take(2).ToList().ForEach(i =>
-    {
-        Console.Out.WriteLine("\t----------------------------------------------");
-        Console.Out.WriteLine("\tLine Item # {0}", itemNumber);
-        
-        PrintProperties(i);
-        itemNumber++;
-    });
+    //
+    // Insert code here to work with the line items.
+    //
     
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
