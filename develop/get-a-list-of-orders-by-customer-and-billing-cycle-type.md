@@ -45,7 +45,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBilli
 
 | Method  | Request URI                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type}&{include-price}=true HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type}&{include-price}=false HTTP/1.1  |
 
  
 
