@@ -56,7 +56,7 @@ Use the following query parameter to get all orders.
 | Name                   | Type     | Required | Description                                               |
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
-| include-price          | bool     | None     | Whether to including pricing details (based on access permissions).| 
+| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).| 
 
  
 
