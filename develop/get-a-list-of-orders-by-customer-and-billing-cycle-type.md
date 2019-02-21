@@ -57,6 +57,7 @@ This table lists the required query parameters to get a collection of orders by 
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 | billing-cycle-type     | string   | No       | A string corresponding to the billing cycle type.         |
+| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).|
 
  
 
