@@ -102,6 +102,12 @@ Date: Thu, 24 Mar 2016 05:22:14 GMT
     "currencyCode": "USD",
     "currencySymbol": "$",
     "pdfDownloadLink": "/invoices/G000024135/documents/statement",
+    "taxReceipts": [
+        {
+            "id": "123456",
+            "taxReceiptPdfDownloadLink": "/invoices/G000024135/receipts/123456/documents/statement"
+        }
+    ],
     "invoiceDetails": [
         {
             "invoiceLineItemType": "billing_line_items",
