@@ -1,12 +1,12 @@
 ---
-title: Get unbilled consumption recon line items (for third party usages)
-description: How to get a collection of unbilled consumption recon line item details for specified period.
+title: Get invoice billed consumption recon line items (for third party usages)
+description: How to get a collection of billed consumption recon line item details for specified period.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 02/20/2019
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get unbilled consumption line items (for third party usages)
+# Get invoice billed consumption line items (for third party usages)
 
 
 **Applies To**
@@ -29,7 +29,7 @@ How to get a collection of invoice line item details for the specified invoice.
 
 To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
-The Provider identifies the source of the unbilled detail information (e.g. External), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
+The Provider identifies the source of the billed detail information (e.g. External), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
 
 The example code that follows uses a foreach loop to process the ReconLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
@@ -39,6 +39,7 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 
 ``` csharp
 // IAggregatePartner partnerOperations;
+// string invoiceId;
 // string curencyCode;
 // string period;
 // int pageMaxSizeReconLineItems = 2000;
@@ -49,7 +50,7 @@ IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.
 // including vNext header
 PartnerService.Instance.AdditionalHeaders = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("version", "vNext") };
 
-var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
+var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
 
@@ -59,11 +60,22 @@ var itemNumber = 1;
 while (fetchNext)
 {
     Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
-    Console.Out.WriteLine("\tPeriod: " + period);
+    
+    seekBasedResourceCollection.Items.ToList().ForEach(item =>
+    {
+        // Instance of type ThirdPartyDailyRatedUsageReconLineItem
+        if (item is ThirdPartyDailyRatedUsageReconLineItem)
+        {
+            Type t = typeof(ThirdPartyDailyRatedUsageReconLineItem);
+            PropertyInfo[] properties = t.GetProperties();
 
-    //
-    // Insert code here to work with the line items.
-    //
+            foreach (PropertyInfo property in properties)
+            {
+                // Insert code here to work with the line item properties
+            }
+        }
+        itemNumber++;
+    });
     
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
@@ -79,13 +91,13 @@ while (fetchNext)
     {
         if (seekBasedResourceCollection.Links.Next.Headers != null && seekBasedResourceCollection.Links.Next.Headers.Any())
         {
-            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
+            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }                
 }  
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledConsumptionReconLineItemsPaging.cs
+For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetBilledConsumptionReconLineItemsPaging.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -94,13 +106,12 @@ For a similar example, see **Sample**: [Console test app](console-test-app.md). 
 
 Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using seekOperation = "Next" 
 
-
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                              |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
-                                
+
 
 **URI parameters**
 
@@ -111,8 +122,8 @@ Use the following URI and query parameters when creating the request.
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
 | provider               | string | Yes      | The provider: "External", "All".                                  |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
-| currencyCode           | string | Yes      | The currency code for the unbilled line items.                    |
-| period                 | string | Yes      | The period for unbilled recon. example: current, previous.        |
+| currencyCode           | string | Yes      | The currency code for the billed line items.                    |
+| period                 | string | Yes      | The period for billed recon. example: current, previous.        |
 | size                   | number | No       | The maximum number of items to return. Default size is 2000       |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items. |
 
@@ -141,7 +152,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Request example 1** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous)
 
 ```http
-GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/T000001234/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
@@ -166,100 +177,101 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 {
     "totalCount": 2,
-    "items": [
+    "items": [ 
         {
-            "partnerId": "00083575-bbd0-54de-b2ad-0f5b0e927d71",
-            "partnerName": "MTBC",
+            "partnerId": "2b8940db-5089-539c-e757-520ed1d1bc88",
+            "partnerName": "",
             "customerId": "",
             "customerCompanyName": "",
             "customerDomainName": "",
-            "invoiceNumber": "",
+            "invoiceNumber": "T000001234",
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "VM-Series Next-Generation Firewall (Bundle 2 PAYG)",
-            "productName": "VM-Series Next Generation Firewall",
-            "publisherName": "Test Alto Networks, Inc.",
-            "publisherId": "",
-            "subscriptionId": "12345678-04d9-421c-baf8-e3b8dd62ddba",
-            "subscriptionDescription": "Pay-As-You-Go",
-            "chargeStartDate": "2019-01-01T00:00:00Z",
-            "chargeEndDate": "2019-02-01T00:00:00Z",
-            "usageDate": "2019-01-01T00:00:00Z",
-            "meterType": "1 Compute Hour - 4core",
+            "skuName": "Test Onyx on Windows 2012 R2 (WebHost)",
+            "productName": "Test Onyx on Windows",
+            "publisherName": "Test",
+            "publisherId": "28503520",
+            "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
+            "subscriptionDescription": "Subscription 10",
+            "chargeStartDate": "2018-11-01T00:00:00Z",
+            "chargeEndDate": "2018-12-01T00:00:00Z",
+            "usageDate": "2018-11-13T00:00:00Z",
+            "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
-            "meterId": "4core",
-            "meterSubCategory": "VM-Series Next Generation Firewall",
-            "meterName": "VM-Series Next Generation Firewall - VM-Series Next-Generation Firewall (Bundle 2 PAYG) - 4 Core Hours",
+            "meterId": "1core",
+            "meterSubCategory": "Plesk Onyx on Windows",
+            "meterName": "Plesk Onyx on Windows - Plesk Onyx on Windows 2012 R2 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
-            "resourceLocation": "EASTUS",
+            "resourceLocation": "EASTUS2",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "ECH-PAN-RG",
-            "resourceUri": "/subscriptions/12345678-04d9-421c-baf8-e3b8dd62ddba/resourceGroups/ECH-PAN-RG/providers/Microsoft.Compute/virtualMachines/echpanfw",
+            "resourceGroup": "PLESKWINRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKWINRG/providers/Microsoft.Compute/virtualMachines/pleskWinTest",
             "tags": "",
-            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_D3_v2\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
+            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
             "serviceInfo2": "",
             "customerCountry": "",
             "mpnId": "1234567",
             "resellerMpnId": "",
-            "chargeType": "",
-            "unitPrice": 1.2799888920023,
-            "quantity": 24.0,
-            "unitType": "",
-            "billingPreTaxTotal": 30.7197334080551,
+            "chargeType": "new",
+            "unitPrice": 0.0209496384791679,
+            "quantity": 23.200004,
+            "unitType": "1 Hour",
+            "billingPreTaxTotal": 0.486031696515249,
             "billingCurrency": "USD",
-            "pricingPreTaxTotal": 30.7197334080551,
+            "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
             "providerSource": "External",
             "attributes": {
-                "objectType": "ThirdPartyDailyRatedUsageReconLineItem
+                "objectType": "ThirdPartyDailyRatedUsageReconLineItem"
             }
-        }, {
-            "partnerId": "00083575-bbd0-54de-b2ad-0f5b0e927d71",
-            "partnerName": "MTBC",
+        },
+        {
+            "partnerId": "2b8940db-5089-539c-e757-520ed1d1bc88",
+            "partnerName": "",
             "customerId": "",
             "customerCompanyName": "",
             "customerDomainName": "",
-            "invoiceNumber": "",
+            "invoiceNumber": "T000001234",
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "VM-Series Next-Generation Firewall (Bundle 2 PAYG)",
-            "productName": "VM-Series Next Generation Firewall",
-            "publisherName": "Test Alto Networks, Inc.",
-            "publisherId": "",
-            "subscriptionId": "12345678-04d9-421c-baf8-e3b8dd62ddba",
-            "subscriptionDescription": "Pay-As-You-Go",
-            "chargeStartDate": "2019-01-01T00:00:00Z",
-            "chargeEndDate": "2019-02-01T00:00:00Z",
-            "usageDate": "2019-01-02T00:00:00Z",
-            "meterType": "1 Compute Hour - 4core",
+            "skuName": "Test Onyx on Ubuntu 16.04 (WebHost)",
+            "productName": "Test Onyx on Linux",
+            "publisherName": "Test",
+            "publisherId": "28503520",
+            "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
+            "subscriptionDescription": "Subscription 10",
+            "chargeStartDate": "2018-11-01T00:00:00Z",
+            "chargeEndDate": "2018-12-01T00:00:00Z",
+            "usageDate": "2018-11-13T00:00:00Z",
+            "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
-            "meterId": "4core",
-            "meterSubCategory": "VM-Series Next Generation Firewall",
-            "meterName": "VM-Series Next Generation Firewall - VM-Series Next-Generation Firewall (Bundle 2 PAYG) - 4 Core Hours",
+            "meterId": "1core",
+            "meterSubCategory": "Plesk Onyx on Linux",
+            "meterName": "Plesk Onyx on Linux - Plesk Onyx on Ubuntu 16.04 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
             "resourceLocation": "EASTUS",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "ECH-PAN-RG",
-            "resourceUri": "/subscriptions/12345678-04d9-421c-baf8-e3b8dd62ddba/resourceGroups/ECH-PAN-RG/providers/Microsoft.Compute/virtualMachines/echpanfw",
+            "resourceGroup": "PLESKRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKRG/providers/Microsoft.Compute/virtualMachines/pleskUbuntuTest",
             "tags": "",
-            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_D3_v2\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
+            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
             "serviceInfo2": "",
             "customerCountry": "",
             "mpnId": "1234567",
             "resellerMpnId": "",
-            "chargeType": "",
-            "unitPrice": 1.2799888920023,
-            "quantity": 24.0,
-            "unitType": "",
-            "billingPreTaxTotal": 30.7197334080551,
+            "chargeType": "new",
+            "unitPrice": 0.0209951014286867,
+            "quantity": 23.350007,
+            "unitType": "1 Hour",
+            "billingPreTaxTotal": 0.490235765325545,
             "billingCurrency": "USD",
-            "pricingPreTaxTotal": 30.7197334080551,
+            "pricingPreTaxTotal": 0.490235765325545,
             "pricingCurrency": "USD",
             "providerSource": "External",
             "attributes": {
@@ -269,12 +281,12 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     ],
     "links": {
         "self": {
-            "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+            "uri": "/invoices/T000001234/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
+            "uri": "/invoices/T000001234/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
             "method": "GET",
             "headers": [
                 {
@@ -293,7 +305,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 **Request example 2** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=external&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=external&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
@@ -319,50 +331,50 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 {
     "totalCount": 1,
     "items": [
-        {
-            "partnerId": "00083575-bbd0-54de-b2ad-0f5b0e927d71",
-            "partnerName": "MTBC",
+          {
+            "partnerId": "2b8940db-5089-539c-e757-520ed1d1bc88",
+            "partnerName": "",
             "customerId": "",
             "customerCompanyName": "",
             "customerDomainName": "",
-            "invoiceNumber": "",
+            "invoiceNumber": "T000001234",
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "VM-Series Next-Generation Firewall (Bundle 2 PAYG)",
-            "productName": "VM-Series Next Generation Firewall",
-            "publisherName": "Test Alto Networks, Inc.",
-            "publisherId": "",
-            "subscriptionId": "12345678-04d9-421c-baf8-e3b8dd62ddba",
-            "subscriptionDescription": "Pay-As-You-Go",
-            "chargeStartDate": "2019-01-01T00:00:00Z",
-            "chargeEndDate": "2019-02-01T00:00:00Z",
-            "usageDate": "2019-01-02T00:00:00Z",
-            "meterType": "1 Compute Hour - 4core",
+            "skuName": "Test Onyx on Windows 2012 R2 (WebHost)",
+            "productName": "Test Onyx on Windows",
+            "publisherName": "Test",
+            "publisherId": "28503520",
+            "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
+            "subscriptionDescription": "Subscription 10",
+            "chargeStartDate": "2018-11-01T00:00:00Z",
+            "chargeEndDate": "2018-12-01T00:00:00Z",
+            "usageDate": "2018-11-13T00:00:00Z",
+            "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
-            "meterId": "4core",
-            "meterSubCategory": "VM-Series Next Generation Firewall",
-            "meterName": "VM-Series Next Generation Firewall - VM-Series Next-Generation Firewall (Bundle 2 PAYG) - 4 Core Hours",
+            "meterId": "1core",
+            "meterSubCategory": "Plesk Onyx on Windows",
+            "meterName": "Plesk Onyx on Windows - Plesk Onyx on Windows 2012 R2 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
-            "resourceLocation": "EASTUS",
+            "resourceLocation": "EASTUS2",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "ECH-PAN-RG",
-            "resourceUri": "/subscriptions/12345678-04d9-421c-baf8-e3b8dd62ddba/resourceGroups/ECH-PAN-RG/providers/Microsoft.Compute/virtualMachines/echpanfw",
+            "resourceGroup": "PLESKWINRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKWINRG/providers/Microsoft.Compute/virtualMachines/pleskWinTest",
             "tags": "",
-            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_D3_v2\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
+            "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
             "serviceInfo2": "",
             "customerCountry": "",
             "mpnId": "1234567",
             "resellerMpnId": "",
-            "chargeType": "",
-            "unitPrice": 1.2799888920023,
-            "quantity": 24.0,
-            "unitType": "",
-            "billingPreTaxTotal": 30.7197334080551,
+            "chargeType": "new",
+            "unitPrice": 0.0209496384791679,
+            "quantity": 23.200004,
+            "unitType": "1 Hour",
+            "billingPreTaxTotal": 0.486031696515249,
             "billingCurrency": "USD",
-            "pricingPreTaxTotal": 30.7197334080551,
+            "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
             "providerSource": "External",
             "attributes": {
@@ -372,7 +384,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     ],
     "links": {
         "self": {
-             "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+             "uri": "/invoices/T000001234/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         }

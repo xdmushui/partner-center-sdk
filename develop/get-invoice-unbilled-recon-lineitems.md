@@ -1,12 +1,12 @@
 ---
-title: Get unbilled recon line items (for first & third party)
+title: Get invoice unbilled recon line items (for first & third party)
 description: How to get a collection of unbilled  recon line item details for specified period.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 02/20/2019
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get unbilled consumption line items (for first & third party)
+# Get invoice unbilled consumption line items (for first & third party)
 
 
 **Applies To**
@@ -59,11 +59,22 @@ var itemNumber = 1;
 while (fetchNext)
 {
     Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
-    Console.Out.WriteLine("\tPeriod: " + period);
+    
+    seekBasedResourceCollection.Items.ToList().ForEach(item =>
+    {
+        // Instance of type ThirdPartyDailyRatedUsageReconLineItem
+        if (item is ThirdPartyDailyRatedUsageReconLineItem)
+        {
+            Type t = typeof(ThirdPartyDailyRatedUsageReconLineItem);
+            PropertyInfo[] properties = t.GetProperties();
 
-    //
-    // Insert code here to work with the line items.
-    //
+            foreach (PropertyInfo property in properties)
+            {
+                // Insert code here to work with the line item properties
+            }
+        }
+        itemNumber++;
+    });
     
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
@@ -85,7 +96,7 @@ while (fetchNext)
 }  
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledConsumptionReconLineItemsPaging.cs
+For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledReconLineItemsPaging.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -203,7 +214,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         },
         {
@@ -242,7 +253,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],
@@ -334,7 +345,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],
