@@ -36,7 +36,7 @@ Describes a partner's order.
 | transactionType    | string                                             | Read-only. The transaction type of the order. Supported values are 'UserPurchase', 'SystemPurchase', or 'SystemBilling' |
 | lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
-| currenySymbol      | string                                             | Read-only. The currency symbol assciated with the currency code. |
+| currencySymbol     | string                                             | Read-only. The currency symbol assciated with the currency code. |
 | creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
 | status             | string                                             | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](#orderstatus).        |
 | links              | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
