@@ -126,6 +126,7 @@ Date: Thu, 15 Mar 2018 22:05:30 GMT
     "referenceCustomerId": "b0d70a69-4c42-4b27-b17b-91a835d8686a",
     "billingCycle": "one_time",
     "currencyCode": "USD",
+    "currencySymbol" : "$",
     "lineItems": [
     {
         "lineItemNumber": 0,
