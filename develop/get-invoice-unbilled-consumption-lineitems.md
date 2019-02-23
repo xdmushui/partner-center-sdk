@@ -1,22 +1,19 @@
 ---
-title: Get invoice unbilled consumption recon line items (for third party usages)
-description: How to get a collection of unbilled consumption recon line item details for specified period.
+title: Get invoice unbilled consumption line items (for third party usage)
+description: How to get a collection of unbilled consumption line item details for specified period.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice unbilled consumption line items (for third party usages)
+# Get unbilled consumption line items (for third party usages)
 
 
 **Applies To**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of invoice line item details for the specified invoice.
+How to get a collection of line item details for the third party usage.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -31,7 +28,7 @@ To get the line items for the specified invoice, first retrieve the invoice obje
 
 The Provider identifies the source of the unbilled detail information (e.g. External), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
 
-The example code that follows uses a foreach loop to process the ReconLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
+The example code that follows uses a foreach loop to process the InvoiceLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
 To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
 
@@ -58,7 +55,7 @@ ConsoleKeyInfo keyInfo;
 var itemNumber = 1;
 while (fetchNext)
 {
-    Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
+    Console.Out.WriteLine("\tLine items count: " + seekBasedResourceCollection.Items.Count());
     
     seekBasedResourceCollection.Items.ToList().ForEach(item =>
     {
