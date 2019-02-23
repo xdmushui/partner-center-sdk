@@ -70,7 +70,7 @@
 #### [Get invoice statement](get-invoice-statement.md)
 #### [Get invoice summaries](get-invoice-summaries.md)
 #### [Get invoice unbilled third-party consumption line items](get-invoice-unbilled-consumption-lineitems.md)
-#### [Get invoice unbilled recon line items](get-invoice-unbilled-recon-lineitems)
+#### [Get invoice unbilled recon line items](get-invoice-unbilled-recon-lineitems.md)
 #### [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 #### [Get prices for Microsoft Azure Partner Shared Services](get-prices-for-microsoft-azure-partner-shared-services.md)
 #### [Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)
