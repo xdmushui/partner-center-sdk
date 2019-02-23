@@ -1,19 +1,18 @@
 ---
-title: Get invoice unbilled consumption line items (for third party usage)
-description: How to get a collection of unbilled consumption line item details for specified period.
-ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
+title: Get invoice unbilled third-party consumption line items
+description: How to get a collection of unbilled third-party consumption line item details for a specified invoice.
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get unbilled consumption line items (for third party usages)
+# Get invoice unbilled third-party consumption line items
 
 
 **Applies To**
 
 - Partner Center
 
-How to get a collection of line item details for the third party usage.
+How to get a collection of unbilled third-party consumption line item details for a specified invoice. 
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 

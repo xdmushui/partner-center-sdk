@@ -36,14 +36,16 @@ This section describes the ways that Cloud Solution Provider partners can use th
 - [Get an availability by ID](get-an-availability-by-id.md)
 - [Check Inventory](check-inventory.md)
 
-**Create an order**  
+**Manage an order**  
+- [Cancel an order from the integration sandbox](cancel-an-order-from-the-integration-sandbox.md)
+- [Checkout a cart](checkout-a-cart.md)
 - [Create a cart](create-a-cart.md)  
 - [Create a cart with add-ons](create-a-cart-with-add-ons.md)
-- [Update a cart](update-a-cart.md)  
-- [Checkout a cart](checkout-a-cart.md)  
+- [Get activation link by order line item](get-activation-link-by-order-line-item.md)  
 - [Get an order by ID](get-an-order-by-id.md)
 - [Purchase an add-on to a subscription](purchase-an-add-on-to-a-subscription.md)
 - [Purchase catalog items](purchase-catalog-items.md)
+- [Update a cart](update-a-cart.md)  
 
 **Enable a subscription for Azure Reserved VM Instance purchases**  
 - [Register a subscription](register-a-subscription.md)
@@ -56,10 +58,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Manage a subscription**  
 - [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
-- [Update autorenew for a subscription](update-autorenew-for-a-subscription.md)
+- [Update autorenew for a third-party-subscription](update-autorenew-for-a-third-party-subscription.md)
 - [Suspend a subscription](suspend-a-subscription.md)
 - [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 - [Transition a subscription](transition-a-subscription.md)
-- [Cancel a subscription](cancel-a-subscription.md)
+- [Cancel a third-party subscription](cancel-a-third-party-subscription.md)
 
 For more information about the process of reviewing offers, creating orders, or working with subscriptions, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.

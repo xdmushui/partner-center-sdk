@@ -1,12 +1,11 @@
 ---
-title: Get invoice unbilled line items (for first & third party)
-description: How to get a collection of unbilled  line item details for specified period.
-ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
+title: Get invoice unbilled recon line items (for first and third parties)
+description: How to get a collection of unbilled line item details for specified period.
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get unbilled line items (for first & third party)
+# Get invoice unbilled recon line items (for first and third parties)
 
 
 **Applies To**

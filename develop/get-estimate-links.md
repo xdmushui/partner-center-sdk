@@ -1,12 +1,11 @@
 ---
 title: Get estimate links
 description: How to get a collection of estimate links to query recon line item details.
-ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
 ms.date: 02/20/2019
 ms.localizationpriority: medium
 ---
 
-# Get Estimate Links
+# Get estimate links
 
 
 **Applies To**

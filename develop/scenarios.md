@@ -104,27 +104,31 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p><a href="change-the-billing-cycle.md">Change the billing cycle</a></p></li>
 </ul>
-<p>Get Azure rates and utilization records</p>
+<p>Azure rates and utilization records</p>
 <ul>
 <li><p><a href="get-prices-for-microsoft-azure.md">Get prices for Microsoft Azure</a></p></li>
 <li><p><a href="get-a-customer-s-utilization-record-for-azure.md">Get a customer&#39;s utilization records for Azure</a></p></li>
 </ul>
-<p>Get invoices</p>
+<p>Invoices</p>
 <ul>
 <li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
+<li><p><a href="get-estimate-links.md">Get estimate links</a></p></li>
+<li><p><a href="get-invoice-billed-consumption-lineitems.md">Get invoice billed third-party consumption line items</a></p></li>
 <li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
 <li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
 <li><p><a href="get-invoice-receipt-statement.md">Get invoice receipt statement</a></p></li>
 <li><p><a href="get-invoice-statement.md">Get invoice statement</a></p></li>
 <li><p><a href="get-invoice-summaries.md">Get invoice summaries</a></p></li>
+<li><p><a href="get-invoice-unbilled-consumption-lineitems.md">Get invoice unbilled third-party consumption line items</a></p></li>
+<li><p><a href="get-invoice-unbilled-recon-lineitems.md">Get invoice unbilled recon line items</a></p></li>
 <li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
 </ul>
-<p>Check your Azure spending budget</p>
+<p>Azure spending budget</p>
 <ul>
 <li><p><a href="get-a-subscriptions-resource-usage-information.md">Get usage data for a subscription</a></p></li>
 <li><p><a href="get-a-customers-rated-usage-information.md">Get a usage summary for all of a customer&#39;s subscriptions</a></p></li>
 </ul>
-<p>Get service costs</p>
+<p>Service costs</p>
 <ul>
 <li><p><a href="get-a-customer-s-service-costs-summary.md">Get a customer&#39;s service costs summary</a></p></li>
 <li><p><a href="get-a-customer-s-service-costs-line-items.md">Get a customer&#39;s service costs line items</a></p></li>
@@ -210,17 +214,19 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="get-an-availability-by-id.md">Get an availability by ID</a></p></li>
 <li><p><a href="check-inventory.md">Check Inventory</a></p></li>
 </ul>
-<p>Create an order</p>
+<p>Manage an order</p>
 <ul>
+<li><p><a href="cancel-an-order-from-the-integration-sandbox.md">Cancel an order from the integration sandbox</a></p></li>
+<li><p><a href="checkout-a-cart.md">Checkout a cart</a></p></li>
 <li><p><a href="create-a-cart.md">Create a cart</a></p></li>
 <li><p><a href="create-a-cart-with-add-ons.md">Create a cart with add-ons</a></p></li>
-<li><p><a href="update-a-cart.md">Update a cart</a></p></li>
-<li><p><a href="checkout-a-cart.md">Checkout a cart</a></p></li>
 <li><p><a href="create-an-order.md">Create an order</a></p></li>
 <li><p><a href="create-an-order-for-a-customer-of-an-indirect-reseller.md">Create an order for a customer of an indirect reseller</a></p></li>
+<li><p><a href="get-activation-link-by-order-line-item.md">Get activation link by order line item</a></p></li>
 <li><p><a href="get-an-order-by-id.md">Get an order by ID</a></p></li>
 <li><p><a href="purchase-an-add-on-to-a-subscription.md">Purchase an add-on to a subscription</a></p></li>
 <li><p><a href="purchase-catalog-items.md">Purchase catalog items</a></p></li>
+<li><p><a href="update-a-cart.md">Update a cart</a></p></li>
 </ul>
 <p>Enable a subscription for Azure Reserved VM Instance purchases</p>
 <ul>
@@ -242,11 +248,11 @@ All of the following scenarios can be completed three different ways:
 <p>Manage a subscription</p>
 <ul>
 <li><p><a href="change-the-quantity-of-a-subscription.md">Change the quantity of a subscription</a></p></li>
-<li><p><a href="update-autorenew-for-a-subscription.md">Update autorenew for a subscription</a></p></li>
+<li><p><a href="update-autorenew-for-a-third-party-subscription.md">Update autorenew for a third-party-subscription</a></p></li>
 <li><p><a href="suspend-a-subscription.md">Suspend a subscription</a></p></li>
 <li><p><a href="reactivate-a-suspended-a-subscription.md">Reactivate a suspended subscription</a></p></li>
 <li><p><a href="transition-a-subscription.md">Transition a subscription</a></p></li>
-<li><p><a href="cancel-a-subscription.md">Cancel a subscription</a></p></li>
+<li><p><a href="cancel-a-third-party-subscription.md">Cancel a third-party subscription</a></p></li>
 </ul></td>
 </tr>
 <tr>

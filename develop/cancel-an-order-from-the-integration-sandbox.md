@@ -1,13 +1,11 @@
 ---
 title: Cancel an order from the integration sandbox
-description: How to cancel reserved instance / software / 3rd party SaaS subscription orders from Testing in Production (Tip) integration sandbox accounts.
-ms.assetid: A4T6TYUI-EA7F-4C21-835F-6D6C303B05A5
+description: How to cancel orders from integration sandbox accounts.
 ms.date: 02/21/2019
 ms.localizationpriority: medium
 ---
 
-# Cancel reserved instance / software / 3rd party SaaS subscription orders from the integration sandbox accounts.
-
+# Cancel an order from the integration sandbox
 
 **Applies To**
 
@@ -16,10 +14,10 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to cancel reserved instance / software / 3rd party SaaS subscription orders from Testing in Production (Tip) integration sandbox accounts.
+How to cancel reserved instance, software, and third-party Software as a Service (SaaS) subscription orders from integration sandbox accounts.
 
 >[!NOTE]
->Please be aware that cancelling of reserved instance / Software / 3rd party SaaS subscription orders are only possible from integration sandbox accounts. For cancelling production orders please contact Partner Center support.
+>Please be aware that cancelling of reserved instance, software, or third party SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -28,7 +26,7 @@ How to cancel reserved instance / software / 3rd party SaaS subscription orders 
 
 ## <span id="C_"/><span id="c_"/>C#
 
-To cancel an order from the Tip integration sandbox, pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations. 
+To cancel an order from the integration sandbox, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations. 
 
 To select a particular [Order](order-resources.md#order) use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **Orders.ById()** with order identifier to specify the order and finally **Get** or **GetAsync** method to retrieve it. 
 
