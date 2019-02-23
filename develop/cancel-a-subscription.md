@@ -1,19 +1,19 @@
 ---
-title: Cancel a subscription
-description: Cancel a Subscription resource that matches the customer and subscription ID.
+title: Cancel a third-party subscription
+description: Cancel a third-party Subscription resource that matches the customer and subscription ID.
 ms.assetid: 
 ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
-# Cancel a subscription
+# Cancel a third-party subscription
 
 
 **Applies To**
 
 - Partner Center
 
-Cancel a [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
+Cancel a third-party [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription in question that you wish to cancel. To finish, choose the **Cancel subscription** option, then select **Submit.**
 
