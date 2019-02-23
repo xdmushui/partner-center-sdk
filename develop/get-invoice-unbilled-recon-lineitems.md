@@ -1,12 +1,12 @@
 ---
-title: Get unbilled recon line items (for first & third party)
-description: How to get a collection of unbilled  recon line item details for specified period.
+title: Get invoice unbilled line items (for first & third party)
+description: How to get a collection of unbilled  line item details for specified period.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 02/20/2019
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get unbilled consumption line items (for first & third party)
+# Get unbilled line items (for first & third party)
 
 
 **Applies To**
@@ -31,7 +31,7 @@ To get the line items for the specified invoice, first retrieve the invoice obje
 
 The Provider identifies the source of the unbilled detail information (e.g. All), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
 
-The example code that follows uses a foreach loop to process the ReconLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
+The example code that follows uses a foreach loop to process the InvoiceLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
 To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
 
@@ -58,12 +58,23 @@ ConsoleKeyInfo keyInfo;
 var itemNumber = 1;
 while (fetchNext)
 {
-    Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
-    Console.Out.WriteLine("\tPeriod: " + period);
+    Console.Out.WriteLine("\tLine line items count: " + seekBasedResourceCollection.Items.Count());
+    
+    seekBasedResourceCollection.Items.ToList().ForEach(item =>
+    {
+        // Instance of type OneTimeInvoiceLineItem
+        if (item is OneTimeInvoiceLineItem)
+        {
+            Type t = typeof(OneTimeInvoiceLineItem);
+            PropertyInfo[] properties = t.GetProperties();
 
-    //
-    // Insert code here to work with the line items.
-    //
+            foreach (PropertyInfo property in properties)
+            {
+                // Insert code here to work with the line item properties
+            }
+        }
+        itemNumber++;
+    });
     
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
@@ -85,7 +96,7 @@ while (fetchNext)
 }  
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledConsumptionReconLineItemsPaging.cs
+For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledReconLineItemsPaging.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -203,7 +214,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         },
         {
@@ -242,7 +253,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],
@@ -334,7 +345,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "discountDetails": "",
             "providerSource": "All",
             "attributes": {
-                "objectType": "UnBilledOneTimeInvoiceLineItem"
+                "objectType": "OneTimeInvoiceLineItem"
             }
         }
     ],

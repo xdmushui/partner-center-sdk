@@ -1,8 +1,8 @@
 ---
-title: Get billed consumption recon line items (for third party usages)
+title: Get invoice billed consumption line items (for third party usages)
 description: How to get a collection of billed consumption recon line item details for specified period.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 02/20/2019
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -12,11 +12,8 @@ ms.localizationpriority: medium
 **Applies To**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of invoice line item details for the specified invoice.
+How to get a collection of third party consumption invoice line item details for the specified invoice.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -27,11 +24,11 @@ How to get a collection of invoice line item details for the specified invoice.
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+To get the third party line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
 The Provider identifies the source of the billed detail information (e.g. External), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
 
-The example code that follows uses a foreach loop to process the ReconLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
+The example code that follows uses a foreach loop to process the line items collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
 To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
 
@@ -59,12 +56,23 @@ ConsoleKeyInfo keyInfo;
 var itemNumber = 1;
 while (fetchNext)
 {
-    Console.Out.WriteLine("\tRecon line items count: " + seekBasedResourceCollection.Items.Count());
-    Console.Out.WriteLine("\tPeriod: " + period);
+    Console.Out.WriteLine("\tLine line items count: " + seekBasedResourceCollection.Items.Count());
+    
+    seekBasedResourceCollection.Items.ToList().ForEach(item =>
+    {
+        // Instance of type ThirdPartyDailyRatedUsageReconLineItem
+        if (item is ThirdPartyDailyRatedUsageReconLineItem)
+        {
+            Type t = typeof(ThirdPartyDailyRatedUsageReconLineItem);
+            PropertyInfo[] properties = t.GetProperties();
 
-    //
-    // Insert code here to work with the line items.
-    //
+            foreach (PropertyInfo property in properties)
+            {
+                // Insert code here to work with the line item properties
+            }
+        }
+        itemNumber++;
+    });
     
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
@@ -177,8 +185,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "Test Onyx on Windows 2012 R2 (WebHost)",
-            "productName": "Test Onyx on Windows",
+            "skuName": "Test Test on Windows 2012 R2 (WebHost)",
+            "productName": "Test Test on Windows",
             "publisherName": "Test",
             "publisherId": "28503520",
             "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
@@ -189,14 +197,14 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
             "meterId": "1core",
-            "meterSubCategory": "Plesk Onyx on Windows",
-            "meterName": "Plesk Onyx on Windows - Plesk Onyx on Windows 2012 R2 (WebHost) - 1 Core Hours",
+            "meterSubCategory": "Test Test on Windows",
+            "meterName": "Test Test on Windows - Test Test on Windows 2012 R2 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
             "resourceLocation": "EASTUS2",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "PLESKWINRG",
-            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKWINRG/providers/Microsoft.Compute/virtualMachines/pleskWinTest",
+            "resourceGroup": "TestWINRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/TestWINRG/providers/Microsoft.Compute/virtualMachines/testWinTest",
             "tags": "",
             "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
@@ -227,8 +235,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "Test Onyx on Ubuntu 16.04 (WebHost)",
-            "productName": "Test Onyx on Linux",
+            "skuName": "Test Test on Ubuntu 16.04 (WebHost)",
+            "productName": "Test Test on Linux",
             "publisherName": "Test",
             "publisherId": "28503520",
             "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
@@ -239,14 +247,14 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
             "meterId": "1core",
-            "meterSubCategory": "Plesk Onyx on Linux",
-            "meterName": "Plesk Onyx on Linux - Plesk Onyx on Ubuntu 16.04 (WebHost) - 1 Core Hours",
+            "meterSubCategory": "Test Test on Linux",
+            "meterName": "Test Test on Linux - Test Test on Ubuntu 16.04 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
             "resourceLocation": "EASTUS",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "PLESKRG",
-            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKRG/providers/Microsoft.Compute/virtualMachines/pleskUbuntuTest",
+            "resourceGroup": "TESTRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/TestRG/providers/Microsoft.Compute/virtualMachines/testUbuntuTest",
             "tags": "",
             "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
@@ -330,8 +338,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "productId": "",
             "skuId": "",
             "availabilityId": "",
-            "skuName": "Test Onyx on Windows 2012 R2 (WebHost)",
-            "productName": "Test Onyx on Windows",
+            "skuName": "Test Test on Windows 2012 R2 (WebHost)",
+            "productName": "Test Test on Windows",
             "publisherName": "Test",
             "publisherId": "28503520",
             "subscriptionId": "12345678-9d62-4a85-8fd0-91a87c261bc4",
@@ -342,14 +350,14 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "meterType": "1 Compute Hour - 1core",
             "meterCategory": "Virtual Machine Licenses",
             "meterId": "1core",
-            "meterSubCategory": "Plesk Onyx on Windows",
-            "meterName": "Plesk Onyx on Windows - Plesk Onyx on Windows 2012 R2 (WebHost) - 1 Core Hours",
+            "meterSubCategory": "Test Test on Windows",
+            "meterName": "Test Test on Windows - Test Test on Windows 2012 R2 (WebHost) - 1 Core Hours",
             "meterRegion": "",
             "unitOfMeasure": "1 Hour",
             "resourceLocation": "EASTUS2",
             "consumedService": "Microsoft.Compute",
-            "resourceGroup": "PLESKWINRG",
-            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/PLESKWINRG/providers/Microsoft.Compute/virtualMachines/pleskWinTest",
+            "resourceGroup": "TestWINRG",
+            "resourceUri": "/subscriptions/12345678-9d62-4a85-8fd0-91a87c261bc4/resourceGroups/TestWINRG/providers/Microsoft.Compute/virtualMachines/testWinTest",
             "tags": "",
             "additionalInfo": "{  \"ImageType\": null,  \"ServiceType\": \"Standard_B1s\",  \"VMName\": null,  \"VMProperties\": null,  \"UsageType\": \"ComputeHR_SW\"}",
             "serviceInfo1": "",
