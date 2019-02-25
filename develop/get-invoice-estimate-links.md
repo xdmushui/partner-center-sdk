@@ -132,8 +132,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             }
         },
         {
-            "title": "Non-Consumption Unbilled",
-            "description": "This recon includes first and third party non-consumption based unbilled data only.",
+            "title": "Unbilled Recon",
+            "description": "This recon includes first and third party unbilled data only.",
             "period": "Current",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=current&size=2000",
@@ -142,8 +142,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             }
         },
         {
-            "title": "Non-Consumption Unbilled",
-            "description": "This recon includes first and third party non-consumption based unbilled data only.",
+            "title": "Unbilled Recon",
+            "description": "This recon includes first and third party unbilled data only.",
             "period": "Previous",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
