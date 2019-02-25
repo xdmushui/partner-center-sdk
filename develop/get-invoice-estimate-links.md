@@ -1,11 +1,11 @@
 ---
-title: Get estimate links
+title: Get invoice estimate links
 description: How to get a collection of estimate links to query recon line item details.
 ms.date: 02/20/2019
 ms.localizationpriority: medium
 ---
 
-# Get estimate links
+# Get invoice estimate links
 
 
 **Applies To**
