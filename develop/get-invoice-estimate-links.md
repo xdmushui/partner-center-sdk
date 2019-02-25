@@ -48,10 +48,11 @@ For a similar example, see **Sample**: [Console test app](console-test-app.md). 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
- | Method  | Request URI                                                                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/estimates/links?currencycode={currencycode} HTTP/1.1                              |                                
+**Request syntax**  
+
+| Method  | Request URI                                                                                                 |
+|---------|-------------------------------------------------------------------------------------------------------------|
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/estimates/links?currencycode={currencycode} HTTP/1.1 |
 
 **URI parameters**
 
