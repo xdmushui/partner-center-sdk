@@ -27,7 +27,7 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Invoices:**
 - [Get a collection of invoices](get-a-collection-of-invoices.md)
-- [Get estimate links](get-estimate-links.md)
+- [Get invoice estimate links](get-invoice-estimate-links.md)
 - [Get invoice billed third-party consumption line items](get-invoice-billed-consumption-lineitems.md)
 - [Get invoice by ID](get-invoice-by-id.md)
 - [Get invoice line items](get-invoiceline-items.md)
