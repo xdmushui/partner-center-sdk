@@ -1,11 +1,11 @@
 ---
-title: Get estimate links
+title: Get invoice estimate links
 description: How to get a collection of estimate links to query recon line item details.
 ms.date: 02/20/2019
 ms.localizationpriority: medium
 ---
 
-# Get estimate links
+# Get invoice estimate links
 
 
 **Applies To**
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of invoice line item details for the specified invoice.
+How to get estimate (unbilled) links for invoice line items.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -26,15 +26,8 @@ How to get a collection of invoice line item details for the specified invoice.
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
-
-The Provider identifies the source of the unbilled detail information (e.g. All), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
-
-The example code that follows uses a foreach loop to process the ReconLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
-
-To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
-
-Finally, create an enumerator to traverse the collection as shown in the following example.
+To get the estimate (unbilled) links that helps to query unbilled line items for first and third party products for given currency.
+The response contains the estimate self links per period (i.e. Current and Previous month).
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -50,7 +43,7 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(curencyCode).Get();  
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledConsumptionReconLineItemsPaging.cs
+For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetEstimatesLinks.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -139,8 +132,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             }
         },
         {
-            "title": "Non-Consumption Unbilled",
-            "description": "This recon includes first and third party non-consumption based unbilled data only.",
+            "title": "Unbilled Recon",
+            "description": "This recon includes first and third party unbilled data only.",
             "period": "Current",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=current&size=2000",
@@ -149,8 +142,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             }
         },
         {
-            "title": "Non-Consumption Unbilled",
-            "description": "This recon includes first and third party non-consumption based unbilled data only.",
+            "title": "Unbilled Recon",
+            "description": "This recon includes first and third party unbilled data only.",
             "period": "Previous",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",

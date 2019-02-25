@@ -63,7 +63,7 @@
 #### [Get a collection of invoices](get-a-collection-of-invoices.md)
 #### [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md)
 #### [Get an invoice by ID](get-invoice-by-id.md)
-#### [Get estimate links](get-estimate-links.md)
+#### [Get invoice estimate links](get-invoice-estimate-links.md)
 #### [Get invoice billed third-party consumption line items](get-invoice-billed-consumption-lineitems.md)
 #### [Get invoice line items](get-invoiceline-items.md)
 #### [Get invoice receipt statement](get-invoice-receipt-statement.md)

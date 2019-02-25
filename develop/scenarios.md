@@ -112,7 +112,7 @@ All of the following scenarios can be completed three different ways:
 <p>Invoices</p>
 <ul>
 <li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
-<li><p><a href="get-estimate-links.md">Get estimate links</a></p></li>
+<li><p><a href="get-invoice-estimate-links.md">Get invoice estimate links</a></p></li>
 <li><p><a href="get-invoice-billed-consumption-lineitems.md">Get invoice billed third-party consumption line items</a></p></li>
 <li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
 <li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
