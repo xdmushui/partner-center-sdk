@@ -268,6 +268,17 @@ All of the following scenarios can be completed three different ways:
 </ul></td>
 </tr>
 <tr>
+  <td><p><a href="https://docs.microsoft.com/partner/develop/referrals">Referrals</a></p></td>
+  <td><p>Referrals</p>
+	<ul>
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/create-a-referral">Create a referral</a></p></li> 
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-list-of-referrals">Get a list of referrals</a></p></li> 
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-referral-by-id">Get a referral by ID</a></p></li> 
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/update-a-referral">Update a referral</a></p></li> 
+	</ul>
+  </td>
+</tr>
+<tr>
 <td><p><a href="utilities.md">Utilities</a></p></td>
 <td><p>Utilities</p>
 <ul>
