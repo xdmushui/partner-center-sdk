@@ -115,7 +115,7 @@ application.
 <li>&quot;update_transfer&quot;</li>
 <li>&quot;create_partner_relationship&quot;</li>
 <li>&quot;register_application&quot;</li>
-<li>&quot;unregister_pplication&quot;</li>
+<li>&quot;unregister_application&quot;</li>
 <li>&quot;add_application_credential&quot;</li>
 <li>&quot;remove_application_credential&quot;</li>
 <li>&quot;create_partner_user&quot;</li>
