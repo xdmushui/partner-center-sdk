@@ -11,6 +11,7 @@ ms.localizationpriority: medium
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
+
 Gets a subscription activation link by the order line item number.
 In the Partner Center dashboard, this operation can be performed by selecting either a **Specific Subcription** under **Subscription** on the main page, or selecting the **Go to Publisher's site** link next to the subscription to activate on the **Subscriptions** page.
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
@@ -21,8 +22,10 @@ In the Partner Center dashboard, this operation can be performed by selecting ei
 To get a line item's activation link, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the [**ById()**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method with your specified  [**OrderId**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.models.orders.order.id). Then, call the [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) with **ById()** method with the line item number identifier.  Finally, call the **ActivationLinks()** method.
 ``` csharp
 // IAggregatePartner partnerOperations;
-// All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
-IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
+// string customerId;
+// string orderId;
+// string lineItemNumber
+
 // get the activation link for the specific line item 
 var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
@@ -31,10 +34,15 @@ var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineI
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
+
 **Request headers**
-- See [Headers](headers.md) for more information.
+
+See [Headers](headers.md) for more information.
+
 **Request body**
+
 None.
+
 **Request example**
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/8c5b65fd-c725-4f50-8d9c-97ec9169fdd0/orders/03fb46b3-bf8c-49aa-b908-ca2e93bcc04a/lineitems/0/activationlinks HTTP/1.1
@@ -45,8 +53,11 @@ MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 ```
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
+
 **Response success and error codes**
+
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+
 **Response example**
 ```http
 HTTP/1.1 200 OK
