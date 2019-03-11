@@ -171,7 +171,7 @@ Represents an invoice billing line item for usage based subscriptions.
 | consumptionDiscount      | string                                                         | Gets or sets the discount on consumption.                             |
 | consumptionPrice         | string                                                         | Gets or sets the price of quantity consumed.                          |
 | currency                 | string                                                         | Gets or sets the currency associated with the prices.                 |
-| customerCompanyName      | string                                                         | Gets or sets the customer company name.                               |
+| customerName             | string                                                         | Gets or sets the customer name.                                       |
 | customerId               | string                                                         | Gets or sets the customer unique identifier.                          |
 | detailLineItemId         | number                                                         | Gets or sets the detail line item ID. Uniquely identifies the line items for cases where calculation is different for units consumed. Example: Total consumed = 1338, 1024 is charged with one rate, 314 is charge with a different rate.        |
 | domainName               | string                                                         | Gets or sets domain name.                                             |
