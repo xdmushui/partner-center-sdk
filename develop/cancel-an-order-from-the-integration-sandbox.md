@@ -141,7 +141,7 @@ MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
         }
     ],
     "creationDate": "2019-02-21T17:56:21.1335741Z",
-    "status": "completed",
+    "status": "cancelled",
     "transactionType": "UserPurchase",
     "attributes": {
         "objectType": "Order"
