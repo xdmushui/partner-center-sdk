@@ -71,19 +71,7 @@ Use the following URI and query parameters when creating the request.
 
 None.
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
-
-If successful, the response contains the collection of line item details.
-
-**Response success and error codes**
-
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
-
-## <span id="Request_Response_Examples"/><span id="request_response_examples"/><span id="REQUEST_RESPONSE_EXAMPLES"/>Request/Response Examples
-
-
-**Request example 1**
+**Request example**
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices?currencycode=usd HTTP/1.1
@@ -97,7 +85,15 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 1**
+## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+
+If successful, the response contains the collection of line item details.
+
+**Response success and error codes**
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+
+**Response example**
 
 ```http
 HTTP/1.1 200 OK
@@ -157,3 +153,4 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
         "objectType": "Collection"
     }
 }
+```
