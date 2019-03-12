@@ -162,65 +162,25 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<p><strong>Partner Center .NET SDK v1.10.0 and updated REST APIs are now available!</strong></p>
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.10.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
+<p><strong>Partner Center .NET SDK v1.11.0 and updated REST APIs are now available!</strong></p>
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.11.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Subscriptions</h3>
-                        <p>Updated the <strong><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external">Subscription</a></strong> resource with missing properties: <em>IsTrial</em>, <em>HasPurchasableAddons</em>, and <em>Actions</em></p>
+                        <h3>Third-party marketplace</h3>
+                        <p>New APIs enabling the following third-party marketplace scenarios:</p>
                         <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscriptions" data-linktype="external"><strong>Subscription</strong> resource</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Billing frequency</h3>
-                        <p>Change the billing frequency for CSP partners. This feature, applicable to license-based services, enables partners to more easily align billing across their subscriptions while preserving existing billing properties like subscription IDs.</p>
-                        <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/change-the-billing-cycle" data-linktype="external">Change the billing cycle</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Add-ons</h3>
-                        <p>Create a cart with add-ons. Added support for subscription add-ons in the new <a href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong></a> resource API. This capability already existed in the <a href="https://docs.microsoft.com/partner-center/develop/orders" data-linktype="external"><strong>Order</strong></a> resource API.</p>
-                        <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-a-cart-with-add-ons" data-linktype="external">Create a cart with add-ons</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart" data-linktype="external"><strong>Cart</strong> resource</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Government Community Cloud</h3>
-                        <p>Partner Center Office Government Community Cloud for CSP partners (GCC). Office 365 government plans are designed for the unique needs of US government organizations. These plans provide all the features and capabilities of Office 365 services in a segmented cloud environment that helps organizations comply with US government security standards.</p>
-                        <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/csp-gcc-overview" data-linktype="external">Partner Center Office Government Community Cloud</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-s-validation-codes" data-linktype="external">Get a partner's validation codes</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-qualification" data-linktype="external">Get a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-a-customer-s-qualification" data-linktype="external">Update a customer's qualification</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/utility-resources.md#validationcode" data-linktype="external">Utility Resources - ValidationCode</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-a-third-party-subscription" data-linktype="external">Cancel a third-party subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox" data-linktype="external">Cancel an order from the integration sandbox</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-activation-link-by-order-line-item" data-linktype="external">Get activation link by order line item</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed third-party consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-estimate-links" data-linktype="external">Get invoice estimate links</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled third-party consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled recon line items (for first and third parties)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-a-third-party-subscription" data-linktype="external">Update autorenew for a third-party subscription</a></p>
                     </div>
                 </div>
             </div>
