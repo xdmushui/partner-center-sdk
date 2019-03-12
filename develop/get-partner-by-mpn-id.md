@@ -37,7 +37,7 @@ var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: VerifyPartnerMpnId.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -76,7 +76,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 If successful, the response body contains the [MpnProfile](profile-resources.md#mpnprofile) resource for the partner.
 

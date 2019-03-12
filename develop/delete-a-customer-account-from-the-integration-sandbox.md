@@ -81,7 +81,7 @@ tipAccountPartnerOperations.Customers.ById(customerTenantId).Delete();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center PartnerCenterSDK.FeaturesSamples **Class**: DeleteCustomerFromTipAccount.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -120,7 +120,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 Content-Length: 0
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 
 If successful, this method returns an empty response.

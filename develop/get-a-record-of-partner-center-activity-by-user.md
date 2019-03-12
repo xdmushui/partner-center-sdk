@@ -77,7 +77,7 @@ while (auditRecordEnumerator.HasValue)
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Folder**: Auditing
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/> Request
+## <span id="Request"/><span id="request"/><span id="REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -173,7 +173,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 
 If successful, this method returns a set of activities that meet the filters.

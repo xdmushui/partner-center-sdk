@@ -40,7 +40,7 @@ var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionSupportContact.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -82,7 +82,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 
 If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.

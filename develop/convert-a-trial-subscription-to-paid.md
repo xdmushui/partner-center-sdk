@@ -91,7 +91,7 @@ else
 }
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -147,7 +147,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 
 If successful, the response body contains a [ConversionResult](conversions-resources.md#conversionresult) resource.

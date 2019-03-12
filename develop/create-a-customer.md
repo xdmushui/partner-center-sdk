@@ -123,7 +123,7 @@ To create a customer execute the [**New-ParnterCustomer**](https://github.com/Mi
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 **Request syntax**
 
