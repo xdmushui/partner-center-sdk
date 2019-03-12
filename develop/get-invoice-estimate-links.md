@@ -25,7 +25,6 @@ How to get estimate (unbilled) links for invoice line items.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-
 To get the estimate (unbilled) links that helps to query unbilled line items for first and third party products for given currency.
 The response contains the estimate self links per period (i.e. Current and Previous month).
 
@@ -36,9 +35,6 @@ The response contains the estimate self links per period (i.e. Current and Previ
  // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
  IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
- // including vNext header
- PartnerService.Instance.AdditionalHeaders = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("version", "vNext") };
-
 // read estimate links for currencycode
 var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(curencyCode).Get();  
 ```
@@ -46,7 +42,6 @@ var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetEstimatesLinks.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 **Request syntax**  
 
@@ -79,7 +74,6 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
-version: vNext
 X-Locale: en-US
 MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
@@ -87,7 +81,7 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, the response contains the collection of line item details.
+If successful, the response contains the links to retrieve unbilled estimates.
 
 **Response success and error codes**
 

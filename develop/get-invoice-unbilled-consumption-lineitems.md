@@ -42,9 +42,6 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// including vNext header
-PartnerService.Instance.AdditionalHeaders = new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("version", "vNext") };
-
 var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
@@ -113,15 +110,15 @@ Use the first syntax to return a full list of every line item for the given invo
 
 Use the following URI and query parameters when creating the request.
 
-| Name                   | Type   | Required | Description                                                       |
-|------------------------|--------|----------|-------------------------------------------------------------------|
-| invoice-id             | string | Yes      | A string that identifies the invoice.                             |
-| provider               | string | Yes      | The provider: "External", "All".                                  |
-| invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
-| currencyCode           | string | Yes      | The currency code for the unbilled line items.                    |
-| period                 | string | Yes      | The period for unbilled recon. example: current, previous.        |
-| size                   | number | No       | The maximum number of items to return. Default size is 2000       |
-| seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items. |
+| Name                   | Type   | Required | Description                                                                     |
+|------------------------|--------|----------|---------------------------------------------------------------------------------|
+| invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
+| provider               | string | Yes      | The provider: "External", "All".                                                |
+| invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems".               |
+| currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
+| period                 | string | Yes      | The period for unbilled recon. example: current, previous.                      |
+| size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
+| seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
  
 
@@ -153,7 +150,6 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
-version: vNext
 X-Locale: en-US
 MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
