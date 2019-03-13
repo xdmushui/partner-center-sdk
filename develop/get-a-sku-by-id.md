@@ -135,7 +135,7 @@ Content-Length: 1108
     ],
     "provisioningVariables": [
         "Scope",
-        "AzureSubscriptionId"
+        "SubscriptionId"
     ],
     "dynamicAttributes": {
         "armSkuName": "Standard_D32s_v3",
