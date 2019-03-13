@@ -1,18 +1,18 @@
 ---
-title: Get invoice unbilled third-party consumption line items
-description: How to get a collection of unbilled third-party consumption line item details for a specified invoice.
+title: Get invoice unbilled Azure Marketplace consumption line items
+description: How to get a collection of unbilled Azure Marketplace consumption line item details for a specified invoice.
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice unbilled third-party consumption line items
+# Get invoice unbilled Azure Marketplace consumption line items
 
 
 **Applies To**
 
 - Partner Center
 
-How to get a collection of unbilled third-party consumption line item details for a specified invoice. 
+How to get a collection of unbilled Azure Marketplace consumption line item details for a specified invoice. 
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 

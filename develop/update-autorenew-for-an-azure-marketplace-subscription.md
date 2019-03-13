@@ -1,19 +1,19 @@
 ---
-title: Update autorenew for a third-party subscription
+title: Update autorenew for an Azure Marketplace subscription
 description: Update the autorenew property for a Subscription resource that matches the customer and subscription ID.
 ms.assetid: 
 ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
-# Update autorenew for a third-party subscription
+# Update autorenew for an Azure Marketplace subscription
 
 
 **Applies To**
 
 - Partner Center
 
-Update the autorenew property for a third-party [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
+Update the autorenew property for an Azure Marketplace [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 In the Partner Center dashboard, this operation is performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription that you wish to update. Finally, toggle the **Auto-renew** option, then select **Submit**.
 
@@ -65,7 +65,7 @@ This table lists the required query parameter to suspend the subscription.
 
 **Request body**
 
-A full third-party **Subscription** resource is required in the request body. Ensure that the **AutoRenewEnabled** property has been updated.
+A full Azure Marketplace **Subscription** resource is required in the request body. Ensure that the **AutoRenewEnabled** property has been updated.
 
 **Request example**
 

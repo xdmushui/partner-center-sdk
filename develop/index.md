@@ -170,17 +170,17 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Third-party marketplace</h3>
-                        <p>New APIs enabling the following third-party marketplace scenarios:</p>
+                        <h3>Azure Marketplace</h3>
+                        <p>New APIs enabling the following Azure Marketplace scenarios:</p>
                         <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-a-third-party-subscription" data-linktype="external">Cancel a third-party subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-azure-marketplace-subscription" data-linktype="external">Cancel an Azure Marketplace subscription</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox" data-linktype="external">Cancel an order from the integration sandbox</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-activation-link-by-order-line-item" data-linktype="external">Get activation link by order line item</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed third-party consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed Azure Marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-estimate-links" data-linktype="external">Get invoice estimate links</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled third-party consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled Azure Marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled recon line items (for first and third parties)</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-a-third-party-subscription" data-linktype="external">Update autorenew for a third-party subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for an Azure Marketplace subscription</a></p>
                     </div>
                 </div>
             </div>

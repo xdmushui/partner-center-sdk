@@ -113,13 +113,13 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p><a href="get-a-collection-of-invoices.md">Get a collection of invoices</a></p></li>
 <li><p><a href="get-invoice-estimate-links.md">Get invoice estimate links</a></p></li>
-<li><p><a href="get-invoice-billed-consumption-lineitems.md">Get invoice billed third-party consumption line items</a></p></li>
+<li><p><a href="get-invoice-billed-consumption-lineitems.md">Get invoice billed Azure Marketplace consumption line items</a></p></li>
 <li><p><a href="get-invoice-by-id.md">Get an invoice by ID</a></p></li>
 <li><p><a href="get-invoiceline-items.md">Get invoice line items</a></p></li>
 <li><p><a href="get-invoice-receipt-statement.md">Get invoice receipt statement</a></p></li>
 <li><p><a href="get-invoice-statement.md">Get invoice statement</a></p></li>
 <li><p><a href="get-invoice-summaries.md">Get invoice summaries</a></p></li>
-<li><p><a href="get-invoice-unbilled-consumption-lineitems.md">Get invoice unbilled third-party consumption line items</a></p></li>
+<li><p><a href="get-invoice-unbilled-consumption-lineitems.md">Get invoice unbilled Azure Marketplace consumption line items</a></p></li>
 <li><p><a href="get-invoice-unbilled-recon-lineitems.md">Get invoice unbilled recon line items</a></p></li>
 <li><p><a href="get-the-reseller-s-current-account-balance.md">Get the partner&#39;s current account balance</a></p></li>
 </ul>
@@ -248,11 +248,11 @@ All of the following scenarios can be completed three different ways:
 <p>Manage a subscription</p>
 <ul>
 <li><p><a href="change-the-quantity-of-a-subscription.md">Change the quantity of a subscription</a></p></li>
-<li><p><a href="update-autorenew-for-a-third-party-subscription.md">Update autorenew for a third-party-subscription</a></p></li>
+<li><p><a href="update-autorenew-for-an-azure-marketplace-subscription.md">Update autorenew for an Azure Marketplace-subscription</a></p></li>
 <li><p><a href="suspend-a-subscription.md">Suspend a subscription</a></p></li>
 <li><p><a href="reactivate-a-suspended-a-subscription.md">Reactivate a suspended subscription</a></p></li>
 <li><p><a href="transition-a-subscription.md">Transition a subscription</a></p></li>
-<li><p><a href="cancel-a-third-party-subscription.md">Cancel a third-party subscription</a></p></li>
+<li><p><a href="cancel-an-azure-marketplace-subscription.md">Cancel an Azure Marketplace subscription</a></p></li>
 </ul></td>
 </tr>
 <tr>

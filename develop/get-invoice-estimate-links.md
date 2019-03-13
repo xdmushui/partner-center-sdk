@@ -25,8 +25,7 @@ How to get estimate (unbilled) links for invoice line items.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-To get the estimate (unbilled) links that helps to query unbilled line items for first and third party products for given currency.
-The response contains the estimate self links per period (i.e. Current and Previous month).
+To get the estimate links that help to query unbilled line items for a given currency. The response contains the estimate links per period, for example, current and previous month.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -103,8 +102,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     "totalCount": 4,
     "items": [
         {
-            "title": "Third Party Daily Rated Usage UnBilled",
-            "description": "This recon includes third party consumption based unbilled data only.",
+            "title": "Azure Marketplace Daily Rated Usage UnBilled",
+            "description": "This recon includes Azure Marketplace consumption based unbilled data only.",
             "period": "Current",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=current&size=2000",
@@ -113,8 +112,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             }
         },
         {
-            "title": "Third Party Daily Rated Usage UnBilled",
-            "description": "This recon includes third party consumption based unbilled data only.",
+            "title": "Azure Marketplace Daily Rated Usage UnBilled",
+            "description": "This recon includes Azure Marketplace consumption based unbilled data only.",
             "period": "Previous",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
@@ -124,7 +123,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
         },
         {
             "title": "Unbilled Recon",
-            "description": "This recon includes first and third party unbilled data only.",
+            "description": "This recon includes first party and Azure Marketplace unbilled data only.",
             "period": "Current",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=current&size=2000",
@@ -134,7 +133,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
         },
         {
             "title": "Unbilled Recon",
-            "description": "This recon includes first and third party unbilled data only.",
+            "description": "This recon includes first party and Azure Marketplace unbilled data only.",
             "period": "Previous",
             "link": {
                 "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
