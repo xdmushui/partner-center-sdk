@@ -1,11 +1,11 @@
 ---
-title: Get invoice unbilled recon line items (for first and third parties)
-description: How to get a collection of unbilled line item details for specified period.
+title: Get invoice unbilled reconciliation line items
+description: How to get a collection of unbilled reconciliation line item details for specified period.
 ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice unbilled recon line items (for first and third parties)
+# Get invoice unbilled reconciliation line items
 
 
 **Applies To**
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of invoice line item details for the specified invoice.
+How to get a collection of Azure Marketplace invoice line item details for the specified invoice.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -38,14 +38,14 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// string curencyCode;
+// string currencyCode;
 // string period;
 // int pageMaxSizeReconLineItems = 2000;
 
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
+var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
 
@@ -55,7 +55,7 @@ var itemNumber = 1;
 while (fetchNext)
 {
     Console.Out.WriteLine("\tLine line items count: " + seekBasedResourceCollection.Items.Count());
-    
+
     seekBasedResourceCollection.Items.ToList().ForEach(item =>
     {
         // Instance of type OneTimeInvoiceLineItem
@@ -71,7 +71,7 @@ while (fetchNext)
         }
         itemNumber++;
     });
-    
+
     Console.Out.WriteLine("\tPress any key to fetch next data. Press the Escape (Esc) key to quit: \n");
     keyInfo = Console.ReadKey();
 
@@ -86,28 +86,25 @@ while (fetchNext)
     {
         if (seekBasedResourceCollection.Links.Next.Headers != null && seekBasedResourceCollection.Links.Next.Headers.Any())
         {
-            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
+            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
-    }                
-}  
+    }
+}
 ```
 
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledReconLineItemsPaging.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-
 **Request syntax**
 
 Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using seekOperation = "Next" 
-
 
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
-                                
 
 **URI parameters**
 
@@ -123,8 +120,6 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
- 
-
 **Request headers**
 
 - See [Partner Center REST headers](headers.md) for more information.
@@ -135,7 +130,6 @@ None.
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-
 If successful, the response contains the collection of line item details.
 
 **Response success and error codes**
@@ -143,7 +137,6 @@ If successful, the response contains the collection of line item details.
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ## <span id="Request_Response_Examples"/><span id="request_response_examples"/><span id="REQUEST_RESPONSE_EXAMPLES"/>Request/Response Examples
-
 
 **Request example 1** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous)
 
@@ -356,11 +349,3 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
