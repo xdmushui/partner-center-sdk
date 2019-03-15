@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
-ms.date: 02/26/2018
+ms.date: 03/15/2019
 ms.localizationpriority: medium
 ---
 
@@ -34,6 +34,14 @@ Partners can select from Webhook events, like the following, that are supported 
 - **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
     This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://docs.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
+
+- **Referral Created Event ("referral-created")**
+
+    This event is raised when the referral is created. 
+
+- **Referral Updated Event ("referral-updated")**
+
+    This event is raised when the referral is updated. 
 
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 
