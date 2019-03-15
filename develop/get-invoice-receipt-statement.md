@@ -23,7 +23,7 @@ Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-To get an invoice receipt statement by ID, starting with Partner Center SDK v1.11.0, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Receipts** collection and call **ById()** then call the **Documents()** and **Statement()** methods to access the invoice receipt statement. Finally, call the **Get()** or **GetAsync()** methods.
+To get an invoice receipt statement by ID, starting with Partner Center SDK v1.12.0, use your **IPartner.Invoices** collection and call the **ById()** method using the invoice ID, then call the **Receipts** collection and call **ById()** then call the **Documents()** and **Statement()** methods to access the invoice receipt statement. Finally, call the **Get()** or **GetAsync()** methods.
 
 ``` csharp
 // IPartner scopedPartnerOperations;
