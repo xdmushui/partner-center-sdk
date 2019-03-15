@@ -25,7 +25,7 @@ How to get a collection of unbilled Azure Marketplace consumption line item deta
 
 To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
-The Provider identifies the source of the unbilled detail information (e.g. External), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
+The Provider identifies the source of the unbilled detail information (e.g. Marketplace), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
 
 The example code that follows uses a foreach loop to process the InvoiceLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
@@ -42,7 +42,7 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
+var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("marketplace", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
 
@@ -55,10 +55,10 @@ while (fetchNext)
     
     seekBasedResourceCollection.Items.ToList().ForEach(item =>
     {
-        // Instance of type ThirdPartyDailyRatedUsageReconLineItem
-        if (item is ThirdPartyDailyRatedUsageReconLineItem)
+        // Instance of type DailyRatedUsageLineItem
+        if (item is DailyRatedUsageLineItem)
         {
-            Type t = typeof(ThirdPartyDailyRatedUsageReconLineItem);
+            Type t = typeof(DailyRatedUsageLineItem);
             PropertyInfo[] properties = t.GetProperties();
 
             foreach (PropertyInfo property in properties)
@@ -83,7 +83,7 @@ while (fetchNext)
     {
         if (seekBasedResourceCollection.Links.Next.Headers != null && seekBasedResourceCollection.Links.Next.Headers.Any())
         {
-            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("external", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
+            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("marketplace", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }                
 }  
@@ -101,9 +101,9 @@ Use the first syntax to return a full list of every line item for the given invo
 
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                              |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                              |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
                                 
 
 **URI parameters**
@@ -113,7 +113,7 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
-| provider               | string | Yes      | The provider: "External", "All".                                                |
+| provider               | string | Yes      | The provider: "Marketplace", "All".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems".               |
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
 | period                 | string | Yes      | The period for unbilled recon. example: current, previous.                      |
@@ -142,10 +142,10 @@ Each response comes with an HTTP status code that indicates success or failure a
 ## <span id="Request_Response_Examples"/><span id="request_response_examples"/><span id="REQUEST_RESPONSE_EXAMPLES"/>Request/Response Examples
 
 
-**Request example 1** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous)
+**Request example 1** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous)
 
 ```http
-GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/unbilled/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
@@ -155,7 +155,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 1** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous)
+**Response example 1** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous)
 
 ```http
 HTTP/1.1 200 OK
@@ -215,9 +215,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 30.7197334080551,
             "pricingCurrency": "USD",
-            "providerSource": "External",
+            "providerSource": "Marketplace",
             "attributes": {
-                "objectType": "ThirdPartyDailyRatedUsageReconLineItem"
+                "objectType": "DailyRatedUsageLineItem"
             }
          }, 
          {
@@ -265,20 +265,20 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 30.7197334080551,
             "pricingCurrency": "USD",
-            "providerSource": "External",
+            "providerSource": "Marketplace",
             "attributes": {
-                "objectType": "ThirdPartyDailyRatedUsageReconLineItem"
+                "objectType": "DailyRatedUsageLineItem"
             }
         }
     ],
     "links": {
         "self": {
-            "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+            "uri": "/invoices/unbilled/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
+            "uri": "/invoices/unbilled/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
             "method": "GET",
             "headers": [
                 {
@@ -294,10 +294,10 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 }
 ```
 
-**Request example 2** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
+**Request example 2** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=external&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=marketplace&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
@@ -308,7 +308,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 2** (Provider: External, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
+**Response example 2** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
 
 ```http
 HTTP/1.1 200 OK
@@ -368,15 +368,15 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 30.7197334080551,
             "pricingCurrency": "USD",
-            "providerSource": "External",
+            "providerSource": "Marketplace",
             "attributes": {
-                "objectType": "ThirdPartyDailyRatedUsageReconLineItem"
+                "objectType": "DailyRatedUsageLineItem"
             }
         }
     ],
     "links": {
         "self": {
-             "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+             "uri": "/invoices/unbilled/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         }

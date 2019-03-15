@@ -7,7 +7,6 @@ ms.localizationpriority: medium
 
 # Get invoice estimate links
 
-
 **Applies To**
 
 - Partner Center
@@ -18,7 +17,6 @@ ms.localizationpriority: medium
 How to get estimate (unbilled) links for invoice line items.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
@@ -56,7 +54,6 @@ Use the following URI and query parameters when creating the request.
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                    |
 
- 
 **Request headers**
 
 - See [Partner Center REST headers](headers.md) for more information.
@@ -90,60 +87,66 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 2484
 Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
-MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
-MS-CV: bpqyomePDUqrSSYC.0
-MS-ServerId: 202010406
-Date: Wed, 20 Feb 2019 19:59:27 GMT
+Server: Microsoft-IIS/10.0
+MS-CorrelationId: 80EAA055-B5D3-4D88-BFE8-924A3F706462
+MS-RequestId: 1b18689e-3fe3-4fdb-d09e-39d13941390b
+X-Locale: en-US
+X-SourceFiles: =?UTF-8?B?RDpcU291cmNlc1xSUEUuUGFydG5lci5TZXJ2aWNlLkJpbGxpbmdTZXJ2aWNlXHYxLjFcV2ViQXBpc1xCaWxsaW5nU2VydmljZS5WMi5XZWJcdjFcaW52b2ljZXNcZXN0aW1hdGVzXGxpbmtz?=
+X-Powered-By: ASP.NET
+Date: Thu, 14 Mar 2019 18:15:06 GMT
+Content-Length: 1857
 
 {
-    "totalCount": 4,
-    "items": [
-        {
-            "title": "Azure Marketplace Daily Rated Usage UnBilled",
-            "description": "This recon includes Azure Marketplace consumption based unbilled data only.",
-            "period": "Current",
-            "link": {
-                "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=current&size=2000",
-                "method": "GET",
-                "headers": []
-            }
-        },
-        {
-            "title": "Azure Marketplace Daily Rated Usage UnBilled",
-            "description": "This recon includes Azure Marketplace consumption based unbilled data only.",
-            "period": "Previous",
-            "link": {
-                "uri": "/invoices/unbilled/lineitems?provider=external&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
-                "method": "GET",
-                "headers": []
-            }
-        },
-        {
-            "title": "Unbilled Recon",
-            "description": "This recon includes first party and Azure Marketplace unbilled data only.",
-            "period": "Current",
-            "link": {
-                "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=current&size=2000",
-                "method": "GET",
-                "headers": []
-            }
-        },
-        {
-            "title": "Unbilled Recon",
-            "description": "This recon includes first party and Azure Marketplace unbilled data only.",
-            "period": "Previous",
-            "link": {
-                "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
-                "method": "GET",
-                "headers": []
-            }
-        }
-    ],
-    "attributes": {
-        "objectType": "Collection"
+  "totalCount": 4,
+  "items": [
+    {
+      "type": "daily_rated_usage",
+      "title": "Daily rated usage unbilled",
+      "description": "This invoice line items includes unbilled consumption based data only.",
+      "period": "Current",
+      "link": {
+        "uri": "/invoices/unbilled/lineitems?provider=Marketplace&invoicelineitemtype=UsageLineItems&currencycode=USD&period=current&size=2000",
+        "method": "GET",
+        "headers": []
+      }
+    },
+    {
+      "type": "daily_rated_usage",
+      "title": "Daily rated usage unbilled",
+      "description": "This invoice line items includes unbilled consumption based data only.",
+      "period": "Previous",
+      "link": {
+        "uri": "/invoices/unbilled/lineitems?provider=Marketplace&invoicelineitemtype=UsageLineItems&currencycode=USD&period=previous&size=2000",
+        "method": "GET",
+        "headers": []
+      }
+    },
+    {
+      "type": "non_consumption",
+      "title": "Unbilled reconciliation line items",
+      "description": "This includes reconciliation line items for unbilled data only.",
+      "period": "Current",
+      "link": {
+        "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=USD&period=current&size=2000",
+        "method": "GET",
+        "headers": []
+      }
+    },
+    {
+      "type": "non_consumption",
+      "title": "Unbilled reconciliation line items",
+      "description": "This includes reconciliation line items for unbilled data only.",
+      "period": "Previous",
+      "link": {
+        "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=USD&period=previous&size=2000",
+        "method": "GET",
+        "headers": []
+      }
     }
+  ],
+  "attributes": {
+    "objectType": "Collection"
+ }
 }
 ```
