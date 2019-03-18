@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhook events
 description: Documentation for all Webhook events supported by Partner Center.
-ms.date: 02/14/2018
+ms.date: 03/18/2019
 ms.localizationpriority: medium
 ---
 
@@ -37,7 +37,7 @@ This event allows you to self-onboard and test your registration by requesting a
 | EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "test-created".                                          |
 | ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/registration/validationEvents/{{CorrelationId}}" |
 | ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "test".                                  |
-| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/auditrecords/{{AuditId}}" |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}" |
 | ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
@@ -69,7 +69,7 @@ This event is raised when the specified subscription changes. A Subscription Upd
 | EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "subscription-updated".                                  |
 | ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/{{CustomerId}}/subscriptions/{{SubscriptionId}}" |
 | ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "subscription".                          |
-| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/auditrecords/{{AuditId}}" |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}" |
 | ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
@@ -98,7 +98,7 @@ This event is raised when the amount of Microsoft Azure usage for any customer e
 | EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "usagerecords-thresholdExceeded".                                  |
 | ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/usagerecords" |
 | ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "usagerecords".                          |
-| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/auditrecords/{{AuditId}}" |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}" |
 | ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
@@ -115,5 +115,58 @@ This event is raised when the amount of Microsoft Azure usage for any customer e
 }
 ```
 
+### Referral Created Event
+
+This event is raised when the referral is created. 
+
+**Properties**
+
+| Property                  | Type                               | Description                                                                                                  |
+|---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "referral-created".                                  |
+| ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/usagerecords" |
+| ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "referral".                          |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}" |
+| ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
 
 
+
+**Example**
+
+```
+{
+    "EventName": "referral-created",
+    "ResourceUri": "https://api.partnercenter.microsoft.com/v1/customers/usagerecords",
+    "ResourceName": "referral",
+    "AuditUri": null,
+    "ResourceChangeUtcDate": "2018-02-17T00:05:39.5485487+00:00"
+}
+```
+
+### Referral Updated Event
+
+This event is raised when the referral is updated. 
+
+**Properties**
+
+| Property                  | Type                               | Description                                                                                                  |
+|---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| EventName                 | string                             | The name of the event. In the form {resource}-{action}. For this event, the value is "referral-updated".                                  |
+| ResourceUri               | URI                                | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/usagerecords" |
+| ResourceName              | string                             | The name of the resource that will trigger the event. For this event, the value is "referral".                          |
+| AuditUri                  | URI                                | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}" |
+| ResourceChangeUtcDate     | string in the UTC date-time format | The date and time when the resource change occurred.                                                         |
+
+
+
+**Example**
+
+```
+{
+    "EventName": "referral-updated",
+    "ResourceUri": "https://api.partnercenter.microsoft.com/v1/customers/usagerecords",
+    "ResourceName": "referral",
+    "AuditUri": null,
+    "ResourceChangeUtcDate": "2018-02-17T00:05:39.5485487+00:00"
+}
+```
