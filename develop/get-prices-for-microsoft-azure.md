@@ -2,7 +2,7 @@
 title: Get prices for Microsoft Azure
 description: How to get an Azure Rate Card with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 ms.assetid: 65262585-0F3B-4BD0-83BE-B2695C33CDB7
-ms.date: 09/29/2018
+ms.date: 03/20/2019
 ms.localizationpriority: medium
 ---
 
@@ -46,7 +46,7 @@ AzureRateCard azureRateCard = partner.getRateCards().getAzure().get();
 
 ### PowerShell
 
-To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command to retrun rate card details that contains the Azure prices.
+To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command to return rate card details that contains the Azure prices.
 
 ```powershell
 Get-PartnerAzureRateCard
@@ -64,14 +64,15 @@ Get-PartnerAzureRateCard
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is the currency associated with the market in the partner profile. |
-| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is the country/region code set in the partner profile.        |
+| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is "USD". |
+| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is "US".        |
 
-If the optional X-Locale header is included in the Request, its value determines the language used for the details in the response.
+> [!NOTE] 
+> If you include the optional **X-Locale** [header](headers.md#request-headers) in your request, the header's value determines the language used for the response details. If you don't include the **X-Locale** header, the default ("en-US")
 
 **Request headers**
 
-- See [Partner Center REST headers](headers.md) for more information.
+See [Partner Center REST headers](headers.md) for more information.
 
 **Request body**
 
