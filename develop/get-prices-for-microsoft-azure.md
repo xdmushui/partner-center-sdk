@@ -18,7 +18,7 @@ How to get an [Azure Rate Card](azure-rate-card-resources.md) with real-time pri
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine this Azure Rate Card query to get prices for Microsoft Azure with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. You can customize the currency, region and language returned in the response. This is especially relevant if you manage sales in multiple markets from a single, centralized office. See [URI parameters](#URI-parameters) for more information. 
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
@@ -54,13 +54,13 @@ Get-PartnerAzureRateCard
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                        |
 |---------|--------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure?currency={currency}&region={region} |
 
-**URI parameters**
+### URI parameters
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -70,15 +70,15 @@ Get-PartnerAzureRateCard
 > [!NOTE] 
 > If you include the optional **X-Locale** [header](headers.md#request-headers) in your request, the header's value determines the language used in the response details. If you don't include the **X-Locale** header, the default ("en-US") is used. 
 
-**Request headers**
+### Request header
 
 See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/ratecards/azure HTTP/1.1
@@ -96,11 +96,11 @@ Connection: Keep-Alive
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
