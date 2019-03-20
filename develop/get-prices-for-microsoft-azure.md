@@ -18,7 +18,7 @@ How to get an [Azure Rate Card](azure-rate-card-resources.md) with real-time pri
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine this Azure Rate Card query to get prices for Microsoft Azure with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. You can customize the currency, region and language returned in the response. This is especially relevant if you manage sales in multiple markets from a single, centralized office. See [URI parameters](#URI-parameters) for more information. 
+Prices differ by market and currency, and this API takes location into consideration. You can customize the currency, region and language returned in the response. This is especially relevant if you manage sales in multiple markets from a single, centralized office. See [URI parameters](#uri-parameters) for more information. 
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
