@@ -68,7 +68,7 @@ Get-PartnerAzureRateCard
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is "US".        |
 
 > [!NOTE] 
-> If you include the optional **X-Locale** [header](headers.md#request-headers) in your request, the header's value determines the language used for the response details. If you don't include the **X-Locale** header, the default ("en-US")
+> If you include the optional **X-Locale** [header](headers.md#request-headers) in your request, the header's value determines the language used in the response details. If you don't include the **X-Locale** header, the default ("en-US") is used. 
 
 **Request headers**
 
