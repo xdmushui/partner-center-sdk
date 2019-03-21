@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
-ms.date: 03/15/2019
+ms.date: 03/21/2019
 ms.localizationpriority: medium
 ---
 
@@ -47,14 +47,14 @@ Future Webhook events will be added for resources that change in the system that
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.   
 
 
 
-## <span id="receivingEvents"/><span id="RECEIVINGEVENTS"/>Receiving events from Partner Center
+## Receiving events from Partner Center
 
 To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery. 
 
@@ -82,7 +82,7 @@ Content-Length: 195
 >[!NOTE] 
 >The Authorization header has a scheme of "Signature". This is a base64 encoded signature of the content.
 
-## <span id="AuthenticateCallback"/><span id="authenticatecallback"/><span id="AUTHENTICATECALLBACK"/>How to authenticate the callback
+## How to authenticate the callback
 
 
 To authenticate the callback event received from Partner Center, do the following:
@@ -99,7 +99,7 @@ To authenticate the callback event received from Partner Center, do the followin
 > [!NOTE]
 > By default, the signature token will be sent in an Authorization header. If you set **SignatureTokenToMsSignatureHeader** to true in your registration, the signature token will be sent in the x-ms-signature header instead.
 
-## <span id="EventModel"/><span id="eventmodel"/><span id="EVENTMODEL"/>Event model
+## Event model
 
 
 The following table describes the properties of a Partner Center event.
@@ -130,7 +130,7 @@ The following sample shows the structure of a Partner Center event.
 ```
 
 
-## <span id="WebhookAPI"/><span id="webhookapi"/><span id="WEBHOOKAPI"/>Webhook APIs   
+## Webhook APIs   
 
 
 **Authentication**   
@@ -139,7 +139,7 @@ All calls to the Webhook APIs are authenticated using the Bearer token in the Au
 
 
  
-### <span id="GetEvents"/><span id="getevents"/><span id="GETEVENTS"/>Get a list of events
+### Get a list of events
 
 Returns a list of the events that are currently supported by the Webhook APIs.
 
@@ -174,7 +174,7 @@ X-Locale: en-US
 
 
 
-### <span id="Registration"/><span id="registration"/><span id="REGISTRATION"/>Register to receive events      
+### Register to receive events      
 
 Registers a tenant to receive the specified events.
 
@@ -220,7 +220,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 
 
-### <span id="ViewRegistration"/><span id="viewregistration"/><span id="VIEWREGISTRATION"/>View a registration        
+### View a registration        
 
 Returns the Webhooks event registration for a tenant.
 
@@ -260,7 +260,7 @@ X-Locale: en-US
 
 
 
-### <span id="UpdateEventRegistration"/><span id="updateeventregistration"/><span id="UPDATEEVENTREGISTRATION"/>Update an event registration      
+### Update an event registration      
 
 Updates an existing event registration. 
 
@@ -305,7 +305,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 ```
 
 
-### <span id="ValidationEvents"/><span id="validationevents"/><span id="VALIDATIONEVENTS"/>Send a test event to validate your registration   
+### Send a test event to validate your registration   
 
 Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event. 
 
@@ -345,7 +345,7 @@ X-Locale: en-US
 
 
 
-### <span id="GetValidation"/><span id="getvalidation"/><span id="GETVALIDATION"/>Verify that the event was delivered   
+### Verify that the event was delivered   
 
 Returns the current state of the validation event. This can be helpful for trouble shooting event delivery issues. The Response contains a result for each attempt that is made to deliver the event.
 
@@ -391,7 +391,7 @@ X-Locale: en-US
 ```
 
 
-## <span id="SignatureValidationExample"/><span id="signaturevalidationexample"/><span id="SIGNATUREVALIDATIONEXAMPLE"/>Example for Signature Validation
+## Example for Signature Validation
 
 
 **Sample Callback Controller signature (ASP.NET)**     
