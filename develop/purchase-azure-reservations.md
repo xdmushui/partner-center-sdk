@@ -76,7 +76,7 @@ Once you have identified the active CSP Azure subscription that you want to add 
 
 1. [Enablement](#enablement) - Register an active CSP Azure subscription to enable it for purchasing Azure reservations.
 2. [Discovery](#discovery) - Find and select the Azure reservation products and SKUs you want to purchase and check their availability.
-3. [Order submission](##order-submission) - Create a shopping cart with the items in your order and submit it.
+3. [Order submission](#order-submission) - Create a shopping cart with the items in your order and submit it.
 4. [Get order details](#get-order-details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type.
 
 After you have purchased Azure reservations, the following scenarios show you how to manage their lifecycle by getting information about your Azure reservation entitlements, and how to retrieve balance statements, invoices, and invoice summaries.
