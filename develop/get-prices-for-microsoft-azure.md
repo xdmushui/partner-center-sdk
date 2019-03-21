@@ -2,7 +2,7 @@
 title: Get prices for Microsoft Azure
 description: How to get an Azure Rate Card with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 ms.assetid: 65262585-0F3B-4BD0-83BE-B2695C33CDB7
-ms.date: 09/29/2018
+ms.date: 03/20/2019
 ms.localizationpriority: medium
 ---
 
@@ -18,9 +18,9 @@ How to get an [Azure Rate Card](azure-rate-card-resources.md) with real-time pri
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine this Azure Rate Card query to get prices for Microsoft Azure with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. You can customize the currency, region and language returned in the response. This is especially relevant if you manage sales in multiple markets from a single, centralized office. See [URI parameters](#uri-parameters) for more information. 
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
@@ -46,38 +46,41 @@ AzureRateCard azureRateCard = partner.getRateCards().getAzure().get();
 
 ### PowerShell
 
-To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command to retrun rate card details that contains the Azure prices.
+To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command to return rate card details that contains the Azure prices.
 
 ```powershell
 Get-PartnerAzureRateCard
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                        |
 |---------|--------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure?currency={currency}&region={region} |
 
-**URI parameters**
+### URI parameters
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is the currency associated with the market in the partner profile. |
-| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is the country/region code set in the partner profile.        |
+| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is "USD". |
+| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is "US".        |
 
-If the optional X-Locale header is included in the Request, its value determines the language used for the details in the response.
+You can include the optional X-Locale [header](headers.md#request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
+* If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
+* If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency and language.
 
-**Request headers**
 
-- See [Partner Center REST headers](headers.md) for more information.
+### Request header
 
-**Request body**
+See [Partner Center REST headers](headers.md) for more information.
+
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/ratecards/azure HTTP/1.1
@@ -90,16 +93,16 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
