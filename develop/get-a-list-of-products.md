@@ -2,7 +2,7 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 09/28/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 **Applies To**
 
 - Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 Gets a collection of products.
 
@@ -71,7 +74,7 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "OnlineServices" – Includes all online service items<br/> "Software" – Includes all software items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including Azure Marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
 
 **Request headers**
@@ -115,13 +118,19 @@ This method returns the following error codes:
     "totalCount": 19,
     "items": [
         {
-            "id": "DZH318Z0BQ3Q",
-            "title": "DSv2 Series",
-            "description": "Persistent storage disks are billed separately from virtual machines. To use premium storage disks, use the variant "Dsv2" virtual machines. The pricing and billing meters for Dsv2 sizes are the same as Dv2-series.  ",
-            "productType": {
-                "id": "Azure",
-                "displayName": "Azure",
-            }, 
+			"id": "DZH318Z0BQ3Q",
+			"title": "Virtual Machines DSv2 Series",
+			"description": "Dsv2-series instances are the latest generation of D-series instances that will carry more powerful CPUs which are on average about 35% faster than D-series instances, and carry the same memory and disk configurations as the D-series. Dsv2-series instances are based on the latest generation 2.4 GHz Intel Xeon® E5-2673 v3 (Haswell) processor, and with Intel Turbo Boost Technology 2.0 can go to 3.2 GHz.",
+			"productType": {
+			  "id": "Azure",
+			  "displayName": "Azure",
+			  "subType": {
+				"id": "VirtualMachines",
+				"displayName": "VirtualMachines"
+			  }
+			},
+			"isMicrosoftProduct": true,
+			"publisherName": "Microsoft", 
             "links": {
                 "skus": {
                     "uri": "/products/DZH318Z0BQ3Q/skus?country=US",

@@ -2,7 +2,7 @@
 title: Entitlement resources
 description: Describes resources related to entitlement.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 07/27/2018
+ms.date: 01/28/2019
 ms.localizationpriority: medium
 ---
 
@@ -32,6 +32,7 @@ This resource represents the products to which the customer has right to use bec
 | entitlementType | string | The type of entitlement. (Updated to string from [EntitlementType](#entitlementtype) in SDK 1.8.) |
 | entitledArtifacts | IEnumerable<[Artifact](#artifact)> | The list of artifacts associated with the entitlement. |
 | IncludedEntitlements | IEnumerable<[Entitlement](#artifact)> | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
+| ExpiryDate | string in UTC date-time format  | The entitlement expiry date (if applicable). |
 
 
 ## <span id="ReferenceOrder"/><span id="referenceorder"/><span id="REFERENCEORDER"/>ReferenceOrder
@@ -42,6 +43,7 @@ The order reference of an entitlement.
 |----------|------|-------------|
 | id | string | The ID of the referenced order. |
 | lineItemId | string | The ID of the referenced order line item. |
+| alternateId | string | The alternate ID of the referenced order line item. |
 
 
 ## <span id="QuantityDetail"/><span id="quantitydetail"/><span id="QUANTITYDETAIL"/>QuantityDetail

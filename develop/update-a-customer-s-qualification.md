@@ -43,7 +43,7 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 ```
 
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 **Request syntax**
 
@@ -82,7 +82,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 3
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 

@@ -45,7 +45,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBilli
 
 | Method  | Request URI                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type}&{include-price}=false HTTP/1.1  |
 
  
 
@@ -57,6 +57,7 @@ This table lists the required query parameters to get a collection of orders by 
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 | billing-cycle-type     | string   | No       | A string corresponding to the billing cycle type.         |
+| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).|
 
  
 

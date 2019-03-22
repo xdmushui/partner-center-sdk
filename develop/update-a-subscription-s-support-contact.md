@@ -49,7 +49,7 @@ var updatedSupportContact = partnerOperations.Customers.ById(customerId).Subscri
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateSubscriptionSupportContact.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> Request
+## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
 **Request syntax**
@@ -110,7 +110,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> Response
+## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
 
 If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.

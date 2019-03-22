@@ -2,12 +2,11 @@
 title: Offer resources
 description: Describes a product listed in the reseller catalog that they can offer to their customers.
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
-ms.date: 12/15/2017
+ms.date: 03/15/2019
 ms.localizationpriority: medium
 ---
 
 # Offer resources
-
 
 **Applies To**
 
@@ -19,10 +18,7 @@ ms.localizationpriority: medium
 Describes a product listed in the reseller catalog that they can offer
 to their customers.
 
-
-
 ## <span id="Offer"/><span id="offer"/><span id="OFFER"/>Offer
-
 
 | Property                    | Type                      | Description                                                                                                                                                                |
 |-----------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,10 +52,7 @@ to their customers.
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
- 
-
 ## <span id="OfferCategory"/><span id="offercategory"/><span id="OFFERCATEGORY"/>OfferCategory
-
 
 Describes the categorization of an offer. This includes the rank or
 priority of this offer category compared to others in the same product
@@ -75,10 +68,7 @@ line.
 | links      | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
 
- 
-
 ## <span id="OfferLinks"/><span id="offerlinks"/><span id="OFFERLINKS"/>OfferLinks
-
 
 Contains links for learning more information about the offer.
 
@@ -89,27 +79,12 @@ Contains links for learning more information about the offer.
 | next      | Link | The next page of items.     |
 | previous  | Link | The previous page of items. |
 
-
-
 ## <span id="OfferProduct"/><span id="offerproduct"/><span id="OFFERPRODUCT"/>OfferProduct
 
-
-A product or service created by Microsoft. In some cases, may be created
-by a third party and listed in a catalog by Microsoft. A product may
-have more than one offer associated with it, each with different sets of
-features and targeted at different customer needs.
+A product or service which may have more than one offer associated with it, each with different sets of features and targeted at different customer needs.
 
 | Property | Type   | Description              |
 |----------|--------|--------------------------|
 | Id       | string | The category identifier. |
 | Name     | string | The category name.       |
 | Unit     | string | The product unit.        |
-
-
- 
-
- 
-
-
-
-

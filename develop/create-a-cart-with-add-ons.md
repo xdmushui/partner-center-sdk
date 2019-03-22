@@ -164,57 +164,29 @@ MS-RequestId: f931348a-6312-47d0-a8dd-31a386dedb8f
 MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
 
 {
-    "Id":null,
-    "CreationTimestamp":null,
-    "LastModifiedTimestamp":null,
-    "ExpirationTimestamp":"0001-01-01T00:00:00",
-    "LastModifiedUser":null,
     "LineItems": [
         {
             "Id":0,
             "CatalogItemId":"91FD106F-4B2C-4938-95AC-F54F74E9A239",
             "FriendlyName":"Myofferpurchase",
             "Quantity":3,
-            "CurrencyCode":null,
             "BillingCycle":"monthly",
-            "Participants":null,
-            "ProvisioningContext":null,
-            "OrderGroup":null,
             "AddonItems": [
                 {
                     "Id":1,
                     "CatalogItemId":"C94271D8-B431-4A25-A3C5-A57737A1C909",
-                    "FriendlyName":null,
                     "Quantity":2,
-                    "CurrencyCode":null,
-                    "BillingCycle":"monthly",
-                    "Participants":null,
-                    "ProvisioningContext":null,
-                    "OrderGroup":null,
-                    "AddonItems":null,
-                    "Error":null
+                    "BillingCycle":"monthly"
                 },
                 {
                     "Id":2,
                     "CatalogItemId":"43FCE491-76D1-4BCC-B709-8A288786DBAE",
-                    "FriendlyName":null,
                     "Quantity":3,
-                    "CurrencyCode":null,
-                    "BillingCycle":"monthly",
-                    "Participants":null,
-                    "ProvisioningContext":null,
-                    "OrderGroup":null,
-                    "AddonItems":null,
-                    "Error":null
+                    "BillingCycle":"monthly"
                 }
-            ],
-            "Error":null
+            ]
         }
-    ],
-    "Attributes":
-    {
-        "ObjectType":"Cart"
-    }
+    ]
 }
 ```
 
@@ -295,29 +267,15 @@ MS-RequestId: 512a777a-5427-452d-9637-18421387e435
 MS-CorrelationId: 182474ba-7303-4d0f-870a-8c7fba5ccc4b
 
 {
-    "Id":null,
-    "CreationTimestamp":null,
-    "LastModifiedTimestamp":null,
-    "ExpirationTimestamp":"0001-01-01T00:00:00",
-    "LastModifiedUser":null,
     "LineItems": [
         {
             "Id":0,
             "CatalogItemId":"C94271D8-B431-4A25-A3C5-A57737A1C909",
-            "FriendlyName":null,
             "Quantity":1,
-            "CurrencyCode":null,
             "BillingCycle":"annual",
-            "Participants":null,
-            "ProvisioningContext":{"ParentSubscriptionId":"97555B61-7461-477A-A98C-9C76148783E4"},
-            "OrderGroup":null,
-            "AddonItems":null,
-            "Error":null
+            "ProvisioningContext":{"ParentSubscriptionId":"97555B61-7461-477A-A98C-9C76148783E4"}
         }
-    ],
-    "Attributes": {
-        "ObjectType":"Cart"
-    }
+    ]
 }
 ```
 

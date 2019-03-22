@@ -11,7 +11,9 @@ ms.localizationpriority: medium
 **Applies To**
 
 - Partner Center
-
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
@@ -27,7 +29,8 @@ Describes a cart.
 | lastModifiedTimeStamp | DateTime         | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart. |
 | expirationTimeStamp   | DateTime         | The date the cart will expire, in date-time format. Applied upon successful creation of cart.          |
 | lastModifiedUser      | string           | The user who last updated the cart. Applied upon successful creation of cart.                          |
-| lineItems             | Array of objects | An Array of [CartLineItem](#cartlineitem) resources.                                                 |
+| lineItems             | Array of objects | An Array of [CartLineItem](#cartlineitem) resources.                                                   |
+| status                | string           | The status of the cart. Possible values are "Active" (can be updated/submitted) and "Ordered" (has already been submitted). |
 
 
 
@@ -39,14 +42,15 @@ Represents one item contained in a cart.
 | Property             | Type                             | Description                                                                                                                                           |
 |----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id                   | string                           | A unique identifier for a cart line item. Applied upon successful creation of cart.                                                                   |
-| catalogId            | string                           | The catalog item identifier.                                                                                                                          |
+| catalogItemId        | string                           | The catalog item identifier.                                                                                                                          |
 | friendlyName         | string                           | Optional. The friendly name for the item defined by the partner to help disambiguate.                                                                 |
 | quantity             | int                              | The number of licenses or instances.                                                                                                                  |
 | currencyCode         | string                           | The currency code.                                                                                                                                    |
 | billingCycle         | Object                           | The type of billing cycle set for the current period.                                                                                                 |
+| termDuration         | string                           | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                |
 | participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
-| provisioningContext  | Dictionary<string, string>       | A context used for provisioning of offer.                                                                                                             |
-| orderGroup           | string                           | A group to indicate which items can be placed together.                                                                                               |
+| provisioningContext  | Dictionary<string, string>       | Additional context used when provisioning the purchased item. To determine which values are needed for a particular item please refer to the SKU's provisioningVariables property. |
+| orderGroup           | string                           | A group to indicate which items can be submitted together in the same order.                                                                          |
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
 

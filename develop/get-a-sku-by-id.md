@@ -2,7 +2,7 @@
 title: Get a SKU by ID
 description: Gets a SKU for the specified product using the specified SKU ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
@@ -86,7 +86,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
+If successful, the response body contains a [SKU](product-resources.md#sku) resource.
 
 **Response success and error codes**
 
@@ -135,7 +135,7 @@ Content-Length: 1108
     ],
     "provisioningVariables": [
         "Scope",
-        "AzureSubscriptionId"
+        "SubscriptionId"
     ],
     "dynamicAttributes": {
         "armSkuName": "Standard_D32s_v3",

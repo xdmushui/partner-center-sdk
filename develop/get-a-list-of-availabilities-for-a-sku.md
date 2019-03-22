@@ -2,7 +2,7 @@
 title: Get a list of availabilities for a SKU
 description: Gets a collection of availabilities for the specified product and SKU.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 03/20/2018
+ms.date: 01/08/2019
 ms.localizationpriority: medium
 ---
 
@@ -89,7 +89,7 @@ Host: api.partnercenter.microsoft.com
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 
-If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
+If successful, the response body contains a collection of [Availability](product-resources.md#availability) resources.
 
 **Response success and error codes**
 
@@ -120,16 +120,24 @@ Content-Length: 808
     "totalCount": 1,
     "items": [
         {
-            "id": "DZH318Z0HMKQ",
-            "productId": "DZH318Z0BQ3Q",
-            "skuId": "0001",
-            "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318Z0HMKQ",
-            "defaultCurrency": {
-                "code": "USD",
-                "symbol": "$"
-            },
-            "segment": "commercial",
-            "country": "US",
+			"id": "DZH318XZXVNF",
+			"productId": "DZH318Z0BQ3Q",
+			"skuId": "0001",
+			"catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXVNF",
+			"defaultCurrency": {
+				"code": "USD",
+				"symbol": "$"
+			},
+			"segment": "commercial",
+			"country": "US",
+			"isPurchasable": true,
+			"isRenewable": false,
+			"terms": [{
+				"duration": "P1Y",
+				"description": "1 Year Prepaid"
+			}],
+			"product": { ... },
+			"sku": { ... },
             "links": {
                 "self": {
                     "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318Z0HMKQ?country=US",

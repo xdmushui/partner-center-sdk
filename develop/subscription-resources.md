@@ -44,18 +44,22 @@ Represents the life cycle of a subscription and includes properties that define 
 | creationDate         | string                                                        | Gets or sets the creation date, in date-time format.                                                                                                                          |
 | effectiveStartDate   | string in UTC date time format                                | Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.                |
 | commitmentEndDate    | string in UTC date time format                                | The commitment end date for this subscription, in date-time format. For subscriptions which are not auto-renewable, this represents a date far, far away in the future.       |
-| status               | string                                                        | The subscription status: "none", "active", "suspended", or "deleted".                                                                                                         |
+| status               | string                                                        | The subscription status: "none", "active", "pending", "suspended", or "deleted".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Gets a value indicating whether the subscription is renewed automatically.                                                                                                    |
 | billingType          | string                                                        | Specifies how the subscription is billed: "none", "usage", or "license".                                                                                                      |
 | billingCycle         | string                                                        | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](product-resources.md#billingcycletype). |
 | hasPurchasableAddons | boolean                                                       | Gets or sets a value indicating whether the subscription has purchasable add-ons.                                                                                             |
 | isTrial              | boolean                                                       | A value indicating whether this is a trial subscription.                                                                                                                      |
+| isMicrosoftProduct   | boolean                                                       | A value indicating whether this is a Microsoft product.                                                                                                                       |
+| publisherName        | string                                                        | The publisher name.                                                                                                                                                           |
 | actions              | array of strings                                              | Gets or sets the actions that are allowed. Possible values: "edit", "cancel"                                                                                                  |
 | partnerId            | string                                                        | The MPN ID of the reseller of record, used in the indirect partner model.                                                                                                     |
 | suspensionReasons    | array of strings                                              | Read-only. If the subscription was suspended, indicates why.                                                                                                                  |
 | contractType         | string                                                        | Read-only. The type of contract: "subscription", "productKey", or "redemptionCode".                                                                                           |
+| refundOptions        | array of [RefundOption](#refundoption) resources			   | Read-Only. The set of refund options available for this subscription.                                                                                              |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
+| termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 
  
@@ -69,9 +73,14 @@ Describes the collection of links attached to a subscription resource.
 |--------------------|------------------------------------|---------------------------------------|
 | offer              | [Link](utility-resources.md#link) | Gets or sets the offer.               |
 | parentSubscription | [Link](utility-resources.md#link) | Gets or sets the parent subscription. |
+| product            | [Link](utility-resources.md#link) | Gets the product associated with the subscription. |
+| sku                | [Link](utility-resources.md#link) | Gets the product sku associated with the subscription. |
+| availability       | [Link](utility-resources.md#link) | Gets the product sku availability associated with the subscription. |
+| activationLinks    | [Link](utility-resources.md#link) | Gets the list of activation links associated with the subscription. |
 | self               | [Link](utility-resources.md#link) | The self URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
+| 
 
  
 
@@ -125,6 +134,17 @@ Returns a link that can be used to query the registration status of a subscripti
 | Property                | Type                               | Description                                                                           |
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | httpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus" |
+
+
+
+## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>RefundOption
+
+Represents a possible refund option for the subscription. 
+
+| Property          | Type	 | Description                                                                         |
+|-------------------|--------|-------------------------------------------------------------------------------------|
+| type				| string | The type of refund. The supported values are "Partial" and "Full"		|
+| expiresAfter      | string in UTC date time format | The timestamp when this option expires. If null it means it has no expiration.	|
 
  
 

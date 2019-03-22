@@ -45,7 +45,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?{include-price}=false HTTP/1.1  |
 
  
 
@@ -56,6 +56,7 @@ Use the following query parameter to get all orders.
 | Name                   | Type     | Required | Description                                               |
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
+| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).| 
 
  
 
