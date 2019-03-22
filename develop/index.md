@@ -168,7 +168,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 
 <p><strong>New Partner Center REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
+<p>We’re pleased to announce the general availability of updated Partner Center REST APIs.</p>
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
