@@ -96,7 +96,7 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Fri, 26 Feb 2016 20:31:45 GMT
 
 {
-    budget":{
+    "budget":{
         "ammount":300.000000,
         "attributes":{
             "objectType":"SpendingBudget"
