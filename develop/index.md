@@ -200,7 +200,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>CSP account credit limits</h3>
-                        <p>[New order error codes](https://docs.microsoft.com/en-us/partner-center/account-credit-limit) for [Cart resources](https://docs.microsoft.com/en-us/partner-center/develop/cart-resources) returned when [CSP account credit limits](https://docs.microsoft.com/en-us/partner-center/account-credit-limit) are reached.</p>
+                        <p><a href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">New order error codes</a> for <a href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> returned when <a href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>Invoice receipt statement</h3>
-                        <p>CSP partners can programmatically [retrieve invoice receipt statement](https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement) (for Taiwan tax receipts only).</p>
+                        <p>CSP partners can programmatically <a href="https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statement</a> (for Taiwan tax receipts only).</p>
                     </div>
                 </div>
             </div>
