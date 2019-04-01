@@ -2,7 +2,7 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 01/04/2019
+ms.date: 04/01/2019
 ms.localizationpriority: medium
 ---
 
@@ -328,7 +328,7 @@ To help partners understand how to perform each required operation, we have deve
 
 # [.NET](#tab/dotnet-csp-auth)
 
-1. If you have not already done so, perform the [partner consent process](#tab/dotnet-partner-consent).
+1. If you have not already done so, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
 
     ```bash
@@ -372,7 +372,7 @@ To help partners understand how to perform each required operation, we have deve
 
 # [Java](#tab/java-csp-auth)
 
-1. If you have not done so already, perform the [partner consent process](#tab/java-partner-consent).
+1. If you have not done so already, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using Visual Studio or the following command
 
     ```bash
@@ -397,7 +397,7 @@ To help partners understand how to perform each required operation, we have deve
 
 # [PowerShell](#tab/powershell-csp-auth)
 
-Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#tab/dotnet-partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
+Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
 
 ```powershell
 $refreshToken = 'Enter the refresh token value here'
@@ -427,7 +427,7 @@ To help control panel vendors understand how to perform each required operation,
 
 # [.NET](#tab/dotnet-cpv-auth)
 
-1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#tab/dotnet-partner-consent) for additional details and an example.
+1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
     > [!IMPORTANT]  
     > User credentials from a Cloud Solution Provider partner should not be stored. The refresh token obtained through the partner consent process should be stored and used to request access tokens for interacting with any Microsoft API.
@@ -510,7 +510,7 @@ After these permissions have been established, the sample performs operations us
 
 # [Java](#tab/java-cpv-auth)
 
-1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#tab/dotnet-partner-consent) for additional details and an example.
+1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
     > [!IMPORTANT]  
     > User credentials from a Cloud Solution Provider partner should not be stored. The refresh token obtained through the partner consent process should be stored and used to request access tokens for interacting with any Microsoft API.
