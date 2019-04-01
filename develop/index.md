@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 12/07/2018
+ms.date: 04/01/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -45,6 +45,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the Java SDK</h3>
                             <p>Download the Partner Center Java SDK to build the same features provided in Partner Dashboard in your own applications.</p>
+                            <p>This SDK is open source. You can file issues at the <a href="https://github.com/Microsoft/Partner-Center-Java">GitHub repository</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -64,6 +65,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the PowerShell module</h3>
                             <p>Install the Partner Center PowerShell module to develop scripts that provide the same features provided in Partner Dashboard.</p>
+                            <p>This module is open source. You can file issues at the <a href="https://github.com/Microsoft/Partner-Center-PowerShell">GitHub repository</a>.</p>
                         </div>
                     </div>
                 </div>
