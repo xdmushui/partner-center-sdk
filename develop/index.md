@@ -164,9 +164,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<!-- <p><strong>Partner Center .NET SDK v1.13.0 and updated REST APIs are now available!</strong></p>
+<p><strong>Partner Center .NET SDK v1.12.2 and updated REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.13.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p> -->
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.12.2</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
 <p><strong>New Partner Center REST APIs are now available!</strong></p>
 
@@ -189,6 +189,30 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled Azure Marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled reconciliation line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for an Azure Marketplace subscription</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>CSP account credit limits</h3>
+                        <p>[New order error codes](https://docs.microsoft.com/en-us/partner-center/account-credit-limit) for [Cart resources](https://docs.microsoft.com/en-us/partner-center/develop/cart-resources) returned when [CSP account credit limits](https://docs.microsoft.com/en-us/partner-center/account-credit-limit) are reached.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Invoice receipt statement</h3>
+                        <p>CSP partners can programmatically [retrieve invoice receipt statement](https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement) (for Taiwan tax receipts only).</p>
                     </div>
                 </div>
             </div>
