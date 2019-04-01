@@ -168,10 +168,6 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 
 <p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.12.2</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
-<p><strong>New Partner Center REST APIs are now available!</strong></p>
-
-<p>We’re pleased to announce the general availability of updated Partner Center REST APIs.</p>
-
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
         <div class="cardSize">
@@ -200,7 +196,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>CSP account credit limits</h3>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
                     </div>
                 </div>
             </div>
@@ -212,7 +208,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>Invoice receipt statement</h3>
-                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statement</a> (for Taiwan tax receipts only).</p>
+                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statements</a> (for Taiwan tax receipts only).</p>
                     </div>
                 </div>
             </div>
