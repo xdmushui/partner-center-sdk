@@ -45,7 +45,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the Java SDK</h3>
                             <p>Download the Partner Center Java SDK to build the same features provided in Partner Dashboard in your own applications.</p>
-                            <p>This SDK is open source. You can file issues at the <strong><a href="https://github.com/Microsoft/Partner-Center-Java">GitHub repository</a></strong>.</p>
+                            <a href="https://github.com/Microsoft/Partner-Center-Java"><p>This SDK is open source. You can file issues at the <strong>GitHub repository</strong>.</p></a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the PowerShell module</h3>
                             <p>Install the Partner Center PowerShell module to develop scripts that provide the same features provided in Partner Dashboard.</p>
-                            <p>This module is open source. You can file issues at the <strong><a href="https://github.com/Microsoft/Partner-Center-PowerShell">GitHub repository</a></strong>.</p>
+                            <a href="https://github.com/Microsoft/Partner-Center-PowerShell"><p>This module is open source. You can file issues at the <strong>GitHub repository</strong>.</p></a>
                         </div>
                     </div>
                 </div>
