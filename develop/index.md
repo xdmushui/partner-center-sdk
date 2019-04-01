@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 12/07/2018
+ms.date: 04/01/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -45,6 +45,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the Java SDK</h3>
                             <p>Download the Partner Center Java SDK to build the same features provided in Partner Dashboard in your own applications.</p>
+                            <a href="https://github.com/Microsoft/Partner-Center-Java"><p>This SDK is open source. You can learn more, contribute, and file issues at the <strong>GitHub repository</strong>.</p></a>
                         </div>
                     </div>
                 </div>
@@ -64,6 +65,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <div class="cardText">
                             <h3>Get the PowerShell module</h3>
                             <p>Install the Partner Center PowerShell module to develop scripts that provide the same features provided in Partner Dashboard.</p>
+                            <a href="https://github.com/Microsoft/Partner-Center-PowerShell"><p>This module is open source. You can learn more, contribute, and file issues at the <strong>GitHub repository</strong>.</p></a>
                         </div>
                     </div>
                 </div>
@@ -162,13 +164,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<!-- <p><strong>Partner Center .NET SDK v1.13.0 and updated REST APIs are now available!</strong></p>
+<p><strong>Partner Center .NET SDK v1.12.2 and updated REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.13.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p> -->
-
-<p><strong>New Partner Center REST APIs are now available!</strong></p>
-
-<p>We’re pleased to announce the general availability of updated Partner Center REST APIs.</p>
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.12.2</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
@@ -187,6 +185,30 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled Azure Marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled reconciliation line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for an Azure Marketplace subscription</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>CSP account credit limits</h3>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Invoice receipt statement</h3>
+                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statements</a> (for Taiwan tax receipts only).</p>
                     </div>
                 </div>
             </div>

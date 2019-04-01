@@ -2,7 +2,7 @@
 title: Products resources
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.  
 ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
-ms.date: 01/08/2019
+ms.date: 04/01/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.   
 
 
-## <span id="Product"/><span id="product"/><span id="PRODUCT"/>Product
+## Product
 
 
 Represents a purchasable good or service. A product by itself is not a purchasable item.
@@ -33,7 +33,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 
 
 
-## <span id="ItemType"/><span id="itemtype"/><span id="ITEMTYPE"/>ItemType
+## ItemType
 
 
 Represents the type of a product.
@@ -46,7 +46,7 @@ Represents the type of a product.
 
  
 
-## <span id="ProductLinks"/><span id="productlinks"/><span id="PRODUCTLINKS"/>ProductLinks
+## ProductLinks
 
 
 Contains a list of links for a [Product](#product).
@@ -58,7 +58,7 @@ Contains a list of links for a [Product](#product).
 
 
 
-## <span id="Sku"/><span id="sku"/><span id="SKU"/>Sku
+## Sku
 
 
 Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product. 
@@ -81,7 +81,7 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 
 
 
-## <span id="Availability"/><span id="availability"/><span id="AVAILABILITY"/>Availability
+## Availability
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
 
@@ -96,13 +96,13 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
 | isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
 | isRenewable     | bool                                                | Indicates whether this availability is renewable. |
-| product		  | [Product](#product-resources#product)               | The product this availability corresponds to. |
-| sku		      | [Sku](#product-resources#sku)						| The SKU this availability corresponds to. |
-| terms           | array of [Term](#product-resources#term) resources  | The collection of terms that are applicable to this availability. |
+| product		  | [Product](#product)               | The product this availability corresponds to. |
+| sku		      | [Sku](#sku)						| The SKU this availability corresponds to. |
+| terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
 
-## <span id="Term"/><span id="term"/><span id="TERM"/>Term
+## Term
 
 Represents a term for which the availability can be purchased. 
 
@@ -111,7 +111,7 @@ Represents a term for which the availability can be purchased.
 | duration              | string																			| An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
 | description           | string																			| The description of the term.           |
 
-## <span id="InventoryCheckRequest"/><span id="inventorycheckrequest"/><span id="INVENTORYCHECKREQUEST"/>InventoryCheckRequest
+## InventoryCheckRequest
 
 Represents a request to check inventory against certain catalog items. 
 
@@ -123,7 +123,7 @@ Represents a request to check inventory against certain catalog items.
 
 
 
-## <span id="InventoryItem"/><span id="inventoryitem"/><span id="INVENTORYITEM"/>InventoryItem
+## InventoryItem
 
 Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
 
@@ -136,7 +136,7 @@ Represents a single item in an inventory check operation. This resource is used 
 
 
 
-## <span id="InventoryRestriction"/><span id="inventoryrestriction"/><span id="INVENTORYRESTRICTION"/>InventoryRestriction
+## InventoryRestriction
 
 Represents the details of an inventory restriction. This is only applicable for inventory check output results, not for input requests.
 
@@ -148,7 +148,7 @@ Represents the details of an inventory restriction. This is only applicable for 
 
 
 
-## <span id="billingCycleType"/><span id="billingcycletype"/><span id="BILLINGCYCLETYPE"/>BillingCycleType
+## BillingCycleType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of billing cycle.
 
