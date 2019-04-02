@@ -25,9 +25,9 @@ You can also [perform lifecycle management](#lifecycle-management) and [manage i
 
 You can check the available offers for a market using the following Partner Center API models: 
 
-* [Product](product-resources.md#product): A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
-* [SKU](product-resources.md#sku): A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
-* [Availability](product-resources.md#availability): A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
+* **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
+* **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
+* **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
 
 Before you purchase an Azure reservation, complete the following steps: 
 
