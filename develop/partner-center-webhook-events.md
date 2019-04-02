@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhook events
 description: Documentation for all Webhook events supported by Partner Center.
-ms.date: 03/21/2019
+ms.date: 04/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -169,4 +169,29 @@ This event is raised when the referral is updated.
     "AuditUri": null,
     "ResourceChangeUtcDate": "2018-02-17T00:05:39.5485487+00:00"
 }
+```
+
+### Invoice Ready Event
+
+This event is raised when the new invoice is ready.
+
+| Property                  | Type                               | Description                                                                                                  |
+|---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| EventName | string | The name of the event. In the form {resource}-{action}. For this event, the value is "invoice-ready". |
+| ResourceUri | URI | The URI to get the resource. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{{InvoiceId}}" |
+| ResourceName | string | The name of the resource that will trigger the event. For this event, the value is "invoice". |
+| AuditUri |  URI | (Optional) The URI to get the audit record, if it exists. Uses the syntax: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}") |
+| ResourceChangeUtcDate | string in the UTC date-time format | The date and time when the resource change occurred. |
+
+**Example**
+
+```
+{
+    "EventName": "invoice-ready",
+    "ResourceUri": "https://api.partnercenter.microsoft.com/v1/invoices/{{InvoiceId}}",
+    "ResourceName": "invoice",
+    "AuditUri": null,
+    "ResourceChangeUtcDate": "2018-02-17T00:05:39.5485487+00:00"
+}
+
 ```
