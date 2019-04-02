@@ -117,6 +117,7 @@
 #### [Update user accounts for a customer](update-user-accounts-for-a-customer.md)
 #### [View deleted users for a customer](view-a-deleted-user.md)
 ### [Manage orders](manage-orders.md)
+#### [Create a subscription for Azure Marketplace products](create-subscription-azure-marketplace-products.md)
 #### [Cancel an Azure Marketplace subscription](cancel-an-azure-marketplace-subscription.md)
 #### [Cancel an order from the integration sandbox](cancel-an-order-from-the-integration-sandbox.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
