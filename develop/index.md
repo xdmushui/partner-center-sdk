@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 04/01/2019
+ms.date: 04/02/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -177,6 +177,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         <h3>Azure Marketplace</h3>
                         <p>New REST APIs enabling the following Azure Marketplace scenarios:</p>
                         <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products" data-linktype="external">Create a subscription for Azure Marketplace products</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-azure-marketplace-subscription" data-linktype="external">Cancel an Azure Marketplace subscription</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox" data-linktype="external">Cancel an order from the integration sandbox</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-activation-link-by-order-line-item" data-linktype="external">Get activation link by order line item</a></p>
