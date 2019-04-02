@@ -37,7 +37,7 @@ Before you purchase an Azure reservation, complete the following steps:
     * [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md) 
     * [Get a SKU using the SKU ID](get-a-sku-by-id.md)
 > [!NOTE]
-> You can identify Azure Marketplace Products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
+> You can identify Azure Marketplace products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
 
 2. If the SKUs are tagged with an **InventoryCheck** prerequisite, [check the inventory for a SKU](check-inventory.md).
 
