@@ -1,7 +1,7 @@
 ---
 title: Get invoice unbilled reconciliation line items
 description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 02/22/2019
+ms.date: 04/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -132,6 +132,9 @@ None.
 
 If successful, the response contains the collection of line item details.
 
+> [!NOTE]
+> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+
 **Response success and error codes**
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
@@ -182,7 +185,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "availabilityId": "DZH318Z0BP8B",
             "productName": "Test WAF-as-a-Service",
             "skuName": "Test WaaS - Medium Plan",
-            "chargeType": "purchase",
+            "chargeType": "New",
             "unitPrice": 820,
             "effectiveUnitPrice": 820,
             "unitType": "",
@@ -221,7 +224,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "availabilityId": "DZH318Z0BH9R",
             "productName": "Test WAF-as-a-Service",
             "skuName": "Test WaaS - Large Plan",
-            "chargeType": "purchase",
+            "chargeType": "New",
             "unitPrice": 2598,
             "effectiveUnitPrice": 2598,
             "unitType": "",
@@ -313,7 +316,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "availabilityId": "DZH318Z0BH9R",
             "productName": "Test WAF-as-a-Service",
             "skuName": "Test WaaS - Large Plan",
-            "chargeType": "purchase",
+            "chargeType": "New",
             "unitPrice": 2598,
             "effectiveUnitPrice": 2598,
             "unitType": "",

@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: How to get a collection of invoice line item details for the specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 12/15/2017
+ms.date: 04/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -129,6 +129,9 @@ None.
 
 If successful, the response contains the collection of line item details.
 
+> [!NOTE]
+> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+
 **Response success and error codes**
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
@@ -183,7 +186,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionEndDate": "2018-06-10T00:00:00",
             "chargeStartDate": "2017-05-12T00:00:00",
             "chargeEndDate": "2017-06-09T00:00:00",
-            "chargeType": "PURCHASE FEE",
+            "chargeType": "New",
             "unitPrice": 0.0,
             "quantity": 3,
             "amount": 0.0,
@@ -217,7 +220,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionEndDate": "2018-06-10T00:00:00",
             "chargeStartDate": "2017-05-13T00:00:00",
             "chargeEndDate": "2017-06-09T00:00:00",
-            "chargeType": "PURCHASE FEE",
+            "chargeType": "New",
             "unitPrice": 0.0,
             "quantity": 1,
             "amount": 0.0,
@@ -296,7 +299,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "availabilityId": "availabilityid",
             "productName": "TEST PRODUCT",
             "skuName": "TEST SKU TITLE",
-            "chargeType": "Purchase",
+            "chargeType": "New",
             "unitPrice": 431.8,
             "effectiveUnitPrice": 496.07,
             "unitType": "Seats",
@@ -335,7 +338,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "availabilityId": "availabilityid",
             "productName": "TEST PRODUCT",
             "skuName": "TEST SKU TITLE",
-            "chargeType": "Purchase",
+            "chargeType": "New",
             "unitPrice": 26.35,
             "effectiveUnitPrice": 496.07,
             "unitType": "1 Hour",
@@ -427,7 +430,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "availabilityId": "DZH318Z0DR0H",
             "productName": "Reserved VM Instance, Standard_D1, AP East, 3 years",
             "skuName": "D Series",
-            "chargeType": "Purchase",
+            "chargeType": "New",
             "unitPrice": 1447,
             "effectiveUnitPrice": 496.07,
             "unitType": "Seats",

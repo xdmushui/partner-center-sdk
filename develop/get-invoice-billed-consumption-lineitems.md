@@ -1,7 +1,7 @@
 ---
 title: Get invoice billed Azure Marketplace consumption line items
 description: How to get a collection of Azure Marketplace consumption invoice line item details for the specified invoice.
-ms.date: 02/22/2019
+ms.date: 04/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -126,6 +126,9 @@ None.
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
 If successful, the response contains the collection of line item details.
+
+> [!NOTE]
+> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
 
 **Response success and error codes**
 
