@@ -18,13 +18,13 @@ ms.localizationpriority: medium
 
 How to get a collection of invoice line item details for the specified invoice.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 
 To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
@@ -86,7 +86,7 @@ foreach (var invoiceDetail in invoice.InvoiceDetails)
 
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetInvoiceLineItems.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST Request
 
 
 **Request syntax**
@@ -124,19 +124,19 @@ Use the following URI and query parameters when creating the request.
 
 None.
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST Response
 
 
 If successful, the response contains the collection of line item details.
 
-> [!NOTE]
-> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+> [!NOTE]
+> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
 
 **Response success and error codes**
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-## <span id="Request_Response_Examples"/><span id="request_response_examples"/><span id="REQUEST_RESPONSE_EXAMPLES"/>Request/Response Examples
+## Request/Response Examples
 
 
 **Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
