@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 04/02/2019
+ms.date: 04/03/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -197,7 +197,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>CSP account credit limits</h3>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources#ordererrorcode">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
                     </div>
                 </div>
             </div>
