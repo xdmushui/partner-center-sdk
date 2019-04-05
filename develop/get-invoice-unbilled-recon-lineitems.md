@@ -1,7 +1,7 @@
 ---
 title: Get invoice unbilled reconciliation line items
 description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 04/03/2019
+ms.date: 04/05/2019
 ms.localizationpriority: medium
 ---
 
@@ -113,7 +113,7 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
-| provider               | string | Yes      | The provider: "External", "All".                                                |
+| provider               | string | Yes      | The provider: "Marketplace", "All".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "billinglineitems", "UsageLineItems".               |
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
 | period                 | string | Yes      | The period for unbilled recon. example: current, previous.                      |
