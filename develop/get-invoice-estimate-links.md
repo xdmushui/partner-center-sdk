@@ -1,7 +1,7 @@
 ---
 title: Get invoice estimate links
 description: How to get a collection of estimate links to query recon line item details.
-ms.date: 02/20/2019
+ms.date: 04/05/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 
 How to get estimate (unbilled) links for invoice line items.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get the estimate links that help to query unbilled line items for a given currency. The response contains the estimate links per period, for example, current and previous month.
 
@@ -38,7 +38,7 @@ var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(
 
 For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetEstimatesLinks.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST Request
 
 **Request syntax**  
 
@@ -65,7 +65,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices?currencycode=usd HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/estimates/links?currencycode=usd HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
@@ -75,7 +75,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST Response
 
 If successful, the response contains the links to retrieve unbilled estimates.
 
