@@ -51,8 +51,7 @@ var order = new Order()
         {
             LineItemNumber = 0,
             OfferId = offerId,
-            SubscriptionId = null,
-            ParentSubscriptionId = "1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+            SubscriptionId = "69829602-C219-40FD-A3D5-4150FCA41A19",
             Quantity = 1
         }
     }
@@ -103,8 +102,7 @@ The following tables describe the properties in the request body.
 |----------------------|--------|----------|------------------------------------------------------------------------------------|
 | LineItemNumber       | number |    Y     | The line item number, starting with 0                                              |
 | OfferId              | string |    Y     | The ID of the offer                                                                |
-| SubscriptionId       | string |    N     | The ID of the subscription                                                         |
-| ParentSubscriptionId | string |    Y     | The ID of the parent subscription in an add-on offer. Applies to PATCH only        |
+| SubscriptionId       | string |    Y     | The ID of the subscription                                                         |
 | FriendlyName         | string |    N     | The friendly name for the subscription defined by the partner to help disambiguate |
 | Quantity             | number |    Y     | The number of licenses or instances                                                |
 | PartnerIdOnRecord    | string |    N     | The MPN ID of the partner of record                                                |
@@ -133,8 +131,7 @@ Expect: 100-continue
     "LineItems": [{
             "LineItemNumber": 0,
             "OfferId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
-            "SubscriptionId": null,
-            "ParentSubscriptionId": "1C2B75C1-74A5-472A-A729-7F8CEFC477F9",
+            "SubscriptionId": "69829602-C219-40FD-A3D5-4150FCA41A19",
             "FriendlyName": "Some friendly name",
             "Quantity": 2,
             "PartnerIdOnRecord": null,
@@ -191,12 +188,12 @@ Date: Wed, 25 Jan 2017 23:01:08 GMT
         {
             "lineItemNumber": 1,
             "offerId": "2828BE95-46BA-4F91-B2FD-0BEF192ECF60",
-            "subscriptionId": "968BA1CF-C146-4ADF-A300-308DCF718EEE",
+            "subscriptionId": "69829602-C219-40FD-A3D5-4150FCA41A19",
             "friendlyName": "Some friendly name",
             "quantity": 2,
             "links": {
                 "subscription": {
-                    "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/968BA1CF-C146-4ADF-A300-308DCF718EEE",
+                    "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/69829602-C219-40FD-A3D5-4150FCA41A19",
                     "method": "GET",
                     "headers": []
                 }
