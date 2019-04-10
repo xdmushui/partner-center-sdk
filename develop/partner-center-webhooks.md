@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
-ms.date: 04/03/2019
+ms.date: 04/10/2019
 ms.localizationpriority: medium
 ---
 
