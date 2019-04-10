@@ -1,7 +1,7 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "partner-center-sdk",
+      "docset_name": "partner-center-sdk-pr",
       "build_source_folder": "develop",
       "build_output_subfolder": "partner-center-sdk",
       "locale": "en-us",
