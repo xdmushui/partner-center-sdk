@@ -1,7 +1,7 @@
 ---
 title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
-ms.date: 03/21/2019
+ms.date: 04/10/2019
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,11 @@ Partners can select from Webhook events, like the following, that are supported 
 - **Referral Updated Event ("referral-updated")**
 
     This event is raised when the referral is updated. 
+
+- **Invoice Ready Event ("invoice-ready")**
+
+    This event is raised when the new invoice is ready.
+
 
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
 
