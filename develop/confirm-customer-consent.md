@@ -54,7 +54,6 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
     var agreementToCreate = new Agreement
     {
-        UserId = "3d6f2c09-eb40-48ca-a4b3-d24c9c007531",
         PrimaryContact = new Contact
         {
             FirstName = "Tania",
@@ -109,7 +108,6 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
     agreementToCreate.setDateAgreed(new DateTime());
     agreementToCreate.setTemplateId(microsoftCloudAgreement.getTemplateId());
     agreementToCreate.setType(AgreementType.MicrosoftCloudAgreement);
-    agreementToCreate.setUserId("3d6f2c09-eb40-48ca-a4b3-d24c9c007531");
 
     Agreement agreement = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().create(agreementToCreate);
     ```
