@@ -67,7 +67,7 @@ public IAggregatePartner getAppPartnerOperations()
 
 ```powershell
 $credential = Get-Credential
-Connect-PartnerCenter -Credential $credential -ServicePrincipal -TenantId '<TenantId>'
+Connect-PartnerCenter -Credential $credential -TenantId '<TenantId>'
 ```
 
 > [!NOTE]  
@@ -302,19 +302,16 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
 # [PowerShell](#tab/powershell)
 
-Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
+Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
 
 ```powershell
 $credential = Get-Credential
-$token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com -ServicePrincipal
+$token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com
 ```
 
 When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When then [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken) command is invoked you are again prompted for credentials. This time, you need to specify the credentials for the service account you are using. Please note that this should be a partner account with the appropriate permissions. After successful execution of the command, you'll find that the `$token` variable contains the response from Azure Active Directory for a token. Included in this response is a refresh token. Store this value in a secure repository such as Azure Key Vault or a similar service.
 
-> [!NOTE]  
-> The `ServicePrincipal` parameter is being used with the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command because an Azure AD application of type web/API is being used. This type of application requires that a client identifier and secret be included in the request for an access token.
-
-See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) for more information.
+See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) for more information.
 
 ---
 
@@ -403,17 +400,14 @@ Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microso
 $refreshToken = 'Enter the refresh token value here'
 
 $credential = Get-Credential
-$pcToken = New-PartnerAccessToken -RefreshToken $refreshToken -Resource https://api.partnercenter.microsoft.com -Credential $credential -ServicePrincipal
+$pcToken = New-PartnerAccessToken -RefreshToken $refreshToken -Resource https://api.partnercenter.microsoft.com -Credential $credential
 
 Connect-PartnerCenter -AccessToken $pcToken.AccessToken -AccessTokenExpiresOn $pcToken.ExpiresOn -ApplicationId $appId
 ```
 
-When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command is invoked, it requests a new access token using the specified refresh token from Azure Active Directory. That token is then used to connect to Partner Center.
+When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command is invoked, it requests a new access token using the specified refresh token from Azure Active Directory. That token is then used to connect to Partner Center.
 
-> [!NOTE]  
-> The `ServicePrincipal` parameter is being used with the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command because an Azure AD application of type web/API is being used. This type of application requires that a client identifier and secret be included in the request for an access token.
-
-See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) for more information.
+See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) for more information.
 
 ---
 
