@@ -56,7 +56,7 @@ A complete sample can be found in the [GetCustomerAgreements](https://github.com
 
 # [PowerShell](#tab/powershell)
 
-Use the [**Get-PartnerCustomerAgreement**](https://docs.microsoft.com/en-us/powershell/module/partnercenter/partner-center/get-partnercustomeragreement) command.
+Use the [**Get-PartnerCustomerAgreement**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/get-partnercustomeragreement) command.
 
 ```powershell
 Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'

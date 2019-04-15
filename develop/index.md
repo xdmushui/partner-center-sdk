@@ -197,7 +197,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>CSP account credit limits</h3>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources#ordererrorcode">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart-resources#ordererrorcode">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                 <div class="card">
                     <div class="cardText">
                         <h3>Invoice receipt statement</h3>
-                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statements</a> (for Taiwan tax receipts only).</p>
+                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statements</a> (for Taiwan tax receipts only).</p>
                     </div>
                 </div>
             </div>
