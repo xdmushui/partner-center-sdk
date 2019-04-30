@@ -161,5 +161,10 @@
 			"redirect_url": "user-resources",
 			"redirect_document_id": true
 		}
+		{
+			"source_path": "develop/partner-center-managed-api.md",
+			"redirect_url": "https://docs.microsoft.com/en-us/dotnet/api/?view=partnercenter-dotnet-latest",
+			"redirect_document_id": true
+		}
  ]
 }
