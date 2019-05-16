@@ -1,13 +1,13 @@
 ---
 title: Get invoice billed Azure Marketplace consumption line items
 description: How to get a collection of Azure Marketplace consumption invoice line item details for the specified invoice.
-ms.date: 04/03/2019
+ms.date: 05/16/2019
 ms.localizationpriority: medium
 ---
 
 # Get invoice billed Azure Marketplace consumption line items
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
@@ -26,7 +26,7 @@ The Provider identifies the source of the billed detail information (for example
 
 The example code that follows uses a foreach loop to process the line items collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
-To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
+To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/en-us/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
 
 Finally, create an enumerator to traverse the collection as shown in the following example.
 
@@ -50,7 +50,7 @@ var itemNumber = 1;
 while (fetchNext)
 {
     Console.Out.WriteLine("\tLine line items count: " + seekBasedResourceCollection.Items.Count());
-    
+
     seekBasedResourceCollection.Items.ToList().ForEach(item =>
     {
         // Instance of type DailyRatedUsageLineItem
@@ -91,9 +91,9 @@ For a similar example, see **Sample**: [Console test app](console-test-app.md). 
 
 ## REST Request
 
-**Request syntax**
+### Request syntax
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using seekOperation = "Next" 
+Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using `seekOperation = "Next"`.
 
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -101,7 +101,7 @@ Use the first syntax to return a full list of every line item for the given invo
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size}&seekOperation=Next                               |
 
-**URI parameters**
+### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -115,11 +115,11 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000       |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items. |
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
@@ -130,17 +130,19 @@ If successful, the response contains the collection of line item details.
 > [!NOTE]
 > For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ## Request/Response Examples
 
-**Request example 1** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous)
+### Request example 1
+
+Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous
 
 ```http
-GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
-Authorization: Bearer <token> 
+GET https://api.partnercenter.microsoft.com/v1//invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
@@ -149,7 +151,9 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 1** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous)
+### Response example 1
+
+Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous
 
 ```http
 HTTP/1.1 200 OK
@@ -163,7 +167,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 {
     "totalCount": 2,
-    "items": [ 
+    "items": [
         {
             "partnerId": "2b8940db-5089-539c-e757-520ed1d1bc88",
             "partnerName": "",
@@ -288,7 +292,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 }
 ```
 
-**Request example 2** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
+### Request example 2
+
+Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=marketplace&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
@@ -302,7 +308,9 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 2** (Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next)
+### Response example 2
+
+Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
 
 ```http
 HTTP/1.1 200 OK
