@@ -1,14 +1,13 @@
 ---
 title: Cart resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
-ms.date: 03/12/2019
+ms.date: 05/22/2019
 ms.localizationpriority: medium
 ---
 
 # Cart resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -17,8 +16,7 @@ ms.localizationpriority: medium
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
-
-## <span id="cart"/><span id="CART"/>Cart
+## Cart
 
 Describes a cart.
 
@@ -32,10 +30,7 @@ Describes a cart.
 | lineItems             | Array of objects | An Array of [CartLineItem](#cartlineitem) resources.                                                   |
 | status                | string           | The status of the cart. Possible values are "Active" (can be updated/submitted) and "Ordered" (has already been submitted). |
 
-
-
-## <span id="cartLineItem"/><span id="cartlineitem"/><span id="CARTLINEITEM"/>CartLineItem
-
+## CartLineItem
 
 Represents one item contained in a cart.
 
@@ -54,10 +49,7 @@ Represents one item contained in a cart.
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
 
- 
-
-## <span id="cartError"/><span id="carterror"/><span id="CARTERROR"/>CartError
-
+## CartError
 
 Represents an error that occurs after a cart is created.
 
@@ -66,10 +58,7 @@ Represents an error that occurs after a cart is created.
 | errorCode        | [CartErrorCode](cart-resources.md#carterrorcode) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
 
-
-
-## <span id="cartErrorCode"/><span id="carterrorcode"/><span id="CARTERRORCODE"/>CartErrorCode
-
+## CartErrorCode
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of cart error.
 
@@ -86,10 +75,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | SubscriptionIsNotEnabledForRI        | 10008    | The subscription is not enabled for Azure reservations. |
 | SandboxLimitExceeded                 | 10009    | The sandbox limit has been exceeded.                    |
 
-
-
-## <span id="cartCheckoutResult"/><span id="cartcheckoutresult"/><span id="CARTCHECKOUTRESULT"/>CartCheckoutResult
-
+## CartCheckoutResult
 
 Represents the result of a cart checkout.
 
@@ -97,11 +83,8 @@ Represents the result of a cart checkout.
 |-------------|---------------------------------------------------|---------------------------------|
 | orders      | List of [Order](order-resources.md#order) objects.         | The collection of orders.       |
 | orderErrors | List of [OrderError](cart-resources.md#ordererror) objects. | The collection of order errors. |
- 
 
-
-## <span id="orderError"/><span id="ordererror"/><span id="ORDERERROR"/>OrderError
-
+## OrderError
 
 Represents an error that occurs during a cart checkout when an order is created.
 
