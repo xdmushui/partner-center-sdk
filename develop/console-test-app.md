@@ -23,6 +23,8 @@ Download the sample code for the console test app.
 
 ### [.NET](#tab/dotnet)
 
+### .NET
+
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=746682) and modify it as necessary.
 
 > [!IMPORTANT]
@@ -34,6 +36,8 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 
 ### [Java](#tab/java)
 
+### Java
+
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
 
 > [!IMPORTANT]
@@ -42,6 +46,8 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 Under **ScenarioSettings** in the *SamplesConfiguration.json* file, you can set parameters that will be automatically passed into the scenarios that you run.
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.java* file.
+
+-----
 
 ## What to change
 
