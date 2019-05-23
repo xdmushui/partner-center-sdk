@@ -1,34 +1,34 @@
 ---
 title: Create a cart with add-ons
 description: How to add an order with add-ons for a customer in a cart.
-ms.date: 11/02/18
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Create a cart with add-ons
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
-How to purchase add-ons through a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+You can purchase add-ons through a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C# 
-
-Follow these steps to create a cart, which will enable the purchase of both a base offer and its corresponding add-ons:
+A cart enables the purchase of a base offer and its corresponding add-ons. Follow these steps to create a cart:
 
 1. Instantiate a [**Cart**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart) object.
 2. Create a list of [**CartLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects which represent the base offer(s), and assign the list to the cart's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property.
 3. Under each base offer’s cart line item, populate the list of **AddOnItems** with other **CartLineItem** objects that each represent an add-on that will be purchased against that base offer.
 4. Obtain an interface to cart operations by using [**IAggregatePartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) to call the [**ICustomerCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
 5. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.createasync) method to create the cart.
+
+### C# example
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -101,16 +101,15 @@ var cart = new Cart()
 var createdCart = partnerOperations.Customers.ById(selectedCustomerId).Carts.Create(cart);
 ```
 
+## REST request
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts HTTP/1.1                        |
 
-**URI parameter**
+#### URI parameter
 
 Use the following path parameter to identify the customer.
 
@@ -118,11 +117,11 @@ Use the following path parameter to identify the customer.
 |-----------------|----------|----------|------------------------------------------------------------------------|
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 
-**Request headers**
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the [Cart](cart-resources.md) properties in the request body.
 
@@ -136,7 +135,6 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                             |
 
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
-
 
 | Property             | Type                             | Description                                                                                                                                           |
 |----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,9 +150,9 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for add-ons that will be purchased towards the base subscription that results from the parent cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
 
-**Request example**
+### Request example (new base subscription)
 
-The following REST example show how to create a cart with add-on items for a new base subscription.
+The following REST example shows how to create a cart with add-on items for a new base subscription.
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/carts HTTP/1.1
@@ -190,72 +188,7 @@ MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
 }
 ```
 
-### REST Response
-
-If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
-
-**Response example**
-
-```http
-HTTP/1.1 201 Created
-Content-Length: 958
-Content-Type: application/json
-MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
-MS-RequestId: f931348a-6312-47d0-a8dd-31a386dedb8f
-X-Locale: en-US,en-US
-Date: Thu, 01 Nov 2018 22:29:05 GMT
-
-{
-	"id":"dbe2f8d4-f21d-43e2-9356-cff6387c4ba1",
-	"creationTimestamp":"2018-11-01T22:29:03.6900182Z",
-	"lastModifiedTimestamp":"2018-11-01T22:29:03.6900182Z",
-	"expirationTimestamp":"2018-11-01T22:44:05.0025799Z",
-	"lastModifiedUser":"1824b7fc-2fac-4478-b177-66823c40ab75",
-	"status":"Active",
-	"lineItems": [
-		{
-			"id":0,
-			"catalogItemId":"91FD106F-4B2C-4938-95AC-F54F74E9A239",
-			"friendlyName":"Myofferpurchase",
-			"quantity":3,
-			"currencyCode":"USD",
-			"billingCycle":"monthly",
-			"orderGroup":"OMS-0",
-			"addonItems": [
-				{
-					"id":1,
-					"catalogItemId":"C94271D8-B431-4A25-A3C5-A57737A1C909",
-					"quantity":2,
-					"currencyCode":"USD",
-					"billingCycle":"monthly",
-					"orderGroup":"OMS-0"
-				},
-				{
-					"id":2,
-					"catalogItemId":"43FCE491-76D1-4BCC-B709-8A288786DBAE",
-					"quantity":3,
-					"currencyCode":"USD",
-					"billingCycle":"monthly",
-					"orderGroup":"OMS-0"
-				}
-			]
-		}
-	],
-	"links": {
-		"self": {
-			"uri":"/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/carts/dbe2f8d4-f21d-43e2-9356-cff6387c4ba1",
-			"method":"GET",
-			"headers":[
-			]
-		}
-	},
-	"attributes": {
-		"objectType":"Cart"
-	}
-}
-```
-
-**Request example**
+#### Request example (existing base subscription)
 
 The following REST example show how to append add-ons to an existing base subscription.
 
@@ -283,7 +216,72 @@ MS-CorrelationId: 182474ba-7303-4d0f-870a-8c7fba5ccc4b
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
-**Response example**
+#### Response success and error codes
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+
+#### Response example (new base subscription)
+
+```http
+HTTP/1.1 201 Created
+Content-Length: 958
+Content-Type: application/json
+MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
+MS-RequestId: f931348a-6312-47d0-a8dd-31a386dedb8f
+X-Locale: en-US,en-US
+Date: Thu, 01 Nov 2018 22:29:05 GMT
+
+{
+    "id":"dbe2f8d4-f21d-43e2-9356-cff6387c4ba1",
+    "creationTimestamp":"2018-11-01T22:29:03.6900182Z",
+    "lastModifiedTimestamp":"2018-11-01T22:29:03.6900182Z",
+    "expirationTimestamp":"2018-11-01T22:44:05.0025799Z",
+    "lastModifiedUser":"1824b7fc-2fac-4478-b177-66823c40ab75",
+    "status":"Active",
+    "lineItems": [
+        {
+            "id":0,
+            "catalogItemId":"91FD106F-4B2C-4938-95AC-F54F74E9A239",
+            "friendlyName":"Myofferpurchase",
+            "quantity":3,
+            "currencyCode":"USD",
+            "billingCycle":"monthly",
+            "orderGroup":"OMS-0",
+            "addonItems": [
+                {
+                    "id":1,
+                    "catalogItemId":"C94271D8-B431-4A25-A3C5-A57737A1C909",
+                    "quantity":2,
+                    "currencyCode":"USD",
+                    "billingCycle":"monthly",
+                    "orderGroup":"OMS-0"
+                },
+                {
+                    "id":2,
+                    "catalogItemId":"43FCE491-76D1-4BCC-B709-8A288786DBAE",
+                    "quantity":3,
+                    "currencyCode":"USD",
+                    "billingCycle":"monthly",
+                    "orderGroup":"OMS-0"
+                }
+            ]
+        }
+],
+    "links": {
+        "self": {
+            "uri":"/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/carts/dbe2f8d4-f21d-43e2-9356-cff6387c4ba1",
+            "method":"GET",
+            "headers":[
+            ]
+        }
+    },
+    "attributes": {
+        "objectType":"Cart"
+    }
+}
+```
+
+#### Response example (existing base subscription)
 
 ```http
 HTTP/1.1 201 Created
@@ -327,7 +325,3 @@ Date: Thu, 01 Nov 2018 22:46:18 GMT
     }
 }
 ```
-
-**Response success and error codes**
-
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
