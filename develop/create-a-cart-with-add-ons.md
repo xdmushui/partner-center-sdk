@@ -28,7 +28,7 @@ A cart enables the purchase of a base offer and its corresponding add-ons. Follo
 4. Obtain an interface to cart operations by using [**IAggregatePartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) to call the [**ICustomerCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
 5. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.createasync) method to create the cart.
 
-### C# example
+### C\# example
 
 ```csharp
 // IAggregatePartner partnerOperations;

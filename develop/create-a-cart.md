@@ -21,15 +21,16 @@ You can add an order for a customer in a cart. For more information about what i
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## Examples
+## C\#
 
-### C# 
+To create an order for a customer:
 
-To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's LineItems property. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
+1. Instantiate a Cart object.
+2. Create a list of **CartLineItem** objects, and assign the list to the cart's LineItems property. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+3. Obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
+4. Call the **Create** or **CreateAsync** method to create the cart.
 
-Next, obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
-
-Finally, call the **Create** or **CreateAsync** method to create the cart.
+### C\# example
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -42,7 +43,7 @@ var cart = new Cart()
     {
         new CartLineItem()
         {
-			/* Microsoft Azure Subscription */
+      /* Microsoft Azure Subscription */
             Id = 0,
             CatalogItemId = "MS-AZR-0145P",
             Quantity = 1,
@@ -51,7 +52,7 @@ var cart = new Cart()
         },
         new CartLineItem()
         {
-			/* Azure Reserved Instance */
+      /* Azure Reserved Instance */
             Id = 1,
             CatalogItemId = "DZH318Z0BQ36:004G:DZH318Z08C0S",
             Quantity = 1,
@@ -65,7 +66,7 @@ var cart = new Cart()
         },
         new CartLineItem()
         {
-			/* Azure Reserved Instance */
+      /* Azure Reserved Instance */
             Id = 2,
             CatalogItemId = "DZH318Z0BQ36:004J:DZH318Z08B8X",
             Quantity = 1,
@@ -79,7 +80,7 @@ var cart = new Cart()
         },
         new CartLineItem()
         {
-			/* Perpetual Software */
+      /* Perpetual Software */
             Id = 3,
             CatalogItemId = "DG7GMGF0DWM3:0002:DG7GMGF0DT1M",
             Quantity = 1,
@@ -87,7 +88,7 @@ var cart = new Cart()
         },
         new CartLineItem()
         {
-			/* SaaS */
+      /* SaaS */
             Id = 4,
             CatalogItemId = "DZH318Z0BXWC:0002:DZH318Z0BMRV",
             Quantity = 1,
@@ -100,13 +101,16 @@ var cart = new Cart()
 cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
-### Java
+## Java
 
-To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
+To create an order for a customer:
 
-Next, obtain an interface to cart operations by calling the **IAggregatePartner.getCustomers().byId** function with the customer ID to identify the customer, and then retrieving the interface from the **getCart** function.
+1. Instantiate a Cart object.
+2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+3. Obtain an interface to cart operations by calling the **IAggregatePartner.getCustomers().byId** function with the customer ID to identify the customer, and then retrieving the interface from the **getCart** function.
+4. Call the **create** function to create the cart.
 
-Finally, call the **create** function to create the cart.
+### Java example
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -124,7 +128,7 @@ lineItem.setQuantity(1);
 Map<String, String> provisioningContext = new HashMap<String,String>();
 
 provisioningContext.put("duration", "3Years");
-provisioningContext.put("scope", "shared"); 
+provisioningContext.put("scope", "shared");
 provisioningContext.put("subscriptionId", subscriptionId);
 
 lineItem.setProvisioningContext(provisioningContext);
@@ -138,11 +142,15 @@ cart.setLineItems(lineItemList);
 Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().create(cart);
 ```
 
-### PowerShell
+## PowerShell
 
-To create an order for a customer, first instantiate a Cart object. Next, create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item. 
+To create an order for a customer:
 
-Finally, execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
+1. Instantiate a Cart object.
+2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+3. Execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
+
+### PowerShell example
 
 ```powershell
 # $customerId
@@ -162,15 +170,15 @@ $lineItem.Quantity = 10
 New-PartnerCustomerCart -CustomerId $customerId -LineItems $lineItem
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts HTTP/1.1                        |
 
-**URI parameter**
+### URI parameter
 
 Use the following path parameter to identify the customer.
 
@@ -178,11 +186,11 @@ Use the following path parameter to identify the customer.
 |-----------------|----------|----------|------------------------------------------------------------------------|
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 
-**Request headers**
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the [Cart](cart-resources.md) properties in the request body.
 
@@ -197,7 +205,6 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
-
 |      Property       |            Type             | Required |                                                                                         Description                                                                                         |
 |---------------------|-----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         id          |           string            |    No    |                                                     A Unique identifier for a cart line item. Applied upon successful creation of cart.                                                     |
@@ -211,7 +218,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 |     orderGroup      |           string            |    No    |                                                                   A group to indicate which items can be placed together.                                                                   |
 |        error        |           Object            |    No    |                                                                     Applied after cart is created in case of an error.                                                                      |
 
-**Request example**
+### Request example
 
 ```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts HTTP/1.1
@@ -222,14 +229,14 @@ MS-CorrelationId: 0e93c70c-977a-4a88-9580-7cf084c73286
 X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 Content-Length: 496
 Expect: 100-continue
 
 {
   "lineItems": [
     {
-	  /* Microsoft Azure Subscription */
+    /* Microsoft Azure Subscription */
       "id": 0,
       "catalogItemId": "MS-AZR-0145P",
       "quantity": 1,
@@ -237,7 +244,7 @@ Expect: 100-continue
       "termDuration": "P1Y"
     },
     {
-	  /* Azure Reserved Instance */
+    /* Azure Reserved Instance */
       "id": 1,
       "catalogItemId": "DZH318Z0BQ36:004G:DZH318Z08C0S",
       "quantity": 1,
@@ -249,7 +256,7 @@ Expect: 100-continue
       }
     },
     {
-	  /* Azure Reserved Instance */
+    /* Azure Reserved Instance */
       "id": 2,
       "catalogItemId": "DZH318Z0BQ36:004J:DZH318Z08B8X",
       "quantity": 1,
@@ -261,14 +268,14 @@ Expect: 100-continue
       }
     },
     {
-	  /* Perpetual Software */
+    /* Perpetual Software */
       "id": 3,
       "catalogItemId": "DG7GMGF0DWTL:0001:DG7GMGF0DSFM",
       "quantity": 1,
       "billingCycle": "one_time"
     },
     {
-	  /* SaaS */
+    /* SaaS */
       "id": 4,
       "catalogItemId": "DZH318Z0BXWC:0002:DZH318Z0BMRV",
       "quantity": 1,
@@ -279,15 +286,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST response
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created

@@ -2,39 +2,37 @@
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
 ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
-ms.date: 12/15/2017
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Create an order for a customer of an indirect reseller
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
 How to create an order for a customer of an indirect reseller.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - The customer identifier.
 - The offer identifier of the item to purchase.
 - The tenant identifier of the indirect reseller.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To create an order for a customer of an indirect reseller:
 
-To create an order for a customer of an indirect reseller, start by getting a collection of the indirect resellers that have a relationship with the signed-in partner. Then set a local variable to the item in the collection that matches the indirect reseller ID. This is so you can access the reseller's [**MpnId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
+1. Get a collection of the indirect resellers that have a relationship with the signed-in partner.
+2. Get a local variable to the item in the collection that matches the indirect reseller ID. This step helps you access the reseller's [**MpnId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
+3. Instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer.
+4. Create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller. You must have at least one order line item.
+5. Obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+6. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
-Next, instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer. Then, create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller.
-
-You must have at least one order line item.
-
-Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
-
-Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
+### C\# example
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -50,7 +48,7 @@ var selectedIndirectReseller = (indirectResellers != null &amp;&amp; indirectRes
     indirectResellers.Items.FirstOrDefault(reseller => reseller.Id.Equals(indirectResellerId, StringComparison.OrdinalIgnoreCase)) :
     null;
 
-// Prepare the order and populate the PartnerIdOnRecord with the reseller&#39;s Microsoft Partner Network Id. 
+// Prepare the order and populate the PartnerIdOnRecord with the reseller&#39;s Microsoft Partner Network Id.
 var order = new Order()
 {
     ReferenceCustomerId = customerId,
@@ -72,18 +70,15 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 **Sample**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: PlaceOrderForCustomer.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                            |
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/orders HTTP/1.1 |
 
- 
-
-**URI parameters**
+#### URI parameters
 
 Use the following path parameter to identify the customer.
 
@@ -91,163 +86,41 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
+### Request body
 
-**Request body**
+#### Order
 
 This table describes the **Order** properties in the request body.
 
-## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| id | string | No | An order identifier that is supplied upon successful creation of the order. |
+| referenceCustomerId | string | Yes | The customer identifier. |
+| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature is not yet generally available. Support for annual billing is coming soon. |
+| lineItems | array of objects | Yes | An array of [**OrderLineItem**](#orderlineitem) resources. |
+| creationDate | string | No | The date the order was created, in date-time format. Applied upon successful creation of the order. |
+| attributes | object | No | Contains "ObjectType": "Order". |
 
-
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>id</td>
-<td>string</td>
-<td>No</td>
-<td>An order identifier that is supplied upon successful creation of the order.</td>
-</tr>
-<tr class="even">
-<td>referenceCustomerId</td>
-<td>string</td>
-<td>Yes</td>
-<td>The customer identifier.</td>
-</tr>
-<tr class="odd">
-<td>billingCycle</td>
-<td>string</td>
-<td>No</td>
-<td>The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype"><strong>BillingCycleType</strong></a>.
-<div class="alert">
-<strong>Note</strong>  The annual billing feature is not yet generally available. Support for annual billing is coming soon.
-</div>
-<div>
- 
-</div></td>
-</tr>
-<tr class="even">
-<td>lineItems</td>
-<td>array of objects</td>
-<td>Yes</td>
-<td>An array of <a href="#orderlineitem">OrderLineItem</a> resources.</td>
-</tr>
-<tr class="odd">
-<td>creationDate</td>
-<td>string</td>
-<td>No</td>
-<td>The date the order was created, in date-time format. Applied upon successful creation of the order.</td>
-</tr>
-<tr class="even">
-<td>attributes</td>
-<td>object</td>
-<td>No</td>
-<td>Contains &quot;ObjectType&quot;: &quot;Order&quot;.</td>
-</tr>
-</tbody>
-</table>
-
- 
+#### OrderLineItem
 
 This table describes the **OrderLineItem** properties in the request body.
 
-## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
+| Name | Type | Required | Description |
+| ---- | ---- | -------- | ----------- |
+| lineItemNumber | int | Yes | Each line item in the collection gets a unique line number, counting up from 0 to count-1. |
+| offerId | string | Yes | The offer identifier. |
+| subscriptionId | string | No | The subscription identifier. |
+| parentSubscriptionId | string | No | Optional. The ID of the parent subscription in an add-on offer. Applies to PATCH only. |
+| friendlyName | string | No | Optional. The friendly name for the subscription defined by the partner to help disambiguate. |
+| quantity | int | Yes | The number of licenses for a license-based subscription. |
+| partnerIdOnRecord | string | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. **Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller is not recorded and as a consequence incentive calculations may not include the sale.** |
+| attributes | object | No | Contains "ObjectType":"OrderLineItem". |
 
-
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>lineItemNumber</td>
-<td>int</td>
-<td>Yes</td>
-<td>Each line item in the collection gets a unique line number, counting up from 0 to count-1.</td>
-</tr>
-<tr class="even">
-<td>offerId</td>
-<td>string</td>
-<td>Yes</td>
-<td>The offer identifier.</td>
-</tr>
-<tr class="odd">
-<td>subscriptionId</td>
-<td>string</td>
-<td>No</td>
-<td>The subscription identifier.</td>
-</tr>
-<tr class="even">
-<td>parentSubscriptionId</td>
-<td>string</td>
-<td>No</td>
-<td>Optional. The ID of the parent subscription in an add-on offer. Applies to PATCH only.</td>
-</tr>
-<tr class="odd">
-<td>friendlyName</td>
-<td>string</td>
-<td>No</td>
-<td>Optional. The friendly name for the subscription defined by the partner to help disambiguate.</td>
-</tr>
-<tr class="even">
-<td>quantity</td>
-<td>int</td>
-<td>Yes</td>
-<td>The number of licenses for a license-based subscription.</td>
-</tr>
-<tr class="odd">
-<td>partnerIdOnRecord</td>
-<td>string</td>
-<td>No</td>
-<td>When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the <strong>indirect reseller only</strong> (never the ID of the indirect provider). This ensures proper accounting for incentives.
-<div class="alert">
-<strong>Note</strong>  Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller is not recorded and as a consequence incentive calculations may not include the sale.
-</div>
-<div>
- 
-</div></td>
-</tr>
-<tr class="even">
-<td>attributes</td>
-<td>object</td>
-<td>No</td>
-<td>Contains &quot;ObjectType&quot;:&quot;OrderLineItem&quot;.</td>
-</tr>
-</tbody>
-</table>
-
- 
-
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/c501c3c4-d776-40ef-9ecf-9cefb59442c1/orders HTTP/1.1
@@ -285,16 +158,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
+If successful, the response body contains the populated [Order](order-resources.md) resource.
 
-If successful, the response body contains the populated [Order](order-resources.md) resource
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -340,11 +212,3 @@ Date: Mon, 10 Apr 2017 23:02:24 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
