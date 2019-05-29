@@ -18,7 +18,7 @@ Create an online marketplace to sell cloud solution provider (CSP) offers by usi
 
 The CSP Customer Storefront Builder helps partners easily create an online marketplace to sell CSP offers to their customers. Most partners and small sales organizations want to focus on selling rather than developing an online marketplace. The Partner Center SDK sample app requires software development skills to create and deploy a website. With the CSP Customer Storefront Builder, you can quickly and easily create your own website. You can also download the website as sample code or deploy directly to your Azure subscription with a Ready to Transact website.
 
-This website is fully owned, supported, and maintained by partners, and Microsoft does not collect any data or telemetry from the website. The CSP Customer Storefront Builder creates a website for the partner that is fully compliant with the [Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/)(PCI DSS).
+This website is fully owned, supported, and maintained by partners, and Microsoft does not collect any data or telemetry from the website. The CSP Customer Storefront Builder creates a website for the partner that is fully compliant with the [Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/) (PCI DSS).
 
 The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
