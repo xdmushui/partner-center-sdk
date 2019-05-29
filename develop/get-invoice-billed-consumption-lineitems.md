@@ -141,7 +141,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1//invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
