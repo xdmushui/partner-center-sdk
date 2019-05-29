@@ -54,7 +54,6 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
     var agreementToCreate = new Agreement
     {
-        UserId = "3d6f2c09-eb40-48ca-a4b3-d24c9c007531",
         PrimaryContact = new Contact
         {
             FirstName = "Tania",
@@ -109,7 +108,6 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
     agreementToCreate.setDateAgreed(new DateTime());
     agreementToCreate.setTemplateId(microsoftCloudAgreement.getTemplateId());
     agreementToCreate.setType(AgreementType.MicrosoftCloudAgreement);
-    agreementToCreate.setUserId("3d6f2c09-eb40-48ca-a4b3-d24c9c007531");
 
     Agreement agreement = partnerOperations.getCustomers().byId(selectedCustomerId).getAgreements().create(agreementToCreate);
     ```
@@ -171,7 +169,6 @@ This table describes the minimum required fields to create an **Agreement** reso
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
-| userId         | string | Object identifier of the logged in user in the partner tenant who is providing confirmation on behalf of the partner organization. |
 | primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  <br/> - firstName <br/> - lastName<br/> - email<br/> - phoneNumber (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Cloud Agreement by retrieving the agreement metadata for Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. |
@@ -187,7 +184,6 @@ Content-Type: application/json
 MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 {
-    "userId": "3d6f2c09-eb40-48ca-a4b3-d24c9c007531",
     "primaryContact": {
         "firstName": "Tania",
         "lastName": "Carr",
