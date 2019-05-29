@@ -2,40 +2,38 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.date: 11/29/2018
+ms.date: 05/28/2019
 ms.localizationpriority: medium
 ---
 
 # Create an order
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud for US Government
 
-**Creating an Order for Azure Reserved VM Instance products applies only to**
+Creating an **order for Azure reserved VM instance products** applies *only* to:
 
 - Partner Center
 
-How to create an order for a customer. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+For information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 - An offer identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To create an order for a customer:
 
-To create an order for a customer, first instantiate an [**Order**](order-resources.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer. Next, create a list of [**OrderLineItem**](order-resources.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
-
-Next, obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
-
-Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
+1. Instantiate an [**Order**](order-resources.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer.
+2. Create a list of [**OrderLineItem**](order-resources.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
+3. Obtain an interface to order operations. First, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+4. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -56,8 +54,8 @@ var order = new Order()
             {
                 { "subscriptionId", "5198C069-3DAA-403A-8660-5BE11BFD12EE" },
                 { "scope", "shared" },
-                { "duration", "3Years" }            
-            }	
+                { "duration", "3Years" }
+            }
         }
     }
 };
@@ -67,18 +65,15 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateOrder.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                            |
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/orders HTTP/1.1 |
 
- 
-
-**URI parameters**
+#### URI parameters
 
 Use the following path parameter to identify the customer.
 
@@ -86,18 +81,15 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|------------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted customer-id that identifies the customer. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
+### Request body
 
-**Request body**
+#### Order
 
 This table describes the [Order](order-resources.md) properties in the request body.
-
-## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
-
 
 | Property             | Type                        | Required                        | Description                                                                   |
 |----------------------|-----------------------------|---------------------------------|-------------------------------------------------------------------------------|
@@ -109,19 +101,14 @@ This table describes the [Order](order-resources.md) properties in the request b
 | creationDate         | datetime                    | No                              | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
 | status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](order-resources.md#orderstatus).        |
 | links                | [OrderLinks](utility-resources.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
-| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. | 
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. |
 
-
+#### OrderLineItem
 
 This table describes the [OrderLineItem](order-resources.md#orderlineitem) properties in the request body.
 
 >[!NOTE]
 >The partnerIdOnRecord should only be provided when an indirect provider places an order on behalf of an indirect reseller. It's used to store the Microsoft Partner Network ID of the indirect reseller only (never the ID of the indirect provider).
-
- 
-
-## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
-
 
 | Name                 | Type   | Required | Description                                                                                                                                                                                                                                |
 |----------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -134,10 +121,9 @@ This table describes the [OrderLineItem](order-resources.md#orderlineitem) prope
 | partnerIdOnRecord    | string | No       | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
 | links                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
-| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. | 
- 
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. |
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders HTTP/1.1
@@ -165,12 +151,11 @@ Content-Type: application/json
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the method returns an [Order](order-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -180,9 +165,9 @@ This method returns the following error codes:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 400                  | 2093         | Inventory is not available for the catalog item selected.                                                 |
 | 400                  | 2094         | Subscription is not a valid Azure subscription. Only applicable for Azure Reserved VM Instance purchase.     |
-| 400                  | 2095         | Subscription is not enabled for an Azure Reserved VM Instance purchase.                                                                                                
+| 400                  | 2095         | Subscription is not enabled for an Azure Reserved VM Instance purchase. |
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -230,11 +215,3 @@ Date: Thu, 15 Mar 2018 22:30:02 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
