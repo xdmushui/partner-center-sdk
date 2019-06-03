@@ -1,13 +1,13 @@
 ---
 title: Cancel an order from the integration sandbox
-description: How to cancel orders from integration sandbox accounts.
-ms.date: 02/21/2019
+description: Cancel orders from integration sandbox accounts.
+ms.date: 05/22/2019
 ms.localizationpriority: medium
 ---
 
 # Cancel an order from the integration sandbox
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -19,18 +19,18 @@ How to cancel reserved instance, software, and Azure Marketplace Software as a S
 >[!NOTE]
 >Please be aware that cancelling of reserved instance, software, or Azure Marketplace SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An integration sandbox partner account with a customer having active reserved instance / software / 3rd party SaaS subscription orders.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
-To cancel an order from the integration sandbox, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations. 
+To cancel an order from the integration sandbox, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
-To select a particular [Order](order-resources.md#order) use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **Orders.ById()** with order identifier to specify the order and finally **Get** or **GetAsync** method to retrieve it. 
+To select a particular [Order](order-resources.md#order) use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **Orders.ById()** with order identifier to specify the order and finally **Get** or **GetAsync** method to retrieve it.
 
-Set the [**Order.Status**](order-resources.md#order) property to "cancelled" and use the **Patch()** method to update the order. 
+Set the [**Order.Status**](order-resources.md#order) property to "cancelled" and use the **Patch()** method to update the order.
 
 ``` csharp
 // IPartnerCredentials tipAccountCredentials;
@@ -46,17 +46,15 @@ order = tipAccountPartnerOperations.Customers.ById(customerTenantId).Orders.ById
 
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method     | Request URI                                                                            |
 |------------|----------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
- 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to delete a customer.
 
@@ -65,17 +63,15 @@ Use the following query parameter to delete a customer.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **order-id** | **string** | Y        | The value is a string denoting the order id which need to be cancelled. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/orders/<order-id> HTTP/1.1
@@ -85,20 +81,19 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 {
     "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",
-    "status": "cancelled",    
+    "status": "cancelled",
 }
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
+## REST response
 
 If successful, this method returns the cancelled order.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

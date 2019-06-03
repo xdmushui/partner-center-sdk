@@ -1,115 +1,87 @@
 ---
 title: Set up API access in Partner Center
-description: This topic describes the accounts you need to develop against the Partner Center SDK, how to create an integration sandbox account, and how to test in the integration sandbox.
+description: Set up accounts for developing against the Partner Center SDK and test in the integration sandbox.
 ms.assetid: 182A6831-6F00-4762-9A86-327BF87EA6AC
-ms.date: 10/19/2018
+ms.date: 05/29/2019
 ms.localizationpriority: medium
 ---
 
 # Set up API access in Partner Center
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud for US Government
 - Partner Center for Microsoft Cloud Germany
 
-This topic describes the accounts you need to develop against the Partner Center SDK, how to create an integration sandbox account, and how to test in the integration sandbox.
+This topic describes the accounts you need to develop against the Partner Center SDK. This topic also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
 
-## <span id="supportedAccountTypes"/><span id="supportedaccounttypes"/><span id="SUPPORTEDACCOUNTTYPES"/>Account definitions
-
+## Account definitions
 
 To help you integrate and test your API integration, Partner Center supports two kinds of accounts:
 
-<table>
-  <tr>
-    <td><strong>Primary Partner account</strong></td>
-    <td>This account is where you create real orders for real customers. If you make any changes or transactions when you are signed in to the primary account, by using either the Partner Center SDK or the Partner Dashboard UI, they will be treated as official orders for real customers. They will be reflected in your invoice, and your company is responsible for paying for them.</td>
-  </tr>
-  <tr>
-    <td><strong>Integration sandbox account</strong></td>
-    <td><p>This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will not appear in your invoice.</p>
-      <ul>
-        <li>The integration sandbox account and the primary account act independently, and do not share admin accounts, user accounts, customers, orders, subscriptions, or other data.</li>
-        <li>The integration sandbox supports transactions with a limited number of customers, orders, subscriptions, seats, etc.</li>
-        <li>By policy, integration sandbox accounts are for integration testing purposes only.</li>
-        <li>By default, there is no integration sandbox account. You must create one yourself if you plan to use the Partner Center SDK.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+### Primary Partner account
 
- 
-## <span id="Set__up_your_accounts"/><span id="set__up_your_accounts"/><span id="SET__UP_YOUR_ACCOUNTS"/>Set up your accounts
+This account is where you create real orders for real customers. If you make any changes or transactions when you are signed in to the primary account, by using either the Partner Center SDK or the Partner Dashboard UI, they will be treated as official orders for real customers. They will be reflected in your invoice, and your company is responsible for paying for them.
 
-<span id="createIntegrationSandbox"/><span id="createintegrationsandbox"/><span id="CREATEINTEGRATIONSANDBOX"/>
-**Create an integration sandbox**
+### Integration sandbox account
 
-1.  Sign in into Partner Dashboard with a global admin account. (This is your primary Partner account.)
-2.  From the **Settings icon** (gear) menu, select **Partner settings**.
-3.  On the **Account settings** page, select **Integration sandbox**.
+This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will not appear in your invoice.
+
+The integration sandbox account and the primary account act independently, and do not share admin accounts, user accounts, customers, orders, subscriptions, or other data.
+
+The integration sandbox supports transactions with a limited number of customers, orders, subscriptions, seats, etc.
+
+By policy, integration sandbox accounts are for integration testing purposes only.
+
+By default, there is no integration sandbox account. You must create one yourself if you plan to use the Partner Center SDK.
+
+## Set up your accounts
+
+This section describes how to set up a primary Partner account and an integration sandbox account for the Partner Center SDK.
+
+### Create an integration sandbox
+
+1. Sign in to Partner Dashboard with a global admin account (your primary Partner account.)
+2. From the **Settings** menu (gear icon), choose **Partner settings**.
+3. On the **Account settings** page, choose **Integration sandbox**.
 
     >[!NOTE]
-    >If you don't see an Integration sandbox option, you might not have a global admin account, or the integration sandbox has already been set up and you're using an integration sandbox account.
+    >If you don't see an Integration sandbox option, you might not have a global admin account. You also might be using an integration sandbox account and an integration sandbox has already been set up.
 
-4.  Fill in the contact information for the integration sandbox admin account, and then click **Create account**. You might need to wait a few minutes for the account to be created.
+4. Enter the contact information for the integration sandbox admin account. Then, choose **Create account**. Wait a few minutes for a confirmation message that the account has been created.
+5. After you see the confirmation message, sign out of Partner Dashboard.
+6. Sign back in with your new integration sandbox admin account. Be sure to use the format **username@domain** for your credentials along with the password that you just specified.
+7. Choose **Set Up Account** above **Current Tasks** to complete the sandbox account setup.
 
-5.  After you see the confirmation message, sign out of Partner Dashboard, then sign back in with your new integration sandbox admin account, in the form *username*@*domain* and with the password you just specified.
-
-6.  After you sign back in with your new integration sandbox admin account, above **Current Tasks**, click **Set Up Account** to complete the sandbox account setup.
-
-<span id="enableAPIAccess"/><span id="enableapiaccess"/><span id="ENABLEAPIACCESS"/>
+### Enable API access
 
 After your account is set up, you must enable API access before you can use the Partner Center SDK with the integration sandbox. You need to enable access to the API separately for both your primary Partner account and your integration sandbox account.
 
-**Enable API access**
+1. Sign into Partner Dashboard using a global admin account.
+2. From the **Settings** menu (gear icon), select **Partner settings**.
+3. On the **Account settings** page, choose **App management**.
+4. If you do not already have an existing app, add a new web app. If you have an existing web app, choose the **Add key** button.
+5. Copy the app registration information, especially the **Key** if you're creating a web app, and store it in a safe place.
+6. Sign out of Partner Dashboard.
+7. Sign back in with your integration sandbox account. Repeat steps 2-5 to enable API access in the integration sandbox.
 
-1.  Sign into Partner Dashboard using a global admin account.
+## Write and test code
 
-2.  From the **Settings icon** menu, select **Partner settings**.
+You can write code and test code in the integration sandbox. You'll need the following information to [set up Partner Center authentication](partner-center-authentication.md) with Azure AD.
 
-3.  On the **Account settings** page, select **App management**.
+| Item name | Item location |
+| --------- | ------------- |
+| App ID / Client ID | From the **Settings** menu (gear icon), select **Partner settings**. On the **Account settings** page, select **App Management**. The App ID/Client ID is listed as the **Registered application App ID**. |
+| Key | If you created a web app in the section [Enable API access](#enable-api-access), this is the key that you saved in step 5. |
+| Domain | The domain for the integration sandbox. |
 
-4. If you do not already have an existing app, add a new web app. If you have an existing web app, click the **Add key** button.
+## Run tested code
 
-5.  Copy the app registration information, especially the **Key** if you're creating a Web App, and store it in a safe place.
+To use your solution with real customer data, you must change from your integration sandbox credentials to your primary Partner account credentials.
 
-6.  Sign out of Partner Dashboard, then sign back in with your integration sandbox account. Repeat steps 2-5 to enable API access in the integration sandbox.
+When you're ready to use your tested code in your primary Partner account, you must get an Azure AD security token. This security token is based on your Partner Center app, key and domain (instead of your integration sandbox app, key and domain).
 
-
-## <span id="writeTestCode"/><span id="writetestcode"/><span id="WRITETESTCODE"/>Write and test code in the integration sandbox
-
-To write code and test code in Partner Center, you'll need to set up authentication with Azure AD, as described in [Partner Center authentication](partner-center-authentication.md). You'll need the following pieces of information:
-
-<table>
-  <tr>
-    <td><strong>Item name</strong></td>
-    <td><strong>Where to find it</strong></td>
-  </tr>
-  <tr>
-    <td>App ID / Client ID</td>
-    <td>From the <strong>Settings icon</strong> menu, select <strong>Partner settings</strong>. On the <strong>Account settings</strong> page, select <strong>App Management</strong> The App ID/Client ID is listed as the Registered application <strong>App ID</strong>.</td>
-  </tr>
-  <tr>
-    <td>Key</td>
-    <td>If you created a web app, this is the key that you saved in Step 5 of &quot;Enable API access&quot;.</td>
-  </tr>
-  <tr>
-    <td>Domain</td>
-    <td>This is the domain for the integration sandbox.</td>
-  </tr>
-</table>
-
-
-## <span id="runTestedCode"/><span id="runtestedcode"/><span id="RUNTESTEDCODE"/>Use your solution for real customer data
-
-**Change credentials from integration sandbox to primary account**
-
-1.  When you are ready to use your tested code in your primary Partner account, you must get an Azure AD security token based on your Partner Center app/key/domain instead of the integration sandbox app/key/domain.
-
-    Repeat the same steps for [Partner Center authentication](partner-center-authentication.md) that you used to get an Azure AD security token in the integration sandbox, but use your primary Partner Center credentials instead.
-
-2.  After you replace the integration security token with the one for your primary Partner account, the rest of your code should work correctly.
-  
+1. Follow the steps in [Partner Center authentication](partner-center-authentication.md) to get an Azure AD security token using your primary Partner Center credentials. (You previously followed these steps to get an Azure AD security token for your integration sandbox.)
+2. Replace the integration security token in your code with the new security token for your primary Partner account.

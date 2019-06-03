@@ -1,25 +1,22 @@
 ---
 title: Analytics resources
-description: The resources defined here contain data used to report on usage, deployment, and consumption.
+description: Partner Center resources for data used to report on usage, deployment, and consumption.
 ms.assetid: 1FEB08D6-AD0C-4B01-B7A8-AE05C914912B
-ms.date: 12/15/2017
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Analytics resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
-The resources defined here contain data used to report on usage,
-deployment, and consumption.
+The resources defined here contain data used to report on usage, deployment, and consumption.
 
-## <span id="PartnerLicensesDeploymentInsights"/><span id="partnerlicensesdeploymentinsights"/><span id="PARTNERLICENSESDEPLOYMENTINSIGHTS"/>PartnerLicensesDeploymentInsights
+## PartnerLicensesDeploymentInsights
 
-
-Contains partner level insights about license deployment.
+The **PartnerLicensesDeploymentInsights** resource contains partner-level insights about license deployment.
 
 | Property                  | Type                                                           | Description                                                                         |
 |---------------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -30,12 +27,9 @@ Contains partner level insights about license deployment.
 | channel                   | string                                                         | The channel name of the service (e.g. reseller).                                    |
 | attributes                | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesDeploymentInsights" |
 
- 
+## PartnerLicensesUsageInsights
 
-## <span id="PartnerLicensesUsageInsights"/><span id="partnerlicensesusageinsights"/><span id="PARTNERLICENSESUSAGEINSIGHTS"/>PartnerLicensesUsageInsights
-
-
-Contains partner level insights about license usage.
+The **PartnerLicensesUsageInsights** resource contains partner-level insights about license usage.
 
 | Property                     | Type                                                           | Description                                                                    |
 |------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------|
@@ -46,12 +40,9 @@ Contains partner level insights about license usage.
 | channel                      | string                                                         | The channel name of the service (e.g. reseller).                               |
 | attributes                   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesUsageInsights" |
 
- 
+## CustomerLicensesDeploymentInsights
 
-## <span id="CustomerLicensesDeploymentInsights"/><span id="customerlicensesdeploymentinsights"/><span id="CUSTOMERLICENSESDEPLOYMENTINSIGHTS"/>CustomerLicensesDeploymentInsights
-
-
-Contains customer level insights about license deployment.
+The **CustomerLicensesDeploymentInsights** resource contains customer-level insights about license deployment.
 
 | Property          | Type                                                           | Description                                                                          |
 |-------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -67,12 +58,9 @@ Contains customer level insights about license deployment.
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                     |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesDeploymentInsights" |
 
- 
+## CustomerLicensesUsageInsights
 
-## <span id="CustomerLicensesUsageInsights"/><span id="customerlicensesusageinsights"/><span id="CUSTOMERLICENSESUSAGEINSIGHTS"/>CustomerLicensesUsageInsights
-
-
-Contains customer level insights about license usage.
+The **CustomerLicensesUsageInsights** resource contains customer-level insights about license usage.
 
 | Property          | Type                                                           | Description                                                                     |
 |-------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -89,13 +77,3 @@ Contains customer level insights about license usage.
 | serviceName       | string                                                         | The service name (e.g. o365, crm).                                              |
 | channel           | string                                                         | The channel name of the service (e.g. reseller).                                |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesUsageInsights" |
-
- 
-
- 
-
- 
-
-
-
-

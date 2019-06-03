@@ -1,43 +1,28 @@
 ---
 title: Azure utilization record resources
-description: The Azure Utilization Record contains details about the utilization of an Azure subscription resource.
+description: The Azure utilization record contains details about the utilization of an Azure subscription resource.
 ms.assetid: 4C1EEEB3-DB25-4D61-BFED-C4AB5D3BB5CF
-ms.date: 12/15/2017
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Azure utilization record resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-The Azure Utilization Record contains details about the utilization of
-an Azure subscription resource. If you are a cloud service provider
-partner who owns the billing relationship for your customers' Azure
-subscriptions, you can use this REST API to provide a scalable way to
-track usage incurred on the subscriptions in order to send an invoice to
-your customers at the end of every billing cycle.
+The Azure utilization record contains details about the utilization of an Azure subscription resource. If you are a cloud service provider partner who owns the billing relationship for your customers' Azure subscriptions, you can use this REST API to provide a scalable way to track usage incurred on the subscriptions in order to send an invoice to your customers at the end of every billing cycle.
 
-To track usage and help predict your monthly bill and the bills for
-individual customers, you can combine a Rate Card query to [Get prices
-for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request
-to [Get a customer's utilization records for
-Azure](get-a-customer-s-utilization-record-for-azure.md).
+To track usage and help predict your monthly bill and the bills for individual customers, you can combine a Rate Card query to [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into
-consideration. By default, it uses your partner profile settings in
-Partner Center and your browser language, but those are customizable.
-This is especially relevant if you manage sales in multiple markets from
-a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="AzureUtilizationRecord"/><span id="azureutilizationrecord"/><span id="AZUREUTILIZATIONRECORD"/>AzureUtilizationRecord
+## AzureUtilizationRecord
 
-
-Describes the properties of an Azure Utilization Record resource.
+Describes the properties of an Azure utilization record resource.
 
 | Property       | Type                                      | Required | Description                                                                                                                                                                             |
 |----------------|-------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,10 +35,11 @@ Describes the properties of an Azure Utilization Record resource.
 | instanceData   | object                                    | No       | Contains an [AzureInstanceData](#azureinstancedata) object that contains key-value pairs of instance level details. This property is optional and may not be included.                  |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | Yes      | The metadata attributes. Contains "objectType": "AzureUtilizationRecord"                                                                                                                |
 
- 
+### Operations on the AzureUtilizationRecord resource
 
-## <span id="AzureResource"/><span id="azureresource"/><span id="AZURERESOURCE"/>AzureResource
+- [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md)
 
+## AzureResource
 
 Describes the properties of an Azure Resource.
 
@@ -65,10 +51,7 @@ Describes the properties of an Azure Resource.
 | subcategory | string | No       | The sub-category of the consumed resource. This property is optional.               |
 | region      | string | No       | The region of the consumed resource. This property is optional.                     |
 
- 
-
-## <span id="AzureInstanceData"/><span id="azureinstancedata"/><span id="AZUREINSTANCEDATA"/>AzureInstanceData
-
+## AzureInstanceData
 
 Describes the properties of an Azure Instance Data resource.
 
@@ -79,19 +62,4 @@ Describes the properties of an Azure Instance Data resource.
 | partNumber     | object           | Yes      | Unique namespace used to identify the resource for Azure Marketplace 3rd party usage. This may be an empty string. |
 | orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for Azure Marketplace. This may be an empty string.          |
 | tags           | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
-| additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          | 
- 
-
-## <span id="Operations_on_the_AzureUtilizationRecord_resource"/><span id="operations_on_the_azureutilizationrecord_resource"/><span id="OPERATIONS_ON_THE_AZUREUTILIZATIONRECORD_RESOURCE"/>Operations on the AzureUtilizationRecord resource
-
-
-- [Get a customer's utilization records for
-    Azure](get-a-customer-s-utilization-record-for-azure.md)
-
- 
-
- 
-
-
-
-
+| additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          |

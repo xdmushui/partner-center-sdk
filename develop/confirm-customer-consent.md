@@ -1,13 +1,13 @@
 ---
 title: Confirm customer acceptance of Microsoft Cloud Agreement
-description: This topic explains how to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 11/28/2018
+description: How to confirm customer acceptance of the Microsoft Cloud Agreement. 
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
-# Confirm customer acceptance of Microsoft Cloud agreement
+# Confirm customer acceptance of Microsoft Cloud Agreement
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
@@ -36,7 +36,7 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
 
 To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
 
-# [.NET](#tab/dotnet)
+### [.NET](#tab/dotnet)
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
@@ -58,7 +58,7 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
         {
             FirstName = "Tania",
             LastName = "Carr",
-            Email = "SomeEmail@outlook.com",
+            Email = "someone@example.com",
             PhoneNumber = "1234567890"
         },
         TemplateId = microsoftCloudAgreement.TemplateId,
@@ -71,7 +71,7 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-# [Java](#tab/java)
+### [Java](#tab/java)
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
@@ -81,7 +81,7 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
     ResourceCollection<AgreementMetaData> agreements = partnerOperations.getAgreements().get();
     AgreementMetaData microsoftCloudAgreement;
 
-    for (AgreementMetaData metadata : agreements) 
+    for (AgreementMetaData metadata : agreements)
     {
         if(metadata.getAgreementType() == AgreementType.MicrosoftCloudAgreement)
         {
@@ -97,7 +97,7 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
     Contact primaryContact = new Contact();
 
-    primaryContact.setEmail("SomeEmail@outlook.com");
+    primaryContact.setEmail("someone@example.com");
     primaryContact.setFirstName("Tania");
     primaryContact.setLastName("Carr");
     primaryContact.setPhoneNumber("1234567890");
@@ -114,7 +114,7 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/CreateCustomerAgreement.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
-# [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.  
 
@@ -125,23 +125,25 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 2. Execute the [**New-PartnerCustomerAgreement**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/new-partnercustomeragreement) command  
 
     ```powershell  
-    New-PartnerCustomerAgreement -TemplateId $agreement.TemplateId -AgreementType MicrosoftCloudAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec' -ContactEmail 'someemail@outlook.com' -ContactFirstName 'Tania' -ContactLastName 'Carr'
+    New-PartnerCustomerAgreement -TemplateId $agreement.TemplateId -AgreementType MicrosoftCloudAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec' -ContactEmail 'someone@example.com' -ContactFirstName 'Tania' -ContactLastName 'Carr'
     ```  
 
-# [REST](#tab/rest)
+### [REST](#tab/rest)
+
+### REST request
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **templateId** of the Microsoft Cloud Agreement.
 2. Create a new resource to confirm that a customer has accepted the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details.
 
 To create a new **Agreement** resource to confirm that a customer has accepted the Microsoft Cloud Agreement:
 
-**Request syntax**
+#### Request syntax
 
 | Method | Request URI                                                                                        |
 |--------|----------------------------------------------------------------------------------------------------|
 | POST   | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/agreements HTTP/1.1 |
 
-**URI parameter**
+#### URI parameter
 
 Use the following query parameter to specify the customer you are confirming.
 
@@ -149,11 +151,11 @@ Use the following query parameter to specify the customer you are confirming.
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
 | customer-tenant-id | GUID | Y        | The value is a GUID formatted **customer-tenant-id** that allows you to specify a customer. |
 
-**Request headers**
+#### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+#### Request body
 
 This table describes the required properties in the request body.
 
@@ -161,20 +163,18 @@ This table describes the required properties in the request body.
 |-----------|--------|----------------------------------------------------------------------------------------------|  
 | Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Cloud Agreement. |  
 
-### <span id="Agreement"/><span id="agreement"/><span id="AGREEMENT"/>
-
-**Agreement**
+#### Agreement
 
 This table describes the minimum required fields to create an **Agreement** resource.
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  <br/> - firstName <br/> - lastName<br/> - email<br/> - phoneNumber (optional) |
+| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Cloud Agreement by retrieving the agreement metadata for Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. |
 | type           |AgreementType enum | Agreement type accepted by the customer. Currently, the only supported value is "MicrosoftCloudAgreement". |
   
-**Request example**
+#### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/agreements HTTP/1.1
@@ -187,7 +187,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
     "primaryContact": {
         "firstName": "Tania",
         "lastName": "Carr",
-        "email": " SomeEmail@Outlook.com",
+        "email": "someone@example.com",
         "phoneNumber": "1234567890"
     },
     "templateId": "998b88de-aa99-4388-a42c-1b3517d49490",
@@ -196,15 +196,15 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+### REST Response
 
 If successful, this method returns an **Agreement** resource.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -217,7 +217,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
     "primaryContact": {
         "firstName": "Tania",
         "lastName": "Carr",
-        "email": " SomeEmail@Outlook.com",
+        "email": "someone@example.com",
         "phoneNumber": "1234567890"
     },
     "templateId": "998b88de-aa99-4388-a42c-1b3517d49490",

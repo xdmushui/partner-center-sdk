@@ -2,27 +2,25 @@
 title: Check inventory
 description: Check the inventory for a specific set of catalog items.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 07/27/2018
+ms.date: 05/22/2019
 ms.localizationpriority: medium
 ---
 
 # Check inventory
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
 How to check the inventory for a specific set of catalog items.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - One or more product IDs. Optionally, SKU IDs can also be specified.
 - Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU and can be determined from the [SKU’s](product-resources.md#sku) **InventoryVariables** property. 
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 
 To check the inventory, build an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) object using an [InventoryItem](product-resources.md#inventoryitem) object for each item to be checked. Then, use an **IAggregatePartner.Extensions** accessor, scope it down to **Product** and then select the country using the **ByCountry()** method. Finally, call the **CheckInventory()** method with your **InventoryCheckRequest** object.
@@ -50,18 +48,15 @@ var inventoryCheckRequest = new InventoryCheckRequest()
 var inventoryResults = partnerOperations.Extensions.Product.ByCountry(countryCode).CheckInventory(inventoryCheckRequest);
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/extensions/product/checkInventory?country={country-code} HTTP/1.1                        |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to check the inventory.
 
@@ -69,17 +64,15 @@ Use the following query parameter to check the inventory.
 |------------------------|----------|----------|-----------------------------------------------------------------|
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The inventory request details, consisting of an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) resource containing one or more [InventoryItem](product-resources.md#inventoryitem) resources. 
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/extensions/product/checkinventory?country=US HTTP/1.1
@@ -94,16 +87,14 @@ Content-Type: application/json
 {"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","azureSubscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75","armRegionName":"Europe"}}
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## Response
 
 If successful, the response body contains a collection of [InventoryItem](product-resources.md#inventoryitem) objects populated with the restriction details, if any apply.
 
 >[!NOTE]
 >If an input InventoryItem represents an item that could not be found in the catalog, it will not be included in the output collection.
 
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -114,8 +105,7 @@ This method returns the following error codes:
 | 400                  | 2001         | The request body is missing.                                                                              |
 | 400                  | 400026       | A required inventory context item is missing.                                                             |
 
-
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -169,11 +159,3 @@ X-Locale: en-US
     }
 ]
 ```
-
- 
-
- 
-
-
-
-

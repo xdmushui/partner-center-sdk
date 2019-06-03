@@ -1,13 +1,13 @@
 ---
 title: Change the billing cycle
-description: Updates a subscription from monthly to annual billing or from annual to monthly billing.
-ms.date: 11/14/2018
+description: Update a subscription to monthly or annual billing.
+ms.date: 05/22/2019
 ms.localizationpriority: medium
 ---
 
 # Change the billing cycle
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -18,20 +18,20 @@ Updates an [Order](order-resources.md) from monthly to annual billing or from an
 
 In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
 
-**Out of Scope**  
+**Out of scope** for this topic:  
 
 - Changing the billing cycle for trials
 - Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
 - Changing the billing cycles for inactive subscriptions
 - Changing billing cycles for Microsoft online services license-based subscriptions
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - An order ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
@@ -39,7 +39,7 @@ To change the frequency of the billing cycle, update the [**Order.BillingCycle**
 // IAggregatePartner partnerOperations;
 // string customerId;
 // string offerId;
-// string orderId; 
+// string orderId;
 
 var order = new Order()
 {
@@ -60,15 +60,15 @@ var order = new Order()
 var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orderId).Patch(order);
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameter to change the quantity of the subscription.
 
@@ -77,15 +77,15 @@ This table lists the required query parameter to change the quantity of the subs
 | **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |  
 | **order-id**           | GUID |    Y     | The order identifier                                                 |  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The following tables describe the properties in the request body.
 
-## <span id="order"/><span id="ORDER"/>Order
+## Order
 
 | Property           | Type             | Required | Description                                                                |
 |--------------------|------------------|----------|----------------------------------------------------------------------------|
@@ -96,7 +96,7 @@ The following tables describe the properties in the request body.
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
 
-## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
+## OrderLineItem
 
 | Property             | Type   | Required | Description                                                                        |
 |----------------------|--------|----------|------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ The following tables describe the properties in the request body.
 | PartnerIdOnRecord    | string |    N     | The MPN ID of the partner of record                                                |
 | Attributes           | Object |    N     | Contains "ObjectType": "OrderLineItem"                                             |
 
-**Request example**
+### Request example
 
 Update to annual billing
 
@@ -147,15 +147,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST response
 
 If successful, this method returns the updated subscription order in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
