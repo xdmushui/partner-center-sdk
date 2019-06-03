@@ -2,7 +2,7 @@
 title: Create a customer
 description: How to create a new customer.
 ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.date: 05/23/2019
+ms.date: 06/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -156,8 +156,8 @@ This table describes the required properties in the request body.
 
 | Name                              | Type   | Description                                 |
 |-----------------------------------|--------|---------------------------------------------|
-| [BillingProfile](#billingprofile) | object | The customer's billing profile information. |
-| [CompanyProfile](#companyprofile) | object | The customer's company profile information. |
+| [BillingProfile](#billing-profile) | object | The customer's billing profile information. |
+| [CompanyProfile](#company-profile) | object | The customer's company profile information. |
 
 #### Billing profile
 

@@ -2,7 +2,7 @@
 title: Create a customer for an indirect reseller
 description: An indirect provider can create a customer for an indirect reseller.
 ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
-ms.date: 05/23/2019
+ms.date: 06/03/2019
 ms.localizationpriority: medium
 ---
 
@@ -86,8 +86,8 @@ This table describes the required properties in the request body.
 
 | Name                                          | Type   | Required | Description                                                                                                                                                                                                                                                                                                                                           |
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [BillingProfile](#billingprofile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
-| [CompanyProfile](#companyprofile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
+| [BillingProfile](#billing-profile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
+| [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
 | [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
 #### Billing profile
