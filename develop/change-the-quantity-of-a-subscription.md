@@ -1,8 +1,8 @@
 ---
 title: Change the quantity of a subscription
-description: Updates a Subscription to increase or decrease the quantity of licenses.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
+description: Update a subscription to increase or decrease the quantity of licenses for a customer.
 ms.assetid: 10535C45-63BF-4E75-A6E5-E03ADC1DF8DC
-ms.date: 05/22/2019
+ms.date: 06/05/2019
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Updates a [Subscription](subscription-resources.md) to increase or decrease the quantity of licenses.
+Updates a [subscription](subscription-resources.md) to increase or decrease the quantity of licenses.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription in question that you wish to rename. To finish, change the value in the **Quantity** field, then select **Submit.**
 
@@ -25,9 +25,9 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID.
 
-## C#
+## C\#
 
-To change the quantity of a customer's subscription, first [Get the subscription](get-a-subscription-by-id.md), then change the subscription's [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.quantity) property. Once the change is made, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method. Then, finish by calling the **Patch()** method.
+To change the quantity of a customer's subscription, first [get the subscription](get-a-subscription-by-id.md), then change the subscription's [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.quantity) property. Once the change is made, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method. Then, finish by calling the **Patch()** method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -65,7 +65,7 @@ This table lists the required query parameter to change the quantity of the subs
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+See [headers](headers.md) for more information.
 
 ### Request body
 
@@ -108,13 +108,19 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this method returns updated [Subscription](subscription-resources.md) resource properties in the response body.
+If successful, this method returns an **HTTP status 200** status code and updated [subscription resource](subscription-resources.md)  properties in the response body.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response returns an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read the status code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-### Response example
+When the patch operation takes longer than the expected time, the Partner Center sends an **HTTP status 202** status code and a location header that points to where to retrieve the subscription. You can query the subscription periodically to monitor the status and quantity changes.
+
+### Response examples
+
+#### Response example 1
+
+Successful request with an **HTTP status 200** status code:
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
@@ -165,4 +171,20 @@ Connection: Keep-Alive
         "ObjectType": "Subscription"
     }
 }
+```
+
+#### Response example 2
+
+Successful request with an **HTTP status 202** status code:
+
+```http
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: 01880c1b-1966-40f0-d470-501a66d9948b
+MS-CorrelationId: 2c5827c1-d5f9-4835-cc6d-f1918b782c79
+Content-Type: application/json
+Content-Length: 1432
+Connection: Keep-Alive
+Location: /customers/<customer-tenant-id>/subscriptions/<subscriptionID>
 ```
