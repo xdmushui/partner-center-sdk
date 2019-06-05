@@ -1,33 +1,34 @@
 ---
 title: Create a customer for an indirect reseller
-description: How an indirect provider can create a customer for an indirect reseller.
+description: An indirect provider can create a customer for an indirect reseller.
 ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
-ms.date: 12/15/2017
+ms.date: 06/03/2019
 ms.localizationpriority: medium
 ---
 
 # Create a customer for an indirect reseller
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
-How an indirect provider can create a customer for an indirect reseller.
+An indirect provider can create a customer for an indirect reseller.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - The tenant identifier of the indirect reseller.
 - The indirect reseller must have a partnership with the indirect provider.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To add a new customer for an indirect reseller:
 
-To add a new customer for an indirect reseller, start by instantiating a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer.associatedpartnerid) property.
+1. Instantiate a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer.associatedpartnerid) property.
+2. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. 
+3. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
 
-Then, use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
+### C\# example
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -36,9 +37,9 @@ var customerToCreate = new Customer()
 {
     CompanyProfile = new CustomerCompanyProfile()
     {
-        Domain = string.Format(CultureInfo.InvariantCulture, 
-            "WingtipToys{0}.{1}", 
-            new Random().Next(), 
+        Domain = string.Format(CultureInfo.InvariantCulture,
+            "WingtipToys{0}.{1}",
+            new Random().Next(),
             this.Context.Configuration.Scenario.CustomerDomainSuffix)
     },
     BillingProfile = new CustomerBillingProfile()
@@ -67,36 +68,29 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateCustomerforIndirectReseller.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                       |
 |----------|-------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers HTTP/1.1 |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 This table describes the required properties in the request body.
 
 | Name                                          | Type   | Required | Description                                                                                                                                                                                                                                                                                                                                           |
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [BillingProfile](#billingprofile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
-| [CompanyProfile](#companyprofile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
+| [BillingProfile](#billing-profile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
+| [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
 | [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
- 
-
-### <span id="billingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>
-
-**Billing Profile**
+#### Billing profile
 
 This table describes the minimum required fields from the [CustomerBillingProfile](customer-resources.md#customerbillingprofile) resource needed to create a new customer.
 
@@ -108,11 +102,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 | company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
- 
-
-### <span id="companyProfile"/><span id="companyprofile"/><span id="COMPANYPROFILE"/>
-
-**Company Profile**
+#### Company profile
 
 This table describes the minimum required fields from the [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) resource needed to create a new customer.
 
@@ -120,9 +110,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 |--------|--------|----------|--------------------------------------------------------------|
 | domain | string | .Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
 
- 
-
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers HTTP/1.1
@@ -183,16 +171,15 @@ Connection: Keep-Alive
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response contains a [Customer](customer-resources.md#customer) resource for the new customer.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -255,11 +242,3 @@ Date: Tue, 06 Jun 2017 23:11:40 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -2,14 +2,13 @@
 title: Create a service request
 description: How to create a partner center service request.
 ms.assetid: 16DA9836-7052-4103-82D4-933E5EEB7E71
-ms.date: 12/15/2017
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Create a service request
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
@@ -17,16 +16,19 @@ ms.localizationpriority: medium
 
 How to create a partner center service request.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A support topic ID. If you do not have a support topic ID, see [Get service request support topics](get-service-request-support-topics--pending-.md).
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To create a service request:
 
-To create a service request, first create and populate a [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity, and support topic id. To add additional information, the [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object supports an optional collection of [**Notes**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.notes), but does not support links to files for uploading. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the locale of the organization creating the service request (the agent locale). 
+1. Create and populate a [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity, and support topic id. To add additional information, the [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object supports an optional collection of [**Notes**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.notes), but does not support links to files for uploading.
+2. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the locale of the organization creating the service request (the agent locale).
+
+### C\# example
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -45,18 +47,15 @@ ServiceRequest serviceRequest = partnerOperations.ServiceRequests.Create(service
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreatePartnerServiceRequest.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                            |
 |----------|----------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{agent-locale} HTTP/1.1 |
 
- 
-
-**URI parameter**
+#### URI parameter
 
 Use the following URI parameter to identify the agent locale.
 
@@ -64,13 +63,11 @@ Use the following URI parameter to identify the agent locale.
 |------------------|------------|----------|--------------------------------------------------------------|
 | **agent-locale** | **string** | Y        | The locale of the organization creating the service request. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 This table describes the required and optional properties in the request body.
 
@@ -97,10 +94,9 @@ This table describes the required and optional properties in the request body.
 | CountryCode      | string                                                                      | N        | The country corresponding to the service request.                                    |
 | Attributes       | object                                                                      | N        | Contains "ObjectType": "ServiceRequest".                                             |
 
- 
-
 This table describes the required properties in the request body.
-**Request example**
+
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/servicerequests/en-US HTTP/1.1
@@ -140,16 +136,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns the **Service Request** resource properties in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -161,7 +156,7 @@ MS-CV: vB9EuWs/ukaxQmuV.0
 MS-ServerId: 101112616
 Date: Thu, 22 Dec 2016 20:31:14 GMT
 
-﻿{
+ {
     "title": "TrialSR",
     "description": "Ignore this SR",
     "severity": "critical",
@@ -193,11 +188,3 @@ Date: Thu, 22 Dec 2016 20:31:14 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

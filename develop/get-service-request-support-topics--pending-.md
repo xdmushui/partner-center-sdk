@@ -8,7 +8,6 @@ ms.localizationpriority: medium
 
 # Get service request support topics
 
-
 **Applies To**
 
 - Partner Center

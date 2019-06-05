@@ -1,73 +1,83 @@
 ---
 title: Convert a trial subscription to paid
-description: How to convert a trial subscription to paid.
+description: How to convert a trial subscription to a paid one.
 ms.assetid: 06EB96D7-6260-47E0-ACAE-07D4213BEBB7
-ms.date: 12/15/2017
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Convert a trial subscription to paid
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
-How to convert a trial subscription to paid.
+You can convert a trial subscription to paid.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer identifier.
 - A subscription ID for an active trial subscription.
 - An available conversion offer.
 
-## <span id="Convert_a_trial_subscription_to_paid_through_code"/><span id="convert_a_trial_subscription_to_paid_through_code"/><span id="CONVERT_A_TRIAL_SUBSCRIPTION_TO_PAID_THROUGH_CODE"/>Convert a trial subscription to paid through code
+## Convert a trial subscription to paid through code
 
+To convert a trial subscription to a paid one, you must first obtain a collection of the trial conversions available. Then, you must choose the conversion offer that you want to purchase.
 
-To convert a trial subscription to paid, you must first obtain a collection of the trial conversions available and then choose the conversion offer that you want to purchase. The conversion offers will specify a quantity that defaults to the same number of licenses as the trial subscription. You can change that by setting the [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion.quantity) property to the number of licenses that you want to purchase. Note that regardless of the number of licenses purchased, the subscription ID of the trial is reused for the purchased licenses. Thus, the trial in effect disappears and is replaced by the purchase.
+The conversion offers will specify a quantity that defaults to the same number of licenses as the trial subscription. You can change this quantity by setting the [**Quantity**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion.quantity) property to the number of licenses that you want to purchase.
 
-Here are the steps to convert a trial subscription through code:
+> [!NOTE]
+> Regardless of the number of licenses purchased, the subscription ID of the trial is reused for the purchased licenses. As a result, the trial in effect disappears and is replaced by the purchase.
 
-1.  Get an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
+Use the following steps to convert a trial subscription through code:
+
+1. Get an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
+
     ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
-2.  Get a collection of the available conversion offers. For more information and details on the request/response for this method, see [Get a list of trial conversion offers](get-a-list-of-trial-conversion-offers.md).
+2. Get a collection of the available conversion offers. For more information and details on the request/response for this method, see [Get a list of trial conversion offers](get-a-list-of-trial-conversion-offers.md).
+
     ``` csharp
     var conversions = subscriptionOperations.Conversions.Get();
     ```
 
-3.  Choose a conversion offer. The following code chooses the first conversion offer in the collection.
+3. Choose a conversion offer. The following code chooses the first conversion offer in the collection.
+
     ``` csharp
     var selectedConversion = conversions.Items.ToList()[0];
     ```
 
-4.  Optionally, specify the number of licenses to purchase. The default is the number of licenses in the trial subscription.
+4. Optionally, specify the number of licenses to purchase. The default is the number of licenses in the trial subscription.
+
     ``` csharp
     selectedConversion.Quantity = 10;
     ```
 
-5.  Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to convert the trial subscription to paid.
+5. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to convert the trial subscription to paid.
+
     ``` csharp
     var convertResult = subscriptionOperations.Conversions.Create(selectedConversion);
     ```
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To convert a trial subscription to a paid one:
 
-To convert a trial subscription to paid, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the trial subscription ID. Save a reference to the subscription operations interface in a local variable.
+1. Use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer.
+2. Get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the trial subscription ID. Save a reference to the subscription operations interface in a local variable.
+3. Use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) method to retrieve a collection of available [**Conversion**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion) offers. You must choose one. The following example defaults to the first conversion available.
+4. Use the reference to the subscription operations interface that you saved in a local variable and the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions.
+5. Pass the selected conversion offer object to the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to attempt the trial conversion.
 
-Next, use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) method to retrieve a collection of available [**Conversion**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion) offers. You must choose one. In the example below, we default to the first conversion available.
-
-Having selected a conversion offer, the next step is to use the reference to the subscription operations interface that you saved in a local variable and use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions. Then pass the selected conversion offer object to the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) method to attempt the trial conversion.
+### C# Example
 
 ``` csharp
 // IAggregatePartner partnerOperations;
 // string customerId;
-// string subscriptionId; 
+// string subscriptionId;
 
 // Get subscription operations for the trial subscription.
 var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
@@ -75,7 +85,7 @@ var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscr
 // Get the available conversions.
 var conversions = subscriptionOperations.Conversions.Get();
 
-// If there are no conversions available, we&#39;re done. 
+// If there are no conversions available, we&#39;re done.
 // Otherwise, convert the trial to the first available conversion offer.
 if (conversions.TotalCount <= 0)
 {
@@ -91,18 +101,15 @@ else
 }
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                 |
 |----------|-----------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following path parameters to identify the customer and trial subscription.
 
@@ -111,17 +118,15 @@ Use the following path parameters to identify the customer and trial subscriptio
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.           |
 | subscription-id | string | Yes      | A GUID formatted string that identifies the trial subscription. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 A populated [Conversion](conversions-resources.md#conversion) resource must be included in the request body.
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscriptions/488745B5-2086-4912-802C-6ABB9F7C3638/conversions HTTP/1.1
@@ -147,16 +152,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
+### REST response
 
 If successful, the response body contains a [ConversionResult](conversions-resources.md#conversionresult) resource.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -168,7 +172,7 @@ MS-CV: kW4GzmhvHEqCq1ls.0
 MS-ServerId: 030020643
 Date: Thu, 15 Jun 2017 23:10:40 GMT
 
-﻿{
+ {
     "subscriptionId": "488745B5-2086-4912-802C-6ABB9F7C3638",
     "offerId": "C0BD2E08-11AC-4836-BDC7-3712E744922F",
     "targetOfferId": "031C9E47-4802-4248-838E-778FB1D2CC05",
@@ -177,11 +181,3 @@ Date: Thu, 15 Jun 2017 23:10:40 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

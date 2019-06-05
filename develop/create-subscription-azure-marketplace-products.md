@@ -2,13 +2,13 @@
 title: Create a subscription for Azure Marketplace products 
 description: Developers can create and manage a subscription for Azure Marketplace products using Partner Center APIs.
 ms.assetid: 
-ms.date: 04/02/2019
+ms.date: 05/28/2019
 ms.localizationpriority: medium
 ---
 
 # Create a subscription for Azure Marketplace products
 
-**Applies To**
+Applies to:
 
 * Partner Center
 
@@ -18,34 +18,37 @@ You can also [perform lifecycle management](#lifecycle-management) and [manage i
 
 ## Prerequisites
 
-* [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials. 
-* The customer identifier. If you don't have a customer's identifier, sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
+* [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
+* The customer identifier. If you don't have a customer's identifier: sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
 
 ## Get a list of offers for a market
 
-You can check the available offers for a market using the following Partner Center API models: 
+You can check the available offers for a market using the following Partner Center API models:
 
 * **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
 * **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
 * **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
 
-Before you purchase an Azure reservation, complete the following steps: 
+Before you purchase an Azure reservation, complete the following steps:
 
 1. Identify and retrieve the product and SKU that you want to purchase. If you already know the Product ID and SKU ID, select them.
-    * [Get a list of products](get-a-list-of-products.md) 
+
+    * [Get a list of products](get-a-list-of-products.md)
     * [Get a product using the product ID](get-a-product-by-id.md)
-    * [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md) 
+    * [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
     * [Get a SKU using the SKU ID](get-a-sku-by-id.md)
-> [!NOTE]
-> You can identify Azure Marketplace products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
+
+    > [!NOTE]
+    > You can identify Azure Marketplace products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
 
 2. If the SKUs are tagged with an **InventoryCheck** prerequisite, [check the inventory for a SKU](check-inventory.md).
 
-> [!NOTE]
-> At this time, there are no Azure Marketplace products that support inventory check or are tagged with an **InventoryCheck** prerequisite.
+    > [!NOTE]
+    > At this time, there are no Azure Marketplace products that support inventory check or are tagged with an **InventoryCheck** prerequisite.
 
 3. Retrieve the availability for the SKU. You will need the **CatalogItemId** of the availability when placing the order, which you can retrieve through the following APIs:
-    * [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md) 
+
+    * [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
     * [Get an availability using the availability ID](get-an-availability-by-id.md)
 
 ## Create and submit an order
@@ -60,11 +63,11 @@ To submit your Azure reservation order, do the following:
 You can [retrieve the details of an individual order using the order ID](get-an-order-by-id.md). You can also [retrieve a list of all orders for a specific customer](get-all-of-a-customer-s-orders.md).
 
 > [!NOTE]
-> After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list. 
+> After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
 
 ## Get activation link
 
-The partner or customer must activate subscriptions to Azure Markeplace within 7 days after creation. Otherwise, the subscriptions are automatically cancelled. 
+The partner or customer must activate subscriptions to Azure Markeplace within 7 days after creation. Otherwise, the subscriptions are automatically cancelled.
 
 You can [get an activation link by order line item](get-activation-link-by-order-line-item.md). You can also [get a subscription by ID](get-a-subscription-by-id.md), then enumerate its **Links** property to create an activation link.
 

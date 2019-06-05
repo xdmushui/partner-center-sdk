@@ -2,114 +2,43 @@
 title: Conversions resources
 description: Conversion resources support the conversion of a trial subscription to a paid subscription.
 ms.assetid: 4AE796E3-47D9-428B-8267-A5247B573E0C
-ms.date: 12/15/2017
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Conversions resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Conversion resources support the conversion of a trial subscription to a
-paid subscription.
+Conversion resources support the conversion of a trial subscription to a paid subscription.
 
-## <span id="Conversion"/><span id="conversion"/><span id="CONVERSION"/>Conversion
+## Conversion
 
+Contains information used to convert a trial subscription to a paid subscription.
 
-Contains information used to convert a trial subscription to a paid
-subscription.
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| offerId | string | The offer identifier of the original, trial offer. |
+| targetOfferId | string | The offer identifier for the target offer. |
+| orderId | string | The order identifier. |
+| quantity | int | The number of licenses. The default is the number of licenses in the trial subscription. |
+| billingCycle | string | Indicates how often the partner is charged for the subscription. Possible values: **Monthly** (partner is billed monthly), **Annual** (partner is billed annually), or **None** (Partner isn't billed. Used for trial subscriptions). |
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>offerId</td>
-<td>string</td>
-<td>The offer identifier of the original, trial offer.</td>
-</tr>
-<tr class="even">
-<td>targetOfferId</td>
-<td>string</td>
-<td>The offer identifier for the target offer.</td>
-</tr>
-<tr class="odd">
-<td>orderId</td>
-<td>string</td>
-<td>The order identifier.</td>
-</tr>
-<tr class="even">
-<td>quantity</td>
-<td>int</td>
-<td>The number of licenses. The default is the number of licenses in the trial subscription.</td>
-</tr>
-<tr class="odd">
-<td>billingCycle</td>
-<td>string</td>
-<td>Indicates how often the partner is charged for the subscription. Possible values:
-<p>Monthly - Partner is billed monthly.</p>
-<p>Annual - Partner is billed annually.</p>
-<p>None - Partner is not billed. Used for trial subscriptions.</p></td>
-</tr>
-</tbody>
-</table>
-
- 
-
-## <span id="ConversionError"/><span id="conversionerror"/><span id="CONVERSIONERROR"/>ConversionError
-
+## ConversionError
 
 Represents an error that occurred during conversion.
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>code</td>
-<td>string</td>
-<td>The error code associated with the issue. Possible values:
-<p>Other - General error.</p>
-<p>ConversionsNotFound - Cannot find any conversions for the trial subscription to convert to.</p></td>
-</tr>
-<tr class="even">
-<td>description</td>
-<td>string</td>
-<td>The friendly text describing the issue.</td>
-</tr>
-</tbody>
-</table>
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| code | string | The error code associated with the issue. Possible values: **Other** (general error), **ConversionsNotFound** (can't find any conversions for the trial subscription to convert to).
+| description | string | The friendly text describing the issue. |
 
- 
-
-## <span id="ConversionResult"/><span id="conversionresult"/><span id="CONVERSIONRESULT"/>ConversionResult
-
+## ConversionResult
 
 Represents the result of performing a subscription conversion.
 
@@ -119,13 +48,3 @@ Represents the result of performing a subscription conversion.
 | offerId        | string                              | The original offer identifier.                                         |
 | targetOfferId  | string                              | The offer identifier for the target offer.                             |
 | error          | [ConversionError](#conversionerror) | The error encountered while attempting the conversion, if applicable.. |
-
- 
-
- 
-
- 
-
-
-
-

@@ -1,14 +1,13 @@
 ---
 title: Agreement metadata resources
 description: Provides metadata about all the agreement types that partners can provide confirmation of customer acceptance.
-ms.date: 8/03/2018
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Agreement metadata resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
@@ -20,7 +19,7 @@ ms.localizationpriority: medium
 
 The **AgreementMetaData** collection provides metadata about all the agreement types that partners can provide confirmation of customer acceptance. Currently, the **AgreementMetaData** collection only returns metadata for one agreement type, which is the Microsoft Cloud Agreement.
 
-## <span id="AgreementsMetaData"/><span id="agreementmetadata"/><span id="AGREEMENTMETADATA"/>AgreementMetaData
+## AgreementMetaData
 
 Agreement metadata returned includes the following:
 
@@ -29,4 +28,3 @@ Agreement metadata returned includes the following:
 | templateId    | string             | Unique identifier of an agreement template.                                       |
 | type          | AgreementType enum | Agreement type. Currently, the only supported value is "MicrosoftCloudAgreement". |
 | agreementLink | string             | URL to the agreement template.                                                    |
-
