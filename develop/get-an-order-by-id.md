@@ -2,13 +2,13 @@
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 09/29/2018
+ms.date: 06/19/2019
 ms.localizationpriority: medium
 ---
 
 # Get an order by ID
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -17,17 +17,19 @@ ms.localizationpriority: medium
 
 Gets an [Order](order-resources.md) resource that matches the customer and order ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - An order ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C#
+To get a customer's order by ID:
 
-To get a customer's order by ID, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method once more. Finish by calling [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.getasync).
+1. Use your **IAggregatePartner.Customers** collection and call the **ById()** method.
+2. Call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method once more.
+3. Call [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iorder.getasync).
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -39,9 +41,13 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
 
-### Java
+## Java
 
-To get a customer's order by ID, use your **IAggregatePartner.getCustomers** function and call the **byId()** function. Then call the **getOrders** function, followed by the **byID()** funnction once more. Finish by calling the **get()** function.
+To get a customer's order by ID:
+
+1. Use your **IAggregatePartner.getCustomers** function and call the **byId()** function.
+2. Call the **getOrders** function, followed by the **byID()** function once more.
+3. Call the **get()** function.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -51,28 +57,26 @@ To get a customer's order by ID, use your **IAggregatePartner.getCustomers** fun
 Order order = partnerOperations.getCustomers().byId(selectedCustomerId).getOrders().byId(selectedOrderId).get();
 ```
 
-### PowerShell
+## PowerShell
 
 To get a customer's order by ID, execute the [**Get-PartnerCustomerOrder**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerOrder.md) command, and specify the **CustomerId** and **OrderId** paramaeters.
 
-```powershell 
+```powershell
 # $selectedCustomerId
 # $selectedOrderId
 
 Get-PartnerCustomerOrder -CustomerId $selectedCustomerId -OrderId $selectedOrderId
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order}?{include-price}=false HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{id-for-order} HTTP/1.1  |
 
- 
-
-**URI parameter**
+#### URI parameters
 
 This table lists the required query parameters to get an order by ID.
 
@@ -80,19 +84,16 @@ This table lists the required query parameters to get an order by ID.
 |------------------------|----------|----------|--------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer. |
 | id-for-order           | string   | Yes      | A string corresponding to the order ID.                |
-| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).| 
 
- 
+### Request headers
 
-**Request headers**
+See [Headers](headers.md) for more information.
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/orders/<id-for-order> HTTP/1.1
@@ -103,15 +104,15 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
 If successful, this method returns an [Order](order-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
