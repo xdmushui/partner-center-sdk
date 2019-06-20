@@ -2,35 +2,37 @@
 title: Delete a user account for a customer
 description: How to delete an existing user account for a customer.
 ms.assetid: 12097809-A62D-4929-9F1D-08676784BA39
-ms.date: 12/15/2017
+ms.date: 06/20/2019
 ms.localizationpriority: medium
 ---
 
 # Delete a user account for a customer
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
-How to delete an existing user account for a customer.
+This topic explains how to delete an existing user account for a customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, look up the ID in Partner Center. Choose the customer from the customers list, select **Account**, then save their Microsoft ID.
 - A user ID. If you do not have the user ID, see [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md).
 
-## <span id="What_happens_when_you_delete_a_user_account_"/><span id="what_happens_when_you_delete_a_user_account_"/><span id="WHAT_HAPPENS_WHEN_YOU_DELETE_A_USER_ACCOUNT_"/>What happens when you delete a user account?
+## Deleting a user account
 
+When you delete a user account, the user state is set to **inactive** for thirty days. After thirty days, the user account and its associated data are purged and made unrecoverable.
 
-The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. If you want to restore a deleted user account within the thirty day window, see [Restore a deleted user for a customer](restore-a-user-for-a-customer.md). Note that once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
+You can [restore a deleted user account for a customer](restore-a-user-for-a-customer.md) if the inactive account is within the thirty day window. However, when you restore an account that was deleted and marked as inactive, the account is no longer returned as a member of the user collection (for example, when you [get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To delete an existing customer user account:
 
-To delete an existing customer user account, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user. Finally, call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.delete) method to delete the user and set the user state to inactive.
+1. Use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer.
+2. Call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user.
+3. Call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.delete) method to delete the user and set the user state to inactive.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -42,37 +44,32 @@ partnerOperations.Customers.ById(selectedCustomerId).Users.ById(customerUserIdTo
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: DeleteCustomerUser.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method     | Request URI                                                                                            |
 |------------|--------------------------------------------------------------------------------------------------------|
-| **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
+| DELETE     | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
 
- 
+#### URI parameters
 
-**URI parameter**
-
-Use the following query parameter to identify the customer and user.
+Use the following query parameters to identify the customer and user.
 
 | Name                   | Type     | Required | Description                                                                                                               |
 |------------------------|----------|----------|---------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer. |
-| **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                          |
+| customer-tenant-id     | GUID     | Y        | The value is a GUID-formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer. |
+| user-id                | GUID     | Y        | The value is a GUID-formatted **user-id** that belongs to a single user account.                                          |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST Headers](headers.md) for more information.
 
-- See [Partner Center REST Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users/a45f1416-3300-4f65-9e8d-f123b397a4ea HTTP/1.1
@@ -85,16 +82,15 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 0
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST response
 
+If successful, this method returns a **204 No Content** status code.
 
-If successful, this method returns **204 No Content**.
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 204 No Content
