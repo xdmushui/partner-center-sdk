@@ -2,7 +2,7 @@
 title: Create a subscription for Azure Marketplace products 
 description: Developers can create and manage a subscription for Azure Marketplace products using Partner Center APIs.
 ms.assetid: 
-ms.date: 05/28/2019
+ms.date: 06/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -77,6 +77,12 @@ You can manage the lifecycle of your subscriptions to Azure Marketplace products
 
 * [Cancel an Azure Marketplace subscription](cancel-an-azure-marketplace-subscription.md)
 * [Enable or disable autorenew for an Azure Marketplace subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
+
+## Quantity management
+
+The quantity of an Azure Marketplace subscription must be within the limits defined by its associated [SKU](product-resources.md#sku) (see the **minimumQuantity** and **maximumQuantity** attributes). To update the quantity of an Azure marketplace subscription, use the following method:
+
+* [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 
 ## Invoice and reconciliation
 
