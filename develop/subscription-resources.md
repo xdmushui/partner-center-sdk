@@ -2,34 +2,27 @@
 title: Subscription resources
 description: A subscription lets a customer use a service for a certain period of time.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.date: 12/15/2017
+ms.date: 06/24/2019
 ms.localizationpriority: medium
 ---
 
 # Subscription resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-A subscription lets a customer use a service for a certain period of
-time. Not all fields will apply to all subscriptions, and many only
-apply at certain points in the life cycle, such as if a subscription is
-suspended or cancelled.
+A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions, and many only apply at certain points in the life cycle, such as if a subscription is suspended or cancelled.
+
+## Subscription
 
 >[!NOTE]
->The Subscription resource has a rate limit of 500 requests per minute per tenant identifier.
+>The **Subscription** resource has a rate limit of 500 requests per minute per tenant identifier.
 
-
-
-## <span id="Subscription"/><span id="subscription"/><span id="SUBSCRIPTION"/>Subscription
-
-
-Represents the life cycle of a subscription and includes properties that define the states throughout the subscription life cycle.
+The **Subscription** resource represents the life cycle of a subscription and includes properties that define the states throughout the subscription life cycle.
 
 | Property             | Type                                                          | Description                                                                                                                                                                   |
 |----------------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +31,7 @@ Represents the life cycle of a subscription and includes properties that define 
 | entitlementId        | string                                                        | The entitlement identifier (an Azure subscription ID).                                                                                                                        |
 | offerName            | string                                                        | The offer name.                                                                                                                                                               |
 | friendlyName         | string                                                        | The friendly name for the subscription defined by the partner to help disambiguate.                                                                                           |
-| quantity             | number                                                        | Read-only. The quantity. For example, in case of license-based billing, this property is set to the license count.                                                            |
+| quantity             | number                                                        | The quantity. For example, in case of license-based billing, this property is set to the license count.                                                            |
 | unitType             | string                                                        | The units defining quantity for the subscription.                                                                                                                             |
 | parentSubscriptionId | string                                                        | Gets or sets the parent subscription identifier.                                                                                                                              |
 | creationDate         | string                                                        | Gets or sets the creation date, in date-time format.                                                                                                                          |
@@ -56,18 +49,15 @@ Represents the life cycle of a subscription and includes properties that define 
 | partnerId            | string                                                        | The MPN ID of the reseller of record, used in the indirect partner model.                                                                                                     |
 | suspensionReasons    | array of strings                                              | Read-only. If the subscription was suspended, indicates why.                                                                                                                  |
 | contractType         | string                                                        | Read-only. The type of contract: "subscription", "productKey", or "redemptionCode".                                                                                           |
-| refundOptions        | array of [RefundOption](#refundoption) resources			   | Read-Only. The set of refund options available for this subscription.                                                                                              |
+| refundOptions        | array of [RefundOption](#refundoption) resources   | Read-Only. The set of refund options available for this subscription.                                                                                              |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
 | termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 
- 
+## SubscriptionLinks
 
-## <span id="SubscriptionLinks"/><span id="subscriptionlinks"/><span id="SUBSCRIPTIONLINKS"/>SubscriptionLinks
-
-
-Describes the collection of links attached to a subscription resource.
+The **SubscriptionLinks** resource describes the collection of links attached to a subscription resource.
 
 | Property           | Type                               | Description                           |
 |--------------------|------------------------------------|---------------------------------------|
@@ -80,14 +70,11 @@ Describes the collection of links attached to a subscription resource.
 | self               | [Link](utility-resources.md#link) | The self URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
-| 
+|
 
- 
+## SubscriptionProvisioningStatus
 
-## <span id="SubscriptionProvisioningStatus"/><span id="subscriptionprovisioningstatus"/><span id="SUBSCRIPTIONPROVISIONINGSTATUS"/>SubscriptionProvisioningStatus
-
-
-Provides information about the provisioning status of a subscription.
+The **SubscriptionProvisioningStatus** resource provides information about the provisioning status of a subscription.
 
 | Property   | Type                                                           | Description                                                          |
 |------------|----------------------------------------------------------------|----------------------------------------------------------------------|
@@ -97,24 +84,18 @@ Provides information about the provisioning status of a subscription.
 | endDate    | string in UTC date time format                                 | The end date of the subscription.                                    |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                             |
 
- 
+## SubscriptionRegistrationStatus
 
-## <span id="SubscriptionRegistrationStatus"/><span id="subscriptionregistrationstatus"/><span id="SUBSCRIPTIONREGISTRATIONSTATUS"/>SubscriptionRegistrationStatus
-
-
-Describes the collection of links attached to a subscription resource.
+The **SubscriptionRegistrationStatus** resource describes the collection of links attached to a subscription resource.
 
 | Property           | Type                               | Description                                                                           |
 |--------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | subscriptionId     | string                             | The subscription identifier.                                                          |
 | status             | string                             | Indicates the registration status: "registered", "registering" or "notregistered".    |
 
+## SupportContact
 
-
-## <span id="SupportContact"/><span id="supportcontact"/><span id="SUPPORTCONTACT"/>SupportContact
-
-
-Represents a support contact for a customer's subscription.
+The **SupportContact** resource represents a support contact for a customer's subscription.
 
 | Property        | Type                                                           | Description                                                                     |
 |-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -124,34 +105,19 @@ Represents a support contact for a customer's subscription.
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                                              |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
 
+## RegisterSubscription
 
-
-## <span id="RegisterSubscription"/><span id="registersubscription"/><span id="REGISTERSUBSCRIPTION"/>RegisterSubscription
-
-
-Returns a link that can be used to query the registration status of a subscription. The registration status is returned in the response body of a successfully accepted request to register an Azure subscription.
+The **RegisterSubscription** resource returns a link that can be used to query the registration status of a subscription. The registration status is returned in the response body of a successfully accepted request to register an Azure subscription.
 
 | Property                | Type                               | Description                                                                           |
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
-| httpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. Example, "/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus" |
+| httpResponseMessage     | object                             | Returns HTTP Status Code 202 "Accepted", with a Location header containing a link to query the registration status. For example, `"/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus"` |
 
+## RefundOption
 
+The **RefundOption** resource represents a possible refund option for the subscription.
 
-## <span id="RefundOption"/><span id="refundoption"/><span id="REFUNDOPTION"/>RefundOption
-
-Represents a possible refund option for the subscription. 
-
-| Property          | Type	 | Description                                                                         |
+| Property          | Type | Description                                                                         |
 |-------------------|--------|-------------------------------------------------------------------------------------|
-| type				| string | The type of refund. The supported values are "Partial" and "Full"		|
-| expiresAfter      | string in UTC date time format | The timestamp when this option expires. If null it means it has no expiration.	|
-
- 
-
- 
-
- 
-
-
-
-
+| type | string | The type of refund. The supported values are "Partial" and "Full" |
+| expiresAfter      | string in UTC date time format | The timestamp when this option expires. If null, this means it has no expiration. |
