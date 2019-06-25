@@ -1,48 +1,47 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 11/02/2018
+ms.date: 06/25/2019
 ms.localizationpriority: medium
 ---
 
 # Enable secure application model
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
+Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
 
-## <span id="overview"/><span id="Overview"/><span id="OVERVIEW"/>Overview
+You can use the new model to elevate security for Partner Center API integration calls. This will help all parties (including Microsoft, CSP partners, and CPVs) to protect their infrastructure and customer data from security risks.
 
-Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture. You can rely on the new model to elevate security for Partner Center API integration calls. This will help all parties including Microsoft, CSP partners, and control panel vendors to protect their infrastructure and customer data from security risks.
-
-
-## <span id="scope"/><span id="SCOPE"/>Scope
+## Scope
 
 This topic concerns the following actors:
 
-- Control panel vendors (CPV) - A control panel vendor is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs. A control panel vendor is not a CSP partner with direct access to the Partner Center dashboard or APIs.
+- CPVs
+  - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.
+  - A CPV is not a CSP partner with direct access to the Partner Center dashboard or APIs.
 - CSP indirect providers and CSP direct partners who are using app ID + user authentication and directly integrate with Partner Center APIs.
 
-## <span id="faq"/><span id="FAQ"/>Security requirements FAQ
+## Security requirements
 
-For answers to frequently asked questions about this change to multi-factor authentication, download the [Security requirements FAQ](http://assetsprod.microsoft.com/security-requirements-faq.pdf) document.
+For answers to frequently asked questions (FAQ) about this change to multi-factor authentication, download the [security requirements FAQ](http://assetsprod.microsoft.com/security-requirements-faq.pdf) document.
 
-## <span id=""/><span id=""/>Secure application model
-Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data. 
+## Secure application model
 
-Download the [Secure application model](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document for an overview and details of the new authentication framework. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
- 
-### <span id="how-to-for-cpv"/><span id="How-To-for-CPV"/><span id="HOW-TO-FOR-CPV"/>How to for control panel vendors (CPV)
+Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data.
 
-Download the [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf) and [sample application for control panel vendors](https://www.yammer.com/cloudpartnercommunity/#/files/154857341) for an example of how to implement multi-factor authentication in your control panel app. 
+For an overview and details of the new authentication framework, download the [secure application model](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
 
+### Details for CPVs
 
-### <span id="how-to-for-csp"/><span id="How-To-for-CSP"/><span id="HOW-TO-FOR-CSP"/>How to for cloud solution provider partners (CSP)
+For examples of how to implement multi-factor authentication in your control panel app, download the [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf) and [sample application for CPVs](https://www.yammer.com/cloudpartnercommunity/#/files/154857341).
 
-Download the [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf) and [sample application for cloud solution provider partners](https://www.yammer.com/cloudpartnercommunity/#/files/154857342) for an example of how to implement multi-factor authentication in your Partner Center app. 
+### Details for CSP partners
 
-## <span id="implement-mfa"/><span id="IMPLEMENT-MFA"/>Implement multi-factor authentication
+For examples of how to implement multi-factor authentication in your Partner Center app, download the [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf) and [sample application for CSP partners](https://www.yammer.com/cloudpartnercommunity/#/files/154857342).
 
-Getting past multiple authentication factors presents a significant challenge for attackers. Even if an attacker manages to learn the user's password, it is useless without also having possession of the additional authentication method. For more information, see [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks).
+## Implementing multi-factor authentication
+
+For more information about implementing multi-factor authentication, see [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks).
