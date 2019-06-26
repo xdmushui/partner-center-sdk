@@ -1,55 +1,53 @@
 ---
 title: Delete a configuration policy for the specified customer
-description: How to delete a configuration policy for the specified customer and policy identifier.
+description: How to delete a configuration policy for a specified customer and policy identifier.
 ms.assetid: DEFEC12E-3EA0-401B-B612-ACD1D71DB415
-ms.date: 12/15/2017
+ms.date: 06/11/2019
 ms.localizationpriority: medium
 ---
 
 # Delete a configuration policy for the specified customer
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 
-How to delete a configuration policy for the specified customer and policy identifier.
+How to delete a configuration policy for a specified customer and policy identifier.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - The customer identifier.
 - The policy identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To delete a configuration policy for a specified customer:
 
-To delete a configuration policy for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Next, call the [**ConfigurationPolicies.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.byid) method with the policy ID to retrieve an interface to configuration policy operations for the specified policy. Finally, call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.delete) or [**DeleteAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.deleteasync) method to delete the configuration policy.
+1. Call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer.
+2. Call the [**ConfigurationPolicies.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.byid) method with the policy ID to retrieve an interface to configuration policy operations for the specified policy.
+3. Call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.delete) or [**DeleteAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.deleteasync) method to delete the configuration policy.
 
 ``` csharp
 IAggregatePartner partnerOperations;
-string selectedCustomerId; 
+string selectedCustomerId;
 string selectedPolicyId;
-           
+
 partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedPolicyId).Delete();
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: DeleteConfigurationPolicy.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method     | Request URI                                                                                          |
 |------------|------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
- 
-
-**URI parameter**
+#### URI parameters
 
 Use the following path parameters when creating the request.
 
@@ -58,21 +56,19 @@ Use the following path parameters when creating the request.
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer.         |
 | policy-id   | string | Yes      | A GUID-formatted string that identifies the policy to delete. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c
 X-Locale: en-US
@@ -81,16 +77,15 @@ Content-Type: application/json
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response returns a 204 No Content status code.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 204 No Content

@@ -1,34 +1,27 @@
 ---
 title: Customer resources
-description: A customer resource represents a customer or reseller. (Most broadly, it can be any person, employee, or organization that wishes to do business with Microsoft and Microsoft's resellers.).
+description: Customer resources that represent a customer or reseller.
 ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
-ms.date: 12/15/2017
+ms.date: 05/29/2019
 ms.localizationpriority: medium
 ---
 
 # Customer resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-A customer resource represents a customer or reseller. (Most broadly, it
-can be any person, employee, or organization that wishes to do business
-with Microsoft and Microsoft's resellers.) Customers also have a company
-profile and a billing profile.
+## Customer
+
+The **Customer** resource represents a customer or reseller. Most broadly, a customer resouce can be any person, employee, or organization that wishes to do business
+with Microsoft and Microsoft's resellers. Customers also have a company profile and a billing profile.
 
 >[!NOTE]
->The Customer resource has a rate limit of 500 requests per minute per tenant identifier.
-
-
-## <span id="Customer"/><span id="customer"/><span id="CUSTOMER"/>Customer
-
-
-Describes a customer resource.
+>The **Customer** resource has a rate limit of 500 requests per minute per tenant identifier.
 
 | Property              | Type                                                             | Description                                                                                                                                  |
 |-----------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,12 +37,9 @@ Describes a customer resource.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)             | The resource links contained within the profile.                                                                                             |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes)   | The metadata attributes corresponding to the profile.                                                                                        |
 
- 
+## CustomerCompanyProfile
 
-## <span id="customerCompanyProfile"/><span id="customercompanyprofile"/><span id="CUSTOMERCOMPANYPROFILE"/>CustomerCompanyProfile
-
-
-Additional information about the company or organization.
+The **CustomerCompanyProfile** resource is additional information about the company or organization.
 
 | Property    | Type                                                           | Description                                                                       |
 |-------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -59,12 +49,9 @@ Additional information about the company or organization.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                  |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                             |
 
- 
+## CustomerBillingProfile
 
-## <span id="customerBillingProfile"/><span id="customerbillingprofile"/><span id="CUSTOMERBILLINGPROFILE"/>CustomerBillingProfile
-
-
-Additional information used for billing the customer.
+The **CustomerBillingProfile** resource is additional information used for billing the customer.
 
 | Property       | Type                                                           | Description                                                                                                                                            |
 |----------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,25 +66,11 @@ Additional information used for billing the customer.
 | links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                                                                                       |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                  |
 
- 
+## CustomerRelationshipRequest
 
-## <span id="CustomerRelationshipRequest"/><span id="customerrelationshiprequest"/><span id="CUSTOMERRELATIONSHIPREQUEST"/>CustomerRelationshipRequest
-
-
-Contains the URL used by the customer to establish a reseller
-relationship with a partner.
+The **CustomerRelationshipRequest** resource contains the URL used by the customer to establish a reseller relationship with a partner.
 
 | Property   | Type                                                           | Description                                                              |
 |------------|----------------------------------------------------------------|--------------------------------------------------------------------------|
 | url        | string                                                         | The URL used by the customer to establish a relationship with a partner. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the relationship request.       |
-
- 
-
- 
-
- 
-
-
-
-

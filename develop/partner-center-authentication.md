@@ -2,13 +2,13 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 04/01/2019
+ms.date: 05/16/2019
 ms.localizationpriority: medium
 ---
 
-# Partner Center Authentication
+# Partner Center authentication
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -28,11 +28,11 @@ Partner Center utilizes Azure Active Directory for authentication. When interact
 
 3. In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
 
-## App Only Authentication
+## App-only authentication
 
-If you would like to use app only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by leveraging the following:
+If you would like to use app-only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by leveraging the following:
 
-# [.NET](#tab/dotnet-app-only)
+### [.NET](#tab/dotnet-app-only)
 
 ```csharp
 public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
@@ -48,7 +48,7 @@ public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
 }
 ```
 
-# [Java](#tab/java-app-only)
+### [Java](#tab/java-app-only)
 
 ```java
 public IAggregatePartner getAppPartnerOperations()
@@ -63,19 +63,19 @@ public IAggregatePartner getAppPartnerOperations()
 }
 ```
 
-# [PowerShell](#tab/powershell-app-only)
+### [PowerShell](#tab/powershell-app-only)
 
 ```powershell
 $credential = Get-Credential
-Connect-PartnerCenter -Credential $credential -ServicePrincipal -TenantId '<TenantId>'
+Connect-PartnerCenter -Credential $credential -TenantId '<TenantId>'
 ```
 
 > [!NOTE]  
 > When you are prompted for credentials specify the client identifier as the username and the client secret as the password.
 
-# [REST](#tab/rest-app-only)
+### [REST](#tab/rest-app-only)
 
-**Request**
+Request:
 
 ```http
 POST https://login.microsoftonline.com/{tenanId}/oauth2/token HTTP/1.1
@@ -89,7 +89,7 @@ Expect: 100-continue
 resource=https%3A%2F%2Fgraph.windows.net&client_id={client-id-here}&client_secret={client-secret-here}&grant_type=client_credentials
 ```
 
-**Response**
+Response:
 
 ```http
 HTTP/1.1 200 OK
@@ -104,22 +104,22 @@ Content-Length: 1406
 
 ---
 
-## App + User Authentication
+## App + User authentication
 
 Historically the [resource owner password credentials grant](https://tools.ietf.org/html/rfc6749#section-4.3) has been used to request an access token for use with the Partner Center REST API, .NET API, Java API, or PowerShell module. This is where you request an access token from Azure Active Directory using a client identifier and user credentials. This approach will no longer work because Partner Center requires multi-factor authentication, when using app + user authentication. To comply with this requirement Microsoft has introduced a secure, scalable framework for authenticating Cloud Solution Provider (CSP) partners and control panel vendors (CPV) using multi-factor authentication. This framework is known as the Secure Application Model, and it is comprised of a consent process and a request for an access token using a refresh token.
 
-### Partner Consent
+### Partner consent
 
 The partner consent process is an interactive process where the partner authenticates using multi-factor authentication, consents to the application, and a refresh token is stored in a secure repository such as Azure Key Vault. We recommend that a dedicated account for integration purposes be used for this process.
 
 > [!IMPORTANT]  
 > The appropriate multi-factor authentication solution should be enabled for the service account used in the partner consent process. If it is not then the resulting refresh token will not be compliant with security requirements.
 
-#### Samples
+### Samples for App + User authentication
 
 The partner consent process can be performed in a number of ways. To help partners understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-# [.NET](#tab/dotnet-partner-consent)
+#### [.NET](#tab/dotnet-app-user)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using ASP.NET to capture consent, request a refresh token, and securely store it in Azure Key Vault. Perform the following steps to create the required prerequisites for this sample.
 
@@ -207,7 +207,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
 8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
 
-# [Java](#tab/java-partner-consent)
+#### [Java](#tab/java-app-user)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using JSP to capture consent, request a refresh token, and secure store in Azure Key Vault. Perform the following to create the required prerequisites for this sample.
 
@@ -300,33 +300,30 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
 8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
 
-# [PowerShell](#tab/powershell-partner-consent)
+#### [PowerShell](#tab/powershell-app-user)
 
-Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
+Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
 
 ```powershell
 $credential = Get-Credential
-$token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com -ServicePrincipal
+$token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com
 ```
 
 When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When then [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken) command is invoked you are again prompted for credentials. This time, you need to specify the credentials for the service account you are using. Please note that this should be a partner account with the appropriate permissions. After successful execution of the command, you'll find that the `$token` variable contains the response from Azure Active Directory for a token. Included in this response is a refresh token. Store this value in a secure repository such as Azure Key Vault or a similar service.
 
-> [!NOTE]  
-> The `ServicePrincipal` parameter is being used with the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command because an Azure AD application of type web/API is being used. This type of application requires that a client identifier and secret be included in the request for an access token.
-
-See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) for more information.
+See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) for more information.
 
 ---
 
-### Cloud Solution Provider Authentication
+## Cloud Solution Provider authentication
 
 Cloud Solution Provider partners can use the refresh token obtained through the [partner consent](#partner-consent) process.
 
-#### Samples
+### Samples for Cloud Solution Provider authentication
 
 To help partners understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-# [.NET](#tab/dotnet-csp-auth)
+#### [.NET](#tab/dotnet-csp)
 
 1. If you have not already done so, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
@@ -370,7 +367,7 @@ To help partners understand how to perform each required operation, we have deve
 
 6. When you run this sample project it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf. Finally, it requests an access token to interact with Microsoft Graph on behalf of the specified customer.
 
-# [Java](#tab/java-csp-auth)
+#### [Java](#tab/java-csp)
 
 1. If you have not done so already, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using Visual Studio or the following command
@@ -382,7 +379,7 @@ To help partners understand how to perform each required operation, we have deve
 3. Open the `cspsample` project found in the `Partner-Center-Java-Samples\secure-app-model\keyvault` directory.
 4. Update the application settings found in the [application.properties](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/secure-app-model/keyvault/cspsample/src/main/resources/application.properties) file.
 
-     ```
+     ```java
     azuread.authority=https://login.microsoftonline.com
     keyvault.baseurl=
     keyvault.clientId=
@@ -395,7 +392,7 @@ To help partners understand how to perform each required operation, we have deve
 5. When you run this sample project, it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf.
 6. Optional - un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
-# [PowerShell](#tab/powershell-csp-auth)
+#### [PowerShell](#tab/powershell-csp)
 
 Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
 
@@ -403,29 +400,26 @@ Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microso
 $refreshToken = 'Enter the refresh token value here'
 
 $credential = Get-Credential
-$pcToken = New-PartnerAccessToken -RefreshToken $refreshToken -Resource https://api.partnercenter.microsoft.com -Credential $credential -ServicePrincipal
+$pcToken = New-PartnerAccessToken -RefreshToken $refreshToken -Resource https://api.partnercenter.microsoft.com -Credential $credential
 
 Connect-PartnerCenter -AccessToken $pcToken.AccessToken -AccessTokenExpiresOn $pcToken.ExpiresOn -ApplicationId $appId
 ```
 
-When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command is invoked, it requests a new access token using the specified refresh token from Azure Active Directory. That token is then used to connect to Partner Center.
+When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command is invoked, it requests a new access token using the specified refresh token from Azure Active Directory. That token is then used to connect to Partner Center.
 
-> [!NOTE]  
-> The `ServicePrincipal` parameter is being used with the [New-PartnerAccessToken](https://docs.microsoft.com/en-us/powershell/module/partnercenter/New-PartnerAccessToken) command because an Azure AD application of type web/API is being used. This type of application requires that a client identifier and secret be included in the request for an access token.
-
-See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) for more information.
+See [Partner Center PowerShell - Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) for more information.
 
 ---
 
-### Control Panel Provider Authentication
+## Control Panel Provider authentication
 
 Control panel vendors need to have each partner they support perform the [partner consent](#partner-consent) process. Once that is completed the refresh token obtained through that process is used to access the Partner Center REST API and .NET API.
 
-#### Samples
+### Samples for Cloud Panel Provider authentication
 
 To help control panel vendors understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-# [.NET](#tab/dotnet-cpv-auth)
+#### [.NET](#tab/dotnet-cpp)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
@@ -508,7 +502,7 @@ To help control panel vendors understand how to perform each required operation,
 
 After these permissions have been established, the sample performs operations using Azure AD Graph on behalf of the customer.
 
-# [Java](#tab/java-cpv-auth)
+#### [Java](#tab/java-cpp)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
@@ -524,7 +518,7 @@ After these permissions have been established, the sample performs operations us
 3. Open the `cpvsample` project found in the `Partner-Center-Java-Samples\secure-app-model\keyvault` directory.
 4. Update the application settings found in the [application.properties](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/secure-app-model/keyvault/cpvsample/src/main/resources/application.properties) file.
 
-    ```
+    ```java
     azuread.authority=https://login.microsoftonline.com
     keyvault.baseurl=
     keyvault.clientId=
@@ -552,7 +546,7 @@ After these permissions have been established, the sample performs operations us
     azureAppGrant.setEnterpriseApplication("797f4846-ba00-4fd7-ba43-dac1f8f63013");
     azureAppGrant.setScope("user_impersonation");
 
-    ApplicationGrant graphAppGrant = new ApplicationGrant(); 
+    ApplicationGrant graphAppGrant = new ApplicationGrant();
 
     graphAppGrant.setEnterpriseApplication("00000002-0000-0000-c000-000000000000");
     graphAppGrant.setScope("Domain.ReadWrite.All,User.ReadWrite.All,Directory.Read.All");
@@ -569,28 +563,25 @@ After these permissions have been established, the sample performs operations us
         new TypeReference<ApplicationConsent>(){},
         MessageFormat.format(
             "customers/{0}/applicationconsents/{1}",
-            customerId, 
+            customerId,
             properties.getProperty(PropertyName.PARTNER_CENTER_CLIENT_ID)));
 
     // Consent to the defined applications and the respective scopes.
     partnerOperations.getServiceClient().post(
-        partnerOperations, 
+        partnerOperations,
         new TypeReference<ApplicationConsent>(){},
         MessageFormat.format(
             "customers/{0}/applicationconsents",
             customerId),
         consent);
     ```
+
 Un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
 ---
 
-## Frequently Asked Questions
+## Frequently asked questions
 
-### Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?
+1. **Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?** No, this will not work because of how the requirement for multi-factor authentication will be enforced.
 
-No, this will not work because of how the requirement for multi-factor authentication will be enforced.
-
-### How will the requirement for multi-factor authentication be enforced?
-
-This requirement will be enforced by ensuring that a claim of type <http://schemas.microsoft.com/claims/authnmethodsreferences> with a value of mfa is present. If it is not then authentication will be denied.
+2. **How will the requirement for multi-factor authentication be enforced?** This requirement will be enforced by ensuring that a claim of type <http://schemas.microsoft.com/claims/authnmethodsreferences> with a value of mfa is present. If it is not then authentication will be denied.

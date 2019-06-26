@@ -2,30 +2,32 @@
 title: Get a customer's service costs line items
 description: Gets a customer's service cost line items for the specified billing period.
 ms.assetid: 1D6364A2-51FE-44E4-96A0-444EDB3BB56A
-ms.date: 12/15/2017
+ms.date: 06/10/2019
 ms.localizationpriority: medium
 ---
 
 # Get a customer's service costs line items
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
 Gets a customer's service cost line items for the specified billing period.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 - A customer identifier.
-- A billing period indicator (mostrecent).
+- A billing period indicator (**mostrecent**).
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To retrieve a service costs summary for the specified customer:
 
-To retrieve a service costs summary for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then use the [**ServiceCosts**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicecosts) property to get an interface to customer service costs collection operations. Next, call the [**ByBillingPeriod**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.icustomerservicecostscollection.bybillingperiod) method with a member of the [**ServiceCostsBillingPeriod**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicecosts.servicecostsbillingperiod) enumeration to return an [**IServiceCostsCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostscollection). Finally, use the [**IServiceCostsCollection.LineItems.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostlineitemscollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostlineitemscollection.getasync) method to get the customer’s service costs line items.
+1. Call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer.
+2. Use the [**ServiceCosts**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicecosts) property to get an interface to customer service costs collection operations.
+3. Call the [**ByBillingPeriod**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.icustomerservicecostscollection.bybillingperiod) method with a member of the [**ServiceCostsBillingPeriod**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicecosts.servicecostsbillingperiod) enumeration to return an [**IServiceCostsCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostscollection).
+4. Use the [**IServiceCostsCollection.LineItems.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostlineitemscollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.servicecosts.iservicecostlineitemscollection.getasync) method to get the customer’s service costs line items.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -34,37 +36,32 @@ To retrieve a service costs summary for the specified customer, first call the [
 var serviceCostsSummary = partnerOperations.Customers.ById(selectedCustomerId).ServiceCosts.ByBillingPeriod(ServiceCostsBillingPeriod.MostRecent).LineItems.Get();
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                             |
 |---------|-------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/servicecosts/{billing-period}/lineitems HTTP/1.1 |
 
- 
-
-**URI parameter**
+#### URI parameters
 
 Use the following path parameters to identify the customer and the billing period.
 
 | Name           | Type   | Required | Description                                                                                                                      |
 |----------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------|
-| customer-id    | guid   | Yes      | A GUID formatted customer-id that identifies the customer.                                                                       |
+| customer-id    | guid   | Yes      | A GUID formatted customer ID that identifies the customer.                                                                       |
 | billing-period | string | Yes      | An indicator that represents the billing period. The only supported value is MostRecent. The case of the string does not matter. |
 
- 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/65726577-c208-40fd-9735-8c85ac9cac68/servicecosts/mostrecent/lineitems HTTP/1.1
@@ -76,16 +73,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response body contains a [ServiceCostLineItem](service-costs-resources.md) resource that provides information about the service costs.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -120,7 +116,18 @@ Date: Fri, 02 Dec 2016 18: 54: 38 GMT
             "subscriptionFriendlyName": "Project Pro for Office 365 (Government Pricing)",
             "subscriptionId": "71B5BCDD-51C8-4BF2-B704-D3432EE33064",
             "tax": 0.0,
-            "unitPrice": 0.0
+            "unitPrice": 0.0,
+            "invoiceNumber": "T000003163",
+            "invoiceType": "OneTime",
+            "productId": "DZH318Z0BJR6",
+            "skuId": "0001",
+            "availabilityId": "DZH318Z0BMFK",
+            "productName": "Azure Managed Experience",
+            "skuName": "Azure Managed Experience - Optimize",
+            "publisherName": "Microsoft",
+            "publisherId": "01323244",
+            "termAndBillingCycle": "",
+            "discountDetails": "N/A"
         }, {
             "afterTaxTotal": 17.219999999999999,
             "chargeType": "CYCLE FEE",
@@ -139,7 +146,18 @@ Date: Fri, 02 Dec 2016 18: 54: 38 GMT
             "subscriptionFriendlyName": "Project Pro for Office 365 (Government Pricing)",
             "subscriptionId": "71B5BCDD-51C8-4BF2-B704-D3432EE33064",
             "tax": 0.0,
-            "unitPrice": 17.219999999999999
+            "unitPrice": 17.219999999999999,
+            "invoiceNumber": "D000003163",
+            "invoiceType": "Recurring",
+            "productId": "DZH318Z0BJR7",
+            "skuId": "0001",
+            "availabilityId": "DZH318Z0BTTTT",
+            "productName": "NGINX Plus",
+            "skuName": "NGINX Plus (Ubuntu 14.04)",
+            "publisherName": ""Nginx, Inc.",
+            "publisherId": "212336222",
+            "termAndBillingCycle": "30 Days Trial",
+            "discountDetails": "20%"
         }
     ],
     "links": {
@@ -152,11 +170,3 @@ Date: Fri, 02 Dec 2016 18: 54: 38 GMT
     "totalCount": 2
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -1,33 +1,32 @@
 ---
 title: Checkout a cart
 description: How to checkout an order for a customer in a cart.
-ms.date: 09/30/2018
+ms.date: 05/22/2019
 ms.localizationpriority: medium
 ---
 
 # Checkout a cart
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
+How to checkout an order for a customer in a cart.
 
-How to checkout an order for a customer in a cart. 
-
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A Cart ID for an existing cart.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
-To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **Create** or **CreateAsync** functions to complete the order. 
+To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **Create** or **CreateAsync** functions to complete the order.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -37,9 +36,9 @@ To checkout an order for a customer, get a reference to the cart using the cart 
 var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checkout();
 ```
 
-### Java 
+### Java
 
-To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **create** function to complete the order. 
+To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **create** function to complete the order.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -60,15 +59,15 @@ To checkout an order for a customer, execute the [**Submit-PartnerCustomerCart**
 Submit-PartnerCustomerCart -CartId $cartId -CustomerId $customerId
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id}/checkout HTTP/1.1     |
 
-**URI parameters**
+### URI parameters
 
 Use the following path parameters to identify the customer and specify the cart to be checked out.
 
@@ -77,16 +76,15 @@ Use the following path parameters to identify the customer and specify the cart 
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
 
+### Request headers
 
-**Request headers**
+See [Partner Center REST headers](headers.md) for more information.
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 POST /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/b4c8fdea-cbe4-4d17-9576-13fcacbf9605/checkout HTTP/1.1
@@ -104,15 +102,15 @@ Expect: 100-continue
 No-Content-Body
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST response
 
 If successful, the response body contains the populated [CartCheckoutResult](cart-resources.md#cartcheckoutresult) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created

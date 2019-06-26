@@ -1,47 +1,44 @@
 ---
 title: Invoice resources
-description: Describes invoice related resources.
+description: Description of invoice-related resources.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 12/15/2017
+ms.date: 06/11/2019
 ms.localizationpriority: medium
 ---
 
 # Invoice resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Describes invoice related resources.
+This topic describes invoice-related resources.
 
-## <span id="Invoice"/><span id="invoice"/><span id="INVOICE"/>Invoice
+## Invoice
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| id | string | The invoice identifier. |
+| invoiceDate | string in UTC date-time format | The date the invoice was generated. |
+| billingPeriodStartDate | string in UTC date-time format | Billing period start date in UTC. |
+| billingPeriodEndDate | string in UTC date-time format   | Billing period end date in UTC. |
+| totalCharges | number | The total charges. Includes charges for transactions and any adjustments.     |
+| paidAmount | number  | The amount paid by the partner. Negative if a payment was received.  |
+| currencyCode | string  | A code that indicates the currency used for all invoice item amounts and totals. |
+| currencySymbol  | string | The currency symbol used for all invoice item amounts and totals. |
+| pdfDownloadLink | string  | A link to download the invoice in PDF format. This link is not returned as part of the search results, and is populated only if the invoice is accessed by ID. This link auto-expires in 30 minutes. |
+| invoiceDetails  | array of [InvoiceDetail](#invoicedetail) objects  | The invoice details.  |
+| amendments      | array of [Invoice](#invoice) objects   | The amendments to this invoice.  |
+| documentType    | string | The document type of the invoice: "Credit Note", "Invoice". |
+| amendsOf        | string | The reference number of the document of which this document is an amendment.  |
+| invoiceType     | string  | The type of invoice: "recurring", "one\_time".   |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)  | The resource links.  |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  |
 
-| Property        | Type                                                           | Description                                                                                                                                                                                          |
-|-----------------|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id              | string                                                         | The invoice identifier.                                                                                                                                                                              |
-| invoiceDate     | string in UTC date-time format                                 | The date the invoice was generated.                                                                                                                                                                  |
-| totalCharges    | number                                                         | The total charges. Includes charges for transactions and any adjustments.                                                                                                                            |
-| paidAmount      | number                                                         | The amount paid by the partner. Negative if a payment was received.                                                                                                                                  |
-| currencyCode    | string                                                         | A code that indicates the currency used for all invoice item amounts and totals.                                                                                                                     |
-| currencySymbol  | string                                                         | The currency symbol used for all invoice item amounts and totals.                                                                                                                                    |
-| pdfDownloadLink | string                                                         | A link to download the invoice in PDF format. This link is not returned as part of the search results, and is populated only if the invoice is accessed by ID. This link auto-expires in 30 minutes. |
-| invoiceDetails  | array of [InvoiceDetail](#invoicedetail) objects               | The invoice details.                                                                                                                                                                                 |
-| amendments      | array of [Invoice](#invoice) objects                           | The amendments to this invoice.                                                                                                                                                                      |
-| documentType    | string                                                         | The document type of the invoice: "Credit Note", "Invoice".                                                                                                                           |
-| amendsOf        | string                                                         | The reference number of the document of which this document is an amendment.                                                                                                                                  |
-| invoiceType     | string                                                         | The type of invoice: "recurring", "one\_time".                                                                                                                                                        |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                  |
-| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                             |
-
- 
-
-## <span id="InvoiceDetail"/><span id="invoicedetail"/><span id="INVOICEDETAIL"/>InvoiceDetail
-
+## InvoiceDetail
 
 An invoice contains a collection of billed items, and each item is
 represented by an InvoiceDetail resource.
@@ -53,10 +50,7 @@ represented by an InvoiceDetail resource.
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                               |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                          |
 
- 
-
-## <span id="InvoiceLineItem"/><span id="invoicelineitem"/><span id="INVOICELINEITEM"/>InvoiceLineItem
-
+## InvoiceLineItem
 
 Each individual charge within an invoice is represented as an
 InvoiceLineItem.
@@ -67,10 +61,7 @@ InvoiceLineItem.
 | billingProvider     | string                                                         | The billing provider: "none", "office", "azure" or "azure\_data\_market".            |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                             |
 
- 
-
-## <span id="InvoiceSummary"/><span id="invoicesummary"/><span id="INVOICESUMMARY"/>InvoiceSummary
-
+## InvoiceSummary
 
 Describes a summary of the balance and total charges of an invoice.
 
@@ -88,22 +79,16 @@ Describes a summary of the balance and total charges of an invoice.
 | links                    | [ResourceLinks](utility-resources.md#resourcelinks)            | The resource links.                                                   |
 | attributes               | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.                                              |
 
- 
+## InvoiceSummaryDetail
 
-## <span id="InvoiceSummaryDetail"/><span id="invoicesummarydetail"/><span id="INVOICESUMMARYDETAIL"/>InvoiceSummaryDetail
-
-
-Represent a summary of the individual details for an invoice type (for example, recurring, one\_time). 
+Represent a summary of the individual details for an invoice type (for example, recurring, one\_time).
 
 | Property            | Type                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | invoiceType         | string                                                         | The type of invoice: "recurring", "one\_time".                                       |
 | summary             | [InvoiceSummary](#invoicesummary) object                       | The summary of the invoice per invoice type.                                         |
- 
 
- 
-## <span id="InvoiceSummaries"/><span id="invoicesummaries"/><span id="INVOICESUMMARIES"/>InvoiceSummaries
-
+## InvoiceSummaries
 
 Represent a collection of type [InvoiceSummary](#invoicesummary) that contain the individual details for an invoice type per currency.  
 
@@ -111,10 +96,7 @@ Represent a collection of type [InvoiceSummary](#invoicesummary) that contain th
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | collectionOfSummary | array of [InvoiceSummary](#invoicesummary) objects             | The summary of the invoice per invoice type per currency.                            |
 
-
-
-## <span id="LicenseBasedLineItem"/><span id="licensebasedlineitem"/><span id="LICENSEBASEDLINEITEM"/>LicenseBasedLineItem
-
+## LicenseBasedLineItem
 
 Represents an invoice billing line item for licensed based subscriptions.
 
@@ -133,7 +115,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 | domainName               | string                                                         | Gets or sets domain name.                                             |
 | durableOfferId           | string                                                         | Gets or sets the durable offer unique identifier.                     |
 | invoiceLineItemType      | string                                                         | Gets the type of invoice line item.                                   |
-| mpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
+| mpnId                    | number                                                         | Gets or sets the MPN ID associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN ID of the Value Added Reseller (VAR).                                   |
 | offerId                  | string                                                         | Gets or sets the offer unique identifier.                             |
 | offerName                | string                                                         | Gets or sets the offer name.                                          |
 | orderId                  | string                                                         | Gets or sets the order unique identifier.                             |
@@ -147,15 +129,12 @@ Represents an invoice billing line item for licensed based subscriptions.
 | subtotal                 | number                                                         | Gets or sets the amount after discount.                               |
 | syndicationPartnerSubscriptionNumber | string                                             | Gets or sets the syndication partner subscription number.             |
 | tax                      | number                                                         | Gets or sets the taxes charged.                                       |
-| tier2MpnId               | number                                                         | Gets or sets the MPN Id of the Tier 2 partner associated to this line item. |
+| tier2MpnId               | number                                                         | Gets or sets the MPN ID of the Tier 2 partner associated to this line item. |
 | totalForCustomer         | number                                                         | Gets or sets the total amount after discount and tax.                 |
 | totalOtherDiscount       | number                                                         | Gets or sets the discount associated with this purchase.              |
 | unitPrice                | number                                                         | Gets or sets the unit price.                                          |
 
-
-
-## <span id="UsageBasedLineItem"/><span id="usagebasedlineitem"/><span id="USAGEBASEDLINEITEM"/>UsageBasedLineItem
-
+## UsageBasedLineItem
 
 Represents an invoice billing line item for usage based subscriptions.
 
@@ -179,7 +158,7 @@ Represents an invoice billing line item for usage based subscriptions.
 | invoiceLineItemType      | string                                                         | Gets the type of invoice line item.                                   |
 | invoiceNumber            | string                                                         | Gets or sets the invoice number.                                      |
 | listPrice                | number                                                         | Gets or sets the price of each unit.                                  |
-| mpnId                    | number                                                         | Gets or sets the MPN Id associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN Id of the VAR (Value Added Reseller).                                   |
+| mpnId                    | number                                                         | Gets or sets the MPN ID associated to this line item. For direct resellers, this is the MPN ID of the reseller. For indirect resellers, this is the MPN ID of the Value Added Reseller (VAR).                                   |
 | orderId                  | string                                                         | Gets or sets the order unique identifier.                             |
 | overageQuantity          | number                                                         | Gets or sets the quantity consumed above allowed usage.               |
 | partnerBillableAccountId | string                                                         | Gets or sets the partner billable account ID.                         |
@@ -199,16 +178,107 @@ Represents an invoice billing line item for usage based subscriptions.
 | subscriptionId           | string                                                         | Gets or sets the subscription unique identifier.                      |
 | subscriptionName         | string                                                         | Gets or sets the subscription name.                                   |
 | taxAmount                | number                                                         | Gets or sets the amount of tax charged.                               |
-| tier2MpnId               | number                                                         | Gets or sets the MPN Id of the Tier 2 partner associated to this line item. |
+| tier2MpnId               | number                                                         | Gets or sets the MPN ID of the Tier 2 partner associated to this line item. |
 | unit                     | string                                                         | Gets or sets the unit of measure for Azure usage.                     |
 
-
-
-## <span id="InvoiceStatement"/><span id="invoicestatement"/><span id="INVOICESTATEMENT"/>InvoiceStatement
-
+## InvoiceStatement
 
 Represents the operations available on an invoice statement in application/pdf.
 
 | Property                 | Type                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | httpResponseMessage      | object                                                         | ByteArrayContent with contentType = application/pdf.                  |
+
+## OneTimeInvoiceLineItem
+
+Represents an invoice billing line item for licensed-based subscriptions.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| PartnerId | string | Gets or sets the partner commerce account ID. |
+| CustomerId | string | Gets or sets the customer commerce account ID. |
+| CustomerName | string | Gets or sets the customer name. |
+| CustomerDomainName | string | Gets or sets the customer domain name. |
+| CustomerCountry | string | Gets or sets the customer country. |
+| InvoiceNumber | string | Gets or sets the invoice number. |
+| MpnId | string | Gets or sets the MPN ID associated to this line item. |
+| ResellerMpnId | int | Gets or sets the order unique identifier. |
+| OrderDate | DateTime | Gets or sets the date when order created. |
+| ProductId | string | Gets or sets the product unique identifier. |
+| SkuId | string | Gets or sets the SKU unique identifier. |
+| AvailabilityId | string | Gets or sets the availability unique identifier. |
+| ProductName | string | Gets or sets the product name. |
+| SkuName | string | Gets or sets the SKU name. |
+| ChargeType | string | Gets or sets the type of charge. |
+| UnitPrice | decimal | Gets or sets the unit price. |
+| EffectiveUnitPrice | decimal | Gets or sets the effective unit price. |
+| UnitType | string | Gets or sets the unit type. |
+| Quantity | int | Gets or sets the number of units associated with this line item. |
+| Subtotal | decimal | Gets or sets the amount after discount. |
+| TaxTotal | decimal | Gets or sets the taxes charged. |
+| TotalForCustomer | decimal | Gets or sets the total amount after discount and tax. |
+| Currency | string | Gets or sets the currency used for this line item. |
+| PublisherName | string | Gets or sets the publisher name associated with this purchase. |
+| PublisherId | string | Gets or sets the publisher ID associated with this purchase. |
+| SubscriptionDescription | string | Gets or sets the subscription description associated with this purchase. |
+| SubscriptionId | string | Gets or sets the subscription ID associated with this purchase. |
+| ChargeStartDate | DateTime | Gets or sets the charge start date associated with this purchase. |
+| ChargeEndDate | DateTime | Gets or sets the charge end date associated with this purchase. |
+| TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
+| AlternateId | string | Gets or sets the Alternate ID (quote ID). |
+| DiscountDetails | string | Gets or sets the discount details associated with this purchase. |
+| InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
+| BillingProvider | BillingProvider | Returns the billing provider. |
+
+## DailyRatedUsageLineItem
+
+Represents unbilled, billed reconciliation line items for daily rated usage.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| PartnerId | string | Gets or sets the partner ID. |
+| PartnerName | string | Gets or sets the partner name. |
+| CustomerId | string | Gets or sets the ID of the customer that usage belongs to. |
+| CustomerName | string | Gets or sets the name of the customer company that usage belongs to. |
+| CustomerDomainName | string | Gets or sets the domain name of the customer that usage belongs to. |
+| InvoiceNumber | string | Gets or sets the ID of the invoice that usage belongs to. |
+| ProductId | string | Gets or sets the product unique identifier. |
+| SkuId | string | Gets or sets the SKU unique identifier. |
+| AvailabilityId | string | Gets or sets the availability unique identifier. |
+| SkuName | string | Gets or sets the SKU name for the service. |
+| ProductName | string | Gets or sets the name of the product. |
+| PublisherName | string | Gets or sets the name of publisher. |
+| PublisherId | string | Gets or sets the ID of the publisher. |
+| SubscriptionId | string | Gets or sets the subscription ID. |
+| SubscriptionDescription | string | Gets or sets the subscription description. |
+| ChargeStartDate | DateTime | Gets or sets the charge start date. |
+| ChargeEndDate | DateTime | Gets or sets the charge end date. |
+| UsageDate | DateTime | Gets or sets the usage date. |
+| MeterType | string | Gets or sets the meter type. |
+| MeterCategory | string | Gets or sets the meter category. |
+| MeterId | string | Gets or sets the  meter ID (GUID). |
+| MeterSubCategory | string | Gets or sets the meter sub category. |
+| MeterName | string | Gets or sets the meter name. |
+| MeterRegion | string | Gets or sets the meter region. |
+| UnitOfMeasure | string | Gets or sets the unit of measure. |
+| ResourceLocation | string | Gets or sets the location of resource. |
+| ConsumedService | string | Gets or sets the consumed service name. |
+| ResourceGroup | string | Gets or sets the name of resource group. |
+| ResourceUri | string | Gets or sets the uri of the resource instance that the usage is about. |
+| Tags | string | Gets or sets the customer added tags. |
+| AdditionalInfo | string | Gets or sets the service-specific metadata. For example, an image type for a virtual machine. |
+| ServiceInfo1 | string | Gets or sets internal Azure Service Metadata. |
+| ServiceInfo2 | string | Gets or sets service information for example, an image type for a virtual machine and ISP name for ExpressRoute. |
+| CustomerCountry | string | Gets or sets the country of the customer. |
+| MpnId | string | Gets or sets the MPN ID associated to this line item. |
+| ResellerMpnId | string | Gets or sets the Reseller MPN ID of the Tier 2 partner associated to this line item. |
+| ChargeType | string | Gets or sets the type of charge. |
+| UnitPrice | decimal | Gets or sets the price of unit. |
+| Quantity | decimal | Gets or sets the quantity of usage. |
+| UnitType | string | Gets or sets the unit type like 1 Hour. |
+| BillingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in local currency of the customer or billing currency. |
+| BillingCurrency | string | Gets or sets ISO currency in which the meter is charged in local currency of the customer or billing currency. |
+| PricingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in USD or catalog currency used for rating. |
+| PricingCurrency | string | Gets or sets ISO currency in which the meter is charged in USD or catalog currency used for rating. |
+| InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
+| BillingProvider | BillingProvider | Returns the billing provider. |

@@ -2,29 +2,30 @@
 title: Create user accounts for a customer
 description: Create a new user account for your customer.
 ms.assetid: E46AB186-F4E1-4A00-AE62-28A843F9C288
-ms.date: 12/15/2017
+ms.date: 05/28/2019
 ms.localizationpriority: medium
 ---
 
 # Create user accounts for a customer
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
 Create a new user account for your customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To obtain a new user account for a customer:
 
-To obtain a new user account for a customer, create a new **CustomerUser** object with the relevant user information. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, followed by the **Create** method.
+1. Create a new **CustomerUser** object with the relevant user information.
+2. Use your **IAggregatePartner.Customers** collection and call the **ById()** method.
+3. Call the **Users** property, followed by the **Create** method.
 
 ``` csharp
 // string selectedCustomerId;
@@ -46,35 +47,32 @@ User createdUser = partnerOperations.Customers.ById(selectedCustomerId).Users.Cr
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserCreate.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                  |
 |----------|----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users HTTP/1.1 |
 
- 
+#### URI parameters
 
-**URI parameter**
+Use the following query parameters to identify the correct customer.
 
-Use the following query parameter to identify the correct customer.
+| Name | Type | Required | Description |
+|----- |----- | -------- |------------ |
+| **customer-tenant-id** | **guid** | Y | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| **user-id** | **guid** | N | The value is a GUID formatted **user-id** that belongs to a single user account. |
 
-| Name                   | Type     | Required | Description                                                                                                                                            |
-|------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                       |
+### Request headers
 
- 
+See [Headers](headers.md) for more information.
 
-**Request headers**
+### Request body
 
-- See [Headers](headers.md) for more information.
+None.
 
-**Request body**
-
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/users HTTP/1.1
@@ -88,7 +86,7 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
       "firstName": "First",
       "lastName": "Last",
       "displayName": "User name",  
-      "immutableId": "Some unique ID",    
+      "immutableId": "Some unique ID",
       "passwordProfile":{
                  password: "abCD123*",
                  forceChangePassword: true
@@ -99,16 +97,15 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 }
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns a user account, including the GUID.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -125,7 +122,7 @@ Date: June 24 2016 22:00:25 PST
   "firstName": "First",
   "lastName": "Last",
   "displayName": "User name",
-  "immutableId": "Some unique ID",    
+  "immutableId": "Some unique ID",
   "passwordProfile": {
     "forceChangePassword": true,
     "password": "abCD123*"
@@ -139,11 +136,3 @@ Date: June 24 2016 22:00:25 PST
   }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -2,24 +2,22 @@
 title: Country information resources
 description: Descriptive metadata for a country/region.
 ms.assetid: 19460437-5611-49A1-A7E7-704420C1DE8F
-ms.date: 12/15/2017
+ms.date: 05/23/2019
 ms.localizationpriority: medium
 ---
 
 # Country information resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Descriptive metadata for a country/region.
+The following resources are descriptive metadata for a country/region.
 
-## <span id="CountryInformation"/><span id="countryinformation"/><span id="COUNTRYINFORMATION"/>CountryInformation
-
+## CountryInformation
 
 | Property                      | Type               | Description                                                                                        |
 |-------------------------------|--------------------|----------------------------------------------------------------------------------------------------|
@@ -46,10 +44,7 @@ Descriptive metadata for a country/region.
 | CountryCallingCodesList       | array of strings   | The calling codes supported in the country/region.                                                 |
 | Attributes                    | ResourceAttributes | The metadata attributes corresponding to the CountryInformation resource.                          |
 
- 
-
-## <span id="CountryValidationRules"/><span id="countryvalidationrules"/><span id="COUNTRYVALIDATIONRULES"/>CountryValidationRules
-
+## CountryValidationRules
 
 Describes the address formatting rules for a country/region.
 
@@ -73,13 +68,3 @@ Describes the address formatting rules for a country/region.
 | IsTaxIdOptional         | boolean            | Indicates whether a tax ID is optional or not.                                                     |
 | CountryCallingCodesList | array of strings   | The calling codes supported in the country/region.                                                 |
 | Attributes              | ResourceAttributes | The metadata attributes corresponding to the CountryInformation resource.                          |
-
- 
-
- 
-
- 
-
-
-
-

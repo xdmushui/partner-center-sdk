@@ -2,14 +2,13 @@
 title: Get a list of orders by customer and billing cycle type
 description: Gets a collection of order resources for the specified customer and biling cycle type.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
-ms.date: 12/15/2017
+ms.date: 06/19/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of orders by customer and billing cycle type
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -18,16 +17,18 @@ ms.localizationpriority: medium
 
 Gets a collection of Order resources that correspond to a given customer and billing cycle type. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To get a collection of a customer's orders:
 
-To get a collection of a customer's orders, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the **ByBillingCycleType()** method with your specified  [**BillingCycleType**](product-resources.md#billingcycletype). Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) method.
+1. Use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID.
+2. Call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the **ByBillingCycleType()** method with your specified  [**BillingCycleType**](product-resources.md#billingcycletype).
+3. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -37,19 +38,15 @@ To get a collection of a customer's orders, use your [**IAggregatePartner.Custom
 var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.ByBillingCycleType(selectedBillingCycleType).Get();
 ```
 
+## REST request
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type}&{include-price}=false HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders?billingType={billing-cycle-type} HTTP/1.1  |
 
- 
-
-**URI parameters**
+#### URI parameters
 
 This table lists the required query parameters to get a collection of orders by customer ID and billing cycle type.
 
@@ -57,19 +54,16 @@ This table lists the required query parameters to get a collection of orders by 
 |------------------------|----------|----------|-----------------------------------------------------------|
 | customer-tenant-id     | string   | Yes      | A GUID formatted string corresponding to the customer.    |
 | billing-cycle-type     | string   | No       | A string corresponding to the billing cycle type.         |
-| include-price          | bool     | No     | Whether to including pricing details (based on access permissions).|
 
- 
+### Request headers
 
-**Request headers**
+See [Headers](headers.md) for more information.
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/b0d70a69-4c42-4b27-b17b-91a835d8686a/orders?billingType=onetime HTTP/1.1
@@ -80,16 +74,15 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 Connection: Keep-Alive
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns a collection of [Order](order-resources.md) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -187,16 +180,8 @@ Date: Thu, 15 Mar 2018 20:44:40 GMT
         }
     },
     "attributes": {
-        "objectType": 
-        "Collection" 
+        "objectType":
+        "Collection"
     }
 }
 ```
-
- 
-
- 
-
-
-
-

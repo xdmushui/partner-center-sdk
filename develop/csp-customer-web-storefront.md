@@ -1,41 +1,45 @@
 ---
 title: CSP customer web storefront
-description: This site shows a working online store that your customers could use to buy subscriptions to Microsoft products. To make it work for you, configure the offers, add branding, and add a payment method.
+description: This sample website code shows a working online store for customers to buy subscriptions to Microsoft products.
 ms.assetid: 0726B1CA-97A1-42E6-92AD-25787BFE0C67
-ms.date: 10/23/2018
+ms.date: 05/29/2019
 ms.localizationpriority: medium
 ---
 
 # CSP customer web storefront
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
-This site shows a working online store that your customers could use to buy subscriptions to Microsoft products. To make it work for you, configure the offers, add branding, and add a payment method.
-
 > [!NOTE]
-> This sample applies only to the global instance of Partner Center. It does not apply to Partner Center for Microsoft Cloud Germany or to Partner Center for Microsoft Cloud for US Government.
+> This sample app applies only to the global instance of Partner Center. It does not apply to Partner Center for Microsoft Cloud Germany or to Partner Center for Microsoft Cloud for US Government.
 
-## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
+The [Partner Center storefront](https://github.com/Microsoft/Partner-Center-Storefront) is a **sample website** for an online store that customers can use to buy subscriptions to Microsoft products. You can modify this **sample code** for your own use to [configure the offers](#configure-offers), [add branding](#configure-branding) and [add a payment method](#configure-payment-types).
 
-[Download the sample code](https://github.com/Microsoft/Partner-Center-Storefront)
+## Sample code
 
-## <span id="What_to_change"/><span id="what_to_change"/><span id="WHAT_TO_CHANGE"/>What to change
+Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) from GitHub.
 
-**Authentication** Before you build the application, update the values in the Web.config file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production (TiP).
+## Configure authentication
 
-- partnerCenter.applicationId
-- partnerCenter.applicationSecret
-- partnerCenter.domain
-- webPortal.clientId
-- webPortal.clientSecret
-- webPortal.domain
-- webPortal.azureStorageConnectionString
+Before you build the application, update the following values in the Web.config file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). You should use your integration sandbox account settings during early development or for testing in production (TiP).
 
-**Branding**
+- **partnerCenter.applicationId**
+- **partnerCenter.applicationSecret**
+- **partnerCenter.domain**
+- **webPortal.clientId**
+- **webPortal.clientSecret**
+- **webPortal.domain**
+- **webPortal.azureStorageConnectionString**
 
-The app currently tracks the following company and brand information in BrandingConfiguration.cs and PortalBranding.cs:
+## Configure offers
+
+You can configure the set of offers (**MicrosoftOffer**) in the **OfferCatalogViewModel**.
+
+## Configure branding
+
+This sample website tracks the following company and brand information in *BrandingConfiguration.cs* and *PortalBranding.cs*:
 
 - Organization name
 - Organization logo
@@ -46,10 +50,6 @@ The app currently tracks the following company and brand information in Branding
 - Support email
 - Support phone number
 
-**Offers**
+### Configure payment types
 
-These are stored as a set of **MicrosoftOffer**s in the **OfferCatalogViewModel**.
-
-**Payment types**
-
-The app currently uses a PayPal gateway, implemented in PayPalGateway.cs.
+The app currently uses a PayPal gateway, implemented in *PayPalGateway.cs*.
