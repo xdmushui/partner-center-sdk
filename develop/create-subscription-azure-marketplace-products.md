@@ -67,9 +67,7 @@ You can [retrieve the details of an individual order using the order ID](get-an-
 
 ## Get activation link
 
-The partner or customer must activate subscriptions to Azure Markeplace within 7 days after creation. Otherwise, the subscriptions are automatically cancelled.
-
-You can [get an activation link by order line item](get-activation-link-by-order-line-item.md). You can also [get a subscription by ID](get-a-subscription-by-id.md), then enumerate its **Links** property to create an activation link.
+The partner or customer must activate subscriptions to Azure Markeplace products. You can [get an activation link by order line item](get-activation-link-by-order-line-item.md). You can also [get a subscription by ID](get-a-subscription-by-id.md), then enumerate its **Links** property to create an activation link.
 
 ## Lifecycle management
 
