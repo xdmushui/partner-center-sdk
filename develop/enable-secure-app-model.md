@@ -1,7 +1,7 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 06/25/2019
+ms.date: 06/27/2019
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +26,7 @@ This topic concerns the following actors:
 
 ## Security requirements
 
-See [Partner Security Requirements](https://docs.microsoft.com/partner-center/partner-security-requirements) for details on the requirements.
+For details on security requirements, see [Partner Security Requirements](https://docs.microsoft.com/partner-center/partner-security-requirements).
 
 ## Secure Application Model
 
@@ -34,9 +34,9 @@ Marketplace applications need to impersonate CSP partner privileges to call Micr
 
 For an overview and details of the new authentication framework, download the [Secure Application Model framework](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
 
-### Samples
+## Samples
 
-An overview and sample code for how partners can implement the Secure Application Model framework can be found below.
+The following overview documents and sample code describe how partners can implement the Secure Application Model framework:
 
 - [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
 - [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
