@@ -1,11 +1,11 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 06/25/2019
+ms.date: 06/27/2019
 ms.localizationpriority: medium
 ---
 
-# Enable secure application model
+# Enabling the Secure Application Model framework
 
 Applies to:
 
@@ -26,22 +26,19 @@ This topic concerns the following actors:
 
 ## Security requirements
 
-For answers to frequently asked questions (FAQ) about this change to multi-factor authentication, download the [security requirements FAQ](http://assetsprod.microsoft.com/security-requirements-faq.pdf) document.
+For details on security requirements, see [Partner Security Requirements](https://docs.microsoft.com/partner-center/partner-security-requirements).
 
-## Secure application model
+## Secure Application Model
 
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data.
 
-For an overview and details of the new authentication framework, download the [secure application model](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
+For an overview and details of the new authentication framework, download the [Secure Application Model framework](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
 
-### Details for CPVs
+## Samples
 
-For examples of how to implement multi-factor authentication in your control panel app, download the [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf) and [sample application for CPVs](https://www.yammer.com/cloudpartnercommunity/#/files/154857341).
+The following overview documents and sample code describe how partners can implement the Secure Application Model framework:
 
-### Details for CSP partners
-
-For examples of how to implement multi-factor authentication in your Partner Center app, download the [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf) and [sample application for CSP partners](https://www.yammer.com/cloudpartnercommunity/#/files/154857342).
-
-## Implementing multi-factor authentication
-
-For more information about implementing multi-factor authentication, see [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks).
+- [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
+- [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
+- [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
+- [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
