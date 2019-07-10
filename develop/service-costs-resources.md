@@ -52,7 +52,7 @@ Describes resources related to services purchased by a customer.
 **ServiceCostLineItem** describes a single item purchased by the customer.
 
 > [!IMPORTANT]
-> The following properties *only apply to* service cost line items where the product is a *one-time purchase*: **productId**, **productName**, **skuId**, **skuName**, **availabilityId**, **publisherId**, **publisherName**, **termAndBillingCycle**, **discountDetails**. These properties *don't apply to* service line items where the product is a *recurring purchase*, not a one-time purchase. For example, these properties *don't apply to* subscription-based Azure or license-based Office purchases.
+> The following properties *only apply to* service cost line items where the product is a *one-time purchase*: **productId**, **productName**, **skuId**, **skuName**, **availabilityId**, **publisherId**, **publisherName**, **termAndBillingCycle**, **discountDetails**. These properties *don't apply to* service line items where the product is a *recurring purchase*. For example, these properties *don't apply to* subscription-based Azure or license-based Office purchases.
 
 | Property                 | Type                           | Description                                                          |
 |--------------------------|--------------------------------|----------------------------------------------------------------------|
