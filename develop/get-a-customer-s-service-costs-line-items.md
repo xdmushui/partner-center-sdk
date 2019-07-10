@@ -78,11 +78,7 @@ Host: api.partnercenter.microsoft.com
 If successful, the response body contains a [ServiceCostLineItem](service-costs-resources.md) resource that provides information about the service costs.
 
 > [!IMPORTANT]
-> The following properties *only apply to* service cost line items where the product is a *one-time purchase*:
-> 
-> **productId**, **productName**, **skuId**, **skuName**, **availabilityId**, **publisherId**, **publisherName**, **termAndBillingCycle**, **discountDetails**
-> 
-> These properties *don't apply to* service line items where the product is a *recurring purchase*, not a one-time purchase. For example, these properties don't apply to subscription-based Azure or license-based Office purchases.
+> The following properties *only apply to* service cost line items where the product is a *one-time purchase*: **productId**, **productName**, **skuId**, **skuName**, **availabilityId**, **publisherId**, **publisherName**, **termAndBillingCycle**, **discountDetails**. These properties *don't apply to* service line items where the product is a *recurring purchase*, not a one-time purchase. For example, these properties *don't apply to* subscription-based Azure or license-based Office purchases.
 
 ### Response success and error codes
 
