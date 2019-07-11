@@ -94,6 +94,19 @@ var cart = new Cart()
             Quantity = 1,
             BillingCycle = BillingCycleType.Monthly,
             TermDuration = "P1M"
+        },
+        new CartLineItem()
+        {
+      /* SaaS Free Trial */
+            Id = 5,
+            CatalogItemId = "DZH318Z0C0WF:0001:DZH318Z0BP69",
+            Quantity = 10,
+            BillingCycle = BillingCycleType.None,
+            TermDuration = "P1M",
+            RenewsTo = new RenewsTo
+            {
+                TermDuration = "P1Y"
+            }
         }
     }
 };
