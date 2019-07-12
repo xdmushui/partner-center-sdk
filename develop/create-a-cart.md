@@ -305,12 +305,12 @@ Expect: 100-continue
 	{
     /* SaaS Free Trial */
        "id": 5,
-        "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
-        "quantity": 10,
-        "billingCycle": "none",
-        "termDuration": "P1M",
-        "renewsTo": {
-		  "termDuration": "P1Y"
+       "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
+       "quantity": 10,
+       "billingCycle": "none",
+       "termDuration": "P1M",
+       "renewsTo": {
+         "termDuration": "P1Y"
        }
     }
   ]
@@ -401,11 +401,11 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "id": 5,
       "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
       "quantity": 10,
-	  "currencyCode": "USD",
+      "currencyCode": "USD",
       "billingCycle": "none",
       "termDuration": "P1M",
       "renewsTo": {
-		"termDuration": "P1Y"
+	"termDuration": "P1Y"
       },
 	  "orderGroup": "2"
     }
