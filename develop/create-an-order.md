@@ -2,7 +2,7 @@
 title: Create an order
 description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
-ms.date: 05/28/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -122,6 +122,15 @@ This table describes the [OrderLineItem](order-resources.md#orderlineitem) prope
 | provisioningContext  | Dictionary<string, string>                | No       |  Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                  |
 | links                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. |
+| renewsTo             | Array of objects                          | No    |An array of [RenewsTo](order-resources.md#renewsto) resources.                                                                            |
+
+##### RenewsTo
+
+This table describes the [RenewsTo](order-resources.md#renewsto) properties in the request body.
+
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
 
 ### Request example
 

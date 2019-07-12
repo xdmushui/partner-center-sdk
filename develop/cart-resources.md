@@ -1,7 +1,7 @@
 ---
 title: Cart resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
-ms.date: 05/22/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -48,6 +48,15 @@ Represents one item contained in a cart.
 | orderGroup           | string                           | A group to indicate which items can be submitted together in the same order.                                                                          |
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
+| renewsTo             | Array of objects                 | An array of [RenewsTo](#renewsto) resources.                                                                            |
+
+## RenewsTo
+
+Represents one item contained in a cart line item.
+
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
 
 ## CartError
 
@@ -55,7 +64,7 @@ Represents an error that occurs after a cart is created.
 
 | Property         | Type                                   | Description                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
-| errorCode        | [CartErrorCode](cart-resources.md#carterrorcode) | The type of cart error.                                                                       |
+| errorCode        | [CartErrorCode](#carterrorcode) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
 
 ## CartErrorCode
@@ -82,7 +91,7 @@ Represents the result of a cart checkout.
 | Property    | Type                                              | Description                     |
 |-------------|---------------------------------------------------|---------------------------------|
 | orders      | List of [Order](order-resources.md#order) objects.         | The collection of orders.       |
-| orderErrors | List of [OrderError](cart-resources.md#ordererror) objects. | The collection of order errors. |
+| orderErrors | List of [OrderError](#ordererror) objects. | The collection of order errors. |
 
 ## OrderError
 
@@ -118,7 +127,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | InvalidQuantity | 800017 | The quantity is not available for this catalog item. |
 | SandboxLimitExceeded | 800018 | The sandbox limit has been met. |
 | SandboxTenantOnly | 800019 | This operation is only enabled for sandbox tenants. |
-| CatalogItemNotEligibleForPurchase | 800020 | The catalog item is not eligble for purchase. |
+| CatalogItemNotEligibleForPurchase | 800020 | The catalog item is not eligible for purchase. |
 | SubscriptionIsNotValid | 800021 | This subscription is not a valid subscription. |
 | ManualReviewRequired | 800022 | You may be eligible for this transaction. Please contact Support for help.|
 | InsufficientFunds | 800023 | You are not eligible for this transaction because your Credit Line is not reaching minimum threshold for this purchase.Please update your order(or) contact Support for help. |

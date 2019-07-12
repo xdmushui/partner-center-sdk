@@ -1,7 +1,7 @@
 ---
 title: Create a cart
 description: How to add an order for a customer in a cart.
-ms.date: 05/23/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -94,6 +94,19 @@ var cart = new Cart()
             Quantity = 1,
             BillingCycle = BillingCycleType.Monthly,
             TermDuration = "P1M"
+        },
+        new CartLineItem()
+        {
+      /* SaaS Free Trial */
+            Id = 5,
+            CatalogItemId = "DZH318Z0C0WF:0001:DZH318Z0BP69",
+            Quantity = 10,
+            BillingCycle = BillingCycleType.None,
+            TermDuration = "P1M",
+            RenewsTo = new RenewsTo
+            {
+                TermDuration = "P1Y"
+            }
         }
     }
 };
@@ -201,7 +214,7 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 | lastModifiedTimeStamp | DateTime         | No              | The date the cart was last updated, in date-time format. Applied upon successful creation of the cart.    |
 | expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
-| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                             |
+| lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                     |
 
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
@@ -217,6 +230,13 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | provisioningContext | Dictionary<string, string>  |    No    | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 |     orderGroup      |           string            |    No    |                                                                   A group to indicate which items can be placed together.                                                                   |
 |        error        |           Object            |    No    |                                                                     Applied after cart is created in case of an error.                                                                      |
+|     renewsTo        | Array of objects            |    No    |                                                    An array of [RenewsTo](cart-resources.md#renewsto) resources.                                                                            |
+
+This table describes the [RenewsTo](cart-resources.md#renewsto) properties in the request body.
+
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
 
 ### Request example
 
@@ -281,6 +301,17 @@ Expect: 100-continue
       "quantity": 1,
       "billingCycle": "monthly",
       "termDuration": "P1M"
+    },
+  {
+    /* SaaS Free Trial */
+       "id": 5,
+       "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
+       "quantity": 10,
+       "billingCycle": "none",
+       "termDuration": "P1M",
+       "renewsTo": {
+         "termDuration": "P1Y"
+       }
     }
   ]
 }
@@ -365,6 +396,18 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "billingCycle": "monthly",
       "termDuration": "P1M",
       "orderGroup": "1"
+    },
+  {
+      "id": 5,
+      "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
+      "quantity": 10,
+      "currencyCode": "USD",
+      "billingCycle": "none",
+      "termDuration": "P1M",
+      "renewsTo": {
+  "termDuration": "P1Y"
+      },
+    "orderGroup": "2"
     }
   ],
   "links": {
