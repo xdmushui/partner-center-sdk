@@ -2,7 +2,7 @@
 title: Subscription resources
 description: A subscription lets a customer use a service for a certain period of time.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.date: 06/24/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -52,9 +52,9 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | refundOptions        | array of [RefundOption](#refundoption) resources   | Read-Only. The set of refund options available for this subscription.                                                                                              |
 | links                | [SubscriptionLinks](#subscriptionlinks)                       | Gets or sets the subscription links.                                                                                                                                          |
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
-| termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
+| termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month), **P1Y** (1 year) and **P3Y** (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
-| renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year).                                                        |
+| renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year).                                                        |
 
 ## SubscriptionLinks
 
@@ -71,7 +71,6 @@ The **SubscriptionLinks** resource describes the collection of links attached to
 | self               | [Link](utility-resources.md#link) | The self URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
-
 
 ## SubscriptionProvisioningStatus
 

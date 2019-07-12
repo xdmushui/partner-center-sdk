@@ -1,7 +1,7 @@
 ---
 title: Create a cart
 description: How to add an order for a customer in a cart.
-ms.date: 05/23/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -236,7 +236,7 @@ This table describes the [RenewsTo](cart-resources.md#renewsto) properties in th
 
 | Property              | Type             | Required        | Description |
 |-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
-| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are P1M (1 month), P1Y (1 year) |
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
 
 ### Request example
 
@@ -302,7 +302,7 @@ Expect: 100-continue
       "billingCycle": "monthly",
       "termDuration": "P1M"
     },
-	{
+  {
     /* SaaS Free Trial */
        "id": 5,
        "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
@@ -397,7 +397,7 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "termDuration": "P1M",
       "orderGroup": "1"
     },
-	{
+  {
       "id": 5,
       "catalogItemId": "DZH318Z0C0WF:0001:DZH318Z0BP69",
       "quantity": 10,
@@ -405,9 +405,9 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
       "billingCycle": "none",
       "termDuration": "P1M",
       "renewsTo": {
-	"termDuration": "P1Y"
+  "termDuration": "P1Y"
       },
-	  "orderGroup": "2"
+    "orderGroup": "2"
     }
   ],
   "links": {
