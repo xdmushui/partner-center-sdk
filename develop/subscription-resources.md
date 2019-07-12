@@ -71,7 +71,7 @@ The **SubscriptionLinks** resource describes the collection of links attached to
 | self               | [Link](utility-resources.md#link) | The self URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
-|
+
 
 ## SubscriptionProvisioningStatus
 
