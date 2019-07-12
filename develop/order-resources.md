@@ -62,8 +62,15 @@ An order contains an itemized list of offers, and each item is represented as an
 | partnerIdOnRecord    | string                                    | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
 | provisioningContext  | Dictionary<string, string>                | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
 | links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the order line item.                                                                                                                                                                                |
+| renewsTo             | Array of objects                          | An array of [RenewsTo](#renewsto) resources.                                                                            |
 
- 
+## <span id="renewsTo"/><span id="renewsto"/><span id="RENEWSTO"/>RenewsTo
+
+Represents one item contained in a order line item.
+
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are P1M (1 month), P1Y (1 year) |
 
 ## <span id="orderLinks"/><span id="orderlinks"/><span id="ORDERLINKS"/>OrderLinks
 

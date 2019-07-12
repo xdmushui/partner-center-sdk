@@ -54,6 +54,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | orderId              | string                                                        | The ID of the order that was placed to begin the subscription.                                                                                                                |
 | termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
+| renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                                        |
 
 ## SubscriptionLinks
 

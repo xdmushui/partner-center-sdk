@@ -48,6 +48,15 @@ Represents one item contained in a cart.
 | orderGroup           | string                           | A group to indicate which items can be submitted together in the same order.                                                                          |
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
+| renewsTo             | Array of objects                 | An array of [RenewsTo](#renewsto) resources.                                                                            |
+
+## RenewsTo
+
+Represents one item contained in a cart line item.
+
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are P1M (1 month), P1Y (1 year) |
 
 ## CartError
 
