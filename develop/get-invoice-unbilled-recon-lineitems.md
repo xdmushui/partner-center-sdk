@@ -144,7 +144,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Request example 1** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous)
 
 ```http
-GET https://api.partnercenter.microsoft-ppe.com/v1//invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1//invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
