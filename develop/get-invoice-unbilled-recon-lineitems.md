@@ -1,14 +1,13 @@
 ---
-title: Get invoice unbilled reconciliation line items
+title: Get invoice's unbilled reconciliation line items
 description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 04/05/2019
+ms.date: 07/16/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice unbilled reconciliation line items
+# Get invoice's unbilled reconciliation line items
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -19,22 +18,28 @@ How to get a collection of Azure Marketplace invoice line item details for the s
 
 ## Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## C#
+## C\#
 
+To get the line items for the specified invoice, retrieve the invoice object:
 
-To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
 
-The Provider identifies the source of the unbilled detail information (e.g. All), and the InvoiceLineItemType specifies the type (e.g. UsageLineItem).
+The invoice object contains all of the information for the specified invoice:
 
-The example code that follows uses a foreach loop to process the InvoiceLineItems collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
+- **Provider** identifies the source of the unbilled detail information (for example, **All**).
+- **InvoiceLineItemType** specifies the type (for example, **UsageLineItem**).
 
-To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](#) or [**GetAsync**](#) method to retrieve the associated line items.
+To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
-Finally, create an enumerator to traverse the collection as shown in the following example.
+1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method
+2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
+3. Create an enumerator to traverse the collection. For an example, see the following sample code.
+
+The following sample code uses a `foreach` loop to process the **InvoiceLineItems** collection. A separate collection of line items is retrieved for each **InvoiceLineItemType**.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -92,13 +97,13 @@ while (fetchNext)
 }
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetUnBilledReconLineItemsPaging.cs
+For a similar example, see the class **GetUnBilledReconLineItemsPaging.cs** in the **Partner Center SDK Samples** project in the sample [Console test app](console-test-app.md).
 
-## REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using seekOperation = "Next" 
+Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using `seekOperation = "Next"`.
 
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,7 +111,7 @@ Use the first syntax to return a full list of every line item for the given invo
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
 
-**URI parameters**
+#### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -120,11 +125,11 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
-**Request headers**
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+Request body
 
 None.
 
@@ -133,15 +138,21 @@ None.
 If successful, the response contains the collection of line item details.
 
 > [!NOTE]
->  For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-## Request/Response Examples
+## REST request and response examples
 
-**Request example 1** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous)
+### Request and response example 1
+
+- Provider: **All**
+- InvoiceLineItemType: **BillingLineItems**
+- Period: **Previous**
+
+#### Request example 1
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1//invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
@@ -154,7 +165,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 1** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous)
+#### Response example 1
 
 ```http
 HTTP/1.1 200 OK
@@ -168,7 +179,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 {
     "totalCount": 2,
-    "items": [ 
+    "items": [
         {
             "partnerId": "0c924e8d-4852-4692-a4d7-7dd0dc09ad80",
             "customerId": "org:d7f565f5-5367-492f-a465-9e2057c5e3c3",
@@ -271,7 +282,14 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 }
 ```
 
-**Request example 2** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous, SeekOperation: Next)
+### Request and response example 2
+
+- Provider: **All**
+- InvoiceLineItemType: **BillingLineItems**
+- Period: **Previous**
+- SeekOperation: **Next**
+
+#### Request example 2
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=all&invoiceLineItemType=billinglineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
@@ -285,7 +303,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 2** (Provider: All, InvoiceLineItemType: BillingLineItems, Period: Previous, SeekOperation: Next)
+#### Response example 2
 
 ```http
 HTTP/1.1 200 OK
