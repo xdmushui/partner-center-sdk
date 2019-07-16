@@ -97,7 +97,11 @@ while (fetchNext)
 }
 ```
 
-For a similar example, see the class **GetUnBilledReconLineItemsPaging.cs** in the **Partner Center SDK Samples** project in the sample [Console test app](console-test-app.md).
+For a similar example, see:
+
+- [Console test app](console-test-app.md)
+- Project: Partner Center SDK Samples
+- Class: GetUnBilledReconLineItemsPaging.cs
 
 ## REST request
 
@@ -129,7 +133,7 @@ Use the following URI and query parameters when creating the request.
 
 See [Partner Center REST headers](headers.md) for more information.
 
-Request body
+### Request body
 
 None.
 
