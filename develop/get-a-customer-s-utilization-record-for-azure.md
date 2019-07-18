@@ -115,7 +115,7 @@ To obtain the Azure Utilization Records, you first need a customer identifier an
 Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -SubscriptionId $subscriptionId -StartDate (Get-Date).AddDays(-2).ToUniversalTime() -Granularity Hourly -ShowDetails
 ```
 
-## REST request
+### [REST](#tab/rest)
 
 ### Request syntax
 
@@ -152,7 +152,7 @@ The following example request produces results similar to what the reconciliatio
 This example request returns utilization data reported in the billing system between 7/2 at 12 AM (UTC) and 8/2 at 12 AM (UTC).
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-07-02T00:00:00-08:00&amp;end_time=2017-08-02T00:00:00-08:00 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-07-02T00:00:00-08:00&end_time=2017-08-02T00:00:00-08:00 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e6a3b6b2-230a-4813-999d-57f883b60d38
@@ -244,7 +244,7 @@ Date: Fri, 04 Aug 2017 23:48:28 GMT
 
       "links": {
         "self": {
-          "uri": "customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-06-10T00:00:00Z&amp;end_time=2017-07-09T00:00:00Z&amp;granularity=Daily&amp;show_details=True&amp;size=1000",
+          "uri": "customers/E499C962-9218-4DBA-8B83-8ADC94F47B9F/subscriptions/FC8F8908-F918-4406-AF13-D5BC0FE41865/utilizations/azure?start_time=2017-06-10T00:00:00Z&end_time=2017-07-09T00:00:00Z&granularity=Daily&show_details=True&size=1000",
           "method": "GET",
           "headers": []
         }

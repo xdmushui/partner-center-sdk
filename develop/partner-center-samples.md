@@ -47,7 +47,7 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
         <p><a href="http://go.microsoft.com/fwlink/p/?LinkId=746683">Download the sample code</a></p>
         <p><strong>What to configure before release:</strong></p>
         <ul>
-          <li><p>Authentication: App ID &amp; secret.</p></li>
+          <li><p>Authentication: App ID & secret.</p></li>
           <li><p>Branding: logo and company name.</p></li>
           <li><p>Welcome message.</p></li>
           <li><p>Offers, including descriptions and prices. The app assumes that the list prices include any applicable taxes. Alternatively, you can add additional logic to calculate tax during checkout.</p></li>

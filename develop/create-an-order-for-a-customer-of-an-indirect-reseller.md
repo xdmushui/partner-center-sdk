@@ -44,7 +44,7 @@ To create an order for a customer of an indirect reseller:
 var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipType.IsIndirectCloudSolutionProviderOf);
 
 // Find the matching reseller in the collection.
-var selectedIndirectReseller = (indirectResellers != null &amp;&amp; indirectResellers.Items.Any()) ?
+var selectedIndirectReseller = (indirectResellers != null && indirectResellers.Items.Any()) ?
     indirectResellers.Items.FirstOrDefault(reseller => reseller.Id.Equals(indirectResellerId, StringComparison.OrdinalIgnoreCase)) :
     null;
 

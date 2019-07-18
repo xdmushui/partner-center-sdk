@@ -102,17 +102,17 @@ Date: Mon, 23 Nov 2015 18:02:12 GMT
         "groupName": "Office",
         "links": {
             "adminService": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=Exchange&amp;InitialDomain=<domain>&amp;PrimaryDomain=<domain>",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=Exchange&InitialDomain=<domain>&PrimaryDomain=<domain>",
                 "method": "GET",
                 "headers": []
             },
             "serviceHealth": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=ServiceStatus",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=ServiceStatus",
                 "method": "GET",
                 "headers": []
             },
             "serviceTicket": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=Support",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=Support",
                 "method": "GET",
                 "headers": []
             }
@@ -127,17 +127,17 @@ Date: Mon, 23 Nov 2015 18:02:12 GMT
         "groupName": "Office",
         "links": {
             "adminService": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=MicrosoftCommunicationsOnline",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=MicrosoftCommunicationsOnline",
                 "method": "GET",
                 "headers": []
             },
             "serviceHealth": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=ServiceStatus",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=ServiceStatus",
                 "method": "GET",
                 "headers": []
             },
             "serviceTicket": {
-                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&amp;CSDEST=Support",
+                "uri": "https://portal.office.com/Partner/BeginClientSession.aspx?CTID=<ctid>&CSDEST=Support",
                 "method": "GET",
                 "headers": []
             }

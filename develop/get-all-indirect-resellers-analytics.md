@@ -167,7 +167,7 @@ How to get all the indirect resellers analytics information for your customers.
 		<td>orderby</td>
 		<td>string</td>
 		<td>
-			<p>A statement that orders the result data values for each install. The syntax is <code>...&amp;orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
+			<p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
 			<ul>
                 <li>&quot;partnerTenantId&quot;</li> 
                 <li>&quot;id&quot;</li> 
@@ -186,7 +186,7 @@ How to get all the indirect resellers analytics information for your customers.
 			</ul>
             <p>The <em>order</em> parameter is optional, and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field. The default is &quot;asc&quot;.</p>
 			<p><strong>Example:</strong></br> 
-				<code>...&amp;orderby=market,subscriptionCount</code>
+				<code>...&orderby=market,subscriptionCount</code>
 			</p> 
 		</td>
 	</tr>
@@ -217,7 +217,7 @@ How to get all the indirect resellers analytics information for your customers.
 			</ul>
 			<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
 			<p><strong>Example:</strong></br>
-				<code>...&amp;groupby=ageGroup,market&amp;aggregationLevel=week</code>
+				<code>...&groupby=ageGroup,market&aggregationLevel=week</code>
 			</p>
 		</td>
 	</tr>
