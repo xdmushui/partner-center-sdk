@@ -2,7 +2,7 @@
 title: Get a list of customers filtered by a search field
 description: Gets a collection of Customer resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
 ms.assetid: 7D5D8C83-1DBD-4C54-8CDA-FE0CAC911D14
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -107,7 +107,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter=%7B%22Field%22%3A%22CompanyName%22%2C%22Value%22%3A%22Cont%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter=%7B%22Field%22%3A%22CompanyName%22%2C%22Value%22%3A%22Cont%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 5ce66de5-eea9-486f-a11c-c852aa3d1502
@@ -228,7 +228,7 @@ Date: Fri, 24 Feb 2017 22:08:20 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers?size=0&amp;filter=%7B%22Field%22%3A%22Domain%22%2C%22Value%22%3A%22cont%22%2C%22Operator%22%3A%22starts_with%22%7D",
+            "uri": "/customers?size=0&filter=%7B%22Field%22%3A%22Domain%22%2C%22Value%22%3A%22cont%22%2C%22Operator%22%3A%22starts_with%22%7D",
             "method": "GET",
             "headers": []
         }

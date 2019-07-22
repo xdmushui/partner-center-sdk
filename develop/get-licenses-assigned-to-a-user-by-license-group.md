@@ -2,7 +2,7 @@
 title: Get licenses assigned to a user by license group
 description: How to get a list of user assigned licenses for the specified license groups.
 ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -79,7 +79,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/users/482e2152-4b49-48ec-b715-823365ce3d4c/licenses?licenseGroupIds=Group1&amp;licenseGroupIds=Group2 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/users/482e2152-4b49-48ec-b715-823365ce3d4c/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: a1d077e4-28b1-4578-b873-6d1a82fa1644

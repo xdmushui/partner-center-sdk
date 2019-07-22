@@ -2,7 +2,7 @@
 title: View deleted users for a customer
 description: Gets a list of deleted CustomerUser resources for a customer by customer ID. You can optionally set a page size. You must supply a filter.
 ms.assetid: B2248C7D-0F68-4F52-9249-D3168C2F6E83
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -81,7 +81,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users?size=500&amp;filter=%7B%22Field%22%3A%22UserState%22%2C%22Value%22%3A%22Inactive%22%2C%22Operator%22%3A%22equals%22%7D HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users?size=500&filter=%7B%22Field%22%3A%22UserState%22%2C%22Value%22%3A%22Inactive%22%2C%22Operator%22%3A%22equals%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: c11feb95-55d2-45b6-9d1b-74b55d2221fb
@@ -137,7 +137,7 @@ Date: Fri, 20 Jan 2017 19:13:14 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users?size=500&amp;filter=%7B%22Field%22%3A%22UserStatus%22%2C%22Value%22%3A%22Inactive%22%2C%22Operator%22%3A%22equals%22%7D",
+            "uri": "/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users?size=500&filter=%7B%22Field%22%3A%22UserStatus%22%2C%22Value%22%3A%22Inactive%22%2C%22Operator%22%3A%22equals%22%7D",
             "method": "GET",
             "headers": []
         }

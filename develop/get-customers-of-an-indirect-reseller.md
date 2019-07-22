@@ -2,7 +2,7 @@
 title: Get customers of an indirect reseller
 description: How to get a list of the customers of an indirect reseller.
 ms.assetid: 2920F056-E6B8-4C66-9EEA-4577BEC034F9
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -100,7 +100,7 @@ None.
 **Request example (encoded)**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter=%7B%22Field%22%3A%22IndirectReseller%22%2C%22Value%22%3A%22484e548c-f5f3-4528-93a9-c16c6373cb59%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter=%7B%22Field%22%3A%22IndirectReseller%22%2C%22Value%22%3A%22484e548c-f5f3-4528-93a9-c16c6373cb59%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: aa04fb9d-c6b6-4754-8a6a-86e00cdd5ccb
@@ -112,7 +112,7 @@ Host: api.partnercenter.microsoft.com
 **Request example (decoded)**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers?size=0&amp;filter={"Field":"IndirectReseller","Value":"484e548c-f5f3-4528-93a9-c16c6373cb59","Operator":"starts_with"} HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter={"Field":"IndirectReseller","Value":"484e548c-f5f3-4528-93a9-c16c6373cb59","Operator":"starts_with"} HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: aa04fb9d-c6b6-4754-8a6a-86e00cdd5ccb
