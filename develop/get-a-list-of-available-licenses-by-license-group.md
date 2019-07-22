@@ -2,7 +2,7 @@
 title: Get a list of available licenses by license group
 description: How to get a list of licenses for the specified license groups available to users of the specified customer.
 ms.assetid: 1677A68C-0298-49C7-BAE1-5E74D8449C3F
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 

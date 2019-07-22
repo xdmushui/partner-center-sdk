@@ -2,7 +2,7 @@
 title: Get a collection of invoices
 description: How to retrieve a collection of the partner's invoices.
 ms.assetid: B5392987-3D2E-493B-9F97-A20055D5D46A
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 

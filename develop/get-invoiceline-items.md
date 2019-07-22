@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: How to get a collection of invoice line item details for the specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 04/03/2019
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 

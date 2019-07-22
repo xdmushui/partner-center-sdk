@@ -2,7 +2,7 @@
 title: Partner Center samples
 description: To help you get up and running quickly with the Partner Center APIs, we provide a sample program, C\ managed code snippets, and REST sample requests and responses.
 ms.assetid: FBE67405-88E2-42F4-B456-D4602A2719F5
-ms.date: 09/29/2018
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 

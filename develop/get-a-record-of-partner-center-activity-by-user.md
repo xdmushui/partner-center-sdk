@@ -2,7 +2,7 @@
 title: Get a record of Partner Center activity
 description: How to get a record of operations performed by a partner user or application over a period of time.
 ms.assetid: C24054DA-3E31-4BCD-BEB5-085564C20C58
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 

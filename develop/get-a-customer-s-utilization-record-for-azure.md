@@ -2,7 +2,7 @@
 title: Get a customer's utilization records for Azure
 description: Get the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
-ms.date: 05/29/2019
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
