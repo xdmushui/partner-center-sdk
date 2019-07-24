@@ -32,7 +32,7 @@ Partner Center utilizes Azure Active Directory for authentication. When interact
 
 If you would like to use app-only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by leveraging the following:
 
-### [.NET](#tab/dotnet)
+### [.NET](#tab/apponly-dotnet)
 
 ```csharp
 public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
@@ -48,7 +48,7 @@ public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
 }
 ```
 
-### [Java](#tab/java)
+### [Java](#tab/apponly-java)
 
 ```java
 public IAggregatePartner getAppPartnerOperations()
@@ -63,7 +63,7 @@ public IAggregatePartner getAppPartnerOperations()
 }
 ```
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/apponly-powershell)
 
 ```powershell
 $credential = Get-Credential
@@ -73,7 +73,7 @@ Connect-PartnerCenter -Credential $credential -TenantId '<TenantId>'
 > [!NOTE]  
 > When you are prompted for credentials specify the client identifier as the username and the client secret as the password.
 
-### [REST](#tab/rest)
+### [REST](#tab/apponly-rest)
 
 Request:
 
@@ -119,7 +119,7 @@ The partner consent process is an interactive process where the partner authenti
 
 The partner consent process can be performed in a number of ways. To help partners understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-#### [.NET](#tab/dotnet)
+#### [.NET](#tab/appuser-dotnet)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using ASP.NET to capture consent, request a refresh token, and securely store it in Azure Key Vault. Perform the following steps to create the required prerequisites for this sample.
 
@@ -207,7 +207,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
 8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
 
-#### [Java](#tab/java)
+#### [Java](#tab/appuser-java)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using JSP to capture consent, request a refresh token, and secure store in Azure Key Vault. Perform the following to create the required prerequisites for this sample.
 
@@ -300,7 +300,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
 8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
 
-#### [PowerShell](#tab/powershell)
+#### [PowerShell](#tab/appuser-powershell)
 
 Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
 
@@ -323,7 +323,7 @@ Cloud Solution Provider partners can use the refresh token obtained through the 
 
 To help partners understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-#### [.NET](#tab/dotnet)
+#### [.NET](#tab/csp-dotnet)
 
 1. If you have not already done so, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
@@ -367,7 +367,7 @@ To help partners understand how to perform each required operation, we have deve
 
 6. When you run this sample project it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf. Finally, it requests an access token to interact with Microsoft Graph on behalf of the specified customer.
 
-#### [Java](#tab/java)
+#### [Java](#tab/csp-java)
 
 1. If you have not done so already, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using Visual Studio or the following command
@@ -392,7 +392,7 @@ To help partners understand how to perform each required operation, we have deve
 5. When you run this sample project, it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf.
 6. Optional - un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
-#### [PowerShell](#tab/powershell-csp)
+#### [PowerShell](#tab/csp-powershell)
 
 Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
 
@@ -419,7 +419,7 @@ Control panel vendors need to have each partner they support perform the [partne
 
 To help control panel vendors understand how to perform each required operation, we have developed the following samples. Please note that these are samples only. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-#### [.NET](#tab/dotnet)
+#### [.NET](#tab/cpp-dotnet)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
@@ -502,7 +502,7 @@ To help control panel vendors understand how to perform each required operation,
 
 After these permissions have been established, the sample performs operations using Azure AD Graph on behalf of the customer.
 
-#### [Java](#tab/java)
+#### [Java](#tab/cpp-java)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
