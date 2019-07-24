@@ -42,7 +42,8 @@ The following overview documents and sample code describe how partners can imple
 - [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
 - [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
 - [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
-- [REST instructions](#rest) and [sample REST code](#sample-rest-code)
+- [REST instructions and samples](#rest)
+- [PowerShell instructions and samples](#powershell)
 
 ## REST
 
