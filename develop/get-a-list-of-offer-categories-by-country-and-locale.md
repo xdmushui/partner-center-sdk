@@ -1,32 +1,32 @@
 ---
 title: Get a list of offer categories by market
-description: Gets a collection that contains all the offer categories in a given country/region and locale.
+description: How to get a collection that contains all the offer categories in a given country/region and locale.
 ms.assetid: 69174433-74C6-4294-ACAA-C2CE3D69CFEE
-ms.date: 12/15/2017
+ms.date: 07/25/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of offer categories by market
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection that contains all the offer categories in a given country/region and locale.
+This topic describes how to get a collection that contains all the offer categories in a given country/region and locale.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To get a list of offer categories in a given country/region and locale:
 
-To get a list of offer categories in a given country/region and locale, use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection, call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context, and inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
+1. Use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection to call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context.
+2. Inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -34,20 +34,21 @@ To get a list of offer categories in a given country/region and locale, use your
 ResourceCollection<OfferCategory> offerCategoryResults = partnerOperations.With(RequestContextFactory.Instance.Create()).OfferCategories.ByCountry("US").Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: OfferCategories.cs
+For an example, see the following:
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSample**
+- Class: **PartnerSDK.FeatureSample**
 
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                  |
 |---------|----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offercategories?country={country-id} HTTP/1.1 |
 
-
-
-**URI parameter**
+#### URI parameter
 
 This table lists the required query parameters to get the offer categories.
 
@@ -55,18 +56,17 @@ This table lists the required query parameters to get the offer categories.
 |----------------|------------|----------|------------------------|
 | **country-id** | **string** | Y        | The country/region ID. |
 
+### Request headers
 
+A **locale-id** formatted as a string is required.
 
-**Request headers**
+See [Headers](headers.md) for more information.
 
-- A **locale-id** formatted as a string is required.
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offercategories?country=<country-id> HTTP/1.1
@@ -78,16 +78,15 @@ X-Locale: <locale-id>
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a collection of **OfferCategory** resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -144,11 +143,3 @@ Date: Thu, 26 Nov 2015 00:07:10 GMT
     }
 }
 ```
-
-
-
-
-
-
-
-
