@@ -1,34 +1,35 @@
 ---
 title: Get a list of customers
-description: Gets a collection of resources representing all the partner's customers.In the Partner Center dashboard, this operation can be performed by selecting either View Customers under Customer management on the main page, or selecting Customers in the sidebar.
+description: How to get a collection of resources representing all of a partner's customers.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
-ms.date: 9/21/2018
+ms.date: 07/25/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of customers
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of resources representing all the partner's customers.
+This topic describes how to get a collection of resources that represents all of a partner's customers.
 
-In the Partner Center dashboard, this operation can be performed by selecting either **View Customers** under **Customer management** on the main page, or selecting **Customers** in the sidebar.
+> [!TIP]
+> You can also perform this operation in the Partner Center dashboard. On the main page, under **Customer management**, select **View Customers**. Or, on the sidebar, select **Customers**.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
-Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C#
+To get a list of all customers:
 
-To get a list of all customers, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create a **IPartner** object. Then, retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.
+1. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
+2. Retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -41,11 +42,18 @@ var customersBatch = scopedPartnerOperations.Customers.Query(QueryFactory.Instan
 var customersEnumerator = scopedPartnerOperations.Enumerators.Customers.Create(customersBatch);
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerPaging.cs
+For an example, see the following:
 
-### Java
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSamples**
+- Class: **CustomerPaging.cs**
 
-To get a list of all customers, use your [**IAggregatePartner.getCustomers**] function to get a reference to the customer operations. Then, retrieve the customer list using the **query()** function. 
+## Java
+
+To get a list of all customers:
+
+1. Use the [**IAggregatePartner.getCustomers**] function to get a reference to the customer operations.
+2. Retrieve the customer list using the **query()** function.
 
 ```java
 // Query the customers, get the first page if a page size was set, otherwise get all customers
@@ -61,7 +69,7 @@ while (customersEnumerator.hasValue())
 {
     /*
      * Use the customersEnumerator.getCurrent() function to
-     * access the current page of customers.   
+     * access the current page of customers.
      */
 
     // Get the next page of customers
@@ -69,7 +77,7 @@ while (customersEnumerator.hasValue())
 }
 ```
 
-### PowerShell
+## PowerShell
 
 Execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command with no parameters to get a complete list of customers.
 
@@ -77,15 +85,15 @@ Execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Cente
 Get-PartnerCustomer
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size} HTTP/1.1 |
 
-**URI parameter**
+#### URI parameter
 
 Use the following query parameter to get a list of customers.
 
@@ -93,15 +101,15 @@ Use the following query parameter to get a list of customers.
 |----------|---------|----------|----------------------------------------------------|
 | **size** | **int** | Y        | The number of results to be displayed at one time. |
 
-**Request headers**
+### Request headers
 
-- See [Headers](headers.md) for more information.
+See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=40 HTTP/1.1
@@ -111,16 +119,15 @@ MS-RequestId: 3705fc6d-4127-4a87-bdba-9658f73fe019
 MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
