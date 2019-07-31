@@ -1,7 +1,7 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.localizationpriority: medium
 ---
 
@@ -64,7 +64,7 @@ You must create and register a web app in Partner Center before making REST call
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Create an Azure Active Directory (Azure AD) app.
-3. Give delegated application permissions to the following:
+3. Give delegated application permissions to the following resources, *depending on your application's requirements*. If necessary, you can add more delegated permissions for application resources.
     1. **Microsoft Partner Center** (some tenants show this as **SampleBECApp**)
     2. **Azure Management APIs** (if you are planning to call Azure APIs)
     3. **Windows Azure Active Directory**
@@ -118,7 +118,7 @@ You must then use your authorization code to get a refresh token:
 Placeholder request:
 
 ```http
-POST https://login.microsoftonline.com/ CSPTenantID/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/CSPTenantID/oauth2/token HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 Host: login.microsoftonline.com
 Content-Length: 966
@@ -152,7 +152,7 @@ You must obtain an access token before you can make calls to the Partner Center 
 Placeholder request:
 
 ```http
-POST https://login.microsoftonline.com/ CSPTenantID/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/CSPTenantID/oauth2/token HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 Host: login.microsoftonline.com
 Content-Length: 1212
