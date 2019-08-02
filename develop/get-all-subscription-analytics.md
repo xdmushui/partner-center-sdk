@@ -2,59 +2,54 @@
 title: Get all subscription analytics information
 description: How to get all the subscription analytics information. 
 ms.assetid: 243E54BD-EA34-400E-B9AB-D735EB46B9F6
-ms.date: 06/27/2018
+ms.date: 08/02/2019
 ms.localizationpriority: medium
 ---
 
 # Get all subscription analytics information
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
+This topic describes how to get all the subscription analytics information for your customers.
 
-How to get all the subscription analytics information for your customers. 
+## Prerequisites
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
+## REST request
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
-
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
-
-**Request syntax**
+### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions HTTP/1.1 |
- 
 
-**URI parameters**
+#### URI parameters
 
 The following table lists optional parameters and their descriptions:
 
 | Parameter | Type |  Description |
 |-----------|------|--------------|
-| top | int | The number of rows of data to return in the request. If the value is not specified, the maximum value and the default value are 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data. |
-| skip | int | The number of rows to skip in the query. Use this parameter to page through large data sets. For example, top=10000 and skip=0 retrieves the first 10000 rows of data, top=10000 and skip=10000 retrieves the next 10000 rows of data. |
-| filter | string | One or more statements that filter the rows in the response. Each filter statement contains a field name from the response body and a value that are associated with the **eq**, **ne**, or for certain fields, the **contains** operator. Statements can be combined using **and** or **or**. String values must be surrounded by single quotes in the filter parameter. See the following section for a list of fields that can be filtered and the operators that are supported with those fields. |
-| aggregationLevel | string | Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: **day**, **week**, or **month**. If the value is not specified, the default is **dateRange**. **Note**: This parameter applies only when a date field is passed as part of the groupBy parameter. |
+| top | int | The number of rows of data to return in the request. If the value is not specified, the maximum value and the default value are `10000`. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data. |
+| skip | int | The number of rows to skip in the query. Use this parameter to page through large data sets. For example, `top=10000` and `skip=0` retrieves the first 10000 rows of data, `top=10000` and `skip=10000` retrieves the next 10000 rows of data. |
+| filter | string | One or more statements that filter the rows in the response. Each filter statement contains a field name from the response body and a value that are associated with the **eq**, **ne**, or for certain fields, the **contains** operator. Statements can be combined using **and** or **or**. String values must be surrounded by single quotes in the **filter** parameter. See the following section for a list of fields that can be filtered and the operators that are supported with those fields. |
+| aggregationLevel | string | Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: **day**, **week**, or **month**. If the value is not specified, the default is **dateRange**. This parameter applies only when a date field is passed as part of the **groupBy** parameter. |
 | groupBy | string | A statement that applies data aggregation only to the specified fields. |
 
+### Request headers
 
-**Request headers**
+See [Headers](headers.md) for more information.
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions
@@ -64,16 +59,15 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
+If successful, the response body contains a collection of [**Subscription**](partner-center-analytics-resources.md#subscription) resources.
 
-If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources.
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 {
@@ -103,6 +97,6 @@ Each response comes with an HTTP status code that indicates success or failure a
 }
 ```
 
+## See also
 
-## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
