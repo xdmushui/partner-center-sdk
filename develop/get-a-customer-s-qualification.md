@@ -1,7 +1,7 @@
 ---
 title: Get a customer's qualification
 description: How to get a customer's qualification.
-ms.date: 11/08/2018
+ms.date: 08/07/2019
 ms.localizationpriority: medium
 ---
 
@@ -86,9 +86,8 @@ Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
-{
     "education"
-}
+
 ```
 
 ## Related topics
