@@ -78,7 +78,7 @@ Connect-PartnerCenter -Credential $credential -ServicePrincipal -TenantId '<Tena
 **Request**
 
 ```http
-POST https://login.microsoftonline.com/{tenanId}/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/{tenantId}/oauth2/token HTTP/1.1
 Accept: application/json
 return-client-request-id: true
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
