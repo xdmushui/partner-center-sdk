@@ -17,7 +17,7 @@ How to upload a list of information about devices to create a new batch for the 
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
 - The customer identifier.
 - The list of device resources that provide the information about the individual devices.
 
