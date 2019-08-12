@@ -2,7 +2,7 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 07/22/2019
+ms.date: 08/09/2019
 ms.localizationpriority: medium
 ---
 
@@ -78,7 +78,7 @@ Connect-PartnerCenter -Credential $credential -TenantId '<TenantId>'
 Request:
 
 ```http
-POST https://login.microsoftonline.com/{tenanId}/oauth2/token HTTP/1.1
+POST https://login.microsoftonline.com/{tenantId}/oauth2/token HTTP/1.1
 Accept: application/json
 return-client-request-id: true
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -203,7 +203,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```
 
     > [!IMPORTANT]  
-    > Sensitive information such as application secrets should not be stored in configuration files. It was done here because this is a sample application. With your production application we strongly recommend that you use certificate-based authentication. See [Authenticate with a certificate instead of a client secret](https://docs.microsoft.com/azure/key-vault/key-vault-use-from-web-application#authenticate-with-a-certificate-instead-of-a-client-secret) for more information.
+    > Sensitive information such as application secrets should not be stored in configuration files. It was done here because this is a sample application. With your production application we strongly recommend that you use [certificate-based authentication](https://docs.microsoft.com/en-us/azure/key-vault/certificate-scenarios).
 
 8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
 
