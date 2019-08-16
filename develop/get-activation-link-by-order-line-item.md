@@ -2,7 +2,7 @@
 title: Get activation link by order line item
 description: Gets a subscription activation link by order line item.
 ms.assetid: ff1c1b59-f6c2-4f17-b0d6-00109761a1fd
-ms.date: 2/14/2018
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 # Get activation link by order line item
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets an Azure Marketplace subscription activation link by the order line item number.
+Gets a commercial marketplace subscription activation link by the order line item number.
 
 In the Partner Center dashboard, this operation can be performed by selecting either a **Specific Subcription** under **Subscription** on the main page, or selecting the **Go to Publisher's site** link next to the subscription to activate on the **Subscriptions** page.
 

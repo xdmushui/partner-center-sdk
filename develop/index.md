@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 06/24/2019
+ms.date: 08/16/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -174,19 +174,19 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Azure Marketplace</h3>
-                        <p>New REST APIs enabling the following Azure Marketplace scenarios (including seat-based subscriptions and site-based subscriptions):</p>
+                        <h3>Commercial marketplace</h3>
+                        <p>New REST APIs enabling the following commercial marketplace scenarios (including seat-based subscriptions and site-based subscriptions):</p>
                         <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products" data-linktype="external">Create a subscription for Azure Marketplace products</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-azure-marketplace-subscription" data-linktype="external">Cancel an Azure Marketplace subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products" data-linktype="external">Create a subscription for commercial marketplace products</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-azure-marketplace-subscription" data-linktype="external">Cancel a commercial marketplace subscription</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox" data-linktype="external">Cancel an order from the integration sandbox</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-activation-link-by-order-line-item" data-linktype="external">Get activation link by order line item</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/change-the-quantity-of-a-subscription" data-linktype="external">Change the quantity of a subscription</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed Azure Marketplace consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed commercial marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-estimate-links" data-linktype="external">Get invoice estimate links</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled Azure Marketplace consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled commercial marketplace consumption line items</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled reconciliation line items</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for an Azure Marketplace subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for a commercial marketplace subscription</a></p>
                     </div>
                 </div>
             </div>

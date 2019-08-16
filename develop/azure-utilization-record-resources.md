@@ -2,7 +2,7 @@
 title: Azure utilization record resources
 description: The Azure utilization record contains details about the utilization of an Azure subscription resource.
 ms.assetid: 4C1EEEB3-DB25-4D61-BFED-C4AB5D3BB5CF
-ms.date: 05/21/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
@@ -59,7 +59,7 @@ Describes the properties of an Azure Instance Data resource.
 |----------------|------------------|----------|--------------------------------------------------------------------------------------------------------------------|
 | resourceUri    | string           | Yes      | The fully qualified Azure resource ID, which includes the resource groups and the instance name.                   |
 | location       | string           | Yes      | Region in which the service was run.                                                                               |
-| partNumber     | object           | Yes      | Unique namespace used to identify the resource for Azure Marketplace 3rd party usage. This may be an empty string. |
-| orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for Azure Marketplace. This may be an empty string.          |
+| partNumber     | object           | Yes      | Unique namespace used to identify the resource for commercial marketplace 3rd party usage. This may be an empty string. |
+| orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for commercial marketplace. This may be an empty string.          |
 | tags           | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
 | additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          |

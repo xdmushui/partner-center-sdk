@@ -1,7 +1,7 @@
 ---
 title: Cancel an order from the integration sandbox
 description: Cancel orders from integration sandbox accounts.
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,10 +14,10 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to cancel reserved instance, software, and Azure Marketplace Software as a Service (SaaS) subscription orders from integration sandbox accounts.
+How to cancel reserved instance, software, and commercial marketplace Software as a Service (SaaS) subscription orders from integration sandbox accounts.
 
 >[!NOTE]
->Please be aware that cancelling of reserved instance, software, or Azure Marketplace SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
+>Please be aware that cancelling of reserved instance, software, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
 
 ## Prerequisites
 
