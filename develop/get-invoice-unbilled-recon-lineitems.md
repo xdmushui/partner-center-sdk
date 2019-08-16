@@ -1,7 +1,7 @@
 ---
 title: Get invoice's unbilled reconciliation line items
 description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 07/16/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of Azure Marketplace invoice line item details for the specified invoice.
+How to get a collection of commercial marketplace invoice line item details for the specified invoice.
 
 ## Prerequisites
 

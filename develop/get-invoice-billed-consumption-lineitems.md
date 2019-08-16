@@ -1,17 +1,17 @@
 ---
-title: Get invoice billed Azure Marketplace consumption line items
-description: How to get a collection of Azure Marketplace consumption invoice line item details for the specified invoice.
-ms.date: 05/16/2019
+title: Get invoice billed commercial marketplace consumption line items
+description: How to get a collection of commercial marketplace consumption invoice line item details for the specified invoice.
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice billed Azure Marketplace consumption line items
+# Get invoice billed commercial marketplace consumption line items
 
 Applies to:
 
 - Partner Center
 
-How to get a collection of Azure Marketplace consumption invoice line item details for the specified invoice.
+How to get a collection of commercial marketplace consumption invoice line item details for the specified invoice.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ How to get a collection of Azure Marketplace consumption invoice line item detai
 
 ## C#
 
-To get the Azure Marketplace line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+To get the commercial marketplace line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
 The Provider identifies the source of the billed detail information (for example, Marketplace), and the **InvoiceLineItemType** specifies the type (for example, UsageLineItem).
 

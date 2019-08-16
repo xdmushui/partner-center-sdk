@@ -2,7 +2,7 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 01/08/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
@@ -74,7 +74,7 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including Azure Marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including commercial marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
 
 **Request headers**
