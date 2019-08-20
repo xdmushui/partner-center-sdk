@@ -577,3 +577,15 @@ After these permissions have been established, the sample performs operations us
     ```
 
 Un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
+
+---
+
+## Frequently Asked Questions
+
+### Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?
+
+No, this will not work because of how the requirement for multi-factor authentication will be enforced.
+
+### How will the requirement for multi-factor authentication be enforced?
+
+This requirement will be enforced by ensuring that a claim of type <http://schemas.microsoft.com/claims/authnmethodsreferences> with a value of mfa is present. If it is not then authentication will be denied.
