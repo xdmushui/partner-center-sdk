@@ -1,5 +1,5 @@
 ---
-title: Get agreement metadata for Microsoft Customer Agreement
+title: Get agreement metadata for Microsoft Customer Agreement (Preview)
 description: This topic explains how to get agreement metadata for Microsoft Customer Agreement.
 ms.date: 8/27/2019
 ms.localizationpriority: medium
