@@ -29,7 +29,7 @@ To retrieve agreement metadata for Microsoft Customer Agreement
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-To retrieve agreement metadata for Microsoft Customer Agreement, create a REST request to retrieve the **AgreementMetaData** collection. Use the *agreementType=MicrosoftCustomerAgreement* URI parameter to scope the result to only Microsoft Customer Agreement only.
+To retrieve agreement metadata for Microsoft Customer Agreement, create a REST request to retrieve the **AgreementMetaData** collection. Use the *agreementType=MicrosoftCustomerAgreement* URI parameter to scope the result to Microsoft Customer Agreement only.
 
 **Request syntax**
 
