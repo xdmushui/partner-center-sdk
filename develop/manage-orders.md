@@ -2,7 +2,7 @@
 title: Manage orders
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage customer orders and subscriptions.
 ms.assetid: D4E13B95-4E27-42E5-86E4-9DBF91564209
-ms.date: 01/09/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
@@ -58,10 +58,10 @@ This section describes the ways that Cloud Solution Provider partners can use th
 
 **Manage a subscription**  
 - [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
-- [Update autorenew for an Azure Marketplace-subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
+- [Update autorenew for a commercial marketplace subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
 - [Suspend a subscription](suspend-a-subscription.md)
 - [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 - [Transition a subscription](transition-a-subscription.md)
-- [Cancel an Azure Marketplace subscription](cancel-an-azure-marketplace-subscription.md)
+- [Cancel a commercial marketplace subscription](cancel-an-azure-marketplace-subscription.md)
 
 For more information about the process of reviewing offers, creating orders, or working with subscriptions, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.

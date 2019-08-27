@@ -2,7 +2,7 @@
 title: Service costs resources
 description: Describes resources related to services purchased by a customer.
 ms.assetid: 2916B7F3-06D5-4DC1-A137-CD8270258CDB
-ms.date: 06/11/2019
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -50,6 +50,9 @@ Describes resources related to services purchased by a customer.
 ## ServiceCostLineItem
 
 **ServiceCostLineItem** describes a single item purchased by the customer.
+
+> [!IMPORTANT]
+> The following properties *only apply to* service cost line items where the product is a *one-time purchase*: **productId**, **productName**, **skuId**, **skuName**, **availabilityId**, **publisherId**, **publisherName**, **termAndBillingCycle**, **discountDetails**. These properties *don't apply to* service line items where the product is a *recurring purchase*. For example, these properties *don't apply* to subscription-based Office 365 and Azure.
 
 | Property                 | Type                           | Description                                                          |
 |--------------------------|--------------------------------|----------------------------------------------------------------------|

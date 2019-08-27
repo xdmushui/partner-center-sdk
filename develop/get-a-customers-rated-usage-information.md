@@ -1,54 +1,55 @@
 ---
 title: Get a usage summary for all of a customer's subscriptions
-description: Gets a CustomerUsageSummary resource that represent the customer's usage of a specific Azure service or resource during the current billing period.
+description: How to get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 12/15/2017
+ms.date: 07/25/2019
 ms.localizationpriority: medium
 ---
 
 # Get a usage summary for all of a customer's subscriptions
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a **CustomerUsageSummary** resource that represent the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the **CustomerUsageSummary** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To get a usage summary for all of a customer's subscriptions:
 
-To get a usage summary for all of a customer's subscriptions, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods.
+1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
+2. Call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods:
 
-``` csharp
-// IAggregatePartner partnerOperations;
-// var selectedCustomerId as string;
+    ``` csharp
+    // IAggregatePartner partnerOperations;
+    // var selectedCustomerId as string;
 
-var usageSummary = partnerOperations.Customers.ById(selectedCustomerId).UsageSummary.Get();
-```
+    var usageSummary = partnerOperations.Customers.ById(selectedCustomerId).UsageSummary.Get();
+    ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetCustomerUsageSummary.cs
+For an example, see the following:
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSamples**
+- Class: **GetCustomerUsageSummary.cs**
 
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                         |
 |---------|-----------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1 |
 
-
-
-**URI parameter**
+#### URI parameter
 
 This table lists the required query parameter to get the customer's rated usage information.
 
@@ -56,17 +57,15 @@ This table lists the required query parameter to get the customer's rated usage 
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 
+### Request headers
 
+See [Headers](headers.md) for more information.
 
-**Request headers**
-
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1
@@ -76,16 +75,15 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns a **CustomerUsageSummary** resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -96,7 +94,7 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Fri, 26 Feb 2016 20:31:45 GMT
 
 {
-    budget":{
+    "budget":{
         "ammount":300.000000,
         "attributes":{
             "objectType":"SpendingBudget"
@@ -121,11 +119,3 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
     }
 }
 ```
-
-
-
-
-
-
-
-

@@ -1,18 +1,18 @@
 ---
-title: Cancel an Azure Marketplace subscription
-description: Cancel an Azure Marketplace Subscription resource that matches a customer and subscription ID.
+title: Cancel a commercial marketplace subscription
+description: Cancel a commercial marketplace Subscription resource that matches a customer and subscription ID.
 ms.assetid: 
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
-# Cancel an Azure Marketplace subscription
+# Cancel a commercial marketplace subscription
 
 Applies to:
 
 - Partner Center
 
-You can cancel an Azure Marketplace [subscription](subscription-resources.md) resource that matches the customer and subscription ID.
+You can cancel a commercial marketplace [subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ You can cancel an Azure Marketplace [subscription](subscription-resources.md) re
 
 ## Partner Center dashboard method
 
-To cancel an Azure Marketplace subscription in the Partner Center dashboard:
+To cancel a commercial marketplace subscription in the Partner Center dashboard:
 
 1. [Select a customer](get-a-customer-by-name.md).
 2. Select the subscription that you wish to cancel.

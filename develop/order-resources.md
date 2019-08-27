@@ -2,14 +2,13 @@
 title: Order resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
 ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
-ms.date: 12/15/2017
+ms.date: 07/12/2019
 ms.localizationpriority: medium
 ---
 
 # Order resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -21,9 +20,7 @@ A partner places an order when a customer wants to buy a subscription from a lis
 >[!NOTE]
 >The Order resource has a rate limit of 500 requests per minute per tenant identifier.
 
-
-## <span id="order"/><span id="ORDER"/>Order
-
+## Order
 
 Describes a partner's order.
 
@@ -42,10 +39,7 @@ Describes a partner's order.
 | links              | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
 | attributes         | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the Order.       |
 
-
-
-## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
-
+## OrderLineItem
 
 An order contains an itemized list of offers, and each item is represented as an OrderLineItem.
 
@@ -57,16 +51,22 @@ An order contains an itemized list of offers, and each item is represented as an
 | parentSubscriptionId | string                                    | Optional. The ID of the parent subscription in an add-on offer. Applies to PATCH only.                                                                                                                                                     |
 | friendlyName         | string                                    | Optional. The friendly name for the subscription defined by the partner to help disambiguate.                                                                                                                                              |
 | quantity             | int                                       | The number of licenses or instances.                                                                                                                                                                                |
-| termDuration         | string                                    | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                               |
+| termDuration         | string                                    | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month), **P1Y** (1 year) and **P3Y** (3 years).                               |
 | transactionType      | string                                    | Read-only. The transaction type of the line item. Supported Values are 'new', 'renew', 'addQuantity', 'removeQuantity', 'cancel', 'convert', or 'customerCredit'. |
 | partnerIdOnRecord    | string                                    | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
-| provisioningContext  | Dictionary<string, string>                | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
+| provisioningContext  | Dictionary<string, string>            | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
 | links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the order line item.                                                                                                                                                                                |
+| renewsTo             | Array of objects                          | An array of [RenewsTo](#renewsto) resources.                                                                            |
 
- 
+## RenewsTo
 
-## <span id="orderLinks"/><span id="orderlinks"/><span id="ORDERLINKS"/>OrderLinks
+Represents one item contained in a order line item.
 
+| Property              | Type             | Required        | Description |
+|-----------------------|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| termDuration          | string           | No              | An ISO 8601 representation of the renewal term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year). |
+
+## OrderLinks
 
 Represents the resource links corresponding to the order.
 
@@ -75,10 +75,7 @@ Represents the resource links corresponding to the order.
 | provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve provisioning status for the order.       |
 | self               | [Link](utility-resources.md#Link)            | The link to retrieve the order resource.                                      |
 
-
-
-## <span id="orderLineItemLinks"/><span id="orderlineitemlinks"/><span id="ORDERLINEITEMLINKS"/>OrderLineItemLinks
-
+## OrderLineItemLinks
 
 Represents the full subscription associated with the order.
 
@@ -89,11 +86,7 @@ Represents the full subscription associated with the order.
 | subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
 | activationLinks    | [Link](utility-resources.md#Link)            | When populated, the GET resource for links to activate the subscription.             |
 
- 
-
- 
-## <span id="orderStatus"/><span id="orderstatus"/><span id="ORDERSTATUS"/>OrderStatus
-
+## OrderStatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the state of the order.
 
@@ -104,11 +97,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | pending            | 2            | Indicates that the order is still pending.      |
 | cancelled          | 3            | Indicates that the order has been cancelled.    |
 
-
-
-
-## <span id="orderLineItemProvisioningStatus"/><span id="orderlineitemprovisioningstatus"/><span id="ORDERLINEITEMPROVISIONINGSTATUS"/>OrderLineItemProvisioningStatus 
-
+## OrderLineItemProvisioningStatus
 
 Represents the provisioning status of an [OrderLineItem](#orderlineitem).
 
@@ -117,10 +106,8 @@ Represents the provisioning status of an [OrderLineItem](#orderlineitem).
 | lineItemNumber                  | int                                 | The unique line number of the order line item. Values range from 0 to count-1.             |
 | status                          | string                              | The provisioning status of the order line item. Values include:</br>"Fulfilled": Fulfillment of the order is successfully completed and the user will be able to use the reservations</br>"Unfulfilled": Not fulfilled due to cancellation</br>"PrefulfillmentPending": Your request is still processing, fulfillment is not yet complete |
 | quantityProvisioningInformation | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)> | A list of quantity provisioning status information for the order line item. |
-  
-  
-## <span id="quantityProvisioningStatus"/><span id="quantityprovisioningstatus"/><span id="QUANTITYPROVISIONINGSTATUS"/>QuantityProvisioningStatus 
 
+## QuantityProvisioningStatus
 
 Represents the provisioning status by quantity.
 
@@ -128,9 +115,3 @@ Represents the provisioning status by quantity.
 |------------------------------------|----------------------------------------------|------------------------------------------------------|
 | quantity                           | int                                          | The number of items.                                 |
 | status                             | string                                       | The status of the number of items.                   |
-
- 
-
-
-
-

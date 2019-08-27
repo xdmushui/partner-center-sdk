@@ -1,18 +1,18 @@
 ---
-title: Create a subscription for Azure Marketplace products 
-description: Developers can create and manage a subscription for Azure Marketplace products using Partner Center APIs.
+title: Create a subscription for commercial marketplace products 
+description: Developers can create and manage a subscription for commercial marketplace products using Partner Center APIs.
 ms.assetid: 
-ms.date: 06/24/2019
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
-# Create a subscription for Azure Marketplace products
+# Create a subscription for commercial marketplace products
 
 Applies to:
 
 * Partner Center
 
-You can create a subscription for Azure Marketplace products using Partner Center APIs. You must [get a list of offers for a market](#get-a-list-of-offers-for-a-market), [create and submit an order](#create-and-submit-an-order) for an Azure Marketplace subscription, then [retrieve an activation link](#get-activation-link).
+You can create a subscription for commercial marketplace products using Partner Center APIs. You must [get a list of offers for a market](#get-a-list-of-offers-for-a-market), [create and submit an order](#create-and-submit-an-order) for a commercial marketplace subscription, then [retrieve an activation link](#get-activation-link).
 
 You can also [perform lifecycle management](#lifecycle-management) and [manage invoices](#invoice-and-reconciliation) for these subscriptions.
 
@@ -39,12 +39,12 @@ Before you purchase an Azure reservation, complete the following steps:
     * [Get a SKU using the SKU ID](get-a-sku-by-id.md)
 
     > [!NOTE]
-    > You can identify Azure Marketplace products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
+    > You can identify commercial marketplace products by their **ProductType** property of **"Azure"** and their **SubType** property of **"SaaS"**.
 
 2. If the SKUs are tagged with an **InventoryCheck** prerequisite, [check the inventory for a SKU](check-inventory.md).
 
     > [!NOTE]
-    > At this time, there are no Azure Marketplace products that support inventory check or are tagged with an **InventoryCheck** prerequisite.
+    > At this time, there are no commercial marketplace products that support inventory check or are tagged with an **InventoryCheck** prerequisite.
 
 3. Retrieve the availability for the SKU. You will need the **CatalogItemId** of the availability when placing the order, which you can retrieve through the following APIs:
 
@@ -71,22 +71,22 @@ The partner or customer must activate subscriptions to Azure Markeplace products
 
 ## Lifecycle management
 
-You can manage the lifecycle of your subscriptions to Azure Marketplace products using the following methods:
+You can manage the lifecycle of your subscriptions to commercial marketplace products using the following methods:
 
-* [Cancel an Azure Marketplace subscription](cancel-an-azure-marketplace-subscription.md)
-* [Enable or disable autorenew for an Azure Marketplace subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
+* [Cancel a commercial marketplace subscription](cancel-an-azure-marketplace-subscription.md)
+* [Enable or disable autorenew for a commercial marketplace subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
 
 ## Quantity management
 
-The quantity of an Azure Marketplace subscription must be within the limits defined by its associated [SKU](product-resources.md#sku) (see the **minimumQuantity** and **maximumQuantity** attributes). To update the quantity of an Azure marketplace subscription, use the following method:
+The quantity of a commercial marketplace subscription must be within the limits defined by its associated [SKU](product-resources.md#sku) (see the **minimumQuantity** and **maximumQuantity** attributes). To update the quantity of a commercial marketplace subscription, use the following method:
 
 * [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 
 ## Invoice and reconciliation
 
-You can manage customer [invoices](invoice-resources.md) (including charges for subscriptions to Azure Marketplace products) using the following methods:
+You can manage customer [invoices](invoice-resources.md) (including charges for subscriptions to commercial marketplace products) using the following methods:
 
-* [Get invoice billed Azure Marketplace consumption line items](get-invoice-billed-consumption-lineitems.md)
+* [Get invoice billed commercial marketplace consumption line items](get-invoice-billed-consumption-lineitems.md)
 * [Get invoice estimate links](get-invoice-estimate-links.md)
-* [Get invoice unbilled Azure Marketplace consumption line items](get-invoice-unbilled-consumption-lineitems.md)
+* [Get invoice unbilled commercial marketplace consumption line items](get-invoice-unbilled-consumption-lineitems.md)
 * [Get invoice unbilled reconciliation line items](get-invoice-unbilled-recon-lineitems.md)

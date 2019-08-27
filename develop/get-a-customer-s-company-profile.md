@@ -2,7 +2,7 @@
 title: Get a customer's company profile
 description: Gets the company profile of a customer.
 ms.assetid: 762C0F38-2229-464D-9CD6-6AD82135A65C
-ms.date: 9/21/2018
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,6 @@ ms.localizationpriority: medium
 Gets the company profile of a customer.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.

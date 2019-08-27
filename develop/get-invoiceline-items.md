@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: How to get a collection of invoice line item details for the specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 04/03/2019
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -142,7 +142,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 **Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
@@ -238,12 +238,12 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
     ],
     "links": {
         "self": {
-            "uri": "/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=0",
+            "uri": "/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&offset=0",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&amp;offset=2",
+            "uri": "/invoices/D070002ISK/lineitems/Office/BillingLineItems?size=2&offset=2",
             "method": "GET",
             "headers": []
         }
@@ -257,7 +257,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 **Request example 2** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&amp;offset=0 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e

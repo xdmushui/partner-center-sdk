@@ -2,7 +2,7 @@
 title: Retrieve a relationship request URL
 description: How to retrieve a relationship request URL to send to a customer.
 ms.assetid: 31D9EDB2-4ABE-4C57-A394-2FF256F7D3CA
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -89,7 +89,7 @@ MS-ServerId: 030020643
 Date: Fri, 19 May 2017 22:32:07 GMT
 ﻿
 {
-    "url": "https://portal.office.com/partner/partnersignup.aspx?type=ResellerRelationship&amp;id=3b33e682-00c3-41ee-9dd2-a548adf56438&amp;csp=1&amp;msppid=0",
+    "url": "https://portal.office.com/partner/partnersignup.aspx?type=ResellerRelationship&id=3b33e682-00c3-41ee-9dd2-a548adf56438&csp=1&msppid=0",
     "attributes": {
         "objectType": "RelationshipRequest"
     }

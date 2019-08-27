@@ -2,7 +2,7 @@
 title: Get a collection of invoices
 description: How to retrieve a collection of the partner's invoices.
 ms.assetid: B5392987-3D2E-493B-9F97-A20055D5D46A
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -106,7 +106,7 @@ None
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices?size=200&amp;offset=0 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices?size=200&offset=0 HTTP/1.1
 Authorization: Bearer <token> 
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
@@ -251,12 +251,12 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
     ],
     "links": {
         "self": {
-            "uri": "/invoices?size=2&amp;offset=0",
+            "uri": "/invoices?size=2&offset=0",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices?size=2&amp;offset=2",
+            "uri": "/invoices?size=2&offset=2",
             "method": "GET",
             "headers": []
         }

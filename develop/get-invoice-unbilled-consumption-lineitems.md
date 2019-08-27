@@ -1,17 +1,17 @@
 ---
-title: Get invoice unbilled Azure Marketplace consumption line items
-description: How to get a collection of unbilled Azure Marketplace consumption line item details for a specified invoice.
-ms.date: 05/29/2019
+title: Get invoice unbilled commercial marketplace consumption line items
+description: How to get a collection of unbilled commercial marketplace consumption line item details for a specified invoice.
+ms.date: 08/16/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice unbilled Azure Marketplace consumption line items
+# Get invoice unbilled commercial marketplace consumption line items
 
 Applies to:
 
 - Partner Center
 
-How to get a collection of unbilled Azure Marketplace consumption line item details for a specified invoice.
+How to get a collection of unbilled commercial marketplace consumption line item details for a specified invoice.
 
 ## Prerequisites
 

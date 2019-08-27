@@ -2,7 +2,7 @@
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
 ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
-ms.date: 05/23/2019
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -44,7 +44,7 @@ To create an order for a customer of an indirect reseller:
 var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipType.IsIndirectCloudSolutionProviderOf);
 
 // Find the matching reseller in the collection.
-var selectedIndirectReseller = (indirectResellers != null &amp;&amp; indirectResellers.Items.Any()) ?
+var selectedIndirectReseller = (indirectResellers != null && indirectResellers.Items.Any()) ?
     indirectResellers.Items.FirstOrDefault(reseller => reseller.Id.Equals(indirectResellerId, StringComparison.OrdinalIgnoreCase)) :
     null;
 

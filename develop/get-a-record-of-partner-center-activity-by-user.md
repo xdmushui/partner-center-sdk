@@ -2,7 +2,7 @@
 title: Get a record of Partner Center activity
 description: How to get a record of operations performed by a partner user or application over a period of time.
 ms.assetid: C24054DA-3E31-4BCD-BEB5-085564C20C58
-ms.date: 12/15/2017
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -163,7 +163,7 @@ None.
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=6/1/2017%2012:00:00%20AM&amp;filter=%7B%22Field%22:%22CustomerId%22,%22Value%22:%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22,%22Operator%22:%22equals%22%7D HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=6/1/2017%2012:00:00%20AM&filter=%7B%22Field%22:%22CustomerId%22,%22Value%22:%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22,%22Operator%22:%22equals%22%7D HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 127facaa-e389-41f8-8bb7-1d1af99db893
@@ -258,7 +258,7 @@ Date: Tue, 27 Jun 2017 22:19:46 GMT
     ],
     "links": {
         "self": {
-            "uri": "/auditrecords?startDate=2017-06-01&amp;size=500&amp;filter=%7B%22Field%22%3A%22CustomerId%22%2C%22Value%22%3A%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22%2C%22Operator%22%3A%22equals%22%7D",
+            "uri": "/auditrecords?startDate=2017-06-01&size=500&filter=%7B%22Field%22%3A%22CustomerId%22%2C%22Value%22%3A%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22%2C%22Operator%22%3A%22equals%22%7D",
             "method": "GET",
             "headers": []
         }

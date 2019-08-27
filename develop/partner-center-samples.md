@@ -2,7 +2,7 @@
 title: Partner Center samples
 description: To help you get up and running quickly with the Partner Center APIs, we provide a sample program, C\ managed code snippets, and REST sample requests and responses.
 ms.assetid: FBE67405-88E2-42F4-B456-D4602A2719F5
-ms.date: 09/29/2018
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -47,7 +47,7 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
         <p><a href="http://go.microsoft.com/fwlink/p/?LinkId=746683">Download the sample code</a></p>
         <p><strong>What to configure before release:</strong></p>
         <ul>
-          <li><p>Authentication: App ID &amp; secret.</p></li>
+          <li><p>Authentication: App ID & secret.</p></li>
           <li><p>Branding: logo and company name.</p></li>
           <li><p>Welcome message.</p></li>
           <li><p>Offers, including descriptions and prices. The app assumes that the list prices include any applicable taxes. Alternatively, you can add additional logic to calculate tax during checkout.</p></li>
