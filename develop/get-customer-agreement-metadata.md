@@ -45,7 +45,7 @@ To retrieve agreement metadata for Microsoft Customer Agreement, create a REST r
 
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
-| agreementType | string | No | Scope the result to specific agreement type. The supported values are:<br/> "MicrosoftCloudAgreement" – Includes only agreement metadata of type MicrosoftCloudAgreement<br/> "MicrosoftCustomerAgreement" – Includes only agreement metadata of type MicrosoftCustomerAgreement<br/> "\*" – Returns all agreement metadata<br/><br/>If the URI parameter isn't specified, the query defaults to "MicrosoftCloudAgreement" to ensure backward compability.<br/><br/>Microsoft may introduce agreement metadata with new agreement type at any point in time. Do not use "\*" unless your code has the necessary logic to handle unexpected agreement types. |
+| agreementType | string | No | Use this parameter to scope the query response to specific agreement type. The supported values are:<br/> "MicrosoftCloudAgreement" – Includes agreement metadata of type *MicrosoftCloudAgreement* only.<br/> "MicrosoftCustomerAgreement" – Includes agreement metadata of type *MicrosoftCustomerAgreement* only.<br/> "\*" – Returns all agreement metadata.<br/><br/>If the URI parameter isn't specified, the query defaults to "MicrosoftCloudAgreement" to ensure backward compability.<br/><br/>Microsoft may introduce agreement metadata with new agreement type at any point in time. Do not use "\*" unless your code has the necessary logic to handle unexpected agreement types. |
 
 
 **Request body**
