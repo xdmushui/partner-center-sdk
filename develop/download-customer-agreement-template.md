@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
 
-Retrieve a link to download the Microsoft Customer Agreement template based on customer's country and language.
+Get a link to download the Microsoft Customer Agreement template based on customer's country and language.
 
 ## Prerequisites
 
@@ -33,11 +33,11 @@ To retrieve a link to download the Microsoft Customer Agreement template based o
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md) for details. This step is required to obtain the **templateId** of the Microsoft Customer Agreement.
-2. Create a REST request to fetch an **AgreementDocument** resource, specifying the following:
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. This step is required to obtain the **templateId** of the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md) for details. 
+2. Create a REST request to fetch an [AgreementDocument](./agreement-document-resources.md) resource and specify the following:
     - The **templateId** of the Microsoft Customer Agreement,
-    - The country for which the template is applicable to, and
-    - The language for which the template should be localized in.
+    - The country for which the agreement template is applicable to, and
+    - The language for which the agreement template should be localized in.
 
 **Request syntax**
 
@@ -49,9 +49,9 @@ To retrieve a link to download the Microsoft Customer Agreement template based o
 
 | Name                   | Type   | Required | Description                                 |
 |------------------------|--------|----------|---------------------------------------------|
-| agreement-template-id  | string | No       | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
-| country                | string | No       | Indicates what country for which the requested agreement template is applicable to. |
-| language               | string | No       | Indicates what language the requested agreement template should be localized in. |
+| agreement-template-id  | string | Yes      | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
+| country                | string | No       | Indicates what country for which the agreement template is applicable to.<br/><br/>Query defaults to *US* if parameter is not specified. |
+| language               | string | No       | Indicates what language the agreement template should be localized in.<br/><br/>Query detauls to *en-US* if parameter is not specified. |
 
 **Request headers**
 
