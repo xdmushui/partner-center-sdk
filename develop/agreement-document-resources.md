@@ -28,4 +28,4 @@ An **AgreementDocument** resource includes the following properties:
 | country | string | Indicates which country/market this agreement document is for. |
 | language | string | Indicates what language the agreement document is localized in. |
 | displayUri | string | Link to preview the agreement document in a browser.  |
-| downloadUri |string | Link to download the agreement document (in Microsoft word format). |
+| downloadUri |string | Link to download the agreement document (in Microsoft Word format). |
