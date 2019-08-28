@@ -12,7 +12,7 @@ Applies to:
 - Partner Center
 
 > [!NOTE]  
-> The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+> Confirming customer acceptance of Microsoft Customer Agreement is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
