@@ -75,7 +75,7 @@ This table describes the minimum required fields to create an **Agreement** reso
 |----------------|--------|------------------------------------------|
 | primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
-| templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request) for details. |
+| templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](./get-customer-agreement-metadata.md) for details. |
 | type           | string | Agreement type accepted by the customer. Use "MicrosoftCloudAgreement" if customer accepted the Microsoft Customer Agreement. |
   
 #### Request example
