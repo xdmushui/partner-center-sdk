@@ -30,7 +30,7 @@ To retrieve confirmation of customer acceptance provided previously
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-To retrieve confirmation of customer acceptance for Microsoft Customer Agreement provided previously, create a REST request to retrieve the Agreements collection. Use the agreementType=MicrosoftCustomerAgreement query parameter to scope the result to Microsoft Customer Agreement only.
+To retrieve confirmation of customer acceptance for Microsoft Customer Agreement provided previously, create a REST request to retrieve the [Agreements](./agreement-resources.md) collection for a given customer. Use the **agreementType** query parameter to scope the result to Microsoft Customer Agreement only.
 
 **Request syntax**
 
