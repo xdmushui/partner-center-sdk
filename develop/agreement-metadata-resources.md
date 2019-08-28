@@ -26,5 +26,5 @@ Agreement metadata returned includes the following:
 | Property      | Type               | Description                                                                       |
 |---------------|--------------------|-----------------------------------------------------------------------------------|
 | templateId    | string             | Unique identifier of an agreement template.                                       |
-| type          | AgreementType enum | Agreement type. Currently, the only supported value is "MicrosoftCloudAgreement". |
+| type          | string             | Agreement type. Currently, supported values include "MicrosoftCloudAgreement" and "MicrosoftCustomerAgreement" (preview). |
 | agreementLink | string             | URL to the agreement template.                                                    |
