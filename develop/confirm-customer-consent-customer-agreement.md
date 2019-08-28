@@ -17,14 +17,14 @@ Applies to:
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
 
-How to confirm customer acceptance of the Microsoft Cloud agreement.
+How to confirm or re-confirm customer acceptance of the Microsoft Cloud agreement.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication only.
 - A customer ID (customer-tenant-id).
 - Date when customer accepted the Microsoft Customer Agreement.
-- Information about the user from the organization who accepted the Microsoft Customer Agreement, including:
+- Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:
   - First name
   - Last name
   - Email address
@@ -38,7 +38,7 @@ To confirm or re-confirm that a customer has accepted the Microsoft Customer Agr
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md) for details. This step is required to obtain the **templateId** of the Microsoft Customer Agreement.
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. This step is required to obtain the **templateId** of the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md) for details. 
 2. Create a new **Agreement** resource to confirm that a customer has accepted the Microsoft Customer Agreement using the following request syntax.
 
 #### Request syntax
@@ -76,7 +76,7 @@ This table describes the minimum required fields to create an **Agreement** reso
 | primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](./get-customer-agreement-metadata.md) for details. |
-| type           | string | Agreement type accepted by the customer. Use "MicrosoftCloudAgreement" if customer accepted the Microsoft Customer Agreement. |
+| type           | string | Agreement type accepted by the customer. Use "MicrosoftCustomerAgreement" if customer accepted the Microsoft Customer Agreement. |
   
 #### Request example
 
@@ -101,7 +101,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 ### REST Response
 
-If successful, this method returns an **Agreement** resource.
+If successful, this method returns an [Agreement](./reement-resources.md) resource.
 
 #### Response success and error codes
 
