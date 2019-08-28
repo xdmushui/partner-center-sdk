@@ -101,7 +101,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 ### REST Response
 
-If successful, this method returns an [Agreement](./reement-resources.md) resource.
+If successful, this method returns an [Agreement](./agreement-resources.md) resource.
 
 #### Response success and error codes
 
