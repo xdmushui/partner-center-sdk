@@ -12,10 +12,14 @@ ms.localizationpriority: medium
 - Partner Center
 
 > [!NOTE]
-> The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+> Agreement metadata for Microsoft Customer Agreement is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
+
+How to retrieve the agreement metadata for Microsoft Customer Agreement. This step is required before you can:
+1. [Confirm customer acceptance of the Microsoft Customer Agreement](./confirm-customer-consent-customer-agreement.md).
+2. [Retrieve download link for Microsoft Customer Agreement template](./download-customer-agreement-template.md).
 
 ## Prerequisites
 
@@ -23,13 +27,13 @@ ms.localizationpriority: medium
 
 ## Examples
 
-To retrieve agreement metadata for Microsoft Customer Agreement
+To retrieve the agreement metadata for Microsoft Customer Agreement
 
 # [REST](#tab/rest)
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-To retrieve agreement metadata for Microsoft Customer Agreement, create a REST request to retrieve the **AgreementMetaData** collection. Use the *agreementType=MicrosoftCustomerAgreement* URI parameter to scope the result to Microsoft Customer Agreement only.
+To retrieve the agreement metadata for Microsoft Customer Agreement, create a REST request to retrieve the **AgreementMetaData** collection. Use the *agreementType=MicrosoftCustomerAgreement* URI parameter to scope the result to Microsoft Customer Agreement only.
 
 **Request syntax**
 
@@ -41,7 +45,7 @@ To retrieve agreement metadata for Microsoft Customer Agreement, create a REST r
 
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
-| agreementType | string | No | Use this parameter to scope the query response to specific agreement type. The supported values are:<br/> "MicrosoftCloudAgreement" – Includes agreement metadata of type *MicrosoftCloudAgreement* only.<br/> "MicrosoftCustomerAgreement" – Includes agreement metadata of type *MicrosoftCustomerAgreement* only.<br/> "\*" – Returns all agreement metadata.<br/><br/>If the URI parameter isn't specified, the query defaults to "MicrosoftCloudAgreement" to ensure backward compability.<br/><br/>Microsoft may introduce agreement metadata with new agreement type at any point in time. Do not use "\*" unless your code has the necessary logic to handle unexpected agreement types. |
+| agreementType | string | No | Use this parameter to scope the query response to specific agreement type. The supported values are:<br/> "MicrosoftCloudAgreement" – Includes agreement metadata of type *MicrosoftCloudAgreement* only.<br/> "MicrosoftCustomerAgreement" – Includes agreement metadata of type *MicrosoftCustomerAgreement* only.<br/> "\*" – Returns all agreement metadata.<br/><br/>If the URI parameter isn't specified, the query defaults to "MicrosoftCloudAgreement" to ensure backward compatibility.<br/><br/>Microsoft may introduce agreement metadata with new agreement type at any point in time. Avoid using "\*" unless your code has the necessary runtime logic to gracefully handle unfamiliar agreement types. |
 
 **Request headers**
 
