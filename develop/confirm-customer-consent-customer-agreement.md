@@ -1,47 +1,43 @@
 ---
-title: Confirm customer acceptance of Microsoft Customer Agreement (Preview)
-description: How to confirm customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 08/27/2019
+title: Confirm customer acceptance of Microsoft Customer Agreement (preview)
+description: Confirm customer acceptance of the Microsoft Customer Agreement. 
+ms.date: 08/28/2019
 ms.localizationpriority: medium
 ---
 
-# Confirm customer acceptance of Microsoft Customer Agreement (Preview)
+# Confirm customer acceptance of Microsoft Customer Agreement (preview)
 
 Applies to:
 
 - Partner Center
 
-> [!NOTE]  
-> Confirming customer acceptance of Microsoft Customer Agreement is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+Partner Center currently supports confirmation of customer acceptance of the Microsoft Customer Agreement only in the *Microsoft public cloud*. This functionality doesn't currently apply to:
+
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
 
-How to confirm or re-confirm customer acceptance of the Microsoft Cloud agreement.
+This article describes how to confirm or re-confirm customer acceptance of the Microsoft Customer Agreement.
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication only.
-- A customer ID (customer-tenant-id).
-- Date when customer accepted the Microsoft Customer Agreement.
-- Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). *This scenario only supports App+User authentication.*
+- A customer identifier (**customer-tenant-id**).
+- The date when the customer accepted the Microsoft Customer Agreement.
+- Information about the user from the customer organization that accepted the Microsoft Customer Agreement. This includes:
   - First name
   - Last name
   - Email address
   - Phone number (optional)
 
-## Examples
+## REST request
 
-To confirm or re-confirm that a customer has accepted the Microsoft Customer Agreement
+To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
 
-# [REST](#tab/rest)
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+2. Create a new [**Agreement** resource](agreement-resources.md) to confirm that a customer has accepted the Microsoft Customer Agreement. Use the following [REST request syntax](#request-syntax).
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. This step is required to obtain the **templateId** of the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md) for details. 
-2. Create a new **Agreement** resource to confirm that a customer has accepted the Microsoft Customer Agreement using the following request syntax.
-
-#### Request syntax
+### Request syntax
 
 | Method | Request URI                                                                                        |
 |--------|----------------------------------------------------------------------------------------------------|
@@ -49,19 +45,19 @@ To confirm or re-confirm that a customer has accepted the Microsoft Customer Agr
 
 #### URI parameter
 
-Use the following query parameter to specify the customer you are confirming.
+Use the following query parameter to specify the customer that you're confirming.
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| customer-tenant-id | GUID | Yes | The value is a GUID formatted **customer-tenant-id** that allows you to specify a customer. |
+| customer-tenant-id | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
 
-#### Request headers
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
-This table describes the required properties in the request body.
+This table describes the required properties in the REST request body.
 
 | Name      | Type   | Description                                                                                  |  
 |-----------|--------|----------------------------------------------------------------------------------------------|  
@@ -69,7 +65,7 @@ This table describes the required properties in the request body.
 
 #### Agreement
 
-This table describes the minimum required fields to create an **Agreement** resource.
+This table describes the minimum required fields to create an [**Agreement** resource](agreement-resources.md).
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
@@ -101,11 +97,13 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 ### REST Response
 
-If successful, this method returns an [Agreement](./agreement-resources.md) resource.
+If successful, this method returns an [**Agreement** resource](./agreement-resources.md).
 
 #### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. 
+
+Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 #### Response example
 
