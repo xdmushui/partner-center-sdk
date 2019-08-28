@@ -1,7 +1,7 @@
 ---
 title: Agreement document resources (Preview)
-description: Represents an agreement document
-ms.date: 08/27/2019
+description: The AgreementDocument resource represents an agreement document.
+ms.date: 08/28/2019
 ms.localizationpriority: medium
 ---
 
@@ -11,13 +11,13 @@ Applies to:
 
 - Partner Center
 
-> [!NOTE]  
-> The **AgreementDocument** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
-> - Partner Center operated by 21Vianet
-> - Partner Center for Microsoft Cloud Germany
-> - Partner Center for Microsoft Cloud for US Government
+The **AgreementDocument** resource is currently supported by Partner Center only in the *Microsoft public cloud*. This resource not applicable to:
 
-The resource defined here represents an agreement document which is available for preview/download.
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
+
+The **AgreementDocument** resource represents a Microsoft agreement document that is available for preview and download.
 
 ## AgreementDocument
 
@@ -25,7 +25,7 @@ An **AgreementDocument** resource includes the following properties:
 
 | Property       | Type   | Description                                                                                               |
 |----------------|--------|-----------------------------------------------------------------------------------------------------------|
-| country | string | Indicates which country/market this agreement document is for. |
-| language | string | Indicates what language the agreement document is localized in. |
-| displayUri | string | Link to preview the agreement document in a browser.  |
-| downloadUri |string | Link to download the agreement document (in Microsoft Word format). |
+| country | string | The country or market to which this document applies. |
+| language | string | The language in which this document is localized. |
+| displayUri | string | A link to preview the agreement document in a browser.  |
+| downloadUri |string | A link to download the agreement document (in Microsoft Word format). |
