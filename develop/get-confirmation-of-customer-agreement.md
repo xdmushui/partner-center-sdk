@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Customer Agreement (Preview)
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 8/28/2019
+ms.date: 8/29/2019
 ms.localizationpriority: medium
 ---
 
@@ -46,7 +46,7 @@ You can use the following URI parameters with your request:
 | Name             | Type | Required | Description                                                                               |
 |------------------|------|----------|-------------------------------------------------------------------------------------------|
 | customer-tenant-id | GUID | Yes | The value is a GUID formatted **CustomerTenantId** that allows you to specify a customer. |
-| agreement-type | string | No | This parameter returns all agreement metadata. Use this parameter to scope the query response to specific agreement type. The supported values are: **MicrosoftCloudAgreement** (which only includes agreement metadata of the type *MicrosoftCloudAgreement*) and **MicrosoftCustomerAgreement** (which only includes agreement metadata of the type *MicrosoftCustomerAgreement*). If the URI parameter isn't specified, the query defaults to **MicrosoftCloudAgreement** for backward compatibility. Microsoft may introduce agreement metadata with new agreement types at any  time. Do not use `\*` unless your code has the necessary logic to handle unexpected agreement types. |
+| agreement-type | string | No | This parameter returns all agreement metadata. Use this parameter to scope the query response to specific agreement type. The supported values are: <ul><li>**MicrosoftCloudAgreement** that only includes agreement metadata of the type *MicrosoftCloudAgreement*.</li><li>**MicrosoftCustomerAgreement** that only includes agreement metadata of the type *MicrosoftCustomerAgreement*.</li><li>**\*** that returns all agreement metadata. (Don't use **\*** unless your code has the necessary logic to handle unexpected agreement types.)</li></ul> If the URI parameter isn't specified, the query defaults to **MicrosoftCloudAgreement** for backward compatibility. Microsoft may introduce agreement metadata with new agreement types at any time.  |
 
 ### Request headers
 
