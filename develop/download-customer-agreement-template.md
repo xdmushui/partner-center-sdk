@@ -43,7 +43,7 @@ Use the following request syntax for this resource:
 |--------|---------------------------------------------------------------------|
 | GET | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/agreementtemplates/{agreement-template-id}/document?language={language}&country={country} HTTP/1.1 |
 
-#### URI parameters
+### URI parameters
 
 You can use the following URI parameters with your request:
 
@@ -57,7 +57,7 @@ You can use the following URI parameters with your request:
 
 For more information, see [Partner Center REST headers](headers.md).
 
-## Request body
+### Request body
 
 None.
 
