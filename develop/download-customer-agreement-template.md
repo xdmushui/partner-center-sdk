@@ -50,7 +50,7 @@ You can use the following URI parameters with your request:
 | Name                   | Type   | Required | Description                                 |
 |------------------------|--------|----------|---------------------------------------------|
 | agreement-template-id  | string | Yes      | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md). |
-| country                | string | No       | Indicates the country to which the agreement template applies. The query defaults to *US* if a parameter isn't specified. For list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
+| country                | string | No       | Indicates the country to which the agreement template applies. The query defaults to *US* if a parameter isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
 | language               | string | No       | Indicates the language in which the agreement template should be localized. The query defaults to *en-US* if a parameter isn't specified. For list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
 
 ### Request headers
@@ -101,9 +101,9 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 ## List of supported countries and languages
 
-List of supported countries and languages are still being finalized. For the purpose of previewing the API, partners can use the following countries and languages.
+*This list of supported countries and languages is still being finalized.* For the purposes of previewing the API, you can use the following countries and languages at this time:
 
 
-| Country                   | Country code to use   | Supported language(s) |
+| Country                   | Country code   | Supported language code(s) |
 |------------------------|--------|----------|
 | United States of America | US | en-US |
