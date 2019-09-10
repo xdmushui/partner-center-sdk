@@ -1,17 +1,22 @@
 ---
-title: Get invoice billed commercial marketplace consumption line items
-description: How to get a collection of commercial marketplace consumption invoice line item details for the specified invoice.
-ms.date: 08/16/2019
+title: Get invoice billed commercial consumption line items
+description: How to get a collection of commercial consumption invoice line item details for the specified invoice.
+ms.date: 09/10/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice billed commercial marketplace consumption line items
+# Get invoice billed commercial consumption line items
 
 Applies to:
 
 - Partner Center
 
-How to get a collection of commercial marketplace consumption invoice line item details for the specified invoice.
+How to get a collection of commercial consumption invoice line item details for the specified invoice.
+
+>[!NOTE]
+>Please use **“onetime”** to query all modern line items, instead of **“marketplace”** (to be deprecated). Alternatively, follow the self links in invoice details (in invoice(s) calls). 
+>Now this API also supports “azure” provider types for 145P Azure. So, this API is feature backward compatible.
+
 
 ## Prerequisites
 
@@ -20,9 +25,9 @@ How to get a collection of commercial marketplace consumption invoice line item 
 
 ## C#
 
-To get the commercial marketplace line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+To get the commercial line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
-The Provider identifies the source of the billed detail information (for example, Marketplace), and the **InvoiceLineItemType** specifies the type (for example, UsageLineItem).
+The Provider identifies the source of the billed detail information (for example, onetime), and the **InvoiceLineItemType** specifies the type (for example, UsageLineItem).
 
 The example code that follows uses a foreach loop to process the line items collection. A separate collection of line items is retrieved for each InvoiceLineItemType.
 
@@ -40,7 +45,7 @@ Finally, create an enumerator to traverse the collection as shown in the followi
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("marketplace", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
+var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("onetime", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
 
@@ -81,7 +86,7 @@ while (fetchNext)
     {
         if (seekBasedResourceCollection.Links.Next.Headers != null && seekBasedResourceCollection.Links.Next.Headers.Any())
         {
-            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("marketplace", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
+            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("onetime", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }
 }  
@@ -97,9 +102,9 @@ Use the first syntax to return a full list of every line item for the given invo
 
  | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode} HTTP/1.1                              |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size} HTTP/1.1  |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size}&seekOperation=Next                               |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode} HTTP/1.1                              |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size}&seekOperation=Next                               |
 
 ### URI parameters
 
@@ -108,8 +113,8 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
-| provider               | string | Yes      | The provider: "Marketplace", "All".                                  |
-| invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
+| provider               | string | Yes      | The provider: "OneTime".                                  |
+| invoice-line-item-type | string | Yes      | The type of invoice detail: "UsageLineItems". |
 | currencyCode           | string | Yes      | The currency code for the billed line items.                    |
 | period                 | string | Yes      | The period for billed recon. example: current, previous.        |
 | size                   | number | No       | The maximum number of items to return. Default size is 2000       |
@@ -138,10 +143,10 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ### Request example 1
 
-Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous
+Provider: OneTime, InvoiceLineItemType: UsageLineItems, Period: Previous
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
@@ -153,7 +158,7 @@ Host: api.partnercenter.microsoft.com
 
 ### Response example 1
 
-Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous
+Provider: OneTime, InvoiceLineItemType: UsageLineItems, Period: Previous
 
 ```http
 HTTP/1.1 200 OK
@@ -213,7 +218,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
-            "providerSource": "Marketplace",
+            "invoiceLineItemType": "usage_line_items",
+            "billingProvider": "marketplace",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }
@@ -263,7 +269,14 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.490235765325545,
             "pricingCurrency": "USD",
-            "providerSource": "Marketplace",
+            "entitlementId": "66bada28-271e-4b7a-aaf5-c0ead6312345",
+            "entitlementDescription": "Partner Subscription",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "effectiveUnitPrice": 0.1999968000511991808131,
+            "rateOfPartnerEarnedCredit": 0,
+            "invoiceLineItemType": "usage_line_items",
+            "billingProvider": "marketplace",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }
@@ -271,12 +284,12 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     ],
     "links": {
         "self": {
-            "uri": "/invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+            "uri": "/invoices/T000001234/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
+            "uri": "/invoices/T000001234/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
             "method": "GET",
             "headers": [
                 {
@@ -294,10 +307,10 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 ### Request example 2
 
-Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
+Provider: OneTime, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=marketplace&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=onetime&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
@@ -310,7 +323,7 @@ Host: api.partnercenter.microsoft.com
 
 ### Response example 2
 
-Provider: Marketplace, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
+Provider: OneTime, InvoiceLineItemType: UsageLineItems, Period: Previous, SeekOperation: Next
 
 ```http
 HTTP/1.1 200 OK
@@ -370,7 +383,13 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
-            "providerSource": "Marketplace",
+            "entitlementId": "66bada28-271e-4b7a-aaf5-c0ead6312345",
+            "entitlementDescription": "Partner Subscription",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "effectiveUnitPrice": 0.1835431430074643112595,
+            "rateOfPartnerEarnedCredit": 0.15,
+           
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }
@@ -378,7 +397,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     ],
     "links": {
         "self": {
-             "uri": "/invoices/T000001234/lineitems?provider=marketplace&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
+             "uri": "/invoices/T000001234/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         }
