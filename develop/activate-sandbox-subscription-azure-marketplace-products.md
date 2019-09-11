@@ -33,7 +33,7 @@ Use the following steps to activate a subscription for commercial marketplace Sa
 2. Activate the subscription using the Activate operation.
 
     ``` csharp
-    var activateResult = subscriptionOperations.Activate();
+    var subscriptionActivationResult = subscriptionOperations.Activate();
 
 ## REST request
 
@@ -70,7 +70,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 ## REST response
 
-If successful, this method returns the subscription-id and status property
+This method returns the **subscription-id** and **status** property.
 
 ### Response success and error codes
 
