@@ -34,7 +34,6 @@ Use the following steps to activate a subscription for commercial marketplace Sa
 
     ``` csharp
     var subscriptionActivationResult = subscriptionOperations.Activate();
-
 ## REST request
 
 ### Request syntax
@@ -64,8 +63,9 @@ None.
 POST https://api.partnercenter.microsoft.com/v1/customers/42b5f772-5c5c-4bce-b9d7-bdadeecca411/subscriptions/87363db7-39ab-dd25-d371-94340aaa2f97/activate HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
-MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
+MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
+
 ```
 
 ## REST response
@@ -86,7 +86,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 
 {
-    "subscriptionId":"0b93383f-b1d9-aa22-70ac-2ac915f4976c",
+    "subscriptionId":"87363db7-39ab-dd25-d371-94340aaa2f97",
     "status":"Success"
 }
 ```
