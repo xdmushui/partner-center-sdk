@@ -2,7 +2,7 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 08/09/2019
+ms.date: 09/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -67,7 +67,7 @@ public IAggregatePartner getAppPartnerOperations()
 
 ```powershell
 $credential = Get-Credential
-Connect-PartnerCenter -Credential $credential -TenantId '<TenantId>'
+Connect-PartnerCenter -Credential $credential -ServicePrincipal -TenantId 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 > [!NOTE]  
@@ -306,7 +306,7 @@ Cloud Solution Provider partners can utilize the [Partner Center PowerShell](htt
 
 ```powershell
 $credential = Get-Credential
-$token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com
+$token = New-PartnerAccessToken -ApplicationId 'xxxx-xxxx-xxxx-xxxx' -Scopes 'https://api.partnercenter.microsoft.com/user_impersonation' -ServicePrincipal -Credential $credential -Tenant 'xxxx-xxxx-xxxx-xxxx' -UseAuthorizationCode
 ```
 
 When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When then [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken) command is invoked you are again prompted for credentials. This time, you need to specify the credentials for the service account you are using. Please note that this should be a partner account with the appropriate permissions. After successful execution of the command, you'll find that the `$token` variable contains the response from Azure Active Directory for a token. Included in this response is a refresh token. Store this value in a secure repository such as Azure Key Vault or a similar service.
@@ -397,12 +397,12 @@ To help partners understand how to perform each required operation, we have deve
 Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
 
 ```powershell
-$refreshToken = 'Enter the refresh token value here'
-
 $credential = Get-Credential
-$pcToken = New-PartnerAccessToken -RefreshToken $refreshToken -Resource https://api.partnercenter.microsoft.com -Credential $credential
+$refreshToken = '<refreshToken>'
 
-Connect-PartnerCenter -AccessToken $pcToken.AccessToken -AccessTokenExpiresOn $pcToken.ExpiresOn -ApplicationId $appId
+$token = New-PartnerAccessToken -ApplicationId 'xxxx-xxxx-xxxx-xxxx' -Credential $credential -RefreshToken $refreshToken -Scopes "https://api.partnercenter.microsoft.com/user_impersonation" -ServicePrincipal -Tenant 'xxxx-xxxx-xxxx-xxxx'
+
+Connect-PartnerCenter -AccessToken $token.AccessToken -ApplicationId 'xxxx-xxxx-xxxx-xxxx' -Tenant 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 When the `Get-Credential` command is invoked, you are prompted to enter a username and password. Specify the application identifier as the username and the application secret as the password. When the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command is invoked, it requests a new access token using the specified refresh token from Azure Active Directory. That token is then used to connect to Partner Center.
@@ -579,13 +579,3 @@ After these permissions have been established, the sample performs operations us
 Un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
 ---
-
-## Frequently Asked Questions
-
-### Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?
-
-No, this will not work because of how the requirement for multi-factor authentication will be enforced.
-
-### How will the requirement for multi-factor authentication be enforced?
-
-This requirement will be enforced by ensuring that a claim of type <http://schemas.microsoft.com/claims/authnmethodsreferences> with a value of mfa is present. If it is not then authentication will be denied.
