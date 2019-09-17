@@ -21,9 +21,7 @@ The console test app is provided in C# and Java, it provides sample codes for al
 
 Download the sample code for the console test app.
 
-### [.NET](#tab/dotnet)
-
-### .NET
+## .NET
 
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=746682) and modify it as necessary.
 
@@ -34,9 +32,7 @@ Under **ScenarioSettings** in the *App.config* file, you can set parameters that
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.cs* file.
 
-### [Java](#tab/java)
-
-### Java
+## Java
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
@@ -48,8 +44,6 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 Under **ScenarioSettings** in the *SamplesConfiguration.json* file, you can set parameters that will be automatically passed into the scenarios that you run.
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.java* file.
-
------
 
 ## What to change
 

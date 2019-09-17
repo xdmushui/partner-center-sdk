@@ -30,9 +30,7 @@ For example, the billing system takes the same utilization data and applies late
 
 This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
 
-## Examples
-
-### [C\#](#tab/csharp)
+## C\#
 
 To obtain the Azure Utilization Records:
 
@@ -71,7 +69,7 @@ while (utilizationRecordEnumerator.HasValue)
 }
 ```
 
-### [Java](#tab/java)
+## Java
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
@@ -106,7 +104,7 @@ while (utilizationRecordEnumerator.hasValue())
 }
 ```
 
-### [PowerShell](#tab/powershell)
+## PowerShell
 
 [!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
@@ -119,15 +117,17 @@ To obtain the Azure Utilization Records, you first need a customer identifier an
 Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -SubscriptionId $subscriptionId -StartDate (Get-Date).AddDays(-2).ToUniversalTime() -Granularity Hourly -ShowDetails
 ```
 
-### [REST](#tab/rest)
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method | Request URI |
 |------- | ----------- |
 | **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True} |
 
-### URI parameters
+##### URI parameters
 
 Use the following path and query parameters to get the utilization records.
 
@@ -141,15 +141,15 @@ Use the following path and query parameters to get the utilization records.
 | show_details | boolean | No | Specifies whether to get the instance-level usage details. The default is `true`. |
 | size | number | No | Specifies the number of aggregations returned by a single API call. The default is 1000. The max is 1000. |
 
-### Request headers
+#### Request headers
 
 See [Partner Center REST headers](headers.md) for more information.
 
-### Request body
+#### Request body
 
 None
 
-### Request example
+#### Request example
 
 The following example request produces results similar to what the reconciliation file will show for the period 7/2 - 8/1. These results may not match exactly (see the section [Azure utilization API](#azure-utilization-api) for details).
 
@@ -165,15 +165,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. If the Azure utilization data is not yet ready in a dependent system, this method returns an HTTP Status Code 204 with a Retry-After header.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read the HTTP status code, [error code type](error-codes.md), and additional parameters.
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
