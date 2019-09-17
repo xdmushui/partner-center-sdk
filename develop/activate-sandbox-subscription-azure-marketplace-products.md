@@ -14,7 +14,7 @@ Applies to:
 How to activate subscription for commercial marketplace Software as a Service (SaaS) products from integration sandbox accounts to enable billing.
 
 >[!NOTE]
->Activating subscription for commercial marketplace SaaS products is only possible from integration sandbox accounts. For production subscriptions, you must visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
+>It's only possible to activate a subscription for commercial marketplace SaaS products from integration sandbox accounts. If you have a production subscription, you must visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
 
 ## Prerequisites
 
@@ -26,12 +26,12 @@ How to activate subscription for commercial marketplace Software as a Service (S
 
 Use the following steps to activate a subscription for commercial marketplace SaaS products:
 
-1. Get an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
+1. Make an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
 
     ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
 
-2. Activate the subscription using the Activate operation.
+2. Activate the subscription using the **Activate** operation.
 
     ``` csharp
     var subscriptionActivationResult = subscriptionOperations.Activate();
@@ -47,8 +47,8 @@ Use the following steps to activate a subscription for commercial marketplace Sa
 
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
-| **subscription-id** | **guid** | Y | The value is a GUID-formatted **subscription-id**, which is an identifier that allows you to specify a subscription. |
+| **customer-tenant-id** | **guid** | Y | The value is a GUID-formatted customer tenant identifier (**customer-tenant-id**), which allows you to specify a customer. |
+| **subscription-id** | **guid** | Y | The value is a GUID-formatted subscription identifier (**subscription-id**), which allows you to specify a subscription. |
 
 ### Request headers
 
@@ -71,7 +71,7 @@ MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 
 ## REST response
 
-This method returns the **subscription-id** and **status** property.
+This method returns the **subscription-id** and **status** properties.
 
 ### Response success and error codes
 
