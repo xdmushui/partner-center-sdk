@@ -6,7 +6,7 @@ ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
-# Get a meter usage records for a subscription of a customer
+# Get meter usage records for a subscription of a customer
 
 Applies to:
 
@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **PagedResourceCollection<MeterUsageRecord>** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the **MeterUsageRecord** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
 
 ## Prerequisites
 
