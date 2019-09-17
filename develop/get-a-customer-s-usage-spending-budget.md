@@ -31,9 +31,7 @@ allocated for a customer's usage.
 To update a customer's usage spending budget, first create a new
 [**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
 [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
-property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
-[**PatchAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
+method with the specified customer's ID. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to get usage buget.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -46,7 +44,7 @@ var newUsageBudget = new SpendingBudget()
 };
 
 // Update the customer's usage budget.
-var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
+var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Get();
 ```
 
 
@@ -58,7 +56,7 @@ var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudg
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
  
 
 **URI parameter**
@@ -84,20 +82,13 @@ The full resource.
 **Request example**
 
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json, text/plain, */*
 MS-RequestId: 312b044d-dc41-4b37-c2d5-7d27322d9654
 MS-CorrelationId: 7cb67bb7-4750-403d-cc2e-6bc44c52d52c
 Content-Type: application/json;charset=utf-8
 X-Locale: "en-US"
-
-{
-     "Amount": 100,
-     "Attributes": {
-          "ObjectType": "SpendingBudget"
-     }
-}
 ```
 
 
@@ -133,7 +124,7 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
     "links":{
         "self":{
             "uri":"/v1/customers/<customer-tenant-id>/usagebudget",
-            "method":"PATCH",
+            "method":"GET",
             "headers":[]
         }
     }
