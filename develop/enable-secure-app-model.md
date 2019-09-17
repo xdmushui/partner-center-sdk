@@ -1,7 +1,7 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -197,6 +197,8 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 You can use the [Partner Center PowerShell module](https://www.powershellgallery.com/packages/PartnerCenter) to reduce the required infrastructure to exchange an authorization code for an access token. This method is optional for making [Partner Center REST calls](#rest).
 

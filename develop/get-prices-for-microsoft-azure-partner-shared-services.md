@@ -2,7 +2,7 @@
 title: Get prices for Microsoft Azure Partner Shared Services
 description: How to get an Azure Rate Card with prices for Microsoft Azure Partner Shared Services.
 ms.assetid: B5B2F63A-D33F-4D76-8917-9952E6355746
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -43,6 +43,8 @@ AzureRateCard azureRateCard = partner.getRateCards().getAzure().getShared();
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command and specify the **SharedServices** parameter to retrun rate card details that contains the Azure prices.
 

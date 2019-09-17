@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -57,6 +57,8 @@ ResourceCollection<Agreement> agreements = partnerOperations.getCustomers().byId
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetCustomerAgreements.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
 # [PowerShell](#tab/powershell)
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 Use the [**Get-PartnerCustomerAgreement**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/get-partnercustomeragreement) command.
 

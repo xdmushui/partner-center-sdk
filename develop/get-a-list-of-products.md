@@ -2,7 +2,7 @@
 title: Get a list of products
 description: Gets a collection of products.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 08/16/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -54,6 +54,8 @@ ResourceCollection<Products> products = partnerOperations.getProducts().byCountr
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get a list of products, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command. You can select the catalog by specifing the **Catalog** parameter, and optionally select the target segement by specifying the **Segment** parameter. 
 

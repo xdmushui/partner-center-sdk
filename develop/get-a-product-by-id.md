@@ -2,7 +2,7 @@
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -44,6 +44,8 @@ Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZ
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
 

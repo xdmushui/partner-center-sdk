@@ -2,7 +2,7 @@
 title: Get a customer's utilization records for Azure
 description: Get the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -107,6 +107,8 @@ while (utilizationRecordEnumerator.hasValue())
 ```
 
 ### [PowerShell](#tab/powershell)
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the [**Get-PartnerCustomerSubscriptionUtilization**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerSubscriptionUtilization.md). This command will return all records available for the specified period of time.
 

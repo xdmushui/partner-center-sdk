@@ -2,7 +2,7 @@
 title: Get a customer by ID
 description: Gets a Customer resource that corresponds to a customer ID.
 ms.assetid: C84DF574-0E1B-418B-8AED-06C1E3BD301F
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -51,6 +51,8 @@ Customer customerInfo = partnerOperations.getCustomers().byId(customerIdToRetrie
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get a customer by ID, execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command and specify the **CustomerId** parameter.
 

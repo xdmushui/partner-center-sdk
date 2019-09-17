@@ -2,7 +2,7 @@
 title: Get a list of customers
 description: How to get a collection of resources representing all of a partner's customers.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -80,6 +80,8 @@ while (customersEnumerator.hasValue())
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 Execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command with no parameters to get a complete list of customers.
 

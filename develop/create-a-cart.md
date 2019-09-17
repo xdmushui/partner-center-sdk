@@ -1,7 +1,7 @@
 ---
 title: Create a cart
 description: How to add an order for a customer in a cart.
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -158,6 +158,8 @@ Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To create an order for a customer:
 

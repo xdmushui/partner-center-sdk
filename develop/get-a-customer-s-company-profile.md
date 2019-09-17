@@ -2,7 +2,7 @@
 title: Get a customer's company profile
 description: Gets the company profile of a customer.
 ms.assetid: 762C0F38-2229-464D-9CD6-6AD82135A65C
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 

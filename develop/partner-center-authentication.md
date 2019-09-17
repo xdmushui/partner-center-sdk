@@ -2,7 +2,7 @@
 title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
-ms.date: 09/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -66,6 +66,8 @@ public IAggregatePartner getAppPartnerOperations()
 ```
 
 ### [PowerShell](#tab/apponly-powershell)
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 ```powershell
 $credential = Get-Credential
@@ -304,6 +306,8 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
 #### [PowerShell](#tab/appuser-powershell)
 
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+
 Cloud Solution Provider partners can utilize the [Partner Center PowerShell](https://www.powershellgallery.com/packages/PartnerCenter) module to perform the partner consent process. This is made possible through the use of the [New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/New-PartnerAccessToken) command. The following demonstrates how consent can be provided and the refresh token obtained.
 
 ```powershell
@@ -395,6 +399,8 @@ To help partners understand how to perform each required operation, we have deve
 6. Optional - un-comment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
 #### [PowerShell](#tab/csp-powershell)
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 Connect to Partner Center using the [Connect-PartnerCenter](https://docs.microsoft.com/powershell/module/partnercenter/connect-partnercenter) command. You will need to retrieve the refresh token that was obtained during the [partner consent](#partner-consent) process, from the secure repository. Execute the following commands to request an access token and use it when connecting to Partner Center.
 

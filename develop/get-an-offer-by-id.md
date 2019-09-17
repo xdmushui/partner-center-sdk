@@ -2,7 +2,7 @@
 title: Get an offer by ID
 description: Gets a Offer resource that matches the offer ID.
 ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -55,6 +55,8 @@ Offer offer = partnerOperations.getOffers().byCountry(countryCode).byId(offerId)
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOffer.md) command, and specify the **CountryCode** and **OfferId** parameters.
 

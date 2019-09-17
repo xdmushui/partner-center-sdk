@@ -1,7 +1,7 @@
 ---
 title: Checkout a cart
 description: How to checkout an order for a customer in a cart.
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -51,6 +51,8 @@ Cart cart = partnerOperations.getCustomers().byId(customerId).getCart().byId(car
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To checkout an order for a customer, execute the [**Submit-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Submit-PartnerCustomerCart.md) to complete the order.
 

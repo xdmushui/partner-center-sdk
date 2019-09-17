@@ -2,7 +2,7 @@
 title: Validate an address
 description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -110,7 +110,9 @@ catch (Exception exception)
 }
 ```
 
-### PowerShell 
+### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To validate an address, execute the [**Test-PartnerAddress**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Test-PartnerAddress.md) with the address parameters populated.
 

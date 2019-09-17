@@ -2,7 +2,7 @@
 title: Get a list of SKUs for a product
 description: Gets a collection of SKUs for the specified product.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 08/12/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -59,7 +59,9 @@ ResourceCollection<Sku> skus = partnerOperations.getProducts().byCountry(country
 var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().byTargetSegment(targetSegment).get();
 ```
 
-### PowerShell 
+### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get the list of SKUs for a product, execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command. Optionally, you can specify the **Segment** parameter to filter the SKUs by target segment.
 
