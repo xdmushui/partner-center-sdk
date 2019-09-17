@@ -24,23 +24,24 @@ This topic describes how to get the **SubscriptionUsageSummary** resource. This 
 
 ## C\#
 
-To get a usage summary for a subscription of a customer.
+To get a subscription usage summary for a subscription of a customer.
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
-2. Call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods:
+2. Then call the Subscriptions property, as well as **UsageSummary** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
     // IAggregatePartner partnerOperations;
     // var selectedCustomerId as string;
+	// var selectedSubscriptionId as string;
 
-    var usageSummary = partnerOperations.Customers.ById(selectedCustomerId).UsageSummary.Get();
+    var subscriptionUsageSummary = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).UsageSummary.Get();
     ```
 
 For an example, see the following:
 
 - Sample: [Console test app](console-test-app.md)
 - Project: **PartnerSDK.FeatureSamples**
-- Class: **GetCustomerUsageSummary.cs**
+- Class: **GetSubscriptionUsageSummary.cs**
 
 ## REST request
 
@@ -96,17 +97,17 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
-    "resourceId": "5e3123bb-bed4-6703-78ae-30dcd0b8b6c7",
+    "resourceId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
     "resourceName": "Azure plan",
     "billingStartDate": "2019-09-01T00:00:00+00:00",
     "billingEndDate": "2019-10-01T00:00:00+00:00",
-    "totalCost": 120.5682999999995904716,
-    "currencyCode": "SEK",
-    "usdTotalCost": 12.39999999999999985235,
-    "lastModifiedDate": "2019-09-17T17:08:11.1433333+00:00",
+    "totalCost": 82.3616054989566696032,
+    "currencyCode": "GBP",
+    "usdTotalCost": 100.6499999999999985997,
+    "lastModifiedDate": "2019-09-17T21:08:44.2566667+00:00",
     "links": {
         "self": {
-            "uri": "/customers/12345678-6fb9-4b05-8f15-b3d72e0596e6/subscriptions/ABCDEFGH-bed4-6703-78ae-30dcd0b8b6c7/usagesummary",
+            "uri": "/customers/431f479f-9cb2-4486-a3ad-b47f844c1dd2/subscriptions/5a2a03c7-846e-ba03-c946-dee8841e2b94/usagesummary",
             "method": "GET",
             "headers": []
         }

@@ -26,13 +26,11 @@ This topic describes how to get the **CustomerUsageSummary** resource. This reso
 To get a usage summary for all of a customer's subscriptions:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
-2. Call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods:
+2. Then call **UsageRecords** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
     // IAggregatePartner partnerOperations;
-    // var selectedCustomerId as string;
-
-    var usageSummary = partnerOperations.Customers.ById(selectedCustomerId).UsageSummary.Get();
+    var usageRecords = partnerOperations.Customers.UsageRecords.Get();
     ```
 
 For an example, see the following:
@@ -83,7 +81,7 @@ Content-Length: 1120
 Content-Type: application/json
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
-Date: Fri, 26 Feb 2016 20:31:45 GMT
+Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
     "totalCount": 25,

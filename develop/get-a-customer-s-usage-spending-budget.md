@@ -2,7 +2,7 @@
 title: Get a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
 ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
-ms.date: 02/05/2018
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -111,7 +111,7 @@ Content-Length: 12014
 Content-Type: application/json
 MS-CorrelationId: 7cb67bb7-4750-403d-cc2e-6bc44c52d52c
 MS-RequestId: be82a8ba-4a53-49f7-8313-b033c058687e
-Date: Tue, 10 Nov 2015 19:09:59 GMT
+Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
     {
