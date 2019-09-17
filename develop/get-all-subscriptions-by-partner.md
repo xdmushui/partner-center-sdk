@@ -2,7 +2,7 @@
 title: Get a customer's subscriptions by partner MPN ID
 description: How to get a list of subscriptions provided by a given partner to a specified customer.
 ms.assetid: 02742789-97F0-4B9C-9948-42BF6F3D4D18
-ms.date: 09/29/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -41,6 +41,8 @@ var customerSubscriptionsByMpnId = partnerOperations.Customers.ById(customerId).
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionsByMpnid.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get a list of subscriptions provided by a given partner to a specified customer, first use the **IAggregatePartner.getCustomers.byId** function with the customer ID to identify the customer. Then get an interface to customer subscription collection operations from the **getSubscriptions** function, and call the **byPartner** function with the MPN ID to identify the partner and retrieve an interface to partner subscription operations. Finally, call the **get** function to get the collection.
 

@@ -50,6 +50,8 @@ public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
 
 ### [Java](#tab/apponly-java)
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 ```java
 public IAggregatePartner getAppPartnerOperations()
 {

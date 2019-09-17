@@ -2,7 +2,7 @@
 title: Validate an address
 description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
-ms.date: 09/30/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -77,6 +77,8 @@ catch (PartnerException exception)
 ### Java
 
 To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.getValidations** function, and call the **isAddressValid** method with the address object.
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 ```java
 // IAggregatePartner partnerOperations;

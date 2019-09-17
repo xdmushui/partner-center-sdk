@@ -2,7 +2,7 @@
 title: Get a customer's utilization records for Azure
 description: Get the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
-ms.date: 07/22/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -72,6 +72,8 @@ while (utilizationRecordEnumerator.HasValue)
 ```
 
 ### [Java](#tab/java)
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the **IAzureUtilizationCollection.query** function to return a **ResourceCollection** that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
 

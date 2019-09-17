@@ -2,7 +2,7 @@
 title: Get an offer by ID
 description: Gets a Offer resource that matches the offer ID.
 ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
-ms.date: 09/29/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -40,6 +40,8 @@ var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To find a specific offer by ID, use your **IAggregatePartner.getOffers** function, establish the country with a call to the **byCountry()** function, and then call the **byID()** function. Then call the **get()** function.
 

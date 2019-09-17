@@ -39,6 +39,8 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 
 ### Java
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 To get a list of products, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, select the catalog view by using the **byTargetView()** function, and optionally select the target segment by using the **byTargetSegment()** function. Finally, call the **get()** function to return the collection. 
 
 ```java

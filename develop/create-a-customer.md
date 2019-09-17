@@ -2,7 +2,7 @@
 title: Create a customer
 description: How to create a new customer.
 ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.date: 06/03/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -84,6 +84,8 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateCustomer.cs
 
 ## Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To create a new customer:
 

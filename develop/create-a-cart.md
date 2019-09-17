@@ -1,7 +1,7 @@
 ---
 title: Create a cart
 description: How to add an order for a customer in a cart.
-ms.date: 07/12/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -115,6 +115,8 @@ cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
 ## Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To create an order for a customer:
 

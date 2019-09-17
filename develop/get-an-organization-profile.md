@@ -2,7 +2,7 @@
 title: Get an organization profile
 description: Gets an object representing the partner's organization profile.
 ms.assetid: 2AA159F1-CC84-4367-A2AF-DFA4C8B0E673
-ms.date: 09/29/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -36,6 +36,8 @@ OrganizationProfile organizationProfile = partnerOperations.Profiles.Organizatio
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: GetOrganizationProfile.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get your organization profile, use your **IAggregatePartner.getProfiles** function and call the **getOrganizationProfile** function. Finally, call the **get()** function.
 

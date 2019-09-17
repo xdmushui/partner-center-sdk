@@ -2,7 +2,7 @@
 title: Get a list of customers
 description: How to get a collection of resources representing all of a partner's customers.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
-ms.date: 07/25/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -49,6 +49,8 @@ For an example, see the following:
 - Class: **CustomerPaging.cs**
 
 ## Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get a list of all customers:
 

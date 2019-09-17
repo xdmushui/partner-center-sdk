@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 11/28/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,8 @@ var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 # [Java](#tab/java)
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 Use the **IAggregatePartner.getCustomers** function and call the **byId** function with the specified customer's identifier. Then, get the **getAgreements** function, followed by calling the **get** function.
 

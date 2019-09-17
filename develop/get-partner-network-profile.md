@@ -2,7 +2,7 @@
 title: Get Microsoft Partner Network profile
 description: Gets an object representing the partner's MPN profile.
 ms.assetid: 6DC85E2F-0AC8-4166-883B-CCFD19044FC1
-ms.date: 09/29/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -36,6 +36,8 @@ var mpnProfile = partnerOperations.Profiles.MpnProfile.Get();
 **Sample**: [Console test app](console-test-app.md). **Project**:PartnerCenterSDK.FeaturesSamples **Class**: GetMPNProfile.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get a partner network profile, use your **IAggregatePartner.getProfiles** function and call the **getMpnProfile** function. Finally, call the **get()** function.
 

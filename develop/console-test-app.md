@@ -2,7 +2,7 @@
 title: Console test app
 description: This console test app provides sample code for all scenarios supported by the Partner Center APIs. You can also use it for testing.
 ms.assetid: 56F5B4C6-CE87-4D13-9D8C-09F38E946292
-ms.date: 05/23/2019
+ms.date: 08/07/2019
 ms.localizationpriority: medium
 ---
 
@@ -37,6 +37,8 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 ### [Java](#tab/java)
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
 

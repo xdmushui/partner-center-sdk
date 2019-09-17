@@ -1,7 +1,7 @@
 ---
 title: Get agreement metadata for Microsoft Cloud Agreement
 description: This topic explains how to get agreement metadata for Microsoft Cloud Agreement. 
-ms.date: 11/28/2018
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,8 @@ AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr
 A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 # [Java](#tab/java)
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 First call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 

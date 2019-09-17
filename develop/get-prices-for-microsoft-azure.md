@@ -2,7 +2,7 @@
 title: Get prices for Microsoft Azure
 description: How to get an Azure Rate Card with real-time prices for an Azure offer. Azure pricing is quite dynamic and changes frequently.
 ms.assetid: 65262585-0F3B-4BD0-83BE-B2695C33CDB7
-ms.date: 03/20/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -35,6 +35,8 @@ var azureRateCard = partner.RateCards.Azure.Get();
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To obtain the Azure Rate Card, call the **IAzureRateCard.get** function to return rate card details that contains the Azure prices.
 

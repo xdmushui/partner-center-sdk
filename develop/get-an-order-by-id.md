@@ -2,7 +2,7 @@
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 06/19/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,8 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
 
 ## Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get a customer's order by ID:
 

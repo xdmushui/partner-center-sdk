@@ -2,7 +2,7 @@
 title: Get an availability by ID
 description: Gets an availability for the specified product and SKU using an availability ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 01/08/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -39,6 +39,8 @@ var availability = partnerOperations.Products.ByCountry(countryCode).ById(produc
 ```
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get details of a specific [availability](product-resources.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](product-resources.md#sku) operations. From the resulting interface, select the **getAvailabilities** function to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **byId()** function to get the operations for that specific availability and then call the **get()** function to retrieve the availability details.
 

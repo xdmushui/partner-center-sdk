@@ -1,7 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Cloud Agreement
 description: How to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 05/23/2019
+ms.date: 08/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -72,6 +72,8 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 ### [Java](#tab/java)
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
