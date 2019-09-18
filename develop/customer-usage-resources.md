@@ -26,13 +26,13 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | Property         | Type               | Description                                                              |
 |------------------|--------------------|--------------------------------------------------------------------------|
 | Budget           | SpendingBudget     | The spending budget allocated for the customer.                          |
-| PercentUsed      | double             | The percentage used out of the allocated budget.                         |
+| PercentUsed      | decimal             | The percentage used out of the allocated budget.                         |
 | ResourceId       | string             | The unique identifier of the resource.                                   |
 | ResourceName     | string             | The name of the resource.                                                |
-| TotalCost        | dobule             | The estimated total cost of usage for the resources in the subscription. |
+| TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription. |
 | CurrencyLocale   | string             | The customer's currency locale. **Available for Azure 145P**.                                         |
-| CurrencyCode   | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
 | LastModifiedDate | date               | The date the usage data was last modified.                               |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the usage record.               |
 
@@ -47,10 +47,10 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | ResourceName     | string             | The name of the resource. In the context of CustomerMonthlyUsageRecord, this is the customer name.               |
 | BillingStartDate | date               | The start date of the current billing period.                                                                    |
 | BillingEndDate   | date               | The end date of the current billing period.                                                                      |
-| TotalCost        | dobule             | The estimated total cost of usage for the resources in the subscription.                                         |
+| TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription.                                         |
 | CurrencyLocale   | string             | The customer's currency locale. **Available for Azure 145P**.                                         |
-| CurrencyCode   | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
 | LastModifiedDate | date               | The date the usage data was last modified.                                                                       |
 | Links            | ResourceLinks      | The resource links corresponding to the usage summary.                                                           |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the usage summary.                                                      |
@@ -69,7 +69,7 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | ResourceName     | string             | The name of the resource. In the context of CustomerMonthlyUsageRecord, this is the customer name.               |
 | BillingStartDate | date               | The start date of the current billing period.                                                                    |
 | BillingEndDate   | date               | The end date of the current billing period.                                                                      |
-| TotalCost        | dobule             | The estimated total cost of all customer usage based on current usage from the start of the billing period.      |
+| TotalCost        | decimal             | The estimated total cost of all customer usage based on current usage from the start of the billing period.      |
 | CurrencyLocale   | string             | The currency locale.                                                                                             |
 | LastModifiedDate | date               | The date the usage data was last modified.                                                                       |
 | Links            | ResourceLinks      | The resource links corresponding to the usage summary.                                                           |
@@ -81,5 +81,5 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 
 | Property   | Type               | Description                                                                                         |
 |------------|--------------------|-----------------------------------------------------------------------------------------------------|
-| Amount     | Double             | The allocated budget. If the value is null, there is no spending budget allocated to this customer. |
+| Amount     | decimal             | The allocated budget. If the value is null, there is no spending budget allocated to this customer. |
 | Attributes | ResourceAttributes | The metadata attributes corresponding to the budget.                                                |

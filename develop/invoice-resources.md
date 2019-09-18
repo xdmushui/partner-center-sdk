@@ -227,7 +227,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
 | AlternateId | string | Gets or sets the Alternate ID (quote ID). |
 | PriceAdjustmentDescription | string | Gets or sets the price adjustment description. |
-| DiscountDetails | string | Gets or sets the discount details associated with this purchase. **To be deprecated soon** |
+| DiscountDetails | string | Gets or sets the discount details associated with this purchase. **[Obsolete]** |
 | PricingCurrency | string | Gets or sets the pricing currency code. |
 | PCToBCExchangeRate | decimal | Gets or sets the pricing currency to billing currency exchange rate. |
 | PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to billing currency exchange rate was determined. |

@@ -36,7 +36,7 @@ Describes how much a subscription is used in a single day.
 | DateUsed         | string             | The day, in date-time format, that the subscription was used.                                 |
 | ResourceId       | string             | GUID. The unique ID of the resource.                                                          |
 | ResourceName     | string             | The name of the resource.                                                                     |
-| TotalCost        | double             | The estimated total cost of using the resources in the subscription on the specified day.     |
+| TotalCost        | decimal             | The estimated total cost of using the resources in the subscription on the specified day.     |
 | CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
@@ -55,10 +55,10 @@ Describes how much a subscription is used in a single month.
 | OfferId          | string             | GUID. The id of the offer related to this subscription.                                       |
 | Id               | string             | GUID. The id of the subscription or resource.                                                 |
 | Name             | string             | The name of the subscription or resource.                                                     |
-| TotalCost        | double             | The estimated total cost of using the resources in the subscription in the specified month.   |
+| TotalCost        | decimal             | The estimated total cost of using the resources in the subscription in the specified month.   |
 | CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice **Available for Azure 145P**. |
-| CurrencyCode   | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
