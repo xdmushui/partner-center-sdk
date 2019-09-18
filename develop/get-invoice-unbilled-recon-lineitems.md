@@ -1,5 +1,5 @@
 ---
-title: Get invoice's unbilled reconciliation line items
+title: Get invoice's unbilled reconciliation line items (AKA open billing line items)
 description: How to get a collection of unbilled reconciliation line item details for specified period.
 ms.date: 09/10/2019
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ Applies to:
 How to get a collection of unbilled invoice line item details.
 
 >[!NOTE]
->Please use **“onetime”** to query all onetime invoice line item line items, instead of **“all”** (to be deprecated).Alternatively, follow the links in estimate links call.
+>Please use **“onetime”** to query all onetime invoice line item line items, instead of **“all”** (to be deprecated). Alternatively, follow the links in estimate links call.
 
 ## Prerequisites
 
