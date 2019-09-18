@@ -6,7 +6,7 @@ ms.date: 07/25/2019
 ms.localizationpriority: medium
 ---
 
-# Get a usage summary for all of a customer's subscriptions
+# Get a usage summary for a partner
 
 Applies to:
 
@@ -15,6 +15,9 @@ Applies to:
 - Partner Center for Microsoft Cloud for US Government
 
 This topic describes how to get the **PartnerUsageSummary** resource. This resource represents partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
+
+> [!NOTE]
+> The total returned by this API will not return consumption for customers that have Azure plan. Planned for deprecation in the future.
 
 ## Prerequisites
 
