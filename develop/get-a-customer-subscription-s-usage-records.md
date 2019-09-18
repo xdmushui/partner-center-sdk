@@ -1,12 +1,12 @@
 ---
 title: Get all subscription usage records for a customer
-description: How to get a susbcription usage records for a customer of a specific Azure service or resource during the current billing period.
+description: How to get susbcription usage records for a customer of a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
 ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
-# Get a usage summary for all of a customer's subscriptions
+# Get susbcription usage records for a customer
 
 Applies to:
 
@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **SubscriptionMonthlyUsageRecord** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the colletion of **SubscriptionMonthlyUsageRecord** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ This topic describes how to get the **SubscriptionMonthlyUsageRecord** resource.
 
 ## C\#
 
-To get a usage summary for all of a customer's subscriptions:
+To get susbcription usage records for a customer of a specific Azure service or resource during the current billing period.:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
 2. Then call the **Subscriptions** property, as well as **UsageRecords** property. Finish by calling the Get() or GetAsync() methods.
@@ -45,8 +45,8 @@ For an example, see the following:
 
 ### Request syntax
 
-| Method  | Request URI                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------|
+| Method  | Request URI                                                                                                      |
+|---------|------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/usagerecords HTTP/1.1 |
 
 #### URI parameter

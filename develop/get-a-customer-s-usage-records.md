@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **CustomerUsageSummary** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the collection of **CustomerMonthlyUsageRecord** resource. This resource represents the customer's usage records for all customer purchased a specific Azure service or resource during the current billing period.
 
 ## Prerequisites
 
@@ -37,14 +37,14 @@ For an example, see the following:
 
 - Sample: [Console test app](console-test-app.md)
 - Project: **PartnerSDK.FeatureSamples**
-- Class: **GetCustomerUsageSummary.cs**
+- Class: **GetCustomerUsageRecords.cs**
 
 ## REST request
 
 ### Request syntax
 
-| Method  | Request URI                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------|
+| Method  | Request URI                                                                   |
+|---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/usagerecords HTTP/1.1 |
 
 ### Request headers

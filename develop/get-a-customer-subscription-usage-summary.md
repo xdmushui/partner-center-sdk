@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **SubscriptionUsageSummary** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the **SubscriptionUsageSummary** resource. This resource represents the subscription usage summary of a specific Azure service or resource during the current billing period.
 
 ## Prerequisites
 
@@ -47,17 +47,17 @@ For an example, see the following:
 
 ### Request syntax
 
-| Method  | Request URI                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------|
+| Method  | Request URI                                                                                                                        |
+|---------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/usagesummary HTTP/1.1 |
 
 #### URI parameter
 
 This table lists the required query parameter to get the customer's rated usage information.
 
-| Name                   | Type     | Required | Description                           |
-|------------------------|----------|----------|---------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
+| Name                   | Type     | Required | Description                                             |
+|------------------------|----------|----------|---------------------------------------------------------|
+| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.                   |
 | **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription or azure plan. |
 
 ### Request headers

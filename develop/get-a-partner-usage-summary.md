@@ -19,7 +19,6 @@ This topic describes how to get the **PartnerUsageSummary** resource. This resou
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
 ## C\#
 
@@ -44,8 +43,8 @@ For an example, see the following:
 
 ### Request syntax
 
-| Method  | Request URI                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------|
+| Method  | Request URI                                                         |
+|---------|---------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/usagesummary HTTP/1.1 |
 
 ### Request headers
