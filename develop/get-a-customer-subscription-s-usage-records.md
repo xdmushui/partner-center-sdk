@@ -102,8 +102,8 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
         {
             "status": "active",
             "offerId": "MS-AZR-0145P",
-            "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
-            "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "resourceId": "11111111-F347-41B6-B02C-187B1B778A43",
+            "id": "11111111-F347-41B6-B02C-187B1B778A43",
             "resourceName": "Microsoft Azure",
             "name": "Microsoft Azure",
             "totalCost": 22.861172,
@@ -117,7 +117,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/usagerecords/",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/usagerecords/",
             "method": "GET",
             "headers": []
         }
@@ -147,10 +147,10 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "items": [
         {
             "status": "active",
-            "partnerOnRecord": "5278907",
+            "partnerOnRecord": "some-id",
             "offerId": "DZH318Z0BPS6:0001:DZH318Z0BML6",
-            "resourceId": "c61b3c41-7d58-6654-69fa-0797198155d3",
-            "id": "c61b3c41-7d58-6654-69fa-0797198155d3",
+            "resourceId": "11111111-7d58-6654-69fa-0797198155d3",
+            "id": "11111111-7d58-6654-69fa-0797198155d3",
             "resourceName": "Azure plan",
             "name": "Azure plan",
             "totalCost": 0,
@@ -163,10 +163,10 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
         },
         {
             "status": "active",
-            "partnerOnRecord": "994867",
+            "partnerOnRecord": "some-id",
             "offerId": "DZH318Z0BPS6:0001:DZH318Z0BML6",
-            "resourceId": "764fd52f-25aa-ebb8-2bb4-fb406307babd",
-            "id": "764fd52f-25aa-ebb8-2bb4-fb406307babd",
+            "resourceId": "11111111-25aa-ebb8-2bb4-fb406307babd",
+            "id": "11111111-25aa-ebb8-2bb4-fb406307babd",
             "resourceName": "Azure plan",
             "name": "Azure plan",
             "totalCost": 0,
@@ -180,7 +180,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/usagerecords",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/usagerecords",
             "method": "GET",
             "headers": []
         }

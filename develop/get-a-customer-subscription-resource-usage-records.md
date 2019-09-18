@@ -159,7 +159,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/<subscription-id>/resourceusagerecords",
             "method": "GET",
             "headers": []
         }

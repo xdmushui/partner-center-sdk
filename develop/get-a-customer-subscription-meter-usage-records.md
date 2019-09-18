@@ -112,8 +112,8 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
         {
             "status": "active",
             "offerId": "MS-AZR-0145P",
-            "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
-            "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "resourceId": "11111111-F347-41B6-B02C-187B1B778A43",
+            "id": "11111111-F347-41B6-B02C-187B1B778A43",
             "resourceName": "Microsoft Azure",
             "name": "Microsoft Azure",
             "totalCost": 22.861172,
@@ -223,7 +223,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/meterusagerecords",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/<subscription-id>/meterusagerecords",
             "method": "GET",
             "headers": []
         }

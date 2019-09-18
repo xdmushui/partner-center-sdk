@@ -114,7 +114,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "lastModifiedDate": "2019-09-01T23:04:41.193+00:00",
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/usagesummary",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/<subscription-id>/usagesummary",
             "method": "GET",
             "headers": []
         }
@@ -140,7 +140,7 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
-    "resourceId": "abcdefgh-dca5-6f31-d3a6-dbbfad9be0fc",
+    "resourceId": "11111111-dca5-6f31-d3a6-dbbfad9be0fc",
     "resourceName": "Azure plan",
     "billingStartDate": "2019-09-01T00:00:00+00:00",
     "billingEndDate": "2019-10-01T00:00:00+00:00",
@@ -150,7 +150,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
     "links": {
         "self": {
-            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/usagesummary",
+            "uri": "/customers/<customer-tenant-id>/subscriptions/<subscription-id>/usagesummary",
             "method": "GET",
             "headers": []
         }
