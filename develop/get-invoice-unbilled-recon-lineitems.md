@@ -1,7 +1,7 @@
 ---
 title: Get invoice's unbilled reconciliation line items (AKA open billing line items)
 description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 09/10/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 

@@ -2,7 +2,7 @@
 title: Get a usage summary for a partner
 description: How to get usage summary for all customers that purchased a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 07/25/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 

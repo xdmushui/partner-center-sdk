@@ -2,7 +2,7 @@
 title: Invoice resources
 description: Description of invoice-related resources.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 06/11/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 
@@ -195,8 +195,8 @@ Represents an invoice billing line item for licensed-based subscriptions.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| PartnerId | string | Gets or sets the partner commerce account ID. |
-| CustomerId | string | Gets or sets the customer commerce account ID. |
+| PartnerId | string | Gets or sets the partner tenant ID. |
+| CustomerId | string | Gets or sets the customer tenant ID. |
 | CustomerName | string | Gets or sets the customer name. |
 | CustomerDomainName | string | Gets or sets the customer domain name. |
 | CustomerCountry | string | Gets or sets the customer country. |
@@ -241,9 +241,9 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| PartnerId | string | Gets or sets the partner ID. |
+| PartnerId | string | Gets or sets the partner tenant ID. |
 | PartnerName | string | Gets or sets the partner name. |
-| CustomerId | string | Gets or sets the ID of the customer that usage belongs to. |
+| CustomerId | string | Gets or sets the tenant ID of the customer that usage belongs to. |
 | CustomerName | string | Gets or sets the name of the customer company that usage belongs to. |
 | CustomerDomainName | string | Gets or sets the domain name of the customer that usage belongs to. |
 | InvoiceNumber | string | Gets or sets the ID of the invoice that usage belongs to. |

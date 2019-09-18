@@ -2,7 +2,7 @@
 title: Get invoice summaries
 description: Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges. 
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.date: 12/15/2017
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 

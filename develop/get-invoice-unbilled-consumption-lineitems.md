@@ -1,7 +1,7 @@
 ---
 title: Get invoice unbilled commercial consumption line items (AKA open daily rated usage line items)
 description: How to get a collection of unbilled commercial consumption line item details for a specified invoice.
-ms.date: 09/10/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 

@@ -123,6 +123,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
         "objectType": "SubscriptionUsageSummary"
     }
 }
+```
 
 ### Response example 2 - Customer purchased Azure Plan
 

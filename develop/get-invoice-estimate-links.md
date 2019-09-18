@@ -1,7 +1,7 @@
 ---
 title: Get invoice estimate links
 description: How to get a collection of estimate links to query recon line item details.
-ms.date: 04/05/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 

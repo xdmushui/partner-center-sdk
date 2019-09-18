@@ -2,7 +2,7 @@
 title: Customer usage resources
 description: Resources for customers with usage-based subscriptions and monthly use budgets.
 ms.assetid: 268C7AF5-3A95-451F-8092-033A3E8126F2
-ms.date: 06/11/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 
@@ -26,13 +26,14 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | Property         | Type               | Description                                                              |
 |------------------|--------------------|--------------------------------------------------------------------------|
 | Budget           | SpendingBudget     | The spending budget allocated for the customer.                          |
-| PercentUsed      | decimal             | The percentage used out of the allocated budget.                         |
+| PercentUsed      | decimal             | The percentage used out of the allocated budget.                        |
 | ResourceId       | string             | The unique identifier of the resource.                                   |
 | ResourceName     | string             | The name of the resource.                                                |
-| TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription. |
-| CurrencyLocale   | string             | The customer's currency locale. **Available for Azure 145P**.                                         |
-| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
+| TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription.|
+| CurrencyLocale   | string             | The customer's currency locale. **Available for Azure 145P**.            |
+| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.           |
 | USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| IsUpgraded       | bool             | Gets or sets a value indicating whether the customer's azure subscription is upgraded.Value 'true' represents customers that have Azure plan                         |
 | LastModifiedDate | date               | The date the usage data was last modified.                               |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the usage record.               |
 

@@ -1,7 +1,7 @@
 ---
-title: Get invoice billed consumption line items (AKA closed daily rated usage line items)
+title: Get invoice billed commercial consumption line items (AKA closed daily rated usage line items)
 description: How to get a collection of commercial consumption invoice line item details for the specified invoice.
-ms.date: 09/10/2019
+ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 
