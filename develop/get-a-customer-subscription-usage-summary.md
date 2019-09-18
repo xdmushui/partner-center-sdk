@@ -103,8 +103,8 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
-    "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
-    "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+    "resourceId": "ABCDEFGH-F347-41B6-B02C-187B1B778A43",
+    "id": "ABCDEFGH-F347-41B6-B02C-187B1B778A43",
     "resourceName": "Microsoft Azure",
     "name": "Microsoft Azure",
     "billingStartDate": "2019-08-28T00:00:00-07:00",
@@ -114,7 +114,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "lastModifiedDate": "2019-09-01T23:04:41.193+00:00",
     "links": {
         "self": {
-            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/ECF71641-F347-41B6-B02C-187B1B778A43/usagesummary",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/usagesummary",
             "method": "GET",
             "headers": []
         }
@@ -140,7 +140,7 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
-    "resourceId": "920903a1-dca5-6f31-d3a6-dbbfad9be0fc",
+    "resourceId": "abcdefgh-dca5-6f31-d3a6-dbbfad9be0fc",
     "resourceName": "Azure plan",
     "billingStartDate": "2019-09-01T00:00:00+00:00",
     "billingEndDate": "2019-10-01T00:00:00+00:00",
@@ -150,7 +150,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
     "links": {
         "self": {
-            "uri": "/customers/44908a11-641b-4c53-b7fc-0f2bfca8a581/subscriptions/920903a1-dca5-6f31-d3a6-dbbfad9be0fc/usagesummary",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/usagesummary",
             "method": "GET",
             "headers": []
         }

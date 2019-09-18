@@ -127,7 +127,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/usagerecords/",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/usagerecords/",
             "method": "GET",
             "headers": []
         }
@@ -157,7 +157,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
     "totalCount": 4,
     "items": [
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
+            "subscriptionId": "{subscription-id}",
             "meterId": "DZH318Z0BNVX-005J-Data Transfer In (GB)",
             "meterName": "Data Transfer In",
             "category": "Bandwidth",
@@ -173,7 +173,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
             }
         },
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
+            "subscriptionId": "{subscription-id}",
             "meterId": "DZH318Z0BNVX-005J-Data Transfer Out (GB)",
             "meterName": "Data Transfer Out",
             "category": "Bandwidth",
@@ -189,7 +189,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
             }
         },
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
+            "subscriptionId": "{subscription-id}",
             "meterId": "DZH318Z0BNZ5-006G-10K Batch Write Operations",
             "meterName": "Batch Write Operations",
             "category": "Storage",
@@ -205,7 +205,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
             }
         },
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
+            "subscriptionId": "{subscription-id}",
             "meterId": "DZH318Z0BNZ5-006G-Data Stored (GB/Month)",
             "meterName": "LRS Data Stored",
             "category": "Storage",
@@ -223,7 +223,7 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/431f479f-9cb2-4486-a3ad-b47f844c1dd2/subscriptions/5a2a03c7-846e-ba03-c946-dee8841e2b94/meterusagerecords",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/meterusagerecords",
             "method": "GET",
             "headers": []
         }

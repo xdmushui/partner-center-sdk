@@ -106,10 +106,10 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "totalCount": 3,
     "items": [
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
-            "resourceUri": "/subscriptions/fa334fc9-1c6f-45d1-839f-a006b9cbeaab/resourceGroups/TESTRG1/providers/Microsoft.Compute/disks/testVM1_OsDisk_1_531d3c99534b4649ae025d485370143e",
+            "subscriptionId": "{subscription-id}",
+            "resourceUri": "/subscriptions/{subscription-id}/resourceGroups/TESTRG1/providers/Microsoft.Compute/disks/testVM1_OsDisk_1_531d3c99534b4649ae025d485370143e",
             "resourceType": "Microsoft.Compute",
-            "entitlementId": "fa334fc9-1c6f-45d1-839f-a006b9cbeaab",
+            "entitlementId": "{entitlemen-id}",
             "entitlementName": "Partner Subscription",
             "resourceGroupName": "TESTRG1",
             "name": "testVM1_OsDisk_1_531d3c99534b4649ae025d485370143e",
@@ -123,10 +123,10 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
             }
         },
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
-            "resourceUri": "/subscriptions/fa334fc9-1c6f-45d1-839f-a006b9cbeaab/resourceGroups/TESTRG1/providers/Microsoft.Compute/virtualMachines/testVM1",
+            "subscriptionId": "{subscription-id}",
+            "resourceUri": "/subscriptions/{subscription-id}/resourceGroups/TESTRG1/providers/Microsoft.Compute/virtualMachines/testVM1",
             "resourceType": "Microsoft.Compute",
-            "entitlementId": "fa334fc9-1c6f-45d1-839f-a006b9cbeaab",
+            "entitlementId": "{entitlement-id}",
             "entitlementName": "Partner Subscription",
             "resourceGroupName": "TESTRG1",
             "name": "testVM1",
@@ -140,10 +140,10 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
             }
         },
         {
-            "subscriptionId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
-            "resourceUri": "/subscriptions/fa334fc9-1c6f-45d1-839f-a006b9cbeaab/resourceGroups/testrg1/providers/Microsoft.Storage/storageAccounts/testrg1diag153",
+            "subscriptionId": "{subscription-id}",
+            "resourceUri": "/subscriptions/{subscription-id}/resourceGroups/testrg1/providers/Microsoft.Storage/storageAccounts/testrg1diag153",
             "resourceType": "Microsoft.Storage",
-            "entitlementId": "fa334fc9-1c6f-45d1-839f-a006b9cbeaab",
+            "entitlementId": "{entitlemen-id}",
             "entitlementName": "Partner Subscription",
             "resourceGroupName": "testrg1",
             "name": "testrg1diag153",
@@ -159,7 +159,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/431f479f-9cb2-4486-a3ad-b47f844c1dd2/subscriptions/5a2a03c7-846e-ba03-c946-dee8841e2b94/resourceusagerecords",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords",
             "method": "GET",
             "headers": []
         }

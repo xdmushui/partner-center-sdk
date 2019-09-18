@@ -117,7 +117,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/usagerecords/",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/usagerecords/",
             "method": "GET",
             "headers": []
         }
@@ -180,7 +180,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/44908a11-641b-4c53-b7fc-0f2bfca8a581/subscriptions/usagerecords",
+            "uri": "/customers/{customer-tenant-id}/subscriptions/usagerecords",
             "method": "GET",
             "headers": []
         }
