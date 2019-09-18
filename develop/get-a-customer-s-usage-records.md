@@ -23,7 +23,7 @@ This topic describes how to get the **CustomerUsageSummary** resource. This reso
 
 ## C\#
 
-To get a usage summary for all of a customer's subscriptions:
+To get a customer's usage records for all customer purchased a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
 2. Then call **UsageRecords** property. Finish by calling the Get() or GetAsync() methods.
