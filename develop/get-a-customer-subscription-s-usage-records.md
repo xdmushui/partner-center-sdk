@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the colletion of **SubscriptionMonthlyUsageRecord** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+This topic describes how to get the colletion of **SubscriptionMonthlyUsageRecord** resource. This resource represents all subscriptions for the customer. For a customer with Azure plan(s), this means a list of those plans (not individual Azure subscriptions).
 
 ## Prerequisites
 
@@ -83,7 +83,10 @@ If successful, this method returns a **SubscriptionMonthlyUsageRecord** resource
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+### Response example 1 - Customer purchased 145P Azure PayG
+
+>[!NOTE]
+>For customers with 145P, there will be no change to API response.
 
 ```http
 HTTP/1.1 200 OK
@@ -98,16 +101,15 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     "items": [
         {
             "status": "active",
-            "partnerOnRecord": "6048879",
-            "offerId": "DZH318Z0BPS6:0001:DZH318Z0BML6",
-            "resourceId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
-            "id": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
-            "resourceName": "Azure plan",
-            "name": "Azure plan",
-            "totalCost": 82.3616054989566696032,
-            "currencyCode": "GBP",
-            "usdTotalCost": 100.6499999999999985997,
-            "lastModifiedDate": "2019-09-17T21:08:44.2566667+00:00",
+            "offerId": "MS-AZR-0145P",
+            "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "resourceName": "Microsoft Azure",
+            "name": "Microsoft Azure",
+            "totalCost": 22.861172,
+            "currencyLocale": "fr-FR",
+            "usdTotalCost": 0,
+            "lastModifiedDate": "2019-09-01T23:04:41.193+00:00",
             "attributes": {
                 "objectType": "SubscriptionMonthlyUsageRecord"
             }
@@ -115,7 +117,70 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     ],
     "links": {
         "self": {
-            "uri": "/customers/431f479f-9cb2-4486-a3ad-b47f844c1dd2/subscriptions/usagerecords",
+            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/usagerecords/",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+
+### Response example 2 - Customer purchased Azure Plan
+
+>[!NOTE]
+>For customers with Azure Plan, there are few changes in API response. 
+>"currencyLocale" is replaced with 'currencyCode'.
+>"usdTotalCost" is new field.
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1120
+Content-Type: application/json
+MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
+MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
+Date: Tue, 17 Sep 2019 20:31:45 GMT
+
+{
+    "totalCount": 2,
+    "items": [
+        {
+            "status": "active",
+            "partnerOnRecord": "5278907",
+            "offerId": "DZH318Z0BPS6:0001:DZH318Z0BML6",
+            "resourceId": "c61b3c41-7d58-6654-69fa-0797198155d3",
+            "id": "c61b3c41-7d58-6654-69fa-0797198155d3",
+            "resourceName": "Azure plan",
+            "name": "Azure plan",
+            "totalCost": 0,
+            "currencyCode": "GBP",
+            "usdTotalCost": 0,
+            "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
+            "attributes": {
+                "objectType": "SubscriptionMonthlyUsageRecord"
+            }
+        },
+        {
+            "status": "active",
+            "partnerOnRecord": "994867",
+            "offerId": "DZH318Z0BPS6:0001:DZH318Z0BML6",
+            "resourceId": "764fd52f-25aa-ebb8-2bb4-fb406307babd",
+            "id": "764fd52f-25aa-ebb8-2bb4-fb406307babd",
+            "resourceName": "Azure plan",
+            "name": "Azure plan",
+            "totalCost": 0,
+            "currencyCode": "GBP",
+            "usdTotalCost": 0,
+            "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
+            "attributes": {
+                "objectType": "SubscriptionMonthlyUsageRecord"
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/44908a11-641b-4c53-b7fc-0f2bfca8a581/subscriptions/usagerecords",
             "method": "GET",
             "headers": []
         }

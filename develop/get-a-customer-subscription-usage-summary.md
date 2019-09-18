@@ -55,10 +55,13 @@ For an example, see the following:
 
 This table lists the required query parameter to get the customer's rated usage information.
 
-| Name                   | Type     | Required | Description                                             |
-|------------------------|----------|----------|---------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.                   |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription or azure plan. |
+| Name                   | Type     | Required | Description                               |
+|------------------------|----------|----------|-------------------------------------------|
+| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. |
+
+>[!NOTE]
+>For Azure plan, provide the **plan-id** as the **subscription-id** in this route.
 
 ### Request headers
 
@@ -86,7 +89,10 @@ If successful, this method returns a **SubscriptionUsageSummary** resource in th
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+### Response example 1 - Customer purchased 145P Azure PayG
+
+>[!NOTE]
+>For customers with 145P, there will be no change to API response.
 
 ```http
 HTTP/1.1 200 OK
@@ -97,17 +103,54 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
-    "resourceId": "5a2a03c7-846e-ba03-c946-dee8841e2b94",
+    "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
+    "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+    "resourceName": "Microsoft Azure",
+    "name": "Microsoft Azure",
+    "billingStartDate": "2019-08-28T00:00:00-07:00",
+    "billingEndDate": "2019-09-27T00:00:00-07:00",
+    "totalCost": 22.861172,
+    "currencyLocale": "fr-FR",
+    "lastModifiedDate": "2019-09-01T23:04:41.193+00:00",
+    "links": {
+        "self": {
+            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/ECF71641-F347-41B6-B02C-187B1B778A43/usagesummary",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "SubscriptionUsageSummary"
+    }
+}
+
+### Response example 2 - Customer purchased Azure Plan
+
+>[!NOTE]
+>For customers with Azure Plan, there are few changes in API response. 
+>"currencyLocale" is replaced with 'currencyCode'.
+>"usdTotalCost" is new field.
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1120
+Content-Type: application/json
+MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac1
+MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
+Date: Tue, 17 Sep 2019 20:31:45 GMT
+
+{
+    "resourceId": "920903a1-dca5-6f31-d3a6-dbbfad9be0fc",
     "resourceName": "Azure plan",
     "billingStartDate": "2019-09-01T00:00:00+00:00",
     "billingEndDate": "2019-10-01T00:00:00+00:00",
-    "totalCost": 82.3616054989566696032,
+    "totalCost": 28.82860766744404945074,
     "currencyCode": "GBP",
-    "usdTotalCost": 100.6499999999999985997,
-    "lastModifiedDate": "2019-09-17T21:08:44.2566667+00:00",
+    "usdTotalCost": 35.23000000000000362337,
+    "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
     "links": {
         "self": {
-            "uri": "/customers/431f479f-9cb2-4486-a3ad-b47f844c1dd2/subscriptions/5a2a03c7-846e-ba03-c946-dee8841e2b94/usagesummary",
+            "uri": "/customers/44908a11-641b-4c53-b7fc-0f2bfca8a581/subscriptions/920903a1-dca5-6f31-d3a6-dbbfad9be0fc/usagesummary",
             "method": "GET",
             "headers": []
         }

@@ -14,7 +14,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the collection of **CustomerMonthlyUsageRecord** resource. This resource represents the customer's usage records for all customer purchased a specific Azure service or resource during the current billing period.
+This topic describes how to get the collection of **CustomerMonthlyUsageRecord** resource. This resource represents usage records for all customers, including those with 145P or Azure Plan. 
 
 ## Prerequisites
 
@@ -74,6 +74,10 @@ If successful, this method returns a **CustomerMonthlyUsageRecord** resource in 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
 ### Response example
+
+>[!NOTE]
+>Use "isUpgraded" property to identify those customers that have Azure plan. 
+>"isUpgraded" = true represents customers that have Azure plan
 
 ```http
 HTTP/1.1 200 OK

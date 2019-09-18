@@ -14,7 +14,10 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **ResourceUsageRecord** resource. This resource represents resource usage records of a customer for specific Azure service or resource during the current billing period.
+This topic describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month per individual resources provisioned in your Azure plan.
+
+>[!NOTE]
+>This is a net new API and returns data that was not previously available in via azure spending APIs. This route does not support 145P.
 
 ## Prerequisites
 
@@ -59,6 +62,9 @@ This table lists the required query parameter to get the customer's rated usage 
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
 | **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. |
+
+>[!NOTE]
+>For Azure plan, provide the **plan-id** as the **subscription-id** in this route.
 
 ### Request headers
 

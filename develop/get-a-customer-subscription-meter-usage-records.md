@@ -14,13 +14,17 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the collection of **MeterUsageRecord** resource. This resource represents the meter usage records of a customer for specific Azure service or resource during the current billing period.
+This topic describes how to get the collection of **MeterUsageRecord** resource. This resource represents an aggregated total per meter for the current billing cycle, across your entire Azure plan.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID
+
+>[!NOTE]
+>This is equivalent to “subscriptions/{subscription-id}/usagerecords/resources” (which will continue to function for 145P only). 
+>This new route will support both 145P and Azure Plan. In order to get this information for Azuer plan, you will need to switch to this new route. Other than the mentioned properties, the response is the same as the old route.
 
 ## C\#
 
@@ -60,6 +64,9 @@ This table lists the required query parameter to get the customer's rated usage 
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
 | **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. |
 
+>[!NOTE]
+>For Azure plan, provide the **plan-id** as the **subscription-id** in this route.
+
 ### Request headers
 
 See [Headers](headers.md) for more information.
@@ -86,7 +93,57 @@ If successful, this method returns a **PagedResourceCollection<MeterUsageRecord>
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+### Response example 1 - Customer purchased 145P Azure PayG
+
+>[!NOTE]
+>For customers with 145P, there will be no change to API response.
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1120
+Content-Type: application/json
+MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
+MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
+Date: Tue, 17 Sep 2019 20:31:45 GMT
+
+{
+    "totalCount": 1,
+    "items": [
+        {
+            "status": "active",
+            "offerId": "MS-AZR-0145P",
+            "resourceId": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "id": "ECF71641-F347-41B6-B02C-187B1B778A43",
+            "resourceName": "Microsoft Azure",
+            "name": "Microsoft Azure",
+            "totalCost": 22.861172,
+            "currencyLocale": "fr-FR",
+            "usdTotalCost": 0,
+            "lastModifiedDate": "2019-09-01T23:04:41.193+00:00",
+            "attributes": {
+                "objectType": "SubscriptionMonthlyUsageRecord"
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/aa2c5268-e55d-4b92-8822-652b5795a1ed/subscriptions/usagerecords/",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+
+
+### Response example 2 - Customer purchased Azure Plan
+
+>[!NOTE]
+>For customers with Azure Plan, there are few changes in API response. 
+>"currencyLocale" is replaced with 'currencyCode'.
+>"usdTotalCost" is new field.
 
 ```http
 HTTP/1.1 200 OK
