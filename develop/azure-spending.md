@@ -23,12 +23,12 @@ This section describes the ways that Cloud Solution Provider partners can use th
 - [Get usage records for all customers](get-a-customer-s-usage-records.md)
 
 **Customer Usages:**
-- [Get customer usage summary](get-a-customers-rated-usage-information.md)
-- [Get all susbcription usage records for a customer](get-a-customers-rated-usage-information.md)
+- [Get customer usage summary](get-a-customer-usage-summary.md)
+- [Get all susbcription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
 
 **Subscription Usages:**
 - [Get susbcription usage summary](get-a-customer-subscription-usage-summary.md)
-- [Get all monthly usage records for a subscription](get-a-subscriptions-resource-usage-information.md)
+- [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
 - [Get resource usage records for a subscription](get-a-customer-subscription-resource-usage-records.md)
 - [Get meter usage records for a subscription](get-a-customer-subscription-meter-usage-records.md)
 

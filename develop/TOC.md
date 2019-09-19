@@ -78,6 +78,20 @@
 #### [Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)
 #### [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
 #### [Get a usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
+
+
+### [Azure spending](azure-spending.md)
+#### [Get partner usage summary](get-a-partner-usage-summary.md)
+#### [Get usage records for all customers](get-a-customer-s-usage-records.m)
+#### [Get customer usage summary](get-a-customer-subscription-usage-summary.md)
+#### [Get all susbcription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
+#### [Get susbcription usage summary](get-a-customer-subscription-usage-summary.md)
+#### [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
+#### [Get resource usage records for a subscription](get-a-customer-subscription-resource-usage-records.md)
+#### [Get meter usage records for a subscription](get-a-customer-subscription-meter-usage-records.md)
+ #### [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
+#### [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
+
 ### [Manage customer accounts](manage-customers.md) 
 #### [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md) 
 #### [Assign licenses to a user](assign-licenses-to-a-user.md)
