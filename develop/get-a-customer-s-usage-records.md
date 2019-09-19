@@ -1,6 +1,6 @@
 ---
-title: Get usage records for all customers
-description: How to get a customer's usage records for all customer purchased a specific Azure service or resource during the current billing period.
+title: Get all customer usage records for a partner
+description: How to get all customer usage records for a partner for customers that purchased a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
 ms.date: 09/17/2019
 ms.localizationpriority: medium

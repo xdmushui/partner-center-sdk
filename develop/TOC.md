@@ -82,13 +82,13 @@
 
 ### [Azure spending](azure-spending.md)
 #### [Get partner usage summary](get-a-partner-usage-summary.md)
-#### [Get usage records for all customers](get-a-customer-s-usage-records.m)
-#### [Get customer usage summary](get-a-customer-subscription-usage-summary.md)
+#### [Get all customer usage records for a partner](get-a-customer-s-usage-records.md)
+#### [Get customer usage summary](get-a-customer-usage-summary.md)
 #### [Get all susbcription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
 #### [Get susbcription usage summary](get-a-customer-subscription-usage-summary.md)
 #### [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
-#### [Get resource usage records for a subscription](get-a-customer-subscription-resource-usage-records.md)
-#### [Get meter usage records for a subscription](get-a-customer-subscription-meter-usage-records.md)
+#### [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
+#### [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
  #### [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
 #### [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
 

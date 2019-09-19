@@ -1,12 +1,12 @@
 ---
-title: Get a subscription's resource usage information
+title: Get all monthly usage records for a subscription.
 description: Gets a collection resource that contains a list of services within a customer's subscription and their associated rated usage information.
 ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
 ms.date: 09/18/2019
 ms.localizationpriority: medium
 ---
 
-# Get a subscription's resource usage information
+# Get all monthly usage records for a subscription.
 
 
 **Applies To**

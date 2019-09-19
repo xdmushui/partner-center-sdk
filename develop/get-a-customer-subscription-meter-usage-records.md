@@ -1,12 +1,12 @@
 ---
-title: Get meter usage records for a subscription of a customer
+title: Get usage data for subscription by meter
 description: How to get meter usage records of a customer for specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
 ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
-# Get meter usage records for a subscription of a customer
+# Get usage data for subscription by meter
 
 Applies to:
 

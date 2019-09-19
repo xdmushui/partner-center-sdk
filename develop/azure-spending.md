@@ -29,8 +29,8 @@ This section describes the ways that Cloud Solution Provider partners can use th
 **Subscription Usages:**
 - [Get susbcription usage summary](get-a-customer-subscription-usage-summary.md)
 - [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
-- [Get resource usage records for a subscription](get-a-customer-subscription-resource-usage-records.md)
-- [Get meter usage records for a subscription](get-a-customer-subscription-meter-usage-records.md)
+- [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
+- [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
 
 **Azure spending budget:**
 - [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
