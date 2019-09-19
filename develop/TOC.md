@@ -76,10 +76,6 @@
 #### [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
 #### [Get prices for Microsoft Azure Partner Shared Services](get-prices-for-microsoft-azure-partner-shared-services.md)
 #### [Get the partner's current account balance](get-the-reseller-s-current-account-balance.md)
-#### [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
-#### [Get a usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
-
-
 ### [Azure spending](azure-spending.md)
 #### [Get partner usage summary](get-a-partner-usage-summary.md)
 #### [Get all customer usage records for a partner](get-a-customer-s-usage-records.md)
@@ -89,9 +85,8 @@
 #### [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
 #### [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
 #### [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
- #### [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
+#### [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
 #### [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
-
 ### [Manage customer accounts](manage-customers.md) 
 #### [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md) 
 #### [Assign licenses to a user](assign-licenses-to-a-user.md)
@@ -132,7 +127,6 @@
 #### [Set user roles for a customer](set-user-roles-for-a-customer.md)
 #### [Update a customer's billing profile](update-a-customer-s-billing-profile.md)
 #### [Update a customer's qualification](update-a-customer-s-qualification.md)
-#### [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
 #### [Update the nickname for a subscription](update-the-nickname-for-a-subscription.md)
 #### [Update user accounts for a customer](update-user-accounts-for-a-customer.md)
 #### [View deleted users for a customer](view-a-deleted-user.md)
