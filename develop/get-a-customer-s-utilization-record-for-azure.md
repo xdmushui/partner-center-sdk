@@ -22,6 +22,12 @@ You can get the utilization records of a customer's Azure subscription for a spe
 - A customer identifier.
 - A subscription identifier.
 
+
+>[!NOTE]
+>This API (which returns daily and hourly unrated consumption for an arbitrary timespan) is not supported for Azure plan. However, you can use [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and 
+[Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md)  to get rated consumption at daily level per meter per resource (this is equivalent to the daily grain provided by utilizations API. You will need to use invoice id to retrieve billed usage, or use current and previous periods to get unbilled estimates. Hourly grain data or arbitrary date range filter is not currently supported for Azure plan.
+
+
 ## Azure utilization API
 
 This Azure utilization API provides access to utilization records for a time period that represents when the utilization was reported in the billing system. It provides access to the same utilization data that is used to create and calculate the reconciliation file. However, it does not have knowledge of billing system reconciliation file logic. You should not expect reconciliation file summary results to match the result retrieved from this API exactly for the same time period.
