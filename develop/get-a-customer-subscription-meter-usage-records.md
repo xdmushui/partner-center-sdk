@@ -23,7 +23,7 @@ This topic describes how to get the collection of **MeterUsageRecord** resource.
 - A subscription ID
 
 >[!NOTE]
->This is equivalent to �subscriptions/{subscription-id}/usagerecords/resources� (which will continue to function for 145P only). 
+>This is equivalent to "subscriptions/{subscription-id}/usagerecords/resources" (which will continue to function for 145P only). 
 >This new route will support both 145P and Azure Plan. In order to get this information for Azuer plan, you will need to switch to this new route. Other than the mentioned properties, the response is the same as the old route.
 
 ## C\#

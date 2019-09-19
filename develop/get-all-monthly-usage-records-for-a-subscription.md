@@ -24,6 +24,11 @@ Gets a collection of [**AzureResourceMonthlyUsageRecord**](https://docs.microsof
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID.
 
+
+>[!NOTE]
+>This api supported only Azure 145P.
+>Recommend to use [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
+
 ## <span id="C_"/><span id="c_"/>C#
 
 
