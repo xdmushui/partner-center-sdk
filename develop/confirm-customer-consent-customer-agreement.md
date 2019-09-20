@@ -1,7 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement (preview)
 description: Confirm customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 08/28/2019
+ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
@@ -29,6 +29,46 @@ This article describes how to confirm or re-confirm customer acceptance of the M
   - Last name
   - Email address
   - Phone number (optional)
+
+# [.NET](#tab/dotnet)
+
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string agreementType = "MicrosoftCustomerAgreement";
+
+var agreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get();
+
+AgreementMetaData microsoftCustomerAgreement = agreementDetails.Items.FirstOrDefault();
+```
+
+2. Create a new **Agreement** object containing details of the confirmation. Then use **IAgreggatePartner.Customers** collection and call the **ById** method with the specified **customer-tenant-id**. Then, call the **Agreements** property, followed by calling **Create** or **CreateAsync**.
+
+```csharp
+// string selectedCustomerId;
+
+var agreementToCreate = new Agreement
+{
+    DateAgreed = DateTime.UtcNow,
+    TemplateId = microsoftCustomerAgreement.TemplateId,
+    PrimaryContact = new Contact
+    {
+        FirstName = "Tania",
+        LastName = "Carr",
+        Email = "someone@example.com",
+        PhoneNumber = "1234567890"
+    }
+};
+
+Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Create(agreementToCreate);
+```
+
+A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+# [REST](#tab/rest)
 
 ## REST request
 
