@@ -25,7 +25,7 @@ This article explains how you can retrieve confirmation(s) of a customer's accep
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
 - A customer identifier (**customer-tenant-id**).
 
-# [.NET](#tab/dotnet)
+## .NET
 
 To retrieve confirmation(s) of customer acceptance that was previously provided:
 
@@ -44,7 +44,6 @@ var customerAgreements = partnerOperations.Customers.ById(selectedCustomerId).Ag
 
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-# [REST](#tab/rest)
 
 ## REST request
 
