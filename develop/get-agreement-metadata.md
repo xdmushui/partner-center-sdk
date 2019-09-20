@@ -23,7 +23,27 @@ ms.localizationpriority: medium
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication..
 
-## .NET
+## .NET (version 1.14 or newer)
+
+To retrieve the agreement metadata for Microsoft Cloud Agreement:
+
+1. First, retrieve the **IAggregatePartner.AgreementDetails** collection.
+
+2. Call **ByAgreementType** method to filter the collection to Microsoft Cloud Agreement.
+
+3. Finally, call **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string agreementType = "MicrosoftCloudAgreement";
+
+var microsoftCloudAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
+```
+
+A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+## .NET (version 1.9 - 1.13)
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
@@ -36,8 +56,6 @@ var agreements = partnerOperations.AgreementDetails.Get();
 
 AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr => agr.AgreementType == AgreementType.MicrosoftCloudAgreement);
 ```
-
-A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 ## Java
 

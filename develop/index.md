@@ -3,7 +3,7 @@ layout: LandingPage
 hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
-ms.date: 08/16/2019
+ms.date: 09/20/2019
 ms.topic: landing-page
 searchScope: []
 ---
@@ -164,9 +164,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<p><strong>Partner Center .NET SDK v1.13.0 and updated REST APIs are now available!</strong></p>
+<p><strong>Partner Center .NET SDK v1.14.0 and updated REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.13.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.14.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
@@ -174,19 +174,46 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
+                        <h3>Microsoft Customer Agreement</h3>
+                        <p>Added API and SDK support for confirming customer acceptance of Microsoft Customer Agreement.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/confirm-customer-agreement" data-linktype="external">Confirm customer acceptance of the Microsoft Customer Agreement - Overview</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-customer-agreement-metadata" data-linktype="external">Get agreement metadata for the Microsoft Customer Agreement (preview)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-confirmation-of-customer-agreement" data-linktype="external">Get confirmation of customer acceptance of Microsoft Customer Agreement (preview)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/confirm-customer-consent-customer-agreement" data-linktype="external">Confirm customer acceptance of Microsoft Customer Agreement (preview)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/download-customer-agreement-template" data-linktype="external">Get a download link for the Microsoft Customer Agreement template (preview)</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Microsoft Cloud Agreement</h3>
+                        <p>.NET SDK support for Microsoft Cloud Agreement has changed to accommodate Microsoft Customer Agreement. Please refer to following documentation for details on the changes.</p>
+                        <p>&nbsp;</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud Agreement</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
                         <h3>Commercial marketplace</h3>
-                        <p>New REST APIs enabling the following commercial marketplace scenarios (including seat-based subscriptions and site-based subscriptions):</p>
+                        <p>Added sandbox support for subscriptions for commercial marketplace products.</p>
                         <p>&nbsp;</p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products" data-linktype="external">Create a subscription for commercial marketplace products</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-azure-marketplace-subscription" data-linktype="external">Cancel a commercial marketplace subscription</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox" data-linktype="external">Cancel an order from the integration sandbox</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-activation-link-by-order-line-item" data-linktype="external">Get activation link by order line item</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/change-the-quantity-of-a-subscription" data-linktype="external">Change the quantity of a subscription</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed commercial marketplace consumption line items</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-estimate-links" data-linktype="external">Get invoice estimate links</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled commercial marketplace consumption line items</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled reconciliation line items</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/update-autorenew-for-an-azure-marketplace-subscription" data-linktype="external">Update autorenew for a commercial marketplace subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products#test-using-integration-sandbox-account" data-linktype="external">Test using integration sandbox account</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/activate-sandbox-subscription-azure-marketplace-products" data-linktype="external">Activate a sandbox subscription for commercial marketplace products</a></p>
                     </div>
                 </div>
             </div>
@@ -197,20 +224,8 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>CSP account credit limits</h3>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart-resources#ordererrorcode">New order error codes</a> for <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/cart-resources">Cart resources</a> are returned when <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/account-credit-limit">CSP account credit limits</a> are reached.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Invoice receipt statement</h3>
-                        <p>CSP partners can programmatically <a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-receipt-statement">retrieve invoice receipt statements</a> (for Taiwan tax receipts only).</p>
+                        <h3>Dependency update for .NET SDK</h3>
+                        <p>Updated the Microsoft.IdentityModel.Clients.ActiveDirectory dependency from version 2.16 to 5.2.0.</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Customer Agreement (Preview)
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 8/29/2019
+ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,12 +17,33 @@ The **Agreement** resource is currently supported by Partner Center only in the 
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This article explains how you can get confirmation of a customer's acceptance of the Microsoft Customer Agreement.
+This article explains how you can retrieve confirmation(s) of a customer's acceptance of the Microsoft Customer Agreement.
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports App+User authentication.
+- If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
 - A customer identifier (**customer-tenant-id**).
+
+## .NET
+
+To retrieve confirmation(s) of customer acceptance that was previously provided:
+
+- Use the **IAggregatePartner.Customers** collection and call **ById** method with the specified customer identifier.
+- Fetch the **Agreements** property and filter the results to Microsoft Customer Agreement by calling **ByAgreementType** method.
+- Call **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+// string selectedCustomerId;
+
+string agreementType = "MicrosoftCustomerAgreement";
+
+var customerAgreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.ByAgreementType(agreementType).Get();
+```
+
+A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
 
 ## REST request
 
