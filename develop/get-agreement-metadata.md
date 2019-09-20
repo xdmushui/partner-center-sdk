@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication..
 
-## .NET (1.14 or newer)
+## .NET (version 1.14 or newer)
 
 To retrieve the agreement metadata for Microsoft Cloud Agreement:
 
@@ -43,7 +43,7 @@ var microsoftCloudAgreementDetails = partnerOperations.AgreementDetails.ByAgreem
 
 A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-## .NET (1.9 - 1.13)
+## .NET (version 1.9 - 1.13)
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
