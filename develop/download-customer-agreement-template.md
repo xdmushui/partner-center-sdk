@@ -22,8 +22,8 @@ This article describes how to get a link to download the Microsoft Customer Agre
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports App+User authentication.
-- The country to which the Microsoft Customer Agreement template applies.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
+- The customer's country to which the Microsoft Customer Agreement template applies.
 - The language in which the Microsoft Customer Agreement template should be localized.
 
 # [.NET](#tab/dotnet)
@@ -37,10 +37,15 @@ To retrieve a link to download the Microsoft Customer Agreement template:
 
 string agreementType = "MicrosoftCustomerAgreement";
 
-AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get();.Items.Single();
+AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
 ```
 
-2. Use the IAggregatePartner.AgreementTemplates collection and call the ById method with the specified **templateId** of the Microsoft Customer Agreement. Then, get the Document property, followed by calling the ByCountry method with the specified country, followed by calling the ByLanguage method with the specific language. Finally, call the **Get** or **GetAsync** method.
+2. Use the IAggregatePartner.AgreementTemplates collection.
+3. Call the **ById** method and specify the **templateId** of the Microsoft Customer Agreement.
+4. Fetch the **Document** property.
+5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies.
+6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in.
+7. Call the **Get** or **GetAsync** method.
 
 ```csharp
 // IAggregatePartner partnerOperations;
