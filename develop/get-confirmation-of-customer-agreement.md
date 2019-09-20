@@ -1,7 +1,7 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Customer Agreement (Preview)
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 8/29/2019
+ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
@@ -21,8 +21,29 @@ This article explains how you can get confirmation of a customer's acceptance of
 
 ## Prerequisites
 
+- If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports App+User authentication.
 - A customer identifier (**customer-tenant-id**).
+
+# [.NET](#tab/dotnet)
+
+
+To retrieve confirmation of customer acceptance that was previously provided:
+
+Use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's identifier. Then, get the **Agreements** property, followed by calling the **ByAgreementType** method with the specified agreement type. Finally, call the **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+// string selectedCustomerId;
+
+string agreementType = "MicrosoftCustomerAgreement";
+
+var customerAgreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.ByAgreementType(agreementType).Get();
+```
+
+A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+# [REST](#tab/rest)
 
 ## REST request
 
