@@ -24,7 +24,26 @@ ms.localizationpriority: medium
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports app + user authentication.
 - A customer ID (customer-tenant-id).
 
-## .NET
+## .NET (version 1.4 or newer)
+
+To retrieve confirmation(s) of customer acceptance that was previously provided:
+
+- Use the **IAggregatePartner.Customers** collection and call **ById** method with the specified customer identifier.
+- Fetch the **Agreements** property and filter the results to Microsoft Cloud Agreement by calling **ByAgreementType** method.
+- Call **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+// string selectedCustomerId;
+
+string agreementType = "MicrosoftCloudAgreement";
+
+var cloudAgreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.ByAgreementType(agreementType).Get();
+```
+
+A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+## .NET (version 1.9 - 1.13) 
 
 To retrieve confirmation of customer acceptance provided previously:
 
@@ -36,8 +55,6 @@ Use the **IAggregatePartner.Customers** collection and call the **ById** method 
 
 var agreements = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Get();
 ```
-
-A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 ## Java
 
