@@ -33,8 +33,9 @@ This article describes how to confirm or re-confirm customer acceptance of the M
 
 # [.NET](#tab/dotnet)
 
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
 
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
 
 ```csharp
 // IAggregatePartner partnerOperations;
