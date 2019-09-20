@@ -45,7 +45,9 @@ string agreementType = "MicrosoftCustomerAgreement";
 var microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
 ```
 
-2. Create a new **Agreement** object containing details of the confirmation. Then use **IAgreggatePartner.Customers** collection and call the **ById** method with the specified **customer-tenant-id**. Then, call the **Agreements** property, followed by calling **Create** or **CreateAsync**.
+2. Create a new **Agreement** object containing details of the confirmation.
+3. Use the **IAgreggatePartner.Customers** collection and call the **ById** method with the specified **customer-tenant-id**.
+4. Use the **Agreements** property, followed by calling **Create** or **CreateAsync**.
 
 ```csharp
 // string selectedCustomerId;
