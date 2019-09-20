@@ -21,6 +21,7 @@ This article describes how to confirm or re-confirm customer acceptance of the M
 
 ## Prerequisites
 
+- If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). *This scenario only supports App+User authentication.*
 - A customer identifier (**customer-tenant-id**).
 - The date when the customer accepted the Microsoft Customer Agreement.
