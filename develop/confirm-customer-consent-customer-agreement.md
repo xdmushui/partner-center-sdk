@@ -13,9 +13,9 @@ Applies to:
 
 Partner Center currently supports confirmation of customer acceptance of the Microsoft Customer Agreement only in the *Microsoft public cloud*. This functionality doesn't currently apply to:
 
-> - Partner Center operated by 21Vianet
-> - Partner Center for Microsoft Cloud Germany
-> - Partner Center for Microsoft Cloud for US Government
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 This article describes how to confirm or re-confirm customer acceptance of the Microsoft Customer Agreement.
 
@@ -24,7 +24,7 @@ This article describes how to confirm or re-confirm customer acceptance of the M
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). *This scenario only supports App+User authentication.*
 - A customer identifier (**customer-tenant-id**).
-- The date when the customer accepted the Microsoft Customer Agreement.
+- The date (**dateAgreed**) when the customer accepted the Microsoft Customer Agreement.
 - Information about the user from the customer organization that accepted the Microsoft Customer Agreement. This includes:
   - First name
   - Last name
@@ -42,9 +42,7 @@ To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement
 
 string agreementType = "MicrosoftCustomerAgreement";
 
-var agreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get();
-
-AgreementMetaData microsoftCustomerAgreement = agreementDetails.Items..Single();
+var microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
 ```
 
 2. Create a new **Agreement** object containing details of the confirmation. Then use **IAgreggatePartner.Customers** collection and call the **ById** method with the specified **customer-tenant-id**. Then, call the **Agreements** property, followed by calling **Create** or **CreateAsync**.
@@ -55,7 +53,7 @@ AgreementMetaData microsoftCustomerAgreement = agreementDetails.Items..Single();
 var agreementToCreate = new Agreement
 {
     DateAgreed = DateTime.UtcNow,
-    TemplateId = microsoftCustomerAgreement.TemplateId,
+    TemplateId = microsoftCustomerAgreementDetails.TemplateId,
     PrimaryContact = new Contact
     {
         FirstName = "Tania",
