@@ -1,7 +1,7 @@
 ---
 title: Get a download link for the Microsoft Customer Agreement template (preview)
 description: Get a download link for Microsoft Customer Agreement template.
-ms.date: 8/28/2019
+ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
@@ -21,9 +21,36 @@ This article describes how to get a link to download the Microsoft Customer Agre
 
 ## Prerequisites
 
+- If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports App+User authentication.
 - The country to which the Microsoft Customer Agreement template applies.
 - The language in which the Microsoft Customer Agreement template should be localized.
+
+# [.NET](#tab/dotnet)
+
+To retrieve a link to download the Microsoft Customer Agreement template:
+
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string agreementType = "MicrosoftCustomerAgreement";
+
+AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get();.Items.Single();
+```
+
+2. Use the IAggregatePartner.AgreementTemplates collection and call the ById method with the specified **templateId** of the Microsoft Customer Agreement. Then, get the Document property, followed by calling the ByCountry method with the specified country, followed by calling the ByLanguage method with the specific language. Finally, call the **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+var agreementDocument = partnerOperations.AgreementTemplates.ById(microsoftCustomerAgreementDetails.TemplateId).Document.ByCountry("US").ByLanguage("en-US").Get();
+```
+
+A complete sample can be found in the [GetAgreementDocument](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDocument.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
+# [REST](#tab/rest)
 
 ## REST request
 
