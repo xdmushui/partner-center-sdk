@@ -17,20 +17,21 @@ The **Agreement** resource is currently supported by Partner Center only in the 
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This article explains how you can get confirmation of a customer's acceptance of the Microsoft Customer Agreement.
+This article explains how you can retrieve confirmation(s) of a customer's acceptance of the Microsoft Customer Agreement.
 
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports App+User authentication.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
 - A customer identifier (**customer-tenant-id**).
 
 # [.NET](#tab/dotnet)
 
+To retrieve confirmation(s) of customer acceptance that was previously provided:
 
-To retrieve confirmation of customer acceptance that was previously provided:
-
-Use the **IAggregatePartner.Customers** collection and call the **ById** method with the specified customer's identifier. Then, get the **Agreements** property, followed by calling the **ByAgreementType** method with the specified agreement type. Finally, call the **Get** or **GetAsync** method.
+- Use the **IAggregatePartner.Customers** collection and call **ById** method with the specified customer identifier.
+- Fetch the **Agreements** property and filter the results to Microsoft Customer Agreement by calling **ByAgreementType** method.
+- Call **Get** or **GetAsync** method.
 
 ```csharp
 // IAggregatePartner partnerOperations;
