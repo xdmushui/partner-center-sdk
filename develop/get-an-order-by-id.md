@@ -2,7 +2,7 @@
 title: Get an order by ID
 description: Gets a Order resource that matches the customer and order ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 06/19/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -43,6 +43,8 @@ var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(sel
 
 ## Java
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 To get a customer's order by ID:
 
 1. Use your **IAggregatePartner.getCustomers** function and call the **byId()** function.
@@ -58,6 +60,8 @@ Order order = partnerOperations.getCustomers().byId(selectedCustomerId).getOrder
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get a customer's order by ID, execute the [**Get-PartnerCustomerOrder**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerOrder.md) command, and specify the **CustomerId** and **OrderId** paramaeters.
 

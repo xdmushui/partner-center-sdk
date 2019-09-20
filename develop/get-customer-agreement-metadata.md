@@ -1,7 +1,7 @@
 ---
 title: Get agreement metadata for the Microsoft Customer Agreement (preview)
 description: This topic explains how to get agreement metadata for Microsoft Customer Agreement.
-ms.date: 8/28/2019
+ms.date: 8/29/2019
 ms.localizationpriority: medium
 ---
 
@@ -43,7 +43,7 @@ To retrieve the agreement metadata for Microsoft Customer Agreement:
 
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
-| agreement-type | string | No | Use this parameter to scope the query response to specific agreement type. The supported values are: **MicrosoftCloudAgreement** (which includes agreement metadata only of the type *MicrosoftCloudAgreement*) and **MicrosoftCustomerAgreement** (which includes agreement metadata only of the type *MicrosoftCustomerAgreement*). You can use `\*` to return all agreement metadata. However, avoid using `\*` unless your code has the necessary runtime logic to handle unfamiliar agreement types. If the URI parameter isn't specified, the query defaults to **MicrosoftCloudAgreement** for backward compatibility. Microsoft may introduce agreement metadata with new agreement types at any time.  |
+| agreement-type | string | No | Use this parameter to scope the query response to specific agreement type. The supported values are: <ul><li>**MicrosoftCloudAgreement** that includes agreement metadata only of the type *MicrosoftCloudAgreement*</li><li>**MicrosoftCustomerAgreement** that includes agreement metadata only of the type *MicrosoftCustomerAgreement*.</li><li>**\*** that returns all agreement metadata. (Don't use **\*** unless your code has the necessary runtime logic to handle unfamiliar agreement types.)</li></ul> If the URI parameter isn't specified, the query defaults to **MicrosoftCloudAgreement** for backward compatibility. Microsoft may introduce agreement metadata with new agreement types at any time.  |
 
 ### Request headers
 

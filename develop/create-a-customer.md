@@ -2,7 +2,7 @@
 title: Create a customer
 description: How to create a new customer.
 ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.date: 06/03/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -85,6 +85,8 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 ## Java
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 To create a new customer:
 
 1. Create a new instance of the **CustomerBillingProfile** and the **CustomerCompanyProfile** objects. Be sure to populate the required fields.
@@ -127,6 +129,8 @@ Customer newCustomer = partnerOperations.getCustomers().create( customerToCreate
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To create a customer execute the [**New-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md) command.
 

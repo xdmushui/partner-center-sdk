@@ -1,7 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Cloud Agreement
 description: How to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 05/23/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -32,11 +32,9 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
   - Email address
   - Phone number (optional)
 
-## Examples
+## .NET
 
 To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
-
-### [.NET](#tab/dotnet)
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
@@ -71,7 +69,11 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-### [Java](#tab/java)
+## Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
+To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
 
@@ -114,7 +116,11 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/CreateCustomerAgreement.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
-### [PowerShell](#tab/powershell)
+## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+
+To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
 
 1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.  
 
@@ -128,7 +134,9 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
     New-PartnerCustomerAgreement -TemplateId $agreement.TemplateId -AgreementType MicrosoftCloudAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec' -ContactEmail 'someone@example.com' -ContactFirstName 'Tania' -ContactLastName 'Carr'
     ```  
 
-### [REST](#tab/rest)
+## REST
+
+To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement, see the following instructions.
 
 ### REST request
 
@@ -196,7 +204,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-### REST Response
+### REST response
 
 If successful, this method returns an **Agreement** resource.
 
