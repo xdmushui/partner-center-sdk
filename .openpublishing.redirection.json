@@ -168,7 +168,7 @@
 		},
 		{
 			"source_path": "develop/get-a-customers-rated-usage-information.md",
-			"redirect_url": "get-a-customer-usage-summary.md",
+			"redirect_url": "develop/get-a-customer-usage-summary.md",
 			"redirect_document_id": true
 		}
  ]
