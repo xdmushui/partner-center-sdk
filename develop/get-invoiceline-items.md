@@ -17,9 +17,11 @@ Applies to:
 
 You can use the following methods to get a collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
 
-*You should use **onetime** to query all modern line items, instead of **marketplace** (to be deprecated). Or, follow the self links in the invoice call details.*
+*Except for bug fixes, this API is no longer being updated. You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.*
 
-*This API also supports the **provider** types of **azure** and **office** for 145P Azure and Office offers, which makes the API feature backward compatible.*
+You should use **onetime** to query all modern line items, instead of **marketplace**. Or, follow the self links in the invoice call details.
+
+This API also supports the **provider** types of **azure** and **office** for 145P Azure and Office offers, which makes the API feature backward compatible.
 
 ## Prerequisites
 
@@ -133,9 +135,9 @@ The following syntaxes apply when the billing provider is **OneTime**. This incl
 
 If you are using the following syntaxesx, be sure to use the appropriate syntax for your use case.
 
-*The URIs below are to be deprecated.*
+*Except for bug fixes, the APIs for these request URIs are no longer being updated. You should update your applications to call the **onetime** API instead. The **onetime** API provides additional functionality, and will continue to be updated.*
 
-| Method  | Request URI    (to be deprecated)                                                                                                                                                 | Description of syntax use case |
+| Method  | Request URI                                                                                                                                                 | Description of syntax use case |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                              | You can use this syntax to return a full list of every line item for the given invoice. |
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  | For large invoices, you can use this syntax with a specified size and 0-based offset to return a paged list of line items. |

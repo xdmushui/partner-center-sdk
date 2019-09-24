@@ -13,9 +13,11 @@ Applies to:
 
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
 
-*You should use **onetime** to query all modern line items instead of **marketplace** (to be deprecated). Or, you can follow the self links in the invoice details in your invoice call(s).*
+*Except for bug fixes, this API is no longer being updated. You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.*
 
-*This API also supports **azure** provider types for **145P Azure offers**. This means this API is a backward-compatible feature.*
+You should use **onetime** to query all modern line items instead of **marketplace**. Or, you can follow the self links in the invoice details in your invoice call(s).
+
+This API also supports **azure** provider types for **145P Azure offers**. This means this API is a backward-compatible feature.
 
 ## Prerequisites
 
