@@ -2,32 +2,30 @@
 title: Scenarios
 description: This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
 ms.assetid: D278B9D1-D5B9-4FAD-89D8-44244715D6C9
-ms.date: 08/16/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
 # Scenarios
 
+Applies to:
 
-**Applies To**
-
- - Partner Center
- - Partner Center operated by 21Vianet
- - Partner Center for Microsoft Cloud Germany
- - Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
 
 Note that there are different versions of Partner Center available that include different capabilities. Not all scenarios are supported in all versions of Partner Center. To learn more, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
 
-## <span id="Scenarios_supported_by_the_Partner_Center_SDK"/><span id="scenarios_supported_by_the_partner_center_sdk"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_CENTER_SDK"/>Scenarios supported by the Partner Center SDK
-
+## Scenarios supported by the Partner Center SDK
 
 All of the following scenarios can be completed three different ways:
 
- - manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
- - programmatically by using the Partner Center managed API.
- - programmatically by using the Partner Center REST API.
+- Manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
+- Programmatically using the Partner Center managed API.
+- Programmatically using the Partner Center REST API.
 
 <table>
 <colgroup>
@@ -300,16 +298,15 @@ All of the following scenarios can be completed three different ways:
 </tbody>
 </table>
 
+## Background
 
-## <span id="background"/><span id="BACKGROUND"/>Background
-
-### <span id="Who_is_involved_in_the_order_process_"/><span id="who_is_involved_in_the_order_process_"/><span id="WHO_IS_INVOLVED_IN_THE_ORDER_PROCESS_"/>Who is involved in the order process?
+### Who is involved in the order process?
 
 Microsoft, distributors, resellers, and customers. The distributors and resellers are often referred to as **partners**.
 
 Sometimes, Microsoft works directly with resellers who sell to customers. Alternately, Microsoft also works with distributors, and those distributors work with their own set or channel of resellers who sell to customers.
 
-### <span id="What_s_getting_sold_______"/><span id="what_s_getting_sold_______"/><span id="WHAT_S_GETTING_SOLD_______"/>What's getting sold?
+### What's getting sold?
 
 Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
 
