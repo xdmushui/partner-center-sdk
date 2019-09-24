@@ -1,47 +1,42 @@
 ---
-title: Azure Spending
-description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically view and manage their azure spending, and view their customer's progress against an Azure spending budget.
-ms.assetid: 198D32A5-AA2C-49BB-A057-0EFFBA408753
-ms.date: 09/18/2019
+title: Azure spending
+description: CSP partners can use Partner Center APIs to view and manage their Azure spending. They can also programmatically view their customers' Azure spending against their budget.
+ms.assetid: 
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
-# Azure Spending
+# Azure spending
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically view and manage their azure spending, and view their customer's progress against an Azure spending budget.
+Cloud Solution Provider (CSP) partners can view and manage their Azure spending through Partner Center APIs. They can also programmatically view their customers' spending against an Azure spending budget.
 
-**Partner Usages:**
-- [Get partner usage summary](get-a-partner-usage-summary.md)
-- [Get usage records for all customers](get-a-customer-s-usage-records.md)
+For more information, see [scenarios in which CSP partners can use the Partner Center APIs to manage customer and partner accounts and orders](scenarios.md), specifically the [background section](scenarios.md#background).
 
-**Customer Usages:**
-- [Get customer usage summary](get-a-customer-usage-summary.md)
-- [Get all susbcription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
+## Partner usage management
 
-**Subscription Usages:**
-- [Get susbcription usage summary](get-a-customer-subscription-usage-summary.md)
-- [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
-- [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
-- [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
+- [Get a partner usage summary](get-a-partner-usage-summary.md) using the **PartnerUsageSummary** resource
+- [Get usage records for all customers](get-a-customer-s-usage-records.md) using the **CustomerMonthlyUsageRecord** resource
 
-**Azure spending budget:**
-- [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
-- [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
+## Customer usage management
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+- [Get a customer's usage summary](get-a-customer-usage-summary.md) using the **CustomerUsageSummary** resource
+- [Get all subscription usage records for a customer](get-a-customer-subscription-s-usage-records.md) using the **SubscriptionMonthlyUsageRecord** resource
 
- 
+## Subscription usage management
 
- 
+- [Get a subscription usage summary](get-a-customer-subscription-usage-summary.md) using the **SubscriptionUsageSummary** resource
+- [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md) using the **AzureResourceMonthlyUsageRecord** resource
+- [Get usage data for a subscription by resource](get-a-customer-subscription-resource-usage-records.md) using the **ResourceUsageRecord** resource
+- [Get usage data for a subscription by meter](get-a-customer-subscription-meter-usage-records.md) using the **MeterUsageRecord** resource
 
+## Azure spending budget management
 
-
-
+- [Get a customer's usage budget](get-a-customer-s-usage-spending-budget.md) using the **CustomerUsageSummary** resource
+- [Update a customer's usage budget](update-a-customer-s-usage-spending-budget.md) using the **CustomerUsageSummary** resource
