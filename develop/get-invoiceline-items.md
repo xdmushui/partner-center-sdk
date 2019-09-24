@@ -1,80 +1,81 @@
 ---
-title: Get invoice line items (AKA closed billing line items)
-description: How to get a collection of invoice line item details for the specified invoice.
+title: Get invoice line items
+description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
-# Get invoice line items (AKA closed billing line items)
+# Get invoice line items
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of invoice line item details for the specified invoice.
+You can use the following methods to get a collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
 
->[!NOTE]
->Please use **“onetime”** to query all modern line items, instead of **“marketplace”** (to be deprecated). Alternatively, follow the self links in invoice details (in invoice(s) calls). 
->Now this API also supports “azure” and “office” provider types for 145P Azure / Office. So, this API is feature backward compatible.
+*You should use **onetime** to query all modern line items, instead of **marketplace** (to be deprecated). Or, follow the self links in the invoice call details.*
+
+*This API also supports the **provider** types of **azure** and **office** for 145P Azure and Office offers, which makes the API feature backward compatible.*
 
 ## Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## C#
+## C\#
 
+To get the line items for the specified invoice:
 
-To get the line items for the specified invoice, first retrieve the invoice object. To begin, call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
+3. Use the invoice object's [**InvoiceDetails**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoice.invoicedetails) property to get access to a collection of [**InvoiceDetail**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail) objects, each of which contains a [**BillingProvider**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.billingprovider) and an [**InvoiceLineItemType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.invoicelineitemtype). The **BillingProvider** identifies the source of the invoice detail information (such as **Office**, **Azure**, **OneTime**), and the **InvoiceLineItemType** specifies the type (for example, **BillingLineItem**).
 
-Next, use the invoice object's [**InvoiceDetails**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoice.invoicedetails) property to get access to a collection of [**InvoiceDetail**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail) objects, each of which contains a [**BillingProvider**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.billingprovider) and an [**InvoiceLineItemType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.invoicelineitemtype). The BillingProvider identifies the source of the invoice detail information (e.g. Office, Azure, OneTime), and the InvoiceLineItemType specifies the type (e.g. BillingLineItem).
+The following example code uses a **foreach** loop to process the **InvoiceDetails** collection. A separate collection of line items is retrieved for each **InvoiceDetail** instance.
 
-The example code that follows uses a foreach loop to process the InvoiceDetails collection. A separate collection of line items is retrieved for each InvoiceDetail instance.
+To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
-To get a collection of line items that correspond to an InvoiceDetail instance, pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.getasync) method to retrieve the associated line items.
-
-Finally, create an enumerator to traverse the collection as shown in the following example.
+1. Pass the instance's **BillingProvider** and **InvoiceLineItemType** to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.getasync) method to retrieve the associated line items.
+3. Create an enumerator to traverse the collection as shown in the following example.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
 // int invoicePageSize;
 // string invoiceId;
 
-// Retrieve the invoice. 
+// Retrieve the invoice.
 var invoiceOperations = partnerOperations.Invoices.ById(invoiceId);
 var invoice = invoiceOperations.Get();
 
 foreach (var invoiceDetail in invoice.InvoiceDetails)
 {
-    Console.WriteLine(string.Format("Getting invoice line item for product {0} and line item type {1}", 
-        invoiceDetail.BillingProvider, 
+    Console.WriteLine(string.Format("Getting invoice line item for product {0} and line item type {1}",
+        invoiceDetail.BillingProvider,
         invoiceDetail.InvoiceLineItemType));
 
     // Is this an unpaged or paged request?
     bool isUnPaged = (this.invoicePageSize <= 0);
 
     // If the scenario is unpaged, get all the invoice line items, otherwise get the first page.
-    var invoiceLineItemsCollection = 
-        (isUnPaged) 
-        ? invoiceOperations.By(invoiceDetail.BillingProvider, invoiceDetail.InvoiceLineItemType).Get() 
+    var invoiceLineItemsCollection =
+        (isUnPaged)
+        ? invoiceOperations.By(invoiceDetail.BillingProvider, invoiceDetail.InvoiceLineItemType).Get()
         : invoiceOperations.By(invoiceDetail.BillingProvider, invoiceDetail.InvoiceLineItemType).Get(this.invoicePageSize, 0);
 
     // Create an enumerator for traversing the line items collection.
-    var invoiceLineItemEnumerator = 
+    var invoiceLineItemEnumerator =
         partnerOperations.Enumerators.InvoiceLineItems.Create(invoiceLineItemsCollection);
-    
+
     while (invoiceLineItemEnumerator.HasValue)
     {
         // invoiceLineItemEnumerator.Current contains a collection
         // of line items.
-        Console.WriteLine(String.Format("invoiceLineItemEnumerator.Current has {0} line items.", 
-            invoiceLineItemEnumerator.Current.TotalCount)); 
+        Console.WriteLine(String.Format("invoiceLineItemEnumerator.Current has {0} line items.",
+            invoiceLineItemEnumerator.Current.TotalCount));
         //
         // Insert code here to work with the line items.
         //
@@ -88,46 +89,59 @@ foreach (var invoiceDetail in invoice.InvoiceDetails)
 }
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetInvoiceLineItems.cs
+For a similar example, see the following:
 
-## REST Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **Partner Center SDK Samples**
+- Class: **GetInvoiceLineItems.cs**
 
+## REST
 
-**Request syntax**
+### REST request
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax for an invoice with a billing-provider value of "OneTime" and set seekOperation to "Next" to get the next page of invoice line items.
+#### Request syntax
 
+Make your request using the appropriate syntax for the billing provider in your scenario.
 
-> **For Billing Provider = Office**
+##### Office
+
+The following syntax applies when the billing provider is **Office**.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=office&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1                               |
 
-> **For Billing Provider = Azure (145P)**
+##### Azure 145P
+
+The following syntaxes apply when the billing provider is **Azure 145P**.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=azure&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=azure&invoicelineitemtype=usagelineitems&size={size}&offset={offset} HTTP/1.1  |
 
-> **For Billing Provider = OneTime. Charges for Azure reservations, Software, Azure Plan and Marketplace products.**
+##### OneTime
+
+The following syntaxes apply when the billing provider is **OneTime**. This includes charges for Azure reservations, software, Azure plans, and commercial marketplace products.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&size={size} HTTP/1.1  |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/onetime/billinglineitems&size={size}?seekOperation=Next                               | 
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/onetime/billinglineitems&size={size}?seekOperation=Next                           |
 
->[!NOTE] **Below URI's to be deprecated**
+##### Previous syntaxes
 
-| Method  | Request URI    (to be deprecated)                                                                                                                                                 |
+If you are using the following syntaxesx, be sure to use the appropriate syntax for your use case.
+
+*The URIs below are to be deprecated.*
+
+| Method  | Request URI    (to be deprecated)                                                                                                                                                 | Description of syntax use case |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                              |
-| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  |
-| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               |
- 
+| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                              | You can use this syntax to return a full list of every line item for the given invoice. |
+| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  | For large invoices, you can use this syntax with a specified size and 0-based offset to return a paged list of line items. |
+| GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               | You can use this syntax for an invoice with a billing-provider value of **OneTime** and set **seekOperation** to **Next** to get the next page of invoice line items. |
 
-**URI parameters**
+###### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -138,38 +152,40 @@ Use the following URI and query parameters when creating the request.
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
 | size                   | number | No       | The maximum number of items to return.                            |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
-| seekOperation          | string | No       | If billing-provider = "OneTime", set seekOperation=Next to get the next page of invoice line items. |
+| seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
 
- 
+#### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+#### Request body
 
 None.
 
-## REST Response
-
+### REST response
 
 If successful, the response contains the collection of line item details.
 
-> [!NOTE]
-> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+*For the line item **ChargeType**, the value **Purchase** is mapped to **New**. The value **Refund** is mapped to **Cancel**.*
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-## Request/Response Examples
+### REST request-response examples
 
+#### Request-response example 1
 
-**Request example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+In this example, the details are as follows:
+
+- **BillingProvider**: **Office**
+- **InvoiceLineItemType**: **BillingLineItems**
+
+##### Request example 1
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Office&nvoicelineitemtype=BillingLineItems&size=2&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
@@ -178,7 +194,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 1** (BillingProvider: Office, InvoiceLineItemType: BillingLineItems)
+##### Response example 1
 
 ```http
 HTTP/1.1 200 OK
@@ -280,11 +296,18 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example 2** (BillingProvider: Azure, InvoiceLineItemType: BillingLineItems)
+#### Request-response example 2
+
+In the following example, the details are as follows:
+
+- **BillingProvider**: **Azure**
+- **InvoiceLineItemType**: **BillingLineItems**
+
+##### Request example 2
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Azure&invoicelineitemtype=BillingLineItems&size=2&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
@@ -293,7 +316,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 2** (BillingProvider: Azure, InvoiceLineItemType: BillingLineItems)
+##### Response example 2
 
 ```http
 HTTP/1.1 200 OK
@@ -411,11 +434,18 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example 3** (BillingProvider: Azure, InvoiceLineItemType: UsageLineItems)
+#### Request-response example 3
+
+In the following example, the details are as follows:
+
+- **BillingProvider**: **Azure**
+- **InvoiceLineItemType**: **UsageLineItems**
+
+##### Request example 3
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Azure&invoicelineitemtype=UsageLineItems&size=2&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
@@ -424,7 +454,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 3** (BillingProvider: Azure, InvoiceLineItemType: UsageLineItems)
+##### Response example 3
 
 ```http
 HTTP/1.1 200 OK
@@ -522,11 +552,18 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example 4** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
+#### Request-response example 4
+
+In the following example, the details are as follows:
+
+- **BillingProvider**: **OneTime**
+- **InvoiceLineItemType**: **BillingLineItems**
+
+##### Request example 4
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1eb2ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda03fe54
@@ -535,7 +572,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 4** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems)
+##### Response example 4
 
 ```http
 HTTP/1.1 200 OK
@@ -622,7 +659,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionStartDate": "2019-01-03T19:53:55.1292512+00:00",
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
-            "discountDescriptions": "",                        
+            "discountDescriptions": "",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {
@@ -653,7 +690,15 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-**Request example 5 - Paging Using Continuation Token** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
+#### Request-response example 5
+
+In the following example, there is paging using a continuation token. The details are as follows:
+
+- **BillingProvider**: **OneTime**
+- **InvoiceLineItemType**: **BillingLineItems**
+- **SeekOperation**: **Next**
+
+##### Request example 5
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next HTTP/1.1
@@ -667,7 +712,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-**Response example 5 - Paging Using Continuation Token** (BillingProvider: OneTime, InvoiceLineItemType: BillingLineItems, SeekOperation: Next)
+##### Response example 5
 
 ```http
 HTTP/1.1 200 OK
@@ -734,11 +779,3 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
