@@ -126,7 +126,7 @@ All of the following scenarios can be completed three different ways:
 <p>Azure spending budget</p>
 <ul>
 <li><p><a href="get-a-subscriptions-resource-usage-information.md">Get usage data for a subscription</a></p></li>
-<li><p><a href="get-a-customers-rated-usage-information.md">Get a usage summary for all of a customer&#39;s subscriptions</a></p></li>
+<li><p><a href="get-a-customer-usage-summary.md">Get a usage summary for all of a customer&#39;s subscriptions</a></p></li>
 </ul>
 <p>Service costs</p>
 <ul>
