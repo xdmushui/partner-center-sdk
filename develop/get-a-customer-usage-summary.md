@@ -1,8 +1,8 @@
 ---
 title: Get a usage summary for all of a customer's subscriptions
-description: How to get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
+description: You can get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ This topic describes how to get the **CustomerUsageSummary** resource. This reso
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 
 ## C\#
 
@@ -41,15 +41,17 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetCustomerUsageSummary.cs**
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                         |
 |---------|-----------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1 |
 
-#### URI parameter
+##### URI parameter
 
 This table lists the required query parameter to get the customer's rated usage information.
 
@@ -57,15 +59,15 @@ This table lists the required query parameter to get the customer's rated usage 
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 
-### Request headers
+#### Request headers
 
 See [Headers](headers.md) for more information.
 
-### Request body
+#### Request body
 
 None.
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1
@@ -75,18 +77,19 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a **CustomerUsageSummary** resource in the response body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example 1 - Customer purchased 145P Azure PayG
+#### Response example for 145P
 
->[!NOTE]
->For customers with 145P, there will be no change to API response.
+In this example, the customer purchased a **145P Azure PayG** offer.
+
+*For customers with 145P offers, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK
@@ -123,12 +126,14 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-### Response example 2 - Customer purchased Azure Plan
+#### Response example for Azure plans
 
->[!NOTE]
->For customers with Azure Plan, there are few changes in API response. 
->"currencyLocale" is replaced with 'currencyCode'.
->"usdTotalCost" is new field.
+In this example, the customer purchased an **Azure plan**.
+
+*For customers with Azure plans, there are the following changes to the API response:*
+
+- **currencyLocale** is replaced with **currencyCode**
+- **usdTotalCost** is a new field
 
 ```http
 HTTP/1.1 200 OK
