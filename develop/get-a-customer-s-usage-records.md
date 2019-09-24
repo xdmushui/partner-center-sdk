@@ -1,8 +1,8 @@
 ---
-title: Get all customer usage records for a partner
-description: How to get all customer usage records for a partner for customers that purchased a specific Azure service or resource during the current billing period.
-ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 09/17/2019
+title: Get usage records for all customers
+description: Partners can get usage records for all customers who purchased a specific Azure service or resource during the current billing period.
+ms.assetid: 
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,19 +14,19 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the collection of **CustomerMonthlyUsageRecord** resource. This resource represents usage records for all customers, including those with 145P or Azure Plan. 
+Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers, including those with an **Azure 145P offer** or an **Azure plan**.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 
 ## C\#
 
-To get a customer's usage records for all customer purchased a specific Azure service or resource during the current billing period:
+To get all the usage records for all customers who purchased a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
-2. Then call **UsageRecords** property. Finish by calling the Get() or GetAsync() methods.
+2. Call **UsageRecords** property, then call the **Get()** or **GetAsync()** method.
 
     ``` csharp
     // IAggregatePartner partnerOperations;
@@ -39,23 +39,25 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetCustomerUsageRecords.cs**
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/usagerecords HTTP/1.1 |
 
-### Request headers
+#### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
-### Request body
+#### Request body
 
 None.
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/usagerecords HTTP/1.1
@@ -65,19 +67,17 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a **CustomerMonthlyUsageRecord** resource in the response body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+#### Response example
 
->[!NOTE]
->Use "isUpgraded" property to identify those customers that have Azure plan. 
->"isUpgraded" = true represents customers that have Azure plan
+You can use the **isUpgraded** property to identify customers who have an Azure plan. If the value for **isUpgraded** is **true**, this means the customers have an Azure plan.
 
 ```http
 HTTP/1.1 200 OK
@@ -156,7 +156,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
                 "objectType": "CustomerMonthlyUsageRecord"
             }
         },
-		 {
+           {
             "budget": {
                 "amount": 97,
                 "attributes": {
