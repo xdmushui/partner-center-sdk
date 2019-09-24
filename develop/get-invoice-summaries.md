@@ -1,32 +1,34 @@
 ---
 title: Get invoice summaries
-description: Gets an invoice summaries resource that contains an invoice summary for each currency type. An invoice summary, shows the balance and total charges of both recurring and one-time charges. 
+description: You can use an invoice summaries resource for each currency type to show the balance and total charges of both recurring and one-time charges. 
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
 # Get invoice summaries
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets an **InvoiceSummaries** resource that contains an invoice summary for each currency type. An invoice summary shows the balance and total charges of both recurring and one-time charges.
+You can use the **InvoiceSummaries** to retrieve an invoice summary which shows the balance and total charges of both recurring and one-time charges. The **InvoiceSummaries** resource contains an invoice summary for each currency type.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A valid Invoice ID.
+- A valid invoice identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To retrieve an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice-resources.md#invoicesummary) for each currency type:
 
-To retrieve an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice-resources.md#invoicesummary) for each currency type, use your **IAggregatePartner.Invoices** collection, call the **Summaries** property, and call the **Get()** method. To get the balance of an individual [**InvoiceSummary**](invoice-resources.md#invoicesummary), access the **BalanceAmount** property for that member of the collection. 
+1. Use your **IAggregatePartner.Invoices** collection to call the **Summaries** property.
+2. Call the **Get()** method.
+3. To get the balance of an individual [**InvoiceSummary**](invoice-resources.md#invoicesummary), access the **BalanceAmount** property for that member of the collection.
 
 ``` csharp
 // IAggregatePartner scopedPartnerOperations;
@@ -38,32 +40,35 @@ var invoiceSummaries = scopedPartnerOperations.Invoices.Summaries.Get();
 Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].BalanceAmount);
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceSummaries.cs
+For more information, see the following example code:
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSample**
+- Class: **GetInvoiceSummaries.cs**
 
+## REST
 
-**Request syntax**
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summaries HTTP/1.1     |
 
-
-**URI parameter**
-
-None.
- 
-
-**Request headers**
-
-- See [Headers](headers.md) for more information.
-
-**Request body**
+##### URI parameter
 
 None.
 
-**Request example**
+#### Request headers
+
+For more information, see [Headers](headers.md).
+
+#### Request body
+
+None.
+
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/summaries HTTP/1.1
@@ -74,15 +79,15 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+### REST response
 
-If successful, this method returns an [InvoiceSummaries](invoice-resources.md#invoicesummaries) resource in the response body.
+If successful, this method returns an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) resource in the response body.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
