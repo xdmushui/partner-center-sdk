@@ -2,7 +2,7 @@
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 01/08/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -33,6 +33,8 @@ Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z
 
 ### Java
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product. 
 
 ```java
@@ -42,6 +44,8 @@ Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZ
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
 

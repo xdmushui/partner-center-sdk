@@ -132,6 +132,7 @@
 #### [View deleted users for a customer](view-a-deleted-user.md)
 ### [Manage orders](manage-orders.md)
 #### [Create a subscription for commercial marketplace products](create-subscription-azure-marketplace-products.md)
+#### [Activate a sandbox subscription for commercial marketplace products](activate-sandbox-subscription-azure-marketplace-products.md)
 #### [Cancel a commercial marketplace subscription](cancel-an-azure-marketplace-subscription.md)
 #### [Cancel an order from the integration sandbox](cancel-an-order-from-the-integration-sandbox.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)

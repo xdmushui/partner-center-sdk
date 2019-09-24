@@ -2,7 +2,7 @@
 title: Get a list of SKUs for a product
 description: Gets a collection of SKUs for the specified product.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 09/28/2018
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -39,7 +39,9 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Sku
 var segmentSkus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ByTargetSegment(targetSegment).Get();
 ```
 
-### Java 
+### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **getSkus** function to obtain an interface with the available operations for SKUs. Finally, call the **get()** function to retrieve a collection of the available SKUs for the product. Optionally, you can use the **byTargetSegment()** function to filter the SKUs by target segment before calling the **get()** function.
 
@@ -57,7 +59,9 @@ ResourceCollection<Sku> skus = partnerOperations.getProducts().byCountry(country
 var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().byTargetSegment(targetSegment).get();
 ```
 
-### PowerShell 
+### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get the list of SKUs for a product, execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command. Optionally, you can specify the **Segment** parameter to filter the SKUs by target segment.
 

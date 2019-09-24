@@ -2,7 +2,7 @@
 title: Get a customer's company profile
 description: Gets the company profile of a customer.
 ms.assetid: 762C0F38-2229-464D-9CD6-6AD82135A65C
-ms.date: 07/22/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -38,6 +38,8 @@ var companyProfile = partnerOperations.Customers.ById(customerId).Profiles.Compa
 **Sample**: [Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681). **Project**: PartnerSdk.FeatureSamples **Class**: GetCustomerCompanyProfile.cs
 
 ### Java
+
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 To get the company profile for a customer, call the **IAggregatePartner.getCustomers().byId** function with the customer identifier to identify the customer. Then get the customer's **ICustomerProfileCollection** interface from the [**getProfiles**] function, in order to access its Company property. Next, get the **ICustomerReadonlyProfile** interface from the **ICustomerProfileCollection.getCompany** function, and call the **get** function.
 

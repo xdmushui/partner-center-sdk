@@ -1,7 +1,7 @@
 ---
 title: Get a download link for the Microsoft Customer Agreement template (preview)
 description: Get a download link for Microsoft Customer Agreement template.
-ms.date: 8/28/2019
+ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
@@ -21,9 +21,40 @@ This article describes how to get a link to download the Microsoft Customer Agre
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports App+User authentication.
-- The country to which the Microsoft Customer Agreement template applies.
+- If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
+- The customer's country to which the Microsoft Customer Agreement template applies.
 - The language in which the Microsoft Customer Agreement template should be localized.
+
+## .NET
+
+To retrieve a link to download the Microsoft Customer Agreement template:
+
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string agreementType = "MicrosoftCustomerAgreement";
+
+AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
+```
+
+2. Use the IAggregatePartner.AgreementTemplates collection.
+3. Call the **ById** method and specify the **templateId** of the Microsoft Customer Agreement.
+4. Fetch the **Document** property.
+5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies.
+6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in.
+7. Call the **Get** or **GetAsync** method.
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+var agreementDocument = partnerOperations.AgreementTemplates.ById(microsoftCustomerAgreementDetails.TemplateId).Document.ByCountry("US").ByLanguage("en-US").Get();
+```
+
+A complete sample can be found in the [GetAgreementDocument](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDocument.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
+
 
 ## REST request
 

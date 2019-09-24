@@ -2,7 +2,7 @@
 title: Console test app
 description: This console test app provides sample code for all scenarios supported by the Partner Center APIs. You can also use it for testing.
 ms.assetid: 56F5B4C6-CE87-4D13-9D8C-09F38E946292
-ms.date: 05/23/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -21,9 +21,7 @@ The console test app is provided in C# and Java, it provides sample codes for al
 
 Download the sample code for the console test app.
 
-### [.NET](#tab/dotnet)
-
-### .NET
+## .NET
 
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=746682) and modify it as necessary.
 
@@ -34,9 +32,9 @@ Under **ScenarioSettings** in the *App.config* file, you can set parameters that
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.cs* file.
 
-### [Java](#tab/java)
+## Java
 
-### Java
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
 [Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
 
@@ -46,8 +44,6 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 Under **ScenarioSettings** in the *SamplesConfiguration.json* file, you can set parameters that will be automatically passed into the scenarios that you run.
 
 To modify the list of scenarios that are run, comment out lines in **IPartnerScenario\[\] mainScenarios** or in an individual **Get Scenarios** method found in the *Program.java* file.
-
------
 
 ## What to change
 

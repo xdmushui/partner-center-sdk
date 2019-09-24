@@ -1,7 +1,7 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 07/31/2019
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -42,6 +42,9 @@ The following overview documents and sample code describe how partners can imple
 - [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
 - [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
 - [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
+
+    [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 - [REST instructions and samples](#rest)
 - [PowerShell instructions and samples](#powershell)
 
@@ -194,6 +197,8 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 You can use the [Partner Center PowerShell module](https://www.powershellgallery.com/packages/PartnerCenter) to reduce the required infrastructure to exchange an authorization code for an access token. This method is optional for making [Partner Center REST calls](#rest).
 

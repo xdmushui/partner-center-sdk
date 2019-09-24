@@ -2,7 +2,7 @@
 title: Get an organization profile
 description: Gets an object representing the partner's organization profile.
 ms.assetid: 2AA159F1-CC84-4367-A2AF-DFA4C8B0E673
-ms.date: 09/29/2018
+ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -37,6 +37,8 @@ OrganizationProfile organizationProfile = partnerOperations.Profiles.Organizatio
 
 ### Java
 
+[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+
 To get your organization profile, use your **IAggregatePartner.getProfiles** function and call the **getOrganizationProfile** function. Finally, call the **get()** function.
 
 ```java
@@ -46,6 +48,8 @@ OrganizationProfile organizationProfile = partnerOperations.getProfiles().getOrg
 ```
 
 ### PowerShell
+
+[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
 To get your organiztion profile, execute the [**Get-PartnerOrganizationProfile**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOrganizationProfile.md) command. 
 
