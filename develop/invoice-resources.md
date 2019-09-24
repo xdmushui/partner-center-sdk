@@ -2,7 +2,7 @@
 title: Invoice resources
 description: Description of invoice-related resources.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 09/18/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -227,11 +227,11 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
 | AlternateId | string | Gets or sets the Alternate ID (quote ID). |
 | PriceAdjustmentDescription | string | Gets or sets the price adjustment description. |
-| DiscountDetails | string | Gets or sets the discount details associated with this purchase. **[Obsolete]** |
+| DiscountDetails | string |  **Deprecated**. Gets or sets the discount details associated with this purchase. |
 | PricingCurrency | string | Gets or sets the pricing currency code. |
-| PCToBCExchangeRate | decimal | Gets or sets the pricing currency to billing currency exchange rate. |
-| PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to billing currency exchange rate was determined. |
-| BillableQuantity | decimal | Gets or sets the units purchased. Per design column named as BillableQuantity. |
+| PCToBCExchangeRate | decimal | Gets or sets the pricing currency to the billing currency exchange rate. |
+| PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to the billing currency exchange rate was determined. |
+| BillableQuantity | decimal | Gets or sets the units purchased. For each design column named as **BillableQuantity**. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
 
@@ -280,15 +280,15 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 | ChargeType | string | Gets or sets the type of charge. |
 | UnitPrice | decimal | Gets or sets the price of unit. |
 | Quantity | decimal | Gets or sets the quantity of usage. |
-| UnitType | string | Gets or sets the unit type like 1 Hour. |
+| UnitType | string | Gets or sets the unit type (such as 1 hour). |
 | BillingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in local currency of the customer or billing currency. |
 | BillingCurrency | string | Gets or sets ISO currency in which the meter is charged in local currency of the customer or billing currency. |
 | PricingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in USD or catalog currency used for rating. |
 | PricingCurrency | string | Gets or sets ISO currency in which the meter is charged in USD or catalog currency used for rating. |
-| EntitlementId | string | Gets or sets the entitlement (azure's subscription) id. |
-| EntitlementDescription | string | Gets or sets the entitlement (azure's subscription) description. |
-| PCToBCExchangeRate | string | Gets or sets the pricing currency to billing currency exchange rate. |
-| PCToBCExchangeRateDate | DateTime | Gets or sets the pricing currency to billing currency exchange rate date. |
+| EntitlementId | string | Gets or sets the entitlement (Azure subscription) ID. |
+| EntitlementDescription | string | Gets or sets the entitlement (Azure subscription) description. |
+| PCToBCExchangeRate | string | Gets or sets the pricing currency to the billing currency exchange rate. |
+| PCToBCExchangeRateDate | DateTime | Gets or sets the pricing currency to the billing currency exchange rate date. |
 | EffectiveUnitPrice | decimal | Gets or sets the effective unit price. |
 | RateOfPartnerEarnedCredit | decimal | Gets or sets the rate of partner earned credit. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
