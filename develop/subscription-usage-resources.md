@@ -1,35 +1,26 @@
 ---
 title: Subscription usage resources
-description: Describes usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
+description: The subscription usage resources describe usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
-ms.date: 09/19/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
 # Subscription usage resources
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Describes usage information for a specific subscription with usage-based
-billing. These subscriptions have daily and monthly usage records, along
-with a usage summary for each pay period.
+You can use the following subscription usage resources to get usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 
-## <span id="SubscriptionDailyUsageRecord"/><span id="subscriptiondailyusagerecord"/><span id="SUBSCRIPTIONDAILYUSAGERECORD"/>SubscriptionDailyUsageRecord
+## SubscriptionDailyUsageRecord
 
+*The **SubscriptionDailyUsageRecord** resource is obsolete and may produce inaccurate results. We recommend that you update your applications to use the APIs described in [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md) and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) instead.*
 
->[!NOTE]
->The SubscriptionDailyUsageRecord resource is obsolete and may produce inaccurate results. We recommend that you update your applications to use the APIs described in
->[Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md) and [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md)
->instead.
-
- 
-
-Describes how much a subscription is used in a single day.
+The **SubscriptionDailyUsageRecord** resource describes how much a subscription is used in a single day.
 
 | Property         | Type               | Description                                                                                   |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -41,12 +32,9 @@ Describes how much a subscription is used in a single day.
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
- 
+## SubscriptionMonthlyUsageRecord
 
-## <span id="SubscriptionMonthlyUsageRecord"/><span id="subscriptionmonthlyusagerecord"/><span id="SUBSCRIPTIONMONTHLYUSAGERECORD"/>SubscriptionMonthlyUsageRecord
-
-
-Describes how much a subscription is used in a single month.
+The **SubscriptionMonthlyUsageRecord** resource describes how much a subscription is used in a single month.
 
 | Property         | Type               | Description                                                                                   |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
@@ -56,19 +44,15 @@ Describes how much a subscription is used in a single month.
 | Id               | string             | GUID. The id of the subscription or resource.                                                 |
 | Name             | string             | The name of the subscription or resource.                                                     |
 | TotalCost        | decimal             | The estimated total cost of using the resources in the subscription in the specified month.   |
-| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice **Available for Azure 145P**. |
-| CurrencyCode     | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for **Azure 145P**. |
+| CurrencyCode     | string             | Gets or sets the currency code. Available for **Azure plans**.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for **Azure plans**.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
- 
+## SubscriptionUsageSummary
 
-## <span id="SubscriptionUsageSummary"/><span id="subscriptionusagesummary"/><span id="SUBSCRIPTIONUSAGESUMMARY"/>SubscriptionUsageSummary
-
-
-Describes how much a specific subscription was used in the current
-billing period.
+The **SubscriptionUsageSummary** resource describes how much a specific subscription was used in the current billing period.
 
 | Property         | Type               | Description                                                                                                            |
 |------------------|--------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -77,19 +61,9 @@ billing period.
 | BillingStartDate | date               | The start date of the current billing period, in date-time format.                                                     |
 | BillingEndDate   | date               | The end date of the current billing period, in date-time format.                                                       |
 | TotalCost        | double             | The estimated total cost of using the resources in the subscription during the specified billing period.               |
-| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice **Available for Azure 145P**. |
-| CurrencyCode   | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
+| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for **Azure 145P**. |
+| CurrencyCode   | string             | Gets or sets the currency code. Available for **Azure plans**.                                         |
+| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. Available for **Azure plans**.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                                                      |
 | Links            | ResourceLinks      | The resource links corresponding to the SubscriptionUsageSummary.                                                      |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the SubscriptionUsageSummary.                                                 |
-
- 
-
- 
-
- 
-
-
-
-
