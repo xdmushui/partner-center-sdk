@@ -1,36 +1,35 @@
 ---
-title: Meter usage resources
-description: Describes the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
-ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
-ms.date: 09/18/2019
+title: Meter usage record resource
+description: The MeterUsageRecord resource describes the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
+ms.assetid: 
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
-# Meter usage resources
+# Meter usage record resource
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 
-Describes the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
+You can use the **MeterUsageRecord** resource to describe the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
 
-## <span id="MeterUsageRecord"/><span id="meterusagerecord"/><span id="METERUSAGERECORD"/>MeterUsageRecord
+## MeterUsageRecord
 
 | Property         | Type               | Description                                                                                   |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
-| SubscriptionId           | string             | Gets or sets the subscription Id (For "Azure 145P" this is commerce subscription id. For "Azure Plan" this is azure plan id).                  |
-| MeterId  | string             | Gets or sets the meter Id.                                                        |
+| SubscriptionId           | string             | Gets or sets the subscription identifier. For **Azure 145P offers**, this value is the commerce subscription identifier. For **Azure plans**, this value is the Azure plan identifier.                  |
+| MeterId  | string             | Gets or sets the meter identifier.                                                        |
 | MeterName          | string             | Gets or sets the meter name.                                       |
 | Category               | string             | Gets or sets the Azure resource category.                                                 |
 | Subcategory             | string             |  Gets or sets the Azure resource sub-category.                                                     |
 | QuantityUsed        | decimal             | Gets or sets the quantity of the Azure resource used.   |
 | Unit   | string             | Gets or sets the unit of measure for the Azure resource. |
 | TotalCost   | decimal             | Gets or sets the estimated total cost of usage. |
-| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice **Available for Azure 145P**. |
-| CurrencyCode   | string             | Gets or sets the currency code. **Available for  Azure Plan**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. **Available for Azure Plan**.                                         |
-| LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
+| CurrencyLocale   | string             | The locale in which the subscription was used. This property determines the currency that is used on the invoice. This property is available  for **Azure 145P**. |
+| CurrencyCode   | string             | Gets or sets the currency code. This property is available for **Azure plans**.                                         |
+| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. This property is available for **Azure plans**.                                         |
+| LastModifiedDate | string             | The day (in date-time format) that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |                                           |
 
  
