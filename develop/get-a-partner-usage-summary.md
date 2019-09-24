@@ -1,8 +1,8 @@
 ---
 title: Get a usage summary for a partner
-description: How to get usage summary for all customers that purchased a specific Azure service or resource during the current billing period.
-ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 09/18/2019
+description: You can get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
+ms.assetid: 
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,10 +14,9 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **PartnerUsageSummary** resource. This resource represents partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
+You can use the **PartnerUsageSummary** resource to get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
 
-> [!NOTE]
-> The total returned by this API will not return consumption for customers that have Azure plan. Planned for deprecation in the future.
+*The total returned by this API will not return consumption for customers that have Azure plan.* Planned for deprecation in the future.
 
 ## Prerequisites
 
@@ -32,7 +31,7 @@ To get a usage summary for all customers that purchased a specific Azure service
 
     ``` csharp
     // IAggregatePartner partnerOperations;
-    
+
     var usageSummary = partnerOperations.UsageSummary.Get();
     ```
 
@@ -42,23 +41,25 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetPartnerUsageSummary.cs**
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                         |
 |---------|---------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/usagesummary HTTP/1.1 |
 
-### Request headers
+#### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
-### Request body
+#### Request body
 
 None.
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/usagesummary HTTP/1.1
@@ -68,15 +69,15 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a **PartnerUsageSummary** resource in the response body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
