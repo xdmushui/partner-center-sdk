@@ -1,37 +1,34 @@
 ---
 title: Get a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
-ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
-ms.date: 09/17/2019
+ms.assetid: 
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
 # Get a customer's usage spending budget
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Update the [spending budget](customer-usage-resources.md#customerusagesummary)
-allocated for a customer's usage.
+You can update the [spending budget](customer-usage-resources.md#customerusagesummary) allocated for a customer's usage.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the
-    customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To update a customer's usage spending budget:
 
-To update a customer's usage spending budget, first create a new
-[**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
-[**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to get usage buget.
+1. Create a new [**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount.
+2. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection to call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's identifier.
+3. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to get the customer's usage budget.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -47,19 +44,17 @@ var newUsageBudget = new SpendingBudget()
 var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Get();
 ```
 
+## REST
 
+### REST request
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
-
-
-**Request syntax**
+#### Request syntax
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
- 
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |
 
-**URI parameter**
+##### URI parameter
 
 Use the following query parameter to update the billing profile.
 
@@ -67,19 +62,15 @@ Use the following query parameter to update the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+#### Request headers
 
-**Request headers**
+For more information, see [Headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-
-**Request body**
+#### Request body
 
 The full resource.
 
-
-**Request example**
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
@@ -91,19 +82,15 @@ Content-Type: application/json;charset=utf-8
 X-Locale: "en-US"
 ```
 
-
-
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+### REST response
 
 If successful, this method returns a user's spending budget with the updated amount.
 
-
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -130,4 +117,3 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
     }
 }
 ```
-
