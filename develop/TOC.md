@@ -85,6 +85,8 @@
 #### [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
 #### [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
 #### [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
+#### [Get meter usage record resources](meter-usage-resources.md)
+#### [Get resource usage record resources](resource-usage-resources.md)
 #### [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
 #### [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
 ### [Manage customer accounts](manage-customers.md) 
