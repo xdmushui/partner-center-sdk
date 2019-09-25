@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 09/24/2019
+ms.date: 09/25/2019
 ms.localizationpriority: medium
 ---
 
@@ -133,12 +133,12 @@ The following syntaxes apply when the billing provider is **OneTime**. This incl
 
 ##### Previous syntaxes
 
-If you are using the following syntaxesx, be sure to use the appropriate syntax for your use case.
+If you are using the following syntaxes, be sure to use the appropriate syntax for your use case.
 
 *Except for bug fixes, the APIs for these request URIs are no longer being updated. You should update your applications to call the **onetime** API instead. The **onetime** API provides additional functionality, and will continue to be updated.*
 
-| Method  | Request URI                                                                                                                                                 | Description of syntax use case |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Method | Request URI | Description of syntax use case |
+| ------ | ----------- | -------------------------------- |
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type} HTTP/1.1                              | You can use this syntax to return a full list of every line item for the given invoice. |
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  | For large invoices, you can use this syntax with a specified size and 0-based offset to return a paged list of line items. |
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               | You can use this syntax for an invoice with a billing-provider value of **OneTime** and set **seekOperation** to **Next** to get the next page of invoice line items. |
