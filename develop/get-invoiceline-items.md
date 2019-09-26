@@ -155,6 +155,9 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return.                            |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
 | seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
+| hasPartnerEarnedCredit | bool | No | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when billing provider type is OneTime and InvoiceLineItemType is UsageLineItems. |
+
+ 
 
 #### Request headers
 
