@@ -164,7 +164,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<p><strong>Partner Center .NET SDK v1.14.0 and updated REST APIs are now available!</strong></p>
+<p><strong>Partner Center .NET SDK v1.14.2 and updated REST APIs are now available!</strong></p>
 
 <p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.14.0</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
