@@ -1,11 +1,11 @@
 ---
-title: Get a download link for the Microsoft Customer Agreement template (preview)
+title: Get a download link for the Microsoft Customer Agreement template
 description: Get a download link for Microsoft Customer Agreement template.
 ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
-# Get a download link for the Microsoft Customer Agreement template (preview)
+# Get a download link for the Microsoft Customer Agreement template
 
 Applies to:
 
