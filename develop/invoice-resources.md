@@ -227,6 +227,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
 | AlternateId | string | Gets or sets the Alternate ID (quote ID). |
 | DiscountDetails | string | Gets or sets the discount details associated with this purchase. |
+| BillingFrequency | string | Gets or sets the billing frequency. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
 
