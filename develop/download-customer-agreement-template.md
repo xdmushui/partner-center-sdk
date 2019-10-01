@@ -48,7 +48,7 @@ AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.Agreemen
 2. Use the IAggregatePartner.AgreementTemplates collection.
 3. Call the **ById** method and specify the **templateId** of the Microsoft Customer Agreement.
 4. Fetch the **Document** property.
-5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies. The query defaults to *US* if the method isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies. The query defaults to *US* if the method isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages). This method is **case-sensitive**.
 6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in. The query defaults to *en-US* if the method isn't specified or the country code specified isn't supported for the country specified. For list of supported language codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages)
 7. Call the **Get** or **GetAsync** method.
 
@@ -89,7 +89,7 @@ You can use the following URI parameters with your request:
 
 | Name                   | Type   | Required | Description                                 |
 |------------------------|--------|----------|---------------------------------------------|
-| agreement-template-id  | string | Yes      | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md). |
+| agreement-template-id  | string | Yes      | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md). This parameter is **case-sensitive**.|
 | country                | string | No       | Indicates the country to which the agreement template applies. The query defaults to *US* if the parameter isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
 | language               | string | No       | Indicates the language in which the agreement template should be localized. The query defaults to *en-US* if the parameter isn't specified or the country code specified in't supported for the country specified. For list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
 
@@ -140,6 +140,9 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 ```
 
 ## List of supported countries and languages
+
+> [!IMPORTANT]
+> The country code property is case-sensitive. Please sure to use the correct casing specified in the table below.
 
 | Country                   | Country code   | Supported language code(s) |
 |------------------------|--------|----------|
