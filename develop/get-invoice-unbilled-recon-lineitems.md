@@ -130,6 +130,7 @@ Use the following URI and query parameters when creating the request.
 | invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
 | provider               | string | Yes      | The provider: "OneTime".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems".               |
+| hasPartnerEarnedCredit | bool   | No       | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when provider type is OneTime and InvoiceLineItemType is UsageLineItems.
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
 | period                 | string | Yes      | The period for unbilled recon. example: current, previous.                      |
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
@@ -383,6 +384,93 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     "links": {
         "self": {
              "uri": "/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+
+#### Request example 3
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=OneTime&invoiceLineItemType=UsageLineItems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
+MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
+MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
+X-Locale: en-US
+MS-PartnerCenter-Application: Partner Center .NET SDK Samples
+Host: api.partnercenter.microsoft.com
+```
+
+#### Response example 3
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 2484
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
+MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
+MS-CV: bpqyomePDUqrSSYC.0
+MS-ServerId: 202010406
+Date: Wed, 20 Feb 2019 19:59:27 GMT
+
+{
+    "totalCount": 1,
+    "items": [
+        {
+            "partnerId": "0c924e8d-4852-4692-a4d7-7dd0dc09ad80",
+            "PartnerName": "testPartner",
+            "customerId": "org:d7f565f5-5367-492f-a465-9e2057c5e3c3",
+            "customerName": "TEST_TEST_GTM1",
+            "customerDomainName": "TESTTESTGTM1.ccsctp.net",
+            "invoiceNumber": "T11ETHHDDD",
+            "productId": "DZH318Z0BXWC",
+            "skuId": "0005",
+            "availabilityId": "DZH318Z0BH9R",
+            "productName": "Test WAF-as-a-Service",
+            "publisherId": "21223810",
+            "subscriptionId": "12345678-28db-48c2-8c30-04d7c9455746",
+            "subscriptionDescription": "sub description",
+            "chargeStartDate": "2019-02-04T09:22:34.6455294-08:00",
+            "chargeEndDate": "2019-03-03T09:22:34.6455294-08:00",
+            "UsageDate": "2019-02-07T09:22:34.6455294-08:00",
+            "MeterType": "type",
+            "MeterCategory": "category",
+            "MeterId": "21312312312-fdsfsd",
+            "MeterSubCategory": "subcategory",
+            "MeterName": "meter name",
+            "MeterRegion": "meter region",
+            "UnitOfMeasure": "11",
+            "skuName": "Test WaaS - Large Plan",
+            "publisherName": "Test Networks, Inc.",
+            "chargeType": "New",
+            "unitPrice": 2598,
+            "effectiveUnitPrice": 2598,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 2598,
+            "taxTotal": 0,
+            "totalForCustomer": 0,
+            "currency": "USD",
+            "termAndBillingCycle": "1 Month Subscription",
+            "alternateId": "123456ad566",
+            "discountDetails": "",
+            "providerSource": "All",
+            "RateOfPartnerEarnedCredit": 0.15,
+            "IsPartnerEarnedCreditApplied": true
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+        }
+    ],
+    "links": {
+        "self": {
+             "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         }

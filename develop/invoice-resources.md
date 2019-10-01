@@ -291,5 +291,6 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 | PCToBCExchangeRateDate | DateTime | Gets or sets the pricing currency to the billing currency exchange rate date. |
 | EffectiveUnitPrice | decimal | Gets or sets the effective unit price. |
 | RateOfPartnerEarnedCredit | decimal | Gets or sets the rate of partner earned credit. |
+| hasPartnerEarnedCredit | bool | Gets or sets is partner earned credit applied. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
