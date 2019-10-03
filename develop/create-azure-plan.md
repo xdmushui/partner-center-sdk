@@ -6,7 +6,7 @@ ms.date: 10/02/2019
 ms.localizationpriority: medium
 ---
 
-# Purchase an Azure plan
+# Create an Azure plan
 
 Applies to:
 
