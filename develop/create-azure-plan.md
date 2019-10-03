@@ -62,7 +62,7 @@ For details on how to disable Azure usage subscriptions, see [Azure API on subsc
 To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
 
 ## Upgrade from Microsoft Azure (MS-AZR-0145P) to Azure plan
-You cannot create Azure plan for an existing customer with Azure Usage subscriptions (MS-AZR-0145P).
+You cannot create an Azure plan for an existing customer with Microsoft Azure usage subscriptions (**MS-AZR-0145P**).
  
 ## Azure spending
 
