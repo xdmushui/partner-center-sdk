@@ -44,8 +44,8 @@ To submit your order for Azure plan, do the following:
 ## Get order details
 You can [retrieve the details of an individual order using the order ID](get-an-order-by-id.md). You can also [retrieve a list of all orders for a specific customer](get-all-of-a-customer-s-orders.md).
 
-> [!NOTE]
-> After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
+>[!NOTE]
+>After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
 
 ## Get Azure plan
 After the order is successfully processed, a Partner Center Subscription resource will be created for the Azure plan. You can access the Azure plan using the following methods for managing Partner Center Subscription resources* [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
@@ -55,7 +55,8 @@ After the order is successfully processed, a Partner Center Subscription resourc
 You can suspend an existing Azure plan using the following method:
 * [Suspend a subscription](suspend-a-subscription.md)
 
-> [!NOTE] You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations. For details on how to disable Azure usage subscription, refer to [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions). To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
+>[!NOTE]
+>You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations. For details on how to disable Azure usage subscription, refer to [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions). To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
 
 ## Upgrade from Microsoft Azure (MS-AZR-0145P) to Azure plan
 You cannot create Azure plan for an existing customer with Azure Usage subscriptions (MS-AZR-0145P).
