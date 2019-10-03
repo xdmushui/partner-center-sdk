@@ -1,3 +1,4 @@
+---
 title: Create an Azure plan 
 description: Developers can create and manage Azure plan using Partner Center APIs.
 ms.assetid: 
