@@ -57,7 +57,6 @@ After the order is successfully processed, a Partner Center **Subscription** res
 
 ## Lifecycle management
 You can suspend an existing Azure plan using the following method:
-* [Suspend a subscription](suspend-a-subscription.md)
 
 *You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.* 
 
