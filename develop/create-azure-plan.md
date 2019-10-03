@@ -23,6 +23,7 @@ You can create an Azure plan using the Partner Center APIs. The process is simil
 ## Get the catalog item for Azure plan
 
 Before you can create an Azure plan for a customer, you need to retrieve the corresponding catalog item. You can retrieve the catalog item using the existing Partner Center catalog APIs with the following resource models.
+
 * **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
 * **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. SKUs represent the different shapes of the product.
 * **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
@@ -44,33 +45,37 @@ To submit your order for an Azure plan, you must do the following:
 2. [Check out the cart](checkout-a-cart.md), which results in the creation of an [order](order-resources.md#order).
 
 ## Get order details
+
 You can [retrieve the details of an individual order using the order ID](get-an-order-by-id.md). You can also [retrieve a list of all orders for a specific customer](get-all-of-a-customer-s-orders.md).
 
 >[!NOTE]
 >After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
 
 ## Manage Azure plan subscriptions
+
 After the order is successfully processed, a Partner Center **Subscription** resource will be created for the Azure plan. You can access the Azure plan using the following methods for managing Partner Center **Subscription** resources:
 
 * [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 * [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 
 ## Lifecycle management
+
 You can suspend an existing Azure plan by following the steps in [Suspend a subscription](suspend-a-subscription.md).
 
-*You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.* 
+*You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.*
 
-For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions). 
+For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions).
 
 To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
 
 ## Transition existing CSP offers to Azure plan
 
 You cannot create an Azure plan for an existing customer with Microsoft Azure usage subscriptions (**MS-AZR-0145P**).
- 
+
 ## Azure spending
 
 You can track [Azure spending](azure-spending.md) by querying for usage summary and detailed usage records using the following methods:
+
 * [Get partner usage summary](get-a-partner-usage-summary.md)
 * [Get all customer usage records for a partner](get-a-customer-s-usage-records.md)
 * [Get customer usage summary](get-a-customer-usage-summary.md)
@@ -88,12 +93,13 @@ You can also set and manage customer usage budget using the following methods:
 ## Invoice and reconciliation
 
 You can manage invoices and reconciliation data using the following methods:
-- [Get a collection of invoices](get-a-collection-of-invoices.md)
-- [Get invoice estimate links](get-invoice-estimate-links.md)
-- [Get invoice by ID](get-invoice-by-id.md)
-- [Get invoice statement](get-invoice-statement.md) 
-- [Get invoice summaries](get-invoice-summaries.md)
-- [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md)
-- [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md)
-- [Get invoice billed recon line items](get-invoiceline-items.md)
-- [Get invoice unbilled recon line items](get-invoice-unbilled-recon-lineitems.md)
+
+* [Get a collection of invoices](get-a-collection-of-invoices.md)
+* [Get invoice estimate links](get-invoice-estimate-links.md)
+* [Get invoice by ID](get-invoice-by-id.md)
+* [Get invoice statement](get-invoice-statement.md)
+* [Get invoice summaries](get-invoice-summaries.md)
+* [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md)
+* [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md)
+* [Get invoice billed recon line items](get-invoiceline-items.md)
+* [Get invoice unbilled recon line items](get-invoice-unbilled-recon-lineitems.md)
