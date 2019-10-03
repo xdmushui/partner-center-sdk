@@ -18,7 +18,7 @@ You can create an Azure plan using the Partner Center APIs. The process is simil
 
 * [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
 * The customer identifier. If you don't have a customer's identifier, sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
-* [Confirm customer acceptance of the Microsoft Customer Agreement](https://docs.microsoft.com/partner-center/confirm-customer-agreement).
+* [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](https://docs.microsoft.com/partner-center/confirm-customer-agreement).
 
 ## Get the catalog item for Azure plan
 
