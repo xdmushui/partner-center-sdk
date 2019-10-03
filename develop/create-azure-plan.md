@@ -12,7 +12,7 @@ Applies to:
 
 * Partner Center
 
-You can create an Azure plan using Partner Center APIs. The steps are similar to creating a Microsoft Azure subscription (MS-AZR-0145P). You must [get the catalog item for Azure plan](#get-the-catalog-item-for-azure-plan), and then [create and submit an order](#create-and-submit-an-order).
+You can create an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure subscription (**MS-AZR-0145P**). You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-an-azure-plan), then [create and submit an order](#create-and-submit-an-order).
 
 ## Prerequisites
 
