@@ -626,6 +626,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
             "discountDescriptions": "",
+            "billingFrequency": "Monthly",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {
@@ -765,6 +766,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
             "discountDescriptions": "",
+            "billingFrequency": "Monthly",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {

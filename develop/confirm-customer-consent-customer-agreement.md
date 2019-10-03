@@ -1,11 +1,11 @@
 ---
-title: Confirm customer acceptance of Microsoft Customer Agreement (preview)
+title: Confirm customer acceptance of Microsoft Customer Agreement
 description: Confirm customer acceptance of the Microsoft Customer Agreement. 
 ms.date: 09/19/2019
 ms.localizationpriority: medium
 ---
 
-# Confirm customer acceptance of Microsoft Customer Agreement (preview)
+# Confirm customer acceptance of Microsoft Customer Agreement
 
 Applies to:
 

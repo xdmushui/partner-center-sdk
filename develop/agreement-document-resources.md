@@ -1,11 +1,11 @@
 ---
-title: Agreement document resources (Preview)
+title: Agreement document resources
 description: The AgreementDocument resource represents an agreement document.
 ms.date: 08/28/2019
 ms.localizationpriority: medium
 ---
 
-# Agreement document resources (Preview)
+# Agreement document resources
 
 Applies to:
 
