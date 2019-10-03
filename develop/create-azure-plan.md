@@ -28,7 +28,7 @@ Before you can create an Azure plan for a customer, you need to retrieve the cor
 * **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
 
 To obtain the catalog item for an Azure plan, complete the following steps:
-1. Identify and retrieve the *product* for Azure plan using [Get a list of products](get-a-list-of-products.md) and specifying *targetView* as *Azure*. If you already know the product ID for Azure plan, you can use [Get a product using the product ID](get-a-product-by-id.md) instead.
+1. Identify and retrieve the *product* for the Azure plan. Follow the steps in [Get a list of products](get-a-list-of-products.md) and specify the **targetView** as **Azure**. If you already know the product identifier for the Azure plan, you can follow the steps in [Get a product using the product ID](get-a-product-by-id.md) instead.
 
 2. Retrieve the *SKU* from the product for Azure plan using [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md). If you already know the SKU ID for Azure plan, you can use [Get a SKU using the SKU ID](get-a-sku-by-id.md) instead.
 
