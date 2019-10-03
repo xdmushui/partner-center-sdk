@@ -49,7 +49,7 @@ You can [retrieve the details of an individual order using the order ID](get-an-
 >[!NOTE]
 >After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
 
-## Get Azure plan
+## Manage Azure plan subscriptions
 After the order is successfully processed, a Partner Center **Subscription** resource will be created for the Azure plan. You can access the Azure plan using the following methods for managing Partner Center **Subscription** resources:
 
 * [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
