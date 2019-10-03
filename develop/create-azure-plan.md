@@ -22,7 +22,7 @@ You can create an Azure plan using the Partner Center APIs. The process is simil
 
 ## Get the catalog item for Azure plan
 
-Before you can create an Azure plan for a customer, you need to retrieve the corresponding catalog item using the existing Partner Center Catalog APIs, which is based on the following resource models:
+Before you can create an Azure plan for a customer, you need to retrieve the corresponding catalog item. You can retrieve the catalog item using the existing Partner Center catalog APIs with the following resource models.
 * **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
 * **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
 * **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
