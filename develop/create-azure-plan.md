@@ -55,7 +55,6 @@ After the order is successfully processed, a Partner Center Subscription resourc
 You can suspend an existing Azure plan using the following method:
 * [Suspend a subscription](suspend-a-subscription.md)
 
->[!NOTE]
 >You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations. For details on how to disable Azure usage subscription, refer to [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions). To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
 
 ## Upgrade from Microsoft Azure (MS-AZR-0145P) to Azure plan
