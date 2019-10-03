@@ -37,7 +37,8 @@ To obtain the catalog item for an Azure plan, complete the following steps:
 
 ## Create and submit an order
 
-To submit your order for Azure plan, do the following:
+To submit your order for an Azure plan, you must do the following:
+
 1. [Create a cart](create-a-cart.md) to hold the collection of catalog items that you intend to buy. When you create a [cart](cart-resources.md#cart), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [order](order-resources.md#order). (You can also [update a cart](update-a-cart.md).)
 
 2. [Check out the cart](checkout-a-cart.md), which results in the creation of an [order](order-resources.md#order).
