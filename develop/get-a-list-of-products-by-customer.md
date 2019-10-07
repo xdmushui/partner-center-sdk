@@ -66,6 +66,12 @@ MS-CorrelationId: b1939cb2-e83d-4fb0-989f-514fb741b734
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
+This method returns the following error codes:
+
+| HTTP Status Code | Error code   | Description                     |
+|------------------|--------------|---------------------------------|
+| 403 | 400036 | Access to the requested targetView is not allowed. | 
+
 #### Response example
 
 ```http
