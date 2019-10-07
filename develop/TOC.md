@@ -150,7 +150,7 @@
 #### [Get a list of offer categories by market](get-a-list-of-offer-categories-by-country-and-locale.md)
 #### [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md)
 #### [Get a list of products (by country)](get-a-list-of-products.md) 
-#### [Get a list of products (by customer0] (Create get-a-list-of-products-by-customer.md)
+#### [Get a list of products (by customer)](get-a-list-of-products-by-customer.md)
 #### [Get a list of SKUs for a product (by country)](get-a-list-of-skus-for-a-product.md) 
 #### [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 #### [Get a list of trial conversion offers](get-a-list-of-trial-conversion-offers.md)
