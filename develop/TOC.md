@@ -30,6 +30,7 @@
 #### [Get partner licenses usage information](get-partner-licenses-usage-information.md)
 ### [Audit operations](audit.md)
 #### [Get a record of Partner Center activity](get-a-record-of-partner-center-activity-by-user.md)
+### [Azure plan - create, purchase and manage](create-azure-plan.md)
 ### [Device deployment](device-deployment.md)
 #### [Create a new configuration policy for the specified customer](create-a-new-configuration-policy-for-the-specified-customer.md)
 #### [Delete a configuration policy for the specified customer](delete-a-configuration-policy-for-the-specified-customer.md)
