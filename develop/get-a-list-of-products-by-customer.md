@@ -68,9 +68,8 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 This method returns the following error codes:
 
-| HTTP Status Code     | Error code   | Description                                           |
-|----------------------|--------------|-------------------------------------------------------|
-| 403 | 400030 | Access to the requested targetSegment is not allowed. |
+| HTTP Status Code | Error code   | Description                     |
+|------------------|--------------|---------------------------------|
 | 403 | 400036 | Access to the requested targetView is not allowed. | 
 
 #### Response example
