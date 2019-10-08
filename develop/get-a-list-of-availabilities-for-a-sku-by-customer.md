@@ -26,7 +26,7 @@ Get a collection of availabilities for a specified product and SKU available to 
 
 ## REST
 
-### Rest request
+### REST request
 
 #### Request syntax
 
@@ -34,7 +34,7 @@ Get a collection of availabilities for a specified product and SKU available to 
 |--------|-----------------------------------------------------------------------------------------------------------------------------|
 | POST   | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/products/{product-id}/skus/{sku-id} HTTP/1.1 |
 
-#### Request URI parameter
+#### Request URI parameters
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ MS-RequestId: 83643f5e-5dfd-4375-88ed-054412460dc8
 MS-CorrelationId: b1939cb2-e83d-4fb0-989f-514fb741b734
 ```
 
-### Rest response
+### REST response
 
 #### Response success and error codes
 

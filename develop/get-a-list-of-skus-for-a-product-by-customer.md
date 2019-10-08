@@ -25,7 +25,7 @@ Gets a collection of SKUs for a particular product that is available to an exist
 
 ## REST
 
-### Rest request
+### REST request
 
 #### Request syntax
 
@@ -58,7 +58,7 @@ MS-RequestId: 83643f5e-5dfd-4375-88ed-054412460dc8
 MS-CorrelationId: b1939cb2-e83d-4fb0-989f-514fb741b734
 ```
 
-### Rest response
+### REST response
 
 #### Response success and error codes
 
