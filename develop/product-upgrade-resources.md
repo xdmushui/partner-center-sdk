@@ -31,10 +31,11 @@ The following resources are related to product upgrade.
 
 | Property | Type | Description |
 |----------------------|--------------------------------------------- |----------------------------------------------------------------|
-| customerId           | string                                       | A GUID-formatted string that identifies the customer.           | productFamily        | string                                       | The product family for which the upgrade is requested for.
-| isEligible           | bool                                         | The bool value indicates whether the customer is eligible for requested upgrade
-| upgradeId            | string                                       | The upgrade ID if a product upgrade for given family is already in place.
-| reason               | string                                       | The reason for which customer isn't eligible for product upgrade.
+| customerId           | string                                       | A GUID-formatted string that identifies the customer. |          | productFamily        | string                                       | The product family for which the upgrade is requested for. |
+| isEligible           | bool                                         | The bool value indicates whether the customer is eligible for requested upgrade. |
+| upgradeId            | string                                       | The upgrade ID if a product upgrade for given family is already in place. |
+| reason               | string                                       | The reason for which customer isn't eligible for product upgrade. |
+| productFamily        | string                                       | The product family for which the upgrade is requested for. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  
 
 ## ProductUpgradesStatus
@@ -56,11 +57,11 @@ The following resources are related to product upgrade.
 
 | Property | Type | Description |
 |-----------------|-----------------------------------------------------|--------------------------------------------------------------|
-| sourceProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the source product being upgraded.           
-| targetProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the target product post upgrade.             
-| upgradedDate    | string in UTC date-time format                      | The date the subscription was upgraded.
-| status          | string                                              | The status of the product upgrade. 
-| errorDetails    | [ErrorDetails](#errorDetails) resource              | The error details for upgrade requested. 
+| sourceProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the source product being upgraded. |          
+| targetProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the target product post upgrade. |             
+| upgradedDate    | string in UTC date-time format                      | The date the subscription was upgraded. |
+| status          | string                                              | The status of the product upgrade. | 
+| errorDetails    | [ErrorDetails](#errorDetails) resource              | The error details for upgrade requested. | 
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  |
 
 ## UpgradeProduct
@@ -69,7 +70,8 @@ The following resources are related to product upgrade.
 
 | Property | Type |Description |
 |----------------------|----------------------------------------------|----------------------------------------------------------------|
-| id                   | string                                       | A GUID-formatted string that identifies the product.             | name                 | string                                       | The friendly name of product being upgraded.       
+| id                   | string                                       | A GUID-formatted string that identifies the product. |
+| name                 | string                                       | The friendly name of product being upgraded. |  
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.    
 
 ## ErrorDetails
