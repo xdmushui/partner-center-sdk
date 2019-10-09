@@ -18,8 +18,12 @@ The following resources are related to product upgrade.
 
 **ProductUpgradesRequest** provides information about the product upgrades request object.
 
-| Property             | Type                                                            Description                                   |----------------------|----------------------------------------------|-----------------------------------------------------------------
-| customerId           | string                                       | A GUID-formatted string that identifies the customer.           | productFamily        | string                                       | The product family for which the upgrade is requested for.       | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                       
+| Property | Type | Description |
+|----------------------|----------------------------------------------|----------------------------------------------------------------|
+| customerId           | string                                       | A GUID-formatted string that identifies the customer. |
+| productFamily        | string                                       | The product family for which the upgrade is requested for. |
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. |
+
 
 ## ProductUpgradesEligibility
 
