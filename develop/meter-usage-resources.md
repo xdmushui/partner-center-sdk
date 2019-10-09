@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Meter usage record resource
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

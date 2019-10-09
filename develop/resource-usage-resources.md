@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Resource usage record resources
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

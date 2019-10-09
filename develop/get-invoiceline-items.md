@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get invoice line items
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center
