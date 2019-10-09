@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get usage records for all customers
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Invoice resources
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center
