@@ -29,7 +29,8 @@ The following resources are related to product upgrade.
 
 **ProductUpgradesEligibility** provides information about the customer's eligibility for upgrading a product.
 
-| Property            | Type                                                           | Description                                     |---------------------|----------------------------------------------------------------|------------------------------------------------
+| Property | Type | Description |
+|----------------------|--------------------------------------------- |----------------------------------------------------------------|
 | customerId           | string                                       | A GUID-formatted string that identifies the customer.           | productFamily        | string                                       | The product family for which the upgrade is requested for.
 | isEligible           | bool                                         | The bool value indicates whether the customer is eligible for requested upgrade
 | upgradeId            | string                                       | The upgrade ID if a product upgrade for given family is already in place.
@@ -40,7 +41,8 @@ The following resources are related to product upgrade.
 
 **ProductUpgradesStatus** provides information about the status of a product upgrade.
 
-| Property            | Type                                                           | Description                                     |---------------------|----------------------------------------------------------------|------------------------------------------------
+| Property | Type | Description |
+|---------------------|----------------------------------------------------------------|-----------------------------------------------|
 | Id                  | string                                                         | A GUID-formatted string that identifies the upgrade.             
 | productFamily       | string                                                         | The product family for which the upgrade is requested for.
 | status              | string                                                         | The status of the product upgrade.
@@ -52,7 +54,8 @@ The following resources are related to product upgrade.
 
 **UpgradesLineItem** describes the status of product upgrade details for each line item of the request.
 
-| Property        | Type                                                | Description                                                   |-----------------|-----------------------------------------------------|---------------------------------------------------------------
+| Property | Type | Description |
+|-----------------|-----------------------------------------------------|--------------------------------------------------------------|
 | sourceProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the source product being upgraded.           
 | targetProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the target product post upgrade.             
 | upgradedDate    | string in UTC date-time format                      | The date the subscription was upgraded.
@@ -64,7 +67,8 @@ The following resources are related to product upgrade.
 
 **UpgradeProduct** provides information on the product being upgraded. 
 
-| Property             | Type                                                            Description                                   |----------------------|----------------------------------------------|-----------------------------------------------------------------
+| Property | Type |Description |
+|----------------------|----------------------------------------------|----------------------------------------------------------------|
 | id                   | string                                       | A GUID-formatted string that identifies the product.             | name                 | string                                       | The friendly name of product being upgraded.       
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.    
 
@@ -72,7 +76,8 @@ The following resources are related to product upgrade.
 
 **ErrorDetails** provides details on errors during the upgrade process.
 
-| Property                | Type                                                            Description                                  |-------------------------|----------------------------------------------|--------------------------------------------------------------
+| Property | Type | Description |
+|-------------------------|----------------------------------------------|-------------------------------------------------------------|
 | code                    | string                                       | A error code when the product upgrade fails.           
 | message                 | string                                       | The error message when the product upgrade fails.       
 | attributes              | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.    
