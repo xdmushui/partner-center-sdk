@@ -1,13 +1,12 @@
 ---
-title: Get a list of SKUs for a product
-description: Gets a collection of SKUs for the specified product.
+title: Get a list of SKUs for a product (by country)
+description: Gets a collection of SKUs for the specified product by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 09/17/2019
 ms.localizationpriority: medium
 ---
 
-# Get a list of SKUs for a product
-
+# Get a list of SKUs for a product (by country)
 **Applies To**
 
 - Partner Center

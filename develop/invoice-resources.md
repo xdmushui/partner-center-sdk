@@ -2,7 +2,7 @@
 title: Invoice resources
 description: Description of invoice-related resources.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 06/11/2019
+ms.date: 09/24/2019
 ms.localizationpriority: medium
 ---
 
@@ -195,8 +195,8 @@ Represents an invoice billing line item for licensed-based subscriptions.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| PartnerId | string | Gets or sets the partner commerce account ID. |
-| CustomerId | string | Gets or sets the customer commerce account ID. |
+| PartnerId | string | Gets or sets the partner tenant ID. |
+| CustomerId | string | Gets or sets the customer tenant ID. |
 | CustomerName | string | Gets or sets the customer name. |
 | CustomerDomainName | string | Gets or sets the customer domain name. |
 | CustomerCountry | string | Gets or sets the customer country. |
@@ -226,7 +226,13 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | ChargeEndDate | DateTime | Gets or sets the charge end date associated with this purchase. |
 | TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
 | AlternateId | string | Gets or sets the Alternate ID (quote ID). |
-| DiscountDetails | string | Gets or sets the discount details associated with this purchase. |
+| PriceAdjustmentDescription | string | Gets or sets the price adjustment description. |
+| DiscountDetails | string |  **Deprecated**. Gets or sets the discount details associated with this purchase. |
+| PricingCurrency | string | Gets or sets the pricing currency code. |
+| PCToBCExchangeRate | decimal | Gets or sets the pricing currency to the billing currency exchange rate. |
+| PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to the billing currency exchange rate was determined. |
+| BillableQuantity | decimal | Gets or sets the units purchased. For each design column named as **BillableQuantity**. |
+| MeterDescription | string | Gets or sets the meter description for consumption line item. |
 | BillingFrequency | string | Gets or sets the billing frequency. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
@@ -237,9 +243,9 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| PartnerId | string | Gets or sets the partner ID. |
+| PartnerId | string | Gets or sets the partner tenant ID. |
 | PartnerName | string | Gets or sets the partner name. |
-| CustomerId | string | Gets or sets the ID of the customer that usage belongs to. |
+| CustomerId | string | Gets or sets the tenant ID of the customer that usage belongs to. |
 | CustomerName | string | Gets or sets the name of the customer company that usage belongs to. |
 | CustomerDomainName | string | Gets or sets the domain name of the customer that usage belongs to. |
 | InvoiceNumber | string | Gets or sets the ID of the invoice that usage belongs to. |
@@ -276,10 +282,17 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 | ChargeType | string | Gets or sets the type of charge. |
 | UnitPrice | decimal | Gets or sets the price of unit. |
 | Quantity | decimal | Gets or sets the quantity of usage. |
-| UnitType | string | Gets or sets the unit type like 1 Hour. |
+| UnitType | string | Gets or sets the unit type (such as 1 hour). |
 | BillingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in local currency of the customer or billing currency. |
 | BillingCurrency | string | Gets or sets ISO currency in which the meter is charged in local currency of the customer or billing currency. |
 | PricingPreTaxTotal | decimal | Gets or sets the extended cost or total cost before tax in USD or catalog currency used for rating. |
 | PricingCurrency | string | Gets or sets ISO currency in which the meter is charged in USD or catalog currency used for rating. |
+| EntitlementId | string | Gets or sets the entitlement (Azure subscription) ID. |
+| EntitlementDescription | string | Gets or sets the entitlement (Azure subscription) description. |
+| PCToBCExchangeRate | string | Gets or sets the pricing currency to the billing currency exchange rate. |
+| PCToBCExchangeRateDate | DateTime | Gets or sets the pricing currency to the billing currency exchange rate date. |
+| EffectiveUnitPrice | decimal | Gets or sets the effective unit price. |
+| RateOfPartnerEarnedCredit | decimal | Gets or sets the rate of partner earned credit. |
+| hasPartnerEarnedCredit | bool | Gets or sets is partner earned credit applied. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
