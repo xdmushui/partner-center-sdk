@@ -231,7 +231,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "billableQuantity": 3.1618,
-
+			"meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
@@ -275,7 +275,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "billableQuantity": 0.737083,
-
+			"meterDescription": "",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
