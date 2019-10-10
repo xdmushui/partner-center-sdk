@@ -121,3 +121,14 @@ The **RefundOption** resource represents a possible refund option for the subscr
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | type | string | The type of refund. The supported values are "Partial" and "Full" |
 | expiresAfter      | string in UTC date time format | The timestamp when this option expires. If null, this means it has no expiration. |
+
+## AzureEntitlement
+
+The **AzureEntitlement** resource represents the azure entitlements for the given subscription
+
+| Property          | Type | Description                                                                         |
+|-------------------|--------|-------------------------------------------------------------------------------------|
+| id | string | The entitlement identifier |
+| friendlyName      | string | The friendly name of the entitlement. |
+| status | string | The status of entitlement. |
+| subscriptionId | string | The subscription identifier the entitlement belongs to. |
