@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Create an Azure plan
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 * Partner Center

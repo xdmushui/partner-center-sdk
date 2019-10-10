@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get all monthly usage records for a subscription.
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

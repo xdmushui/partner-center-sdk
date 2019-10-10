@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get a list of products (by customer)
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 **Applies To**
 
 - Partner Center

@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Customer usage resources
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

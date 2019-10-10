@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get a customer's utilization records for Azure
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

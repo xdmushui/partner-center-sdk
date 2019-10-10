@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get invoice line items
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center
@@ -625,7 +627,13 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionStartDate": "2019-01-03T19:53:55.1292512+00:00",
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
-            "discountDescriptions": "",
+            "alternateId": "1234278124b8",
+            "priceAdjustmentDescription": "[\"100.0% Tier 1 Discount\"]",            
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",
+            "billableQuantity": 0.0159369774,
+            "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "billingFrequency": "Monthly",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
@@ -665,7 +673,13 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionStartDate": "2019-01-03T19:53:55.1292512+00:00",
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
-            "discountDescriptions": "",
+            "alternateId": "1234578124b8",
+            "priceAdjustmentDescription": "[\"100.0% Tier 1 Discount\"]",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",
+            "billableQuantity": 0.0130687981,
+            "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {
@@ -765,7 +779,13 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionStartDate": "2019-01-03T19:53:55.1292512+00:00",
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
-            "discountDescriptions": "",
+            "alternateId": "1234568124b8",
+            "priceAdjustmentDescription": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",
+            "billableQuantity": 0.0130687981,
+            "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "billingFrequency": "Monthly",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",

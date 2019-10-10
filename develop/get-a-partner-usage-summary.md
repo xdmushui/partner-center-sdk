@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get a usage summary for a partner
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

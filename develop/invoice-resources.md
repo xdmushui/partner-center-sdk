@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Invoice resources
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center
@@ -232,6 +234,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | PCToBCExchangeRate | decimal | Gets or sets the pricing currency to the billing currency exchange rate. |
 | PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to the billing currency exchange rate was determined. |
 | BillableQuantity | decimal | Gets or sets the units purchased. For each design column named as **BillableQuantity**. |
+| MeterDescription | string | Gets or sets the meter description for consumption line item. |
 | BillingFrequency | string | Gets or sets the billing frequency. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |

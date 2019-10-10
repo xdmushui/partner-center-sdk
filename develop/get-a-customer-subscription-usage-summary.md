@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 # Get usage summary for customer's subscription
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center
