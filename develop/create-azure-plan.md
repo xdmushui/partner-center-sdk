@@ -40,7 +40,7 @@ To obtain the catalog item for an Azure plan, complete the following steps:
 
 ## Create and submit an order
 
-To submit your order for an Azure plan, you must do the following:
+To submit your order for an Azure plan, do the following:
 
 1. [Create a cart](create-a-cart.md) to hold the collection of catalog items that you intend to buy. When you create a [cart](cart-resources.md#cart), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [order](order-resources.md#order). (You can also [update a cart](update-a-cart.md).)
 
@@ -60,6 +60,8 @@ After the order is successfully processed, a Partner Center **Subscription** res
 * [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 * [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 
+When an Azure plan is created in Partner Center, a corresponding Azure usage subscription is also created in Azure. You can also create additional Azure usage subscriptions under the same Azure plan using Azure Portal and Azure API. You can obtain the identifiers of all the Azure usage subscriptions associated with an Azure plan by following the steps in [Get a list of Azure entitlements for Partner Center subscription](get-a-list-of-azure-entitlements-for-subscription.md)
+
 ## Lifecycle management
 
 You can suspend an existing Azure plan by following the steps in [Suspend a subscription](suspend-a-subscription.md).
@@ -72,7 +74,11 @@ To remove existing Azure reservations, you must submit a [cancellation request](
 
 ## Transition existing CSP offers to Azure plan
 
-You cannot create an Azure plan for an existing customer with Microsoft Azure usage subscriptions (**MS-AZR-0145P**).
+You cannot create an Azure plan for an existing customer with Microsoft Azure subscriptions (**MS-AZR-0145P**). However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the following Product Upgrade APIs:
+
+* [Check whether the customer is eligible for transition to Azure plan](get-eligibility-for-product-upgrade.md)
+* [Initiate product upgrade for the customer](Initiate-product-upgrade-for-a-customer.md)
+* [Check product upgrade status](get-product-upgrade-status.md)
 
 ## Azure spending
 
@@ -88,6 +94,7 @@ You can track [Azure spending](azure-spending.md) by querying for usage summary 
 * [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
 * [Get meter usage record resources](meter-usage-resources.md)
 * [Get resource usage record resources](resource-usage-resources.md)
+
 You can also set and manage customer usage budget using the following methods:
 * [Get customer usage budget](get-a-customer-s-usage-spending-budget.md)
 * [Update customer usage budget](update-a-customer-s-usage-spending-budget.md)
