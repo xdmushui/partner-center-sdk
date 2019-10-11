@@ -103,20 +103,20 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-Get a list of products (by country) for Azure VM Reservations which are applicable to Microsoft Azure (MS-AZR-0145P):
+Get a list of products (by country) for Azure VM Reservations which are applicable to Azure plan:
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureAzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
 Authorization: Bearer 
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-Get a list of products (by country) for Azure VM Reservations which are applicable to Azure plan:
+Get a list of products (by country) for Azure VM Reservations which are applicable to Microsoft Azure (MS-AZR-0145P):
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureAzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1
 Authorization: Bearer 
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
