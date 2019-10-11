@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-Gets a collection of SKUs for a particular product.
+Gets a collection of SKUs available in a particular country for a particular product.
 
 ## Prerequisites
 
