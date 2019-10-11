@@ -1,23 +1,25 @@
 ---
-title: Creates a product upgrade entity to upgrade the customer for the given product family.
-description: How to create a product upgrade entity to upgrade a customer for the given product family. 
+title: Create a product upgrade entity for a customer
+description: You can create a product upgrade entity to upgrade a customer to a given product family. 
 ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
-# Create a product upgrade entity to upgrade the customer for the given product family
+# Create a product upgrade entity for a customer
+
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 
 - Partner Center
 
-How to create a product upgrade entity to upgrade the specified customer for the given product family.
+You can create a product upgrade entity to upgrade a customer to a given product family.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
 - The customer identifier.
-- The product family to upgrade the customer for.
+- The product family to which you want to upgrade the customer.
 
 ## REST request
 
@@ -27,11 +29,9 @@ How to create a product upgrade entity to upgrade the specified customer for the
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1 |
 
-#### URI parameter
-
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -54,7 +54,7 @@ Expect: 100-continue
 Connection: Keep-Alive
 {
   "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
-	"productFamily": "azure"
+  "productFamily": "azure"
 }
 ```
 
@@ -66,7 +66,7 @@ If successful, the response contains a **Location** header that has a URI that c
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 202 Accepted
