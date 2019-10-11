@@ -97,7 +97,7 @@ Use the following path and query parameters to get a list of products.
 | country                | string   | Yes      | The country/region ID.                                                  |
 | targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including commercial marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
-| reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify "reservationScope=AzurePlan" to get a list of products which are applicable to AzurePlan. Exclude this parameter to get a list of products for Azure Reservations which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
+| reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify "reservationScope=AzurePlan" to get a list of products which are applicable to AzurePlan. Exclude this parameter to get a list of products for Azure Reservations which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
 #### Request headers
 
@@ -111,7 +111,7 @@ None.
 
 ##### Products by country
 
-Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) and Azure plan subscription resources.
+Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plan subscription resources.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
@@ -133,9 +133,9 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-##### Azure VM reservations (145P)
+##### Azure VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
 
-Follow this example to get a list of products by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P).
+Follow this example to get a list of products by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1

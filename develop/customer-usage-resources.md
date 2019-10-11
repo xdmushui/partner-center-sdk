@@ -32,7 +32,7 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | ResourceId       | string             | The unique identifier of the resource.                                   |
 | ResourceName     | string             | The name of the resource.                                                |
 | TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription.|
-| CurrencyLocale   | string             | The customer's currency locale. Available for Azure 145P offers.            |
+| CurrencyLocale   | string             | The customer's currency locale. Available for Microsoft Azure (MS-AZR-0145P) subscriptions.            |
 | CurrencyCode     | string             | Gets or sets the currency code. Available for Azure plan subscription resources.           |
 | USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plan subscription resources.                                         |
 | IsUpgraded       | bool             | Gets or sets a value indicating whether the customer's Azure subscription is upgraded. The value **true** represents customers who have an Azure plan.                         |
@@ -51,7 +51,7 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | BillingStartDate | date               | The start date of the current billing period.                                                                    |
 | BillingEndDate   | date               | The end date of the current billing period.                                                                      |
 | TotalCost        | decimal             | The estimated total cost of usage for the resources in the subscription.                                         |
-| CurrencyLocale   | string             | The customer's currency locale. Available for Azure 145P offers.                                         |
+| CurrencyLocale   | string             | The customer's currency locale. Available for Microsoft Azure (MS-AZR-0145P) subscriptions.                                         |
 | CurrencyCode     | string             | Gets or sets the currency code. Available for Azure plan subscription resources.                                         |
 | USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plan subscription resources.                                         |
 | LastModifiedDate | date               | The date the usage data was last modified.                                                                       |

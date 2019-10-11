@@ -87,11 +87,11 @@ If successful, this method returns a **SubscriptionMonthlyUsageRecord** resource
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for 145P
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 In this example, the customer purchased a **145P Azure PayG** offer.
 
-*For customers with 145P, there will be no change to the API response.*
+*For customers with Microsoft Azure (MS-AZR-0145P) subscriptions, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK

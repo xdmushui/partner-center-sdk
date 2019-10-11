@@ -66,7 +66,7 @@ Use the following path and query parameters to get a list of availabilities for 
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
-| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify "reservationScope=AzurePlan" to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
+| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify "reservationScope=AzurePlan" to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
 #### Request headers
 
@@ -90,7 +90,7 @@ MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02
 MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58
 ```
 
-##### Availabilities for VM reservation (Azure plan)
+##### Availabilities for VM reservations (Azure plan)
 
 Follow this example to get a list of availabilities by country for Azure VM reservation SKUs. This example is for SKUs that apply to Azure plan subscription resources:
 
@@ -102,9 +102,9 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-##### Availabilities for VM reservation (145P)
+##### Availabilities for VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
 
-Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P).
+Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/productsDZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1

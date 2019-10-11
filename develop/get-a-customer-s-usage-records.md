@@ -16,7 +16,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers, including those with an Azure 145P offer or an Azure plan.
+Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers, including those with a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan.
 
 ## Prerequisites
 

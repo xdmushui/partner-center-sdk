@@ -20,7 +20,7 @@ You can use the **MeterUsageRecord** resource to describe the estimated monetary
 
 | Property         | Type               | Description                                                                                   |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
-| SubscriptionId           | string             | Gets or sets the subscription identifier. For **Azure 145P offers**, this value is the commerce subscription identifier. For Azure plan subscription resources, this value is the Azure plan identifier.                  |
+| SubscriptionId           | string             | Gets or sets the subscription identifier. For Microsoft Azure (MS-AZR-0145P) subscriptions, this value is the commerce subscription identifier. For Azure plan subscription resources, this value is the Azure plan identifier.                  |
 | MeterId  | string             | Gets or sets the meter identifier.                                                        |
 | MeterName          | string             | Gets or sets the meter name.                                       |
 | Category               | string             | Gets or sets the Azure resource category.                                                 |
@@ -28,7 +28,7 @@ You can use the **MeterUsageRecord** resource to describe the estimated monetary
 | QuantityUsed        | decimal             | Gets or sets the quantity of the Azure resource used.   |
 | Unit   | string             | Gets or sets the unit of measure for the Azure resource. |
 | TotalCost   | decimal             | Gets or sets the estimated total cost of usage. |
-| CurrencyLocale   | string             | The locale in which the subscription was used. This property determines the currency that is used on the invoice. This property is available  for **Azure 145P**. |
+| CurrencyLocale   | string             | The locale in which the subscription was used. This property determines the currency that is used on the invoice. This property is available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
 | CurrencyCode   | string             | Gets or sets the currency code. This property is available for Azure plan subscription resources.                                         |
 | USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. This property is available for Azure plan subscription resources.                                         |
 | LastModifiedDate | string             | The day (in date-time format) that this record was last modified.                             |

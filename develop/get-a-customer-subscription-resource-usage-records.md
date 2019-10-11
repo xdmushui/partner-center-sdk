@@ -18,7 +18,7 @@ Applies to:
 
 This topic describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month for individual resources provisioned in your Azure plan subscription resource. You can use this resource to get a customer's resource usage records for specific Azure services or resources during the current billing period. This API returns data that was not available previously through Azure spending APIs.
 
-*This route does not support 145P offers.*
+*This route does not support Microsoft Azure (MS-AZR-0145P) subscriptions.*
 
 ## Prerequisites
 
