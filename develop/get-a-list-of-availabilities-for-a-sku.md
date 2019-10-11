@@ -12,7 +12,7 @@ Applies to:
 
 - Partner Center
 
-This topic describes how to get a collection of availabilities in particular country for a specified product and SKU.
+This topic describes how to get a collection of availabilities in a particular country for a specified product and SKU.
 
 ## Prerequisites
 
