@@ -5,7 +5,7 @@ ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
-# et the product upgrade status for a customer
+# Get the product upgrade status for a customer
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
