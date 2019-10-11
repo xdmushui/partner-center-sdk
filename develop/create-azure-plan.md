@@ -77,7 +77,7 @@ To remove existing Azure reservations, you must submit a [cancellation request](
 You cannot create an Azure plan for an existing customer with Microsoft Azure subscriptions (**MS-AZR-0145P**). However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the following Product Upgrade APIs:
 
 * [Check whether the customer is eligible for transition to Azure plan](get-eligibility-for-product-upgrade.md)
-* [Initiate product upgrade for the customer](Initiate-product-upgrade-for-a-customer.md)
+* [Initiate product upgrade for the customer](create-product-upgrade-entity.md)
 * [Check product upgrade status](get-product-upgrade-status.md)
 
 ## Azure spending
