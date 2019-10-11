@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -24,9 +24,14 @@ Gets a collection of products available in a particular country.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A country.
 
-### C#
+## C\#
 
-To get a list of products, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, select the catalog view by using the **ByTargetView()** method, and optionally select the target segment by using the **ByTargetSegment()** method. Finally, call the **Get()** or **GetAsync()** method to return the collection. 
+To get a list of products:
+
+1. Use your **IAggregatePartner.Products** collection to select the country by using the **ByCountry()** method.
+2. Select the catalog view using the **ByTargetView()** method.
+3. (Optional) Select the target segment using the **ByTargetSegment()** method.
+4. Call the **Get()** or **GetAsync()** method to return the collection.
 
 ```csharp
 IAggregatePartner partnerOperations;
@@ -42,7 +47,12 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
-To get a list of products, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, select the catalog view by using the **byTargetView()** function, and optionally select the target segment by using the **byTargetSegment()** function. Finally, call the **get()** function to return the collection. 
+To get a list of products:
+
+1. Use your **IAggregatePartner.getProducts** function to select the country by using the **byCountry()** function.
+2. Select the catalog view using the **byTargetView()** function.
+3. (Optional) Select the target segment using the **byTargetSegment()** function.
+4. Call the **get()** function to return the collection.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -58,7 +68,11 @@ ResourceCollection<Products> products = partnerOperations.getProducts().byCountr
 
 [!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
-To get a list of products, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command. You can select the catalog by specifing the **Catalog** parameter, and optionally select the target segement by specifying the **Segment** parameter. 
+To get a list of products:
+
+1. Execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command.
+2. Select the catalog by specifying the **Catalog** parameter.
+3. (Optional) Select the target segment by specifying the **Segment** parameter.
 
 ```powershell
 Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
@@ -74,7 +88,7 @@ Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------- |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1 |
 
-**URI parameters**
+##### URI parameters
 
 Use the following path and query parameters to get a list of products.
 
@@ -87,7 +101,7 @@ Use the following path and query parameters to get a list of products.
 
 #### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 #### Request body
 
@@ -95,31 +109,37 @@ None.
 
 #### Request examples
 
-Get a list of products (by country) for Microsoft Azure and Azure plan:
+##### Products by country
+
+Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) and Azure plan.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-Get a list of products (by country) for Azure VM Reservations which are applicable to Azure plan:
+##### Azure VM reservations (Azure plan)
+
+Follow this example to get a list of products by country for Azure VM reservations that are applicable to Azure plan.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureAzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-Get a list of products (by country) for Azure VM Reservations which are applicable to Microsoft Azure (MS-AZR-0145P):
+##### Azure VM reservations (145P)
+
+Follow this example to get a list of products by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P).
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
@@ -127,7 +147,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 
 ### REST response
 
-If successful, the response body contains a collection of [Product](product-resources.md#product) resources.
+If successful, the response body contains a collection of [**Product**](product-resources.md#product) resources.
 
 #### Response success and error codes
 
@@ -138,28 +158,28 @@ This method returns the following error codes:
 | HTTP Status Code     | Error code   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
-| 403                  | 400036       | Access to the requested targetView is not allowed.                                                        | 
+| 403                  | 400036       | Access to the requested targetView is not allowed.                                                        |
 
-##Response example##
+#### Response example
 
 ```http
 {
     "totalCount": 19,
     "items": [
         {
-			"id": "DZH318Z0BQ3Q",
-			"title": "Virtual Machines DSv2 Series",
-			"description": "Dsv2-series instances are the latest generation of D-series instances that will carry more powerful CPUs which are on average about 35% faster than D-series instances, and carry the same memory and disk configurations as the D-series. Dsv2-series instances are based on the latest generation 2.4 GHz Intel Xeon® E5-2673 v3 (Haswell) processor, and with Intel Turbo Boost Technology 2.0 can go to 3.2 GHz.",
-			"productType": {
-			  "id": "Azure",
-			  "displayName": "Azure",
-			  "subType": {
-				"id": "VirtualMachines",
-				"displayName": "VirtualMachines"
-			  }
-			},
-			"isMicrosoftProduct": true,
-			"publisherName": "Microsoft", 
+            "id": "DZH318Z0BQ3Q",
+            "title": "Virtual Machines DSv2 Series",
+            "description": "Dsv2-series instances are the latest generation of D-series instances that will carry more powerful CPUs which are on average about 35% faster than D-series instances, and carry the same memory and disk configurations as the D-series. Dsv2-series instances are based on the latest generation 2.4 GHz Intel Xeon® E5-2673 v3 (Haswell) processor, and with Intel Turbo Boost Technology 2.0 can go to 3.2 GHz.",
+            "productType": {
+                "id": "Azure",
+                "displayName": "Azure",
+                "subType": {
+                "id": "VirtualMachines",
+                "displayName": "VirtualMachines"
+                }
+            },
+            "isMicrosoftProduct": true,
+            "publisherName": "Microsoft",
             "links": {
                 "skus": {
                     "uri": "/products/DZH318Z0BQ3Q/skus?country=US",
