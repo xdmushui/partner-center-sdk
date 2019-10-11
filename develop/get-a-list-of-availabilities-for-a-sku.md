@@ -19,11 +19,11 @@ This topic describes how to get a collection of availabilities in a particular c
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID.
-- A SKU ID.
+- A product identifier.
+- A SKU identifier.
 - A country.
 
-## C#
+## C\#
 
 To get the list of [availabilities](product-resources.md#availability) for a [SKU](product-resources.md#sku):
 
@@ -66,19 +66,21 @@ Use the following path and query parameters to get a list of availabilities for 
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
-| reservationScope | string   | No | When querying for a list of availabililities for an Azure Reservation SKU, specify "reservationScope=AzurePlan" to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
+| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify "reservationScope=AzurePlan" to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
 
 #### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 #### Request body
 
 None.
 
-#### Request example
+#### Request examples
 
-Get a list of availabilities (by country) for a given SKU:
+##### Availabilities for SKU by country
+
+Follow this example to get a list of availabilities for a given SKU by country:
 
 ```http
 GET http:// api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US HTTP/1.1
@@ -88,21 +90,25 @@ MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02
 MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58
 ```
 
-Get a list of availabilities (by country) for an Azure VM Reservation SKU which are applicable to Azure plan:
+##### Availabilities for VM reservation (Azure plan)
+
+Follow this example to get a list of availabilities by country for Azure VM reservation SKUs that are applicable to Azure plan:
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-Get a list of availabilities (by country) for Azure VM Reservations which are applicable to Microsoft Azure (MS-AZR-0145P):
+##### Availabilities for VM reservation (145P)
+
+Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P).
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/productsDZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
@@ -110,7 +116,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 
 ### REST response
 
-If successful, the response body contains a collection of [Availability](product-resources.md#availability) resources.
+If successful, the response body contains a collection of [**Availability**](product-resources.md#availability) resources.
 
 #### Response success and error codes
 
