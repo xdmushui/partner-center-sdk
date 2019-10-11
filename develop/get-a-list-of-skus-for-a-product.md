@@ -94,7 +94,7 @@ Use the following path and query parameters to get a list of SKUs for a product.
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
-| reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify "reservationScope=AzurePlan" to get a list of products which are applicable to AzurePlan. Exclude this parameter to get a list of products for Azure Reservations which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
+| reservationScope | string   | No | When querying for a list of SKUs for an Azure Reservation product, specify "reservationScope=AzurePlan" to get a list of SKUs which are applicable to AzurePlan. Exclude this parameter to get a list of SKUs for an Azure Reservation products which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
 
 #### Request headers
 
