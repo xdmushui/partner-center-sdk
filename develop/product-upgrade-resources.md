@@ -47,7 +47,7 @@ The following resources are related to product upgrade.
 | Id                  | string                                                         | A GUID-formatted string that identifies the upgrade.             
 | productFamily       | string                                                         | The product family for which the upgrade is requested for.
 | status              | string                                                         | The status of the product upgrade.
-| lineItems           | array of [UpgradesLineItem](#upgradelineitems) resources       | An array of objects that provides information of the upgrade details for each line item that was part of the request body.
+| lineItems           | array of [UpgradesLineItem](#upgradeslineitem) resources       | An array of objects that provides information of the upgrade details for each line item that was part of the request body.
 | errorDetails        | [ErrorDetails](#errordetails) resource                         | The error details for upgrade requested.
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.      
 
@@ -57,8 +57,8 @@ The following resources are related to product upgrade.
 
 | Property | Type | Description |
 |-----------------|-----------------------------------------------------|--------------------------------------------------------------|
-| sourceProduct   | [UpgradeProduct](#upgraderequest) object            | Information of the source product being upgraded. |          
-| targetProduct   | [UpgradeProduct](#upgraderequest) object            | Information of the target product post upgrade. |             
+| sourceProduct   | [UpgradeProduct](#upgradeproduct) object            | Information of the source product being upgraded. |          
+| targetProduct   | [UpgradeProduct](#upgradeproduct) object            | Information of the target product post upgrade. |             
 | upgradedDate    | string in UTC date-time format                      | The date the subscription was upgraded. |
 | status          | string                                              | The status of the product upgrade. | 
 | errorDetails    | [ErrorDetails](#errordetails) resource              | The error details for upgrade requested. | 

@@ -36,7 +36,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productppgraderequest) resource.
+The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
 
 ### Request example
 
