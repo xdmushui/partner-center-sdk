@@ -20,6 +20,7 @@ Gets a collection of products available in a particular country.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- A country.
 
 ### C#
 
