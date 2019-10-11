@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of products available in a given country.
+Gets a collection of products available in a particular country.
 
 ## Prerequisites
 
