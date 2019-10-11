@@ -1,27 +1,25 @@
 ---
 title: Get the product upgrade status for a customer
-description: Gets the product upgrade status for a given customer and product family.
+description: How to get the status of a product upgrade to a new product family (Azure 145P to Azure plan) for a customer. You can use ProductUpgradeRequest resource to get a ProductUpgradesEligibility resource.
 ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
-# Get the status of upgrade from Azure 145P to Azure Plan
+# et the product upgrade status for a customer
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
-Applies To
+Applies to:
 
 - Partner Center
 
-How to retrieve the status of upgrade from Azure 145P to Azure Plan for the specified customer. This would return an object indicating the status for product upgrade.
+You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to get the status of an upgrade to a new product family (Azure 145P to Azure plan) for a customer. A successful request returns the [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
 - The customer identifier.
 - The product family
-
-## C\#
 
 ## REST request
 
@@ -33,19 +31,19 @@ How to retrieve the status of upgrade from Azure 145P to Azure Plan for the spec
 
 #### URI parameter
 
-Use the following query parameter to specify the customer that you're confirming.
+Use the following query parameter to specify the customer for whom you're getting a product upgrade status.
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| upgrade-id | GUID | Yes | The value is a GUID-formatted **upgrade-id**, which is an identifier that allows you to specify an upgrade to track. |
+| **upgrade-id** | GUID | Yes | The value is a GUID-formatted upgrade identifier. You can use this identifier to specify an upgrade to track. |
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
+The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.
 
 ### Request example
 
@@ -64,8 +62,8 @@ Expect: 100-continue
 Connection: Keep-Alive
 {
  {
-	"customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
-	"productFamily": "azure"
+    "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
+    "productFamily": "azure"
   }
   "Attributes": {
   "ObjectType": "ProductUpgradeRequest"
@@ -75,7 +73,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this method returns [ProductUpgradesEligibility](product-upgrade-resources.md) resource in the body.
+If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.
 
 ### Response success and error codes
 
