@@ -15,13 +15,12 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of products.
+Gets a collection of products available in a particular country.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+- A country.
 
 ### C#
 
@@ -63,13 +62,15 @@ To get a list of products, execute the [**Get-PartnerProduct**](https://github.c
 Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST
 
-**Request syntax**
+### Rest request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1    |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1 |
 
 **URI parameters**
 
@@ -80,16 +81,19 @@ Use the following path and query parameters to get a list of products.
 | country                | string   | Yes      | The country/region ID.                                                  |
 | targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including commercial marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/> commercial<br/> education<br/> government<br/> nonprofit |
+| reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify "reservationScope=AzurePlan" to get a list of products which are applicable to AzurePlan. Exclude this parameter to get a list of products for Azure Reservations which are applicable to Microsoft Azure subscriptions (MS-AZR-0145P).  |
 
-**Request headers**
+#### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+#### Request body
 
 None.
 
-**Request example**
+#### Request examples
+
+Get a list of products (by country) for Microsoft Azure and Azure plan:
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
@@ -99,11 +103,31 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+Get a list of products (by country) for Azure VM Reservations which are applicable to Azure plan:
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureAzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
+Authorization: Bearer 
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
+Get a list of products (by country) for Azure VM Reservations which are applicable to Microsoft Azure (MS-AZR-0145P):
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1
+Authorization: Bearer 
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
+### REST response
 
 If successful, the response body contains a collection of [Product](product-resources.md#product) resources.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -114,8 +138,7 @@ This method returns the following error codes:
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
 | 403                  | 400036       | Access to the requested targetView is not allowed.                                                        | 
 
-
-**Response example**
+##Response example##
 
 ```http
 {
