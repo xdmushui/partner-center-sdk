@@ -2,7 +2,7 @@
 title: Get a usage summary for all of a customer's subscriptions
 description: You can get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -128,11 +128,11 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-#### Response example for Azure plans
+#### Response example for Azure plan
 
-In this example, the customer purchased an **Azure plan**.
+In this example, the customer purchased an Azure plan.
 
-*For customers with Azure plans, there are the following changes to the API response:*
+*For customers with Azure plan subscription resources, there are the following changes to the API response:*
 
 - **currencyLocale** is replaced with **currencyCode**
 - **usdTotalCost** is a new field

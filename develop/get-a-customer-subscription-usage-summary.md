@@ -2,7 +2,7 @@
 title: Get usage summary for customer's subscription
 description: You can get a subscription usage summary of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -62,7 +62,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plan, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 
@@ -127,11 +127,11 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-### Response example for Azure plans
+### Response example for Azure plan
 
 In this example, the customer purchased an Azure plan.
 
-*For customers with Azure plans, there are the following API response changes:*
+*For customers with Azure plan subscription resources, there are the following API response changes:*
 
 - **currencyLocale** is replaced with **currencyCode**
 - **usdTotalCost** is a new field

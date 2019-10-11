@@ -2,7 +2,7 @@
 title: Get all subscription usage records for a customer
 description: You can get subscription usage records for a customer of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-You can use the **SubscriptionMonthlyUsageRecord** resource collection to get subscription usage records for a customer of a specific Azure service or resource during the current billing period. This resource represents all subscriptions for the customer. For a customer with Azure plan(s), this resource returns a list of those plans (not individual Azure subscriptions).
+You can use the **SubscriptionMonthlyUsageRecord** resource collection to get subscription usage records for a customer of a specific Azure service or resource during the current billing period. This resource represents all subscriptions for the customer. For a customer with an Azure plan, this resource returns a list of those plans (not individual Azure subscriptions).
 
 ## Prerequisites
 
@@ -137,7 +137,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 In this example, the customer purchased an Azure plan.
 
-*For customers with Azure plans, there are the following changes in the API response:*
+*For customers with Azure plan subscription resources, there are the following changes in the API response:*
 
 - **currencyLocale** is replaced with **currencyCode**
 - **usdTotalCost** is a new field

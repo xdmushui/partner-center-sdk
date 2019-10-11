@@ -111,7 +111,7 @@ None.
 
 ##### Products by country
 
-Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) and Azure plan.
+Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) and Azure plan subscription resources.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=Azure HTTP/1.1
@@ -123,7 +123,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 
 ##### Azure VM reservations (Azure plan)
 
-Follow this example to get a list of products by country for Azure VM reservations that are applicable to Azure plan.
+Follow this example to get a list of products by country for Azure VM reservations that are applicable to Azure plan subscription resources.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureAzureReservationsVM&reservationScope=AzurePlan HTTP/1.1

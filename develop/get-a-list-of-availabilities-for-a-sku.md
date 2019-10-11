@@ -92,7 +92,7 @@ MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58
 
 ##### Availabilities for VM reservation (Azure plan)
 
-Follow this example to get a list of availabilities by country for Azure VM reservation SKUs that are applicable to Azure plan:
+Follow this example to get a list of availabilities by country for Azure VM reservation SKUs. This example is for SKUs that apply to Azure plan subscription resources:
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureReservationsVM&reservationScope=AzurePlan HTTP/1.1

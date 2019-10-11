@@ -1,6 +1,6 @@
 ---
 title: Product upgrade resources
-description: Resources related to Partner Center product upgrades to Azure plan (including ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails).
+description: Resources related to Partner Center product upgrades to an Azure plan (including ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails).
 ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
 ms.date: 10/11/2019
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Applies to:
 
 - Partner Center
 
-You can use the following resources for information about Partner Center product upgrades to Azure plan.
+You can use the following resources for information about Partner Center product upgrades from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan.
 
 ## ProductUpgradeRequest
 

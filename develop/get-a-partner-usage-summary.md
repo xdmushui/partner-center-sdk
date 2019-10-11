@@ -2,7 +2,7 @@
 title: Get a usage summary for a partner
 description: You can get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ Applies to:
 
 You can use the **PartnerUsageSummary** resource to get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
 
-*The total returned by this API will not return consumption for customers that have Azure plan.* Planned for deprecation in the future.
+*The total returned by this API will not return consumption for customers that have an Azure plan.* Planned for deprecation in the future.
 
 ## Prerequisites
 

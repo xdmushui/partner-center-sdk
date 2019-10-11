@@ -2,7 +2,7 @@
 title: Resource usage record resources
 description: You can use the resource ResourceUsageRecord to describe the estimated monetary cost of a subscription's resource level usage in the current billing cycle.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -20,7 +20,7 @@ You can use the **ResourceUsageRecord** resource to describe the estimated monet
 
 | Property         | Type               | Description                                                                                   |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
-| SubscriptionId           | string             | Gets or sets the subscription identifier. For **Azure 145P** offers, this value is the commerce subscription identifier. For ***Azure plans***, this value is the Azure plan identifier).                  |
+| SubscriptionId           | string             | Gets or sets the subscription identifier. For **Azure 145P** offers, this value is the commerce subscription identifier. For Azure plan subscription resoruces, this value is the Azure plan identifier).                  |
 | ResourceUri  | string             | Gets or sets the resource URI."                                                        |
 | ResourceType          | string             | Gets or sets the resource type.                                       |
 | EntitlementId               | string             | Gets or sets the entitlement identifier (the Azure subscription identifier).                                                 |
