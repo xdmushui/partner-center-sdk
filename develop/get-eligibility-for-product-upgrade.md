@@ -1,7 +1,7 @@
 ---
 title: Check eligibility for upgrade from Azure 145P to Azure Plan
 description: How to check eligibility for a customer to upgrade from Azure 145P to Azure Plan. This would return a value indicating customer's eligibility for product upgrade.
-ms.date: 10/04/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -36,7 +36,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#ProductUpgradeRequest) resource.
+The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productppgraderequest) resource.
 
 ### Request example
 

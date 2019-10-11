@@ -1,7 +1,7 @@
 ---
 title: Creates a product upgrade entity to upgrade the customer for the given product family.
 description: How to create a product upgrade entity to upgrade a customer for the given product family. 
-ms.date: 10/09/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -35,7 +35,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productUpgradeRequest) resource.
+The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
 
 ### Request example
 

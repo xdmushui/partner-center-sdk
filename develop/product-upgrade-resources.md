@@ -2,7 +2,7 @@
 title: Product upgrade resources
 description: Resources related to Partner Center product upgrade.
 ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
-ms.date: 09/26/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -47,8 +47,8 @@ The following resources are related to product upgrade.
 | Id                  | string                                                         | A GUID-formatted string that identifies the upgrade.             
 | productFamily       | string                                                         | The product family for which the upgrade is requested for.
 | status              | string                                                         | The status of the product upgrade.
-| lineItems           | array of [UpgradesLineItem](#upgradeLineItems) resources       | An array of objects that provides information of the upgrade details for each line item that was part of the request body.
-| errorDetails        | [ErrorDetails](#errorDetails) resource                         | The error details for upgrade requested.
+| lineItems           | array of [UpgradesLineItem](#upgradelineitems) resources       | An array of objects that provides information of the upgrade details for each line item that was part of the request body.
+| errorDetails        | [ErrorDetails](#errordetails) resource                         | The error details for upgrade requested.
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes.      
 
 ## UpgradesLineItem
@@ -57,11 +57,11 @@ The following resources are related to product upgrade.
 
 | Property | Type | Description |
 |-----------------|-----------------------------------------------------|--------------------------------------------------------------|
-| sourceProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the source product being upgraded. |          
-| targetProduct   | [UpgradeProduct](#upgradeRequest) object            | Information of the target product post upgrade. |             
+| sourceProduct   | [UpgradeProduct](#upgraderequest) object            | Information of the source product being upgraded. |          
+| targetProduct   | [UpgradeProduct](#upgraderequest) object            | Information of the target product post upgrade. |             
 | upgradedDate    | string in UTC date-time format                      | The date the subscription was upgraded. |
 | status          | string                                              | The status of the product upgrade. | 
-| errorDetails    | [ErrorDetails](#errorDetails) resource              | The error details for upgrade requested. | 
+| errorDetails    | [ErrorDetails](#errordetails) resource              | The error details for upgrade requested. | 
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  |
 
 ## UpgradeProduct
