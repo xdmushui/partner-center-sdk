@@ -1,11 +1,11 @@
 ---
-title: Create a product upgrade entity
+title: Create a product upgrade entity for a customer
 description: You can create a product upgrade entity to upgrade a customer to a given product family. 
 ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
-# Create a product upgrade entity
+# Create a product upgrade entity for a customer
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 

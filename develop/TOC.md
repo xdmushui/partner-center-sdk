@@ -92,7 +92,7 @@
 #### [Product upgrade resources](product-upgrade-resources.md)
 ##### [Get product upgrade status](get-product-upgrade-status.md)
 ##### [Get eligibility for product upgrade](get-eligibility-for-product-upgrade.md)
-##### [Initiate product upgrade for a customer](initiate-product-upgrade-for-a-customer.md)
+##### [Create product upgrade entity for a customer](create-product-upgrade-entity.md)
 #### [Get a list of Azure entitlements for a subscription](get-a-list-of-azure-entitlements-for-subscription.md)
 ### [Manage customer accounts](manage-customers.md) 
 #### [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md) 
