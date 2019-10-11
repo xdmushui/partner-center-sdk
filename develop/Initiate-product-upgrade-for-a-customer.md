@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Create a product upgrade entity to upgrade the customer for the given product family
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies to:
 
 - Partner Center

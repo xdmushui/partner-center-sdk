@@ -1,11 +1,13 @@
 ---
 title: Get a list of azure entitlements for a subscription.
 description: Gets a collection of azure entitlement resources that belong to a subscription.
-ms.date: 10/04/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of azure entitlements for a subscription.
+
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 **Applies To**
 

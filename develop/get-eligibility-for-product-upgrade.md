@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Check eligibility for upgrade from Azure 145P to Azure Plan
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies To
 
 - Partner Center

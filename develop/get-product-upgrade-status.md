@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Get the status of upgrade from Azure 145P to Azure Plan
 
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
 Applies To
 
 - Partner Center
