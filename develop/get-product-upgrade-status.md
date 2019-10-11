@@ -1,7 +1,7 @@
 ---
 title: Get the product upgrade status for a customer
 description: Gets the product upgrade status for a given customer and product family.
-ms.date: 10/05/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -43,7 +43,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#ProductUpgradeRequest) resource.
+The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
 
 ### Request example
 

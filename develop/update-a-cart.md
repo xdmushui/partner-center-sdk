@@ -1,7 +1,7 @@
 ---
 title: Update a cart
 description: How to update an order for a customer in a cart.
-ms.date: 03/19/18
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
