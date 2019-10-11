@@ -1,27 +1,25 @@
 ---
-title: Check eligibility for upgrade from Azure 145P to Azure Plan
-description: How to check eligibility for a customer to upgrade from Azure 145P to Azure Plan. This would return a value indicating customer's eligibility for product upgrade.
+title: Check a customer's eligibility for Azure plan upgrade
+description: How to check a customer's eligibility to upgrade from a Azure 145P subscription to Azure plan. You can use the ProductUpgradeRequest resource to return a ProductUpgradesEligibility resource.
 ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
-# Check eligibility for upgrade from Azure 145P to Azure Plan
+# Check a customer's eligibility for Azure plan upgrade
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
-Applies To
+Applies to:
 
 - Partner Center
 
-How to check eligibility for upgrade from Azure 145P to Azure Plan for the specified customer. This would return a value indicating customer's eligibility for product upgrade.
+You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to check if a customer is eligible to upgrade to Azure plan from Azure 145P. This method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource with the customer's product upgrade eligibility.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
 - The customer identifier.
 - The product family.
-
-## C\#
 
 ## REST request
 
@@ -31,14 +29,13 @@ How to check eligibility for upgrade from Azure 145P to Azure Plan for the speci
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/eligibility HTTP/1.1 |
 
-
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
+The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.
 
 ### Request example
 
@@ -57,8 +54,8 @@ Expect: 100-continue
 Connection: Keep-Alive
 {
  {
-	"customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
-	"productFamily": "azure"
+  "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
+  "productFamily": "azure"
   }
   "Attributes": {
   "ObjectType": "ProductUpgradeRequest"
@@ -68,7 +65,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this method returns [ProductUpgradesEligibility](product-upgrade-resources.md) resource in the body.
+If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.
 
 ### Response success and error codes
 
