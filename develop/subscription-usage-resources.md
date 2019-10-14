@@ -48,7 +48,7 @@ The **SubscriptionMonthlyUsageRecord** resource describes how much a subscriptio
 | TotalCost        | decimal             | The estimated total cost of using the resources in the subscription in the specified month.   |
 | CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
 | CurrencyCode     | string             | Gets or sets the currency code. Available for Azure plan subscription resources.                                         |
-| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plan subscription resources.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plans.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
@@ -64,7 +64,7 @@ The **SubscriptionUsageSummary** resource describes how much a specific subscrip
 | BillingEndDate   | date               | The end date of the current billing period, in date-time format.                                                       |
 | TotalCost        | double             | The estimated total cost of using the resources in the subscription during the specified billing period.               |
 | CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
-| CurrencyCode   | string             | Gets or sets the currency code. Available for Azure plan subscription resources.                                         |
+| CurrencyCode   | string             | Gets or sets the currency code. Available for Azure plans.                                         |
 | USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plan subscription resources.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                                                      |
 | Links            | ResourceLinks      | The resource links corresponding to the SubscriptionUsageSummary.                                                      |

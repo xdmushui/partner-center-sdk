@@ -24,7 +24,7 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 - A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 - A subscription identifier.
 
-*This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan subscription resource, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
+*This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
 
 ## C\#
 

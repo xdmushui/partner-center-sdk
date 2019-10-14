@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 #### Response example
 
-You can use the **isUpgraded** property to identify customers who have an Azure plan. If the value for **isUpgraded** is **true**, this means the customers have an Azure plan subscription resource.
+You can use the **isUpgraded** property to identify customers who have an Azure plan. If the value for **isUpgraded** is **true**, this means the customers have an Azure plans.
 
 ```http
 HTTP/1.1 200 OK

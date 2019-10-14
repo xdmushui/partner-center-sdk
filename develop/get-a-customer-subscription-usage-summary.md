@@ -62,7 +62,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a subscription. For an Azure plan, this is the identifier of the corresponding Partner Center [subscription resource](subscription-resources.md#subscription), which represents the Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 
@@ -131,7 +131,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 In this example, the customer purchased an Azure plan.
 
-*For customers with Azure plan subscription resources, there are the following API response changes:*
+*For customers with Azure plans, there are the following API response changes:*
 
 - **currencyLocale** is replaced with **currencyCode**
 - **usdTotalCost** is a new field

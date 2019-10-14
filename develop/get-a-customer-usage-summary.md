@@ -132,7 +132,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 In this example, the customer purchased an Azure plan.
 
-*For customers with Azure plan subscription resources, there are the following changes to the API response:*
+*For customers with Azure plans, there are the following changes to the API response:*
 
 - **currencyLocale** is replaced with **currencyCode**
 - **usdTotalCost** is a new field

@@ -24,7 +24,7 @@ You can use the **MeterUsageRecord** resource collection to get meter usage reco
 - A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID
 
-*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for Microsoft Azure (MS-AZR-0145P) subscriptions.* This new route will support both Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans. In order to get this information for your Azure plan subscription resources, you will need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
+*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for Microsoft Azure (MS-AZR-0145P) subscriptions.* This new route will support both Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans. In order to get this information for your Azure plan, you will need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
 
 ## C\#
 
@@ -64,7 +64,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 
