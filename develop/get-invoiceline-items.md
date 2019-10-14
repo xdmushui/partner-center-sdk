@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 09/25/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ You can use the following methods to get a collection details for of invoice lin
 
 You should use **onetime** to query all modern line items, instead of **marketplace**. Or, follow the self links in the invoice call details.
 
-This API also supports the **provider** types of **azure** and **office** for 145P Azure and Office offers, which makes the API feature backward compatible.
+This API also supports the **provider** types of **azure** and **office** for Microsoft Azure (MS-AZR-0145P) subscriptions and Office offers, which makes the API feature backward compatible.
 
 ## Prerequisites
 
@@ -115,9 +115,9 @@ The following syntax applies when the billing provider is **Office**.
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=office&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1                               |
 
-##### Azure 145P
+##### Microsoft Azure (MS-AZR-0145P) subscription
 
-The following syntaxes apply when the billing provider is **Azure 145P**.
+The following syntaxes apply when the billing provider has a Microsoft Azure (MS-AZR-0145P) subscription.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|

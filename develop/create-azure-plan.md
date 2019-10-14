@@ -14,7 +14,7 @@ Applies to:
 
 * Partner Center
 
-You can purchase, create, and manage an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure subscription (**MS-AZR-0145P**). You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-azure-plan), then [create and submit an order](#create-and-submit-an-order).
+You can purchase, create, and manage an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure (MS-AZR-0145P) subscription. You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-azure-plan), then [create and submit an order](#create-and-submit-an-order).
 
 ## Prerequisites
 
@@ -53,9 +53,9 @@ You can [retrieve the details of an individual order using the order ID](get-an-
 >[!NOTE]
 >After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list.
 
-## Manage Azure plan subscriptions
+## Manage Azure plans
 
-After the order is successfully processed, a Partner Center **Subscription** resource will be created for the Azure plan. You can access the Azure plan using the following methods for managing Partner Center **Subscription** resources:
+After the order is successfully processed, a Partner Center **Subscription** resource will be created for the Azure plan. You can use the following methods for managing Partner Center **Subscription** resources to manage the Azure plan:
 
 * [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 * [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
@@ -74,7 +74,7 @@ To remove existing Azure reservations, you must submit a [cancellation request](
 
 ## Transition existing CSP offers to Azure plan
 
-You can't create an Azure plan for an existing customer with Microsoft Azure subscriptions (**MS-AZR-0145P**). However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to do the following:
+You can't create an Azure plan for an existing customer with a Microsoft Azure (MS-AZR-0145P) subscription. However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to do the following:
 
 * [Check whether the customer is eligible for a transition to Azure plan](get-eligibility-for-product-upgrade.md)
 * [Initiate a product upgrade for the customer](create-product-upgrade-entity.md)

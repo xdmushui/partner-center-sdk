@@ -2,7 +2,7 @@
 title: Get usage summary for customer's subscription
 description: You can get a subscription usage summary of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -62,7 +62,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plan, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a subscription. For an Azure plan, this is the identifier of the corresponding Partner Center [subscription resource](subscription-resources.md#subscription), which represents the Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 
@@ -90,11 +90,11 @@ If successful, this method returns a **SubscriptionUsageSummary** resource in th
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for 145P
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 In this example, the customer purchased a **145P Azure PayG** offer.
 
-*For customers with 145P offers, there will be no change to the API response.*
+*For customers with Microsoft Azure (MS-AZR-0145P) subscriptions, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK
@@ -127,7 +127,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-### Response example for Azure plans
+### Response example for Azure plan
 
 In this example, the customer purchased an Azure plan.
 

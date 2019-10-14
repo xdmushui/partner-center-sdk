@@ -2,7 +2,7 @@
 title: Get usage data for subscription by resource
 description: You can get a customer's resource usage records for specific Azure services or resources during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ Applies to:
 
 This topic describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month for individual resources provisioned in your Azure plan. You can use this resource to get a customer's resource usage records for specific Azure services or resources during the current billing period. This API returns data that was not available previously through Azure spending APIs.
 
-*This route does not support 145P offers.*
+*This route does not support Microsoft Azure (MS-AZR-0145P) subscriptions.*
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plans, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 

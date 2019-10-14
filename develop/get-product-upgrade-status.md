@@ -1,6 +1,6 @@
 ---
 title: Get the product upgrade status for a customer
-description: How to get the status of a product upgrade to a new product family (Azure 145P to Azure plan) for a customer. You can use ProductUpgradeRequest resource to get a ProductUpgradesEligibility resource.
+description: How to get the status of a product upgrade for a customer to a new product family (from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan). You can use ProductUpgradeRequest resource to get a ProductUpgradesEligibility resource.
 ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center
 
-You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to get the status of an upgrade to a new product family (Azure 145P to Azure plan) for a customer. A successful request returns the [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource.
+You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to get the status of an upgrade to a new product family. This resource applies when you're upgrading a customer from an Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan. A successful request returns the [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource.
 
 ## Prerequisites
 
@@ -102,7 +102,7 @@ Date: Thu, 04 Oct 2019 20:35:35 GMT
             },
             "targetProduct": {
                 "id": "d231908e-31c1-de0e-027b-bc5ce11f09d9",
-                "name": "Microsoft Azure Plan"
+                "name": "Microsoft Azure plan"
             },
             "upgradedDate": "2019-08-29T23:47:28.8524555Z",
             "status": "Completed"

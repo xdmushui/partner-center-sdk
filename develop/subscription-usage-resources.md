@@ -2,7 +2,7 @@
 title: Subscription usage resources
 description: The subscription usage resources describe usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -46,9 +46,9 @@ The **SubscriptionMonthlyUsageRecord** resource describes how much a subscriptio
 | Id               | string             | GUID. The id of the subscription or resource.                                                 |
 | Name             | string             | The name of the subscription or resource.                                                     |
 | TotalCost        | decimal             | The estimated total cost of using the resources in the subscription in the specified month.   |
-| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for **Azure 145P**. |
-| CurrencyCode     | string             | Gets or sets the currency code. Available for **Azure plans**.                                         |
-| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for **Azure plans**.                                         |
+| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
+| CurrencyCode     | string             | Gets or sets the currency code. Available for Azure plan subscription resources.                                         |
+| USDTotalCost     | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plans.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                             |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the resource.                                        |
 
@@ -63,9 +63,9 @@ The **SubscriptionUsageSummary** resource describes how much a specific subscrip
 | BillingStartDate | date               | The start date of the current billing period, in date-time format.                                                     |
 | BillingEndDate   | date               | The end date of the current billing period, in date-time format.                                                       |
 | TotalCost        | double             | The estimated total cost of using the resources in the subscription during the specified billing period.               |
-| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for **Azure 145P**. |
-| CurrencyCode   | string             | Gets or sets the currency code. Available for **Azure plans**.                                         |
-| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. Available for **Azure plans**.                                         |
+| CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
+| CurrencyCode   | string             | Gets or sets the currency code. Available for Azure plans.                                         |
+| USDTotalCost   | decimal             | Gets or sets the estimated total cost in USD. Available for Azure plan subscription resources.                                         |
 | LastModifiedDate | string             | The day, in date-time format, that this record was last modified.                                                      |
 | Links            | ResourceLinks      | The resource links corresponding to the SubscriptionUsageSummary.                                                      |
 | Attributes       | ResourceAttributes | The metadata attributes corresponding to the SubscriptionUsageSummary.                                                 |

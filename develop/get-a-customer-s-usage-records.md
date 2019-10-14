@@ -2,7 +2,7 @@
 title: Get usage records for all customers
 description: Partners can get usage records for all customers who purchased a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers, including those with an **Azure 145P offer** or an **Azure plan**.
+Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers, including those with a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan.
 
 ## Prerequisites
 
@@ -79,7 +79,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 #### Response example
 
-You can use the **isUpgraded** property to identify customers who have an Azure plan. If the value for **isUpgraded** is **true**, this means the customers have an Azure plan.
+You can use the **isUpgraded** property to identify customers who have an Azure plan. If the value for **isUpgraded** is **true**, this means the customers have an Azure plans.
 
 ```http
 HTTP/1.1 200 OK
