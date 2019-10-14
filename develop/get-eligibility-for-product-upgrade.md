@@ -21,23 +21,55 @@ You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#product
 - The customer identifier.
 - The product family.
 
-## REST request
+## C\#
 
-### Request syntax
+To check if a customer is eligible to upgrade to Azure plan:
+
+1. Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.
+2. Use the **IAggregatePartner.ProductUpgrades** collection.
+3. Call the **CheckEligibility** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradesEligibility** object.
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string selectedCustomerId = "58e2af4f-0ad3-4688-8744-be2357cd939a";
+
+string selectedProductFamily = "azure";
+
+var productUpgradeRequest = new ProductUpgradesRequest
+{
+    CustomerId = selectedCustomerId,
+    ProductFamily = selectedProductFamily
+};
+
+ProductUpgradesEligibility productUpgradeEligibility = partnerOperations.ProductUpgrades.CheckEligibility(productUpgradeRequest);
+
+if (productUpgradeEligibility.IsEligibile)
+{
+    ....
+}
+
+```
+
+## REST
+
+### REST request
+
+#### Request syntax
 
 | Method   | Request URI                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/eligibility HTTP/1.1 |
 
-### Request headers
+#### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.
 
-### Request example
+#### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/productupgrades HTTP/1.1
@@ -53,25 +85,25 @@ Content-Length: 340
 Expect: 100-continue
 Connection: Keep-Alive
 {
- {
-  "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
-  "productFamily": "azure"
-  }
-  "Attributes": {
-  "ObjectType": "ProductUpgradeRequest"
-  }
+    {
+        "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
+        "productFamily": "azure"
+    }
+    "Attributes": {
+    "ObjectType": "ProductUpgradeRequest"
+    }
 }
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 Ok

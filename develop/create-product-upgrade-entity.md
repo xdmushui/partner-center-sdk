@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center
 
-You can create a product upgrade entity to upgrade a customer to a given product family.
+You can create a product upgrade entity to upgrade a customer to a given product family (e.g., Azure plan).
 
 ## Prerequisites
 
@@ -21,23 +21,53 @@ You can create a product upgrade entity to upgrade a customer to a given product
 - The customer identifier.
 - The product family to which you want to upgrade the customer.
 
-## REST request
+## C\#
 
-### Request syntax
+To upgrade a customer to Azure plan:
+
+1. Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.
+2. Use the **IAggregatePartner.ProductUpgrades** collection.
+3. Call the **Create** method and pass in the **ProductUpgradesRequest** object, which will return a **location header** string.
+4. Extract the **upgrade-id** from the location header string which can be used to [query the upgrade status](get-product-upgrade-status.md).
+
+```csharp
+// IAggregatePartner partnerOperations;
+
+string selectedCustomerId = "58e2af4f-0ad3-4688-8744-be2357cd939a";
+
+string selectedProductFamily = "Azure";
+
+var productUpgradeRequest = new ProductUpgradesRequest
+{
+    CustomerId = selectedCustomerId,
+    ProductFamily = selectedProductFamily
+};
+
+var productUpgradeLocationHeader = partnerOperations.ProductUpgrades.Create(productUpgradeRequest);
+
+var upgradeId = Regex.Split(productUpgradeLocationHeader, "/")[1];
+
+```
+
+## REST
+
+### REST request
+
+#### Request syntax
 
 | Method   | Request URI                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1 |
 
-### Request headers
+#### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.
 
-### Request example
+#### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/productupgrades HTTP/1.1
@@ -54,19 +84,19 @@ Expect: 100-continue
 Connection: Keep-Alive
 {
   "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
-  "productFamily": "azure"
+  "productFamily": "Azure"
 }
 ```
 
-## REST response
+### REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve product upgrade status. Save this URI for use with other related REST APIs.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 202 Accepted
