@@ -2,7 +2,7 @@
 title: Get all monthly usage records for a subscription.
 description: You can get a collection resource that contains a list of services within a customer's subscription and their associated rated usage information.
 ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 - A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 - A subscription identifier.
 
-*This API only supports Azure 145P offers. If you use an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
+*This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
 
 ## C\#
 

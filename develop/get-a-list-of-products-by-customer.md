@@ -2,7 +2,7 @@
 title: Get a list of products (by customer)
 description: Gets a collection of products by customer.
 ms.assetid:
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -52,7 +52,7 @@ None.
 
 #### Request example
 
-Request for a list of Azure usage-based products available to a given customer. Products for both Microsoft Azure (MS-AZR-0145P) and Azure plan will be returned for customers in public cloud:
+Request for a list of Azure usage-based products available to a given customer. Products for both Microsoft Azure (MS-AZR-0145P) and Azure plans will be returned for customers in public cloud:
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/65543400-f8b0-4783-8530-6d35ab8c6801/products?targetView=Azure HTTP/1.1
@@ -136,8 +136,8 @@ MS-RequestId: ae7288e2-2673-4ad4-8c12-7aad818d5949
         {
             "id": "0001",
             "productId": "DZH318Z0BPS6",
-            "title": "Microsoft Azure Plan",
-            "description": "Microsoft Azure Plan (MS-AZR-0017G)",
+            "title": "Microsoft Azure plan",
+            "description": "Microsoft Azure plan (MS-AZR-0017G)",
             "minimumQuantity": 1,
             "maximumQuantity": 1,
             "isTrial": false,

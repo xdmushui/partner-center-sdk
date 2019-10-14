@@ -2,7 +2,7 @@
 title: Get a list of availabilities for a SKU (by customer)
 description: How to get a collection of availabilities for the specified product and SKU by customer.
 ms.assetid:
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -83,8 +83,8 @@ MS-RequestId: ae7288e2-2673-4ad4-8c12-7aad818d5949
 {
     "id": "0001",
     "productId": "DZH318Z0BPS6",
-    "title": "Microsoft Azure Plan",
-    "description": "Microsoft Azure Plan (MS-AZR-0017G)",
+    "title": "Microsoft Azure plan",
+    "description": "Microsoft Azure plan (MS-AZR-0017G)",
     "minimumQuantity": 1,
     "maximumQuantity": 1,
     "isTrial": false,

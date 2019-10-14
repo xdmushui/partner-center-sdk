@@ -2,7 +2,7 @@
 title: Get usage data for subscription by meter
 description: You can get meter usage records of a customer for specific Azure services or resources during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ You can use the **MeterUsageRecord** resource collection to get meter usage reco
 - A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 - A subscription ID
 
-*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for 145P offers.* This new route will support both 145P and Azure Plan. In order to get this information for your Azure plan, you will need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
+*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for Microsoft Azure (MS-AZR-0145P) subscriptions.* This new route will support both Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans. In order to get this information for your Azure plan, you will need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
 
 ## C\#
 
@@ -64,7 +64,7 @@ This table lists the required query parameters to get the customer's rated usage
 | Name                   | Type     | Required | Description                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
-| **subscription-id**    | **guid** | Y        | A GUID corresponding to the subscription. *For Azure plans, provide the **plan-id** as the **subscription-id** in this route.* |
+| **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
 #### Request headers
 
@@ -92,11 +92,11 @@ If successful, this method returns a **PagedResourceCollection\<MeterUsageRecord
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for 145P
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 In this example, the customer purchased **145P Azure PayG**.
 
-*For customers with 145P, there will be no change to API response.*
+*For customers with a Microsoft Azure (MS-AZR-0145P) subscription, there will be no change to API response.*
 
 ```http
 HTTP/1.1 200 OK

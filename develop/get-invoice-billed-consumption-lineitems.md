@@ -1,7 +1,7 @@
 ---
 title: Get invoice billed commercial consumption line items
 description: You can get a collection of commercial consumption invoice line item (closed daily rated usage line item) details for a specified invoice.
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ You can use the following methods to get a collection of details for commercial 
 
 You should use **onetime** to query all modern line items instead of **marketplace**. Or, you can follow the self links in the invoice details in your invoice call(s).
 
-This API also supports **azure** provider types for **145P Azure offers**. This means this API is a backward-compatible feature.
+This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145P) subscriptions. This means this API is a backward-compatible feature.
 
 ## Prerequisites
 

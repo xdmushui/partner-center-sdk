@@ -2,7 +2,7 @@
 title: Get a usage summary for all of a customer's subscriptions
 description: You can get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -87,11 +87,11 @@ If successful, this method returns a **CustomerUsageSummary** resource in the re
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for 145P
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscription
 
 In this example, the customer purchased a **145P Azure PayG** offer.
 
-*For customers with 145P offers, there will be no change to the API response.*
+*For customers with Microsoft Azure (MS-AZR-0145P) subscriptions, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK
@@ -128,9 +128,9 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-#### Response example for Azure plans
+#### Response example for Azure plan
 
-In this example, the customer purchased an **Azure plan**.
+In this example, the customer purchased an Azure plan.
 
 *For customers with Azure plans, there are the following changes to the API response:*
 

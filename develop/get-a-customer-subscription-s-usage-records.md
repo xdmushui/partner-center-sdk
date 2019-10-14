@@ -2,7 +2,7 @@
 title: Get all subscription usage records for a customer
 description: You can get subscription usage records for a customer of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-You can use the **SubscriptionMonthlyUsageRecord** resource collection to get subscription usage records for a customer of a specific Azure service or resource during the current billing period. This resource represents all subscriptions for the customer. For a customer with Azure plan(s), this resource returns a list of those plans (not individual Azure subscriptions).
+You can use the **SubscriptionMonthlyUsageRecord** resource collection to get subscription usage records for a customer of a specific Azure service or resource during the current billing period. This resource represents all subscriptions for the customer. For a customer with an Azure plan, this resource returns a list of those plans (not individual Azure subscriptions).
 
 ## Prerequisites
 
@@ -87,11 +87,11 @@ If successful, this method returns a **SubscriptionMonthlyUsageRecord** resource
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for 145P
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 In this example, the customer purchased a **145P Azure PayG** offer.
 
-*For customers with 145P, there will be no change to the API response.*
+*For customers with Microsoft Azure (MS-AZR-0145P) subscriptions, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK

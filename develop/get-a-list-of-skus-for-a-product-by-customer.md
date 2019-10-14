@@ -2,7 +2,7 @@
 title: Get a list of SKUs for a product (by customer)
 description: Gets a collection of SKUs for the specified product by customer.
 ms.assetid:
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.localizationpriority: medium
 ---
 
@@ -81,7 +81,7 @@ MS-RequestId: ae7288e2-2673-4ad4-8c12-7aad818d5949
 
 {
     "id": "DZH318Z0BPS6",
-    "title": "Microsoft Azure Plan",
+    "title": "Microsoft Azure plan",
     "description": "Gain access to Azure Services.",
     "productType": {
         "id": "Azure",
