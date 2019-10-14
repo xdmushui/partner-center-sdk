@@ -2,13 +2,15 @@
 title: Purchase Azure reservations
 description: How to purchase Azure reservations using the Partner Center API.
 ms.assetid: 1BCDA7B8-93FC-4AAC-94E0-B15BFC95737F
-ms.date: 10/09/2018
+ms.date: 10/14/2018
 ms.localizationpriority: medium
 ---
 
 # Purchase Azure reservations
 
-**Applies To**
+[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
+
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government
