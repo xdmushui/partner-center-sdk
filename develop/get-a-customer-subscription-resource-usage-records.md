@@ -55,7 +55,7 @@ For an example, see the following:
 
 | Method  | Request URI                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1 |
 
 ##### URI parameters
 
