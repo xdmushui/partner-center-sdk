@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -24,7 +24,6 @@ Gets a collection of products for an existing customer.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier (**customer-tenant-id**).
 
-
 ## REST
 
 ### Rest request
@@ -35,16 +34,16 @@ Gets a collection of products for an existing customer.
 |--------|--------------------------------------------------------------------------------------------------------------------------|
 | POST   | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/products?targetView={targetView} HTTP/1.1 |
 
-#### Request URI parameter
+#### Request URI parameters
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| customer-tenant-id | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
-| targetView | string | Yes | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "MicrosoftAzure" – Includes items for Microsoft Azure (**MS-AZR-0145P**) and Azure plan</br> "OnlineServices" – Includes all online service items, including commercial marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
+| **customer-tenant-id** | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
+| **targetView** | string | Yes | Identifies the target view of the catalog. The supported values are: <ul><li>**Azure**, which includes all Azure items</li><li>**AzureReservations**, which includes all Azure reservation items</li><li>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items</li><li>**AzureReservationsSQL**, which includes all SQL reservation items</li><li>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items</li><li>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans</li><li>**OnlineServices**, which  includes all online service items, including commercial marketplace products</li><li>**Software**, which  includes all software items</li><li>**SoftwareSUSELinux**, which includes all software SUSE Linux items</li><li>**SoftwarePerpetual**, which includes all perpetual software items</li><li>**SoftwareSubscriptions**, which includes all software subscription items </ul> |
 
 #### Request header
 
-- See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 #### Request body
 
