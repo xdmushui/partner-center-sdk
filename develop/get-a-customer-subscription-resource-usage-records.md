@@ -2,7 +2,7 @@
 title: Get usage data for subscription by resource
 description: You can get a customer's resource usage records for specific Azure services or resources during the current billing period.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/21/2019
 ms.localizationpriority: medium
 ---
 
