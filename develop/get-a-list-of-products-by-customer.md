@@ -2,7 +2,7 @@
 title: Get a list of products (by customer)
 description: Gets a collection of products by customer.
 ms.assetid:
-ms.date: 10/11/2019
+ms.date: 10/21/2019
 ms.localizationpriority: medium
 ---
 
