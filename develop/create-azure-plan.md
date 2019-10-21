@@ -2,7 +2,7 @@
 title: Create an Azure plan 
 description: Developers can purchase, create, and manage Azure plans programmatically using Partner Center APIs.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/21/2019
 ms.localizationpriority: medium
 ---
 
