@@ -2,7 +2,7 @@
 title: Get a list of products (by country)
 description: Gets a collection of products by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 10/11/2019
+ms.date: 10/21/2019
 ms.localizationpriority: medium
 ---
 
