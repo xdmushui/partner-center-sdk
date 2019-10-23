@@ -1,8 +1,8 @@
 ---
 title: Purchase Azure reservations
-description: How to purchase Azure reservations using the Partner Center API.
+description: You can purchase Azure reservations for a customer using the Partner Center API through your existing Microsoft Azure subscription (MS-AZR-0145P) or Azure plan.
 ms.assetid: 1BCDA7B8-93FC-4AAC-94E0-B15BFC95737F
-ms.date: 10/14/2018
+ms.date: 10/23/2018
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ Applies to:
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government
 
-To purchase an Azure reservation for a customer using the Partner Center API, you must have an existing Microsoft Azure (**MS-AZR-0145P**) Azure subscription or Azure plan for the customer.
+To purchase an Azure reservation for a customer using the Partner Center API, you must have an existing Microsoft Azure (**MS-AZR-0145P**) subscription or Azure plan for them.
 
 > [!NOTE]  
 > Azure reservations are not available in the following markets:

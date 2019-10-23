@@ -1,7 +1,7 @@
 ---
 title: Get invoice's unbilled reconciliation line items
-description: You can get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 09/24/2019
+description: You can get a collection of unbilled reconciliation line item details for specified period using the Partner Center APIs.
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -18,9 +18,7 @@ Applies to:
 
 You can use the following methods get a collection of details for unbilled invoice line items (also known as open billing line items).
 
-*Except for bug fixes, this API is no longer being updated. You should update your applications to call the **onetime** API instead of **all**. The **onetime** API provides additional functionality, and will continue to be updated.*
-
-You should use **onetime** to query all onetime invoice line items, instead of **all**. Or, follow the links in estimate links call.
+[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 ## Prerequisites
 

@@ -1,8 +1,8 @@
 ---
 title: Get usage data for subscription by resource
-description: You can get a customer's resource usage records for specific Azure services or resources during the current billing period.
+description: You can use the ResourceUsageRecord resource to get a customer's resource usage records for specific Azure services or resources during the current billing period.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -55,7 +55,7 @@ For an example, see the following:
 
 | Method  | Request URI                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1 |
 
 ##### URI parameters
 

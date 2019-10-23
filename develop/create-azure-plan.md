@@ -2,7 +2,7 @@
 title: Create an Azure plan 
 description: Developers can purchase, create, and manage Azure plans programmatically using Partner Center APIs.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/21/2019
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ You can purchase, create, and manage an Azure plan using the Partner Center APIs
 ## Prerequisites
 
 * [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
-* The customer identifier. If you don't have a customer's identifier, sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
+* The customer identifier. If you don't have a customer's identifier, follow the steps in [Get a list of customers](get-a-list-of-customers.md) or sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
 * [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](https://docs.microsoft.com/partner-center/confirm-customer-agreement).
 
 ## Get the catalog item for Azure plan
@@ -32,7 +32,7 @@ Before you can create an Azure plan for a customer, you need to retrieve the cor
 
 To obtain the catalog item for an Azure plan, complete the following steps:
 
-1. Identify and retrieve the *product* for the Azure plan. Follow the steps in [Get a list of products](get-a-list-of-products.md) and specify the **targetView** as **Azure**. If you already know the product identifier for the Azure plan, you can follow the steps in [Get a product using the product ID](get-a-product-by-id.md) instead.
+1. Identify and retrieve the *product* identifier for the Azure plan. Follow the steps in [Get a list of products](get-a-list-of-products.md) and specify the **targetView** as **MicrosoftAzure**. (If you already know the *product* identifier for the Azure plan, you can follow the steps in [Get a product using the product ID](get-a-product-by-id.md) instead.)
 
 2. Retrieve the **SKU** from the product for the Azure plan. Follow the steps in [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md). If you already know the SKU identifier for the Azure plan, you can follow the steps in [Get a SKU using the SKU ID](get-a-sku-by-id.md) instead.
 

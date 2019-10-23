@@ -1,8 +1,8 @@
 ---
 title: Get a customer's usage spending budget
-description: Update the spending budget allocated for a customer's usage.
+description: You can use a spending budget (the SpendingBudget object) to update a customer usage summary (the CustomerUsageSummary resource).
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-You can update the [spending budget](customer-usage-resources.md#customerusagesummary) allocated for a customer's usage.
+You can update the spending budget (the **SpendingBudget** object) in the [customer usage summary (the **CustomerUsageSummary** resource)](customer-usage-resources.md#customerusagesummary).
 
 ## Prerequisites
 

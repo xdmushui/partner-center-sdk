@@ -1,8 +1,8 @@
 ---
 title: Get a list of products (by customer)
-description: Gets a collection of products by customer.
+description: You can use a customer identifier to get a collection of products by customer.
 ms.assetid:
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -10,20 +10,19 @@ ms.localizationpriority: medium
 
 [!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of products for an existing customer.
+You can use the following methods to get a collection of products for an existing customer.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier (**customer-tenant-id**).
-
 
 ## REST
 
@@ -35,16 +34,16 @@ Gets a collection of products for an existing customer.
 |--------|--------------------------------------------------------------------------------------------------------------------------|
 | POST   | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/products?targetView={targetView} HTTP/1.1 |
 
-#### Request URI parameter
+#### Request URI parameters
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| customer-tenant-id | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
-| targetView | string | Yes | Identifies the target view of the catalog. The supported values are:<br/> "Azure" – Includes all Azure items<br/> "AzureReservations" – Includes all Azure reservation items<br/> "AzureReservationsVM" – Includes all virtual machine reservation items</br> "AzureReservationsSQL" – Includes all SQL reservation items</br> "AzureReservationsCosmosDb" - Includes all Cosmos database reservation items</br> "OnlineServices" – Includes all online service items, including commercial marketplace products<br/> "Software" – Includes all software items<br/> "SoftwareSUSELinux" - Includes all software SUSE Linux items<br/> "SoftwarePerpetual" – Includes all perpetual software items</br> "SoftwareSubscriptions" – Includes all software subscription items |
+| **customer-tenant-id** | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
+| **targetView** | string | Yes | Identifies the target view of the catalog. The supported values are: <ul><li>**Azure**, which includes all Azure items</li><li>**AzureReservations**, which includes all Azure reservation items</li><li>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items</li><li>**AzureReservationsSQL**, which includes all SQL reservation items</li><li>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items</li><li>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans</li><li>**OnlineServices**, which  includes all online service items, including commercial marketplace products</li><li>**Software**, which  includes all software items</li><li>**SoftwareSUSELinux**, which includes all software SUSE Linux items</li><li>**SoftwarePerpetual**, which includes all perpetual software items</li><li>**SoftwareSubscriptions**, which includes all software subscription items </ul> |
 
 #### Request header
 
-- See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 #### Request body
 
@@ -55,7 +54,7 @@ None.
 Request for a list of Azure usage-based products available to a given customer. Products for both Microsoft Azure (MS-AZR-0145P) and Azure plans will be returned for customers in public cloud:
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/65543400-f8b0-4783-8530-6d35ab8c6801/products?targetView=Azure HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/65543400-f8b0-4783-8530-6d35ab8c6801/products?targetView=MicrosoftAzure HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 83643f5e-5dfd-4375-88ed-054412460dc8

@@ -1,28 +1,28 @@
 ---
 title: Get a list of availabilities for a SKU (by customer)
-description: How to get a collection of availabilities for the specified product and SKU by customer.
+description: You can get a collection of availabilities for a specified product and SKU by customer using the customer, product and SKU identifiers.
 ms.assetid:
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of availabilities for a SKU (by customer)
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Get a collection of availabilities for a specified product and SKU available to a particular customer.
+You can use the following methods to get a collection of availabilities for a specified product and SKU available to a particular customer.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier (**customer-tenant-id**).
-- A product ID (**product-id**).
-- A SKU ID (**sku-id**).
+- A product identifier (**product-id**).
+- A SKU identifier (**sku-id**).
 
 ## REST
 

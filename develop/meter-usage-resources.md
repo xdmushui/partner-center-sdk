@@ -1,8 +1,8 @@
 ---
 title: Meter usage record resource
-description: The MeterUsageRecord resource describes the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
+description: You can use the MeterUsageRecord resource to describe the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

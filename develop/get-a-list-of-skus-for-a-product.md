@@ -1,8 +1,8 @@
 ---
 title: Get a list of SKUs for a product (by country)
-description: How to get a collection of SKUs for a specified product by customer country.
+description: You can get and filter a collection of SKUs by country for a product using the Partner Center APIs.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,12 +14,12 @@ Applies to:
 
 - Partner Center
 
-You can a collection of SKUs available in a particular country for a particular product using Partner Center APIs.
+You can get a collection of SKUs available in a country for a specific product using Partner Center APIs.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID.
+- A product identifier.
 
 ## C\#
 
