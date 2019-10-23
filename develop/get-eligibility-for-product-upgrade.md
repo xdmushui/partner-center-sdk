@@ -1,7 +1,7 @@
 ---
 title: Check a customer's eligibility for upgrading to an Azure plan
-description: How to check a customer's eligibility to upgrade from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan. You can use the ProductUpgradeRequest resource to return a ProductUpgradesEligibility resource.
-ms.date: 10/11/2019
+description: You can use the ProductUpgradeRequest resource to return a ProductUpgradesEligibility resource to determine if a customer is eligible to upgrade from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan.
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

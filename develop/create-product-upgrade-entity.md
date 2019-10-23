@@ -1,7 +1,7 @@
 ---
 title: Create a product upgrade entity for a customer
-description: You can create a product upgrade entity to upgrade a customer to a given product family. 
-ms.date: 10/11/2019
+description: You can use the ProductUpgradeRequest resource to create a product upgrade entity to upgrade a customer to a given product family. 
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center
 
-You can create a product upgrade entity to upgrade a customer to a given product family (e.g., Azure plan).
+You can create a product upgrade entity to upgrade a customer to a given product family (for example, Azure plan) using the **ProductUpgradeRequest** resource.
 
 ## Prerequisites
 

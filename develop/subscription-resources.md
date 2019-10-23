@@ -1,8 +1,8 @@
 ---
 title: Subscription resources
-description: A subscription lets a customer use a service for a certain period of time.
+description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

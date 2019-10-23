@@ -1,8 +1,8 @@
 ---
 title: Get usage data for subscription by meter
-description: You can get meter usage records of a customer for specific Azure services or resources during the current billing period.
+description: You can use the MeterUsageRecord resource collection to get meter usage records of a customer for specific Azure services or resources during the current billing period.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

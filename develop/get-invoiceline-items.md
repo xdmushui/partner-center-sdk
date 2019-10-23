@@ -1,8 +1,8 @@
 ---
 title: Get invoice line items
-description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice.
+description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice using the Partner Center APIs.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -19,9 +19,7 @@ Applies to:
 
 You can use the following methods to get a collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
 
-*Except for bug fixes, this API is no longer being updated. You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.*
-
-You should use **onetime** to query all modern line items, instead of **marketplace**. Or, follow the self links in the invoice call details.
+[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 This API also supports the **provider** types of **azure** and **office** for Microsoft Azure (MS-AZR-0145P) subscriptions and Office offers, which makes the API feature backward compatible.
 
@@ -137,7 +135,7 @@ The following syntaxes apply when the billing provider is **OneTime**. This incl
 
 If you are using the following syntaxes, be sure to use the appropriate syntax for your use case.
 
-*Except for bug fixes, the APIs for these request URIs are no longer being updated. You should update your applications to call the **onetime** API instead. The **onetime** API provides additional functionality, and will continue to be updated.*
+[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 | Method | Request URI | Description of syntax use case |
 | ------ | ----------- | -------------------------------- |
