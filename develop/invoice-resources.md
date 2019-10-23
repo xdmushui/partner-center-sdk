@@ -1,8 +1,8 @@
 ---
 title: Invoice resources
-description: Description of invoice-related resources.
+description: Multiple invoice-related resources are available through the Partner Center APIs. These resources are related to invoice and line item details.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 09/24/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes invoice-related resources.
+The following invoice-related resources are available through the Partner Center APIs.
 
 ## Invoice
 

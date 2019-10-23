@@ -1,6 +1,6 @@
 ---
 title: Get invoice's unbilled reconciliation line items
-description: You can get a collection of unbilled reconciliation line item details for specified period.
+description: You can get a collection of unbilled reconciliation line item details for specified period using the Partner Center APIs.
 ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---

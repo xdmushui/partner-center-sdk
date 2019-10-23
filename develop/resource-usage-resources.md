@@ -1,8 +1,8 @@
 ---
 title: Resource usage record resources
-description: You can use the resource ResourceUsageRecord to describe the estimated monetary cost of a subscription's resource level usage in the current billing cycle.
+description: You can use the ResourceUsageRecord resource to describe the estimated monetary cost of a subscription's resource level usage in the current billing cycle.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
