@@ -1,7 +1,7 @@
 ---
 title: Get invoice unbilled commercial consumption line items
 description: You can get a collection of unbilled commercial consumption line item details for a specified invoice.
-ms.date: 09/24/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,9 +17,7 @@ How to get a collection of unbilled commercial consumption line item details.
 
 You can use the following methods to get a collection of details unbilled commercial consumption line items (also known as open usage line items) programmatically.
 
-*Except for bug fixes, this API is no longer being updated. You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.*
-
-You should use **onetime** to query all commercial consumption line items instead of **marketplace**. Or, you can follow the links in the estimate links call.
+[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 ## Prerequisites
 
