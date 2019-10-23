@@ -1,8 +1,8 @@
 ---
 title: Get a list of products (by country)
-description: Gets a collection of products by customer country.
+description: You can use the Product resource to get a collection of products by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 10/21/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of products available in a particular country.
+You can use the following methods to get a collection of products available in a particular country.
 
 ## Prerequisites
 

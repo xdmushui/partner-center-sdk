@@ -1,8 +1,8 @@
 ---
 title: Get usage records for all customers
-description: Partners can get usage records for all customers who purchased a specific Azure service or resource during the current billing period.
+description: You can use the CustomerMonthlyUsageRecord resource collection to get usage records for all customers who purchased a specific Azure service or resource (including Microsoft Azure MS-AZR-0145P subscriptions and Azure plans).
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

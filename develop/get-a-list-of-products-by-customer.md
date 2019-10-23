@@ -1,8 +1,8 @@
 ---
 title: Get a list of products (by customer)
-description: Gets a collection of products by customer.
+description: You can use a customer identifier to get a collection of products by customer.
 ms.assetid:
-ms.date: 10/21/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of products for an existing customer.
+You can use the following methods to get a collection of products for an existing customer.
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 ---
 title: Get a list of Azure entitlements for a subscription
-description: How to get a collection of Azure entitlement (AzureEntitlement) resources that belong to a subscription.
-ms.date: 10/11/2019
+description: You can use the AzureEntitlement resource to  get a collection of Azure entitlement resources that belong to a subscription.
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
