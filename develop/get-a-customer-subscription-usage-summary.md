@@ -1,8 +1,8 @@
 ---
 title: Get usage summary for customer's subscription
-description: You can get a subscription usage summary of a specific Azure service or resource during the current billing period.
+description: You can use the SubscriptionUsageSummary resource to get a subscription usage summary of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 

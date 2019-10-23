@@ -1,8 +1,8 @@
 ---
 title: Get all subscription usage records for a customer
-description: You can get subscription usage records for a customer of a specific Azure service or resource during the current billing period.
+description: You can use the SubscriptionMonthlyUsageRecord resource collection to get subscription usage records for a customer of a specific Azure service or resource during the current billing period.
 ms.assetid: 
-ms.date: 10/11/2019
+ms.date: 10/23/2019
 ms.localizationpriority: medium
 ---
 
