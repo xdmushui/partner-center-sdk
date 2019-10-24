@@ -46,10 +46,10 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Sku
 var segmentSkus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ByTargetSegment(targetSegment).Get();
 
 // Get the skus for an Azure reservation product which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
-var skus = partnerOperations.Customers.ById(customerId).Products.ById(productIdForAzureReservation).Skus.Get();
+var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.Get();
 
 // Get the skus for an Azure reservation product which are applicable to Azure plans only.
-var skus = partnerOperations.Customers.ById(customerId).Products.ById(productIdForAzureReservation).Skus.ByReservationScope("AzurePlan").Get();
+var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ByReservationScope("AzurePlan").Get();
 
 ```
 
