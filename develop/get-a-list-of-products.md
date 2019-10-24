@@ -44,10 +44,10 @@ ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US
 ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("MicrosoftAzure").ByTargetSegment("commercial").Get();
 
 // Get the products for Azure reservations which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
-ResourceCollection<Product> products = partnerOperations.Customers.ById(customerId).Products.ByTargetView("AzureReservations").Get();
+ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US").ByTargetView("AzureReservations").Get();
 
 // Get the products for Azure reservations which are applicable to Azure plans only.
-ResourceCollection<Product> products = partnerOperations.Customers.ById(customerId).Products.ByTargetView("AzureReservations").ByReservationScope("AzurePlan").Get();
+ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US").ByTargetView("AzureReservations").ByReservationScope("AzurePlan").Get();
 
 ```
 
