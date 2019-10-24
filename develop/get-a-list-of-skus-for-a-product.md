@@ -28,13 +28,15 @@ To get the list of SKUs for a product:
 1. Get an interface for a specific product's operations by following the steps in [Get a product by ID](get-a-product-by-id.md).
 2. From the interface, select the **Skus** property to obtain an interface with the available operations for SKUs.
 3. Call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product.
-4. (Optional) Use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
+4. (Optional) Select the reservation scope using the **ByReservationScope()** method.
+5. (Optional) Use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
 ``` csharp
 IAggregatePartner partnerOperations;
 
 string countryCode;
 string productId;
+string productIdForAzureReservation;
 string targetSegment;
 
 // Get the available SKUs.
@@ -42,6 +44,13 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Sku
 
 // Get the available SKUs, filtered by target segment.
 var segmentSkus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ByTargetSegment(targetSegment).Get();
+
+// Get the skus for an Azure reservation product which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
+var skus = partnerOperations.Customers.ById(customerId).Products.ById(productIdForAzureReservation).Skus.Get();
+
+// Get the skus for an Azure reservation product which are applicable to Azure plans only.
+var skus = partnerOperations.Customers.ById(customerId).Products.ById(productIdForAzureReservation).Skus.ByReservationScope("AzurePlan").Get();
+
 ```
 
 ## Java
