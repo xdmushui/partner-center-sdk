@@ -38,12 +38,21 @@ string countryCode;
 string productId;
 string skuId;
 string targetSegment;
+string productIdForAzureReservation;
+string skuIdForAzureReservation;
 
 // Get the availabilities.
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.Get();
 
 // Get the availabilities, filtered by target segment.
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.BySegment(targetSegment).Get();
+
+// Get the availabilities for an Azure reservation product and sku which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
+var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ById(skuIdForAzureReservation).Availabilities.ByReservationScope("AzurePlan").Get();
+
+// Get the availabilities for an Azure reservation product and sku which are applicable to Azure plans only.
+var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ById(skuIdForAzureReservation).Availabilities.Get();
+
 ```
 
 ## REST
@@ -66,7 +75,7 @@ Use the following path and query parameters to get a list of availabilities for 
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
-| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify "reservationScope=AzurePlan" to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
+| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify `reservationScope=AzurePlan` to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
 #### Request headers
 
