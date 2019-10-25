@@ -27,7 +27,7 @@ You can verify whether an indirect reseller has signed the Microsoft Partner Agr
 
 | Method | Request URI |
 | ------ | ----------- |
-| **GET** | *[{baseURL}](partner-center-rest-urls.md)*/v1/compliance/{ProgramName}/AgreementStatus? MpnId={MpnId}&TenantId={TenantId} |
+| **GET** | *[{baseURL}](partner-center-rest-urls.md)*/v1/compliance/{ProgramName}/agreementstatus?mpnId={MpnId}&tenantId={TenantId} |
 
 ##### URI parameters
 
