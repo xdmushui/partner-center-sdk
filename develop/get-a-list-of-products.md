@@ -30,6 +30,7 @@ To get a list of products:
 
 1. Use your **IAggregatePartner.Products** collection to select the country by using the **ByCountry()** method.
 2. Select the catalog view using the **ByTargetView()** method.
+3. (Optional) Select the reservation scope using the **ByReservationScope()** method.
 3. (Optional) Select the target segment using the **ByTargetSegment()** method.
 4. Call the **Get()** or **GetAsync()** method to return the collection.
 
@@ -37,10 +38,17 @@ To get a list of products:
 IAggregatePartner partnerOperations;
 
 // Get the products for the specified catalog view.
-ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("Azure").Get();
+ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("MicrosoftAzure").Get();
 
 // Get the products filtered by target view and target segment.
-ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("Azure").ByTargetSegment("commercial").Get();
+ResourceCollection<Products> products = partnerOperations.Products.ByCountry("US").ByTargetView("MicrosoftAzure").ByTargetSegment("commercial").Get();
+
+// Get the products for Azure reservations which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
+ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US").ByTargetView("AzureReservations").Get();
+
+// Get the products for Azure reservations which are applicable to Azure plans only.
+ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US").ByTargetView("AzureReservations").ByReservationScope("AzurePlan").Get();
+
 ```
 
 ### Java
