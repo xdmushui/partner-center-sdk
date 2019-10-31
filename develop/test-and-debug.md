@@ -25,16 +25,16 @@ If you run automated build verification tests, conduct testing in production, or
 This means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials. 
 
 ### Azure plan
-By default, Azure plan is not available to sandbox accounts. Partners who need access to Azure plan with their sandbox account must apply for access. To apply for access, reach out to your Microsoft account manager or business contact. Partners who have previously applied for access to Microsoft Azure (MS-AZR-0145P) subscription offer in their sandbox accounts do not need to apply for access again. They will automatically be granted access to Azure plan.
+By default, partners cannot provision Azure plans using their sandbox accounts. Partners who need to do so with their sandbox account must apply for access. To apply for access, reach out to your reach out to your Microsoft account manager or business contact. Partners who have previously applied for access to provision Microsoft Azure (MS-AZR-0145P) subscriptions in their sandbox accounts do not need to apply for access again. They will be granted access to provision Azure plans automatically.
 
-For partners whose sandbox accounts have been approved for Azure plan, the following limits apply:
+For partners whose sandbox accounts have been approved to provision Azure plans, the following limits apply:
 
-- Each sandbox partner account can have up to Azure plans across all customer tenants.
+- Each sandbox partner account can have up to 10 Azure plans across all customer tenants (no matter how the plans are distributed among the customers).
 - A direct bill partner can create up to 1 Azure plan per customer tenant.
-- An indirect provider can create up to 3 Azure plan per customer tenant (for different indirect resellers specified as Partner-of-Record).
+- An indirect provider can create up to 3 Azure plans per customer tenant (for different indirect resellers specified as the Partner-of-Record).
 - Each Azure plan can have up to 3 Azure subscriptions.
 - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.
-- Each sandbox partner account has a spend limit of $2000 (USD) per billing cycle across all Azure plans. Once a partner reaches the spend limit, all Azure plans will be temporarily disabled until the next billing cycle.
+- Each sandbox partner account has a spending limit of $2000 (USD) per billing cycle across all Azure plans. Once a partner reaches the spend limit, all Azure plans will be temporarily disabled until the next billing cycle.
 
 ### Cloud Solution Provider (CSP) Azure subscription offers 
 CSP Azure subscription offers are no longer available by default to sandbox accounts. These include MS-AZR-0146P, MS-AZR-DE-0146P and MS-AZR-USGOV-0146P for CSP Azure subscriptions in Microsoft Public Cloud, German Cloud and Government Cloud respectively. Partners who need access to these offers with their sandbox account must apply for access. To apply for access, reach out to your Microsoft account manager or business contact. 
