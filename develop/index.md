@@ -174,9 +174,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Azure plan</h3>
-                        <p>Added API and SDK support for Azure plan.</p>
-                        <p>&nbsp;</p>
+                        <h3>Added API and SDK support for Azure plan</h3>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-azure-plan" data-linktype="external">How to purchase an Azure plan</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/test-and-debug" data-linktype="external">Test and debug</a></p>
                         <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/purchase-azure-reservations" data-linktype="external">Purchase Azure reservations</a></p>
