@@ -164,9 +164,9 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <hr />
 
 <h2>What&#39;s New</h2>
-<p><strong>Partner Center .NET SDK v1.14.2 and updated REST APIs are now available!</strong></p>
+<p><strong>Partner Center .NET SDK v1.15.1 and updated REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.14.2</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
+<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.15.1</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>
@@ -174,58 +174,44 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3>Microsoft Customer Agreement</h3>
-                        <p>Added API and SDK support for confirming customer acceptance of Microsoft Customer Agreement.</p>
+                        <h3>Azure plan</h3>
+                        <p>Added API and SDK support for Azure plan.</p>
                         <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/confirm-customer-agreement" data-linktype="external">Confirm customer acceptance of the Microsoft Customer Agreement - Overview</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-customer-agreement-metadata" data-linktype="external">Get agreement metadata for the Microsoft Customer Agreement (preview)</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-confirmation-of-customer-agreement" data-linktype="external">Get confirmation of customer acceptance of Microsoft Customer Agreement (preview)</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/confirm-customer-consent-customer-agreement" data-linktype="external">Confirm customer acceptance of Microsoft Customer Agreement (preview)</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/download-customer-agreement-template" data-linktype="external">Get a download link for the Microsoft Customer Agreement template (preview)</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Microsoft Cloud Agreement</h3>
-                        <p>.NET SDK support for Microsoft Cloud Agreement has changed to accommodate Microsoft Customer Agreement. Please refer to following documentation for details on the changes.</p>
-                        <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-agreement-metadata" data-linktype="external">Get agreement metadata for Microsoft Cloud Agreement</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/get-confirmation-of-customer-consent" data-linktype="external">Get confirmation of customer acceptance of Microsoft Cloud agreement</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/en-us/partner-center/develop/confirm-customer-consent" data-linktype="external">Confirm customer acceptance of Microsoft Cloud Agreement</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Commercial marketplace</h3>
-                        <p>Added sandbox support for subscriptions for commercial marketplace products.</p>
-                        <p>&nbsp;</p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products" data-linktype="external">Create a subscription for commercial marketplace products</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-subscription-azure-marketplace-products#test-using-integration-sandbox-account" data-linktype="external">Test using integration sandbox account</a></p>
-                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/activate-sandbox-subscription-azure-marketplace-products" data-linktype="external">Activate a sandbox subscription for commercial marketplace products</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardText">
-                        <h3>Dependency update for .NET SDK</h3>
-                        <p>Updated the Microsoft.IdentityModel.Clients.ActiveDirectory dependency from version 2.16 to 5.2.0.</p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-azure-plan" data-linktype="external">How to purchase an Azure plan</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/test-and-debug" data-linktype="external">Test and debug</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/purchase-azure-reservations" data-linktype="external">Purchase Azure reservations</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-products" data-linktype="external">Get a list of products (by country)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-products-by-customer" data-linktype="external">Get a list of products (by customer)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-skus-for-a-product" data-linktype="external">Get a list of SKUs for a product (by country)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-skus-for-a-product-by-customer" data-linktype="external">Get a list of SKUs for a product (by customer)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-availabilities-for-a-sku" data-linktype="external">Get a list of availabilities for a SKU (by country)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-availabilities-for-a-sku-by-customer" data-linktype="external">Get a list of availabilities for a SKU (by customer)</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-eligibility-for-product-upgrade" data-linktype="external">Get eligibility for product upgrade</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/create-product-upgrade-entity" data-linktype="external">Create product upgrade entity for a customer</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-product-upgrade-status" data-linktype="external">Get product upgrade status</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-list-of-azure-entitlements-for-subscription" data-linktype="external">Get a list of Azure entitlements for a subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-utilization-record-for-azure" data-linktype="external">Get a customer's utilization records for Azure</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-billed-consumption-lineitems" data-linktype="external">Get invoice billed consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoiceline-items" data-linktype="external">Get invoice line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-consumption-lineitems" data-linktype="external">Get invoice unbilled consumption line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-invoice-unbilled-recon-lineitems" data-linktype="external">Get invoice unbilled recon line items</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/azure-spending" data-linktype="external">Azure spending</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-partner-usage-summary" data-linktype="external">Get partner usage summary</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-usage-records" data-linktype="external">Get all customer usage records for a partner</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-usage-summary" data-linktype="external">Get customer usage summary</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-subscription-s-usage-records" data-linktype="external">Get all subscription usage records for a customer</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-subscription-usage-summary" data-linktype="external">Get subscription usage summary</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-all-monthly-usage-records-for-a-subscription" data-linktype="external">Get all monthly usage records for a subscription</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-subscription-resource-usage-records" data-linktype="external">Get usage data for subscription by resource</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-subscription-meter-usage-records" data-linktype="external">Get usage data for subscription by meter</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/get-a-customer-s-usage-spending-budget" data-linktype="external">Get customer usage budget</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/customer-usage-resources" data-linktype="external">Customer usage resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/meter-usage-resources" data-linktype="external">Get meter usage record resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/resource-usage-resources" data-linktype="external">Get resource usage record resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/invoice-resources" data-linktype="external">Invoice resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/product-upgrade-resources" data-linktype="external">Product upgrade resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscription-resources" data-linktype="external">Subscription resources</a></p>
+                        <p><a style="text-decoration: underline; color: hsla(206, 100%, 35%, 1);" href="https://docs.microsoft.com/partner-center/develop/subscription-usage-resources" data-linktype="external">Subscription usage resources</a></p>
                     </div>
                 </div>
             </div>
