@@ -165,6 +165,16 @@
 			"source_path": "develop/partner-center-managed-api.md",
 			"redirect_url": "https://docs.microsoft.com/en-us/dotnet/api/?view=partnercenter-dotnet-latest",
 			"redirect_document_id": true
+		},
+		{
+			"source_path": "develop/get-a-customers-rated-usage-information.md",
+			"redirect_url": "develop/get-a-customer-usage-summary.md",
+			"redirect_document_id": true
+		},
+		{
+			"source_path": "develop/get-a-subscriptions-resource-usage-information.md",
+			"redirect_url": "develop/get-all-monthly-usage-records-for-a-subscription.md",
+			"redirect_document_id": true
 		}
  ]
 }

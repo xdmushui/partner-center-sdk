@@ -1,7 +1,7 @@
 ---
 title: Get invoice's unbilled reconciliation line items
-description: How to get a collection of unbilled reconciliation line item details for specified period.
-ms.date: 08/16/2019
+description: You can get a collection of unbilled reconciliation line item details for specified period using the Partner Center APIs.
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,7 +14,9 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of commercial marketplace invoice line item details for the specified invoice.
+You can use the following methods get a collection of details for unbilled invoice line items (also known as open billing line items).
+
+[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 ## Prerequisites
 
@@ -30,16 +32,16 @@ To get the line items for the specified invoice, retrieve the invoice object:
 
 The invoice object contains all of the information for the specified invoice:
 
-- **Provider** identifies the source of the unbilled detail information (for example, **All**).
-- **InvoiceLineItemType** specifies the type (for example, **UsageLineItem**).
+- **Provider** identifies the source of the unbilled detail information (for example, **OneTime**).
+- **InvoiceLineItemType** specifies the type (for example, **BillingLineItem**).
 
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
-1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method
+1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
 3. Create an enumerator to traverse the collection. For an example, see the following sample code.
 
-The following sample code uses a `foreach` loop to process the **InvoiceLineItems** collection. A separate collection of line items is retrieved for each **InvoiceLineItemType**.
+The following sample code uses a **foreach** loop to process the **InvoiceLineItems** collection. A separate collection of line items is retrieved for each **InvoiceLineItemType**.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -50,7 +52,7 @@ The following sample code uses a `foreach` loop to process the **InvoiceLineItem
 // all the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Get();
+var seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("onetime", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Get();
 
 var fetchNext = true;
 
@@ -91,7 +93,7 @@ while (fetchNext)
     {
         if (seekBasedResourceCollection.Links.Next.Headers != null && seekBasedResourceCollection.Links.Next.Headers.Any())
         {
-            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("all", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
+            seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("onetime", "billinglineitems", currencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }
 }
@@ -99,68 +101,72 @@ while (fetchNext)
 
 For a similar example, see:
 
-- [Console test app](console-test-app.md)
-- Project: Partner Center SDK Samples
-- Class: GetUnBilledReconLineItemsPaging.cs
+- Sample: [Console test app](console-test-app.md)
+- Project: **Partner Center SDK Samples**
+- Class: **GetUnBilledReconLineItemsPaging.cs**
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
 
-Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using `seekOperation = "Next"`.
+#### Request syntax
 
- | Method  | Request URI                                                                                                                                                     |
+You can use the following syntaxes for your REST request, depending on your use case. For more information, see the descriptions for each syntax.
+
+ | Method  | Request URI            | Description of syntax use case                                                                                |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
-#### URI parameters
+##### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
-| provider               | string | Yes      | The provider: "Marketplace", "All".                                                |
-| invoice-line-item-type | string | Yes      | The type of invoice detail: "billinglineitems", "UsageLineItems".               |
+| provider               | string | Yes      | The provider: "OneTime".                                                |
+| invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems".               |
+| hasPartnerEarnedCredit | bool   | No       | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when provider type is OneTime and InvoiceLineItemType is UsageLineItems.
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
 | period                 | string | Yes      | The period for unbilled recon. example: current, previous.                      |
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
-### Request headers
+#### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 None.
 
-## REST Response
+### REST response
 
 If successful, the response contains the collection of line item details.
 
-> [!NOTE]
-> For the line item ChargeType, the value "Purchase" is mapped to "New" and the value "Refund" is mapped to "Cancel".
+*For the line item **ChargeType**, the value **Purchase** is mapped to **New** and the value **Refund** is mapped to **Cancel**.*
 
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-## REST request and response examples
+### Request-response examples
 
-### Request and response example 1
+#### Request-response example 1
 
-- Provider: **All**
+The following details apply to this example:
+
+- Provider: **OneTime**
 - InvoiceLineItemType: **BillingLineItems**
 - Period: **Previous**
 
 #### Request example 1
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1//invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
-Authorization: Bearer <token> 
+GET https://api.partnercenter.microsoft.com/v1//invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
@@ -217,8 +223,13 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "chargeEndDate": "2019-03-03T09:22:40.1767993-08:00",
             "termAndBillingCycle": "1 Month Subscription",
             "alternateId": "123456ad566",
+            "priceAdjustmentDescription": "[\"15.0% Partner earned credit for services managed\"]",
             "discountDetails": "",
-            "providerSource": "All",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "billableQuantity": 3.1618,
+			"meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
@@ -256,8 +267,13 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "chargeEndDate": "2019-03-03T09:22:34.6455294-08:00",
             "termAndBillingCycle": "1 Month Subscription",
             "alternateId": "123456ad566",
+            "priceAdjustmentDescription": "[\"15.0% Partner earned credit for services managed\",\"100.0% Tier 1 Discount\"]",
             "discountDetails": "",
-            "providerSource": "All",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "billableQuantity": 0.737083,
+			"meterDescription": "",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
@@ -265,12 +281,12 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
     ],
     "links": {
         "self": {
-            "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
+            "uri": "/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
             "method": "GET",
             "headers": []
         },
         "next": {
-            "uri": "/invoices/unbilled/lineitems?provider=all&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
+            "uri": "/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000&seekOperation=Next",
             "method": "GET",
             "headers": [
                 {
@@ -286,9 +302,11 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 }
 ```
 
-### Request and response example 2
+### Request-response example 2
 
-- Provider: **All**
+The following details apply to this example:
+
+- Provider: **OneTime**
 - InvoiceLineItemType: **BillingLineItems**
 - Period: **Previous**
 - SeekOperation: **Next**
@@ -296,7 +314,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 #### Request example 2
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=all&invoiceLineItemType=billinglineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=onetime&invoiceLineItemType=billinglineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
@@ -356,7 +374,93 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "termAndBillingCycle": "1 Month Subscription",
             "alternateId": "123456ad566",
             "discountDetails": "",
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+        }
+    ],
+    "links": {
+        "self": {
+             "uri": "/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode=usd&period=previous&size=2000",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Collection"
+    }
+}
+
+#### Request example 3
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/invoices/unbilled/lineitems?provider=OneTime&invoiceLineItemType=UsageLineItems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-ContinuationToken: d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7
+MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
+MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
+X-Locale: en-US
+MS-PartnerCenter-Application: Partner Center .NET SDK Samples
+Host: api.partnercenter.microsoft.com
+```
+
+#### Response example 3
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 2484
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
+MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
+MS-CV: bpqyomePDUqrSSYC.0
+MS-ServerId: 202010406
+Date: Wed, 20 Feb 2019 19:59:27 GMT
+
+{
+    "totalCount": 1,
+    "items": [
+        {
+            "partnerId": "0c924e8d-4852-4692-a4d7-7dd0dc09ad80",
+            "PartnerName": "testPartner",
+            "customerId": "org:d7f565f5-5367-492f-a465-9e2057c5e3c3",
+            "customerName": "TEST_TEST_GTM1",
+            "customerDomainName": "TESTTESTGTM1.ccsctp.net",
+            "invoiceNumber": "T11ETHHDDD",
+            "productId": "DZH318Z0BXWC",
+            "skuId": "0005",
+            "availabilityId": "DZH318Z0BH9R",
+            "productName": "Test WAF-as-a-Service",
+            "publisherId": "21223810",
+            "subscriptionId": "12345678-28db-48c2-8c30-04d7c9455746",
+            "subscriptionDescription": "sub description",
+            "chargeStartDate": "2019-02-04T09:22:34.6455294-08:00",
+            "chargeEndDate": "2019-03-03T09:22:34.6455294-08:00",
+            "UsageDate": "2019-02-07T09:22:34.6455294-08:00",
+            "MeterType": "type",
+            "MeterCategory": "category",
+            "MeterId": "21312312312-fdsfsd",
+            "MeterSubCategory": "subcategory",
+            "MeterName": "meter name",
+            "MeterRegion": "meter region",
+            "UnitOfMeasure": "11",
+            "skuName": "Test WaaS - Large Plan",
+            "publisherName": "Test Networks, Inc.",
+            "chargeType": "New",
+            "unitPrice": 2598,
+            "effectiveUnitPrice": 2598,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 2598,
+            "taxTotal": 0,
+            "totalForCustomer": 0,
+            "currency": "USD",
+            "termAndBillingCycle": "1 Month Subscription",
+            "alternateId": "123456ad566",
+            "discountDetails": "",
             "providerSource": "All",
+            "RateOfPartnerEarnedCredit": 0.15,
+            "IsPartnerEarnedCreditApplied": true
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }

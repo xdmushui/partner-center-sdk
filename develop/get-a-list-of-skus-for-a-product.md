@@ -1,35 +1,40 @@
 ---
-title: Get a list of SKUs for a product
-description: Gets a collection of SKUs for the specified product.
+title: Get a list of SKUs for a product (by country)
+description: You can get and filter a collection of SKUs by country for a product using the Partner Center APIs.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 09/17/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
-# Get a list of SKUs for a product
+# Get a list of SKUs for a product (by country)
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
-Gets a collection of SKUs for a particular product.
+You can get a collection of SKUs available in a country for a specific product using Partner Center APIs.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID. 
+- A product identifier.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C#
+To get the list of SKUs for a product:
 
-To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Finally, call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product. Optionally, you can use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
+1. Get an interface for a specific product's operations by following the steps in [Get a product by ID](get-a-product-by-id.md).
+2. From the interface, select the **Skus** property to obtain an interface with the available operations for SKUs.
+3. Call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product.
+4. (Optional) Select the reservation scope using the **ByReservationScope()** method.
+5. (Optional) Use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
 ``` csharp
 IAggregatePartner partnerOperations;
 
 string countryCode;
 string productId;
+string productIdForAzureReservation;
 string targetSegment;
 
 // Get the available SKUs.
@@ -37,13 +42,25 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Sku
 
 // Get the available SKUs, filtered by target segment.
 var segmentSkus = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ByTargetSegment(targetSegment).Get();
+
+// Get the skus for an Azure reservation product which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
+var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.Get();
+
+// Get the skus for an Azure reservation product which are applicable to Azure plans only.
+var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ByReservationScope("AzurePlan").Get();
+
 ```
 
-### Java
+## Java
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
-To get the list of SKUs for a product, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations.  From the resulting interface, select the **getSkus** function to obtain an interface with the available operations for SKUs. Finally, call the **get()** function to retrieve a collection of the available SKUs for the product. Optionally, you can use the **byTargetSegment()** function to filter the SKUs by target segment before calling the **get()** function.
+To get the list of SKUs for a product:
+
+1. Get an interface for a specific product's operations by following the steps in [Get a product by ID](get-a-product-by-id.md).
+2. From the interface, select the **getSkus** function to obtain an interface with the available operations for SKUs.
+3. Call the **get()** function to retrieve a collection of the available SKUs for the product.
+4. (Optional) Use the **byTargetSegment()** function to filter the SKUs by target segment before calling the **get()** function.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -59,34 +76,37 @@ ResourceCollection<Sku> skus = partnerOperations.getProducts().byCountry(country
 var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(productId).getSkus().byTargetSegment(targetSegment).get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
-To get the list of SKUs for a product, execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command. Optionally, you can specify the **Segment** parameter to filter the SKUs by target segment.
+To get the list of SKUs for a product:
+
+1. Execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command.
+2. (Optional) Specify the **Segment** parameter to filter the SKUs by target segment.
 
 ```powershell
-# $productId 
-# $targetSegment 
+# $productId
+# $targetSegment
 
 # Get the available SKUs.
-Get-PartnerProductSku -ProudctId $productId 
+Get-PartnerProductSku -ProudctId $productId
 
 # Get the available SKUs, filtered by target segment.
 Get-PartnerProductSku -ProductId $productId -Segment $targetSegment
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST
 
-**Request syntax**
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                                                              |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus?country={country-code}&targetSegment={target-segment} HTTP/1.1  |
 
- 
-
-**URI parameter**
+##### URI parameters
 
 Use the following path and query parameters to get a list of SKUs for a product.
 
@@ -95,18 +115,39 @@ Use the following path and query parameters to get a list of SKUs for a product.
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
+| reservationScope | string   | No | When querying for a list of SKUs for an Azure Reservation product, specify `reservationScope=AzurePlan` to get a list of SKUs which are applicable to AzurePlan. Exclude this parameter to get a list of SKUs for an Azure Reservation products which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
- 
+#### Request headers
 
-**Request headers**
+For more information, see [Headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+#### Request body
 
 None.
 
-**Request example**
+#### Request examples
+
+Get a list of SKUs for a given product:
+
+```http
+GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BPS6/skus?country=US HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: 18b41adf-29b5-48eb-b14f-c9683a4e5b7d
+MS-CorrelationId: e75c1060-852e-4b49-92b0-cd15167a0d51
+```
+
+Get a list of SKUs for an Azure Reservation product. Only include the SKUs which are applicable to Azure plans and not Microsoft Azure (MS-AZR-0145P) subscriptions:
+
+```http
+GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ5S/skus?country=US&reservationScope=AzurePlan HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: 18b41adf-29b5-48eb-b14f-c9683a4e5b7d
+MS-CorrelationId: e75c1060-852e-4b49-92b0-cd15167a0d51
+```
+
+Get a list of SKUs for an Azure Reservation product. Only include the SKUs which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions and not Azure plans:
 
 ```http
 GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ5S/skus?country=US HTTP/1.1
@@ -114,17 +155,13 @@ Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18b41adf-29b5-48eb-b14f-c9683a4e5b7d
 MS-CorrelationId: e75c1060-852e-4b49-92b0-cd15167a0d51
-X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
-Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+### REST response
 
 If successful, the response body contains a collection of [SKU](product-resources.md#sku) resources.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -135,8 +172,7 @@ This method returns the following error codes:
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
 | 404                  | 400013       | The parent product was not found.                                                                         |
 
-
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -253,11 +289,3 @@ Content-Length: 50917
     }
 }
 ```
-
- 
-
- 
-
-
-
-

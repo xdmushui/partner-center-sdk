@@ -1,24 +1,25 @@
 ---
-title: Get a list of availabilities for a SKU
-description: How to get a collection of availabilities for the specified product and SKU.
+title: Get a list of availabilities for a SKU (by country)
+description: How to get a collection of availabilities for the specified product and SKU by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 07/25/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
-# Get a list of availabilities for a SKU
+# Get a list of availabilities for a SKU (by country)
 
 Applies to:
 
 - Partner Center
 
-This topic describes how to get a collection of availabilities for a specified product and SKU.
+This topic describes how to get a collection of availabilities in a particular country for a specified product and SKU.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID.
-- A SKU ID.
+- A product identifier.
+- A SKU identifier.
+- A country.
 
 ## C\#
 
@@ -35,17 +36,28 @@ string countryCode;
 string productId;
 string skuId;
 string targetSegment;
+string productIdForAzureReservation;
+string skuIdForAzureReservation;
 
 // Get the availabilities.
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.Get();
 
 // Get the availabilities, filtered by target segment.
 var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Availabilities.BySegment(targetSegment).Get();
+
+// Get the availabilities for an Azure reservation product and sku which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions only.
+var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ById(skuIdForAzureReservation).Availabilities.ByReservationScope("AzurePlan").Get();
+
+// Get the availabilities for an Azure reservation product and sku which are applicable to Azure plans only.
+var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAzureReservation).Skus.ById(skuIdForAzureReservation).Availabilities.Get();
+
 ```
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                                                              |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -61,33 +73,59 @@ Use the following path and query parameters to get a list of availabilities for 
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
+| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify `reservationScope=AzurePlan` to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
-### Request headers
+#### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
-### Request body
+#### Request body
 
 None.
 
-### Request example
+#### Request examples
+
+##### Availabilities for SKU by country
+
+Follow this example to get a list of availabilities for a given SKU by country:
 
 ```http
-GET http:// api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&segment=commercial HTTP/1.1
+GET http:// api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02
 MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58
-X-Locale: en-US
-MS-PartnerCenter-Client: Partner Center .NET SDK
-Host: api.partnercenter.microsoft.com
 ```
 
-## REST response
+##### Availabilities for VM reservations (Azure plan)
 
-If successful, the response body contains a collection of [Availability](product-resources.md#availability) resources.
+Follow this example to get a list of availabilities by country for Azure VM reservation SKUs. This example is for SKUs that apply to Azure plans:
 
-### Response success and error codes
+```http
+GET https://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureReservationsVM&reservationScope=AzurePlan HTTP/1.1
+Authorization: Bearer
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
+##### Availabilities for VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
+
+Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/productsDZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1
+Authorization: Bearer
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
+### REST response
+
+If successful, the response body contains a collection of [**Availability**](product-resources.md#availability) resources.
+
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For a full list, see [Partner Center error codes](error-codes.md).
 
@@ -97,7 +135,7 @@ This method returns the following error codes:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Access to the requested **targetSegment** is not allowed.                                                     |
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
