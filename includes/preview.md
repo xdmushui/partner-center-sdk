@@ -1,2 +1,0 @@
-> [!WARNING]
-> This article contains information about Partner Center API feature(s) in private preview. After **November 1, 2019**, you should refer to the latest version of this article on <https://docs.microsoft.com/en-us/partner-center/develop/> instead.

@@ -2,13 +2,11 @@
 title: Customer usage resources
 description: Resources for customers with usage-based subscriptions and monthly use budgets (including CustomerMonthlyUsageRecord, CustomerUsageSummary, PartnerUsageSummary, and SpendingBudget).
 ms.assetid: 268C7AF5-3A95-451F-8092-033A3E8126F2
-ms.date: 10/23/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Customer usage resources
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 

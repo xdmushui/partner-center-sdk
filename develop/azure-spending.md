@@ -2,13 +2,11 @@
 title: Azure spending
 description: CSP partners can use Partner Center APIs to view and manage their Azure spending. They can also programmatically view their customers' Azure spending against their budget.
 ms.assetid: 
-ms.date: 09/24/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Azure spending
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 

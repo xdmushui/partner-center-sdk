@@ -2,13 +2,11 @@
 title: Get a list of SKUs for a product (by country)
 description: You can get and filter a collection of SKUs by country for a product using the Partner Center APIs.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
-ms.date: 10/23/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of SKUs for a product (by country)
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 

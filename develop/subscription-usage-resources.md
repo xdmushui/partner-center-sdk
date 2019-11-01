@@ -2,13 +2,11 @@
 title: Subscription usage resources
 description: Subscription usage resources describe subscriptions with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
-ms.date: 10/23/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Subscription usage resources
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 

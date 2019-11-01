@@ -2,13 +2,11 @@
 title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.date: 10/23/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Subscription resources
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
 

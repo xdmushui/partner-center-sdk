@@ -1,13 +1,11 @@
 ---
 title: Get invoice billed commercial consumption line items
 description: You can get a collection of commercial consumption invoice line item (closed daily rated usage line item) details for a specified invoice using the Partner Center APIs.
-ms.date: 10/23/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
 # Get invoice billed commercial consumption line items
-
-[!INCLUDE [<Preview content warning>](<../includes/preview.md>)]
 
 Applies to:
  
