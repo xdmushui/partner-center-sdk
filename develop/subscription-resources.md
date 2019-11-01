@@ -1,8 +1,8 @@
 ---
 title: Subscription resources
-description: A subscription lets a customer use a service for a certain period of time.
+description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
-ms.date: 07/12/2019
+ms.date: 11/01/2019
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions, and many only apply at certain points in the life cycle, such as if a subscription is suspended or cancelled.
+A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions. Many fields only apply at certain points in the life cycle, such as if a subscription is suspended or cancelled.
 
 ## Subscription
 
@@ -121,3 +121,14 @@ The **RefundOption** resource represents a possible refund option for the subscr
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | type | string | The type of refund. The supported values are "Partial" and "Full" |
 | expiresAfter      | string in UTC date time format | The timestamp when this option expires. If null, this means it has no expiration. |
+
+## AzureEntitlement
+
+The **AzureEntitlement** resource represents the Azure entitlements for the subscription.
+
+| Property          | Type | Description                                                                         |
+|-------------------|--------|-------------------------------------------------------------------------------------|
+| id | string | The entitlement identifier |
+| friendlyName      | string | The friendly name of the entitlement. |
+| status | string | The status of entitlement. |
+| subscriptionId | string | The subscription identifier the entitlement belongs to. |
