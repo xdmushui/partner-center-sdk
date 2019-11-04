@@ -51,6 +51,7 @@
 #### [Get Microsoft Partner Network profile](get-partner-network-profile.md)
 #### [Get partner billing profile](get-partner-billing-profile.md)
 #### [Verify a partner MPN ID](get-partner-by-mpn-id.md)
+#### [Verify an indirect reseller’s Microsoft Partner Agreement signing status](verify-indirect-reseller-mpa-status.md)
 #### [Get support profile](get-support-profile.md)
 #### [Get the partner legal business profile](get-legal-business-profile.md)
 #### [Retrieve a list of indirect resellers](retrieve-a-list-of-indirect-resellers.md)
