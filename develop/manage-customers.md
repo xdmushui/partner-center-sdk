@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer accounts.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage customer accounts.
 
 **Create a customer**
 - [Request a reseller relationship](request-reseller-relationship.md) 
