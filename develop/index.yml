@@ -12,64 +12,63 @@ metadata:
   author: lauradolan
   ms.author: ladolan
   ms.date: 11/05/2019
-  
-landingContent:
-  - title: Get the SDKs
-    linkLists:
-      - linkListType: download
-        links:
-          - text: .NET SDK
-            url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
-          - text: Java SDK 
-            url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
-          - text: (The Java SDK is open source. You can learn more, contribute, and file issues at the GitHub repository.)
-            url: https://github.com/Microsoft/Partner-Center-Java
-          - text: Powershell module
-            url: https://www.powershellgallery.com/packages/PartnerCenter
-          - text: (The PowerShell module is open source. You can learn more, contribute, and file issues at the GitHub repository.)
-            url: https://github.com/Microsoft/Partner-Center-PowerShell
 
-  - title: Get started
+landingContent:
+# Get started card
+  - title: Getting started
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Configure your developer account and authentication
             url: partner-center-authentication.md
-      - linkListType: get-started
-        links:
           - text: Set up your environment
             url: get-started.md
-      - linkListType: get-started
-        links:
           - text: Create an Azure plan with the APIs
             url: create-azure-plan.md
-
-  - title: API reference
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Partner Center Managed API
-            url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
-          - text: Partner Center REST API
-            url: partner-center-rest-api-reference.md
-          - text: Partner Center Java API
-            url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
-          - text: Partner Center PowerShell commands
-            url: https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
           - text: Swagger API for Cloud Solution Provider (CSP) program
             url: https://apidocs.microsoft.com/services/partnercenter
 
-  - title: Samples
+# NET SDK card
+ - title: Partner Center .NET SDK (v1.15.1)
+    linkLists:
+      - linkListType: download
+        links:
+          - text: .NET SDK
+            url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
+          - text: Partner Center managed API reference
+            url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
+          - text: .NET API samples
+            url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
+
+# Java SDK card
+ - title: Partner Center Java SDK (open source)
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Download the Java SDK
+            url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
+          - text: Java SDK GitHub repo (for questions, contributions and issues)
+            url: https://github.com/Microsoft/Partner-Center-Java
+          - text: Java API reference
+            url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
+
+# PowerShell module card
+ - title: Get the PowerShell module (open source)
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Install the PowerShell module
+            url: https://www.powershellgallery.com/packages/PartnerCenter
+          - text: PowerShell module GitHub repo (for questions, contributions and issues)
+            url: https://github.com/Microsoft/Partner-Center-PowerShell
+          - text: PowerShell commands https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
+
+# Samples card
+  - title: Samples and scenarios
     linkLists:
       - linkListType: overview
         links:
-          - text: Partner Center samples overview
+          - text: Code samples
             url: partner-center-samples.md
-      - linkListType: how-to-guide
-        links:
-          - text: Scenarios with code snippets
+          - text: Example scenarios
             url: scenarios.md
-      - linkListType: download
-        links:
-          - text: GitHub samples
-            url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
