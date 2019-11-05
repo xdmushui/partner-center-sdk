@@ -125,7 +125,7 @@ Use the following URI and query parameters when creating the request.
 
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| invoice-id             | string | Yes      | A string that identifies the invoice. Use ‘unbilled’ to get unbilled estimates. |
+| invoice-id             | string | Yes      | A string that identifies the invoice. Use 'unbilled' to get unbilled estimates. |
 | provider               | string | Yes      | The provider: "OneTime".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems".               |
 | hasPartnerEarnedCredit | bool   | No       | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when provider type is OneTime and InvoiceLineItemType is UsageLineItems.

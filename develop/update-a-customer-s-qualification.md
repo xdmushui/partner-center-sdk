@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 Updates a customer's qualification.
 
-A partner can update a customer’s qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
+A partner can update a customer's qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 

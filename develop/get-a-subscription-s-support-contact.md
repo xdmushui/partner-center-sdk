@@ -34,7 +34,7 @@ To get a subscription's support contact, start by using the [**IAggregatePartner
 // string customerId;
 // string subscriptionId; 
 
-// Retrieve subscription’s support contact.
+// Retrieve subscription's support contact.
 var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId).SupportContact.Get();
 ```
 

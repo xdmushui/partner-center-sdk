@@ -275,7 +275,7 @@ Content-Length: 50917
                 }
             }
         }
-        […]
+        [...]
     ],
     "links": {
         "self": {

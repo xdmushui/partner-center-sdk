@@ -39,7 +39,7 @@ The differences for partners between *Partner Center* and *Partner Center operat
 ## Partner Center for Microsoft Cloud Germany
 
 > [!IMPORTANT]
-> Based on the evolution in customers’ needs, our cloud strategy for Germany will focus on delivery of the new cloud regions in Germany that are consistent with our global cloud offering. With this focus, we will no longer be accepting new customers or deploying any new services from the currently available Microsoft Cloud Germany. Existing customers can continue to use the current cloud services available today, which we’ll maintain with necessary security updates.
+> Based on the evolution in customers' needs, our cloud strategy for Germany will focus on delivery of the new cloud regions in Germany that are consistent with our global cloud offering. With this focus, we will no longer be accepting new customers or deploying any new services from the currently available Microsoft Cloud Germany. Existing customers can continue to use the current cloud services available today, which we'll maintain with necessary security updates.
 >
 > Moving forward, new customers have the option to use the currently available European regions or the new regions in Germany when they become available. For more information, see [Microsoft to deliver cloud services from new datacenters in Germany](https://news.microsoft.com/europe/2018/08/31/microsoft-to-deliver-cloud-services-from-new-datacentres-in-germany-in-2019-to-meet-evolving-customer-needs/).
 

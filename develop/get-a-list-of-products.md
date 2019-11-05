@@ -199,7 +199,7 @@ This method returns the following error codes:
                 }
             }
         },
-        …
+        ...
     ],
     "links": {
         "self": {

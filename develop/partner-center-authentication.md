@@ -159,7 +159,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
 
-    Set-AzureRmKeyVaultAccessPolicy –VaultName ContosoVault –ObjectId $app.ObjectId –PermissionsToSecrets get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName ContosoVault -ObjectId $app.ObjectId -PermissionsToSecrets get
     ```
 
 4. Create an Azure AD application that is configured for Partner Center. Perform the following actions to complete this step.
@@ -247,7 +247,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
 
-    Set-AzureRmKeyVaultAccessPolicy –VaultName ContosoVault –ObjectId $app.ObjectId –PermissionsToSecrets get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName ContosoVault -ObjectId $app.ObjectId -PermissionsToSecrets get
     ```
 
 4. Create an Azure AD application that is configured for Partner Center. Preform the following to complete this step.

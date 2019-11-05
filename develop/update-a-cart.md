@@ -26,7 +26,7 @@ How to update an order for a customer in a cart.
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID’s using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
+To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
 
 Finally, call the **Put()** or **PutAsync()** method to create the order.
 

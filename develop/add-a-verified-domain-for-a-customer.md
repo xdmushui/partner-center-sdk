@@ -81,7 +81,7 @@ This table describes the required and optional **DomainFederationSettings** prop
 
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
-| ActiveLogOnUri                         | string           | No      | The logon URI used by rich clients. This is the partner’s STS Auth URL. |
+| ActiveLogOnUri                         | string           | No      | The logon URI used by rich clients. This is the partner's STS Auth URL. |
 | DefaultInteractiveAuthenticationMethod | string           | No      | Indicates the default authentication method that should be used when an application requires the user to have interactive login. |
 | FederationBrandName                    | string           | No      | The federation brand name.        |
 | IssuerUri                              | string           | Yes     | The name of the issuer of the certificates.                        |

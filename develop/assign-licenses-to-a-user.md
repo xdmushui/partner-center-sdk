@@ -204,7 +204,7 @@ Date: Thu, 20 Apr 2017 22:12:36 GMT
 
 {
     "code": 60012,
-    "description": "We&#39;re sorry, it looks like you’ve run out of licenses. Buy more licenses, and then try again.",
+    "description": "We&#39;re sorry, it looks like you've run out of licenses. Buy more licenses, and then try again.",
     "data": ["LicenseQuotaExceededException : Subscription with Account 0c39d6d5-c70d-4c55-bc02-f620844f3fd1 and SKU f8a1db68-be16-40ed-86d5-cb42ce701560 does not have any available licenses left."],
     "source": "PartnerFD"
 }

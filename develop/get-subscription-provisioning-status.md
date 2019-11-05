@@ -35,7 +35,7 @@ To get the provisioning status of a subscription, begin by using the [**IAggrega
 // string customerId;
 // string subscriptionId; 
 
-// Retrieve a subscription’s provisioning status.
+// Retrieve a subscription's provisioning status.
 var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionID).ProvisioningStatus.Get();
 ```
 

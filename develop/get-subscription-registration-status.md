@@ -32,7 +32,7 @@ To get the registration status of a subscription, begin by using the [**IAggrega
 // var selectedCustomerId;
 // var selectedSubscriptionId;
 
-// Retrieve a subscription’s registration status details.
+// Retrieve a subscription's registration status details.
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).RegistrationStatus.Get();
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Update a subscription's support contact
-description: How to update a subscription's support contact to one of the partner’s value added resellers.
+description: How to update a subscription's support contact to one of the partner's value added resellers.
 ms.assetid: 6DE6EF60-6F8B-46F2-8278-CD706081B180
 ms.date: 12/15/2017
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to update a subscription's support contact to one of the partner’s value added resellers.
+How to update a subscription's support contact to one of the partner's value added resellers.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -38,9 +38,9 @@ To update a subscription's support contact, first instantiate and populate a [**
 // Instantiate a SupportContact object and populate it with the new support contact information.
 var supportContact = new SupportContact()
 {
-    Name = "Support contact’s name",
-    SupportTenantId = "Support contact’s tenant ID",
-    SupportMpnId = "Support contact’s MPN ID"
+    Name = "Support contact's name",
+    SupportTenantId = "Support contact's tenant ID",
+    SupportMpnId = "Support contact's MPN ID"
 };
 
 // Update the support contact with a new object that has valid VAR values.

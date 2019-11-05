@@ -48,9 +48,9 @@ Use the following required path parameter to identify your organization and filt
 The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
 
 An unencoded example looks like this:
-- String: ?filter=Field operator ‘Value’
+- String: ?filter=Field operator 'Value'
 - Boolean: ?filter=Field operator Value
-- Contains ?filter=contains(field,’value’)
+- Contains ?filter=contains(field,'value')
 
 
 **Filter fields**

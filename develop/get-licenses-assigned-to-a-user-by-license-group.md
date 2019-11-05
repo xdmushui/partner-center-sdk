@@ -64,7 +64,7 @@ Use the following path and query parameters to identify the customer, user and l
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
 | user-id         | string | Yes      | A GUID formatted string that identifies the user.                                                                                                                                                                                                                     |
-| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 – This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 – This group has only Minecraft product licenses. |
+| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
  
 
