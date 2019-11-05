@@ -62,7 +62,7 @@ landingContent:
         links:
           - text: Senarios with code snippets
             url: scenarios.md
-      - linkListType: dopwnload
+      - linkListType: download
         links:
           - text: GitHub samples
             url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
