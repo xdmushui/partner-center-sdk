@@ -25,7 +25,7 @@ landingContent:
             url: get-started.md
       - linkListType: whats-new
         links:
-            - text: Create an Azure plan with the APIs
+          - text: Create an Azure plan with the APIs
             url: create-azure-plan.md
       - linkListType: download
         links:
