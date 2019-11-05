@@ -14,7 +14,6 @@ metadata:
   ms.date: 11/05/2019
 
 landingContent:
-# Get started card
   - title: Getting started
     linkLists:
       - linkListType: how-to-guide
@@ -32,7 +31,6 @@ landingContent:
           - text: Swagger API for Cloud Solution Provider (CSP) program
             url: https://apidocs.microsoft.com/services/partnercenter
 
-# NET SDK card
  - title: Partner Center .NET SDK (v1.15.1)
     linkLists:
       - linkListType: download
@@ -46,7 +44,6 @@ landingContent:
           - text: Partner Center managed API reference
             url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
 
-# Java SDK card
  - title: Partner Center Java SDK (open source)
     linkLists:
       - linkListType: download
@@ -60,7 +57,6 @@ landingContent:
             - text: Java API reference
             url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
 
-# PowerShell module card
  - title: Get the PowerShell module (open source)
     linkLists:
       - linkListType: download
@@ -73,7 +69,6 @@ landingContent:
         links:
             - text: PowerShell commands https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
 
-# Samples card
   - title: Samples and scenarios
     linkLists:
       - linkListType: concept
