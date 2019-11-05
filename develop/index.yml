@@ -6,12 +6,13 @@ summary: Collaborate with Microsoft on the development of partner features and c
 metadata:
   title: Partner Center developer Documentation
   description: Collaborate with Microsoft on the development of partner features and capabilities.
-  ms.service: lighthouse
+  ms.service: partner-dashboard
+  ms.subservice: partnercenter-csp
   ms.topic: landing-page
   ms.collection: collection
-  author: JnHs
-  ms.author: jenhayes
-  ms.date: 09/25/2019
+  author: lauradolan
+  ms.author: ladolan
+  ms.date: 11/05/2019
   
 landingContent:
   - title: Get the SDKs
@@ -25,6 +26,7 @@ landingContent:
           - text: Powershell module
             url: https://www.powershellgallery.com/packages/PartnerCenter
 
+landingContent:
   - title: Get started
     linkLists:
       - linkListType: how-to-guide
@@ -35,6 +37,10 @@ landingContent:
         links:
           - text: Set up your environment
             url: get-started.md
+      - linkListType: get-started
+        links:
+          - text: Create an Azure plan with the APIs
+            url: create-azure-plan.md
 
 landingContent:
   - title: API reference
@@ -52,6 +58,7 @@ landingContent:
           - text: Swagger API for Cloud Solution Provider (CSP) program
             url: https://apidocs.microsoft.com/services/partnercenter
 
+landingContent:
   - title: Samples
     linkLists:
       - linkListType: overview
@@ -60,7 +67,7 @@ landingContent:
             url: partner-center-samples.md
       - linkListType: how-to-guide
         links:
-          - text: Senarios with code snippets
+          - text: Scenarios with code snippets
             url: scenarios.md
       - linkListType: download
         links:
