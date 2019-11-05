@@ -46,6 +46,13 @@ landingContent:
           - text: Managed .NET API reference
             url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
 
+  - title: Use the REST APIs
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Partner Center REST API reference
+            url: https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference
+
   - title: Use the Java SDK (open source)
     linkLists:
       - linkListType: download
