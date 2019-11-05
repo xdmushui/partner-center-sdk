@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
 
 **Billing Cycle:**
 - [Change the billing cycle](change-the-billing-cycle.md)

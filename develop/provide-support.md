@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage support and service requests.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage support and service requests.
 
 **Admin services for a customer**
 
