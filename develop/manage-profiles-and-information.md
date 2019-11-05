@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage their user accounts and profiles.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage their user accounts and profiles.
 
 - [Get legal business profile](get-legal-business-profile.md)
 - [Get an organization profile](get-an-organization-profile.md)

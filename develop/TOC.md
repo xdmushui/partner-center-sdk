@@ -1,4 +1,4 @@
-# [Partner Center developer resources](index.md)
+# [Partner Center developer resources](index.yml)
 ## [Get started](get-started.md)
 ### [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md)
 #### [Register app details for Partner Center](create-apps-for-partner-center-for-microsoft-national-clouds.md)
