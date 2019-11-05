@@ -1,3 +1,4 @@
+# [Partner Center developer resources](index.md)
 ## [Get started](get-started.md)
 ### [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md)
 #### [Register app details for Partner Center](create-apps-for-partner-center-for-microsoft-national-clouds.md)
@@ -50,7 +51,7 @@
 #### [Get Microsoft Partner Network profile](get-partner-network-profile.md)
 #### [Get partner billing profile](get-partner-billing-profile.md)
 #### [Verify a partner MPN ID](get-partner-by-mpn-id.md)
-#### [Verify an indirect reseller's Microsoft Partner Agreement signing status](verify-indirect-reseller-mpa-status.md)
+#### [Verify an indirect reseller’s Microsoft Partner Agreement signing status](verify-indirect-reseller-mpa-status.md)
 #### [Get support profile](get-support-profile.md)
 #### [Get the partner legal business profile](get-legal-business-profile.md)
 #### [Retrieve a list of indirect resellers](retrieve-a-list-of-indirect-resellers.md)
