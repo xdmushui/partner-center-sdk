@@ -23,8 +23,12 @@ landingContent:
             url: partner-center-authentication.md
           - text: Set up your environment
             url: get-started.md
-          - text: Create an Azure plan with the APIs
+      - linkListType: whats-new
+        links:
+            - text: Create an Azure plan with the APIs
             url: create-azure-plan.md
+      - linkListType: download
+        links:
           - text: Swagger API for Cloud Solution Provider (CSP) program
             url: https://apidocs.microsoft.com/services/partnercenter
 
@@ -35,10 +39,12 @@ landingContent:
         links:
           - text: .NET SDK
             url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
-          - text: Partner Center managed API reference
-            url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
           - text: .NET API samples
             url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
+      - linkListType: reference
+        links:
+          - text: Partner Center managed API reference
+            url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
 
 # Java SDK card
  - title: Partner Center Java SDK (open source)
@@ -49,7 +55,9 @@ landingContent:
             url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
           - text: Java SDK GitHub repo (for questions, contributions and issues)
             url: https://github.com/Microsoft/Partner-Center-Java
-          - text: Java API reference
+      - linkListType: reference
+        links:
+            - text: Java API reference
             url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
 
 # PowerShell module card
@@ -61,12 +69,14 @@ landingContent:
             url: https://www.powershellgallery.com/packages/PartnerCenter
           - text: PowerShell module GitHub repo (for questions, contributions and issues)
             url: https://github.com/Microsoft/Partner-Center-PowerShell
-          - text: PowerShell commands https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
+      - linkListType: reference
+        links:
+            - text: PowerShell commands https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
 
 # Samples card
   - title: Samples and scenarios
     linkLists:
-      - linkListType: overview
+      - linkListType: concept
         links:
           - text: Code samples
             url: partner-center-samples.md
