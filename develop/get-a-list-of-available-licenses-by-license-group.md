@@ -3,6 +3,8 @@ title: Get a list of available licenses by license group
 description: How to get a list of licenses for the specified license groups available to users of the specified customer.
 ms.assetid: 1677A68C-0298-49C7-BAE1-5E74D8449C3F
 ms.date: 07/22/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -64,7 +66,7 @@ Use the following path and query parameters to identify the customer and the lic
 | Name            | Type   | Required | Description                                                                                                                                                                                                                                                           |
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
-| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 – This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 – This group has only Minecraft product licenses. |
+| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
  
 

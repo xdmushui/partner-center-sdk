@@ -3,6 +3,8 @@ title: Partner Center authentication
 description: Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
 ms.date: 10/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -159,7 +161,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
 
-    Set-AzureRmKeyVaultAccessPolicy –VaultName ContosoVault –ObjectId $app.ObjectId –PermissionsToSecrets get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName ContosoVault -ObjectId $app.ObjectId -PermissionsToSecrets get
     ```
 
 4. Create an Azure AD application that is configured for Partner Center. Perform the following actions to complete this step.
@@ -247,7 +249,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
 
-    Set-AzureRmKeyVaultAccessPolicy –VaultName ContosoVault –ObjectId $app.ObjectId –PermissionsToSecrets get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName ContosoVault -ObjectId $app.ObjectId -PermissionsToSecrets get
     ```
 
 4. Create an Azure AD application that is configured for Partner Center. Preform the following to complete this step.

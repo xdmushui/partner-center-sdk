@@ -2,6 +2,8 @@
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -145,7 +147,7 @@ Content-Type: application/json; charset=utf-8
 Response body:
 
 ```http
-{"token_type":"Bearer","scope":"user_impersonation","expires_in":"3599","ext_expires_in":"3599","expires_on":"1547579127","not_before":"1547575227","resource":"https://api.partnercenter.microsoft.com","access_token”:”Access
+{"token_type":"Bearer","scope":"user_impersonation","expires_in":"3599","ext_expires_in":"3599","expires_on":"1547579127","not_before":"1547575227","resource":"https://api.partnercenter.microsoft.com","access_token":"Access
 ```
 
 ### Get access token

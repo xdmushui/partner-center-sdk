@@ -3,6 +3,8 @@ title: Azure rate card resources
 description: The Azure Rate Card provides real-time prices for Azure offers.
 ms.assetid: A42B4FFA-278E-41FF-B51E-E48C2CA70EEF
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

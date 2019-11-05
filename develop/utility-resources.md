@@ -3,6 +3,8 @@ title: Utility resources
 description: The Partner Center REST API contains many resources which describe general-purpose data models used throughout the SDK.
 ms.assetid: C77219B9-FFDD-4779-AE15-5B15BA7BA863
 ms.date: 11/08/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

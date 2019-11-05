@@ -2,6 +2,8 @@
 title: Remove a reseller relationship with a customer
 description: How to remove a reseller relationship with a customer that you no longer have transactions with. 
 ms.date: 01/12/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

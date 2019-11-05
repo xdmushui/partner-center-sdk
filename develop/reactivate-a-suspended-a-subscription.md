@@ -3,6 +3,8 @@ title: Reactivate a suspended subscription
 description: Reactivates a Subscription that was previously suspended for nonpayment.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.assetid: BA30B220-C67D-4795-ACB7-7FE22B0B0F63
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

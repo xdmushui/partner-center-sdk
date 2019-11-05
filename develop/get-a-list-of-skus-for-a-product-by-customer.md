@@ -3,6 +3,8 @@ title: Get a list of SKUs for a product (by customer)
 description: Gets a collection of SKUs for the specified product by customer.
 ms.assetid:
 ms.date: 10/11/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

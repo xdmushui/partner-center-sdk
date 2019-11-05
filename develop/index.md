@@ -4,6 +4,8 @@ hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
 ms.date: 09/20/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.topic: landing-page
 searchScope: []
 ---
@@ -87,7 +89,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
                         </div>
                         <div class="cardText">
                             <h3>Download samples</h3>
-                            <p>Get a console app to help you test, or a web store that’s ready to customize and launch.</p>
+                            <p>Get a console app to help you test, or a web store that's ready to customize and launch.</p>
                         </div>
                     </div>
                 </div>
@@ -166,7 +168,7 @@ Collaborate with Microsoft on the development of Partner features and capabiliti
 <h2>What&#39;s New</h2>
 <p><strong>Partner Center .NET SDK v1.15.1 and updated REST APIs are now available!</strong></p>
 
-<p>We’re pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.15.1</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
+<p>We're pleased to announce the general availability of the <a href="https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/" data-linktype="external">Microsoft Partner Center .NET SDK v1.15.1</a> and updated REST APIs along  with <a href="https://github.com/Microsoft/Partner-Center-DotNet-Samples" data-linktype="external">updated public Partner Center SDK GitHub samples</a>.</p>
 
 <ul id="whatsnew" class="cardsF cols cols2 panelContent">
     <li>

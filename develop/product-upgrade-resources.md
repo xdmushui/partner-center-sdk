@@ -3,6 +3,8 @@ title: Product upgrade resources
 description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails.
 ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

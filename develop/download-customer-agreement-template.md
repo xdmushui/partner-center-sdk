@@ -2,6 +2,8 @@
 title: Get a download link for the Microsoft Customer Agreement template
 description: Get a download link for Microsoft Customer Agreement template.
 ms.date: 09/19/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

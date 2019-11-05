@@ -3,6 +3,8 @@ title: Get a list of products (by country)
 description: You can use the Product resource to get a collection of products by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -199,7 +201,7 @@ This method returns the following error codes:
                 }
             }
         },
-        …
+        ...
     ],
     "links": {
         "self": {

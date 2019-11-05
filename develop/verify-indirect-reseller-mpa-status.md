@@ -1,11 +1,13 @@
 ---
-title: Verify an indirect reseller’s Microsoft Partner Agreement signing status
+title: Verify an indirect reseller's Microsoft Partner Agreement signing status
 description: You can use the AgreementStatus API to verify whether an indirect reseller has signed the Microsoft Partner Agreement.
 ms.date: 10/30/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Verify an indirect reseller’s Microsoft Partner Agreement signing status
+# Verify an indirect reseller's Microsoft Partner Agreement signing status
 
 Applies to:
 
@@ -31,7 +33,7 @@ You can verify whether an indirect reseller has signed the Microsoft Partner Agr
 
 ##### URI parameters
 
-You must provide one of the following two query parameters to identify the partner. If you don’t provide one of these two query parameters, you will receive a **400 (Bad request)** error.
+You must provide one of the following two query parameters to identify the partner. If you don't provide one of these two query parameters, you will receive a **400 (Bad request)** error.
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
@@ -46,7 +48,7 @@ For more information, see [Partner Center REST headers](https://docs.microsoft.c
 
 ##### Request using MPN ID
 
-The following example request gets the indirect reseller’s Microsoft Partner Agreement signing status using the indirect reseller’s Microsoft Partner Network ID.
+The following example request gets the indirect reseller's Microsoft Partner Agreement signing status using the indirect reseller's Microsoft Partner Network ID.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/compliance/csp/agreementstatus?mpnid=1234567 HTTP/1.1
@@ -60,7 +62,7 @@ Host: api.partnercenter.microsoft.com
 
 ##### Request using CSP tenant ID
 
-The following example request gets the indirect reseller’s Microsoft Partner Agreement signing status using the indirect reseller’s CSP tenant ID (Microsoft ID).
+The following example request gets the indirect reseller's Microsoft Partner Agreement signing status using the indirect reseller's CSP tenant ID (Microsoft ID).
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/compliance/csp/agreementstatus?tenantId=a2898e3a-06ca-454e-a0d0-c73b0ee36bba HTTP/1.1
@@ -99,7 +101,7 @@ Connection: close
 
 #### Response examples (failure)
 
-You may receive responses similar to the following examples when the signing status of the indirect reseller’s Microsoft Partner Agreement can’t be returned.
+You may receive responses similar to the following examples when the signing status of the indirect reseller's Microsoft Partner Agreement can't be returned.
 
 ##### Non-GUID formatted CSP tenant ID
 
@@ -147,7 +149,7 @@ Connection: close
 
 ##### No MPN ID or CSP tenant ID
 
-The following example response is returned when you haven’t passed an MPN ID or CSP tenant ID to the API. You must pass one of the two ID types to the API.
+The following example response is returned when you haven't passed an MPN ID or CSP tenant ID to the API. You must pass one of the two ID types to the API.
 
 ```http
 HTTP/1.1 400 Bad Request

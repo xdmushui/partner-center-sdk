@@ -2,6 +2,8 @@
 title: Get the product upgrade status for a customer
 description: You can use the ProductUpgradeRequest resource to determine the status of a product upgrade for a customer to a new product family, such as from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan.
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

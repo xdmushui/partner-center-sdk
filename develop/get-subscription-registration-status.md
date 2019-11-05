@@ -2,6 +2,8 @@
 title: Get subscription registration status
 description: Get the status of a subscription that has been registered for use with Azure Reserved VM Instances.
 ms.date: 03/19/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -32,7 +34,7 @@ To get the registration status of a subscription, begin by using the [**IAggrega
 // var selectedCustomerId;
 // var selectedSubscriptionId;
 
-// Retrieve a subscription’s registration status details.
+// Retrieve a subscription's registration status details.
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).RegistrationStatus.Get();
 ```
 

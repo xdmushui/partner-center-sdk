@@ -3,6 +3,8 @@ title: Upload a list of devices to create a new batch for the specified customer
 description: How to upload a list of information about devices to create a new batch for the specified customer. This creates a device batch for enrollment in zero-touch deployment, and associates the devices and the device batch with the specified customer.
 ms.assetid: 94DB98F2-2188-46BB-97BA-100B8C94F120
 ms.date: 08/08/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
