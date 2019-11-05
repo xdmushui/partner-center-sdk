@@ -21,10 +21,14 @@ landingContent:
         links:
           - text: .NET SDK
             url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
-          - text: Java SDK
+          - text: Java SDK 
             url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
+          - text: (The Java SDK is open source. You can learn more, contribute, and file issues at the GitHub repository.)
+            url: https://github.com/Microsoft/Partner-Center-Java
           - text: Powershell module
             url: https://www.powershellgallery.com/packages/PartnerCenter
+          - text: (The PowerShell module is open source. You can learn more, contribute, and file issues at the GitHub repository.)
+            url: https://github.com/Microsoft/Partner-Center-PowerShell
 
 landingContent:
   - title: Get started
