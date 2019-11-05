@@ -7,7 +7,6 @@ metadata:
   title: Partner Center developer Documentation
   description: Collaborate with Microsoft on the development of partner features and capabilities.
   ms.service: partner-dashboard
-  ms.subservice: partnercenter-csp
   ms.topic: landing-page
   ms.collection: collection
   author: lauradolan
@@ -30,7 +29,6 @@ landingContent:
           - text: (The PowerShell module is open source. You can learn more, contribute, and file issues at the GitHub repository.)
             url: https://github.com/Microsoft/Partner-Center-PowerShell
 
-landingContent:
   - title: Get started
     linkLists:
       - linkListType: how-to-guide
@@ -46,7 +44,6 @@ landingContent:
           - text: Create an Azure plan with the APIs
             url: create-azure-plan.md
 
-landingContent:
   - title: API reference
     linkLists:
       - linkListType: reference
@@ -62,7 +59,6 @@ landingContent:
           - text: Swagger API for Cloud Solution Provider (CSP) program
             url: https://apidocs.microsoft.com/services/partnercenter
 
-landingContent:
   - title: Samples
     linkLists:
       - linkListType: overview
