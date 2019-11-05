@@ -4,7 +4,7 @@ description: Conversion resources support the conversion of a trial subscription
 ms.assetid: 4AE796E3-47D9-428B-8267-A5247B573E0C
 ms.date: 05/23/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

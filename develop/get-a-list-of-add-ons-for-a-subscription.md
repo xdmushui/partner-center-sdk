@@ -4,7 +4,7 @@ description: How to get a collection of add-ons that a customer has chosen to ad
 ms.assetid: F10823A2-CA77-4F80-9ED4-CFB4E4343049
 ms.date: 07/25/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: Gets the managed services for a customer. In other words, get links
 ms.assetid: 32554787-4232-4574-9FC9-5E9F26411233
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

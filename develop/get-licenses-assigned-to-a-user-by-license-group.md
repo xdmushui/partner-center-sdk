@@ -4,7 +4,7 @@ description: How to get a list of user assigned licenses for the specified licen
 ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

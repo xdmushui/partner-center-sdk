@@ -4,7 +4,7 @@ description: Updates a user's support profile.
 ms.assetid: 3F98BD1D-2490-4F0B-A8FF-7D80B7E0690E
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

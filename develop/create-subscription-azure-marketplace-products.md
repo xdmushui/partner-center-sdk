@@ -4,7 +4,7 @@ description: Developers can create and manage a subscription for commercial mark
 ms.assetid: 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

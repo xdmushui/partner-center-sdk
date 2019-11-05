@@ -4,7 +4,7 @@ description: Describes resources related to relationships.
 ms.assetid: F6157FE3-7C9D-4A8F-AC11-6F4007594C3D
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

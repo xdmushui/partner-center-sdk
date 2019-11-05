@@ -4,7 +4,7 @@ description: Multiple invoice-related resources are available through the Partne
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

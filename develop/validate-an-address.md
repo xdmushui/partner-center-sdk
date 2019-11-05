@@ -4,7 +4,7 @@ description: How to validate an address using the address validation API.
 ms.assetid: 38A136CD-5E42-46D2-85A4-ED08E30444B8
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

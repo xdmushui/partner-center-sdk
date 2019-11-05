@@ -4,7 +4,7 @@ description: How to update a subscription's support contact to one of the partne
 ms.assetid: 6DE6EF60-6F8B-46F2-8278-CD706081B180
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

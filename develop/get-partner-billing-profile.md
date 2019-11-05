@@ -4,7 +4,7 @@ description: Gets an object representing the partner's billing profile.
 ms.assetid: E5BAC2C4-8C58-4B5D-8FA9-C445896EEC4A
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

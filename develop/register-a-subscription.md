@@ -4,7 +4,7 @@ description: Register an existing subscription so that it is enabled for orderin
 ms.assetid: 9B853BF2-855C-4EB3-BBE5-7ECC1336AE08
 ms.date: 07/27/2018
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

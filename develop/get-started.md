@@ -4,7 +4,7 @@ description: The Partner Center SDK includes a managed API and a REST API for pa
 ms.assetid: D9A91032-CA5B-4CD2-ADBA-6C5513E05D32
 ms.date: 09/29/2018
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

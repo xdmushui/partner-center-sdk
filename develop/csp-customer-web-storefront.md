@@ -4,7 +4,7 @@ description: This sample website code shows a working online store for customers
 ms.assetid: 0726B1CA-97A1-42E6-92AD-25787BFE0C67
 ms.date: 05/29/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

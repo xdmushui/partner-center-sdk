@@ -4,7 +4,7 @@ description: Gets the billing profile of a customer.In the Partner Center dashbo
 ms.assetid: 32914A31-87CC-4F9D-869C-CAFEDA2CAE41
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

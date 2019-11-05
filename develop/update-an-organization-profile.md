@@ -4,7 +4,7 @@ description: Updates an organization's billing profile.
 ms.assetid: 8EC7E1A8-883A-4BF2-BAD7-36A0E043FCA3
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

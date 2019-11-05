@@ -4,7 +4,7 @@ description: This section describes the ways that Cloud Solution Provider partne
 ms.assetid: 7E2D461D-279E-4E6C-ACFA-BC96AAE8503C
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

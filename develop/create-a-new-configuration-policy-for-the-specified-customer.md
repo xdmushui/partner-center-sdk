@@ -4,7 +4,7 @@ description: How to create a new configuration policy for the specified customer
 ms.assetid: 95649991-A950-4F43-87E8-3EB1E7D06FCD
 ms.date: 05/23/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

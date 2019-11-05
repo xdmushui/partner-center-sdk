@@ -3,7 +3,7 @@ title: Create a cart
 description: How to add an order for a customer in a cart.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

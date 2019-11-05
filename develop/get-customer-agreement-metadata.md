@@ -3,7 +3,7 @@ title: Get agreement metadata for the Microsoft Customer Agreement
 description: This topic explains how to get agreement metadata for Microsoft Customer Agreement.
 ms.date: 8/29/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

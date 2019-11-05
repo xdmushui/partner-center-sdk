@@ -3,7 +3,7 @@ title: Activate a sandbox subscription for commercial marketplace products
 description: Activate a sandbox subscription for commercial marketplace products.
 ms.date: 09/10/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

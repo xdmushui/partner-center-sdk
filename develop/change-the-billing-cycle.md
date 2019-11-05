@@ -3,7 +3,7 @@ title: Change the billing cycle
 description: Update a subscription to monthly or annual billing.
 ms.date: 05/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

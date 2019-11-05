@@ -3,7 +3,7 @@ title: Get licenses deployment information
 description: How to get deployment information for Office and Dynamics licenses.
 ms.date: 10/25/2018
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

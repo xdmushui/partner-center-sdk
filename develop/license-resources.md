@@ -4,7 +4,7 @@ description: Describes resources related to licenses.
 ms.assetid: 20592E06-8A87-41F4-B8B0-6F9200556FDA
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

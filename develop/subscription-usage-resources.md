@@ -4,7 +4,7 @@ description: Subscription usage resources describe subscriptions with usage-base
 ms.assetid: 61B98AB8-D802-4EC1-91FB-B7A2B95DE20C
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

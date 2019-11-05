@@ -4,7 +4,7 @@ description: Gets a collection of all the orders for a specified customer.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.date: 06/19/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

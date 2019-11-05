@@ -4,7 +4,7 @@ description: Descriptive metadata for a country/region.
 ms.assetid: 19460437-5611-49A1-A7E7-704420C1DE8F
 ms.date: 05/23/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

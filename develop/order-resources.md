@@ -4,7 +4,7 @@ description: A partner places an order when a customer wants to buy a subscripti
 ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
 ms.date: 07/12/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

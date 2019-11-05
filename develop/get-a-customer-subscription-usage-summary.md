@@ -4,7 +4,7 @@ description: You can use the SubscriptionUsageSummary resource to get a subscrip
 ms.assetid: 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

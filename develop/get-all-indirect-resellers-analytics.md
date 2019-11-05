@@ -4,7 +4,7 @@ description: How to get all the indirect resellers analytics information.
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

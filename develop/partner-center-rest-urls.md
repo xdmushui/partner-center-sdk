@@ -4,7 +4,7 @@ description: Partner Center is available in different countries and regions arou
 ms.assetid: D4E1AC16-3FB1-4192-A06A-5766BF00A6D8
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

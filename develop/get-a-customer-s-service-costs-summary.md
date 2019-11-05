@@ -4,7 +4,7 @@ description: Gets a customer's service costs for the specified billing period.
 ms.assetid: 99B250F7-6C29-4BC3-8427-0DF178D7BE68
 ms.date: 06/10/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

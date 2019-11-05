@@ -4,7 +4,7 @@ description: How to create a partner center service request.
 ms.assetid: 16DA9836-7052-4103-82D4-933E5EEB7E71
 ms.date: 05/23/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

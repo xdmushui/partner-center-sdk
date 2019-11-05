@@ -4,7 +4,7 @@ description: How to get a collection of entitlements.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
 ms.date: 01/28/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

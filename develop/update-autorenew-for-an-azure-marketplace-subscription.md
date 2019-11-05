@@ -4,7 +4,7 @@ description: Update the autorenew property for a Subscription resource that matc
 ms.assetid: 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

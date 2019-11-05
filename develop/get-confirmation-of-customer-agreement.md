@@ -3,7 +3,7 @@ title: Get confirmation of customer acceptance of Microsoft Customer Agreement
 description: This topic explains how to get confirmation of customer acceptance of the Microsoft Customer Agreement. 
 ms.date: 09/19/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

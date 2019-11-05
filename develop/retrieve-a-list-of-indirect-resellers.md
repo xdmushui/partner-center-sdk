@@ -4,7 +4,7 @@ description: How to retrieve a list of the signed-in partner's indirect reseller
 ms.assetid: 1767BD6C-651A-4C14-930B-35D7EFD46C19
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: You can get a collection of availabilities for a specified product 
 ms.assetid:
 ms.date: 10/23/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

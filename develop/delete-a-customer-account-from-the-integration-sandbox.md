@@ -4,7 +4,7 @@ description: How to delete a customer account from the Testing in Production (Ti
 ms.assetid: B95431F6-EA7F-4C21-835F-6D6C303B05A5
 ms.date: 06/20/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

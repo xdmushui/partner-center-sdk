@@ -4,7 +4,7 @@ description: Gets a SKU for the specified product using the specified SKU ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 01/08/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

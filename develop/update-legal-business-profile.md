@@ -4,7 +4,7 @@ description: How to update the partner legal business profile.
 ms.assetid: DEB60680-145D-47C5-BB19-374752D45236
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

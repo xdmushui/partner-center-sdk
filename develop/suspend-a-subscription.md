@@ -4,7 +4,7 @@ description: Suspends a Subscription resource that matches the customer and subs
 ms.assetid: 2800933A-A480-4C79-8298-84217DD5A350
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: Describes the resources used to upgrade a user from a source subscr
 ms.assetid: 869007B3-D6D4-4E79-B4F0-445CA5D88D2C
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

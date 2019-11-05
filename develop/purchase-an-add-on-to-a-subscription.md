@@ -4,7 +4,7 @@ description: How to purchase an add-on to an existing subscription.
 ms.assetid: 743520E5-0501-4403-B977-5E6D3E32DEC3
 ms.date: 11/29/2018
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

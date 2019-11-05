@@ -4,7 +4,7 @@ description: Gets a collection of Customer resources that match a filter. You ca
 ms.assetid: 7D5D8C83-1DBD-4C54-8CDA-FE0CAC911D14
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

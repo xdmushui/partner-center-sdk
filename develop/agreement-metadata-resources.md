@@ -3,7 +3,7 @@ title: Agreement metadata resources
 description: The AgreementMetadata resource collection describes agreement types that partners can use to provide confirmation of customer acceptance.
 ms.date: 08/28/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

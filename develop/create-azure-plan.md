@@ -4,7 +4,7 @@ description: Developers can purchase, create, and manage Azure plans programmati
 ms.assetid: 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

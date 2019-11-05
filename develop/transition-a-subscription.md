@@ -4,7 +4,7 @@ description: Upgrades a customer's subscription to a specified target subscripti
 ms.assetid: 54618BC1-6AF7-4518-925B-8A6A4C926CE7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: Gets a list of deleted CustomerUser resources for a customer by cus
 ms.assetid: B2248C7D-0F68-4F52-9249-D3168C2F6E83
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

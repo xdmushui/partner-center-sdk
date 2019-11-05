@@ -4,7 +4,7 @@ description: Within a customer account, there's a set of directory roles. You ca
 ms.assetid: B7FA3599-9AE9-4494-90B4-F7C9A2EF2338
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

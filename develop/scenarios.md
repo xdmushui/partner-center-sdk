@@ -4,7 +4,7 @@ description: This section describes the ways that partners in the Cloud Solution
 ms.assetid: D278B9D1-D5B9-4FAD-89D8-44244715D6C9
 ms.date: 09/24/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: Customer resources that represent a customer or reseller.
 ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
 ms.date: 05/29/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

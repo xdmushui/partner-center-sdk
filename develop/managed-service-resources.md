@@ -4,7 +4,7 @@ description: Managed services are services to which a partner has delegated admi
 ms.assetid: B05E9585-72E4-4330-8721-A88EC4C193D7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

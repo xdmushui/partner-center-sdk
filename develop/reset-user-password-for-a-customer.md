@@ -4,7 +4,7 @@ description: Resetting a password is very similar to updating other details in a
 ms.assetid: DECACEE1-2492-4D2F-B4CF-ED93220B406A
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

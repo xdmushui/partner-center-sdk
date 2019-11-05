@@ -3,7 +3,7 @@ title: Get subscription analytics by search query
 description: How to get subscription analytics information filtered by a search query. 
 ms.date: 05/10/2018
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

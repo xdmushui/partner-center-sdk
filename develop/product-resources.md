@@ -4,7 +4,7 @@ description: Resources that represent purchasable goods or services. Includes re
 ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
 ms.date: 04/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

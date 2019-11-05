@@ -4,7 +4,7 @@ description: How to create an order for a customer.
 ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
 ms.date: 07/12/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

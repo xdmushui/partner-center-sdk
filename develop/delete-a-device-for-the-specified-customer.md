@@ -4,7 +4,7 @@ description: How to delete a device that belongs to a specified customer.
 ms.assetid: 44F06D4B-E9DE-470F-BAE2-15205CC7C699
 ms.date: 06/20/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

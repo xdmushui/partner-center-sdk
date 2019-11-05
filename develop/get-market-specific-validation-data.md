@@ -4,7 +4,7 @@ description: Get the expected address format based on the iso code for the marke
 ms.assetid: B02B3ECF-8020-4818-872F-9D70DCBC0228
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

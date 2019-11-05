@@ -3,7 +3,7 @@ title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

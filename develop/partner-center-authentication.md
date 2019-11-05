@@ -4,7 +4,7 @@ description: Partner Center uses Azure AD for authentication, and to use the Par
 ms.assetid: 2307F2A8-7BD4-4442-BEF7-F065F16DA0B2
 ms.date: 10/01/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

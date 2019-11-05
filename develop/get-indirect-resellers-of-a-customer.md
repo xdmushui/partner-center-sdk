@@ -4,7 +4,7 @@ description: How to get a list of the indirect resellers that have a relationshi
 ms.assetid: C3C4BE9A-97E8-41AD-AB28-6F9CB7DCE475
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
