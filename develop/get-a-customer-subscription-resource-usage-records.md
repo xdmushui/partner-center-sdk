@@ -3,6 +3,8 @@ title: Get usage data for subscription by resource
 description: You can use the ResourceUsageRecord resource to get a customer's resource usage records for specific Azure services or resources during the current billing period.
 ms.assetid: 
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

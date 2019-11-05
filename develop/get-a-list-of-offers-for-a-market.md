@@ -3,6 +3,8 @@ title: Get a list of offers for a market
 description: Gets a collection that contains all the offers for a specific market.
 ms.assetid: 9251B841-498D-4B20-A90B-EB493A8FF212
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

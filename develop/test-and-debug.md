@@ -3,6 +3,8 @@ title: Test and debug
 description: To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying.
 ms.assetid: 0A84F92F-CE66-42DF-B686-4D9E6FFECB16
 ms.date: 09/11/2018
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

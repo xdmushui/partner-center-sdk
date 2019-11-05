@@ -2,6 +2,8 @@
 title: Get invoice unbilled commercial consumption line items
 description: You can get a collection of unbilled commercial consumption line item details for a specified invoice using the Partner Center APIs.
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

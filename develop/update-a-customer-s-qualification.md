@@ -2,6 +2,8 @@
 title: Update a customer's qualification
 description: Updates a customer's qualification, including the address associated with the profile.
 ms.date: 11/08/2018
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

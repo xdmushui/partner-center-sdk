@@ -3,6 +3,8 @@ title: Get customer licenses usage information
 description: How to get licenses usage insights for a specific customer.
 ms.assetid: 02B98495-9FE7-4A9F-B1DD-B14563D0FF29
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

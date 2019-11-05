@@ -3,6 +3,8 @@ title: Create a subscription for commercial marketplace products
 description: Developers can create and manage a subscription for commercial marketplace products using Partner Center APIs.
 ms.assetid: 
 ms.date: 08/16/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

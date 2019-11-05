@@ -3,6 +3,8 @@ title: Get a list of trial conversion offers
 description: How to retrieve a list of trial conversion offers.
 ms.assetid: 7B97505F-10B9-4ACD-9307-111FC1E7D042
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

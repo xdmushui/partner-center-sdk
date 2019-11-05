@@ -3,6 +3,8 @@ title: Verify domain availability
 description: How to determine if a domain is available for use.
 ms.assetid: 9ECF8241-3672-441D-B34D-83F7C23138B3
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

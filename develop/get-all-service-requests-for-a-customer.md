@@ -3,6 +3,8 @@ title: Get all service requests for a customer
 description: Gets all of a customer's service requests.
 ms.assetid: 21F01038-EE51-4FB3-8BE5-9086DBD0F393
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

@@ -6,6 +6,8 @@ MS-HAID:
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_national\_clouds'
 ms.assetid: 73C5926A-0DEB-42E5-8982-7E44A2031F0B
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

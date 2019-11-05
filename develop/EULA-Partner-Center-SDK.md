@@ -2,6 +2,8 @@
 title: Microsoft Partner Center SDK End User License Agreement (EULA)
 description: Microsoft Partner Center SDK End User License Agreement (EULA)
 ms.date: 10/11/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: high
 ---
 

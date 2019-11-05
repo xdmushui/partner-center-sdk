@@ -2,6 +2,8 @@
 title: Create a product upgrade entity for a customer
 description: You can use the ProductUpgradeRequest resource to create a product upgrade entity to upgrade a customer to a given product family. 
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

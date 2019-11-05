@@ -3,6 +3,8 @@ title: Get invoice by ID
 description: Retrieves a given invoice using the invoice ID.
 ms.assetid: 60EAA1F1-AFE2-4FC3-A475-4DBEA58583D1
 ms.date: 06/10/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

@@ -3,6 +3,8 @@ title: Get a list of orders by customer and billing cycle type
 description: Gets a collection of order resources for the specified customer and biling cycle type.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.date: 06/19/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

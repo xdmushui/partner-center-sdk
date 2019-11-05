@@ -3,6 +3,8 @@ title: Get a list of all user accounts for a customer
 description: How to get a list of all user accounts that belong to one of your customers.
 ms.assetid: B6F79138-D0CD-4344-9233-D8031FDD41BF
 ms.date: 07/25/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

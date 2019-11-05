@@ -2,6 +2,8 @@
 title: Partner Center supported languages and locales
 description: List of ISO2 and ISO3 supported locales for Partner Center. 
 ms.date: 12/03/2018
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

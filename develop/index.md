@@ -4,6 +4,8 @@ hide_bc: true
 title: Microsoft Partner Center developer resources
 description: Resources for developing Microsoft Partner Center apps
 ms.date: 09/20/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.topic: landing-page
 searchScope: []
 ---

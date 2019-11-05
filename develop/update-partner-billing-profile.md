@@ -3,6 +3,8 @@ title: Update the partner billing profile
 description: Updates a partner's billing profile.
 ms.assetid: F924B390-90C6-43B3-BB12-F4831464EC1F
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

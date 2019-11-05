@@ -2,6 +2,8 @@
 title: Get a list of Azure entitlements for a subscription
 description: You can use the AzureEntitlement resource to  get a collection of Azure entitlement resources that belong to a subscription.
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

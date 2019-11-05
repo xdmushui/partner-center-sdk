@@ -3,6 +3,8 @@ title: Offer resources
 description: Describes a product listed in the reseller catalog that they can offer to their customers.
 ms.assetid: 702B18DB-D78A-4E3B-BC8F-EFD4092131DE
 ms.date: 03/15/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

@@ -3,6 +3,8 @@ title: Entitlement resources
 description: Describes resources related to entitlement.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
 ms.date: 01/28/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

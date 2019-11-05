@@ -3,6 +3,8 @@ title: Get a list of availabilities for a SKU (by customer)
 description: You can get a collection of availabilities for a specified product and SKU by customer using the customer, product and SKU identifiers.
 ms.assetid:
 ms.date: 10/23/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

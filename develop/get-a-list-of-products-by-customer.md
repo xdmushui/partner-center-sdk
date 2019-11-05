@@ -3,6 +3,8 @@ title: Get a list of products (by customer)
 description: You can use a customer identifier to get a collection of products by customer.
 ms.assetid:
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

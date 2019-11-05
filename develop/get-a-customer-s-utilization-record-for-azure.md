@@ -3,6 +3,8 @@ title: Get a customer's utilization records for Azure
 description: You can use the Azure utilization API to get the utilization records of a customer's Azure subscription for a specified time period.
 ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

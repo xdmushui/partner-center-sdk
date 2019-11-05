@@ -2,6 +2,8 @@
 title: Add a verified domain for a customer
 description: Add a verified domain to the list of approved domains for a customer in Partner Center. 
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

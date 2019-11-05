@@ -3,6 +3,8 @@ title: Get a usage summary for all of a customer's subscriptions
 description: You can use the CustomerUsageSummary resource to get a customer's usage of a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

@@ -3,6 +3,8 @@ title: Get a list of devices for the specified batch and customer
 description: How to retrieve a collection of devices and device details in the specified device batch for a customer. 
 ms.assetid: 13FD2D2D-1EF3-4BE2-977D-83577DA57F51
 ms.date: 07/25/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

@@ -3,6 +3,8 @@ title: Delete a configuration policy for the specified customer
 description: How to delete a configuration policy for a specified customer and policy identifier.
 ms.assetid: DEFEC12E-3EA0-401B-B612-ACD1D71DB415
 ms.date: 06/11/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

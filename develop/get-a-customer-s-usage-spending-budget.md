@@ -3,6 +3,8 @@ title: Get a customer's usage spending budget
 description: You can use a spending budget (the SpendingBudget object) to update a customer usage summary (the CustomerUsageSummary resource).
 ms.assetid: 
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

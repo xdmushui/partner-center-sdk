@@ -3,6 +3,8 @@ title: Purchase Azure reservations
 description: You can purchase Azure reservations for a customer using the Partner Center API through your existing Microsoft Azure subscription (MS-AZR-0145P) or Azure plan.
 ms.assetid: 1BCDA7B8-93FC-4AAC-94E0-B15BFC95737F
 ms.date: 11/01/2018
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

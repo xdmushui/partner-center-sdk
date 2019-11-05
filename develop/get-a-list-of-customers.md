@@ -3,6 +3,8 @@ title: Get a list of customers
 description: How to get a collection of resources representing all of a partner's customers.
 ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

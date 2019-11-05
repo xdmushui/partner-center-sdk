@@ -3,6 +3,8 @@ title: Get a list of availabilities for a SKU (by country)
 description: How to get a collection of availabilities for the specified product and SKU by customer country.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

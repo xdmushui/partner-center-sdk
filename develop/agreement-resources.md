@@ -2,6 +2,8 @@
 title: Agreement resources
 description: The Agreement resource represents a Microsoft cloud customer agreement.
 ms.date: 08/28/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 
