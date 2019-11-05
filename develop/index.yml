@@ -4,7 +4,7 @@ title: Partner Center developer documentation
 summary: Collaborate with Microsoft on the development of partner features and capabilities.
 
 metadata:
-  title: Partner Center developer Documentation
+  title: Partner Center developer documentation
   description: Collaborate with Microsoft on the development of partner features and capabilities.
   ms.service: partner-dashboard
   ms.topic: landing-page
@@ -14,7 +14,7 @@ metadata:
   ms.date: 11/05/2019
 
 landingContent:
-  - title: Getting started
+  - title: Develop with Partner Center
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -26,29 +26,31 @@ landingContent:
         links:
           - text: Create an Azure plan with the APIs
             url: create-azure-plan.md
-      - linkListType: download
+      - linkListType: concept
         links:
-          - text: Swagger API for Cloud Solution Provider (CSP) program
-            url: https://apidocs.microsoft.com/services/partnercenter
+          - text: Code samples
+            url: partner-center-samples.md
+          - text: Example scenarios
+            url: scenarios.md
  
-  - title: Partner Center .NET SDK (v1.15.1)
+  - title: Use the .NET SDK (v1.15.1)
     linkLists:
       - linkListType: download
         links:
-          - text: .NET SDK
+          - text: Partner Center .NET SDK
             url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
-          - text: .NET API samples
+          - text: Partner Center .NET samples
             url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
       - linkListType: reference
         links:
-          - text: Partner Center managed API reference
+          - text: Managed .NET API reference
             url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
 
-  - title: Partner Center Java SDK (open source)
+  - title: Use the Java SDK (open source)
     linkLists:
       - linkListType: download
         links:
-          - text: Download the Java SDK
+          - text: Download the Partner Center Java SDK
             url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
           - text: Java SDK GitHub repo (for questions, contributions and issues)
             url: https://github.com/Microsoft/Partner-Center-Java
@@ -57,7 +59,7 @@ landingContent:
           - text: Java API reference
             url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
  
-  - title: Get the PowerShell module (open source)
+  - title: Use the PowerShell module (open source)
     linkLists:
       - linkListType: download
         links:
@@ -70,11 +72,9 @@ landingContent:
           - text: PowerShell commands 
             url: https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
 
-  - title: Samples and scenarios
+  - title: Use the Swagger API for CSP partners
     linkLists:
-      - linkListType: concept
+      - linkListType: reference
         links:
-          - text: Code samples
-            url: partner-center-samples.md
-          - text: Example scenarios
-            url: scenarios.md
+          - text: Swagger API reference for Partner Center services (for CSP partners)
+            url: https://apidocs.microsoft.com/services/partnercenter
