@@ -3,6 +3,8 @@ title: Update a service request
 description: How to update an existing customer service request that a Cloud Solution Provider has filed with Microsoft on the customer's behalf.
 ms.assetid: 09C13775-739B-4CB9-9442-456E17F91452
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -2,6 +2,8 @@
 title: Agreement document resources
 description: The AgreementDocument resource represents an agreement document.
 ms.date: 08/28/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

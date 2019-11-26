@@ -6,6 +6,8 @@ MS-HAID:
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_national\_clouds'
 ms.assetid: 73C5926A-0DEB-42E5-8982-7E44A2031F0B
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -30,7 +32,7 @@ For web apps, use the following procedures to register your application ID.
 
 ### Create or update web app
 
-1. Navigate to the [Azure portal – App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
+1. Navigate to the [Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
 
 2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 
@@ -72,7 +74,7 @@ Native apps do not need to be registered to Partner Center. But these apps need 
 
 ### Create native app
 
-1. Navigate to the [Azure portal – App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
+1. Navigate to the [Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
 
 2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 

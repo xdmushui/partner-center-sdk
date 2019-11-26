@@ -2,6 +2,8 @@
 title: Get invoice receipt statement
 description: Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 ms.date: 02/11/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

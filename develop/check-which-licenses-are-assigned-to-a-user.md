@@ -3,6 +3,8 @@ title: Get licenses assigned to a user
 description: Get a list of licenses assigned to a user within a customer account.
 ms.assetid: 87DC74A1-92E2-4639-BC4C-168A677F5F52
 ms.date: 05/22/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

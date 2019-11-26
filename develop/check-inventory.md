@@ -3,6 +3,8 @@ title: Check inventory
 description: Check the inventory for a specific set of catalog items.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 05/22/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +20,7 @@ How to check the inventory for a specific set of catalog items.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - One or more product IDs. Optionally, SKU IDs can also be specified.
-- Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU and can be determined from the [SKU’s](product-resources.md#sku) **InventoryVariables** property. 
+- Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU and can be determined from the [SKU's](product-resources.md#sku) **InventoryVariables** property. 
 
 ## C#
 

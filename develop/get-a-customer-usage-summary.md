@@ -1,8 +1,10 @@
 ---
 title: Get a usage summary for all of a customer's subscriptions
-description: How to get a customer's usage of a specific Azure service or resource during the current billing period with the CustomerUsageSummary resource.
+description: You can use the CustomerUsageSummary resource to get a customer's usage of a specific Azure service or resource during the current billing period.
 ms.assetid: 58FA3CBD-27CF-46C5-9EB2-188D83896F7D
-ms.date: 07/25/2019
+ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -14,12 +16,12 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **CustomerUsageSummary** resource. This resource represents the customer's usage of a specific Azure service or resource during the current billing period.
+You can use the **CustomerUsageSummary** resource to get a customer's usage of a specific Azure service or resource during the current billing period.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
 
 ## C\#
 
@@ -41,15 +43,17 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetCustomerUsageSummary.cs**
 
-## REST request
+## REST
 
-### Request syntax
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                         |
 |---------|-----------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1 |
 
-#### URI parameter
+##### URI parameter
 
 This table lists the required query parameter to get the customer's rated usage information.
 
@@ -57,15 +61,15 @@ This table lists the required query parameter to get the customer's rated usage 
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 
-### Request headers
+#### Request headers
 
 See [Headers](headers.md) for more information.
 
-### Request body
+#### Request body
 
 None.
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/usagesummary HTTP/1.1
@@ -75,15 +79,19 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a **CustomerUsageSummary** resource in the response body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-### Response example
+#### Response example for Microsoft Azure (MS-AZR-0145P) subscription
+
+In this example, the customer purchased a **145P Azure PayG** offer.
+
+*For customers with Microsoft Azure (MS-AZR-0145P) subscriptions, there will be no change to the API response.*
 
 ```http
 HTTP/1.1 200 OK
@@ -91,7 +99,7 @@ Content-Length: 1120
 Content-Type: application/json
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
-Date: Fri, 26 Feb 2016 20:31:45 GMT
+Date: Tue, 17 Sep 2019 20:31:45 GMT
 
 {
     "budget":{
@@ -116,6 +124,44 @@ Date: Fri, 26 Feb 2016 20:31:45 GMT
     },
     "attributes":{
         "objectType":"CustomerUsageSummary"
+    }
+}
+```
+
+#### Response example for Azure plan
+
+In this example, the customer purchased an Azure plan.
+
+*For customers with Azure plans, there are the following changes to the API response:*
+
+- **currencyLocale** is replaced with **currencyCode**
+- **usdTotalCost** is a new field
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1120
+Content-Type: application/json
+MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
+MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
+Date: Tue, 17 Sep 2019 20:31:45 GMT
+
+{
+    "budget": {
+        "amount": 97,
+        "attributes": {
+            "objectType": "SpendingBudget"
+        }
+    },
+    "resourceId": "44908a11-641b-4c53-b7fc-0f2bfca8a581",
+    "resourceName": "Modern Azure Customer UK",
+    "billingStartDate": "2019-09-01T00:00:00+00:00",
+    "billingEndDate": "2019-10-01T00:00:00+00:00",
+    "totalCost": 28.82860766744404945074,
+    "currencyCode": "GBP",
+    "usdTotalCost": 35.23000000000000362337,
+    "lastModifiedDate": "2019-09-18T17:09:26.16+00:00",
+    "attributes": {
+        "objectType": "CustomerUsageSummary"
     }
 }
 ```

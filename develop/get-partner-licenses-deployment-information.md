@@ -3,6 +3,8 @@ title: Get partner licenses deployment information
 description: How to get partner licenses deployment information aggregated to include all customers.
 ms.assetid: BC78F9EA-C07C-4FD5-B06D-C87E8330B6E2
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

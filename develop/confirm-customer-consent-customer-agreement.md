@@ -2,6 +2,8 @@
 title: Confirm customer acceptance of Microsoft Customer Agreement
 description: Confirm customer acceptance of the Microsoft Customer Agreement. 
 ms.date: 09/19/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

@@ -3,6 +3,8 @@ title: Test and debug
 description: To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying.
 ms.assetid: 0A84F92F-CE66-42DF-B686-4D9E6FFECB16
 ms.date: 09/11/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -24,6 +26,18 @@ If you run automated build verification tests, conduct testing in production, or
 
 This means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This includes trials. 
 
+### Azure plan
+By default, partners cannot provision Azure plans using their sandbox accounts. Partners who need to do so with their sandbox account must apply for access. To apply for access, reach out to your reach out to your Microsoft account manager or business contact. Partners who have previously applied for access to provision Microsoft Azure (MS-AZR-0145P) subscriptions in their sandbox accounts do not need to apply for access again. They will be granted access to provision Azure plans automatically.
+
+For partners whose sandbox accounts have been approved to provision Azure plans, the following limits apply:
+
+- Each sandbox partner account can have up to 10 Azure plans across all customer tenants (no matter how the plans are distributed among the customers).
+- A direct bill partner can create up to 1 Azure plan per customer tenant.
+- An indirect provider can create up to 3 Azure plans per customer tenant (for different indirect resellers specified as the Partner-of-Record).
+- Each Azure plan can have up to 3 Azure subscriptions.
+- Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.
+- Each sandbox partner account has a spending limit of $2000 (USD) per billing cycle across all Azure plans. Once a partner reaches the spend limit, all Azure plans will be temporarily disabled until the next billing cycle.
+
 ### Cloud Solution Provider (CSP) Azure subscription offers 
 CSP Azure subscription offers are no longer available by default to sandbox accounts. These include MS-AZR-0146P, MS-AZR-DE-0146P and MS-AZR-USGOV-0146P for CSP Azure subscriptions in Microsoft Public Cloud, German Cloud and Government Cloud respectively. Partners who need access to these offers with their sandbox account must apply for access. To apply for access, reach out to your Microsoft account manager or business contact. 
 
@@ -34,7 +48,7 @@ For partners whose sandbox accounts have been approved for CSP Azure subscriptio
  - Each CSP Azure subscription under your sandbox account is limited to 4 virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than 4 VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.  
 
 > [!Important]  
-> All existing CSP Azure subscriptions provisioned with sandbox accounts prior to August 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 16 – October 31, 2018. After the subscriptions have been deprovisioned, they cannot be re-enabled, and associated data are no longer accessible. Partners who have valuable data stored under these subscriptions must back up the data before October 16, 2018.
+> All existing CSP Azure subscriptions provisioned with sandbox accounts prior to August 1, 2018 are no longer supported and will be deprovisioned by Microsoft between October 16 - October 31, 2018. After the subscriptions have been deprovisioned, they cannot be re-enabled, and associated data are no longer accessible. Partners who have valuable data stored under these subscriptions must back up the data before October 16, 2018.
 
 ### Azure Reserved VM instance  
 
@@ -50,9 +64,9 @@ If you are [purchasing an Azure Reserved VM instance](purchase-azure-reservation
      
 ### Subscriptions for commercial marketplace products
 
-In production, after you have [created a subscription to commercial marketplace SaaS products](create-subscription-azure-marketplace-products.md), you need to retrieve a personalized activation link from Partner Center and visit the publisher’s site to complete the setup process. Subscription billing will begin only after setup is complete.
+In production, after you have [created a subscription to commercial marketplace SaaS products](create-subscription-azure-marketplace-products.md), you need to retrieve a personalized activation link from Partner Center and visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
 
-In the CSP sandbox environment, there is no integration with ISVs. If you try to retrieve an activation link from Partner Center, a dummy link will be returned. You cannot use this dummy link to complete the setup process at the publisher’s site. To use the integration sandbox account to test billing for subscriptions to commercial marketplace SaaS products, see [Activate a sandbox subscription for commercial marketplace products](activate-sandbox-subscription-azure-marketplace-products.md) instead. Subscription billing will begin after successful activation.
+In the CSP sandbox environment, there is no integration with ISVs. If you try to retrieve an activation link from Partner Center, a dummy link will be returned. You cannot use this dummy link to complete the setup process at the publisher's site. To use the integration sandbox account to test billing for subscriptions to commercial marketplace SaaS products, see [Activate a sandbox subscription for commercial marketplace products](activate-sandbox-subscription-azure-marketplace-products.md) instead. Subscription billing will begin after successful activation.
 
 
 To clean up at the end of your test run so there's space for the next round of testing, see the following topics:

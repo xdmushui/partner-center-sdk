@@ -2,6 +2,8 @@
 title: Update a customer's qualification
 description: Updates a customer's qualification, including the address associated with the profile.
 ms.date: 11/08/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -14,7 +16,7 @@ ms.localizationpriority: medium
 
 Updates a customer's qualification.
 
-A partner can update a customer’s qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
+A partner can update a customer's qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 

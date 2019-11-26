@@ -2,6 +2,8 @@
 title: Get a customer's qualification
 description: How to get a customer's qualification.
 ms.date: 08/07/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

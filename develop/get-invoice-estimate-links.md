@@ -1,29 +1,32 @@
 ---
 title: Get invoice estimate links
-description: How to get a collection of estimate links to query recon line item details.
-ms.date: 04/05/2019
+description: You can get a collection of estimate links to query reconciliation line item details.
+ms.date: 09/24/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
+ms.assetid:
 ms.localizationpriority: medium
 ---
 
 # Get invoice estimate links
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get estimate (unbilled) links for invoice line items.
+You can get estimate links to help query details for unbilled reconciliation line items.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
-## C#
+## C\#
 
-To get the estimate links that help to query unbilled line items for a given currency. The response contains the estimate links per period, for example, current and previous month.
+The following example code shows how you can get the estimate links to query unbilled line items for a given currency. The response contains the estimate links for each period (for example, the current and previous month).
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -36,37 +39,43 @@ To get the estimate links that help to query unbilled line items for a given cur
 var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(curencyCode).Get();  
 ```
 
-For a similar example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetEstimatesLinks.cs
+For a similar example, see the following:
 
-## REST Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **Partner Center SDK Samples**
+- Class: **GetEstimatesLinks.cs**
 
-**Request syntax**  
+## REST
+
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                                 |
 |---------|-------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/estimates/links?currencycode={currencycode} HTTP/1.1 |
 
-**URI parameters**
+##### URI parameters
 
-Use the following URI and query parameters when creating the request.
+Use the following URI and query parameter when creating the request.
 
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                    |
 
-**Request headers**
+#### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+#### Request body
 
 None.
 
-**Request example**
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/estimates/links?currencycode=usd HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e
 MS-CorrelationId: 5e612512-4345-4bb0-866e-47aeda031234
@@ -75,15 +84,15 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-## REST Response
+### REST response
 
 If successful, the response contains the links to retrieve unbilled estimates.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK

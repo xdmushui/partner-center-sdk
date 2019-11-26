@@ -1,33 +1,38 @@
 ---
-title: Get a subscription's resource usage information
-description: Gets a collection resource that contains a list of services within a customer's subscription and their associated rated usage information.
+title: Get all monthly usage records for a subscription.
+description: You can use the AzureResourceMonthlyUsageRecord resource collection to get a list of services within a customer's subscription and their associated rated usage information.
 ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
-ms.date: 12/15/2017
+ms.date: 11/01/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Get a subscription's resource usage information
+# Get all monthly usage records for a subscription.
 
-
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.azureresourcemonthlyusagerecord) resources representing a list of services within a customer's subscription and their associated rated usage information.
+You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.azureresourcemonthlyusagerecord) resource collection to get a list of services within a customer's subscription and their associated rated usage information.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
-- A subscription ID.
+- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
+- A subscription identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+*This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
 
+## C\#
 
-To get a subscription's resource usage information, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property. Finish by calling the **Get()** or **GetAsync()** methods.
+To get a subscription's resource usage information:
+
+1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method. 
+2. Call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property. 
+3. Call the **Get()** or **GetAsync()** methods.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -37,39 +42,40 @@ To get a subscription's resource usage information, use your **IAggregatePartner
 var usageRecords = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).UsageRecords.Resources.Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: SubscriptionResourceUsageRecords.cs
+For an example, see the following:
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSample**
+- Class: **SubscriptionResourceUsageRecords.cs**
 
+## REST
 
-**Request syntax**
+### REST request
+
+#### Request syntax
 
 | Method  | Request URI                                                                                                                                       |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/usagerecords/resources HTTP/1.1 |
 
- 
+##### URI parameters
 
-**URI parameter**
-
-This table lists the required query parameter to get the rated usage information.
+This table lists the required query parameters to get the rated usage information.
 
 | Name                    | Type     | Required | Description                               |
 |-------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
-| **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
+#### Request headers
 
-**Request headers**
+For more information, see [Headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+#### Request body
 
 None.
 
-**Request example**
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/usagerecords/resources HTTP/1.1
@@ -79,16 +85,15 @@ MS-RequestId: 65b26053-37d0-4303-9fd1-46ad8012bcb6
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+### REST response
 
 If successful, this method returns a collection of **AzureResourceMonthlyUsageRecord** resources in the response body.
 
-**Response success and error codes**
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -138,11 +143,3 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -3,6 +3,8 @@ title: Manage billing
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
 ms.assetid: 198D32A5-AA2C-49BB-A057-0EFFBA408753
 ms.date: 08/16/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically view and manage their invoices, and view their customer's progress against an Azure spending budget.
 
 **Billing Cycle:**
 - [Change the billing cycle](change-the-billing-cycle.md)
@@ -39,8 +41,8 @@ This section describes the ways that Cloud Solution Provider partners can use th
 - [Get the reseller's current account balance](get-the-reseller-s-current-account-balance.md)
 
 **Azure spending budget:**
-- [Get usage data for a subscription](get-a-subscriptions-resource-usage-information.md)
-- [Get usage summary for all of a customer's subscriptions](get-a-customers-rated-usage-information.md)
+- [Get usage data for a subscription](get-all-monthly-usage-records-for-a-subscription.md
+- [Get usage summary for all of a customer's subscriptions](get-a-customer-usage-summary.md)
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
 

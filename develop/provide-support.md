@@ -3,6 +3,8 @@ title: Provide support
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage support and service requests.
 ms.assetid: 2E92EEA0-13D6-4FAB-896F-F95C65E7B495
 ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +18,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage support and service requests.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage support and service requests.
 
 **Admin services for a customer**
 

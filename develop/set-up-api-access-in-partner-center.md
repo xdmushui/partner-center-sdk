@@ -3,6 +3,8 @@ title: Set up API access in Partner Center
 description: Set up accounts for developing against the Partner Center SDK and test in the integration sandbox.
 ms.assetid: 182A6831-6F00-4762-9A86-327BF87EA6AC
 ms.date: 05/29/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

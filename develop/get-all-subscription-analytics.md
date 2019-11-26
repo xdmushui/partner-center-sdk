@@ -3,6 +3,8 @@ title: Get all subscription analytics information
 description: How to get all the subscription analytics information. 
 ms.assetid: 243E54BD-EA34-400E-B9AB-D735EB46B9F6
 ms.date: 08/02/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

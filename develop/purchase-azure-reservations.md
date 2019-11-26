@@ -1,24 +1,21 @@
 ---
 title: Purchase Azure reservations
-description: How to purchase Azure reservations using the Partner Center API.
+description: You can purchase Azure reservations for a customer using the Partner Center API through your existing Microsoft Azure subscription (MS-AZR-0145P) or Azure plan.
 ms.assetid: 1BCDA7B8-93FC-4AAC-94E0-B15BFC95737F
-ms.date: 10/09/2018
+ms.date: 11/01/2018
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
 # Purchase Azure reservations
 
-**Applies To**
+Applies to:
 
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government
 
-To purchase an Azure reservation using the Partner Center API, you must have one or more deployed Cloud Solution Provider (CSP) Azure subscriptions. If you do not have a CSP Azure subscription, use these basic steps to purchase one:
-
-- Get a list of offers for a market.
-- Create an order for an CSP Azure subscription.
-- Submit your order.
-- Make sure your order is fulfilled.
+To purchase an Azure reservation for a customer using the Partner Center API, you must have an existing Microsoft Azure (**MS-AZR-0145P**) subscription or Azure plan for them.
 
 > [!NOTE]  
 > Azure reservations are not available in the following markets:
@@ -68,7 +65,7 @@ To purchase an Azure reservation using the Partner Center API, you must have one
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
-- A subscription ID for an active CSP Azure subscription.
+- A subscription ID for an active CSP Azure subscription or an Azure plan.
 
 ## How to purchase Microsoft Azure reservations
 
@@ -86,7 +83,7 @@ After you have purchased Azure reservations, the following scenarios show you ho
 
 ## Enablement
 
-Enablement means associating an existing Azure [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0003p/) subscription to an Azure Reserved VM Instance by registering the subscription so that it is enabled for Azure reservations. Azure subscription registration is a prerequisite to purchase Azure Reserved VM Instances.
+Enablement means associating an existing Microsoft Azure (**MS-AZR-0145P**) subscription to an Azure Reserved VM Instance by registering the subscription so that it is enabled for Azure reservations. Registration is a prerequisite to purchase Azure Reserved VM Instances.
 
 A subscription is required due to the following:
 
@@ -96,6 +93,9 @@ A subscription is required due to the following:
 Once you have identified the active subscription that you want to add the Azure reservation to, you must register the subscription so that it is enabled for Azure reservations. To register an existing [Subscription](subscription-resources.md) resource so that it is enabled for ordering Azure reservations, see [Register a subscription](register-a-subscription.md).
 
 After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
+
+> [!NOTE]  
+> When purchasing Microsoft Azure reservation for a customer with an Azure plan, you must register the Azure plan first. Similar to a Microsoft Azure (**MS-AZR-0145P**) subscription, an Azure plan is represented by a Partner Center [Subscription](subscription-resources.md) resource. Hence, you can use the same [Register a subscription](register-a-subscription.md) method to register an Azure plan.
 
 ## Discovery
 
@@ -109,9 +109,9 @@ Before purchasing an Azure reservation, complete the following steps:
 
 1. Identify and retrieve the Product and SKU that you want to purchase. You can do this by listing the products and SKUs first, or If you already know the IDs of the product and SKU, selecting them.
 
-    - [Get a list of products](get-a-list-of-products.md)
+    - [Get a list of products (by country)](get-a-list-of-products.md)
     - [Get a product using the product ID](get-a-product-by-id.md)
-    - [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
+    - [Get a list of SKUs for a product (by country)](get-a-list-of-skus-for-a-product.md)
     - [Get a SKU using the SKU ID](get-a-sku-by-id.md)
 
 2. Check the inventory for a SKU​. This step is only needed for SKUs that are tagged with an **InventoryCheck** prerequisite​.
@@ -120,8 +120,11 @@ Before purchasing an Azure reservation, complete the following steps:
 
 3. Retrieve the [availability](product-resources.md#availability) for the [SKU](product-resources.md#sku). You will need the **CatalogItemId** of the availability when placing the order​. To get this value, use one of the following APIs:
 
-    - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
+    - [Get a list of availabilities for a SKU (by country)](get-a-list-of-availabilities-for-a-sku.md)
     - [Get an availability using the availability ID](get-an-availability-by-id.md)
+
+> [!IMPORTANT]  
+> Each Microsoft Azure reservation product has different availabilities for Microsoft Azure (**MS-AZR-0145P**) subscription and Azure plan. To [Get a list of products (by country)](get-a-list-of-products.md), or [Get a list of SKUs for a product (by country)](get-a-list-of-skus-for-a-product.md), or [Get a list of availabilities for a SKU (by country)](get-a-list-of-availabilities-for-a-sku.md) which are applicable to Azure plan only, specify the "reservationScope=AzurePlan" parameter.
 
 ## Order submission
 

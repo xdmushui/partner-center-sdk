@@ -3,6 +3,8 @@ title: Manage orders
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage customer orders and subscriptions.
 ms.assetid: D4E13B95-4E27-42E5-86E4-9DBF91564209
 ms.date: 08/16/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud for US Government
 
-This section describes the ways that Cloud Solution Provider partners can use the [Partner Center](index.md) to programmatically manage customer orders and subscriptions.
+This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage customer orders and subscriptions.
 
 **Purchase Azure Reserved VM Instances**  
 - [Purchase Azure reservations](purchase-azure-reservations.md)   

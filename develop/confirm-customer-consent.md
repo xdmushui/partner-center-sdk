@@ -2,6 +2,8 @@
 title: Confirm customer acceptance of Microsoft Cloud Agreement
 description: How to confirm customer acceptance of the Microsoft Cloud Agreement. 
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

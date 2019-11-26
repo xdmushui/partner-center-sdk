@@ -1,7 +1,9 @@
 ---
 title: Update a cart
 description: How to update an order for a customer in a cart.
-ms.date: 03/19/18
+ms.date: 10/11/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -26,7 +28,7 @@ How to update an order for a customer in a cart.
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID’s using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
+To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
 
 Finally, call the **Put()** or **PutAsync()** method to create the order.
 

@@ -2,6 +2,8 @@
 title: Join the Partner Center API and SDK Early Adopter Program 
 description: Partners can collaborate with Microsoft on the development of partner features and capabilities.
 ms.date: 06/11/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -28,7 +30,7 @@ The following features are available to partners who join the Partner Center API
 
 You must be an **existing CSP partner** or an **approved platform vendor** to join the program.
 
-1. **Join the Yammer group** [Partner Center Early Adopter Program](https://www.yammer.com/cloudpartnercommunity/#/threads/inGroup?type=in_group&feedId=5944712&view=all). It will take us some time to review your application. We’ll email you when you’ve been approved to join the group.
+1. **Join the Yammer group** [Partner Center Early Adopter Program](https://www.yammer.com/cloudpartnercommunity/#/threads/inGroup?type=in_group&feedId=5944712&view=all). It will take us some time to review your application. We'll email you when you've been approved to join the group.
 
    > [!NOTE]
    > You may be required to join the Microsoft Cloud Yammer Community network before you can join the Partner Center Early Adopter Program Yammer group.

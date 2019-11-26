@@ -3,6 +3,8 @@ title: Get a customer's subscriptions by partner MPN ID
 description: How to get a list of subscriptions provided by a given partner to a specified customer.
 ms.assetid: 02742789-97F0-4B9C-9948-42BF6F3D4D18
 ms.date: 09/17/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 

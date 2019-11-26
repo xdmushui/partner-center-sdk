@@ -3,6 +3,8 @@ title: Get licenses assigned to a user by license group
 description: How to get a list of user assigned licenses for the specified license groups.
 ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
 ms.date: 07/22/2019
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -64,7 +66,7 @@ Use the following path and query parameters to identify the customer, user and l
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
 | user-id         | string | Yes      | A GUID formatted string that identifies the user.                                                                                                                                                                                                                     |
-| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 – This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 – This group has only Minecraft product licenses. |
+| licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
  
 
