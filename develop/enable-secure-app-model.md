@@ -34,14 +34,14 @@ For details on security requirements, see [Partner Security Requirements](https:
 
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data.
 
-For an overview and details of the new authentication framework, download the [Secure Application Model framework](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
+For an overview and details of the new authentication framework, download the [Secure Application Model framework](https://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
 
 ## Samples
 
 The following overview documents and sample code describe how partners can implement the Secure Application Model framework:
 
-- [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
-- [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
+- [CPV overview document](https://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
+- [CSP overview document](https://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
 - [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
 - [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
 
