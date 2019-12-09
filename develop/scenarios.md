@@ -25,7 +25,7 @@ Note that there are different versions of Partner Center available that include 
 
 All of the following scenarios can be completed three different ways:
 
-- Manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
+- Manually in the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
 - Programmatically using the Partner Center managed API.
 - Programmatically using the Partner Center REST API.
 

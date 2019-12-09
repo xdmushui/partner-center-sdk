@@ -34,14 +34,14 @@ For details on security requirements, see [Partner Security Requirements](https:
 
 Marketplace applications need to impersonate CSP partner privileges to call Microsoft APIs. Security attacks on these sensitive applications can lead to the compromise of customer data.
 
-For an overview and details of the new authentication framework, download the [Secure Application Model framework](http://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
+For an overview and details of the new authentication framework, download the [Secure Application Model framework](https://assetsprod.microsoft.com/secure-application-model-guide.pdf) document. This document covers principles and best practices to make marketplace applications sustainable and robust from security compromises.
 
 ## Samples
 
 The following overview documents and sample code describe how partners can implement the Secure Application Model framework:
 
-- [CPV overview document](http://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
-- [CSP overview document](http://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
+- [CPV overview document](https://assetsprod.microsoft.com/cpv-partner-application-overview.pdf)
+- [CSP overview document](https://assetsprod.microsoft.com/csp-partner-application-overview.pdf)
 - [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
 - [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
 
@@ -79,7 +79,7 @@ You must create and register a web app in Partner Center before making REST call
     - Application secret
 
 > [!NOTE]
-> It is recommended to [use a certificate as your application secret](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
+> It is recommended to [use a certificate as your application secret](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
 
 ### Get authorization code
 
@@ -113,10 +113,10 @@ You must then use your authorization code to get a refresh token:
 
 1. Make a POST call to the Azure AD login endpoint `https://login.microsoftonline.com/CSPTenantID/oauth2/token` with the authorization code. For an example, see the following [sample call](#sample-refresh-call).
 2. Note the refresh token that is returned.
-3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](https://docs.microsoft.com/en-us/rest/api/keyvault/).
+3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](https://docs.microsoft.com/rest/api/keyvault/).
 
 > [!IMPORTANT]
-> The refresh token must be [stored as a secret](https://docs.microsoft.com/en-us/rest/api/keyvault/setsecret/setsecret) in Key Vault.
+> The refresh token must be [stored as a secret](https://docs.microsoft.com/rest/api/keyvault/setsecret/setsecret) in Key Vault.
 
 #### Sample refresh call
 
@@ -204,7 +204,7 @@ Host: api.partnercenter.microsoft.com
 
 You can use the [Partner Center PowerShell module](https://www.powershellgallery.com/packages/PartnerCenter) to reduce the required infrastructure to exchange an authorization code for an access token. This method is optional for making [Partner Center REST calls](#rest).
 
-For more information on this process, see [Secure App Model](https://docs.microsoft.com/en-us/powershell/partnercenter/secure-app-model) PowerShell documentation.
+For more information on this process, see [Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) PowerShell documentation.
 
 1. Install the Azure AD and Partner Center PowerShell modules.
 

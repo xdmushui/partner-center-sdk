@@ -50,7 +50,7 @@ To help you get up and running quickly with the Partner Center APIs, we provide 
       <td><p><strong>Description:</strong></p>
           <p>This application shows how to build a web store based on the catalog of offers available to Cloud Solution Provider partners. Customers can create a store account and order software subscriptions through your site.</p>
         <p><strong>Get the code:</strong></p>
-        <p><a href="http://go.microsoft.com/fwlink/p/?LinkId=746683">Download the sample code</a></p>
+        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=746683">Download the sample code</a></p>
         <p><strong>What to configure before release:</strong></p>
         <ul>
           <li><p>Authentication: App ID & secret.</p></li>
