@@ -21,9 +21,12 @@ You can verify whether an indirect reseller has signed the Microsoft Partner Agr
 * Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 * The MPN ID or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-To get the Microsoft Partner Agreement signature status of an indirect reseller, use your **IAggregatePartner.Compliance** collection and call the **AgreementSignatureStatus** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) methods.
+To get the Microsoft Partner Agreement signature status of an indirect reseller:
+
+ 1. Use your **IAggregatePartner.Compliance** collection tocall the **AgreementSignatureStatus** property. 
+ 2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -33,7 +36,9 @@ var agreementSignatureStatusByMpnId = partnerOperations.Compliance.AgreementSign
 var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementSignatureStatus.Get(tenantId: "Enter Tenant Id");
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**:PartnerCenterSDK.FeaturesSamples **Class**: GetAgreementSignatureStatus.cs
+- Sample: **[Console test app](console-test-app.md)**
+- Project: **PartnerCenterSDK.FeaturesSamples**
+- Class: **GetAgreementSignatureStatus.cs**
 
 ## REST
 
