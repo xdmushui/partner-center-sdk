@@ -21,6 +21,25 @@ You can verify whether an indirect reseller has signed the Microsoft Partner Agr
 * Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 * The MPN ID or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
 
+## C\#
+
+To get the Microsoft Partner Agreement signature status of an indirect reseller:
+
+ 1. Use your **IAggregatePartner.Compliance** collection tocall the **AgreementSignatureStatus** property. 
+ 2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+
+var agreementSignatureStatusByMpnId = partnerOperations.Compliance.AgreementSignatureStatus.Get(mpnId:"Enter MPN Id");
+
+var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementSignatureStatus.Get(tenantId: "Enter Tenant Id");
+```
+
+- Sample: **[Console test app](console-test-app.md)**
+- Project: **PartnerCenterSDK.FeaturesSamples**
+- Class: **GetAgreementSignatureStatus.cs**
+
 ## REST
 
 ### REST request
@@ -42,7 +61,7 @@ You must provide one of the following two query parameters to identify the partn
 
 #### Request headers
 
-For more information, see [Partner Center REST headers](https://docs.microsoft.com/en-us/partner-center/develop/headers).
+For more information, see [Partner Center REST headers](https://docs.microsoft.com/partner-center/develop/headers).
 
 #### Request examples
 
@@ -78,7 +97,7 @@ Host: api.partnercenter.microsoft.com
 
 #### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/en-us/partner-center/develop/error-codes).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/partner-center/develop/error-codes).
 
 #### Response example (success)
 

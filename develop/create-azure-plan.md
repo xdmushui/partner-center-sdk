@@ -68,9 +68,9 @@ You can suspend an existing Azure plan by following the steps in [Suspend a subs
 
 *You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.*
 
-For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/en-us/rest/api/resources/subscriptions).
+For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/rest/api/resources/subscriptions).
 
-To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/en-us/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
+To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you cannot reactivate it.
 
 ## Transition existing CSP offers to Azure plan
 

@@ -21,7 +21,7 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 
 ## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
 
-[Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681)  
+[Download the Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkId=746681)  
 
 > [!NOTE]  
 > API access to Partner Center for indirect resellers is not a supported scenario.
@@ -54,7 +54,7 @@ Partner Center uses Azure AD for authentication, and to use the Partner Center A
 
 ## <span id="Get_help"/><span id="get_help"/><span id="GET_HELP"/>Get help
 
-Partners can get support at the [Partner Center SDK Yammer group](http://go.microsoft.com/fwlink/p/?LinkID=717360). To get more personalized help, developers can use their MPN support benefits or Premier Support.
+Partners can get support at the [Partner Center SDK Yammer group](https://go.microsoft.com/fwlink/p/?LinkID=717360). To get more personalized help, developers can use their MPN support benefits or Premier Support.
 
 ## <span id="Early_adopter_program"/><span id="early_adopter_program"/><span id="EARLY_ADOPTER_PROGRAM"/>Join the Partner Center API and SDK Early Adopter Program
 
