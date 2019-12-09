@@ -122,7 +122,7 @@
     },
     {
       "source_path": "develop/referral.md",
-      "redirect_url": "referral-resources",
+      "redirect_url": "https://docs.microsoft.com/en-us/partner/develop/referral-resources",
       "redirect_document_id": true
     },
     {
@@ -167,12 +167,12 @@
     },
     {
       "source_path": "develop/get-a-customers-rated-usage-information.md",
-      "redirect_url": "develop/get-a-customer-usage-summary.md",
+      "redirect_url": "get-a-customer-usage-summary",
       "redirect_document_id": true
     },
     {
       "source_path": "develop/get-a-subscriptions-resource-usage-information.md",
-      "redirect_url": "develop/get-all-monthly-usage-records-for-a-subscription.md",
+      "redirect_url": "get-all-monthly-usage-records-for-a-subscription",
       "redirect_document_id": true
     }
   ]
