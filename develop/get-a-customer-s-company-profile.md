@@ -37,7 +37,7 @@ To get the company profile for a customer, call the [**IAggregatePartner.Custome
 var companyProfile = partnerOperations.Customers.ById(customerId).Profiles.Company.Get();
 ```
 
-**Sample**: [Download the Partner Center SDK](http://go.microsoft.com/fwlink/p/?LinkId=746681). **Project**: PartnerSdk.FeatureSamples **Class**: GetCustomerCompanyProfile.cs
+**Sample**: [Download the Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkId=746681). **Project**: PartnerSdk.FeatureSamples **Class**: GetCustomerCompanyProfile.cs
 
 ### Java
 
