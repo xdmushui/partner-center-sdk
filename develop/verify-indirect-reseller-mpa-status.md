@@ -61,7 +61,7 @@ You must provide one of the following two query parameters to identify the partn
 
 #### Request headers
 
-For more information, see [Partner Center REST headers](https://docs.microsoft.com/en-us/partner-center/develop/headers).
+For more information, see [Partner Center REST headers](https://docs.microsoft.com/partner-center/develop/headers).
 
 #### Request examples
 
@@ -97,7 +97,7 @@ Host: api.partnercenter.microsoft.com
 
 #### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/en-us/partner-center/develop/error-codes).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/partner-center/develop/error-codes).
 
 #### Response example (success)
 
