@@ -239,6 +239,7 @@
 ### [Partner Center REST events](partner-center-webhook-events.md) 
 ### [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) 
 ### [Partner Center webhooks](partner-center-webhooks.md) 
-## [Partner Center Managed API reference](https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest)
+## [Partner Center Managed .NET API reference](https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest)
+### [Partner Center .NET API version release notes](dotnet-release-notes.md)
 ## [Partner Center Java API reference](https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1)
 ## [Partner Center PowerShell commands](https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5)
