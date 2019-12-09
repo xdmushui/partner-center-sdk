@@ -25,7 +25,7 @@ Download the sample code for the console test app.
 
 ## .NET
 
-[Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=746682) and modify it as necessary.
+[Download the sample code](https://go.microsoft.com/fwlink/p/?LinkId=746682) and modify it as necessary.
 
 > [!IMPORTANT]
 > Before you build the application, update the values in the *App.config* file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production.
@@ -38,7 +38,7 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
-[Download the sample code](http://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
+[Download the sample code](https://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
 
 > [!IMPORTANT]
 > Before you build the application, update the values in the *SamplesConfigurations.json* file to reflect the Azure AD authentication information you created in [Partner Center authentication](partner-center-authentication.md). Specifically, you should use your integration sandbox account settings during early development or for testing in production.
