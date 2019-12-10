@@ -161,11 +161,11 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 129
 
 {
-    AddressLine1: "One Microsoft Way",
-    City: "Redmond",
-    State: "WA",
-    PostalCode: "98052",
-    Country: "US"
+    "AddressLine1": "One Microsoft Way",
+    "City": "Redmond",
+    "State": "WA",
+    "PostalCode": "98052",
+    "Country": "US"
 }
 ```
 
