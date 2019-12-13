@@ -1,6 +1,6 @@
 ---
 title: Cancel software purchases 
-description: Cancel software purchases.
+description: Self-serve option to cancel software subscriptions and perpetual software purchases using Partner Center APIs.
 ms.date: 12/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
@@ -15,20 +15,27 @@ Applies to:
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to self-cancel software subscriptions and perpetual software purchases which are within the cancellation window from the purchase date without raising the support ticket.
+You can cancel software subscriptions and perpetual software purchases that are within the cancellation window from the purchase date using the Partner Center APIs. You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## C#
+## C\#
 
-To cancel a software order, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
+To cancel a software order,
 
-To select a particular [Order](order-resources.md#order) use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **Orders.ById()** with order identifier to specify the order and finally **Get** or **GetAsync** method to retrieve it.
+1. Pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
-Set the [**Order.Status**](order-resources.md#order) property to "cancelled"
-and set the [**Order.LineItems**](order-resources.md#order) to list of line items that needs to be cancelled. Then use the **Patch()** method to update the order.
+2. Select a particular [Order](order-resources.md#order) you wish to cancel. Call the [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier, followed by **Orders.ById()** with order identifier.
+
+3. Call the **Get** or **GetAsync** method to retrieve the order.
+
+4. Set the [**Order.Status**](order-resources.md#order) property to "cancelled".
+
+5. (Optional) If you want to specify certain line items for cancellation, set the [**Order.LineItems**](order-resources.md#order) to list of line items that you want to cancel.
+
+6. Use the **Patch()** method to update the order.
 
 ``` csharp
 // IPartnerCredentials accountCredentials;
@@ -55,14 +62,14 @@ order = accountPartnerOperations.Customers.ById(customerTenantId).Orders.ById(or
 |------------|----------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
-### URI parameter
+### URI parameters
 
-Use the following query parameter to delete a customer.
+Use the following query parameters to delete a customer.
 
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **order-id** | **string** | Y        | The value is a string denoting the order id which need to be cancelled. |
+| **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted customer tenant identifier that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| **order-id** | **string** | Y        | The value is a string that denotes the identifier of the order that you want to cancel. |
 
 ### Request headers
 
@@ -107,11 +114,15 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 If successful, this method returns the order with cancelled line items.
 
+The order status will be marked as either **cancelled** (if all the line items in the order are cancelled), or **completed** (if not all line items in the order are cancelled).
+
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### Response example
+
+In the following example response, you can see that the quantity of line item with the offer identifier **DG7GMGF0FKZV:0003:DG7GMGF0DWMS** has become zero (0). This change means that the line item that was marked for cancellation has been cancelled successfully. The example order contains other line items that were not cancelled, which means that the status of the overall order will be marked as **completed**, not **cancelled**.
 
 ```http
 HTTP/1.1 200 OK
@@ -208,7 +219,3 @@ MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
     }
 }
 ```
-
-In the above response, you can see the quantity of line item with offer Id DG7GMGF0FKZV:0003:DG7GMGF0DWMS has become 0. This ensures that the line item marked for cancellation has been successfully cancelled. Since the above order contains other line items that are not cancelled, the status of the order is still “completed”.
-
-If you don’t provide the line items to be cancelled then the entire order gets cancelled and the order status gets updated to “cancelled”.
