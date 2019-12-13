@@ -144,6 +144,7 @@
 #### [Purchase a subscription for commercial marketplace products](create-subscription-azure-marketplace-products.md)
 #### [Activate a sandbox subscription for commercial marketplace products](activate-sandbox-subscription-azure-marketplace-products.md)
 #### [Cancel a commercial marketplace subscription](cancel-an-azure-marketplace-subscription.md)
+#### [Cancel software purchases](cancel-software-purchases.md)
 #### [Cancel an order from the integration sandbox](cancel-an-order-from-the-integration-sandbox.md)
 #### [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 #### [Convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)
