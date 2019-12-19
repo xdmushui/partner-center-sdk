@@ -1,7 +1,7 @@
 ---
 title: Cancel software purchases 
 description: Self-serve option to cancel software subscriptions and perpetual software purchases using Partner Center APIs.
-ms.date: 12/11/2019
+ms.date: 12/19/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -12,8 +12,6 @@ ms.localizationpriority: medium
 Applies to:
 
 - Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 You can cancel software subscriptions and perpetual software purchases that are within the cancellation window from the purchase date using the Partner Center APIs. You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
 
