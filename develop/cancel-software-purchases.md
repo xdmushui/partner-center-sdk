@@ -12,8 +12,6 @@ ms.localizationpriority: medium
 Applies to:
 
 - Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 You can cancel software subscriptions and perpetual software purchases that are within the cancellation window from the purchase date using the Partner Center APIs. You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
 
