@@ -72,7 +72,7 @@ For details on how to disable Azure usage subscriptions, see [Azure API on subsc
 
 To remove existing Azure reservations, you must submit a [cancellation request](https://docs.microsoft.com/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation). Once an Azure plan is suspended, you can reactivate it.
 
-For details on how to reactivate an Azure plan, see [reactivate-a-suspended-a-subscription](https://docs.microsoft.com/en-us/partner-center/develop/reactivate-a-suspended-a-subscription)
+For details on how to reactivate an Azure plan, see [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 
 ## Transition existing CSP offers to Azure plan
 
