@@ -2,7 +2,7 @@
 title: Create an Azure plan 
 description: Developers can purchase, create, and manage Azure plans programmatically using Partner Center APIs.
 ms.assetid: 
-ms.date: 11/01/2019
+ms.date: 01/02/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -70,8 +70,7 @@ You can suspend an existing Azure plan by following the steps in [Suspend a subs
 
 For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/rest/api/resources/subscriptions).
 
-To remove existing Azure reservations, you must [cancel the reservations](azure-reservations-manage.md#cancel-or-exchange-a-reservation).  
-
+To remove existing Azure reservations, you must [cancel the reservations](https://docs.microsoft.com/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation).  
 After you suspend an Azure plan, you can reactivate it.
 
 For details on how to reactivate an Azure plan, see [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
