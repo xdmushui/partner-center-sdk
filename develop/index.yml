@@ -11,7 +11,7 @@ metadata:
   ms.collection: collection
   author: lauradolan
   ms.author: ladolan
-  ms.date: 11/05/2019
+  ms.date: 01/08/2020
 
 landingContent:
   - title: Develop with Partner Center
@@ -40,7 +40,7 @@ landingContent:
           - text: Partner Center .NET SDK
             url: https://www.nuget.org/packages/Microsoft.Store.PartnerCenter
           - text: Partner Center .NET samples
-            url: https://github.com/Microsoft/Partner-Center-DotNet-Samples
+            url: https://github.com/microsoft/Partner-Center-DotNet-Samples
       - linkListType: reference
         links:
           - text: Managed .NET API reference
@@ -53,20 +53,20 @@ landingContent:
       - linkListType: reference
         links:
           - text: Partner Center REST API reference
-            url: https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference
+            url: https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference
 
   - title: Use the Java SDK (open source)
     linkLists:
       - linkListType: download
         links:
           - text: Download the Partner Center Java SDK
-            url: https://search.maven.org/artifact/com.microsoft.store/partnercenter/1.8.1/jar
+            url: https://search.maven.org/artifact/com.microsoft.store/partnercenter
           - text: Java SDK GitHub repo (for questions, contributions and issues)
-            url: https://github.com/Microsoft/Partner-Center-Java
+            url: https://github.com/microsoft/Partner-Center-Java
       - linkListType: reference
         links:
           - text: Java API reference
-            url: https://docs.microsoft.com/java/partnercenter/overview?view=partnercenter-1.8.1
+            url: https://docs.microsoft.com/java/partnercenter/overview
  
   - title: Use the PowerShell module (open source)
     linkLists:
@@ -75,11 +75,11 @@ landingContent:
           - text: Install the PowerShell module
             url: https://www.powershellgallery.com/packages/PartnerCenter
           - text: PowerShell module GitHub repo (for questions, contributions and issues)
-            url: https://github.com/Microsoft/Partner-Center-PowerShell
+            url: https://github.com/microsoft/Partner-Center-PowerShell
       - linkListType: reference
         links:
           - text: PowerShell commands 
-            url: https://docs.microsoft.com/powershell/partnercenter/overview?view=partnercenterps-1.5
+            url: https://docs.microsoft.com/powershell/partnercenter
 
   - title: Use the Swagger API for CSP partners
     linkLists:
