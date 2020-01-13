@@ -2,7 +2,7 @@
 title: Customer resources
 description: Customer resources that represent a customer or reseller.
 ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
-ms.date: 01/10/2020
+ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -32,7 +32,7 @@ with Microsoft and Microsoft's resellers. Customers also have a company profile 
 | companyProfile        | [CustomerCompanyProfile](#customercompanyprofile)                | Additional information about the company or organization.                                                                                    |
 | billingProfile        | [CustomerBillingProfile](#customerbillingprofile)                | Additional information used for billing.                                                                                                     |
 | relationshipToPartner | string                                                           | Defines the licensing program that the partner uses for this customer: "none", "reseller", "advisor", "syndication" or "microsoft\_support". |
-| allowDelegatedAccess  | boolean                                                          | Whether the partner has been granted delegated admin privileges by this customer. This property is only available using **getCustomerById**, not by list.                                                         |
+| allowDelegatedAccess  | boolean                                                          | Whether the partner has been granted delegated admin privileges by this customer. This property is only available when getting a customer by ID, not by list.                                                         |
 | userCredentials       | [UserCredentials](user-resources.md#usercredentials) | The user credentials.                                                                                                                        |
 | customDomains         | array of strings                                                 | List of custom domains of a customer.                                                                                                        |
 | associatedPartnerId   | string                                                           | The indirect reseller associated to this customer account. This value can be set only by indirect CSP partners.                              |
