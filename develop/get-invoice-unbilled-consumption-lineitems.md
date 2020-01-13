@@ -1,7 +1,7 @@
 ---
 title: Get invoice unbilled commercial consumption line items
 description: You can get a collection of unbilled commercial consumption line item details for a specified invoice using the Partner Center APIs.
-ms.date: 11/01/2019
+ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -16,8 +16,6 @@ Applies to:
 How to get a collection of unbilled commercial consumption line item details.
 
 You can use the following methods to get a collection of details unbilled commercial consumption line items (also known as open usage line items) programmatically.
-
-[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 ## Prerequisites
 
