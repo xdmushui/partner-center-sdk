@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice using the Partner Center APIs.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 11/01/2019
+ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -19,7 +19,9 @@ Applies to:
 
 You can use the following methods to get a collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
 
-[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
+*Except for bug fixes, this API is no longer being updated.* You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.
+
+You should use **onetime** to query all commercial consumption line items instead of **marketplace**. Or, you can follow the links in the estimate links call.
 
 This API also supports the **provider** types of **azure** and **office** for Microsoft Azure (MS-AZR-0145P) subscriptions and Office offers, which makes the API feature backward compatible.
 
@@ -135,7 +137,9 @@ The following syntaxes apply when the billing provider is **OneTime**. This incl
 
 If you are using the following syntaxes, be sure to use the appropriate syntax for your use case.
 
-[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
+*Except for bug fixes, this API is no longer being updated.* You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.
+
+You should use **onetime** to query all commercial consumption line items instead of **marketplace**. Or, you can follow the links in the estimate links call.
 
 | Method | Request URI | Description of syntax use case |
 | ------ | ----------- | -------------------------------- |
