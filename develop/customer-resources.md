@@ -2,7 +2,7 @@
 title: Customer resources
 description: Customer resources that represent a customer or reseller.
 ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
-ms.date: 05/29/2019
+ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -19,8 +19,7 @@ Applies to:
 
 ## Customer
 
-The **Customer** resource represents a customer or reseller. Most broadly, a customer resouce can be any person, employee, or organization that wishes to do business
-with Microsoft and Microsoft's resellers. Customers also have a company profile and a billing profile.
+The **Customer** resource represents a customer or reseller. Most broadly, a customer resource can be any person, employee, or organization that wishes to do business with Microsoft and Microsoft's resellers. Customers also have a company profile and a billing profile.
 
 >[!NOTE]
 >The **Customer** resource has a rate limit of 500 requests per minute per tenant identifier.
