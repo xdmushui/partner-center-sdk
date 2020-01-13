@@ -1,7 +1,7 @@
 ---
 title: Get invoice billed commercial consumption line items
 description: You can get a collection of commercial consumption invoice line item (closed daily rated usage line item) details for a specified invoice using the Partner Center APIs.
-ms.date: 11/01/2019
+ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -14,8 +14,6 @@ Applies to:
 - Partner Center
 
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
-
-[!INCLUDE [<Marketplace to Onetime API notice>](<../includes/marketplace-onetime-apis.md>)]
 
 This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145P) subscriptions. This means this API is a backward-compatible feature.
 
