@@ -1,9 +1,9 @@
 ---
 title: Enable secure application model
 description: Secure your Partner Center and control panel apps.
-ms.date: 09/17/2019
+ms.date: 01/20/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -85,7 +85,7 @@ You must create and register a web app in Partner Center before making REST call
 
 You must get an authorization code for your web app to accept from the Azure AD login call:
 
-1. Log in to Azure AD at the following URL: <https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile>. Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
+1. Log in to Azure AD at the following URL: <https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1>. Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
 2. Replace **Application-Id** with your Azure AD app ID (GUID).
 3. When prompted, log in with your user account with MFA configured.
 4. When prompted, enter additional MFA information (phone number or email address) to verify your login.
@@ -216,37 +216,21 @@ For more information on this process, see [Secure App Model](https://docs.micros
     Install-Module PartnerCenter
     ```
 
-2. Use PowerShell to add `urn:ietf:wg:oauth:2.0:oob` as a reply URL for your Azure AD application. Be sure to replace the value for the object identifier parameter with the object identifier for you Azure AD application. You can find this value in the Azure management portal.
-
-    ```powershell
-    Connect-AzureAD
-    ```
-
-    ```powershell
-    Set-AzureADApplication -ObjectId 659dd68d-3414-4254-a48b-c081b5631b86 -ReplyUrls @("urn:ietf:wg:oauth:2.0:oob")
-    ```
-
-3. Use the **[New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
+2. Use the **[New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
 
     ```powershell
     $credential = Get-Credential
-    ```
 
-    ```powershell
-    $token = New-PartnerAccessToken -Consent -Credential $credential -Resource https://api.partnercenter.microsoft.com -ServicePrincipal
+    New-PartnerAccessToken -ApplicationId 'xxxx-xxxx-xxxx-xxxx' -Scopes 'https://api.partnercenter.microsoft.com/user_impersonation' -ServicePrincipal -Credential $credential -Tenant 'yyyy-yyyy-yyyy-yyyy' -UseAuthorizationCode
     ```
 
     > [!NOTE]
-    > The **ServicePrincipal** parameter is used with the **New-PartnerAccessToken** command because an Azure AD app with a type of **web/API** is being used. This type of app require that a client identifier and secret be included in the access token request.
+    > The **ServicePrincipal** parameter is used with the **New-PartnerAccessToken** command because an Azure AD app with a type of **Web/API** is being used. This type of app require that a client identifier and secret be included in the access token request. When the **Get-Credential** command is invoked, you will be prompted to enter a username and password. Enter the application identifier as teh username. Enter the application secret as the password .When the **New-PartnerAccessToken** command is invoked, you will be prompted to enter credentials again. Enter the credentials for the service account that you are using. This service account should be a partner account with appropriate permissions.
 
-4. Copy the refresh token value.
+3. Copy the refresh token value.
 
     ```powershell
     $token.RefreshToken | clip
     ```
 
-5. When the **Get-Credential** command is invoked, you will be prompted to enter a username and password. Enter the application identifier as teh username. Enter the application secret as the password.
-
-6. When the **New-PartnerAccessToken** command is invoked, you will be prompted to enter credentials again. Enter the credentials for the service account that you are using. This service account should be a partner account with apppropriate permissions.
-
-7. After the **New-PartnerAccessToken** is successfully executed, the **$token** variable now contains the response from Azure AD. Be sure to note and store the refresh token value in a secure repository, such as Azure Key Vault.
+You should store the refresh token value in a secure repository, such as Azure Key Vault. See [multi-factor authentication](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth) for more information on how to leverage the secure application module with PowerShell.
