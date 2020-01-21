@@ -225,7 +225,7 @@ For more information on this process, see [Secure App Model](https://docs.micros
     ```
 
     > [!NOTE]
-    > The **ServicePrincipal** parameter is used with the **New-PartnerAccessToken** command because an Azure AD app with a type of **Web/API** is being used. This type of app require that a client identifier and secret be included in the access token request. When the **Get-Credential** command is invoked, you will be prompted to enter a username and password. Enter the application identifier as teh username. Enter the application secret as the password .When the **New-PartnerAccessToken** command is invoked, you will be prompted to enter credentials again. Enter the credentials for the service account that you are using. This service account should be a partner account with appropriate permissions.
+    > The **ServicePrincipal** parameter is used with the **New-PartnerAccessToken** command because an Azure AD app with a type of **Web/API** is being used. This type of app requires that a client identifier and secret be included in the access token request. When the **Get-Credential** command is invoked, you will be prompted to enter a username and password. Enter the application identifier as the username. Enter the application secret as the password. When the **New-PartnerAccessToken** command is invoked, you will be prompted to enter credentials again. Enter the credentials for the service account that you are using. This service account should be a partner account with appropriate permissions.
 
 3. Copy the refresh token value.
 
@@ -233,4 +233,4 @@ For more information on this process, see [Secure App Model](https://docs.micros
     $token.RefreshToken | clip
     ```
 
-You should store the refresh token value in a secure repository, such as Azure Key Vault. See [multi-factor authentication](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth) for more information on how to leverage the secure application module with PowerShell.
+You should store the refresh token value in a secure repository, such as Azure Key Vault. For more information on how to leverage the secure application module with PowerShell, see the [multi-factor authentication](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth) article.
