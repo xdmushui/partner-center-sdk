@@ -11,7 +11,6 @@
 ### [Enable secure application model](enable-secure-app-model.md)
 ### [Test and debug](test-and-debug.md) 
 ### [Early Adopter Program](early-adopter-program.md) 
-### [Partner Center SDK EULA](EULA-Partner-Center-SDK.md)
 ## [Scenarios](scenarios.md)
 ### [Analytics](usage-analytics.md)
 #### [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
