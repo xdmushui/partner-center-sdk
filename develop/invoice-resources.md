@@ -2,7 +2,7 @@
 title: Invoice resources
 description: Multiple invoice-related resources are available through the Partner Center APIs. These resources are related to invoice and line item details.
 ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
-ms.date: 11/01/2019
+ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -235,6 +235,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to the billing currency exchange rate was determined. |
 | BillableQuantity | decimal | Gets or sets the units purchased. For each design column named as **BillableQuantity**. |
 | MeterDescription | string | Gets or sets the meter description for consumption line item. |
+| ReservationOrderId | string | Gets or sets the reservation order id for an Azure RI Purchase. |
 | BillingFrequency | string | Gets or sets the billing frequency. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
