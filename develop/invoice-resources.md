@@ -235,7 +235,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | PCToBCExchangeRateDate | DateTime | Gets or sets the exchange rate date at which the pricing currency to the billing currency exchange rate was determined. |
 | BillableQuantity | decimal | Gets or sets the units purchased. For each design column named as **BillableQuantity**. |
 | MeterDescription | string | Gets or sets the meter description for consumption line item. |
-| ReservationOrderId | string | Gets or sets the reservation order id for an Azure RI Purchase. |
+| ReservationOrderId | string | Gets or sets the reservation order identifier for an Azure RI Purchase. |
 | BillingFrequency | string | Gets or sets the billing frequency. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
