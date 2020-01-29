@@ -2,7 +2,7 @@
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice using the Partner Center APIs.
 ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
-ms.date: 01/13/2020
+ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -637,6 +637,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "billableQuantity": 0.0159369774,
             "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
             "billingFrequency": "Monthly",
+            "reservationOrderId": "883d475b-0000-2222-0000-8818752f1234",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {
@@ -682,6 +683,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",
             "billableQuantity": 0.0130687981,
             "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
+            "reservationOrderId": "",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
             "attributes": {
@@ -788,6 +790,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",
             "billableQuantity": 0.0130687981,
             "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
+            "reservationOrderId": "",
             "billingFrequency": "Monthly",
             "invoiceLineItemType": "billing_line_items",
             "billingProvider": "one_time",
