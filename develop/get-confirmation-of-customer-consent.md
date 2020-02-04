@@ -1,13 +1,13 @@
 ---
-title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
-description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 09/17/2019
+title: Get confirmation of customer acceptance of Microsoft Customer Agreement
+description: This topic explains how to get confirmation of customer acceptance of the Microsoft Customer Agreement. 
+ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Get confirmation of customer acceptance of Microsoft Cloud agreement
+# Get confirmation of customer acceptance of Microsoft Customer Agreement
 
 **Applies To**
 
@@ -31,7 +31,7 @@ ms.localizationpriority: medium
 To retrieve confirmation(s) of customer acceptance that was previously provided:
 
 - Use the **IAggregatePartner.Customers** collection and call **ById** method with the specified customer identifier.
-- Fetch the **Agreements** property and filter the results to Microsoft Cloud Agreement by calling **ByAgreementType** method.
+- Fetch the **Agreements** property and filter the results to Microsoft Customer Agreement by calling **ByAgreementType** method.
 - Call **Get** or **GetAsync** method.
 
 ```csharp

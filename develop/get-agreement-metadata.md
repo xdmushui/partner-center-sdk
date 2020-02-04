@@ -1,13 +1,13 @@
 ---
-title: Get agreement metadata for Microsoft Cloud Agreement
-description: This topic explains how to get agreement metadata for Microsoft Cloud Agreement. 
-ms.date: 09/17/2019
+title: Get agreement metadata for Microsoft Customer Agreement
+description: This topic explains how to get agreement metadata for Microsoft Customer Agreement. 
+ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Get agreement metadata for Microsoft Cloud Agreement
+# Get agreement metadata for Microsoft Customer Agreement
 
 **Applies To**
 
@@ -27,11 +27,11 @@ ms.localizationpriority: medium
 
 ## .NET (version 1.14 or newer)
 
-To retrieve the agreement metadata for Microsoft Cloud Agreement:
+To retrieve the agreement metadata for Microsoft Customer Agreement:
 
 1. First, retrieve the **IAggregatePartner.AgreementDetails** collection.
 
-2. Call **ByAgreementType** method to filter the collection to Microsoft Cloud Agreement.
+2. Call **ByAgreementType** method to filter the collection to Microsoft Customer Agreement.
 
 3. Finally, call **Get** or **GetAsync** method.
 
@@ -47,9 +47,9 @@ A complete sample can be found in the [GetAgreementDetails](https://github.com/P
 
 ## .NET (version 1.9 - 1.13)
 
-To retrieve agreement metadata for the Microsoft Cloud Agreement:
+To retrieve agreement metadata for the Microsoft Customer Agreement:
 
-First retrieve the **IAggregatePartner.AgreementDetails** collection and then call the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+First retrieve the **IAggregatePartner.AgreementDetails** collection and then call the **Get** or **GetAsync** methods. Then search for the item within the collection, which corresponds to the Microsoft Customer Agreement:
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -63,9 +63,9 @@ AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
-To retrieve agreement metadata for the Microsoft Cloud Agreement:
+To retrieve agreement metadata for the Microsoft Customer Agreement:
 
-First call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+First call the **IAggregatePartner.getAgreementDetails** function and then call the **get** function. Then search for the item within the collection, which corresponds to the Microsoft Customer Agreement:
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -89,9 +89,9 @@ A complete sample can be found in the [GetAgreementDetails](https://github.com/M
 
 [!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
-To retrieve agreement metadata for the Microsoft Cloud Agreement:
+To retrieve agreement metadata for the Microsoft Customer Agreement:
 
-Use the [**Get-PartnerAgreementDetail**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/get-partneragreementdetail) command. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+Use the [**Get-PartnerAgreementDetail**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/get-partneragreementdetail) command. Then search for the item within the collection, which corresponds to the Microsoft Customer Agreement:
 
 ```powershell
 Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudAgreement'} | Select-Object -First 1
@@ -101,7 +101,7 @@ Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudA
 
 ### REST request
 
-To retrieve agreement metadata for Microsoft Cloud Agreement, first create a REST Request to retrieve the **AgreementMetaData** collection. Then search for the item in the collection which corresponds to the Microsoft Cloud Agreement.
+To retrieve agreement metadata for Microsoft Customer Agreement, first create a REST Request to retrieve the **AgreementMetaData** collection. Then search for the item in the collection which corresponds to the Microsoft Customer Agreement.
 
 #### Request syntax
 
@@ -166,6 +166,6 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-To identify the resource in the response which corresponds to the Microsoft Cloud Agreement, look for the resource whose **agreementType** property has value "MicrosoftCloudAgreement".
+To identify the resource in the response which corresponds to the Microsoft Customer Agreement, look for the resource whose **agreementType** property has value "MicrosoftCloudAgreement".
 
 ---

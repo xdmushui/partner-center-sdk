@@ -1,13 +1,13 @@
 ---
-title: Confirm customer acceptance of Microsoft Cloud Agreement
-description: How to confirm customer acceptance of the Microsoft Cloud Agreement. 
-ms.date: 09/17/2019
+title: Confirm customer acceptance of Microsoft Customer Agreement
+description: How to confirm customer acceptance of the Microsoft Customer Agreement. 
+ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Confirm customer acceptance of Microsoft Cloud Agreement
+# Confirm customer acceptance of Microsoft Customer Agreement
 
 Applies to:
 
@@ -19,7 +19,7 @@ Applies to:
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
 
-How to confirm customer acceptance of the Microsoft Cloud agreement.
+How to confirm customer acceptance of the Microsoft Customer Agreement.
 
 ## Prerequisites
 
@@ -27,8 +27,8 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication only.
 - A customer ID (customer-tenant-id).
-- Date when customer accepted the Microsoft Cloud Agreement.
-- Information about the user from the organization who accepted the Microsoft Cloud Agreement, including:
+- Date when customer accepted the Microsoft Customer Agreement.
+- Information about the user from the organization who accepted the Microsoft Customer Agreement, including:
   - First name
   - Last name
   - Email address
@@ -39,7 +39,7 @@ How to confirm customer acceptance of the Microsoft Cloud agreement.
 
 To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. You must obtain the **templateId** of the Microsoft Cloud Agreement. For more details, see [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md).
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md).
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -76,9 +76,9 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
 ## .NET (version 1.9 - 1.13)
 
-To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
+To confirm or re-confirm that a customer has accepted the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Customer Agreement.
 
     ```csharp
     /// IAggregatePartner partnerOperations;
@@ -113,9 +113,9 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
 [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
 
-To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
+To confirm or re-confirm that a customer has accepted the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Customer Agreement.
 
     ```java
     /// IAggregatePartner partnerOperations;
@@ -160,9 +160,9 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
 [!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
 
-To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement:
+To confirm or re-confirm that a customer has accepted the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Cloud Agreement.  
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **TemplateId** of the Microsoft Customer Agreement.  
 
     ```powershell  
     $agreement = Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudAgreement'} | Select-Object -First 1
@@ -176,14 +176,14 @@ To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreem
 
 ## REST
 
-To confirm or re-confirm that a customer has accepted the Microsoft Cloud Agreement, see the following instructions.
+To confirm or re-confirm that a customer has accepted the Microsoft Customer Agreement, see the following instructions.
 
 ### REST request
 
-1. Retrieve the agreement metadata for the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **templateId** of the Microsoft Cloud Agreement.
-2. Create a new resource to confirm that a customer has accepted the Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details.
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details. This step is required to obtain the **templateId** of the Microsoft Customer Agreement.
+2. Create a new resource to confirm that a customer has accepted the Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details.
 
-To create a new **Agreement** resource to confirm that a customer has accepted the Microsoft Cloud Agreement:
+To create a new **Agreement** resource to confirm that a customer has accepted the Microsoft Customer Agreement:
 
 #### Request syntax
 
@@ -209,7 +209,7 @@ This table describes the required properties in the request body.
 
 | Name      | Type   | Description                                                                                  |  
 |-----------|--------|----------------------------------------------------------------------------------------------|  
-| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Cloud Agreement. |  
+| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Customer Agreement. |  
 
 #### Agreement
 
@@ -217,9 +217,9 @@ This table describes the minimum required fields to create an **Agreement** reso
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
+| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
-| templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Cloud Agreement by retrieving the agreement metadata for Microsoft Cloud Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md) for details. |
+| templateId     |string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md) for details. |
 | type           |AgreementType enum | Agreement type accepted by the customer. Currently, the only supported value is "MicrosoftCloudAgreement". |
   
 #### Request example
