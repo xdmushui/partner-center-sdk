@@ -159,7 +159,7 @@ Date: Fri, 02 Dec 2016 18: 54: 38 GMT
             "availabilityId": "DZH318Z0BTTTT",
             "productName": "NGINX Plus",
             "skuName": "NGINX Plus (Ubuntu 14.04)",
-            "publisherName": ""Nginx, Inc.",
+            "publisherName": "Nginx, Inc.",
             "publisherId": "212336222",
             "termAndBillingCycle": "30 Days Trial",
             "discountDetails": "20%"
