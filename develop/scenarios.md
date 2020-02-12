@@ -164,7 +164,6 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="get-a-customer-s-company-profile.md">Get a customer&#39;s company profile</a></p></li>
 <li><p><a href="update-a-customer-s-usage-spending-budget.md">Update a customer&#39;s usage spending budget</a></p></li>
 <li><p><a href="add-a-verified-domain-for-a-customer.md">Add a verified domain for a customer</a></p></li>
-<li><p><a href="confirm-customer-consent.md">Confirm customer acceptance of Microsoft Customer Agreement</a></p></li>
 <li><p><a href="get-agreement-metadata.md">Get agreement metadata for Microsoft Customer Agreement</a></p></li>
 <li><p><a href="get-confirmation-of-customer-consent.md">Get confirmation of customer acceptance of Microsoft Customer Agreement</a></p></li>
 <li><p><a href="get-a-partner-s-validation-codes.md">Get a partner's validation codes</a></p></li>

@@ -2,7 +2,7 @@
 title: Manage customers
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage customer accounts.
 ms.assetid: C8D81324-5D5A-4C42-933F-6C0552FB882D
-ms.date: 02/04/2020
+ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -42,7 +42,6 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get a customer's company profile](get-a-customer-s-company-profile.md)   
 - [Update a customer's usage spending budget](update-a-customer-s-usage-spending-budget.md)   
 - [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md)   
-- [Confirm customer acceptance of Microsoft Customer Agreement](confirm-customer-consent.md)
 - [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md)
 - [Get confirmation of customer acceptance of Microsoft Customer Agreement](get-confirmation-of-customer-consent.md)
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
