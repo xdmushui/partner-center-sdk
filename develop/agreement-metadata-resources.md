@@ -1,7 +1,7 @@
 ---
 title: Agreement metadata resources
 description: The AgreementMetadata resource collection describes agreement types that partners can use to provide confirmation of customer acceptance.
-ms.date: 02/04/2020
+ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ The **AgreementMetaData** resource is currently supported by Partner Center only
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-The **AgreementMetaData** collection provides metadata about all the agreement types. Partners can use this collection to provide confirmation of customer acceptance of agreements. Currently, the **AgreementMetaData** collection only returns metadata for one agreement type, which is the **Microsoft Customer Agreement**.
+The **AgreementMetaData** collection provides metadata about all the agreement types. Partners can use this collection to provide confirmation of customer acceptance of agreements. The **AgreementMetaData** collection returns metadata for both agreement types (**Microsoft Cloud Agreement** and **Microsoft Customer Agreement**).
 
 ## AgreementMetaData
 
