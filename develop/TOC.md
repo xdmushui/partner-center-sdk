@@ -97,7 +97,6 @@
 ### [Manage customer accounts](manage-customers.md) 
 #### [Add a verified domain for a customer](add-a-verified-domain-for-a-customer.md) 
 #### [Assign licenses to a user](assign-licenses-to-a-user.md)
-#### [Confirm customer acceptance of Microsoft Customer Agreement](confirm-customer-consent.md)
 #### [Get agreement metadata for Microsoft Customer Agreement](get-agreement-metadata.md)
 #### [Get agreement metadata for the Microsoft Customer Agreement](get-customer-agreement-metadata.md)
 #### [Get confirmation of customer acceptance of Microsoft Customer Agreement](get-confirmation-of-customer-consent.md)
