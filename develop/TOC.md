@@ -103,6 +103,7 @@
 #### [Get confirmation of customer acceptance of Microsoft Cloud Agreement](get-confirmation-of-customer-consent.md)
 #### [Download Microsoft Customer Agreement template](download-customer-agreement-template.md)
 #### [Get confirmation of customer acceptance of Microsoft Customer Agreement](get-confirmation-of-customer-agreement.md)
+#### [Get status of customer's direct acceptance of Microsoft Customer Agreement](get-customer-agreement-direct-sign-status.md)
 #### [Confirm customer acceptance of Microsoft Customer Agreement](confirm-customer-consent-customer-agreement.md)
 #### [Get licenses assigned to a user](check-which-licenses-are-assigned-to-a-user.md)
 #### [Get licenses assigned to a user by license group](get-licenses-assigned-to-a-user-by-license-group.md)
