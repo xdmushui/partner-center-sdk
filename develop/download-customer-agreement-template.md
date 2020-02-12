@@ -1,7 +1,7 @@
 ---
 title: Get a download link for the Microsoft Customer Agreement template
 description: Get a download link for Microsoft Customer Agreement template.
-ms.date: 02/04/2020
+ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -31,7 +31,7 @@ This article describes how to get a link to download the Microsoft Customer Agre
 > [!IMPORTANT]
 > - The Microsoft Customer Agreement is country-specific. When requesting for a link to download the Microsoft Customer Agreement template, Be sure to specify the correct country based on customer's location. or list of supported countries, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
 > - For some countries, the Microsoft Customer Agreement is available in multiple languages. For best customer experience, pick the language that best match the customer's needs. For list of supported languages, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
-> - This method is only supported with the Microsoft Customer Agreement. You cannot use it to get a download link for Microsoft Customer Agreement template.
+> - This method is only supported with the Microsoft Customer Agreement.
 
 ## .NET
 
