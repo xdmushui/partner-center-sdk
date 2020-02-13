@@ -45,6 +45,7 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Confirm customer acceptance of Microsoft Cloud agreement](confirm-customer-consent.md)
 - [Get agreement metadata for Microsoft Cloud Agreement](get-agreement-metadata.md)
 - [Get confirmation of customer acceptance of Microsoft Cloud agreement](get-confirmation-of-customer-consent.md)
+- [Get direct signing (direct acceptance) status of Microsoft Customer Agreement](get-direct-sign-status-of-customer-agreement.md)
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
 - [Get a customer's qualification](get-a-customer-s-qualification.md)
 - [Update a customer's qualification](update-a-customer-s-qualification.md)
