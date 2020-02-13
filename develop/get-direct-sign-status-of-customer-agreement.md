@@ -1,19 +1,21 @@
 ---
-title: Get the status of a customer's direct acceptance of Microsoft Customer Agreement.
-description: This topic explains how to get the status of a customer's direct acceptance of Microsoft Customer Agreement. 
+title: Get customer's direct signing status for Microsoft Customer Agreement.
+description: You can use the DirectSignedCustomerAgreementStatus resource to get the status of a customer's direct signing (direct acceptance) of the Microsoft Customer Agreement. 
 ms.date: 02/11/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Get the status of a customer's direct signing (acceptance) of Microsoft Customer Agreement
+# Get the status of a customer's direct signing (direct acceptance) of Microsoft Customer Agreement
 
 Applies to:
 
 - Partner Center
 
-The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the *Microsoft public cloud*. This resource doesn't apply to:
+The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the Microsoft public cloud.
+
+This resource is *not applicable* to:
 
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
@@ -23,10 +25,8 @@ This article explains how you can retrieve the status of a customer's direct acc
 
 ## REST request
 
-To retrieve the status of a customer's direct acceptance of the Microsoft Customer Agreement:
-
-1. Create a REST request to retrieve the [DirectSignedCustomerAgreementStatus](./customer-agreement-direct-sign-status-resource.md) for the customer. 
-2. Examine the isSigned property in the returned value. A value of **true** indicates that the agreement has been signed (accepted) by the customer; **false** indicates otherwise.
+To retrieve the status of a customer's direct acceptance of the Microsoft Customer Agreement,
+create a REST request to retrieve the [DirectSignedCustomerAgreementStatus](./customer-agreement-direct-sign-status-resource.md) for the customer. 
 
 ### Request syntax
 
@@ -42,7 +42,7 @@ You can use the following URI parameters with your request:
 
 | Name             | Type | Required | Description                                                                               |
 |------------------|------|----------|-------------------------------------------------------------------------------------------|
-| customer-tenant-id | GUID | Yes | The value is a GUID formatted **CustomerTenantId** that allows you to specify a customer. |
+| customer-tenant-id | GUID | Yes | The value is a GUID-formatted **CustomerTenantId** that allows you to specify the tenant ID of a customer. |
 
 ### Request headers
 
@@ -66,7 +66,10 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 If successful, this method returns a [**DirectSignedCustomerAgreementStatus** resource](./customer-agreement-direct-sign-status-resource.md) in the response body.
 
-The resource has an **isSigned** property that indicates the customer's direct sign (acceptance) status. A value of **true** indicates that the agreement has been signed (accepted) by the customer; **false** indicates otherwise.
+The resource has an **isSigned** property that indicates the customer's direct signing (direct acceptance) status. 
+
+- A value of **true** indicates that the agreement has been signed (accepted) directly by the customer.
+- A value of **false** indicates that the agreement has *not* been signed (accepted) directly by the customer.
 
 ### Response success and error codes
 
