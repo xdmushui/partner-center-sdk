@@ -1,7 +1,7 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement
 description: Confirm customer acceptance of the Microsoft Customer Agreement. 
-ms.date: 09/19/2019
+ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-csp
 ms.localizationpriority: medium
@@ -112,9 +112,9 @@ This table describes the minimum required fields to create an [**Agreement** res
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Cloud Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
+| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
-| templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Cloud Agreement](./get-customer-agreement-metadata.md) for details. |
+| templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
 | type           | string | Agreement type accepted by the customer. Use "MicrosoftCustomerAgreement" if customer accepted the Microsoft Customer Agreement. |
   
 #### Request example
