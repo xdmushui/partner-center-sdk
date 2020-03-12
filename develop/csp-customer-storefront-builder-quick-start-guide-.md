@@ -130,7 +130,7 @@ Customers can belong to these countries:
 
 To deploy an enhanced or customized CSP Customer Storefront:
 
-- Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) make additional customizations.
+- Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) to make additional customizations.
 - Use Microsoft Visual Studio 2015 (or later) to develop.
 - Build for additional changes and enhancements (including authorizations, certifications, manifest changes, and other items).
 
