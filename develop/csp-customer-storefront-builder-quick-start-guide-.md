@@ -209,4 +209,4 @@ To deploy an enhanced or customized CSP Customer Storefront:
 
 - This website supports prorated pricing in cases when customers add more seats to an existing subscription.
 - Each subscription expires after one year and cannot be changed after the subscription is purchased.
-- The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for new seat will be $364. If you add one more 10 days later, the price will be $354.
+- The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for the new seat will be $364. If you add one more seat 10 days later, the price will be $354.
