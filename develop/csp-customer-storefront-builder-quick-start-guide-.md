@@ -57,7 +57,7 @@ The process for creating a storefront website is to:
 
 Deployment options:
 
-- Deploy your website from Partner Center
+- Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) from GitHub
 - Integrate with Azure to deploy the configured website
 - Deploy on an existing subscription or bring your own subscription
 
@@ -123,26 +123,16 @@ Customers can belong to these countries:
 | GB           | United Kingdom |
 | US           | United States  |
 
-### Additional resources
-
-To enhance or customize your CSP Customer Storefront:
-
-- Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) make additional customizations.
-- Use Microsoft Visual Studio 2015 (or later) to develop.
-- Build for additional changes and enhancements (including authorizations, certifications, manifest changes, and other items).
 
 ## Partner experience scenarios
 
 ### Deployment scenario
 
-- A partner admin can use Partner Center to deploy the website. In Account settings, choose **Web storefront** to deploy a new website.
-- On this page, partners can see the availability of a new site name and change it (if available).
-- This page shows all active Azure subscriptions associated to this partner tenant and that a partner can choose to use to deploy the website.
-- If a partner does not have an active subscription associated to this Partner Center account, they can add this account as an admin to an existing Azure subscription, and refresh to see that subscription in this list.
-- Partners choose the data center location where this website will be deployed.
-- The **Deploy your store** link will deploy this new website based on the information provided and show the URL.
-- Be sure to copy this URL as Partner Center does not maintain the state or history of these websites. If you close the browser page, you will lose the website name.
-- During deployment, the website will be deployed with the web app credentials created in Partner Center. If you did not register a web app, this will be registered during deployment.
+To deploy an enhanced or customized CSP Customer Storefront:
+
+- Download the [Partner Center storefront sample code](https://github.com/Microsoft/Partner-Center-Storefront) to make additional customizations.
+- Use Microsoft Visual Studio 2015 (or later) to develop.
+- Build for additional changes and enhancements (including authorizations, certifications, manifest changes, and other items).
 
 ### Configuration scenario
 
@@ -219,4 +209,4 @@ To enhance or customize your CSP Customer Storefront:
 
 - This website supports prorated pricing in cases when customers add more seats to an existing subscription.
 - Each subscription expires after one year and cannot be changed after the subscription is purchased.
-- The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for new seat will be $364. If you add one more 10 days later, the price will be $354.
+- The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for the new seat will be $364. If you add one more seat 10 days later, the price will be $354.
