@@ -37,11 +37,13 @@
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/partner-center-sdk",
-      "author": "lauradolan",
-      "ms.author": "ladolan",
+      "author": "JasonWHowell",
+      "manager": "jasonh",
+      "ms.author": "jasonh",
       "ms.topic": "article",
       "ms.prod": "partner-center",
       "ms.technology": "partner-center-sdk",
+      "searchScope": [ "Partner Center", "Partner Center developer resources" ],
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "MSDN.partner-center-sdk", 
