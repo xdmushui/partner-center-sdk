@@ -44,7 +44,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-This table describes the [TransferEntity](transfer-resources.md) properties in the request body.
+This table describes the [TransferEntity](transfer-entity-resources.md) properties in the request body.
 
 | Property              | Type          | Required  | Description                                                                                |
 |-----------------------|---------------|-----------|--------------------------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ This table describes the [TransferEntity](transfer-resources.md) properties in t
 | sourcePartnerTenantId | string        | Yes   | A GUID formatted partner-id that identifies the partner initiating the transfer.                                           |
 | targetPartnerName     | string        | No    | Optional. The name of the partner's organization to whom the transfer is targeted.                                         |
 | targetPartnerTenantId | string        | Yes   | A GUID formatted partner-id that identifies the partner to whom the transfer is targeted.                                  |
-| lineItems             | Array of objects | Yes| An Array of [TransferLineItem](#transferlineitem) resources.                                                               |
+| lineItems             | Array of objects | Yes| An Array of [TransferLineItem](transfer-entity-resources.md#transferlineitem) resources.                                   |
 | status                | string        | No    | The status of the transferEntity. Possible values are "Active" (can be deleted/submitted) and "Completed" (has already been completed). Applied upon successful creation of the transferEntity.|
 
 This table describes the [TransferLineItem](transfer-entity-resources.md#transferlineitem) properties in the request body.

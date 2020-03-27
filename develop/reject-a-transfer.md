@@ -46,7 +46,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 
-This table describes the [TransferEntity](transfer-resources.md) properties in the request body.
+This table describes the [TransferEntity](transfer-entity-resources.md) properties in the request body.
 
 | Property              | Type          | Required  | Description                                                                                |
 |-----------------------|---------------|-----------|--------------------------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ Content-Length: 63
 
 ## REST response
 
-If successful, this method returns the populated [TransferEntity](transfer-resources.md) resource in the response body.
+If successful, this method returns the populated [TransferEntity](transfer-entity-resources.md) resource in the response body.
 
 ### Response success and error codes
 

@@ -58,7 +58,7 @@ Accept: application/json
 
 ## REST response
 
-If successful, this method returns the populated [TransferEntity](transfer-resources.md) resource in the response body.
+If successful, this method returns the populated [TransferEntity](transfer-entity-resources.md) resource in the response body.
 
 ### Response success and error codes
 
