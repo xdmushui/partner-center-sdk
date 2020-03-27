@@ -61,7 +61,7 @@ Content-Length: 0
 
 ## REST response
 
-If successful, this method returns the populated [TransferSubmitResult](transfer-entity-resources.md##transfersubmitresult) resource in the response body.
+If successful, this method returns the populated [TransferSubmitResult](transfer-entity-resources.md#transfersubmitresult) resource in the response body.
 
 ### Response success and error codes
 
