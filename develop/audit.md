@@ -4,7 +4,7 @@ description: Get a record of Partner Center activity using auditing operations.
 ms.assetid: C6337A08-6009-4F12-A7A3-B1CA1AE016A1
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

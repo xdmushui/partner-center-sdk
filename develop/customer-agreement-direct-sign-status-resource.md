@@ -3,7 +3,7 @@ title: The direct signing (direct acceptance) status of a customer agreement.
 description: The DirectSignedCustomerAgreementStatus resource represents the status of the direct signing (direct acceptance) of a customer agreement.
 ms.date: 02/11/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

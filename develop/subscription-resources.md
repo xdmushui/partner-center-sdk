@@ -4,7 +4,7 @@ description: Subscription resources can provide further information about subscr
 ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

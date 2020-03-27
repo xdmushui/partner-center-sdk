@@ -4,7 +4,7 @@ description: How to remove a user from a directory role within a customer accoun
 ms.assetid: 5129AB77-0A66-47A3-8DE8-1AC23C53F81A
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

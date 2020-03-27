@@ -4,7 +4,7 @@ description: Gets a Offer resource that matches the offer ID.
 ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

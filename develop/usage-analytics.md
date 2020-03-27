@@ -4,7 +4,7 @@ description: You can use the Partner Center SDK and APIs to programmatically ret
 ms.assetid: 22C1320C-5EDF-443C-B545-88641FBA2358
 ms.date: 07/27/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

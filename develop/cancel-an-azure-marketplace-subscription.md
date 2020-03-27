@@ -4,7 +4,7 @@ description: Cancel a commercial marketplace Subscription resource that matches 
 ms.assetid: 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

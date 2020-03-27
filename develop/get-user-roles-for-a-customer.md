@@ -4,7 +4,7 @@ description: Get a list of all the roles/permissions attached to a user account.
 ms.assetid: 304A1C1F-6280-40E9-A96B-F87ECA657FF3
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

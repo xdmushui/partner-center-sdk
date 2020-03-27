@@ -4,7 +4,7 @@ description: How to get all the referrals analytics information.
 ms.assetid: C6051714-1D8A-4448-9705-12AEC9A6420E
 ms.date: 06/27/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: You can use the MeterUsageRecord resource collection to get meter u
 ms.assetid: 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

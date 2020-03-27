@@ -3,7 +3,7 @@ title: Get invoice estimate links
 description: You can get a collection of estimate links to query reconciliation line item details.
 ms.date: 09/24/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.assetid:
 ms.localizationpriority: medium
 ---

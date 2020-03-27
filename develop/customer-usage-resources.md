@@ -4,7 +4,7 @@ description: Resources for customers with usage-based subscriptions and monthly 
 ms.assetid: 268C7AF5-3A95-451F-8092-033A3E8126F2
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

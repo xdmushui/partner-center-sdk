@@ -4,7 +4,7 @@ description: How to convert a trial subscription to a paid one.
 ms.assetid: 06EB96D7-6260-47E0-ACAE-07D4213BEBB7
 ms.date: 05/23/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
