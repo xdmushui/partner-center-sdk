@@ -42,7 +42,7 @@
       "ms.author": "jasonh",
       "ms.topic": "article",
       "ms.service": "partner-dashboard",
-      "ms.subservice": "partner-center-sdk",
+      "ms.subservice": "partnercenter-sdk",
       "searchScope": [ "Partner Center", "Partner Center developer resources" ],
       "_op_documentIdPathDepotMapping": {
         "./": {
