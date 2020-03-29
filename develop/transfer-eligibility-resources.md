@@ -3,7 +3,7 @@ title: TransferEligibility resources
 description: A partner creates a transfer when a customer wants his subscription with the partner to be transferred to another partner.
 ms.date: 04/03/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

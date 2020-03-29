@@ -3,7 +3,7 @@ title: Get a customer's subscriptions transfer eligibility
 description: How to get a collection of a customer's subscriptions that are ineligibile for transfers.
 ms.date: 04/03/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
