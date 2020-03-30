@@ -92,7 +92,7 @@ To get the list of SKUs for a product:
 # $targetSegment
 
 # Get the available SKUs.
-Get-PartnerProductSku -ProudctId $productId
+Get-PartnerProductSku -ProductId $productId
 
 # Get the available SKUs, filtered by target segment.
 Get-PartnerProductSku -ProductId $productId -Segment $targetSegment
