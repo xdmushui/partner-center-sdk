@@ -4,7 +4,7 @@ description: Gets the company profile of a customer.
 ms.assetid: 762C0F38-2229-464D-9CD6-6AD82135A65C
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

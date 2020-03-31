@@ -3,7 +3,7 @@ title: Get agreement metadata for Microsoft Cloud Agreement
 description: This topic explains how to get agreement metadata for Microsoft Cloud Agreement. 
 ms.date: 02/12/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

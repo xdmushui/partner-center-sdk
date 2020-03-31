@@ -3,7 +3,7 @@ title: Partner Center webhooks
 description: Webhooks allow partners to register for resource change events. 
 ms.date: 04/10/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

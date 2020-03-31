@@ -4,7 +4,7 @@ description: Partner Center Analytics public API documentation.
 ms.assetid: B605C1CD-FC40-4393-8588-55C8F0CAA51A
 ms.date: 06/11/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

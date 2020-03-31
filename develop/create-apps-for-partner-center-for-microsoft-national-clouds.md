@@ -7,7 +7,7 @@ MS-HAID:
 ms.assetid: 73C5926A-0DEB-42E5-8982-7E44A2031F0B
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

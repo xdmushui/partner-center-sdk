@@ -4,7 +4,7 @@ description: Gets an object representing the partner's organization profile.
 ms.assetid: 2AA159F1-CC84-4367-A2AF-DFA4C8B0E673
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

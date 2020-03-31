@@ -4,7 +4,7 @@ description: Gets an object representing a user's support profile.
 ms.assetid: 7161B81C-09E7-46C8-8EF4-214B3ED76FB7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

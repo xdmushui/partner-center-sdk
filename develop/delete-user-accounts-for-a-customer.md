@@ -4,7 +4,7 @@ description: How to delete an existing user account for a customer.
 ms.assetid: 12097809-A62D-4929-9F1D-08676784BA39
 ms.date: 06/20/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

@@ -3,7 +3,7 @@ title: Get licenses usage information
 description: How to get licenses usage information at the workload level for Office and Dynamics.
 ms.date: 10/25/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

@@ -4,7 +4,7 @@ description: Gets a Subscription resource that matches the customer ID and the s
 ms.assetid: 0A91755F-C5AB-4CB1-9E61-6C927F6AA5C5
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

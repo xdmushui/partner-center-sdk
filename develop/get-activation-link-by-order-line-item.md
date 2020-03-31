@@ -4,7 +4,7 @@ description: Gets a subscription activation link by order line item.
 ms.assetid: ff1c1b59-f6c2-4f17-b0d6-00109761a1fd
 ms.date: 08/16/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 # Get activation link by order line item

@@ -4,7 +4,7 @@ description: How to update the specified configuration policy for the specified 
 ms.assetid: E2B91AC4-B8E8-4A77-AFB7-0CCEF5136621
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

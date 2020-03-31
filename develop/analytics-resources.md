@@ -4,7 +4,7 @@ description: Partner Center resources for data used to report on usage, deployme
 ms.assetid: 1FEB08D6-AD0C-4B01-B7A8-AE05C914912B
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

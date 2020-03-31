@@ -4,7 +4,7 @@ description: How to verify a partner's Microsoft Partner Network identifier (MPN
 ms.assetid: 95CBA254-0980-4519-B95D-1F906C321863
 ms.date: 09/29/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

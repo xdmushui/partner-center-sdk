@@ -4,7 +4,7 @@ description: Create an online marketplace to sell cloud solution provider (CSP) 
 ms.assetid: 333EE80D-E49E-4E89-87FB-3F02AC48C236
 ms.date: 05/29/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
