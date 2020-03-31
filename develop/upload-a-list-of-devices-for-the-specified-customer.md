@@ -4,7 +4,7 @@ description: How to upload a list of information about devices to an existing ba
 ms.assetid: 5EC2895C-1361-4EBA-9D86-7125D4FE10D3
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

@@ -3,7 +3,7 @@ title: Get customer's direct signing status for Microsoft Customer Agreement.
 description: You can use the DirectSignedCustomerAgreementStatus resource to get the status of a customer's direct signing (direct acceptance) of the Microsoft Customer Agreement. 
 ms.date: 02/11/2020
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

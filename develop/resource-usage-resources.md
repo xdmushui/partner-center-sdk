@@ -4,7 +4,7 @@ description: You can use the ResourceUsageRecord resource to describe the estima
 ms.assetid: 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

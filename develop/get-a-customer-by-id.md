@@ -4,7 +4,7 @@ description: Gets a Customer resource that corresponds to a customer ID.
 ms.assetid: C84DF574-0E1B-418B-8AED-06C1E3BD301F
 ms.date: 09/17/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

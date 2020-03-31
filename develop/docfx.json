@@ -41,8 +41,8 @@
       "manager": "jasonh",
       "ms.author": "jasonh",
       "ms.topic": "article",
-      "ms.prod": "partner-center",
-      "ms.technology": "partner-center-sdk",
+      "ms.service": "partner-dashboard",
+      "ms.subservice": "partnercenter-sdk",
       "searchScope": [ "Partner Center", "Partner Center developer resources" ],
       "_op_documentIdPathDepotMapping": {
         "./": {

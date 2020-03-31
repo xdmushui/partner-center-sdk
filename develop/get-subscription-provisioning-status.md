@@ -4,7 +4,7 @@ description: How to get the subscription provisioning status for a customer subs
 ms.assetid: CC3A13FE-D6D3-4A65-981F-0235A4A8382E
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
