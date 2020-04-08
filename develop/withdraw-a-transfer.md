@@ -1,7 +1,7 @@
 ---
 title: Withdraw a transfer
 description: How to withdraw a created transfer of subscriptions for a customer.
-ms.date: 04/03/2020
+ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium

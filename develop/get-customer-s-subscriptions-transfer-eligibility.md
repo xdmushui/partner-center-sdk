@@ -1,7 +1,7 @@
 ---
 title: Get a customer's subscriptions transfer eligibility
-description: How to get a collection of a customer's subscriptions that are ineligibile for transfers.
-ms.date: 04/03/2020
+description: How to get a collection of a customer's subscriptions that are eligible/ineligibile for transfer.
+ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to get a collection of a customer's subscriptions.
+How to get a collection of a customer's subscriptions that are eligible/ineligible for transfer.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -98,19 +98,17 @@ Date: Tue, 24 Mar 2020 23:43:25 GMT
     "reason": "Subscription: E2A3AEB3-70A7-42E3-930C-7519EEDDC45A is in state: Suspended"
   },
   {
-    "id": "E82B2F4A-736A-4E2B-955C-C1A4C56C0171",
-    "isEligible": false,
-    "reason": "Subscription: E82B2F4A-736A-4E2B-955C-C1A4C56C0171 is in state: Deleted"
-  },
-  {
     "id": "4B600A9A-DF56-4564-A75A-6CC6D2D0C9F9",
     "isEligible": false,
     "reason": "subscription is already part of another transfer request id : 31a06eac-c527-458a-a6b4-0de197a45996"
   },
   {
     "id": "D3350F46-AA29-4F6F-95A0-E3011988915C",
-    "isEligible": false,
-    "reason": "Subscription: D3350F46-AA29-4F6F-95A0-E3011988915C has an independent addon: AE161D99-FA7B-418D-A453-15D6F0410C3C"
+    "isEligible": true
+  }
+  {
+    "id": "E82B2F4A-736A-4E2B-955C-C1A4C56C0171",
+    "isEligible": true
   }
 ]
 ```

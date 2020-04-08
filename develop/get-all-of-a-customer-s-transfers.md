@@ -1,7 +1,7 @@
 ---
 title: Get a customer's transfers
 description: How to get a list of a customer's transfers.
-ms.date: 04/03/2020
+ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
