@@ -4,7 +4,7 @@ description: You can use the AzureResourceMonthlyUsageRecord resource collection
 ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

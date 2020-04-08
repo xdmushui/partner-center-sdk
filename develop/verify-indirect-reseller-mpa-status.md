@@ -3,7 +3,7 @@ title: Verify an indirect reseller's Microsoft Partner Agreement signing status
 description: You can use the AgreementStatus API to verify whether an indirect reseller has signed the Microsoft Partner Agreement.
 ms.date: 10/30/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

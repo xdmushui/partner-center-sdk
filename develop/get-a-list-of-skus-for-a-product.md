@@ -4,7 +4,7 @@ description: You can get and filter a collection of SKUs by country for a produc
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 11/01/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
@@ -92,7 +92,7 @@ To get the list of SKUs for a product:
 # $targetSegment
 
 # Get the available SKUs.
-Get-PartnerProductSku -ProudctId $productId
+Get-PartnerProductSku -ProductId $productId
 
 # Get the available SKUs, filtered by target segment.
 Get-PartnerProductSku -ProductId $productId -Segment $targetSegment

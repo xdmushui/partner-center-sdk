@@ -4,7 +4,7 @@ description: The Partner Center REST API helps CSP partners integrate their exis
 ms.assetid: 25191A95-52BB-4E33-A63C-5D00FAF55806
 ms.date: 05/29/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

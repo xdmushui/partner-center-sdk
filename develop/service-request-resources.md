@@ -4,7 +4,7 @@ description: Partners can file service requests on behalf of their partners to r
 ms.assetid: E9FBF7D8-A7E8-4DC6-B370-8339B9EE16B7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

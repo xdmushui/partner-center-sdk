@@ -3,7 +3,7 @@ title: Partner Center webhook events
 description: Documentation for all Webhook events supported by Partner Center.
 ms.date: 04/10/2019
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-csp
+ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
@@ -59,7 +59,9 @@ This event allows you to self-onboard and test your registration by requesting a
 
 ### Subscription Updated Event
 
-This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API. 
+This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API.  This event will be only be generated when there are commerce level changes, for example, when the number of licenses are modified and when the state of the subscription changes. It will not be generated when resources are created within the subscription. 
+
+
 
 >[!NOTE]
 >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.  
