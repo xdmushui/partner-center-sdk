@@ -29,7 +29,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 | title              | string                        | The product title.                                                       |
 | description        | string                        | The product description.                                                 |
 | productType        | [ItemType](#itemtype)         | An object that describes the type categorization(s) of this product.     |
-| isMicrosoftProduct | bool                          | Indicates whether this is a Microswoft product.                          |
+| isMicrosoftProduct | bool                          | Indicates whether this is a Microsoft product.                          |
 | publisherName      | string                        | The name of the product's publisher if available.                          |
 | links              | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
 
