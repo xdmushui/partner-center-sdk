@@ -7,7 +7,7 @@ metadata:
   title: Partner Center developer documentation
   description: Collaborate with Microsoft on the development of partner features and capabilities.
   ms.service: partner-dashboard
-  ms.subservice: partner-center-sdk
+  ms.subservice: partnercenter-sdk
   ms.topic: landing-page
   ms.collection: collection
   author: jasonwhowell
