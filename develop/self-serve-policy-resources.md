@@ -1,7 +1,7 @@
 ---
 title: Self Serve Policy resources
 description: A partner sets self serve policies for a customer.
-ms.date: 04/13/20200
+ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium

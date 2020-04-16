@@ -1,7 +1,7 @@
 ---
 title: Get a list of self serve prolicies
 description: How to get a collection of resources representing a customers self serve policies.
-ms.date: 04/13/202020
+ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
