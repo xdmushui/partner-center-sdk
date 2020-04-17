@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Create a SelfServePolicy
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
