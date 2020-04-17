@@ -67,6 +67,7 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 **Manage a customers self serve policies**
 - [Create a self serve policy](create-a-self-serve-policy.md)
 - [Delete a self serve policy](delete-a-self-serve-policy.md)
+- [Update a self serve policy](update-a-self-serve-policy.md)
 - [Get a list of self serve policies](get-a-list-of-self-serve-policies.md)
 - [Get a self serve policy by ID](get-a-self-serve-policy-by-id.md)
 
