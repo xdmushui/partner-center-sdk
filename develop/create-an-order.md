@@ -206,7 +206,7 @@ Date: Thu, 15 Mar 2018 22:30:02 GMT
                 "headers": []
             }
         }
-    ],
+    } ],
     "creationDate": "2018-03-15T22:30:02.085152Z",
     "status": "pending",
     "links": {
