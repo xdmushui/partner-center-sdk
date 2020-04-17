@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get a list of self serve policies
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
