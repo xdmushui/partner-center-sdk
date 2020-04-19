@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Partner Center authentication
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

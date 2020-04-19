@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a list of a customer's policies
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

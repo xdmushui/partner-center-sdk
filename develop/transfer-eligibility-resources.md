@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # TransferEligibility resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

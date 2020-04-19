@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get the product upgrade status for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

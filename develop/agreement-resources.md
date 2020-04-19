@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Agreement resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Console test app
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

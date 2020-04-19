@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create a new configuration policy for the specified customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

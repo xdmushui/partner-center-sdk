@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get agreement metadata for the Microsoft Customer Agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

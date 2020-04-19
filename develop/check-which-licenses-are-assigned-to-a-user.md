@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get licenses assigned to a user
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

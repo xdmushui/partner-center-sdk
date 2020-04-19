@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Withdraw a transfer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

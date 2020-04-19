@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Change the quantity of a subscription
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

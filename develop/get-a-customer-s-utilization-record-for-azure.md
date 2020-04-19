@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a customer's utilization records for Azure
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get all subscription analytics information
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

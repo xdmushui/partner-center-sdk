@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get all of a customer's orders
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

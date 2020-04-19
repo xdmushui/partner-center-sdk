@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get confirmation of customer acceptance of Microsoft Customer Agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

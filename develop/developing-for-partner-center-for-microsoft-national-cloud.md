@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 # Developing for Partner Center for Microsoft National Clouds
 
-Applies to:
+**Applies to:**
 
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany

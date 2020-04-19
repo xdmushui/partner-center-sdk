@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Auditing resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

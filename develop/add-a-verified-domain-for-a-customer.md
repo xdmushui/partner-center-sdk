@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Add a verified domain for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

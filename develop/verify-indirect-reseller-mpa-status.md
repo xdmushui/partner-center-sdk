@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Verify an indirect reseller's Microsoft Partner Agreement signing status
 
-Applies to:
+**Applies to:**
 
 * Partner Center
 * Partner Center for Microsoft Cloud for US Government

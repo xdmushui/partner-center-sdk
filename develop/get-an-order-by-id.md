@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get an order by ID
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a list of availabilities for a SKU (by country)
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

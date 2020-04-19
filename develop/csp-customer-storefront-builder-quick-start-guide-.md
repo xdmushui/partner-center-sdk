@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # CSP Customer Storefront Builder Quick Start Guide
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

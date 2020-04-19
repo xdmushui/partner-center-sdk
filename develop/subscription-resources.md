@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Subscription resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
