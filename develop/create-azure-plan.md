@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create an Azure plan
 
-Applies to:
+**Applies to:**
 
 * Partner Center
 

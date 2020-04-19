@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Activate a sandbox subscription for commercial marketplace products
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

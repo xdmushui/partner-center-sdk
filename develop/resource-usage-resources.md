@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Resource usage record resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

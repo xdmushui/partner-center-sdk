@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a list of products (by customer)
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

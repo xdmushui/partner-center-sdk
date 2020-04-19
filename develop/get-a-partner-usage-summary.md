@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a usage summary for a partner
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Check a customer's eligibility for upgrading to an Azure plan
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

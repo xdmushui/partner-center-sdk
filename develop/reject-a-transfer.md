@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Reject a transfer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

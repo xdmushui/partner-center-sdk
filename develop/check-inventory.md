@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Check inventory
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

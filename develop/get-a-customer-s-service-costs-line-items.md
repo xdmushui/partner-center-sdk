@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a customer's service costs line items
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get invoice unbilled commercial consumption line items
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

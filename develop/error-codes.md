@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Partner Center REST error codes
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

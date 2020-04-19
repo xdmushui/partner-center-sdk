@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create a customer for an indirect reseller
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

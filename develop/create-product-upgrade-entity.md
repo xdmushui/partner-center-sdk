@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Create a product upgrade entity for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

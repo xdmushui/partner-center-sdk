@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get a list of Azure entitlements for a subscription
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Product upgrade resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

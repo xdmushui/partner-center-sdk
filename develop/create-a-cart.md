@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Create a cart
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

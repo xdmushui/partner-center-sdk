@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 # Register app details for Partner Center for Microsoft National Cloud
 
-Applies to:
+**Applies to:**
 
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government

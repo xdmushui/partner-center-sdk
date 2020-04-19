@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Enabling the Secure Application Model framework
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

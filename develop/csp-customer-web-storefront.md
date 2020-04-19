@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # CSP customer web storefront
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

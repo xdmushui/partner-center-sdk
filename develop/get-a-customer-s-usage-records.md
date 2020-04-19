@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get usage records for all customers
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Join the Partner Center API and SDK Early Adopter Program
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

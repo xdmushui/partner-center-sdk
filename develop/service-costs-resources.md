@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Service costs resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

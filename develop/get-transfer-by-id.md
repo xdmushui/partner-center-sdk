@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get transfer details by id
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

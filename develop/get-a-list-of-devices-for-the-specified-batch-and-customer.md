@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a list of devices for the specified batch and customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

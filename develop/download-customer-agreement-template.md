@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get a download link for the Microsoft Customer Agreement template
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Analytics resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Set up API access in Partner Center
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Cancel a commercial marketplace subscription
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

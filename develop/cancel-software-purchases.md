@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Cancel software purchases
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

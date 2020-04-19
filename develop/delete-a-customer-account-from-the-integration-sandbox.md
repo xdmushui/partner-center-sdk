@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Delete a customer account from the integration sandbox
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

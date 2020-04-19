@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Upload a list of devices to create a new batch for the specified customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

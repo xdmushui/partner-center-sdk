@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create a subscription for commercial marketplace products
 
-Applies to:
+**Applies to:**
 
 * Partner Center
 
