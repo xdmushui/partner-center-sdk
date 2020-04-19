@@ -4,8 +4,6 @@ Thank you for contributing to Partner Center SDK documentation.
 
 ## For public repo contributors, we will review your Pull Request as soon as we can.
 
-=====================
-
 ## For Microsoft contributors, please fill out these four items before submitting your pull request:
 
 **1. When does this need to go live?**
@@ -17,7 +15,6 @@ Thank you for contributing to Partner Center SDK documentation.
 **3. Who is the primary contact that owns this document?**
 >
 
-=====================
 ## Quality control
 1. Please review the build status to make sure **all files are green** (Succeeded). You should click each **Preview URL** to view the rendered HTML pages to check the formatting and alignment of the page.
 
