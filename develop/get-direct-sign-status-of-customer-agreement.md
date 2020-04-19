@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Get the status of a customer's direct signing (direct acceptance) of Microsoft Customer Agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

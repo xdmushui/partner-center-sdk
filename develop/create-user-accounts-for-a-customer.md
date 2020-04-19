@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create user accounts for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

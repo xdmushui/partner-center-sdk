@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Azure utilization record resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

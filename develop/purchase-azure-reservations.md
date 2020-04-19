@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Purchase Azure reservations
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government

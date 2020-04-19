@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get a list of available licenses
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get all monthly usage records for a subscription.
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

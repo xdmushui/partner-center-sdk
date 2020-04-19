@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Convert a trial subscription to paid
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

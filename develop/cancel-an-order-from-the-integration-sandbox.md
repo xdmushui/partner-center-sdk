@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Cancel an order from the integration sandbox
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

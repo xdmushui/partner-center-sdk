@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create a service request
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

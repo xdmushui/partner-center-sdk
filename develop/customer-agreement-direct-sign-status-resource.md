@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Direct signing (direct acceptance) status of a customer agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Create a cart with add-ons
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

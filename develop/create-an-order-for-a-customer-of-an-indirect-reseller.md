@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Create an order for a customer of an indirect reseller
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

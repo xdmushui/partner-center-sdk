@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Meter usage record resource
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Get usage data for subscription by resource
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Partner Center REST API reference
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

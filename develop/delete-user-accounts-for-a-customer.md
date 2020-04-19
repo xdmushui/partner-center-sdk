@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Delete a user account for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
