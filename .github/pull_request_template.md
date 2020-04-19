@@ -4,7 +4,7 @@ Thank you for contributing to Partner Center SDK documentation.
 
 ## For public repo contributors, we will review your Pull Request as soon as we can.
 
-## For Microsoft contributors, please fill out these four items before submitting your pull request:
+## For Microsoft contributors, please fill out these three items before submitting your pull request:
 
 **1. When does this need to go live?**
 >
@@ -18,9 +18,9 @@ Thank you for contributing to Partner Center SDK documentation.
 ## Quality control
 1. Please review the build status to make sure **all files are green** (Succeeded). You should click each **Preview URL** to view the rendered HTML pages to check the formatting and alignment of the page.
 
-2. After you are done, sign off. When the pull request is finalized and ready to be merged, indicate so by typing `#sign-off` in a new comment in the Pull Request. If you need to cancel that sign off, type `#hold-off` instead. 
+2. After you are done, sign off. When the pull request is finalized and ready to be merged, indicate so by typing `#sign-off` in a new comment in the Pull Request. If you need to cancel that sign-off, type `#hold-off` instead. 
 
-## Typical SLA for a markdown file:
+## Typical SLA for a pull request:
 - New document: 7 days
 - Updated document
   - If more than 20% of the file changes: 5 days
