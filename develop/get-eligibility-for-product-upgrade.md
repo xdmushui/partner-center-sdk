@@ -72,7 +72,7 @@ The request body must contain a [**ProductUpgradeRequest**](product-upgrade-reso
 #### Request example
 
 ```http
-POST https://api.partnercenter.microsoft.com/v1/productupgrades HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/productupgrades/eligibility HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: c245d5f2-1de3-4ae0-9e42-95e38e3cb8ff
