@@ -92,7 +92,6 @@ You can track [Azure spending](azure-spending.md) by querying for usage summary 
 * [Get customer usage summary](get-a-customer-usage-summary.md)
 * [Get all subscription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
 * [Get subscription usage summary](get-a-customer-subscription-usage-summary.md)
-* [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
 * [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
 * [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
 * [Get meter usage record resources](meter-usage-resources.md)
