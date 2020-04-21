@@ -85,13 +85,8 @@ Content-Length: 340
 Expect: 100-continue
 Connection: Keep-Alive
 {
-    {
         "customerId": "4c721420-72ad-4708-a0a7-371a2f7b0969",
         "productFamily": "azure"
-    }
-    "Attributes": {
-    "ObjectType": "ProductUpgradeRequest"
-    }
 }
 ```
 
