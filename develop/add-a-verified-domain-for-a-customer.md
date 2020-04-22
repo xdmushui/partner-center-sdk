@@ -26,7 +26,7 @@ How to add a verified domain to the list of approved domains for an existing cus
 
 ## Adding a verified domain
 
-If you are a Partner who is a domain registrar, you can use the `verifieddomain` API to POST a new [Domain](#domain) resource to the list of domains for an existing customer. To do this, identify the customer using their CustomerTenantId. Specify a value for the VerifiedDomainName property. Pass a [Domain](#domain) resource in the Request with the required Name, Capability, AuthenticationType, Status, and VerificationMethod properties included. To specify that the new [Domain](#domain) is a federated domain, set the AuthenticationType property in the [Domain](#domain) resource to "Federated", and include a [DomainFederationSettings](#domain-federation-settings) resource in the Request. If the method is successful, the Response will include a [Domain](#domain) resource for the new verified domain.
+If you are a Partner who is a domain registrar, you can use the `verifieddomain` API to POST a new [Domain](#domain) resource to the list of domains for an existing customer. To do this, identify the customer using their CustomerTenantId. Specify a value for the VerifiedDomainName property. Pass a [Domain](#domain) resource in the Request with the required Name, Capability, AuthenticationType, Status, and VerificationMethod properties included. To specify that the new [Domain](#domain) is a federated domain, set the AuthenticationType property in the [Domain](#domain) resource to `Federated`, and include a [DomainFederationSettings](#domain-federation-settings) resource in the Request. If the method is successful, the Response will include a [Domain](#domain) resource for the new verified domain.
 
 ### Custom verified domains
 
@@ -60,7 +60,7 @@ This table describes the required properties in the request body.
 |-------------------------------------------------------|--------|-----------------------------------------------|--------------------------------------------------------|
 | VerifiedDomainName                                    | string | Yes                                           | The verified domain name. |
 | [Domain](#domain)                                     | object | Yes                                           | Contains the domain information. |
-| [DomainFederationSettings](#domain-federation-settings) | object | Yes (If AuthenticationType = "Federated")     | The domain federation settings to be used if the domain is a "Federated" domain and not a "Managed" domain. |
+| [DomainFederationSettings](#domain-federation-settings) | object | Yes (If AuthenticationType = `Federated`)     | The domain federation settings to be used if the domain is a `Federated` domain and not a `Managed` domain. |
 
 #### Domain
 
@@ -68,14 +68,14 @@ This table describes the required and optional **Domain** properties in the requ
 
 | Name               | Type                                     | Required | Description                                                                                                                                                                                                     |
 |--------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AuthenticationType                                    | string           | Yes      | Defines whether the domain is a "Managed" domain or a "Federated" domain. Supported values: Managed, Federated.|
-| Capability                                            | string           | Yes      | Specifies the domain capability. For example, "Email".                  |
-| IsDefault                                             | nullable boolean | No       | Indicates whether the domain is the default domain for the tenant. Supported values: True, False, Null.        |
-| IsInitial                                             | nullable boolean | No       | Indicates whether the domain is an initial domain. Supported values: True, False, Null.                       |
+| AuthenticationType                                    | string           | Yes      | Defines whether the domain is a `Managed` domain or a `Federated` domain. Supported values: Managed, Federated.|
+| Capability                                            | string           | Yes      | Specifies the domain capability. For example, `Email`.                  |
+| IsDefault                                             | nullable boolean | No       | Indicates whether the domain is the default domain for the tenant. Supported values: `True`, `False`, `Null`.        |
+| IsInitial                                             | nullable boolean | No       | Indicates whether the domain is an initial domain. Supported values: `True`, `False`, `Null`.                       |
 | Name                                                  | string           | Yes      | The domain name.                                                          |
 | RootDomain                                            | string           | No       | The name of the root domain.                                              |
-| Status                                                | string           | Yes      | The domain status. For example, "Verified". Supported values:  Unverified, Verified, PendingDeletion.                               |
-| VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: None, DnsRecord, Email.                                    |
+| Status                                                | string           | Yes      | The domain status. For example, `Verified`. Supported values:  `Unverified`, `Verified`, PendingDeletion.                               |
+| VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: `None`, `DnsRecord`, `Email`.                                    |
 
 ##### Domain federation settings
 
@@ -92,8 +92,8 @@ This table describes the required and optional **DomainFederationSettings** prop
 | NextSigningCertificate                 | string           | No      | The certificate used for the coming future by the ADFS V2 STS to sign claims. This property is a base64 encoded representation of the certificate. |
 | OpenIdConnectDiscoveryEndpoint         | string           | No      | The OpenID Connect Discovery Endpoint of the federated IDP STS. |
 | PassiveLogOnUri                        | string           | Yes     | The logon URI used by older passive Clients. This property is the address to send federated sign-in requests. |
-| PreferredAuthenticationProtocol        | string           | Yes     | The format for the authentication token. For example, "WsFed". Supported values: `WsFed`, `Samlp` |
-| PromptLoginBehavior                    | string           | Yes     | The prompt login behavior type.  For example, "TranslateToFreshPasswordAuth". Supported values: TranslateToFreshPasswordAuth, NativeSupport, Disabled |
+| PreferredAuthenticationProtocol        | string           | Yes     | The format for the authentication token. For example, `WsFed`. Supported values: `WsFed`, `Samlp` |
+| PromptLoginBehavior                    | string           | Yes     | The prompt login behavior type.  For example, `TranslateToFreshPasswordAuth`. Supported values: TranslateToFreshPasswordAuth, NativeSupport, Disabled |
 | SigningCertificate                     | string           | Yes     | The certificate currently used by the ADFS V2 STS to sign claims. This property is a base64 encoded representation of the certificate. |
 | SigningCertificateUpdateStatus         | string           | No      | Indicates the update status of the Signing certificate. |
 | SigningCertificateUpdateStatus         | nullable boolean | No      | Indicates whether the IDP STS supports MFA. Supported values: True, False, Null.|

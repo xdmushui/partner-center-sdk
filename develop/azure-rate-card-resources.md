@@ -29,7 +29,7 @@ Describes the properties of an Azure Rate Card resource.
 | Property      | Type                                      | Description                                                       |
 |---------------|-------------------------------------------|-------------------------------------------------------------------|
 | currency      | string                                    | The currency in which the rates are provided.                     |
-| isTaxIncluded | boolean                                   | All rates are pretax, so this property returns as "false". |
+| isTaxIncluded | boolean                                   | All rates are pretax, so this property returns as `false`. |
 | locale        | string                                    | The culture in which the resource information is localized.       |
 | meters        | array of objects                          | Array of [AzureMeter](#azuremeter) objects.                       |
 | offerTerms    | array of objects                          | Array of [AzureOfferTerm](#azureofferterm) objects.               |
