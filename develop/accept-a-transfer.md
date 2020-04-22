@@ -16,11 +16,10 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A transfer identifier for an existing transfer.
 
 ## REST request
@@ -96,7 +95,6 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "quantity": 1,
           "partnerIdOnRecord": "5139005",
           "links": {
-            
           }
         }
       ],
@@ -107,16 +105,12 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
         "self": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/21b92393-ffce-4bc7-87c5-62cfa897d8f9",
           "method": "GET",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         },
         "patchOperation": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/21b92393-ffce-4bc7-87c5-62cfa897d8f9",
           "method": "PATCH",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         }
       },
       "attributes": {
@@ -140,7 +134,6 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "quantity": 1,
           "partnerIdOnRecord": "5139005",
           "links": {
-            
           }
         }
       ],
@@ -151,16 +144,12 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
         "self": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/7414b8ea-c167-4cc4-bc8e-b43efc177a46",
           "method": "GET",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         },
         "patchOperation": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/7414b8ea-c167-4cc4-bc8e-b43efc177a46",
           "method": "PATCH",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         }
       },
       "attributes": {
@@ -181,9 +170,7 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "friendlyName": "Project Online Essentials",
           "quantity": 1,
           "transferGroupId": "1",
-          "addonItems": [
-            
-          ],
+          "addonItems": [ ],
           "partnerIdOnRecord": "5139005",
           "billingCycle": "annual",
           "sourceSubscriptionId": "637FF8F6-D842-4573-8DA8-89765356CD1A"

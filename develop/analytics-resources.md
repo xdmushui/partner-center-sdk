@@ -25,8 +25,8 @@ The **PartnerLicensesDeploymentInsights** resource contains partner-level insigh
 | proratedDeploymentPercent | number                                                         | The percentage of licenses deployed.                                                |
 | licensesSold              | number                                                         | The number of licenses sold.                                                        |
 | processedDateTime         | string in UTC date-time format                                 | The date and time when the data was aggregated.                                     |
-| serviceName               | string                                                         | The service name (e.g. o365, crm).                                                  |
-| channel                   | string                                                         | The channel name of the service (e.g. reseller).                                    |
+| serviceName               | string                                                         | The service name (for example:  o365, crm).                                                  |
+| channel                   | string                                                         | The channel name of the service (for example:  reseller).                                    |
 | attributes                | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesDeploymentInsights" |
 
 ## PartnerLicensesUsageInsights
@@ -36,10 +36,10 @@ The **PartnerLicensesUsageInsights** resource contains partner-level insights ab
 | Property                     | Type                                                           | Description                                                                    |
 |------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------|
 | proratedLicensesUsagePercent | number                                                         | The percentage of licenses deployed.                                           |
-| workloadName                 | string                                                         | The workload name (e.g. exchange).                                             |
+| workloadName                 | string                                                         | The workload name (for example:  exchange).                                             |
 | processedDateTime            | string in UTC date-time format                                 | The date and time when the data was aggregated.                                |
-| serviceName                  | string                                                         | The service name (e.g. o365, crm).                                             |
-| channel                      | string                                                         | The channel name of the service (e.g. reseller).                               |
+| serviceName                  | string                                                         | The service name (for example:  o365, crm).                                             |
+| channel                      | string                                                         | The channel name of the service (for example:  reseller).                               |
 | attributes                   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "PartnerLicensesUsageInsights" |
 
 ## CustomerLicensesDeploymentInsights
@@ -56,8 +56,8 @@ The **CustomerLicensesDeploymentInsights** resource contains customer-level insi
 | productName       | string                                                         | The product name.                                                                    |
 | serviceCode       | string                                                         | The service code of the license.                                                     |
 | processedDateTime | string in UTC date-time format                                 | The date and time when the data was aggregated.                                      |
-| serviceName       | string                                                         | The service name (e.g. o365, crm).                                                   |
-| channel           | string                                                         | The channel name of the service (e.g. reseller).                                     |
+| serviceName       | string                                                         | The service name (for example:  o365, crm).                                                   |
+| channel           | string                                                         | The channel name of the service (for example:  reseller).                                     |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesDeploymentInsights" |
 
 ## CustomerLicensesUsageInsights
@@ -67,7 +67,7 @@ The **CustomerLicensesUsageInsights** resource contains customer-level insights 
 | Property          | Type                                                           | Description                                                                     |
 |-------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | workloadCode      | string                                                         | The workload code.                                                              |
-| workloadName      | number                                                         | The workload name (e.g. Exchange).                                              |
+| workloadName      | number                                                         | The workload name (for example:  Exchange).                                              |
 | usagePercent      | number                                                         | The adjusted percentage of licenses used.                                       |
 | licensesActive    | number                                                         | The number of active licenses.                                                  |
 | licensesQualified | number                                                         | The number of qualified licenses.                                               |
@@ -76,6 +76,6 @@ The **CustomerLicensesUsageInsights** resource contains customer-level insights 
 | productName       | string                                                         | The product name.                                                               |
 | serviceCode       | string                                                         | The service code of the license.                                                |
 | processedDateTime | string in UTC date-time format                                 | The date and time when the data was aggregated.                                 |
-| serviceName       | string                                                         | The service name (e.g. o365, crm).                                              |
-| channel           | string                                                         | The channel name of the service (e.g. reseller).                                |
+| serviceName       | string                                                         | The service name (for example:  o365, crm).                                              |
+| channel           | string                                                         | The channel name of the service (for example:  reseller).                                |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Includes "objectType": "CustomerLicensesUsageInsights" |
