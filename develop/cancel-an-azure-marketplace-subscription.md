@@ -19,7 +19,7 @@ You can cancel a commercial marketplace [subscription](subscription-resources.md
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, then select Account, then save their Microsoft ID.
 - A subscription ID.
 
 ## Partner Center dashboard method
@@ -36,7 +36,7 @@ To cancel a customer's subscription:
 
 1. [Get the subscription by ID](get-a-subscription-by-id.md).
 2. Change the subscription's [**Status**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) property. For information on **Status** codes, see [SubscriptionStatus enumeration](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus).
-3. After the change is made, use your **IAggregatePartner.Customers** collection and call the **ById()** method.
+3. After the change is made, use your **`IAggregatePartner.Customers`** collection and call the **ById()** method.
 4. Call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method.
 5. Call the **Patch()** method.
 
