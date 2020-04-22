@@ -15,8 +15,8 @@ ms.localizationpriority: medium
 
 How to activate subscription for commercial marketplace Software as a Service (SaaS) products from integration sandbox accounts to enable billing.
 
->[!NOTE]
->It's only possible to activate a subscription for commercial marketplace SaaS products from integration sandbox accounts. If you have a production subscription, you must visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
+> [!NOTE]
+> It's only possible to activate a subscription for commercial marketplace SaaS products from integration sandbox accounts. If you have a production subscription, you must visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
 
 ## Prerequisites
 
@@ -30,13 +30,16 @@ Use the following steps to activate a subscription for commercial marketplace Sa
 
 1. Make an interface to the subscription operations available. You must identify the customer and specify the subscription identifier of the trial subscription.
 
-    ``` csharp
-    var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
+   ```csharp
+   var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
+   ```
 
 2. Activate the subscription using the **Activate** operation.
 
-    ``` csharp
-    var subscriptionActivationResult = subscriptionOperations.Activate();
+   ```csharp
+   var subscriptionActivationResult = subscriptionOperations.Activate();
+   ```
+
 ## REST request
 
 ### Request syntax

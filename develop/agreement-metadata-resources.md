@@ -23,7 +23,7 @@ The **AgreementMetaData** collection provides metadata about all the agreement t
 
 ## AgreementMetaData
 
-Agreement metadata returned includes the following:
+Agreement metadata returned includes the following properties:
 
 | Property      | Type               | Description                                                                       |
 |---------------|--------------------|-----------------------------------------------------------------------------------|

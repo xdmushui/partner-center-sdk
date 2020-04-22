@@ -24,7 +24,7 @@ Represents a record of an operation performed by a partner user or application.
 | --- | --- | ---|
 | customerId | string | A GUID-formatted string that identifies the customer. |
 | customerName | string | The customer name. |
-| userPrincipalName | string | The user principal name or user identifier. Typically, this is an Internet-style login name for a user in an email address format based on Internet standard RFC 822. |
+| userPrincipalName | string | The user principal name or user identifier. Typically, this property is an Internet-style login name for a user in an email address format based on Internet standard RFC 822. |
 | applicationId | string | A string that identifies the application that performed the operation. |
 | resourceType | string | The type of resource acted upon by the operation. Possible values: &quot;customer&quot;, &quot;customer_user&quot;, &quot;order&quot;, &quot;subscription&quot;, &quot;license&quot;, &quot;third_party_add_on&quot;, &quot;mpn_association&quot;, &quot;transfer&quot;, &quot;application&quot;, &quot;application_credential&quot;, &quot;partner_user&quot;, &quot;partner_relationship&quot;. |
 | resourceOldValue | string | The old value of the resource. |
