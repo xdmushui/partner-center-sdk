@@ -66,7 +66,7 @@ How to make a one-time purchase of software and reservation products such as sof
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## Making a one-time purchase
 
@@ -86,19 +86,19 @@ After you have made your one-time purchase, the following scenarios show you how
 
 Once you have identified the active subscription that you want to add the Azure Reserved VM Instance to, you must register the subscription so that it is enabled. To register an existing [Subscription](subscription-resources.md) resource so that it is enabled, see [Register a subscription](register-a-subscription.md).
 
-After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
+After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this step, see [Get subscription registration status](get-subscription-registration-status.md).
 
 ## Discovery
 
 Once the subscription is enabled, you're ready to select products and SKUs and check their availability using the following Partner Center API models:
 
 - [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself is not a purchasable item.
-- [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
-- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
+- [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. SKUs represent the different shapes of the product.
+- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
 Before making a one-time purchase, complete the following steps:
 
-1. Identify and retrieve the Product and SKU that you want to purchase. You can do this by listing the products and SKUs first, or If you already know the IDs of the product and SKU, selecting them.
+1. Identify and retrieve the Product and SKU that you want to purchase. You can do this step by listing the products and SKUs first, or if you already know the IDs of the product and SKU, selecting them.
 
     - [Get a list of products](get-a-list-of-products.md)
     - [Get a product using the product ID](get-a-product-by-id.md)
@@ -116,7 +116,7 @@ Before making a one-time purchase, complete the following steps:
 
 ## Order submission
 
-To submit your order, do the following:
+To submit your order, do the following steps:
 
 1. Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart-resources.md), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](order-resources.md).
 
@@ -129,7 +129,7 @@ To submit your order, do the following:
 
 ## Get order details
 
-Once you have created your order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.
+Once you have created your order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.
 
 - To get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
 
