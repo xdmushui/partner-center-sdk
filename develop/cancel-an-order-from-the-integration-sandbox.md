@@ -28,11 +28,11 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 
 ## C#
 
-To cancel an order from the integration sandbox, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
+To cancel an order from the integration sandbox, pass your account credentials to the [**`CreatePartnerOperations`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**`IPartner`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
-To select a particular [Order](order-resources.md#order), use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **`Orders.ById()`** with order identifier to specify the order and finally **`Get`** or **`GetAsync`** method to retrieve it.
+To select a particular [Order](order-resources.md#order), use the partner operations and call [**`Customers.ById()`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **`Orders.ById()`** with order identifier to specify the order and finally **`Get`** or **`GetAsync`** method to retrieve it.
 
-Set the [**Order.Status**](order-resources.md#order) property to `cancelled` and use the **Patch()** method to update the order.
+Set the [**`Order.Status`**](order-resources.md#order) property to `cancelled` and use the **`Patch()`** method to update the order.
 
 ``` csharp
 // IPartnerCredentials tipAccountCredentials;
