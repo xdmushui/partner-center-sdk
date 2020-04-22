@@ -20,7 +20,7 @@ The Azure utilization record contains details about the utilization of an Azure 
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine a Rate Card query to [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, which are customizable. Location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
 ## AzureUtilizationRecord
 
@@ -50,7 +50,7 @@ Describes the properties of an Azure Resource.
 | id          | string | Yes      | Unique identifier of the Azure resource. Also known as resourceID or resource GUID. |
 | name        | string | No       | Friendly name of the resource being consumed. This property is optional.            |
 | category    | string | No       | The category of the consumed resource. This property is optional.                   |
-| subcategory | string | No       | The sub-category of the consumed resource. This property is optional.               |
+| subcategory | string | No       | The subcategory of the consumed resource. This property is optional.               |
 | region      | string | No       | The region of the consumed resource. This property is optional.                     |
 
 ## AzureInstanceData
@@ -61,7 +61,7 @@ Describes the properties of an Azure Instance Data resource.
 |----------------|------------------|----------|--------------------------------------------------------------------------------------------------------------------|
 | resourceUri    | string           | Yes      | The fully qualified Azure resource ID, which includes the resource groups and the instance name.                   |
 | location       | string           | Yes      | Region in which the service was run.                                                                               |
-| partNumber     | object           | Yes      | Unique namespace used to identify the resource for commercial marketplace 3rd party usage. This may be an empty string. |
-| orderNumber    | number           | Yes      | Unique namespace used to identify the 3rd party order for commercial marketplace. This may be an empty string.          |
+| partNumber     | object           | Yes      | Unique namespace used to identify the resource for commercial marketplace third-party usage. This property may be an empty string. |
+| orderNumber    | number           | Yes      | Unique namespace used to identify the third-party order for commercial marketplace. This property may be an empty string.          |
 | tags           | array of strings | No       | Resource tags specified by the user. This property is optional and may not be included.                            |
 | additionalInfo | array of strings | No       | Additional data for an Azure resource. This property is optional and may not be included.                          |
