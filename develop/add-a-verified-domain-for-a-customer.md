@@ -74,7 +74,7 @@ This table describes the required and optional **Domain** properties in the requ
 | IsInitial                                             | nullable boolean | No       | Indicates whether the domain is an initial domain. Supported values: `True`, `False`, `Null`.                       |
 | Name                                                  | string           | Yes      | The domain name.                                                          |
 | RootDomain                                            | string           | No       | The name of the root domain.                                              |
-| Status                                                | string           | Yes      | The domain status. For example, `Verified`. Supported values:  `Unverified`, `Verified`, PendingDeletion.                               |
+| Status                                                | string           | Yes      | The domain status. For example, `Verified`. Supported values:  `Unverified`, `Verified`, `PendingDeletion`.                               |
 | VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: `None`, `DnsRecord`, `Email`.                                    |
 
 ##### Domain federation settings
