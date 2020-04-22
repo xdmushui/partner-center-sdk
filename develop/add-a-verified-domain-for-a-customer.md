@@ -68,7 +68,7 @@ This table describes the required and optional **Domain** properties in the requ
 
 | Name               | Type                                     | Required | Description                                                                                                                                                                                                     |
 |--------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AuthenticationType                                    | string           | Yes      | Defines whether the domain is a `Managed` domain or a `Federated` domain. Supported values: Managed, Federated.|
+| AuthenticationType                                    | string           | Yes      | Defines whether the domain is a `Managed` domain or a `Federated` domain. Supported values: `Managed`, `Federated`.|
 | Capability                                            | string           | Yes      | Specifies the domain capability. For example, `Email`.                  |
 | IsDefault                                             | nullable boolean | No       | Indicates whether the domain is the default domain for the tenant. Supported values: `True`, `False`, `Null`.        |
 | IsInitial                                             | nullable boolean | No       | Indicates whether the domain is an initial domain. Supported values: `True`, `False`, `Null`.                       |
@@ -93,10 +93,10 @@ This table describes the required and optional **DomainFederationSettings** prop
 | OpenIdConnectDiscoveryEndpoint         | string           | No      | The OpenID Connect Discovery Endpoint of the federated IDP STS. |
 | PassiveLogOnUri                        | string           | Yes     | The logon URI used by older passive Clients. This property is the address to send federated sign-in requests. |
 | PreferredAuthenticationProtocol        | string           | Yes     | The format for the authentication token. For example, `WsFed`. Supported values: `WsFed`, `Samlp` |
-| PromptLoginBehavior                    | string           | Yes     | The prompt login behavior type.  For example, `TranslateToFreshPasswordAuth`. Supported values: TranslateToFreshPasswordAuth, NativeSupport, Disabled |
+| PromptLoginBehavior                    | string           | Yes     | The prompt login behavior type.  For example, `TranslateToFreshPasswordAuth`. Supported values: `TranslateToFreshPasswordAuth`, `NativeSupport`, `Disabled` |
 | SigningCertificate                     | string           | Yes     | The certificate currently used by the ADFS V2 STS to sign claims. This property is a base64 encoded representation of the certificate. |
 | SigningCertificateUpdateStatus         | string           | No      | Indicates the update status of the Signing certificate. |
-| SigningCertificateUpdateStatus         | nullable boolean | No      | Indicates whether the IDP STS supports MFA. Supported values: True, False, Null.|
+| SigningCertificateUpdateStatus         | nullable boolean | No      | Indicates whether the IDP STS supports MFA. Supported values: `True`, `False`, `Null`.|
 
 ### Request example
 
