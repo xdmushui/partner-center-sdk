@@ -90,8 +90,6 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | **PATCH**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/ HTTP/1.1 |
 
-
-
 ### URI parameter
 
 This table lists the required query parameters to remove a reseller relationship.
@@ -99,8 +97,6 @@ This table lists the required query parameters to remove a reseller relationship
 | Name                   | Type     | Required | Description                                                                        |
 |------------------------|----------|----------|------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
-
-
 
 ### Request headers
 

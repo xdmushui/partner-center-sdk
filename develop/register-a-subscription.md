@@ -52,8 +52,6 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations HTTP/1.1 |
 
-
-
 ### URI parameters
 
 Use the following path parameters to identify the customer and subscription.
@@ -62,8 +60,6 @@ Use the following path parameters to identify the customer and subscription.
 |-------------------------|------------|----------|---------------------------------------------------------------|
 | customer-id             | string     | Yes      | A GUID formatted string that identifies the customer.         |
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
-
-
 
 ### Request headers
 

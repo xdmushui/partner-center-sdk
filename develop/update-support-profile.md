@@ -55,8 +55,6 @@ SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile
 |---------|---------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1 |
 
-
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.

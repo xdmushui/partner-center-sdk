@@ -82,8 +82,6 @@ var trackingLocation =
 |-----------|-----------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/DevicePolicyUpdates HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following path parameters when creating the request.
@@ -91,8 +89,6 @@ Use the following path parameters when creating the request.
 | Name        | Type   | Required | Description                                           |
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
-
-
 
 ### Request headers
 

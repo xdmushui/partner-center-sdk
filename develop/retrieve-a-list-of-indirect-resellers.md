@@ -44,8 +44,6 @@ var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipT
 |---------|----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/relationships?relationship\_type=IsIndirectCloudSolutionProviderOf HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following query parameter to identify the relationship type.
@@ -76,8 +74,6 @@ Use the following query parameter to identify the relationship type.
 </tr>
 </tbody>
 </table>
-
-
 
 ### Request headers
 

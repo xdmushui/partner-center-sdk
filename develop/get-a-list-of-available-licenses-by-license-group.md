@@ -57,8 +57,6 @@ var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(s
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group2 HTTP/1.1                        |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following path and query parameters to identify the customer and the license groups.
@@ -67,8 +65,6 @@ Use the following path and query parameters to identify the customer and the lic
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
 | licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
-
-
 
 ### Request headers
 

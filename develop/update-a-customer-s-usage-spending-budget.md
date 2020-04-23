@@ -51,8 +51,6 @@ var newUsageBudget = new SpendingBudget()
 var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
 ```
 
-
-
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
@@ -70,8 +68,6 @@ Use the following query parameter to update the billing profile.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-
-
 
 ### Request headers
 
@@ -101,8 +97,6 @@ X-Locale: "en-US"
      }
 }
 ```
-
-
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 

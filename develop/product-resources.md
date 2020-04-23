@@ -33,8 +33,6 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 | publisherName      | string                        | The name of the product's publisher if available.                          |
 | links              | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
 
-
-
 ## ItemType
 
 
@@ -46,8 +44,6 @@ Represents the type of a product.
 | displayName     | string                        | The display name for this type.                                                      |
 | subType         | [ItemType](#itemtype)         | Optional. An object that describes a sub-type categorization for this item type.     |
 
-
-
 ## ProductLinks
 
 
@@ -57,8 +53,6 @@ Contains a list of links for a [Product](#product).
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
 | skus            | [Link](utility-resources.md#link)                             | The link for accessing the underlying SKUs.          |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
-
-
 
 ## Sku
 
@@ -80,8 +74,6 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure reservation purchase: "Single", "Shared".<br/> "SubscriptionId" - The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" - The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
-
-
 
 ## Availability
 
@@ -123,8 +115,6 @@ Represents a request to check inventory against certain catalog items.
 | inventoryContext | key/value pairs                                     | The dictionary of context values that are needed to carry out the inventory check(s). Each [SKU](#sku) of the products will define which values (if any) are needed to carry out this operation.  |
 | links            | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the inventory check request.                            |
 
-
-
 ## InventoryItem
 
 Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.
@@ -136,8 +126,6 @@ Represents a single item in an inventory check operation. This resource is used 
 | isRestricted     | bool                                                              | Indicates whether this item was found to have a restricted inventory.            |
 | restrictions     | array of [InventoryRestriction](#inventoryrestriction)            | The details of any restrictions that are found for this item. This property will only be populated if **isRestricted** = "true". |
 
-
-
 ## InventoryRestriction
 
 Represents the details of an inventory restriction. This is only applicable for inventory check output results, not for input requests.
@@ -147,8 +135,6 @@ Represents the details of an inventory restriction. This is only applicable for 
 | reasonCode       | string                | The code that identifies the reason for the restriction.                                    |
 | description      | string                | The description of the inventory restriction.                                               |
 | properties       | key/value pairs       | The dictionary of properties that may provide further details on the restriction.           |
-
-
 
 ## BillingCycleType
 

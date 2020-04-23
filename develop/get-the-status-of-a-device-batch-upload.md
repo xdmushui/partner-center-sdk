@@ -50,8 +50,6 @@ var status =
 |---------|-------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/batchJobStatus/{batchtracking-id} HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following path parameters when creating the request.
@@ -60,8 +58,6 @@ Use the following path parameters when creating the request.
 |------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | customer-id      | string | Yes      | A GUID-formatted string that identifies the customer.                                                                                                                          |
 | batchtracking-id | string | Yes      | A GUID-formatted identifier that is used to retrieve a device batch upload status. This ID is returned in the Location header when the device batch is successfully submitted. |
-
-
 
 ### Request headers
 

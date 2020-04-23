@@ -48,8 +48,6 @@ ResourceCollection<ManagedService> managedServices = partnerOperations.Customers
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/managedservices HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following query parameter to get the customer's managed services.
@@ -57,8 +55,6 @@ Use the following query parameter to get the customer's managed services.
 | Name                   | Type     | Required | Description                           |
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
-
-
 
 ### Request headers
 
