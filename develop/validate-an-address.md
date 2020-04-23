@@ -124,17 +124,17 @@ Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Countr
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                 |
 |----------|-----------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/validations/address HTTP/1.1 |
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the required properties in the request body.
 
@@ -147,7 +147,7 @@ This table describes the required properties in the request body.
 | postalcode   | string | Y        | The postal code.                                           |
 | country      | string | Y        | The two-character ISO alpha-2 country code.                |
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
@@ -175,7 +175,7 @@ If successful, the method returns a status code 200 as demonstrated in the Respo
 
 If the request fails, the method returns a status code 400 as demonstrated in the Response - validation failed example shown below. The response body contains a JSON payload with additional information about the error.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 

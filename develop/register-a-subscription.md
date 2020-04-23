@@ -46,7 +46,7 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
  
 
-**URI parameters**
+### URI parameters
 
 Use the following path parameters to identify the customer and subscription. 
 
@@ -65,15 +65,15 @@ Use the following path parameters to identify the customer and subscription.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrations HTTP/1.1
@@ -92,11 +92,11 @@ Connection: Keep-Alive
 
 If successful, the response contains a **Location** header with a URI that can be used to retrieve the subscription registration status. Save this URI for use with other related REST APIs. For an example of how to retrieve the status, see [Get subscription registration status](get-subscription-registration-status.md). 
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 202 Accepted

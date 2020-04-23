@@ -44,7 +44,7 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
@@ -52,7 +52,7 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 
  
 
-**URI parameters**
+### URI parameters
 
 Use the following parameters to provide the offer ID and country code.
 
@@ -63,15 +63,15 @@ Use the following parameters to provide the offer ID and country code.
 
  
 
-**Request headers**
+### Request headers
 
 See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers/195416C1-3447-423A-B37B-EE59A99A19C4/addons?country=us HTTP/1.1
@@ -88,11 +88,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, this method returns a collection of [Offer](offer-resources.md) objects in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

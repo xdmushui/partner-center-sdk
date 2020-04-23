@@ -51,7 +51,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
  
 
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameter to update the subscription nickname.
 
@@ -70,15 +70,15 @@ This table lists the required query parameter to update the subscription nicknam
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 A full **Subscription** resource is required in the request body. Ensure the **FriendlyName** property has been updated.
 
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1
@@ -118,11 +118,11 @@ Connection: Keep-Alive
 
 If successful, this method returns updated [Subscription](subscription-resources.md) resource properties in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscriptionID> HTTP/1.1

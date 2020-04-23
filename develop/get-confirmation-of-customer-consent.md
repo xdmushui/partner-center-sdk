@@ -1,6 +1,6 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
-description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
+description: This article explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

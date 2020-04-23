@@ -28,7 +28,7 @@ How to get subscription analytics information for your customers filtered by a s
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
@@ -36,7 +36,7 @@ How to get subscription analytics information for your customers filtered by a s
 
  
 
-**URI parameters**
+### URI parameters
 
 Use the following required path parameter to identify your organization and filter the search.
 
@@ -94,15 +94,15 @@ The following table shows a list of the supported fields and support operators f
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
 
 
-**Request headers** 
+### Request headers 
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?filter=autoRenewEnabled eq true
@@ -119,11 +119,11 @@ Content-Length: 0
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

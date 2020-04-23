@@ -41,15 +41,14 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                          |
 |---------|--------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
  
-
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameters to get the offers.
 
@@ -57,18 +56,16 @@ This table lists the required query parameters to get the offers.
 |----------------|------------|----------|------------------------|
 | **country-id** | **string** | Y        | The country/region ID. |
 
- 
-
-**Request headers**
+### Request headers
 
 - A **locale-id** formatted as a string is required.
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers?country=<country-id> HTTP/1.1
@@ -81,14 +78,13 @@ X-Locale: <locale-id>
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, this method returns a collection of **Offer** resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

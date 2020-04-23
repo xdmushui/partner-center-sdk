@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get all the subscription analytics information for your customers.
+This article describes how to get all the subscription analytics information for your customers.
 
 ## Prerequisites
 

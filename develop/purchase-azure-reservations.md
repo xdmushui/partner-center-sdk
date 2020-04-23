@@ -141,7 +141,7 @@ To submit your Azure reservation order, do the following:
 
 ## Get order details
 
-Once you have created your Azure reservation order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​
+Once you have created your Azure reservation order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​
 
 - To get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
 

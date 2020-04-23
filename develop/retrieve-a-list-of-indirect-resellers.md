@@ -38,7 +38,7 @@ var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipT
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                |
 |---------|----------------------------------------------------------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipT
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to identify the relationship type.
 
@@ -79,15 +79,15 @@ Use the following query parameter to identify the relationship type.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/relationships?relationship_type=IsIndirectCloudSolutionProviderOf HTTP/1.1
@@ -104,11 +104,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains a collection of [PartnerRelationship](relationships-resources.md) resources to identify the resellers.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

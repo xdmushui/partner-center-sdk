@@ -52,7 +52,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to identify the correct customer.
 
@@ -74,13 +74,13 @@ Use the following query parameter to identify the correct customer.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/users/<user-id>/directoryroles HTTP/1.1
@@ -95,11 +95,11 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 
 If successful, this method returns a list of the roles associated with the given user account.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

@@ -28,7 +28,7 @@ How to get all the search analytics information for your customers.
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI |
 |---------|-------------|
@@ -36,7 +36,7 @@ How to get all the search analytics information for your customers.
 
  
 
-**URI parameters**
+### URI parameters
 
 
 |    Parameter     |  Type  |                                                                                                                   Description                                                                                                                    |
@@ -47,15 +47,15 @@ How to get all the search analytics information for your customers.
 |       top        | string |                                                                     The page limit is 10000. Takes any value less than 10000.  </br> **Example:**</br>  `.../search?top=100`                                                                     |
 |       skip       | string |                                                                                  Number of rows to skip. </br> **Example:**</br> `.../search?top=100&skip=100`                                                                                   |
   
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/search HTTP/1.1
@@ -70,11 +70,11 @@ Content-Length: 0
 
 If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search_resource) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 {

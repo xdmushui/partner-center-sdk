@@ -49,7 +49,7 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                 |
 |---------|-------------------------------------------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 
  
 
-**URI parameters**
+### URI parameters
 
 Use the following path parameters to identify the customer, and specify the cart to be updated.
 
@@ -68,11 +68,11 @@ Use the following path parameters to identify the customer, and specify the cart
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the [Cart](cart-resources.md) properties in the request body.
 
@@ -102,7 +102,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
 
-**Request example**
+### Request example
 
 ```http
 PUT /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/65faf57b-0205-47ee-92b3-08dcf233ea73/ HTTP/1.1
@@ -147,11 +147,11 @@ Expect: 100-continue
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created

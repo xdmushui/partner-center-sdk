@@ -42,13 +42,13 @@ var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                         |
 |---------|-------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/mpn?mpnId={mpn-id} HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 Provide the following query parameter to identify the partner. If you omit this query parameter, the request returns the MPN profile of the signed-in partner.
 
@@ -56,15 +56,15 @@ Provide the following query parameter to identify the partner. If you omit this 
 |--------|------|----------|-------------------------------------------------------------|
 | mpn-id | int  | No       | A Microsoft Partner Network ID that identifies the partner. |
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/profiles/mpn?mpnId=9999999 HTTP/1.1
@@ -82,7 +82,7 @@ Connection: Keep-Alive
 
 If successful, the response body contains the [MpnProfile](profile-resources.md#mpnprofile) resource for the partner.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 

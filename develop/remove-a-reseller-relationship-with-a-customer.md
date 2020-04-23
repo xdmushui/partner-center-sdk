@@ -84,7 +84,7 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request   
 
 
-**Request syntax**
+### Request syntax
 
 | Method     | Request URI                                                                                                                           |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -92,7 +92,7 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 
  
 
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameters to remove a reseller relationship.
 
@@ -102,15 +102,15 @@ This table lists the required query parameters to remove a reseller relationship
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 A **Customer** resource is required in the request body. Ensure the **RelationshipToPartner** property has been set to none.
 
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1
@@ -134,11 +134,11 @@ Date: Fri, 12 Jan 2018 00:31:55 GMT
 
 If successful, this method removes a reseller relationship for the specified customer.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

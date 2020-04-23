@@ -43,7 +43,7 @@ To populate expiry dates for the entitlements to be retrieved, call the same met
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
@@ -51,7 +51,7 @@ To populate expiry dates for the entitlements to be retrieved, call the same met
 
  
 
-**URI parameters**
+### URI parameters
 
 Use the following path and query parameters when creating the request.
 
@@ -63,15 +63,15 @@ Use the following path and query parameters when creating the request.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/entitlements HTTP/1.1
@@ -88,11 +88,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -190,7 +190,7 @@ To retrieve a specific type of entitlements, obtain the **ByEntitlementType** in
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("software").Get(true);
 ```
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/de3dcef9-9991-459c-ac71-2903d1127414/entitlements?entitlementtype=software&showExpiry=true
@@ -202,7 +202,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 ```
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -322,7 +322,7 @@ ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(
 ((VirtualMachineReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.VirtualMachineReservedInstance)).Link.InvokeAsync<VirtualMachineReservedInstanceArtifactDetails>(partnerOperations)
 ```
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/virtualmachinereservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336 HTTP/1.1
@@ -334,7 +334,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 ```
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -374,7 +374,7 @@ ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(
 ((ReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ReservedInstance)).Link.InvokeAsync<ReservedInstanceArtifactDetails>(partnerOperations);
 ```
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/artifacts/reservedinstance/groups/2caf524395724e638ef64e109f1f79ca/lineitems/03500b1b-f2d6-4e23-ab4b-9fd67b917012/resource/ebf2e74b-630e-4a09-857d-a1f6c6351336 HTTP/1.1
@@ -386,7 +386,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 ```
 
-**Response example**  
+### Response example  
 
 ```http
 HTTP/1.1 200 OK

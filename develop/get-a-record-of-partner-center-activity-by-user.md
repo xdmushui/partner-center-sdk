@@ -82,7 +82,7 @@ while (auditRecordEnumerator.HasValue)
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/> REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                                                                                    |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -94,7 +94,7 @@ while (auditRecordEnumerator.HasValue)
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameters when creating the request.
 
@@ -154,15 +154,15 @@ The following table describes the required key-value pairs:
 
  
 
-**Request headers**
+### Request headers
 
 - See [Parter Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=6/1/2017%2012:00:00%20AM&filter=%7B%22Field%22:%22CustomerId%22,%22Value%22:%220c39d6d5-c70d-4c55-bc02-f620844f3fd1%22,%22Operator%22:%22equals%22%7D HTTP/1.1
@@ -180,11 +180,11 @@ Connection: Keep-Alive
 
 If successful, this method returns a set of activities that meet the filters.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

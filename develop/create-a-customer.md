@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud for US Government
 
-This topic explains how to create a new customer.
+This article explains how to create a new customer.
 
 > [!IMPORTANT]
 > If you are an indirect provider and you want to create a customer for an indirect reseller, please see [Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md).

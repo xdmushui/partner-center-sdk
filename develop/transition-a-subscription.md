@@ -46,7 +46,7 @@ UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerI
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerI
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to transition the subscription.
 
@@ -67,15 +67,15 @@ Use the following query parameter to transition the subscription.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades HTTP/1.1
@@ -153,11 +153,11 @@ Expect: 100-continue
 
 If successful, this method returns an **Upgrade** result resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

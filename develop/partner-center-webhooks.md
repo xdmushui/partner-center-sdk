@@ -153,7 +153,7 @@ Returns a list of the events that are currently supported by the Webhook APIs.
 **Resource URL**   
 https://api.partnercenter.microsoft.com/webhooks/v1/registration/events
 
-**Request example**   
+### Request example   
 
 ```http
 GET /webhooks/v1/registration/events
@@ -163,7 +163,7 @@ accept: */*
 host: api.partnercenter.microsoft.com
 ```
 
-**Response example**   
+### Response example   
 
 ```http
 HTTP/1.1 200
@@ -189,7 +189,7 @@ Registers a tenant to receive the specified events.
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 
-**Request example**   
+### Request example   
 
 ```http
 POST /webhooks/v1/registration
@@ -206,7 +206,7 @@ Content-Length: 219
 }
 ```
 
-**Response example**   
+### Response example   
 
 ```http
 HTTP/1.1 200
@@ -235,7 +235,7 @@ Returns the Webhooks event registration for a tenant.
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 
-**Request example**   
+### Request example   
 
 ```http
 GET /webhooks/v1/registration
@@ -246,7 +246,7 @@ Host: api.partnercenter.microsoft.com
 Accept-Encoding: gzip, deflate
 ```
 
-**Response example**   
+### Response example   
 
 ```http
 HTTP/1.1 200
@@ -275,7 +275,7 @@ Updates an existing event registration.
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
 
-**Request example**   
+### Request example   
 
 ```http
 PUT /webhooks/v1/registration
@@ -292,7 +292,7 @@ Content-Length: 258
 }
 ```
 
-**Response example**   
+### Response example   
 
 ```http
 HTTP/1.1 200
@@ -322,7 +322,7 @@ Generates a test event to validate the Webhooks registration. This test is inten
 **Resource URL**   
 https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents
 
-**Request example**   
+### Request example   
 
 ```http
 POST /webhooks/v1/registration/validationEvents
@@ -334,7 +334,7 @@ Accept-Encoding: gzip, deflate
 Content-Length:
 ```
 
-**Response example**   
+### Response example   
 
 ```http
 HTTP/1.1 200
@@ -359,7 +359,7 @@ Returns the current state of the validation event. This can be helpful for troub
 **Resource URL**   
 https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{correlationId}
 
-**Request example**   
+### Request example   
 
 ```http
 GET /webhooks/v1/registration/validationEvents/04af2aea-d413-42db-824e-f328001484d1
@@ -370,7 +370,7 @@ Host: api.partnercenter.microsoft.com
 Accept-Encoding: gzip, deflate
 ```
 
-**Response example**     
+### Response example     
 
 ```http
 HTTP/1.1 200

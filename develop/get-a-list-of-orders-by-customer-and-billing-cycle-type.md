@@ -1,6 +1,6 @@
 ---
 title: Get a list of orders by customer and billing cycle type
-description: Gets a collection of order resources for the specified customer and biling cycle type.
+description: Gets a collection of order resources for the specified customer and billing cycle type.
 ms.assetid: DF1E52F6-1A3D-4B26-8BCC-6E429410C662
 ms.date: 06/19/2019
 ms.service: partner-dashboard
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of Order resources that correspond to a given customer and billing cycle type. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
+Gets a collection of Order resources that correspond to a given customer and billing cycle type. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
 
 ## Prerequisites
 
