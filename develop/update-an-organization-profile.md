@@ -52,8 +52,6 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 |---------|-------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/organization HTTP/1.1 |
 
-
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.

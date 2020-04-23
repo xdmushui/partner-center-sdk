@@ -60,8 +60,6 @@ User updatedCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 |-----------|----------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following query parameter to identify the correct customer.
@@ -70,8 +68,6 @@ Use the following query parameter to identify the correct customer.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                       |
-
-
 
 ### Request headers
 

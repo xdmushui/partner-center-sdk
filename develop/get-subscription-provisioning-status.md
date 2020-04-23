@@ -50,8 +50,6 @@ var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscripti
 |---------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/provisioningstatus HTTP/1.1 |
 
-
-
 ### URI parameters
 
 Use the following path parameters to identify the customer and subscription.

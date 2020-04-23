@@ -32,8 +32,6 @@ To update an order for a customer, get the cart using the **Get()** method by pa
 
 Finally, call the **Put()** or **PutAsync()** method to create the order.
 
-
-
 ``` csharp
 IAggregatePartner partnerOperations;
 string customerId;
@@ -55,8 +53,6 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 |---------|-------------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id} HTTP/1.1              |
 
-
-
 ### URI parameters
 
 Use the following path parameters to identify the customer, and specify the cart to be updated.
@@ -65,8 +61,6 @@ Use the following path parameters to identify the customer, and specify the cart
 |-----------------|----------|----------|------------------------------------------------------------------------|
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
-
-
 
 ### Request headers
 

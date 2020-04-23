@@ -92,8 +92,6 @@ while (auditRecordEnumerator.HasValue)
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filter={"Field":"CustomerId","Value":"{customerId}","Operator":"equals"} HTTP/1.1          |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filter={"Field":"ResourceType","Value":"{resourceType}","Operator":"equals"} HTTP/1.1      |
 
-
-
 ### URI parameter
 
 Use the following query parameters when creating the request.
@@ -103,8 +101,6 @@ Use the following query parameters when creating the request.
 | startDate | date   | No       | The start date in yyyy-mm-dd format. If none is provided, the result set will default to 30 days prior to the request date. This parameter is optional when a filter is supplied.                                          |
 | endDate   | date   | No       | The end date in yyyy-mm-dd format. This parameter is optional when a filter is supplied. When the end date is omitted or set to null, the request returns the max window or uses today as the end date, whichever is less. |
 | filter    | string | No       | The filter to apply. This must be an encoded string. This parameter is optional when the start date or end date are supplied.                                                                                              |
-
-
 
 ### Filter syntax
 You must compose the filter parameter as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
@@ -151,8 +147,6 @@ The following table describes the required key-value pairs:
 </tr>
 </tbody>
 </table>
-
-
 
 ### Request headers
 

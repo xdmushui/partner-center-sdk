@@ -35,8 +35,6 @@ Describes the behavior of an individual upgrade resource.
 | UpgradeErrors | array of UpgradeErrors | Reasons the upgrade cannot be performed, if applicable.                                      |
 | Attributes    | ResourceAttributes     | The metadata attributes corresponding to the upgrade.                                        |
 
-
-
 ## <span id="UpgradeError"/><span id="upgradeerror"/><span id="UPGRADEERROR"/>UpgradeError
 
 
@@ -48,8 +46,6 @@ Describes a reason why an upgrade cannot be performed.
 | Description       | string             | Friendly text describing the error.                                                                                                                                                                                                                                                                                                                                                             |
 | AdditionalDetails | string             | Additional details regarding the error.                                                                                                                                                                                                                                                                                                                                                         |
 | Attributes        | ResourceAttributes | The metadata attributes corresponding to the error.                                                                                                                                                                                                                                                                                                                                             |
-
-
 
 ## <span id="UpgradeResult"/><span id="upgraderesult"/><span id="UPGRADERESULT"/>UpgradeResult
 
@@ -64,8 +60,6 @@ Describes a the result of the subscription upgrade process.
 | UpgradeErrors        | array of UpgradeErrors      | Errors encountered while attemption to perform the upgrade, if applicable.           |
 | LicenseErrors        | array of UserLicenseErrrors | Errors encountered while attempted to migrate user licenses, if applicable.          |
 | Attributes           | ResourceAttributes          | The metadata attributes corresponding to the license.                                |
-
-
 
 ## <span id="UserLicenseError"/><span id="userlicenseerror"/><span id="USERLICENSEERROR"/>UserLicenseError
 

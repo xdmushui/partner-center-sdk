@@ -43,8 +43,6 @@ ResourceCollection<SupportTopic> supportTopicsCollection = partnerOperations.Ser
 |---------|---------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/supporttopics HTTP/1.1 |
 
-
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.

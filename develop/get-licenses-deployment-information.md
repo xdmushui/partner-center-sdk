@@ -75,8 +75,6 @@ If successful, the response body contains the following fields containing data a
 | licensesSold      | long     | Number of licenses sold               |
 | processedDateTime | DateTime | Date when the data was last processed |
 
-
-
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).

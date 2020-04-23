@@ -38,8 +38,6 @@ REST API.
 | MS-PartnerCenter-Application | Optional. Specifies the name of the application that is using the Partner Center REST API.                                                                                                                                                                                             | string     |
 | X-Locale:                    | Optional. Specifies the language in which the rates are returned. Default is "en-US". For a list of supported values, see [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md).                                                                                                                                                                                                  | string     |
 
-
-
 ## <span id="Response_headers"/><span id="response_headers"/><span id="RESPONSE_HEADERS"/>Response headers
 
 

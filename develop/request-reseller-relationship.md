@@ -46,8 +46,6 @@ var customerRelationshipRequest = partnerOperations.Customers.RelationshipReques
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/relationshiprequests HTTP/1.1 |
 
-
-
 ### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.

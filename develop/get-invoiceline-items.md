@@ -161,8 +161,6 @@ Use the following URI and query parameters when creating the request.
 | seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
 | hasPartnerEarnedCredit | bool | No | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when billing provider type is OneTime and InvoiceLineItemType is UsageLineItems. |
 
-
-
 #### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).

@@ -58,8 +58,6 @@ For a complete list of Webhook events supported by Partner Center, see [Partner 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-
-
 ## Receiving events from Partner Center
 
 To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery.
@@ -219,8 +217,6 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 }
 ```
 
-
-
 ### View a registration
 
 Returns the Webhooks event registration for a tenant.
@@ -259,8 +255,6 @@ X-Locale: en-US
     "WebhookEvents": ["subscription-updated", "test-created"]
 }
 ```
-
-
 
 ### Update an event registration
 

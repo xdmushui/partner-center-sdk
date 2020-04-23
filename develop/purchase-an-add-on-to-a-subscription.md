@@ -122,8 +122,6 @@ Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(pa
 |-----------|----------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
-
-
 ### URI parameters
 
 Use the following parameters to identify the customer and order.
@@ -132,8 +130,6 @@ Use the following parameters to identify the customer and order.
 |------------------------|----------|----------|------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
 | **order-id**           | **guid** | Y        | The order identifier.                                                              |
-
-
 
 ### Request headers
 
@@ -154,8 +150,6 @@ The following tables describe the properties in the request body.
 | CreationDate        | string           | N        | The date the order was created, in date-time format. |
 | Attributes          | object           | N        | Contains "ObjectType": "Order".                      |
 
-
-
 ## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
 
@@ -169,8 +163,6 @@ The following tables describe the properties in the request body.
 | Quantity             | number | Y        | The number of licenses.                                      |
 | PartnerIdOnRecord    | string | N        | The MPN ID of the partner of record.                         |
 | Attributes           | object | N        | Contains "ObjectType": "OrderLineItem".                      |
-
-
 
 ### Request example
 

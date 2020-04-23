@@ -57,8 +57,6 @@ Use the following query parameter to get the invoice statement.
 |------------|------------|----------|----------------------------------------------------------------------------------------------------|
 | invoice-id | string     | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 
-
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.
