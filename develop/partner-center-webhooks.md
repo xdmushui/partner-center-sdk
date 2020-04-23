@@ -87,14 +87,14 @@ Content-Length: 195
 
 To authenticate the callback event received from Partner Center, follow these steps:
 
-1.	Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
-2.	Download the certificate used to sign the content (x-ms-certificate-url).
-3.	Verify the Certificate Chain.
-4.	Verify the "Organization" of the certificate.
-5.	Read the content with UTF8 encoding into a buffer.
-6.	Create an RSA Crypto Provider.
-7.	Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
-8.	If the verification succeeds, process the message.
+1. Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
+2. Download the certificate used to sign the content (x-ms-certificate-url).
+3. Verify the Certificate Chain.
+4. Verify the "Organization" of the certificate.
+5. Read the content with UTF8 encoding into a buffer.
+6. Create an RSA Crypto Provider.
+7. Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
+8. If the verification succeeds, process the message.
 
 > [!NOTE]
 > By default, the signature token will be sent in an Authorization header. If you set **SignatureTokenToMsSignatureHeader** to true in your registration, the signature token will be sent in the x-ms-signature header instead.

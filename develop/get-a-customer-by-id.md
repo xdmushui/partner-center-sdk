@@ -41,7 +41,7 @@ Customer customerInfo = partnerOperations.Customers.ById(customerIdToRetrieve).G
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get a customer by ID, use your **IAggregatePartner.getCustomers** function, call the **byId()** function, then call the **get()** function.
 
@@ -54,7 +54,7 @@ Customer customerInfo = partnerOperations.getCustomers().byId(customerIdToRetrie
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get a customer by ID, execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command and specify the **CustomerId** parameter.
 
@@ -112,6 +112,7 @@ Content-Length: 1530
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9
 MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
+
 {
   "id": "eebd1b55-5360-4438-a11d-5c06918c3014",
   "commerceId": "99e6a635-48e7-424d-9059-c9db944e3c54",
@@ -132,9 +133,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
       "self": {
         "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/company",
         "method": "GET",
-        "headers": [
-
-        ]
+        "headers": []
       }
     },
     "attributes": {
@@ -143,7 +142,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
   },
   "billingProfile": {
     "id": "eeada110-69d6-4cc9-b093-75feb7ca9d3f",
-    "firstName": "Jasond0d89d776d03471c819bf772191ed728",
+    "firstName": "d0d89d776d03471c819bf772191ed728",
     "lastName": "kjkAJJAAAAAAAAAAAAAAAAAAAA",
     "email": "a@a.com",
     "culture": "en-US",
@@ -182,9 +181,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
     "self": {
       "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014",
       "method": "GET",
-      "headers": [
-
-      ]
+      "headers": []
     }
   },
   "attributes": {

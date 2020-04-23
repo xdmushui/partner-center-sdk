@@ -90,8 +90,8 @@ MS-RequestId: cc1ba6db-ab26-404a-9196-712b6395f518
 Date: Tue, 05 Feb 2019 04:08:23 GMT
 
 {
-    _content	{System.Net.Http.ByteArrayContent}	System.Net.Http.HttpContent {System.Net.Http.ByteArrayContent}
-    _content	{byte[195556]}	byte[]
-    _headers	{Content-Type: application/pdf Content-Disposition: attachment; filename=E-Tax-8602768.pdf}
+    _content    {System.Net.Http.ByteArrayContent}    System.Net.Http.HttpContent {System.Net.Http.ByteArrayContent}
+    _content    {byte[195556]}    byte[]
+    _headers    {Content-Type: application/pdf Content-Disposition: attachment; filename=E-Tax-8602768.pdf}
 }
 ```

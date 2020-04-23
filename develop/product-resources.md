@@ -73,19 +73,19 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
-| Property        | Type												| Description                                                                         |
+| Property        | Type                        | Description                                                                         |
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
-| id              | string												| The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
-| productId       | string												| The ID of the [product](#product) that contains this availability.           |
-| skuId           | string												| The ID of the [SKU](#sku) that contains this availability.                   |
-| catalogItemId   | string												| The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
-| defaultCurrency | string												| The default currency supported for this availability.                               |
-| segment         | string												| The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
+| id              | string                        | The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
+| productId       | string                        | The ID of the [product](#product) that contains this availability.           |
+| skuId           | string                        | The ID of the [SKU](#sku) that contains this availability.                   |
+| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
+| defaultCurrency | string                        | The default currency supported for this availability.                               |
+| segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
 | country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
 | isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
 | isRenewable     | bool                                                | Indicates whether this availability is renewable. |
-| product		  | [Product](#product)               | The product this availability corresponds to. |
-| sku		      | [Sku](#sku)						| The SKU this availability corresponds to. |
+| product      | [Product](#product)               | The product this availability corresponds to. |
+| sku          | [Sku](#sku)            | The SKU this availability corresponds to. |
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
@@ -93,10 +93,10 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 
 Represents a term for which the availability can be purchased.
 
-| Property              | Type																				| Description                                                                         |
+| Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| duration              | string																			| An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
-| description           | string																			| The description of the term.           |
+| duration              | string                                      | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
+| description           | string                                      | The description of the term.           |
 
 ## InventoryCheckRequest
 
@@ -140,4 +140,3 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
-

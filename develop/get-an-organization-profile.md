@@ -39,7 +39,7 @@ OrganizationProfile organizationProfile = partnerOperations.Profiles.Organizatio
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get your organization profile, use your **IAggregatePartner.getProfiles** function and call the **getOrganizationProfile** function. Finally, call the **get()** function.
 
@@ -51,7 +51,7 @@ OrganizationProfile organizationProfile = partnerOperations.getProfiles().getOrg
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get your organization profile, execute the [**Get-PartnerOrganizationProfile**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOrganizationProfile.md) command.
 

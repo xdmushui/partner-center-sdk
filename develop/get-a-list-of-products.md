@@ -53,7 +53,7 @@ ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US"
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get a list of products:
 
@@ -74,7 +74,7 @@ ResourceCollection<Products> products = partnerOperations.getProducts().byCountr
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get a list of products:
 

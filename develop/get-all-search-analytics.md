@@ -86,4 +86,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 ## See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
