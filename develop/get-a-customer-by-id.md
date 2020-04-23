@@ -132,9 +132,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
       "self": {
         "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/company",
         "method": "GET",
-        "headers": [
-
-        ]
+        "headers": []
       }
     },
     "attributes": {
@@ -143,7 +141,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
   },
   "billingProfile": {
     "id": "eeada110-69d6-4cc9-b093-75feb7ca9d3f",
-    "firstName": "Jasond0d89d776d03471c819bf772191ed728",
+    "firstName": "d0d89d776d03471c819bf772191ed728",
     "lastName": "kjkAJJAAAAAAAAAAAAAAAAAAAA",
     "email": "a@a.com",
     "culture": "en-US",
