@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 
 How to get a collection of entitlements.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 - A customer identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement-resources.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
@@ -38,7 +38,7 @@ To populate expiry dates for the entitlements to be retrieved, call the same met
 > [!IMPORTANT]
 > On-premise entitlement types do not have expiry dates.
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -76,7 +76,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST Response
 
 If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
@@ -169,7 +169,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 }
 ```
 
-## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples
+## Additional Examples
 
 The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
 
@@ -299,7 +299,7 @@ Date: Mon, 28 Jan 2019 18:31:43 GMT
 
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
-### <span id="VirtualMachineReservationExample_SDK_1.8"/><span id="virtualmachinereservationexample_sdk_1.8"/><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"/>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
+### Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
 
 ### C# example
 
@@ -351,7 +351,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 }
 ```
 
-### <span id="ReservationExample_SDK_1.9"/><span id="reservationexample_sdk_1.9"/><span id="RESERVATIONEXAMPLE_SDK_1.9"/>Retrieve reservation details from an entitlement by using SDK V1.9
+### Retrieve reservation details from an entitlement by using SDK V1.9
 
 ### C# example
 

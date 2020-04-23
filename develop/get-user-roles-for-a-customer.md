@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 
 Get a list of all the roles/permissions attached to a user account. Variations include getting a list of all permissions across all user accounts for a customer, and getting a list of users that have a given role.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or <strong>GetAsync()</strong>method.
 
@@ -46,7 +46,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetCustomerDirectoryRoleUserMembers.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -82,7 +82,7 @@ MS-RequestId: b1317092-f087-471e-a637-f66523b2b94c
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST Response
 
 If successful, this method returns a list of the roles associated with the given user account.
 

@@ -19,13 +19,13 @@ ms.localizationpriority: medium
 
 How to get a list of subscriptions provided by a given partner to a specified customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 - A partner Microsoft Partner Network (MPN) identifier.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
@@ -68,7 +68,7 @@ To get a list of subscriptions provided by a given partner to a specified custom
 Get-PartnerCustomerSubscription -CustomerId $customerId -MpnId $partnerMpnId
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+##  REST Request
 
 ### Request syntax
 
@@ -105,7 +105,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the response body contains the collection of [Subscription](subscription-resources.md) resources.
 
@@ -169,5 +169,5 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 }
 ```
 
-## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
+## See also
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
