@@ -17,16 +17,13 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 How to get all the search analytics information for your customers.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -35,7 +32,6 @@ How to get all the search analytics information for your customers.
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/search HTTP/1.1 |
 
 ### URI parameters
-
 
 |    Parameter     |  Type  |                                                                                                                   Description                                                                                                                    |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -65,7 +61,6 @@ Content-Length: 0
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search_resource) resources.
 
 ### Response success and error codes
@@ -89,7 +84,6 @@ Each response comes with an HTTP status code that indicates success or failure a
   "keywordSearchText": " my company"
 }
 ```
-
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

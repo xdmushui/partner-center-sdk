@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 
 # Update a customer's qualification
 
-
 **Applies To**
 
 - Partner Center
@@ -22,7 +21,6 @@ A partner can update a customer's qualification to be "Education" or "Government
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id).
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -44,7 +42,6 @@ To update a customer's qualification to **GovernmentCommunityCloud** on an exist
 var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
 ```
 
-
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 ### Request syntax
@@ -52,7 +49,6 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification?code={validationCode} HTTP/1.1 |
-
 
 ### URI parameter
 
@@ -62,7 +58,6 @@ Use the following query parameter to update the qualification.
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **validationCode**     | int  | No       | Only needed for Government Community Cloud.                                                                                                            |
-
 
 ### Request headers
 

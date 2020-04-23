@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update the partner legal business profile
 
-
 **Applies To**
 
 - Partner Center
@@ -22,11 +21,9 @@ How to update the partner legal business profile.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update the partner legal business profile, first instantiate a **LegalBusinessProfile** object and populate it with the existing profile. For more information, see [Get the partner legal business profile](get-legal-business-profile.md). Then, update the properties that you need to change. The following code example illustrates changing the address and primary contact phone numbers.
 
@@ -46,7 +43,6 @@ var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfil
 ```
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
@@ -125,7 +121,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response body contains the updated **LegalBusinessProfile**
 

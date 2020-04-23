@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Profile resources
 
-
 **Applies To**
 
 - Partner Center
@@ -21,7 +20,6 @@ ms.localizationpriority: medium
 Describes the behavior of a Cloud Solution Provider's profiles.
 
 ## <span id="BillingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>BillingProfile
-
 
 Describes a partner's billing profile.
 
@@ -38,7 +36,6 @@ Describes a partner's billing profile.
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
 
 ## <span id="LegalBusinessProfile"/><span id="legalbusinessprofile"/><span id="LEGALBUSINESSPROFILE"/>LegalBusinessProfile
-
 
 Describes a partner's legal business profile.
 
@@ -57,7 +54,6 @@ Describes a partner's legal business profile.
 
 ## <span id="MpnProfile"/><span id="mpnprofile"/><span id="MPNPROFILE"/>MpnProfile
 
-
 Describes a partner's Microsoft Partner Network profile.
 
 | Property    | Type                                                           | Description                                           |
@@ -69,7 +65,6 @@ Describes a partner's Microsoft Partner Network profile.
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
 ## <span id="OrganizationProfile"/><span id="organizationprofile"/><span id="ORGANIZATIONPROFILE"/>OrganizationProfile
-
 
 Describes a partner's organization profile.
 
@@ -89,7 +84,6 @@ Describes a partner's organization profile.
 
 ## <span id="SupportProfile"/><span id="supportprofile"/><span id="SUPPORTPROFILE"/>SupportProfile
 
-
 Describes a partner's support profile.
 
 | Property    | Type                                                           | Description                                           |
@@ -100,5 +94,4 @@ Describes a partner's support profile.
 | profileType | string                                                         | The partner profile type.                             |
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
-
 

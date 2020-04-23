@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 
 # Partner Center webhooks
 
-
 **Applies To**
 
 - Partner Center
@@ -48,13 +47,11 @@ Partners can select from Webhook events, like the following, that are supported 
 
     This event is raised when the new invoice is ready.
 
-
 Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add.
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
 ## Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
@@ -88,7 +85,6 @@ Content-Length: 195
 
 ## How to authenticate the callback
 
-
 To authenticate the callback event received from Partner Center, follow these steps:
 
 1.	Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
@@ -105,7 +101,6 @@ To authenticate the callback event received from Partner Center, follow these st
 
 ## Event model
 
-
 The following table describes the properties of a Partner Center event.
 
 ### Properties
@@ -117,7 +112,6 @@ The following table describes the properties of a Partner Center event.
 | **ResourceName**          | The name of the resource that changed.                                                |
 | **AuditUrl**              | Optional. The URI of the Audit record.                                                |
 | **ResourceChangeUtcDate** | The date and time, in UTC format, when the resource change occurred.                  |
-
 
 ### Sample
 
@@ -180,7 +174,6 @@ Registers a tenant to receive the specified events.
 
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
-
 ### Request example
 
 ```http
@@ -225,7 +218,6 @@ Returns the Webhooks event registration for a tenant.
 
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
-
 ### Request example
 
 ```http
@@ -264,7 +256,6 @@ Updates an existing event registration.
 
 https://api.partnercenter.microsoft.com/webhooks/v1/registration
 
-
 ### Request example
 
 ```http
@@ -300,7 +291,6 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
     "WebhookEvents": [ "subscription-updated", "test-created" ]
 }
 ```
-
 
 ### Send a test event to validate your registration
 

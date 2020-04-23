@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update autorenew for a commercial marketplace subscription
 
-
 **Applies To**
 
 - Partner Center
@@ -19,13 +18,11 @@ Update the autorenew property for a commercial marketplace [Subscription](subscr
 
 In the Partner Center dashboard, this operation is performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription that you wish to update. Finally, toggle the **Auto-renew** option, then select **Submit**.
 
-
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -42,7 +39,6 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
-
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
@@ -112,7 +108,6 @@ Connection: Keep-Alive
     "attributes": {"objectType": "Subscription"},
 }
 ```
-
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 

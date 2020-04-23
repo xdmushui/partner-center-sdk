@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Set user roles for a customer
 
-
 **Applies To**
 
 - Partner Center
@@ -19,12 +18,10 @@ Within a customer account, there's a set of directory roles. You can assign user
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To assign a directory role to a customer user, create a new [**UserMember**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.roles.usermember) with the relevant user details. Then, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the specified customer ID to identify the customer. From there, use the [**DirectoryRoles.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.idirectoryrolecollection.byid) method with the directory role ID to specify the role. Then, access the **UserMembers** collection, and use the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermembercollection.create) method to add the new user member to the collection of user members assigned to that role.
 
@@ -49,7 +46,6 @@ var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).Dire
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: AddUserMemberToDirectoryRole.cs
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -106,7 +102,6 @@ Expect: 100-continue
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 This method returns the user account with the role id attached when the user is successfully assigned the role.
 

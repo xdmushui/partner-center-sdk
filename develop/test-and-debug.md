@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Test and debug
 
-
 **Applies To**
 
 - Partner Center
@@ -68,7 +67,6 @@ In production, after you have [created a subscription to commercial marketplace 
 
 In the CSP sandbox environment, there is no integration with ISVs. If you try to retrieve an activation link from Partner Center, a dummy link will be returned. You cannot use this dummy link to complete the setup process at the publisher's site. To use the integration sandbox account to test billing for subscriptions to commercial marketplace SaaS products, see [Activate a sandbox subscription for commercial marketplace products](activate-sandbox-subscription-azure-marketplace-products.md) instead. Subscription billing will begin after successful activation.
 
-
 To clean up at the end of your test run so there's space for the next round of testing, see the following topics:
 
 - [Delete a customer account from the integration sandbox](delete-a-customer-account-from-the-integration-sandbox.md)
@@ -79,13 +77,11 @@ To clean up at the end of your test run so there's space for the next round of t
 
 ## <span id="Best_practices_for_REST_development"/><span id="best_practices_for_rest_development"/><span id="BEST_PRACTICES_FOR_REST_DEVELOPMENT"/>Best practices for REST development
 
-
 - Use a network trace tool so that you can see your request, the response, and if there were any errors in the HTTP status code in the response. For more information about error handling, see [Partner Center REST error codes](error-codes.md).
 
 - Use a new Correlation ID for each call made to the Partner Center REST API. This ensures better logging and will help during debugging. For more information, see [Partner Center REST headers](headers.md).
 
 ## <span id="Troubleshooting_tips_for_common_REST_problems"/><span id="troubleshooting_tips_for_common_rest_problems"/><span id="TROUBLESHOOTING_TIPS_FOR_COMMON_REST_PROBLEMS"/>Troubleshooting tips for common REST problems
-
 
 - Review all header properties, including the URL and API version.
 

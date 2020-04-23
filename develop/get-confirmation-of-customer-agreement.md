@@ -46,7 +46,6 @@ var customerAgreements = partnerOperations.Customers.ById(selectedCustomerId).Ag
 
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-
 ## REST request
 
 To retrieve confirmation of customer acceptance that was previously provided:

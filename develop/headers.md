@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Partner Center REST headers
 
-
 **Applies To**
 
 - Partner Center
@@ -22,7 +21,6 @@ The following HTTP request and response headers are supported by the
 Partner Center REST API. Not all API calls accept all headers.
 
 ## <span id="Request_headers"/><span id="request_headers"/><span id="REQUEST_HEADERS"/>Request headers
-
 
 The following HTTP request headers are supported by the Partner Center
 REST API.
@@ -40,7 +38,6 @@ REST API.
 
 ## <span id="Response_headers"/><span id="response_headers"/><span id="RESPONSE_HEADERS"/>Response headers
 
-
 The following HTTP response headers may be returned by the Partner
 Center REST API.
 
@@ -49,5 +46,4 @@ Center REST API.
 | Accept:           | Specifies the request and response type, "application/json".                                                                                                                                                                                | string     |
 | MS-RequestId:     | A unique identifier for the call, used to ensure id-potency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call. | GUID       |
 | MS-CorrelationId: | A unique identifier for the call, useful the logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header.                                                       | GUID       |
-
 

@@ -40,7 +40,6 @@ To get the list of add-ons for a customer's subscription:
 
 var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscription.Id).AddOns.Get();
 
-
 ```
 
 For an example, see the following:

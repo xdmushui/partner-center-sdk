@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update a customer's billing profile
 
-
 **Applies To**
 
 - Partner Center
@@ -22,12 +21,10 @@ Updates a customer's billing profile, including the address associated with the 
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id).
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update a customer's billing profile, retrieve the billing profile and update the properties as necessary. Then, retrieve your [**IPartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, and then call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, followed by the [**Billing**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.billing) property. Then, finish by calling the [**Update()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofile-1.update) or [**UpdateAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofile-1.updateasync) methods.
 
@@ -45,7 +42,6 @@ billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.B
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpdateCustomerBillingProfile.cs
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
-
 
 ### Request syntax
 
@@ -117,7 +113,6 @@ Expect: 100-continue
 ```
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
 
 If successful, this method returns updated [Profile](profile-resources.md) resource properties in the response body. This call requires an ETag for concurrency detection.
 

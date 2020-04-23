@@ -68,7 +68,6 @@ Use the following query parameter to get the company profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
-
 ### Request headers
 
 - See [Partner Center REST Headers](headers.md) for more information.
@@ -91,7 +90,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns information in the response body.
 

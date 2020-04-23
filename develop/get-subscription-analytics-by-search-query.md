@@ -85,7 +85,6 @@ The following table shows a list of the supported fields and support operators f
 | deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
 
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.
@@ -107,7 +106,6 @@ Content-Length: 0
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 

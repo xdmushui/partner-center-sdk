@@ -17,9 +17,7 @@ How to get licenses usage information at the workload level for Office and Dynam
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
-
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
@@ -28,7 +26,6 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 | Method  | Request URI                                                                                |
 |---------|--------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/usage/license/ HTTP/1.1 |
-
 
 ### Request headers
 

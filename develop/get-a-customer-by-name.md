@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a list of customers filtered by a search field
 
-
 **Applies To**
 
 - Partner Center
@@ -22,12 +21,10 @@ Gets a collection of [Customer](customer-resources.md#customer) resources that m
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A user-constructed filter.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a collection of customers that match a filter, first instantiate a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object to create the filter. You'll need to pass a string that contains the [**CustomerSearchField**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield), and indicate the type of filter operation as [**FieldFilterOperation.StartsWith**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.fieldfilteroperation). That's the only field filter operation supported by the customers end point. You'll also need to provide the string to filter by.
 
