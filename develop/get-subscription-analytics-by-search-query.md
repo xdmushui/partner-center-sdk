@@ -108,7 +108,7 @@ Content-Length: 0
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
 
-If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the filtercriteria.
+If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the filter criteria.
 
 ### Response success and error codes
 
