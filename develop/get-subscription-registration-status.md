@@ -21,7 +21,7 @@ To purchase an Azure Reserved VM Instance using the Partner Center API, you must
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
 
 ## <span id="C_"/><span id="c_"/>C#
@@ -40,13 +40,13 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus HTTP/1.1 |
 
-**URI parameters**
+### URI parameters
 
 Use the following path parameters to identify the customer and subscription. 
 
@@ -56,15 +56,15 @@ Use the following path parameters to identify the customer and subscription.
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
  
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus HTTP/1.1
@@ -82,11 +82,11 @@ Connection: Keep-Alive
 
 If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.  
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

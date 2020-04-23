@@ -21,7 +21,7 @@ How to remove a user from a directory role within a customer account.
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -42,7 +42,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method     | Request URI                                                                                                                           |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,7 +50,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following URI parameters to identify the correct customer, role and user.
 
@@ -62,15 +62,15 @@ Use the following URI parameters to identify the correct customer, role and user
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 DELETE https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20/directoryroles/729827e3-9c14-49f7-bb1b-9608f156bbb8/usermembers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04%20 HTTP/1.1
@@ -89,11 +89,11 @@ Connection: Keep-Alive
 
 If the user is removed from the role successfully, the response body is empty.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 204 No Content

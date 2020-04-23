@@ -49,7 +49,7 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,7 +58,7 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
 
-**URI parameter**
+### URI parameter
 
 Use the following path and query parameters to identify the customer, user and license groups.
 
@@ -70,15 +70,15 @@ Use the following path and query parameters to identify the customer, user and l
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/users/482e2152-4b49-48ec-b715-823365ce3d4c/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1
@@ -94,11 +94,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains the collection of [License](license-resources.md#license) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -154,7 +154,7 @@ Date: June 24 2016 22:00:25 PST
 }
 ```
 
-**Response example (no matching licenses found)**
+### Response example (no matching licenses found)
 
 If no matching licenses can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 

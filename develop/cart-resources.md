@@ -46,10 +46,10 @@ Represents one item contained in a cart.
 | billingCycle         | Object                           | The type of billing cycle set for the current period.                                                                                                 |
 | termDuration         | string                           | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                |
 | participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
-| provisioningContext  | Dictionary<string, string>       | Additional context used when provisioning the purchased item. To determine which values are needed for a particular item please refer to the SKU's provisioningVariables property. |
+| provisioningContext  | Dictionary<string, string>       | Additional context used when provisioning the purchased item. To determine which values are needed for a particular item, refer to the SKU's provisioningVariables property. |
 | orderGroup           | string                           | A group to indicate which items can be submitted together in the same order.                                                                          |
-| addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons that will be purchased towards the base subscription that results from the root cart line item's purchase. |
-| error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
+| addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons. These items will be purchased towards the base subscription that results from the root cart line item's purchase. |
+| error                | Object                           | Applied after cart is created if an error occurred.                                                                                                    |
 | renewsTo             | Array of objects                 | An array of [RenewsTo](#renewsto) resources.                                                                            |
 
 ## RenewsTo

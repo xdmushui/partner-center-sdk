@@ -48,7 +48,7 @@ var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfil
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                    |
 |---------|--------------------------------------------------------------------------------|
@@ -56,15 +56,15 @@ var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfil
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The legal business profile resource.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/legalbusiness HTTP/1.1
@@ -131,11 +131,11 @@ Expect: 100-continue
 
 If successful, the response body contains the updated **LegalBusinessProfile**
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

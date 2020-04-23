@@ -45,7 +45,7 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
@@ -53,7 +53,7 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following URI parameter to get the specified service request. 
 
@@ -63,15 +63,15 @@ Use the following URI parameter to get the specified service request.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
@@ -90,11 +90,11 @@ Content-Length: 0
 
 If successful, this method returns a **Service Request** resource in the response body. 
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

@@ -69,13 +69,13 @@ Get-PartnerProductAvailability -Product $productId -SkuId $skuId -AvailabilityId
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities/{availability-id}?country={country-code} HTTP/1.1         |
 
-**URI parameter**
+### URI parameter
 
 Use the following path and query parameters to get a specific availability using an availability ID.
 
@@ -87,15 +87,15 @@ Use the following path and query parameters to get a specific availability using
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
  
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US HTTP/1.1
@@ -112,7 +112,7 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains an [Availability](product-resources.md#availability) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -124,7 +124,7 @@ This method returns the following error codes:
 | 404                  | 400018       | Sku was not found.                                                                                        |
 | 404                  | 400019       | Availability not found.                                                                                   |
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

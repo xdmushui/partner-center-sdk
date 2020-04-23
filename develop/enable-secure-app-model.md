@@ -19,7 +19,7 @@ You can use the new model to elevate security for Partner Center API integration
 
 ## Scope
 
-This topic concerns the following actors:
+This article concerns the following actors:
 
 - CPVs
   - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.

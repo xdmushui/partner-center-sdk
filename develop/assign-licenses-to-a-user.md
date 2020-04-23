@@ -106,7 +106,7 @@ var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CustomerUserAssignLicenses.cs
 
-## Request
+## REST request
 
 ### Request syntax
 

@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 
-This topic explains how to delete a device that belongs to a specified customer.
+This article explains how to delete a device that belongs to a specified customer.
 
 ## Prerequisites
 

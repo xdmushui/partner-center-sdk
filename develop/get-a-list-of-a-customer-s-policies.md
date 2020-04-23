@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 
-This topic describes how to retrieve a collection of the specified customer's configuration policies.
+This article describes how to retrieve a collection of the specified customer's configuration policies.
 
 ## Prerequisites
 

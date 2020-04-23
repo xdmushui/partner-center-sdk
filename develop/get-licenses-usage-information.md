@@ -23,18 +23,18 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                |
 |---------|--------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/usage/license/ HTTP/1.1 |
 
  
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**URI parameters**
+### URI parameters
 
 | Parameter         | Type     | Description | Required |  
 |-------------------|----------|-------------|----------|  
@@ -45,7 +45,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 | processedDateTime | DateTime | One can specify the date from which usage data was processed. Defaults to the latest date when the data was processed | No | 
 
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/commercial/usage/license?filter=customerTenantId%20eq%20%270112A436-B14E-4888-967B-CA4BB2CF1234%27 HTTP 1.1
@@ -77,11 +77,11 @@ If successful, the response body contains the following fields containing data a
 | processedDateTime | DateTime | Date when the data was last processed         |
 
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK 

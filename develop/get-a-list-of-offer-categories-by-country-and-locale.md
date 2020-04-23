@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get a collection that contains all the offer categories in a given country/region and locale.
+This article describes how to get a collection that contains all the offer categories in a given country/region and locale.
 
 ## Prerequisites
 

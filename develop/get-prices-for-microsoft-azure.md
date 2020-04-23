@@ -58,7 +58,7 @@ To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://git
 Get-PartnerAzureRateCard
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -74,9 +74,9 @@ Get-PartnerAzureRateCard
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is "US".        |
 
 You can include the optional X-Locale [header](headers.md#request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
-* If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
-* If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency and language.
 
+- If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
+- If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency and language.
 
 ### Request header
 
@@ -99,8 +99,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## Response
-
+## REST response
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 

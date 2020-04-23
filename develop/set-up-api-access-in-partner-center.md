@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud for US Government
 - Partner Center for Microsoft Cloud Germany
 
-This topic describes the accounts you need to develop against the Partner Center SDK. This topic also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
+This article describes the accounts you need to develop against the Partner Center SDK. This article also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
 
 ## Account definitions
 

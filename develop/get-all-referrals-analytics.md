@@ -27,14 +27,14 @@ How to get all the referrals analytics information for your customers.
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI |
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals HTTP/1.1 |
  
 
-**URI parameters**
+### URI parameters
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -45,15 +45,15 @@ How to get all the referrals analytics information for your customers.
 | skip | string |	Number of rows to skip.</br> **Example:**</br>  `.../referrals?top=100&skip=100` |
 
   
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/referrals HTTP/1.1
@@ -68,11 +68,11 @@ Content-Length: 0
 
 If successful, the response body contains a collection of [Referrals](partner-center-analytics-resources.md#referrals) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 {
