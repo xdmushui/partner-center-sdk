@@ -18,15 +18,15 @@ ms.localizationpriority: medium
 
 This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage customer orders and subscriptions.
 
-### Purchase Azure Reserved VM Instances
+## Purchase Azure Reserved VM Instances
 
 - [Purchase Azure reservations](purchase-azure-reservations.md)
 
-### Make a one-time purchase
+## Make a one-time purchase
 
 - [Make a one-time purchase](make-a-one-time-purchase.md)
 
-### Get offers from the catalog
+## Get offers from the catalog
 
 - [Get a list of offer categories by country and locale](get-a-list-of-offer-categories-by-country-and-locale.md)
 - [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md)
@@ -40,7 +40,7 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get an availability by ID](get-an-availability-by-id.md)
 - [Check Inventory](check-inventory.md)
 
-### Manage an order
+## Manage an order
 
 - [Cancel an order from the integration sandbox](cancel-an-order-from-the-integration-sandbox.md)
 - [Checkout a cart](checkout-a-cart.md)
@@ -52,18 +52,18 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Purchase catalog items](purchase-catalog-items.md)
 - [Update a cart](update-a-cart.md)
 
-### Enable a subscription for Azure Reserved VM Instance purchases
+## Enable a subscription for Azure Reserved VM Instance purchases
 
 - [Register a subscription](register-a-subscription.md)
 - [Get subscription registration status](get-subscription-registration-status.md)
 
-### Get subscription details
+## Get subscription details
 
 - [Get a subscription by ID](get-a-subscription-by-id.md)
 - [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 - [Get a list of add-ons for a subscription](get-a-list-of-add-ons-for-a-subscription.md)
 
-### Manage a subscription
+## Manage a subscription
 
 - [Change the quantity of a subscription](change-the-quantity-of-a-subscription.md)
 - [Update autorenew for a commercial marketplace subscription](update-autorenew-for-an-azure-marketplace-subscription.md)
