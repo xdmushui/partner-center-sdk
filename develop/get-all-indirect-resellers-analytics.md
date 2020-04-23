@@ -269,4 +269,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
