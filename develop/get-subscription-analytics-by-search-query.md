@@ -43,6 +43,7 @@ Use the following required path parameter to identify your organization and filt
 The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.
 
 An unencoded example looks like this:
+
 - String: ?filter=Field operator 'Value'
 - Boolean: ?filter=Field operator Value
 - Contains ?filter=contains(field,'value')
@@ -149,4 +150,4 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
 
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
