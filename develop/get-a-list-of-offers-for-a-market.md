@@ -20,13 +20,11 @@ ms.localizationpriority: medium
 
 Gets a collection that contains all the offers for a specific market.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C#
 
 To get a list of offers in a given market, use your **IAggregatePartner.Offers** collection, select the market by country, and call the **Get()** or **Get Async()** method.
 
@@ -38,8 +36,7 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: Offers.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
+## REST request
 
 ### Request syntax
 
@@ -47,7 +44,6 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 |---------|--------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
- 
 ### URI parameter
 
 This table lists the required query parameters to get the offers.
@@ -76,7 +72,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 X-Locale: <locale-id>
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
 If successful, this method returns a collection of **Offer** resources in the response body.
 
@@ -161,11 +157,3 @@ Date: Mon, 23 Nov 2015 23:20:44 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
