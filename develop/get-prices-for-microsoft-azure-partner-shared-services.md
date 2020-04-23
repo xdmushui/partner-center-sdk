@@ -20,7 +20,7 @@ How to get an [Azure Rate Card](azure-rate-card-resources.md) with prices for Mi
 
 Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 

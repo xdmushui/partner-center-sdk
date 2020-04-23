@@ -25,7 +25,7 @@ How to get a list of subscriptions provided by a given partner to a specified cu
 - A customer identifier.
 - A partner Microsoft Partner Network (MPN) identifier.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 

@@ -23,7 +23,7 @@ Gets an availability for the specified product and SKU using an availability ID.
 - A SKU ID.
 - An availability ID.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 

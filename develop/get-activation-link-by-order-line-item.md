@@ -25,7 +25,7 @@ In the Partner Center dashboard, this operation can be performed by selecting ei
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - Completed order with product that needs activation.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 

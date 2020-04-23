@@ -23,7 +23,7 @@ Gets an object representing the partner's MPN profile.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 

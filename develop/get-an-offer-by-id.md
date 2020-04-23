@@ -24,7 +24,7 @@ Gets an **Offer** resource that matches the offer ID.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An offer ID.
 
-## <span id="examples">Examples
+## Examples
 
 ### C#
 
