@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get add-ons for an offer ID
 
-
 **Applies To**
 
 - Partner Center
@@ -22,12 +21,10 @@ How to get the add-ons for an offer ID.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An offer ID. If you don't have the offer ID, see [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md).
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get the add-ons for an offer by ID, first call the [**IAggregatePartner.Offers.ByCountry**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.icountryselector-1.bycountry) method with the country code to get an interface to offer operations based on the given country. Then call the [**ByID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method with the offer ID to identify the offer whose add-ons you want to retrieve. Next, use the [**AddOns**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffer.addons) property to get an interface to add-on operations for the current offer. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.getasync) method to get a collection of all the add-ons for the specified offer.
 
@@ -43,14 +40,11 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}/addons?country={country-code} HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -60,8 +54,6 @@ Use the following parameters to provide the offer ID and country code.
 |--------------|------------|----------|-----------------------------------|
 | **offer-id** | **guid**   | Y        | A GUID that identifies the offer. |
 | **country**  | **string** | Y        | The country code (e.g. US).       |
-
- 
 
 ### Request headers
 
@@ -84,7 +76,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a collection of [Offer](offer-resources.md) objects in the response body.
 
@@ -206,11 +197,3 @@ Date: Wed, 01 Feb 2017 22:37:58 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

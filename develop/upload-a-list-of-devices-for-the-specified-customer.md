@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Upload a list of devices to an existing batch for the specified customer
 
-
 **Applies To**
 
 - Partner Center
@@ -20,14 +19,12 @@ How to upload a list of information about devices to an existing batch for the s
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - The customer identifier.
 - The device batch identifier.
 - The list of device resources that provide the information about the individual devices.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To upload a list of devices to an existing device batch, first, instantiate a new [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**Device**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device) and populate the list with the devices. The following combinations of populated properties are required at a minimum for identifying each device:
 
@@ -62,7 +59,7 @@ List<Device> devicesToBeUploaded = new List<Device>
     }
 };
 
-var trackingLocation = 
+var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.ById(selectedDeviceBatchId).Devices.Create(devicesToBeUploaded);
 ```
 
@@ -70,14 +67,11 @@ var trackingLocation =
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method   | Request URI                                                                                                            |
 |----------|------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches/{devicebatch-id}/devices HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -87,8 +81,6 @@ Use the following path and query parameters when creating the request.
 |----------------|--------|----------|-------------------------------------------------------|
 | customer-id    | string | Yes      | A GUID-formatted string that identifies the customer. |
 | devicebatch-id | string | Yes      | A string identifier that identifies the device batch. |
-
- 
 
 ### Request headers
 
@@ -150,7 +142,6 @@ Expect: 100-continue
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve device upload status. Save this URI for use with other related REST APIs.
 
 ### Response success and error codes
@@ -169,11 +160,3 @@ MS-CV: OBkGN9pSN0a5xvua.0
 MS-ServerId: 101112012
 Date: Thu, 28 Sep 2017 20:08:46 GMT
 ```
-
- 
-
- 
-
-
-
-

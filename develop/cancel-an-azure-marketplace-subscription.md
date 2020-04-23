@@ -1,7 +1,6 @@
 ---
 title: Cancel a commercial marketplace subscription
 description: Cancel a commercial marketplace Subscription resource that matches a customer and subscription ID.
-ms.assetid: 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

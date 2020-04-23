@@ -21,11 +21,9 @@ Gets an object representing the partner's billing profile.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a partner billing profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.getasync) methods.
 
@@ -39,14 +37,11 @@ BillingProfile billingProfile = partnerOperations.Profiles.BillingProfile.Get();
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                              |
 |---------|--------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/billing HTTP/1.1 |
-
- 
 
 ### Request headers
 
@@ -67,7 +62,6 @@ MS-CorrelationId: 1bb03149-88d2-4bc2-9cc1-d6e83890fa9e
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a **BillingProfile** object in the response body.
 

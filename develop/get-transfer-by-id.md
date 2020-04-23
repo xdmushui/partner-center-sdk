@@ -16,7 +16,6 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
@@ -43,7 +42,6 @@ Use the following path parameter to identify the customer and specify the transf
 ### Request headers
 
 See [Partner Center REST headers](headers.md) for more information.
-
 
 ### Request example
 
@@ -97,7 +95,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -109,7 +107,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -121,7 +119,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     }
   ],
@@ -130,7 +128,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/transfers/46e8ed67-8adf-4f65-b3d8-d31318080556",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 
 # Update a customer's qualification
 
-
 **Applies To**
 
 - Partner Center
@@ -23,7 +22,6 @@ A partner can update a customer's qualification to be "Education" or "Government
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id).
 
-
 ## <span id="C_"/><span id="c_"/>C#
 
 To update a customer's qualification to "Education", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
@@ -36,14 +34,13 @@ var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
-To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode). 
+To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode).
 ``` csharp
 // CustomerQualification is an enum
 // GCC validation is type ValidationCode
 
 var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
 ```
-
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
@@ -53,7 +50,6 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 |---------|---------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification?code={validationCode} HTTP/1.1 |
 
-
 ### URI parameter
 
 Use the following query parameter to update the qualification.
@@ -62,7 +58,6 @@ Use the following query parameter to update the qualification.
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes      | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **validationCode**     | int  | No       | Only needed for Government Community Cloud.                                                                                                            |
-
 
 ### Request headers
 

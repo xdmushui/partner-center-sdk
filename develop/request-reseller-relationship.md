@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Retrieve a relationship request URL
 
-
 **Applies To**
 
 - Partner Center
@@ -21,11 +20,9 @@ How to retrieve a relationship request URL to send to a customer.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve a relationship request URL, first use [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Next, use the [**RelationshipRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.relationshiprequest) property to get an interface to customer relationship request operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.getasync) method to retrieve the URL.
 
@@ -39,14 +36,11 @@ var customerRelationshipRequest = partnerOperations.Customers.RelationshipReques
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                            |
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/relationshiprequests HTTP/1.1 |
-
- 
 
 ### Request headers
 
@@ -71,7 +65,6 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response contains the [RelationshipRequest](relationships-resources.md#relationshiprequest) object.
 
 ### Response success and error codes
@@ -89,7 +82,7 @@ MS-RequestId: ee519026-4c67-4113-bec7-a38aca621bf0
 MS-CV: jbYZRWjU3E262f8o.0
 MS-ServerId: 030020643
 Date: Fri, 19 May 2017 22:32:07 GMT
-﻿
+
 {
     "url": "https://portal.office.com/partner/partnersignup.aspx?type=ResellerRelationship&id=3b33e682-00c3-41ee-9dd2-a548adf56438&csp=1&msppid=0",
     "attributes": {
@@ -97,11 +90,3 @@ Date: Fri, 19 May 2017 22:32:07 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

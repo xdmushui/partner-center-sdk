@@ -52,7 +52,7 @@ The following overview documents and sample code describe how partners can imple
 
 ## REST
 
-To to make REST calls with the Secure Application Model framework with sample code, you must do the following:
+To to make REST calls with the Secure Application Model framework with sample code, follow these steps:
 
 1. [Create a web app](#create-a-web-app)
 2. [Get an authorization code](#get-authorization-code)

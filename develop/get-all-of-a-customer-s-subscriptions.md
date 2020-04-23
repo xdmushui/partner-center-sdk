@@ -53,7 +53,6 @@ This table lists the required query parameter to get all the subscriptions.
 |--------------------|--------|----------|-------------------------------------------------------|
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
-
 ### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
@@ -75,7 +74,6 @@ Connection: Keep-Alive
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, this method returns a collection of [Subscription](subscription-resources.md) resources in the response body.
 
 ### Response success and error codes
@@ -95,7 +93,7 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
 {
     "totalCount": 37,
     "items": [{
-        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de", 
+        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de",
         "entitlementId": "a356ac8c-e310-44f4-bf85-C7f29044af99",
         "friendlyName": "nickname",
         "quantity": 1,
@@ -130,11 +128,3 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

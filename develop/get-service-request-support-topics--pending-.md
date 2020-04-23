@@ -20,11 +20,9 @@ Gets a collection of items representing valid topics for service requests.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a collection of service request topics, use your [**IPartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) collection to retrieve the [**ServiceRequests**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.servicerequests) property of the resulting object, followed by the [**SupportTopics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.isupporttopicscollection) property and the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.isupporttopicscollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.isupporttopicscollection.getasync) methods.
 
@@ -36,14 +34,11 @@ ResourceCollection<SupportTopic> supportTopicsCollection = partnerOperations.Ser
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                           |
 |---------|---------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/supporttopics HTTP/1.1 |
-
- 
 
 ### Request headers
 
@@ -65,7 +60,6 @@ X-Locale: en-US
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a collection of the valid topics for a support request.
 

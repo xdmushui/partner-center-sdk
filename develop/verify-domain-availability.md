@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Verify domain availability
 
-
 **Applies To**
 
 - Partner Center
@@ -22,18 +21,16 @@ How to determine if a domain is available for use.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A domain (e.g. "contoso.onmicrosoft.com").
 
 ## <span id="C_"/><span id="c_"/>C#
 
-
 To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// const string domain = "contoso.onmicrosoft.com";  
+// const string domain = "contoso.onmicrosoft.com";
 
 bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 ```
@@ -42,14 +39,11 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method   | Request URI                                                              |
 |----------|--------------------------------------------------------------------------|
 | **HEAD** | [*{baseURL}*](partner-center-rest-urls.md)/v1/domains/{domain} HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -58,8 +52,6 @@ Use the following query parameter to verify domain availability.
 | Name       | Type       | Required | Description                                   |
 |------------|------------|----------|-----------------------------------------------|
 | **domain** | **string** | Y        | A string that identifies the domain to check. |
-
- 
 
 ### Request headers
 
@@ -83,7 +75,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If the domain exists it is not available for use and a response status code 200 OK is returned. If the domain is not found it is available for use and a response status code 404 Not Found is returned.
 
@@ -114,11 +105,3 @@ MS-CV: RRmc+bEw9U2e97CC.0
 MS-ServerId: 202010406
 Date: Tue, 31 Jan 2017 22:36:01 GMT
 ```
-
- 
-
- 
-
-
-
-

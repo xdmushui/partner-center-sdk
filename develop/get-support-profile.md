@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get support profile
 
-
 **Applies To**
 
 - Partner Center

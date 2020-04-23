@@ -21,7 +21,6 @@ How to get a list of subscriptions provided by a given partner to a specified cu
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 - A partner Microsoft Partner Network (MPN) identifier.
@@ -85,8 +84,6 @@ Use the following path and query parameters to identify the customer and partner
 |-------------|--------|----------|-------------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer.       |
 | mpn-id      | int    | Yes      | A Microsoft Partner Network ID that identifies the partner. |
-
- 
 ### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.

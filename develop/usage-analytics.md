@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Analytics
 
-
 **Applies To**
 
  - Partner Center
@@ -25,9 +24,9 @@ You can use the Partner Center SDK and APIs to programmatically retrieve analyti
 - [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)
 - [Get all referrals analytics information](get-all-referrals-analytics.md)
 - [Get all search analytics information](get-all-search-analytics.md)
-- [Get all subscription analytics information](get-all-subscription-analytics.md)  
-- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)  
-- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)  
+- [Get all subscription analytics information](get-all-subscription-analytics.md)
+- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)
+- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)
 - [Get customer licenses deployment information](get-customer-licenses-deployment-information.md)
 - [Get customer licenses usage information](get-customer-licenses-usage-information.md)
 - [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)

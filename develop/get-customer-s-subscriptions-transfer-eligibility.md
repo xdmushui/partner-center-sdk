@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 
 # Get a customer's subscriptions transfer eligibility
 
-
 **Applies To**
 
 - Partner Center
@@ -21,21 +20,16 @@ How to get a collection of a customer's subscriptions that are eligible/ineligib
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 
-
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/transferseligibility?transferType={transfer-type} HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -45,8 +39,6 @@ This table lists the required query parameter to get all the subscriptions.
 |--------------------|--------|----------|-------------------------------------------------------|
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 | transfer-type      | string | Yes      | The type of transfer that is intended.                |
-
- 
 
 ### Request headers
 
@@ -68,7 +60,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a collection of [TransferEligibility](transfer-eligibility-resources.md) resources in the response body.
 
@@ -112,11 +103,3 @@ Date: Tue, 24 Mar 2020 23:43:25 GMT
   }
 ]
 ```
-
- 
-
- 
-
-
-
-

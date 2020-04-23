@@ -37,14 +37,11 @@ var billingProfile = partnerOperations.Profiles.LegalBusinessProfile.Get();
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                    |
 |---------|--------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/legalbusiness HTTP/1.1 |
-
- 
 
 ### Request headers
 

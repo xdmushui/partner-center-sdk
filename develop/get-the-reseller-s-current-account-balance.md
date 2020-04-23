@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get the partner's current account balance
 
-
 **Applies To**
 
 - Partner Center
@@ -22,11 +21,9 @@ Retrieves the partner's current account balance. A summary of the balance and to
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve your account balance, use your **IAggregatePartner.Invoices** collection, and then call the **Summary** property. Then call the **Get** function, and finally call the **BalanceAmount** property.
 
@@ -42,14 +39,11 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                              |
 |---------|--------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summary HTTP/1.1  |
-
- 
 
 ### Request headers
 
@@ -71,7 +65,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
 
 If successful, this method returns an [InvoiceSummary](invoice-resources.md#invoicesummary) resource in the response.
 

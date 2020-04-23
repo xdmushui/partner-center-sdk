@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get the managed services for a customer by ID
 
-
 **Applies To**
 
 - Partner Center
@@ -21,12 +20,10 @@ Gets the managed services for a customer. In other words, get links to all of th
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To display a list of all the managed services for a customer, use your **IAggregatePartner.Customers** collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ManagedServices**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.managedservices) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.getasync) methods.
 
@@ -41,14 +38,11 @@ ResourceCollection<ManagedService> managedServices = partnerOperations.Customers
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/managedservices HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -57,8 +51,6 @@ Use the following query parameter to get the customer's managed services.
 | Name                   | Type     | Required | Description                           |
 |------------------------|----------|----------|---------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
-
- 
 
 ### Request headers
 

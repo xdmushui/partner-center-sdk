@@ -71,7 +71,7 @@ As part of managing the lifecycle of your catalog items in Partner Center, you c
 
 ## Invoice and reconciliation
 
-The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for catalog items.  
+The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for catalog items.
 
 ### Balance and payment​
 

@@ -17,22 +17,19 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
-The Analytics API allows you to programmatically access data that is being presented in the User Experience. 
+The Analytics API allows you to programmatically access data that is being presented in the User Experience.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). These scenarios support authentication with User credentials only.
-
 
 ## <span id="Azure_Usage_Analytics"/><span id="azure_usage_analytics"/><span id="AZURE_USAGE_ANALYTICS"/>CSP program: Azure usage analytics
 
-The following scenario shows you how to use the Analytics API to retrieve all your Partner Center Azure usage analytics information.  
+The following scenario shows you how to use the Analytics API to retrieve all your Partner Center Azure usage analytics information.
 
-- [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)  
+- [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
 
-This scenario returns your analytics information in a collection of [Azure usage](#azure_usage) resources. 
+This scenario returns your analytics information in a collection of [Azure usage](#azure_usage) resources.
 
 ## <span id="Azure_Usage"/><span id="azure_usage"/><span id="AZURE_USAGE"/>Azure usage resource
 
@@ -48,21 +45,19 @@ Represents all of the analytical data for Azure usage.
 | resourceLocation | string | The location of the data center, Western Europe, for example. |
 | meterCategory | string | The meter category, data management, for example. |
 | meterSubcategory | string | The meter subcategory, for example, geo redundant. |
-| meterUnit | string | The meter unit, such as gigabytes or hours. | 
+| meterUnit | string | The meter unit, such as gigabytes or hours. |
 | reservationOrderId | string | The reservation order for an Azure VM Reserved Instance. |
 | reservationId | string | Reserved instances under a specific RI order. |
 | serviceType | string | Indicates the virtual machine type. For example, Standard_E4s_v3. |
 | quantity | long | Indicates the numbers used in the meter unit. |
 
-
 ## <span id="Indirect_Resellers_Analytics"/><span id="indirect_resellers_analytics"/><span id="INDIRECT_RESELLERS_ANALYTICS"/>CSP program: indirect resellers analytics
 
-The following scenario shows you how to use the Analytics API to retrieve all your Partner Center indirect resellers analytics information.  
+The following scenario shows you how to use the Analytics API to retrieve all your Partner Center indirect resellers analytics information.
 
-- [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)  
+- [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)
 
-This scenario returns your analytics information in a collection of [indirect resellers](#indirect_resellers) resources. 
-
+This scenario returns your analytics information in a collection of [indirect resellers](#indirect_resellers) resources.
 
 ## <span id="Indirect_Resellers"/><span id="indirect_resellers"/><span id="IDIRECT_RESELLERS"/>Indirect resellers resource
 
@@ -86,23 +81,19 @@ Represents all of the analytical data for indirect resellers.
 | licenseCount | double | License count for all value added resellers |
 | indirectResellerCount | double | Indirect resellers count |
 
-
 ## <span id="Subscription_Analytics"/><span id="subscription_analytics"/><span id="SUBSCRIPTION_ANALYTICS"/>CSP program: subscription analytics
 
-The following scenarios show you how to use the Analytics API to retrieve all your Partner Center subscription analytics information, filter it with a search query, or group it by dates or terms.  
+The following scenarios show you how to use the Analytics API to retrieve all your Partner Center subscription analytics information, filter it with a search query, or group it by dates or terms.
 
-- [Get all subscription analytics information](get-all-subscription-analytics.md)  
-- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)  
-- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)  
+- [Get all subscription analytics information](get-all-subscription-analytics.md)
+- [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)
+- [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)
 
-All of these scenarios return your analytics information in a collection of [Subscription](#subscription) resources. 
-
+All of these scenarios return your analytics information in a collection of [Subscription](#subscription) resources.
 
 ## <span id="Subscription"/><span id="subscription"/><span id="SUBSCRIPTION"/>Subscription resource
 
-
 Represents all of the analytical data for a subscription.
-
 
 |         Property          |              Type              |                                                                      Description                                                                       |
 |---------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -132,22 +123,21 @@ Represents all of the analytical data for a subscription.
 
 ## <span id="Search_Analytics"/><span id="search_analytics"/><span id="SEARCH_ANALYTICS"/>Search analytics
 
-> [!NOTE]  
+> [!NOTE]
 > CSP program membership is not required to get search analytics.
 
-The following scenario shows you how to use the Analytics API to retrieve all your Partner Center search analytics information.  
+The following scenario shows you how to use the Analytics API to retrieve all your Partner Center search analytics information.
 
-- [Get all search analytics information](get-all-search-analytics.md)  
+- [Get all search analytics information](get-all-search-analytics.md)
 
-This scenario returns your analytics information in a collection of [Search](#search_resource) resources. 
-
+This scenario returns your analytics information in a collection of [Search](#search_resource) resources.
 
 ## <span id="Search_Resource"/><span id="search_resource"/><span id="SEARCH_RESOURCE"/>Search resource
 
 Represents all of the analytical data for a search.
 
-| Property | Type | Description |  
-|----------|------|-------------|  
+| Property | Type | Description |
+|----------|------|-------------|
 | companyName | string | The billing company name. |
 | contactButtonClicked | Boolean | Indicates if the contact button was clicked. |
 | keywordCountry | string | The country specified in the search. |
@@ -164,21 +154,19 @@ Represents all of the analytical data for a search.
 | referralCount | long | Number of referrals generated from the search. Part of a response only on aggregation.
 | profileViews | long | Number of times the partner profile was viewed. Part of a response only on aggregation.
 
-
 ## <span id="Referral_Analytics"/><span id="referral_analytics"/><span id="REFERRAL_ANALYTICS"/>Referrals analytics
 
-> [!NOTE]  
+> [!NOTE]
 > CSP program membership is not required to get referrals analytics.
 
-The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referrals analytics information.  
+The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referrals analytics information.
 
-- [Get all referrals analytics information](get-all-referrals-analytics.md)  
+- [Get all referrals analytics information](get-all-referrals-analytics.md)
 
-This scenario returns your analytics information in a collection of [Referrals](#referrals) resources. 
+This scenario returns your analytics information in a collection of [Referrals](#referrals) resources.
 
-> [!NOTE]  
-> Referrals analytics are not available to the Partner Center operated by 21Vianet. 
-
+> [!NOTE]
+> Referrals analytics are not available to the Partner Center operated by 21Vianet.
 
 ## <span id="Referrals"/><span id="referrals"/><span id="REFERRALS"/>Referrals resource
 
@@ -201,4 +189,4 @@ Represents all of the analytical data for a referral.
 | createdDate | string in UTC date time format | The date that the referral was created. |
 | skippedDate | string in UTC date time format | The date that the referral was skipped. |
 | wonDate | string in UTC date time format | The date that the referral was won. |
-| partnerMarket | string |  The country/region that the partner does business in. |  
+| partnerMarket | string |  The country/region that the partner does business in. |

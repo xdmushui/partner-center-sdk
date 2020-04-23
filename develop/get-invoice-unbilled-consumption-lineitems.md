@@ -92,7 +92,7 @@ while (fetchNext)
             seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById("unbilled").By("onetime", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }
-}  
+}
 ```
 
 For a similar example, see:

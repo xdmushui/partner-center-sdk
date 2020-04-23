@@ -1,6 +1,6 @@
 ---
 title: Get subscription analytics by search query
-description: How to get subscription analytics information filtered by a search query. 
+description: How to get subscription analytics information filtered by a search query.
 ms.date: 05/10/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -37,12 +37,13 @@ Use the following required path parameter to identify your organization and filt
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | filter_string | string | Yes | The filter to apply to the subscription analytics. See the Filter syntax and Filter fields sections for the syntax, fields, and operators to use in this parameter. |
- 
+
 ### Filter syntax
 
-The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
+The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.
 
 An unencoded example looks like this:
+
 - String: ?filter=Field operator 'Value'
 - Boolean: ?filter=Field operator Value
 - Contains ?filter=contains(field,'value')
@@ -51,13 +52,13 @@ An unencoded example looks like this:
 
 The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
-The following are examples of filter strings:  
+The following are examples of filter strings:
 
 ```http
 autoRenewEnabled eq true
 
 autoRenewEnabled eq true and customerMarket eq 'US'
-```  
+```
 
 The following table shows a list of the supported fields and support operators for the filter parameter. String values must be surrounded by single quotes.
 
@@ -73,7 +74,7 @@ The following table shows a list of the supported fields and support operators f
 | autoRenewEnabled | eq,ne | A value indicating whether the subscription is renewed automatically. |
 | partnerId | eq,ne | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
 | friendlyName | contains | The name of the subscription. |
-| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| partnerName | string | Name of the partner for whom the subscription was purchased |
 | providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 | creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
 | effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
@@ -85,8 +86,7 @@ The following table shows a list of the supported fields and support operators f
 | deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
 
-
-### Request headers 
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
@@ -107,7 +107,6 @@ Content-Length: 0
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 
@@ -151,4 +150,4 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
 
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

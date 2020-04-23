@@ -1,7 +1,7 @@
 ---
 title: Update autorenew for a commercial marketplace subscription
 description: Update the autorenew property for a Subscription resource that matches the customer and subscription ID.
-ms.assetid: 
+
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 ---
 
 # Update autorenew for a commercial marketplace subscription
-
 
 **Applies To**
 
@@ -19,13 +18,11 @@ Update the autorenew property for a commercial marketplace [Subscription](subscr
 
 In the Partner Center dashboard, this operation is performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription that you wish to update. Finally, toggle the **Auto-renew** option, then select **Submit**.
 
-
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -43,7 +40,6 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
 
-
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 ### Request syntax
@@ -51,7 +47,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 | Method    | Request URI                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
- 
+
 ### URI parameter
 
 This table lists the required query parameter to suspend the subscription.
@@ -112,7 +108,6 @@ Connection: Keep-Alive
     "attributes": {"objectType": "Subscription"},
 }
 ```
-
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 

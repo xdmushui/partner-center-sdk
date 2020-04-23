@@ -18,9 +18,9 @@ ms.localizationpriority: medium
 
 Updates an [Order](order-resources.md) from monthly to annual billing or from annual to monthly billing.
 
-In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
+In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.
 
-**Out of scope** for this article:  
+**Out of scope** for this article:
 
 - Changing the billing cycle for trials
 - Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
@@ -74,10 +74,10 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orde
 
 This table lists the required query parameter to change the quantity of the subscription.
 
-| Name                   | Type | Required | Description                                                          |  
-|------------------------|------|----------|----------------------------------------------------------------------|  
-| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |  
-| **order-id**           | GUID |    Y     | The order identifier                                                 |  
+| Name                   | Type | Required | Description                                                          |
+|------------------------|------|----------|----------------------------------------------------------------------|
+| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |
+| **order-id**           | GUID |    Y     | The order identifier                                                 |
 
 ### Request headers
 

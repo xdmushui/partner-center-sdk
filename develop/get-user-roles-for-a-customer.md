@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get user roles for a customer
 
-
 **Applies To**
 
 - Partner Center
@@ -19,12 +18,10 @@ Get a list of all the roles/permissions attached to a user account. Variations i
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or <strong>GetAsync()</strong>method.
 
@@ -51,7 +48,6 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                                           |
@@ -59,8 +55,6 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id}/directoryroles HTTP/1.1 |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles HTTP/1.1                 |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers    |
-
- 
 
 ### URI parameter
 
@@ -71,8 +65,6 @@ Use the following query parameter to identify the correct customer.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller.                                                      |
 | **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                                                                            |
 | **role-id**            | **guid** | N        | The value is a GUID formatted **role-id** that belongs to a type of role. You can get these ids by querying all the directory roles for a customer, across all user accounts. (The second scenario, above). |
-
- 
 
 ### Request headers
 
@@ -91,7 +83,6 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, this method returns a list of the roles associated with the given user account.
 

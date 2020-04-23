@@ -7,7 +7,6 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-
 # Get a customer's qualification
 
 **Applies To**
@@ -16,12 +15,10 @@ ms.localizationpriority: medium
 
 How to get a customer's qualification.
 
-
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -34,7 +31,6 @@ To get a customer's qualification, call the [**IAggregatePartner.Customers.ById*
 var customerQualification = partnerOperations.Customers.ById(customerId).Qualification.Get();
 ```
 
-
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 ### Request syntax
@@ -43,7 +39,6 @@ var customerQualification = partnerOperations.Customers.ById(customerId).Qualifi
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/qualification HTTP/1.1 |
 
- 
 ### URI parameter
 
 This table lists the required query parameter to get all the qualification.
@@ -70,7 +65,6 @@ MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 ```
 
-
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
 If successful, this method returns a qualification value in the response body.  Below is an example of the **GET** call on a customer with the **education** qualification.
@@ -83,7 +77,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 
+Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68

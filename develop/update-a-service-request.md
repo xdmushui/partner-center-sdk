@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update a service request
 
-
 **Applies To**
 
 - Partner Center
@@ -23,12 +22,10 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A service request ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update a customer's service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method with the service request id to identify and return the service request interface. Then call the [**IServiceRequest.Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) or [**PatchAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) method to update the service request. To provide the updated values, create a new, empty [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object and set only the property values that you want to change. Then pass that object in the call to the Patch or PatchAsync method.
 
@@ -46,14 +43,11 @@ ServiceRequest updatedServiceRequest = partnerOperations.ServiceRequests.ById(ex
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method    | Request URI                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -62,8 +56,6 @@ Use the following URI parameter to update the service request.
 | Name                  | Type     | Required | Description                                 |
 |-----------------------|----------|----------|---------------------------------------------|
 | **servicerequest-id** | **guid** | Y        | A GUID that identifies the service request. |
-
- 
 
 ### Request headers
 
@@ -119,7 +111,6 @@ Expect: 100-continue
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, this method returns a **Service Request** resource with updated properties in the response body.
 
 ### Response success and error codes
@@ -165,11 +156,3 @@ Date: Mon, 09 Jan 2017 23:31:15 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

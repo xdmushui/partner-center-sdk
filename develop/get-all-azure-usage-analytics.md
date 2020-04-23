@@ -1,6 +1,6 @@
 ---
 title: Get all Azure usage analytics information
-description: How to get all the Azure usage analytics information. 
+description: How to get all the Azure usage analytics information.
 ms.assetid: CDBD04A4-BA34-49B8-9815-7C19253E6C70
 ms.date: 07/22/2019
 ms.service: partner-dashboard
@@ -17,24 +17,19 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
-How to get all the Azure usage analytics information for your customers. 
+How to get all the Azure usage analytics information for your customers.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 ### Request syntax
 
 | Method  | Request URI |
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -142,7 +137,7 @@ How to get all the Azure usage analytics information for your customers.
           <li>&quot;serviceType&quot;</li>
         </ul>
         <p>The <em>order</em> parameter is optional and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field, respectively. The default is &quot;asc&quot;.</p>
-        <p><strong>Example:</strong><br/> 
+        <p><strong>Example:</strong><br/>
           <code>...&orderby=meterCategory,meterUnit</code>
         </p>
       </td>
@@ -182,7 +177,6 @@ How to get all the Azure usage analytics information for your customers.
   </tbody>
 </table>
 
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.
@@ -202,7 +196,6 @@ Content-Length: 0
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
 
@@ -227,11 +220,10 @@ Each response comes with an HTTP status code that indicates success or failure a
   "reservationId": "",
   "consumptionMeterId": "",
   "serviceType": "",
-  "quantity": 20  
+  "quantity": 20
 }
 ```
 
-
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
-  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

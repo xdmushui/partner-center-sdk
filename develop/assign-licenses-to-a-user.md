@@ -38,7 +38,7 @@ Here are the steps to assign licenses through code:
     ```
 
 2. Populate the object properties as shown below. This code assumes that you already have the product SKU ID, and that all of the available service plans will be assigned (that is, none will be excluded).
-  
+
     ```csharp
     license.SkuId = selectedProductSkuId;
     license.ExcludedPlans = null;

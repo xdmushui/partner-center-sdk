@@ -35,7 +35,7 @@ To find a specific offer by ID, use your **IAggregatePartner.Offers** collection
 // string countryCode;
 // string offerId;
 
-// retrieve the offer 
+// retrieve the offer
 var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 ```
 

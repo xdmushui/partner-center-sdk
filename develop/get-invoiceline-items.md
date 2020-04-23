@@ -161,8 +161,6 @@ Use the following URI and query parameters when creating the request.
 | seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
 | hasPartnerEarnedCredit | bool | No | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when billing provider type is OneTime and InvoiceLineItemType is UsageLineItems. |
 
- 
-
 #### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
@@ -630,7 +628,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "subscriptionEndDate": "2019-02-02T19:53:55.1292512+00:00",
             "termAndBillingCycle": "1 Month Subscription",
             "alternateId": "1234278124b8",
-            "priceAdjustmentDescription": "[\"100.0% Tier 1 Discount\"]",            
+            "priceAdjustmentDescription": "[\"100.0% Tier 1 Discount\"]",
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",

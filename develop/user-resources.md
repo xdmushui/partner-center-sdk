@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # User resources
 
-
 **Applies To**
 
 - Partner Center
@@ -22,7 +21,6 @@ Describes an individual Partner Center user, their personal and account
 information, and the permissions they have within Partner Center.
 
 ## <span id="User"/><span id="user"/><span id="USER"/>User
-
 
 Describes an individual user.
 
@@ -42,10 +40,7 @@ Describes an individual user.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
- 
-
 ## <span id="CustomerUser"/><span id="customeruser"/><span id="CUSTOMERUSER"/>CustomerUser
-
 
 Describes a customer user.
 
@@ -67,10 +62,7 @@ Describes a customer user.
 | links                 | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links.                                                                                                                                                                                                        |
 | attributes            | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                                                                                                   |
 
- 
-
 ## <span id="UserCredentials"/><span id="usercredentials"/><span id="USERCREDENTIALS"/>UserCredentials
-
 
 Describes a user's login credentials.
 
@@ -79,10 +71,7 @@ Describes a user's login credentials.
 | userName | string                                             | The name of the user.                |
 | password | [SecureString](utility-resources.md#securestring) | The user's securely stored password. |
 
- 
-
 ## <span id="UserMember"/><span id="usermember"/><span id="USERMEMBER"/>UserMember
-
 
 Describes a user's member information.
 
@@ -93,13 +82,4 @@ Describes a user's member information.
 | roleId            | string                                                         | The identifier of the user's role. |
 | id                | string                                                         | The identifier of the member.      |
 | attributes        | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.           |
-
- 
-
- 
-
- 
-
-
-
 

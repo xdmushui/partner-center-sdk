@@ -1,6 +1,6 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement
-description: Confirm customer acceptance of the Microsoft Customer Agreement. 
+description: Confirm customer acceptance of the Microsoft Customer Agreement.
 ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -72,7 +72,6 @@ Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agree
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-
 ## REST request
 
 To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
@@ -102,9 +101,9 @@ For more information, see [Partner Center REST headers](headers.md).
 
 This table describes the required properties in the REST request body.
 
-| Name      | Type   | Description                                                                                  |  
-|-----------|--------|----------------------------------------------------------------------------------------------|  
-| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Customer Agreement. |  
+| Name      | Type   | Description                                                                                  |
+|-----------|--------|----------------------------------------------------------------------------------------------|
+| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Customer Agreement. |
 
 #### Agreement
 
@@ -116,7 +115,7 @@ This table describes the minimum required fields to create an [**Agreement** res
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
 | type           | string | Agreement type accepted by the customer. Use "MicrosoftCustomerAgreement" if customer accepted the Microsoft Customer Agreement. |
-  
+
 #### Request example
 
 ```http
@@ -144,7 +143,7 @@ If successful, this method returns an [**Agreement** resource](./agreement-resou
 
 #### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. 
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information.
 
 Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 

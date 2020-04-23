@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Relationships resources
 
-
 **Applies To**
 
 - Partner Center
@@ -18,7 +17,6 @@ ms.localizationpriority: medium
 Describes resources related to relationships.
 
 ## <span id="PartnerRelationship"/><span id="partnerrelationship"/><span id="PARTNERRELATIONSHIP"/>PartnerRelationship
-
 
 Represents a relationship between two partners.
 
@@ -32,10 +30,7 @@ Represents a relationship between two partners.
 | state            | string                                                         | The state of the relationship (e.g. "active").                                                                                                 |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                       |
 
- 
-
 ## <span id="RelationshipRequest"/><span id="relationshiprequest"/><span id="RELATIONSHIPREQUEST"/>RelationshipRequest
-
 
 Provides the URL by which a customer can establish a relationship with a
 partner.
@@ -44,13 +39,4 @@ partner.
 |------------|----------------------------------------------------------------|-------------------------------|
 | url        | string                                                         | The relationship request URL. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.      |
-
- 
-
- 
-
- 
-
-
-
 

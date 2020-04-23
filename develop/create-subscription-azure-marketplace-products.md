@@ -1,7 +1,7 @@
 ---
-title: Create a subscription for commercial marketplace products 
+title: Create a subscription for commercial marketplace products
 description: Developers can create and manage a subscription for commercial marketplace products using Partner Center APIs.
-ms.assetid: 
+
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -21,7 +21,7 @@ You can also [perform lifecycle management](#lifecycle-management) and [manage i
 ## Prerequisites
 
 * [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
-* The customer identifier. If you don't have a customer's identifier: sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
+* The customer identifier. If you don't have a customer's identifier, follow the steps in [Get a list of customers](get-a-list-of-customers.md). Alternatively, sign in to Partner Center, choose the customer from the list of customers, select **Account**, then save their **Microsoft ID**.
 
 ## Get a list of offers for a market
 
@@ -29,7 +29,7 @@ You can check the available offers for a market using the following Partner Cent
 
 * **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
 * **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
-* **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
+* **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency, or industry segment).
 
 Before you purchase an Azure reservation, complete the following steps:
 
@@ -55,7 +55,7 @@ Before you purchase an Azure reservation, complete the following steps:
 
 ## Create and submit an order
 
-To submit your Azure reservation order, do the following:
+To submit your Azure reservation order, follow these steps:
 
 1. [Create a cart](create-a-cart.md) to hold the collection of catalog items that you intend to buy. When you create a [cart](cart-resources.md#cart), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [order](order-resources.md#order). (You can also [update a cart](update-a-cart.md).)
 2. [Check out the cart](checkout-a-cart.md), which results in the creation of an [order](order-resources.md#order).
@@ -69,7 +69,7 @@ You can [retrieve the details of an individual order using the order ID](get-an-
 
 ## Get activation link
 
-The partner or customer must activate subscriptions to Azure Markeplace products. You can [get an activation link by order line item](get-activation-link-by-order-line-item.md). You can also [get a subscription by ID](get-a-subscription-by-id.md), then enumerate its **Links** property to create an activation link.
+The partner or customer must activate subscriptions to Azure Marketplace products. You can [get an activation link by order line item](get-activation-link-by-order-line-item.md). You can also [get a subscription by ID](get-a-subscription-by-id.md), then enumerate its **Links** property to create an activation link.
 
 ## Lifecycle management
 

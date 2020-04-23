@@ -21,7 +21,6 @@ How to get the subscription provisioning status for a customer subscription.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer identifier.
 - A subscription identifier.
@@ -29,13 +28,12 @@ How to get the subscription provisioning status for a customer subscription.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-
 To get the provisioning status of a subscription, begin by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the subscription ID. Next, use the [**ProvisioningStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.provisioningstatus) property to obtain an interface to the current subscription's provisioning status operations, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionprovisioningstatus.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionprovisioningstatus.getasync) method to retrieve the [**SubscriptionProvisioningStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionprovisioningstatus) object.
 
 ``` csharp
 // IAggregatePartner partnerOperations.
 // string customerId;
-// string subscriptionId; 
+// string subscriptionId;
 
 // Retrieve a subscription's provisioning status.
 var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionID).ProvisioningStatus.Get();
@@ -43,14 +41,11 @@ var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscripti
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                                                        |
 |---------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/provisioningstatus HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -60,8 +55,6 @@ Use the following path parameters to identify the customer and subscription.
 |-----------------|--------|----------|-----------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.     |
 | subscription-id | string | Yes      | A GUID formatted string that identifies the subscription. |
-
- 
 
 ### Request headers
 
@@ -84,7 +77,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response body contains a [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) resource.
 

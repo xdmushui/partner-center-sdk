@@ -1,6 +1,6 @@
 ---
 title: Products resources
-description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.  
+description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
 ms.date: 04/01/2019
 ms.service: partner-dashboard
@@ -10,16 +10,13 @@ ms.localizationpriority: medium
 
 # Products resources
 
-
 **Applies To**
 
 - Partner Center
 
-Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.   
-
+Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 
 ## Product
-
 
 Represents a purchasable good or service. A product by itself is not a purchasable item.
 
@@ -33,10 +30,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 | publisherName      | string                        | The name of the product's publisher if available.                          |
 | links              | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
 
-
-
 ## ItemType
-
 
 Represents the type of a product.
 
@@ -46,10 +40,7 @@ Represents the type of a product.
 | displayName     | string                        | The display name for this type.                                                      |
 | subType         | [ItemType](#itemtype)         | Optional. An object that describes a sub-type categorization for this item type.     |
 
- 
-
 ## ProductLinks
-
 
 Contains a list of links for a [Product](#product).
 
@@ -58,12 +49,9 @@ Contains a list of links for a [Product](#product).
 | skus            | [Link](utility-resources.md#link)                             | The link for accessing the underlying SKUs.          |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
 
-
-
 ## Sku
 
-
-Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product. 
+Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
 
 | Property               | Type             | Description                                                                           |
 |------------------------|------------------|---------------------------------------------------------------------------------------|
@@ -81,11 +69,9 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
-
-
 ## Availability
 
-Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
+Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
 | Property        | Type												| Description                                                                         |
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -103,10 +89,9 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
-
 ## Term
 
-Represents a term for which the availability can be purchased. 
+Represents a term for which the availability can be purchased.
 
 | Property              | Type																				| Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -115,7 +100,7 @@ Represents a term for which the availability can be purchased.
 
 ## InventoryCheckRequest
 
-Represents a request to check inventory against certain catalog items. 
+Represents a request to check inventory against certain catalog items.
 
 | Property         | Type                                                | Description                                                                                 |
 |------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------|
@@ -123,11 +108,9 @@ Represents a request to check inventory against certain catalog items.
 | inventoryContext | key/value pairs                                     | The dictionary of context values that are needed to carry out the inventory check(s). Each [SKU](#sku) of the products will define which values (if any) are needed to carry out this operation.  |
 | links            | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the inventory check request.                            |
 
-
-
 ## InventoryItem
 
-Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
+Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.
 
 | Property         | Type                                                              | Description                                                                      |
 |------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -135,8 +118,6 @@ Represents a single item in an inventory check operation. This resource is used 
 | skuId            | string                                                            | The ID of the [SKU](#sku). When using this resource as input to an inventory request, this value is optional. If this value is not provided, then all SKUs under the product will be considered as target items of the inventory check operation.      |
 | isRestricted     | bool                                                              | Indicates whether this item was found to have a restricted inventory.            |
 | restrictions     | array of [InventoryRestriction](#inventoryrestriction)            | The details of any restrictions that are found for this item. This property will only be populated if **isRestricted** = "true". |
-
-
 
 ## InventoryRestriction
 
@@ -147,8 +128,6 @@ Represents the details of an inventory restriction. This is only applicable for 
 | reasonCode       | string                | The code that identifies the reason for the restriction.                                    |
 | description      | string                | The description of the inventory restriction.                                               |
 | properties       | key/value pairs       | The dictionary of properties that may provide further details on the restriction.           |
-
-
 
 ## BillingCycleType
 

@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Managed service resources
 
-
 **Applies To**
 
 - Partner Center
@@ -24,7 +23,6 @@ on the behalf of their managed services.
 
 ## <span id="ManagedService"/><span id="managedservice"/><span id="MANAGEDSERVICE"/>ManagedService
 
-
 Describes a managed service.
 
 | Property   | Type                | Description                                              |
@@ -35,10 +33,7 @@ Describes a managed service.
 | Links      | ManagedServiceLinks | The resource links corresponding to the managed service. |
 | Attributes | ResourceAttributes  | The metadata attributes corresponding to the agreement.  |
 
- 
-
 ## <span id="ManagedServiceLinks"/><span id="managedservicelinks"/><span id="MANAGEDSERVICELINKS"/>ManagedServiceLinks
-
 
 Contains the links that allow the partner with delegated admin
 permissions to provide support for the service.
@@ -51,13 +46,4 @@ permissions to provide support for the service.
 | Self          | Link | The self URI.               |
 | Next          | Link | The next page of items.     |
 | Previous      | Link | The previous page of items. |
-
- 
-
- 
-
- 
-
-
-
 

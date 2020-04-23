@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a list of offers for a market
 
-
 **Applies To**
 
 - Partner Center
@@ -65,7 +64,7 @@ None.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers?country=<country-id> HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533

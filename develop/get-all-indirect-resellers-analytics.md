@@ -1,6 +1,6 @@
 ---
 title: Get all indirect resellers analytics information
-description: How to get all the indirect resellers analytics information. 
+description: How to get all the indirect resellers analytics information.
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
 ms.date: 07/22/2019
 ms.service: partner-dashboard
@@ -17,24 +17,19 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
-How to get all the indirect resellers analytics information for your customers. 
+How to get all the indirect resellers analytics information for your customers.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 ### Request syntax
 
 | Method  | Request URI |
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -171,25 +166,25 @@ How to get all the indirect resellers analytics information for your customers.
 		<td>
 			<p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
 			<ul>
-                <li>&quot;partnerTenantId&quot;</li> 
-                <li>&quot;id&quot;</li> 
-                <li>&quot;name&quot;</li> 
-                <li>&quot;market&quot;</li> 
-                <li>&quot;firstSubscriptionCreationDate&quot;</li> 
-                <li>&quot;latestSubscriptionCreationDate&quot;</li> 
-                <li>&quot;firstSubscriptionEndDate&quot;</li> 
-                <li>&quot;latestSubscriptionEndDate&quot;</li> 
-                <li>&quot;firstSubscriptionSuspendedDate&quot;</li> 
-                <li>&quot;latestSubscriptionSuspendedDate&quot;</li> 
-                <li>&quot;firstSubscriptionDeprovisionedDate&quot;</li> 
+                <li>&quot;partnerTenantId&quot;</li>
+                <li>&quot;id&quot;</li>
+                <li>&quot;name&quot;</li>
+                <li>&quot;market&quot;</li>
+                <li>&quot;firstSubscriptionCreationDate&quot;</li>
+                <li>&quot;latestSubscriptionCreationDate&quot;</li>
+                <li>&quot;firstSubscriptionEndDate&quot;</li>
+                <li>&quot;latestSubscriptionEndDate&quot;</li>
+                <li>&quot;firstSubscriptionSuspendedDate&quot;</li>
+                <li>&quot;latestSubscriptionSuspendedDate&quot;</li>
+                <li>&quot;firstSubscriptionDeprovisionedDate&quot;</li>
                 <li>&quot;latestSubscriptionDeprovisionedDate&quot;</li>
-                <li>&quot;subscriptionCount&quot;</li> 
+                <li>&quot;subscriptionCount&quot;</li>
                 <li>&quot;licenseCount&quot;</li>
 			</ul>
             <p>The <em>order</em> parameter is optional, and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field. The default is &quot;asc&quot;.</p>
-			<p><strong>Example:</strong></br> 
+			<p><strong>Example:</strong></br>
 				<code>...&orderby=market,subscriptionCount</code>
-			</p> 
+			</p>
 		</td>
 	</tr>
 	<tr>
@@ -225,7 +220,6 @@ How to get all the indirect resellers analytics information for your customers.
 	</tr>
 </tbody>
 </table>
- 
 
 ### Request headers
 
@@ -247,7 +241,6 @@ Content-Length: 0
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#indirect_resellers) resources.
 
 ### Response success and error codes
@@ -257,24 +250,23 @@ Each response comes with an HTTP status code that indicates success or failure a
 ### Response example
 
 ```http
-{ 
-    "partnerTenantId": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE", 
-    "id": "1111111", 
-    "name": "RESELLER NAME", 
-    "market": "US", 
-    "firstSubscriptionCreationDate": "2016-10-18T19:16:25.107", 
-    "latestSubscriptionCreationDate": "2016-10-18T19:16:25.107", 
-    "firstSubscriptionEndDate": "2018-11-07T00:00:00", 
-    "latestSubscriptionEndDate": "2018-11-07T00:00:00", 
-    "firstSubscriptionSuspendedDate": "0001-01-01T00:00:00", 
-    "latestSubscriptionSuspendedDate": "0001-01-01T00:00:00", 
-    "firstSubscriptionDeprovisionedDate": "0001-01-01T00:00:00", 
-    "latestSubscriptionDeprovisionedEndDate": "0001-01-01T00:00:00", 
-    "subscriptionCount": 10, 
-    "licenseCount": 20 
+{
+    "partnerTenantId": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE",
+    "id": "1111111",
+    "name": "RESELLER NAME",
+    "market": "US",
+    "firstSubscriptionCreationDate": "2016-10-18T19:16:25.107",
+    "latestSubscriptionCreationDate": "2016-10-18T19:16:25.107",
+    "firstSubscriptionEndDate": "2018-11-07T00:00:00",
+    "latestSubscriptionEndDate": "2018-11-07T00:00:00",
+    "firstSubscriptionSuspendedDate": "0001-01-01T00:00:00",
+    "latestSubscriptionSuspendedDate": "0001-01-01T00:00:00",
+    "firstSubscriptionDeprovisionedDate": "0001-01-01T00:00:00",
+    "latestSubscriptionDeprovisionedEndDate": "0001-01-01T00:00:00",
+    "subscriptionCount": 10,
+    "licenseCount": 20
 }
 ```
-
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

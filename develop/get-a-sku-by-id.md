@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a SKU by ID
 
-
 **Applies To**
 
 - Partner Center
@@ -19,21 +18,18 @@ Gets a SKU for the specified product using the specified SKU ID.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID. 
-- A SKU ID. 
-
+- A product ID.
+- A SKU ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get the details of a specific SKU, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Pass the SKU ID to the **ById()** method, and call **Get()** or **GetAsync()** to retrieve the SKU details.
 
 ``` csharp
 IAggregatePartner partnerOperations;
 string countryCode;
-string productId; 
+string productId;
 string skuId;
 
 // Get the SKU details.
@@ -42,14 +38,11 @@ var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                                         |
 |---------|---------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
-
- 
 
 ### URI parameter
 
@@ -60,8 +53,6 @@ Use the following path and query parameters to get a SKU for the specified produ
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
-
- 
 
 ### Request headers
 
@@ -87,7 +78,6 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response body contains a [SKU](product-resources.md#sku) resource.
 
 ### Response success and error codes
@@ -100,7 +90,6 @@ This method returns the following error codes:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                                                    |
 | 404                  | 400018       | Sku was not found.                                                                                        |
-
 
 ### Response example
 
@@ -164,4 +153,3 @@ Content-Length: 1108
     }
 }
 ```
-

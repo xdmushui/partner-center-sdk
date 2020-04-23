@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Manage billing
 
-
 **Applies To**
 
 - Partner Center
@@ -34,7 +33,7 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get invoice by ID](get-invoice-by-id.md)
 - [Get invoice line items](get-invoiceline-items.md)
 - [Get invoice receipt statement](get-invoice-receipt-statement.md)
-- [Get invoice statement](get-invoice-statement.md) 
+- [Get invoice statement](get-invoice-statement.md)
 - [Get invoice summaries](get-invoice-summaries.md)
 - [Get invoice unbilled commercial marketplace consumption line items](get-invoice-unbilled-consumption-lineitems.md)
 - [Get invoice unbilled recon line items](get-invoice-unbilled-recon-lineitems.md)
@@ -45,11 +44,3 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get usage summary for all of a customer's subscriptions](get-a-customer-usage-summary.md)
 
 For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
-
- 
-
- 
-
-
-
-

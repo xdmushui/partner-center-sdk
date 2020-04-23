@@ -7,7 +7,6 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-
 # Get a partner's validation codes
 
 **Applies To**
@@ -16,15 +15,13 @@ ms.localizationpriority: medium
 
 How to get a collection of a partner's Government Community Cloud validation codes. A validation code is required to create a customer in the government community cloud.
 
-If you are interested in having your organization or your customers organization approved for Office 365 Government GCC for CSP, please see [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria](https://docs.microsoft.com/partner-center/csp-gcc-validate).  
-
+If you are interested in having your organization or your customers organization approved for Office 365 Government GCC for CSP, please see [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria](https://docs.microsoft.com/partner-center/csp-gcc-validate).
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - Confirmed validation after filling out form [here](https://products.office.com/government/eligibility-validation?ReqType=CSPPartner).
 - A customer without a qualification.
-
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -37,7 +34,6 @@ IAggregatePartner partnerOperations = PartnerService.Instance.CreatePartnerOpera
 var gccValidations = partnerOperations.Validations.GetValidationCodes();
 ```
 
-
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 ### Request syntax
@@ -45,7 +41,6 @@ var gccValidations = partnerOperations.Validations.GetValidationCodes();
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/all/validations HTTP/1.1 |
-
 
 ### Request headers
 
@@ -64,7 +59,6 @@ Accept: application/json
 MS-CorrelationId: 283b9b70-963a-4159-9920-f2bdf7ab7fce
 MS-RequestId: 7266f5f6-30ca-4672-9eb6-6c9d6dd0e9d3
 ```
-
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 

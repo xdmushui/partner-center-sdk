@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a subscription by ID
 
-
 **Applies To**
 
 - Partner Center
@@ -22,13 +21,11 @@ Gets a [Subscription](subscription-resources.md) resource that matches the custo
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription. Use that [**interface**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get).
 
@@ -44,14 +41,11 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                                                |
 |---------|----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -61,8 +55,6 @@ This table lists the required query parameters to get the subscription.
 |-------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
-
- 
 
 ### Request headers
 
@@ -76,7 +68,7 @@ None.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/A356AC8C-E310-44F4-BF85-C7F29044AF99 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 8f489776-a3f3-47cb-91c3-538e1f70f560
 MS-CorrelationId: e72e1dc3-4abd-4ce0-908b-d23fdaedcb28
@@ -85,7 +77,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a [Subscription](subscription-resources.md) resource in the response body.
 
@@ -106,7 +97,7 @@ MS-ServerId: 202010406
 Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 {
-    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99", 
+    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99",
     "entitlementId": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",
     "offerId": "MS-AZR-0145P",
     "offerName": "Microsoft Azure",
@@ -193,11 +184,3 @@ Date: Fri, 27 Jan 2017 00:12:53 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

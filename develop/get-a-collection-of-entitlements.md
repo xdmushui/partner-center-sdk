@@ -23,7 +23,6 @@ How to get a collection of entitlements.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-
 To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement-resources.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
 ``` csharp
@@ -167,10 +166,10 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
   "attributes": {
     "objectType": "Collection"
   }
-}  
+}
 ```
 
-## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples   
+## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples
 
 The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
 
@@ -191,7 +190,7 @@ Accept: application/json
 MS-RequestId: 6517a410-67ce-4995-9bb7-116a52179f92
 MS-CorrelationId: d9eb8194-9b99-4057-a2fe-98bdf05f013c
 X-Locale: en-US
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 ```
 
 ### Response example
@@ -309,7 +308,6 @@ To retrieve more details related to the virtual machine reservations from an ent
 ``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("VirtualMachineReservedInstance").Get();
 
-
 ((VirtualMachineReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.VirtualMachineReservedInstance)).Link.InvokeAsync<VirtualMachineReservedInstanceArtifactDetails>(partnerOperations)
 ```
 
@@ -322,7 +320,7 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 ```
 
 ### Response example
@@ -353,14 +351,14 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 }
 ```
 
-### <span id="ReservationExample_SDK_1.9"/><span id="reservationexample_sdk_1.9"/><span id="RESERVATIONEXAMPLE_SDK_1.9"/>Retrieve reservation details from an entitlement by using SDK V1.9  
+### <span id="ReservationExample_SDK_1.9"/><span id="reservationexample_sdk_1.9"/><span id="RESERVATIONEXAMPLE_SDK_1.9"/>Retrieve reservation details from an entitlement by using SDK V1.9
 
 ### C# example
 
 To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
 
 ``` csharp
-ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("ReservedInstance").Get();  
+ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("ReservedInstance").Get();
 
 ((ReservedInstanceArtifact)entitlements.First().EntitledArtifacts.First(x => x.Type == ArtifactType.ReservedInstance)).Link.InvokeAsync<ReservedInstanceArtifactDetails>(partnerOperations);
 ```

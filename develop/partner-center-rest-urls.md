@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Partner Center REST URLs
 
-
 **Applies To**
 
 - Partner Center
@@ -50,17 +49,6 @@ versions of Partner Center:
 </tbody>
 </table>
 
- 
-
 >[!NOTE]
->The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.   
-
- 
-
- 
-
- 
-
-
-
+>The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.
 

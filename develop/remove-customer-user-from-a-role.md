@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Remove a customer user from a role
 
-
 **Applies To**
 
 - Partner Center
@@ -19,12 +18,10 @@ How to remove a user from a directory role within a customer account.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To remove a user from a directory role, select the customer with the user to modify with a call to the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, From there, specify the role using the [**DirectoryRoles.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.idirectoryrolecollection.byid) method with the directory role ID. Then, access the [**UserMembers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermembercollection.byid) method to identify the user to remove, and the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermember.delete) method to remove the user from the role.
 
@@ -41,14 +38,11 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method     | Request URI                                                                                                                           |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers/{user-ID} HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -59,8 +53,6 @@ Use the following URI parameters to identify the correct customer, role and user
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
 | **role-id**            | **guid** | Y        | The value is a GUID formatted **role-id** that identifies the role.                |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that identifies a single user account.   |
-
- 
 
 ### Request headers
 
@@ -81,11 +73,10 @@ MS-CorrelationId: 87d18a45-81fc-40cf-921a-b91cb82d67fe
 X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 Content-Length: 0
-Connection: Keep-Alive  
+Connection: Keep-Alive
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If the user is removed from the role successfully, the response body is empty.
 
@@ -104,11 +95,3 @@ MS-CV: es01VX8do0u2aTXw.0
 MS-ServerId: 101112616
 Date: Tue, 20 Dec 2016 23:16:35 GMT
 ```
-
- 
-
- 
-
-
-
-

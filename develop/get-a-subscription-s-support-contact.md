@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a subscription's support contact
 
-
 **Applies To**
 
 - Partner Center
@@ -21,20 +20,18 @@ How to get a subscription's support contact.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer identifier.
 - A subscription identifier.
 
 ## <span id="C_"/><span id="c_"/>C#
 
-
 To get a subscription's support contact, start by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the subscription ID. Next, use the [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.supportcontact) property to obtain an interface to support contact operations, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) method to retrieve the [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.supportcontact) object.
 
 ``` csharp
 // IAggregatePartner partnerOperations.
 // string customerId;
-// string subscriptionId; 
+// string subscriptionId;
 
 // Retrieve subscription's support contact.
 var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId).SupportContact.Get();
@@ -44,14 +41,11 @@ var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/supportcontact HTTP/1.1 |
-
- 
 
 ### URI parameter
 
@@ -61,8 +55,6 @@ Use the following path parameters to identify the customer and subscription.
 |-----------------|--------|----------|-----------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.           |
 | subscription-id | string | Yes      | A GUID formatted string that identifies the trial subscription. |
-
- 
 
 ### Request headers
 
@@ -85,7 +77,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
 
 If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.
 
@@ -121,11 +112,3 @@ Date: Tue, 20 Jun 2017 19:30:19 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

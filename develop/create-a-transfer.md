@@ -16,7 +16,6 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
@@ -76,8 +75,6 @@ This table describes the [TransferLineItem](transfer-entity-resources.md#transfe
 | addonItems           | List of **TransferLineItem** objects | No | A collection of transferEntity line items for addons that will be transferred along with the base subscription that is being transferred. Applied upon successful creation of the transferEntity.|
 | transferError        | string                     | No       | Applied after transferEntity is accepted in case of an error.                                        |
 | status               | string                     | No       | The status of the lineitem in the transferEntity.                                                    |
-
-
 
 ### Request example
 

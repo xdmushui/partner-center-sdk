@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # <span id="pc_apiv2.purchase_an_add-on_to_a_subscription"/>Purchase an add-on to a subscription
 
-
 **Applies To**
 
 - Partner Center
@@ -21,7 +20,6 @@ How to purchase an add-on to an existing subscription.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID. This is the existing subscription for which to purchase an add-on offer.
@@ -29,17 +27,18 @@ How to purchase an add-on to an existing subscription.
 
 ## <span id="Purchasing_an_add-on_through_code"/><span id="purchasing_an_add-on_through_code"/><span id="PURCHASING_AN_ADD-ON_THROUGH_CODE"/>Purchasing an add-on through code
 
-
 When you purchase an add-on to a subscription you are updating the original subscription order with the order for the add-on. In the following, customerId is the customer ID, subscriptionId is the subscription ID, and addOnOfferId is the offer ID for the add-on.
 
 Here are the steps:
 
 1.  Get an interface to the operations for the subscription.
+
     ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
 2.  Use that interface to instantiate a subscription object. This gets you the parent subscription details, including the order id.
+
     ``` csharp
     var parentSubscription = subscriptionOperations.Get();
     ```
@@ -69,7 +68,6 @@ Here are the steps:
     ```
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To purchase an add-on, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription that has the add-on offer. Use that [**interface**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get). Why do you need the subscription details? Because you need the order id of the subscription order. That's the order to be updated with the add-on.
 
@@ -113,14 +111,11 @@ Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(pa
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
 ### Request syntax
 
 | Method    | Request URI                                                                                              |
 |-----------|----------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -130,8 +125,6 @@ Use the following parameters to identify the customer and order.
 |------------------------|----------|----------|------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
 | **order-id**           | **guid** | Y        | The order identifier.                                                              |
-
- 
 
 ### Request headers
 
@@ -143,7 +136,6 @@ The following tables describe the properties in the request body.
 
 ## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
 
-
 | Name                | Type             | Required | Description                                          |
 |---------------------|------------------|----------|------------------------------------------------------|
 | Id                  | string           | N        | The order ID.                                        |
@@ -152,10 +144,7 @@ The following tables describe the properties in the request body.
 | CreationDate        | string           | N        | The date the order was created, in date-time format. |
 | Attributes          | object           | N        | Contains "ObjectType": "Order".                      |
 
- 
-
 ## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
-
 
 | Name                 | Type   | Required | Description                                                  |
 |----------------------|--------|----------|--------------------------------------------------------------|
@@ -168,13 +157,11 @@ The following tables describe the properties in the request body.
 | PartnerIdOnRecord    | string | N        | The MPN ID of the partner of record.                         |
 | Attributes           | object | N        | Contains "ObjectType": "OrderLineItem".                      |
 
- 
-
 ### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
 MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
@@ -208,7 +195,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns the updated subscription order in the response body.
 
@@ -274,11 +260,3 @@ Date: Wed, 25 Jan 2017 23:01:08 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

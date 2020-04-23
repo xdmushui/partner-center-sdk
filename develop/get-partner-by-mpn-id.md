@@ -41,7 +41,6 @@ var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                         |
