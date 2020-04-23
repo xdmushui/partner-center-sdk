@@ -64,27 +64,28 @@ The following table shows a list of the supported fields and support operators f
 
 | Parameter | Supported operators | Description |
 |-----------|---------------------|-------------|
-| customerTenantId | eq,ne | A GUID-formatted string that identifies the customer tenant. |
-| id | eq,ne | A GUID-formatted string that identifies the subscription. |
 | autoRenewEnabled | eq,ne | A value indicating whether the subscription is renewed automatically. |
-| partnerName | string | Name of the partner for whom the subscription was purchased |
-| partnerId | eq,ne | The MPN ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
-| customerMarket | eq,ne | The country/region that the customer does business in. |
+| commitmentEndDate | eq, ne, gt, lt, ge, le  | The date the subscription ends. |
+| creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
 | currentStateEndDate | eq, ne, gt, lt, ge, le | The date that the current status of the subscription will change. |
-| trialToPaidConversionDate | eq, ne, gt, lt, ge, le  | The date that the subscription converts from trial to paid. The default value is null. |
+| customerMarket | eq,ne | The country/region that the customer does business in. |
+| customerName | contains | The name of the customer. |
+| customerTenantId | eq,ne | A GUID-formatted string that identifies the customer tenant. |
 | deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
+| effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
+| friendlyName | contains | The name of the subscription. |
+| id | eq,ne | A GUID-formatted string that identifies the subscription. |
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
 | lastUsageDate | eq, ne, gt, lt, ge, le | The date that the subscription was last used. The default value is null. |
-| trialStartDate | eq, ne, gt, lt, ge, le | The date that the trial period for the subscription started. The default value is null. |
-| commitmentEndDate | eq, ne, gt, lt, ge, le  | The date the subscription ends. |
-| effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
-| creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
-| customerName | contains | The name of the customer. |
+| partnerId | eq,ne | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| partnerName | string | Name of the partner for whom the subscription was purchased |
 | productName | contains, eq,ne | The name of the product. |
-| friendlyName | contains | The name of the subscription. |
+| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.|
 | status | eq,ne | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
 | subscriptionType | eq,ne | The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
-| providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.|
+| trialStartDate | eq, ne, gt, lt, ge, le | The date that the trial period for the subscription started. The default value is null. |
+| trialToPaidConversionDate | eq, ne, gt, lt, ge, le  | The date that the subscription converts from trial to paid. The default value is null. |
+
 
 ### Request headers
 
