@@ -118,7 +118,7 @@ cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To create an order for a customer:
 
@@ -161,7 +161,7 @@ Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To create an order for a customer:
 

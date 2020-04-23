@@ -22,7 +22,7 @@ Developers must register details about their app with Azure AD through the Azure
 
 For Partner Center for Microsoft Cloud for US Government, you currently must manage apps through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0#applications).
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 Be aware of the following additional requirements when you create an app for Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government.
 

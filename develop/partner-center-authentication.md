@@ -52,7 +52,7 @@ public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
 
 ### Java (app-only authentication)
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 ```java
 public IAggregatePartner getAppPartnerOperations()

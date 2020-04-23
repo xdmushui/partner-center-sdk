@@ -61,7 +61,7 @@ AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
@@ -87,7 +87,7 @@ A complete sample can be found in the [GetAgreementDetails](https://github.com/M
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
