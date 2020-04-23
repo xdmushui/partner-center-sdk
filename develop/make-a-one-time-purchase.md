@@ -100,19 +100,19 @@ Before making a one-time purchase, complete the following steps:
 
 1. Identify and retrieve the Product and SKU that you want to purchase. You can do this step by listing the products and SKUs first, or if you already know the IDs of the product and SKU, selecting them.
 
-    - [Get a list of products](get-a-list-of-products.md)
-    - [Get a product using the product ID](get-a-product-by-id.md)
-    - [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
-    - [Get a SKU using the SKU ID](get-a-sku-by-id.md)
+   - [Get a list of products](get-a-list-of-products.md)
+   - [Get a product using the product ID](get-a-product-by-id.md)
+   - [Get a list of SKUs for a product](get-a-list-of-skus-for-a-product.md)
+   - [Get a SKU using the SKU ID](get-a-sku-by-id.md)
 
 2. Check the inventory for a SKU. This step is only needed for SKUs that are tagged with an **InventoryCheck** prerequisite.
 
-    - [Check Inventory](check-inventory.md)
+   - [Check Inventory](check-inventory.md)
 
 3. Retrieve the [availability](product-resources.md#availability) for the [SKU](product-resources.md#sku). You will need the **CatalogItemId** of the availability when placing the order. To get this value, use one of the following APIs:
 
-    - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
-    - [Get an availability using the availability ID](get-an-availability-by-id.md)
+   - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
+   - [Get an availability using the availability ID](get-an-availability-by-id.md)
 
 ## Order submission
 
@@ -120,12 +120,12 @@ To submit your order, follow these steps:
 
 1. Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart-resources.md), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](order-resources.md).
 
-    - [Create a shopping cart](create-a-cart.md)
-    - [Update a shopping cart](update-a-cart.md)
+   - [Create a shopping cart](create-a-cart.md)
+   - [Update a shopping cart](update-a-cart.md)
 
 2. Check out the cart. Checking out a cart results in the creation of an [Order](order-resources.md).
 
-    - [Checkout the cart](checkout-a-cart.md)
+   - [Checkout the cart](checkout-a-cart.md)
 
 ## Get order details
 

@@ -43,7 +43,7 @@ var customerSubscriptionsByMpnId = partnerOperations.Customers.ById(customerId).
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get a list of subscriptions provided by a given partner to a specified customer, first use the **IAggregatePartner.getCustomers.byId** function with the customer ID to identify the customer. Then get an interface to customer subscription collection operations from the **getSubscriptions** function, and call the **byPartner** function with the MPN ID to identify the partner and retrieve an interface to partner subscription operations. Finally, call the **get** function to get the collection.
 
@@ -57,7 +57,7 @@ ResourceCollection<Subscription> customerSubscriptionsByMpnId = partnerOperation
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get a list of subscriptions provided by a given partner to a specified customer, execute the [**Get-PartnerCustomerSubscription**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerSubscription.md) command. Specify the customer ID to identify the customer using the **CustomerId** parameter, and populate the **MpnId** parameter with the MPN ID to identify the partner.
 
@@ -170,4 +170,5 @@ Date: Thu, 13 Apr 2017 20:58:08 GMT
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

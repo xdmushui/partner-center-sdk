@@ -55,7 +55,7 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAz
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get the list of SKUs for a product:
 
@@ -80,7 +80,7 @@ var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(pr
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get the list of SKUs for a product:
 

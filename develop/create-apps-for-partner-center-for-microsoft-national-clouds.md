@@ -22,7 +22,7 @@ Developers must register details about their app with Azure AD through the Azure
 
 For Partner Center for Microsoft Cloud for US Government, you currently must manage apps through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0#applications).
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 Be aware of the following additional requirements when you create an app for Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government.
 
@@ -62,7 +62,7 @@ You should have the following details from the web app configuration:
 1. Log in to <https://partnercenter.microsoft.com>.
 2. Choose **Dashboard**, then choose **Account Settings**, then choose **App Management**.
 3. In the **Web App** section, choose **Register existing app**.
-4. Select the web app you created in Azure management portal.
+4. Select the web app you created in Azure portal.
 5. Choose **register your app**.
 
 ## Native apps
@@ -70,7 +70,7 @@ You should have the following details from the web app configuration:
 Native apps do not need to be registered to Partner Center. But these apps need to be configured to provide access to Partner Center APIs.
 
 >[!NOTE]
->Before creating a native app in the Azure management portal, log in into Partner Center using the admin user credentials from the partner tenant. This creates the settings on the tenant to enable app permissions.
+>Before creating a native app in the Azure portal, log in into Partner Center using the admin user credentials from the partner tenant. This creates the settings on the tenant to enable app permissions.
 
 ### Create native app
 

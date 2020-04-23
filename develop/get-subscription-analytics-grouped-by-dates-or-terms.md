@@ -51,7 +51,7 @@ An unencoded example looks like this:
 
 The following table shows a list of the supported fields for group by.
 
-| Field	| Type | Description |
+| Field | Type | Description |
 |-------|------|-------------|
 | customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |
 | customerName | string | The name of the customer. |
@@ -61,7 +61,7 @@ The following table shows a list of the supported fields for group by.
 | productName | string | The name of the product. |
 | subscriptionType | string | The subscription type. Note: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
 | autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |
-| partnerId	 | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| partnerId  | string | The MPN ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
 | friendlyName | string | The name of the subscription. |
 | partnerName | string | Name of the partner for whom the subscription was purchased |
 | providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.

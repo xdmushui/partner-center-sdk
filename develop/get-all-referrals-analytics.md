@@ -34,9 +34,9 @@ How to get all the referrals analytics information for your customers.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| filter | string |	Returns data matching the filter condition.</br> **Example:**</br>  `.../referrals?filter=field eq 'value'` |
-| groupby | string |	Supports both terms and dates. Short circuit logic to limit the number of buckets.</br> **Example:**</br>  `.../referrals?groupby=termField1,dateField1,termField2` |
-| aggregationLevel | string |	The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*.</br> **Example:**</br> `.../referrals?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
+| filter | string | Returns data matching the filter condition.</br> **Example:**</br>  `.../referrals?filter=field eq 'value'` |
+| groupby | string | Supports both terms and dates. Short circuit logic to limit the number of buckets.</br> **Example:**</br>  `.../referrals?groupby=termField1,dateField1,termField2` |
+| aggregationLevel | string | The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*.</br> **Example:**</br> `.../referrals?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
 | top | string | The page limit is 10000. Takes any value less than 10000.</br> **Example:**</br> `.../referrals?top=100`</br> |
 | skip | string | Number of rows to skip.</br> **Example:**</br>  `.../referrals?top=100&skip=100` |
 
@@ -90,4 +90,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

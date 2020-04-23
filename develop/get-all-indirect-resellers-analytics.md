@@ -35,137 +35,137 @@ How to get all the indirect resellers analytics information for your customers.
 
 <table>
 <thead>
-	<th>Parameter</th>
-	<th>Type</th>
-	<th>Description</th>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>
 </thead>
 <tbody>
-	<tr>
-		<td>partnerTenantId</td>
-		<td>string</td>
-		<td>The Tenant ID of the partner for which you want to retrieve indirect resellers data. </td>
-	</tr>
-	<tr>
-		<td>id</td>
-		<td>string</td>
-		<td>Indirect reseller ID</td>
-	</tr>
-	<tr>
-		<td>name</td>
-		<td>string</td>
-		<td>The Name of the partner for which you want to retrieve indirect resellers data.</td>
-	</tr>
-	<tr>
-		<td>market</td>
-		<td>string</td>
-		<td>The Market of the partner for which you want to retrieve indirect resellers data.</td>
-	</tr>
-	<tr>
-		<td>firstSubscriptionCreationDate</td>
-		<td>string in UTC date time format</td>
-		<td>The creation date of the first subscription based on which you want to retrieve indirect resellers data.</td>
-	</tr>
-	<tr>
-		<td>latestSubscriptionCreationDate</td>
-		<td>string in UTC date time format</td>
-		<td>The creation date of the latest subscription.</td>
-	</tr>
-	<tr>
-		<td>firstSubscriptionEndDate</td>
-		<td>string in UTC date time format</td>
-		<td>First time any subscription was ended.</td>
-	</tr>
-	<tr>
-		<td>latestSubscriptionEndDate</td>
-		<td>string in UTC date time format</td>
-		<td>Latest date when any subscription was ended. </td>
-	</tr>
-	<tr>
-		<td>firstSubscriptionSuspendedDate</td>
-		<td>string in UTC date time format</td>
-		<td>First time any subscription was suspended.</td>
-	</tr>
-	<tr>
-		<td>latestSubscriptionSuspendedDate</td>
-		<td>string in UTC date time format</td>
-		<td>Latest date when any subscription was suspended.</td>
-	</tr>
-	<tr>
-		<td>firstSubscriptionDeprovisionedDate</td>
-		<td>string in UTC date time format</td>
-		<td>First time any subscription was deprovisioned.</td>
-	</tr>
-	<tr>
-		<td>latestSubscriptionDeprovisionedDate</td>
-		<td>string in UTC date time format</td>
-		<td>Latest date when any subscription was deprovisioned.</td>
-	</tr>
-	<tr>
-		<td>subscriptionCount</td>
-		<td>double</td>
-		<td>Subscription count for all value added resellers</td>
-	</tr>
-	<tr>
-		<td>licenseCount</td>
-		<td>double</td>
-		<td>License count for all value added resellers</td>
-	</tr>
-	<tr>
-		<td>indirectResellerCount</td>
-		<td>double</td>
-		<td>Indirect resellers count</td>
-	</tr>
-	<tr>
-		<td>top</td>
-		<td>string</td>
-		<td>The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data.</td>
-	</tr>
-	<tr>
-		<td>skip</td>
-		<td>int</td>
-		<td>
-		  <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
-		</td>
-	</tr>
-	<tr>
-		<td>filter</td>
-		<td>string</td>
-		<td>
-			<p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. You can specify the following fields:</p>
-			<ul>
-				<li><em>partnerTenantId</em></li>
-				<li><em>id</em></li>
-				<li><em>Name</em></li>
-				<li><em>market</em></li>
-				<li><em>firstSubscriptionCreationDate</em></li>
-				<li><em>latestSubscriptionCreationDate</em></li>
-				<li><em>firstSubscriptionEndDate</em></li>
-				<li><em>latestSubscriptionEndDate</em></li>
-				<li><em>firstSubscriptionSuspendedDate</em></li>
-				<li><em>latestSubscriptionSuspendedDate</em></li>
-				<li><em>firstSubscriptionDeprovisionedDate</em></li>
-				<li><em>latestSubscriptionDeprovisionedDate</em></li>
-			</ul>
-			<p><strong>Example:</strong></br>
+    <tr>
+        <td>partnerTenantId</td>
+        <td>string</td>
+        <td>The Tenant ID of the partner for which you want to retrieve indirect resellers data. </td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>string</td>
+        <td>Indirect reseller ID</td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>The Name of the partner for which you want to retrieve indirect resellers data.</td>
+    </tr>
+    <tr>
+        <td>market</td>
+        <td>string</td>
+        <td>The Market of the partner for which you want to retrieve indirect resellers data.</td>
+    </tr>
+    <tr>
+        <td>firstSubscriptionCreationDate</td>
+        <td>string in UTC date time format</td>
+        <td>The creation date of the first subscription based on which you want to retrieve indirect resellers data.</td>
+    </tr>
+    <tr>
+        <td>latestSubscriptionCreationDate</td>
+        <td>string in UTC date time format</td>
+        <td>The creation date of the latest subscription.</td>
+    </tr>
+    <tr>
+        <td>firstSubscriptionEndDate</td>
+        <td>string in UTC date time format</td>
+        <td>First time any subscription was ended.</td>
+    </tr>
+    <tr>
+        <td>latestSubscriptionEndDate</td>
+        <td>string in UTC date time format</td>
+        <td>Latest date when any subscription was ended. </td>
+    </tr>
+    <tr>
+        <td>firstSubscriptionSuspendedDate</td>
+        <td>string in UTC date time format</td>
+        <td>First time any subscription was suspended.</td>
+    </tr>
+    <tr>
+        <td>latestSubscriptionSuspendedDate</td>
+        <td>string in UTC date time format</td>
+        <td>Latest date when any subscription was suspended.</td>
+    </tr>
+    <tr>
+        <td>firstSubscriptionDeprovisionedDate</td>
+        <td>string in UTC date time format</td>
+        <td>First time any subscription was deprovisioned.</td>
+    </tr>
+    <tr>
+        <td>latestSubscriptionDeprovisionedDate</td>
+        <td>string in UTC date time format</td>
+        <td>Latest date when any subscription was deprovisioned.</td>
+    </tr>
+    <tr>
+        <td>subscriptionCount</td>
+        <td>double</td>
+        <td>Subscription count for all value added resellers</td>
+    </tr>
+    <tr>
+        <td>licenseCount</td>
+        <td>double</td>
+        <td>License count for all value added resellers</td>
+    </tr>
+    <tr>
+        <td>indirectResellerCount</td>
+        <td>double</td>
+        <td>Indirect resellers count</td>
+    </tr>
+    <tr>
+        <td>top</td>
+        <td>string</td>
+        <td>The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data.</td>
+    </tr>
+    <tr>
+        <td>skip</td>
+        <td>int</td>
+        <td>
+          <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>filter</td>
+        <td>string</td>
+        <td>
+            <p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong>and</strong> or <strong>or</strong>. You can specify the following fields:</p>
+            <ul>
+                <li><em>partnerTenantId</em></li>
+                <li><em>id</em></li>
+                <li><em>Name</em></li>
+                <li><em>market</em></li>
+                <li><em>firstSubscriptionCreationDate</em></li>
+                <li><em>latestSubscriptionCreationDate</em></li>
+                <li><em>firstSubscriptionEndDate</em></li>
+                <li><em>latestSubscriptionEndDate</em></li>
+                <li><em>firstSubscriptionSuspendedDate</em></li>
+                <li><em>latestSubscriptionSuspendedDate</em></li>
+                <li><em>firstSubscriptionDeprovisionedDate</em></li>
+                <li><em>latestSubscriptionDeprovisionedDate</em></li>
+            </ul>
+            <p><strong>Example:</strong></br>
               <code>.../indirectresellers?filter=market eq &#39;US&#39;</code></p>
-			<p><strong>Example:</strong></br>
+            <p><strong>Example:</strong></br>
                 <code>.../indirectresellers?filter=market eq &#39;US&#39; or (firstSubscriptionCreationDate le cast(&#39;2018-01-01&#39;,Edm.DateTimeOffset) and firstSubscriptionCreationDate le cast(&#39;2018-04-01&#39;,Edm.DateTimeOffset))</code>
-			</p>
-	    </td>
-	</tr>
-	<tr>
-		<td>aggregationLevel</td>
-		<td>string</td>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>aggregationLevel</td>
+        <td>string</td>
         <td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: &quot;day&quot;, &quot;week&quot;, or &quot;month&quot;. If unspecified, the default is &quot;day&quot;.</p>
-		<p><em>aggregationLevel</em> is not supported without a <strong>groupby</strong>. <em>aggregationLevel</em> applies to all <strong>datefields</strong> present in the <strong>groupby</strong></p>
-		</td>
-	</tr>
-	<tr>
-		<td>orderby</td>
-		<td>string</td>
-		<td>
-			<p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
-			<ul>
+        <p><em>aggregationLevel</em> is not supported without a <strong>groupby</strong>. <em>aggregationLevel</em> applies to all <strong>datefields</strong> present in the <strong>groupby</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td>orderby</td>
+        <td>string</td>
+        <td>
+            <p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
+            <ul>
                 <li>&quot;partnerTenantId&quot;</li>
                 <li>&quot;id&quot;</li>
                 <li>&quot;name&quot;</li>
@@ -180,44 +180,44 @@ How to get all the indirect resellers analytics information for your customers.
                 <li>&quot;latestSubscriptionDeprovisionedDate&quot;</li>
                 <li>&quot;subscriptionCount&quot;</li>
                 <li>&quot;licenseCount&quot;</li>
-			</ul>
+            </ul>
             <p>The <em>order</em> parameter is optional, and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field. The default is &quot;asc&quot;.</p>
-			<p><strong>Example:</strong></br>
-				<code>...&orderby=market,subscriptionCount</code>
-			</p>
-		</td>
-	</tr>
-	<tr>
-		<td>groupby</td>
-		<td>string</td>
-		<td>
-			<p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
-			<ul>
-				<li><em>partnerTenantId</em></li>
-				<li><em>id</em></li>
-				<li><em>Name</em></li>
-				<li><em>market</em></li>
-				<li><em>firstSubscriptionCreationDate</em></li>
-				<li><em>latestSubscriptionCreationDate</em></li>
-				<li><em>firstSubscriptionEndDate</em></li>
-				<li><em>latestSubscriptionEndDate</em></li>
-				<li><em>firstSubscriptionSuspendedDate</em></li>
-				<li><em>latestSubscriptionSuspendedDate</em></li>
-				<li><em>firstSubscriptionDeprovisionedDate</em></li>
-				<li><em>latestSubscriptionDeprovisionedDate</em></li>
-			</ul>
-			<p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
-			<ul>
-				<li><em>indirectResellerCount</em></li>
-				<li><em>licenseCount</em></li>
-				<li><em>subscriptionCount</em></li>
-			</ul>
-			<p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
-			<p><strong>Example:</strong></br>
-				<code>...&groupby=ageGroup,market&aggregationLevel=week</code>
-			</p>
-		</td>
-	</tr>
+            <p><strong>Example:</strong></br>
+                <code>...&orderby=market,subscriptionCount</code>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>groupby</td>
+        <td>string</td>
+        <td>
+            <p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
+            <ul>
+                <li><em>partnerTenantId</em></li>
+                <li><em>id</em></li>
+                <li><em>Name</em></li>
+                <li><em>market</em></li>
+                <li><em>firstSubscriptionCreationDate</em></li>
+                <li><em>latestSubscriptionCreationDate</em></li>
+                <li><em>firstSubscriptionEndDate</em></li>
+                <li><em>latestSubscriptionEndDate</em></li>
+                <li><em>firstSubscriptionSuspendedDate</em></li>
+                <li><em>latestSubscriptionSuspendedDate</em></li>
+                <li><em>firstSubscriptionDeprovisionedDate</em></li>
+                <li><em>latestSubscriptionDeprovisionedDate</em></li>
+            </ul>
+            <p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
+            <ul>
+                <li><em>indirectResellerCount</em></li>
+                <li><em>licenseCount</em></li>
+                <li><em>subscriptionCount</em></li>
+            </ul>
+            <p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
+            <p><strong>Example:</strong></br>
+                <code>...&groupby=ageGroup,market&aggregationLevel=week</code>
+            </p>
+        </td>
+    </tr>
 </tbody>
 </table>
 
@@ -269,4 +269,5 @@ Each response comes with an HTTP status code that indicates success or failure a
 ```
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+
+- [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

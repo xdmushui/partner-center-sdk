@@ -42,7 +42,7 @@ var availability = partnerOperations.Products.ByCountry(countryCode).ById(produc
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get details of a specific [availability](product-resources.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](product-resources.md#sku) operations. From the resulting interface, select the **getAvailabilities** function to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **byId()** function to get the operations for that specific availability and then call the **get()** function to retrieve the availability details.
 
@@ -59,7 +59,7 @@ Availability availability = partnerOperations.getProducts().byCountry(countryCod
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To get details of a specific [availability](product-resources.md#availability), execute the [**Get-PartnerProductAvailability**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductAvailability.md) and specify the **AvailabilityId**, **CountryCode**, **ProductId**, and **SkuId** parameters to retrieve the availability details.
 
@@ -137,13 +137,13 @@ Date: Wed, 14 Mar 2018 22:19:43 GMT
 Content-Length: 440
 
 {
-	"id": "DZH318XZXPHL",
-	"productId": "DZH318Z0BQ3Q",
-	"skuId": "0001",
-	"catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXPHL",
+    "id": "DZH318XZXPHL",
+    "productId": "DZH318Z0BQ3Q",
+    "skuId": "0001",
+    "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXPHL",
     "defaultCurrency": {
-		"code": "USD",
-		"symbol": "$"
+        "code": "USD",
+        "symbol": "$"
     },
     "segment": "commercial",
     "country": "US",
@@ -153,8 +153,8 @@ Content-Length: 440
         "duration": "P1Y",
         "description": "1 Year Prepaid"
     }],
-	"product": { ... },
-	"sku": { ... },
+    "product": { ... },
+    "sku": { ... },
     "links": {
         "self": {
             "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US",
