@@ -50,12 +50,12 @@ var filter = new SimpleFieldFilter(AuditRecordSearchField.CompanyName.ToString()
 var auditRecordsPage = partnerOperations.AuditRecords.Query(startDate.Date, query: QueryFactory.Instance.BuildSimpleQuery(filter));
 
 // To retrieve audit records by customer ID.
-var customerId="0c39d6d5-c70d-4c55-bc02-f620844f3fd1"; 
+var customerId="0c39d6d5-c70d-4c55-bc02-f620844f3fd1";
 var filter = new SimpleFieldFilter(AuditRecordSearchField.CustomerId.ToString(), FieldFilterOperation.Equals, customerId);
 var auditRecordsPage = partnerOperations.AuditRecords.Query(startDate.Date, query: QueryFactory.Instance.BuildSimpleQuery(filter));
 
 // To retrieve audit records by resource type.
-int resourceTypeInt = 3; // Subscription Resource. 
+int resourceTypeInt = 3; // Subscription Resource.
 string searchField = Enum.GetName(typeof(ResourceType), resourceTypeInt);
 var filter = new SimpleFieldFilter(AuditRecordSearchField.ResourceType.ToString(), FieldFilterOperation.Equals, searchField);
 var auditRecordsPage = partnerOperations.AuditRecords.Query(startDate.Date, query: QueryFactory.Instance.BuildSimpleQuery(filter));
@@ -71,7 +71,7 @@ while (auditRecordEnumerator.HasValue)
         // Display some info, such as operation type, operation date, and operation status.
         Console.WriteLine(string.Format("{0} {1} {2}.", c.OperationType, c.OperationDate, c.OperationStatus));
     }
-     
+
     // Get the next page of audit records.
     auditRecordEnumerator.Next();
 }
@@ -92,7 +92,7 @@ while (auditRecordEnumerator.HasValue)
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filter={"Field":"CustomerId","Value":"{customerId}","Operator":"equals"} HTTP/1.1          |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filter={"Field":"ResourceType","Value":"{resourceType}","Operator":"equals"} HTTP/1.1      |
 
- 
+
 
 ### URI parameter
 
@@ -104,7 +104,7 @@ Use the following query parameters when creating the request.
 | endDate   | date   | No       | The end date in yyyy-mm-dd format. This parameter is optional when a filter is supplied. When the end date is omitted or set to null, the request returns the max window or uses today as the end date, whichever is less. |
 | filter    | string | No       | The filter to apply. This must be an encoded string. This parameter is optional when the start date or end date are supplied.                                                                                              |
 
- 
+
 
 ### Filter syntax
 You must compose the filter parameter as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
@@ -152,7 +152,7 @@ The following table describes the required key-value pairs:
 </tbody>
 </table>
 
- 
+
 
 ### Request headers
 
@@ -270,11 +270,3 @@ Date: Tue, 27 Jun 2017 22:19:46 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

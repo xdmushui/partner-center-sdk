@@ -33,7 +33,7 @@ landingContent:
             url: partner-center-samples.md
           - text: Example scenarios
             url: scenarios.md
- 
+
   - title: Use the .NET SDK (v1.15.2)
     linkLists:
       - linkListType: download
@@ -68,7 +68,7 @@ landingContent:
         links:
           - text: Java API reference
             url: https://docs.microsoft.com/java/partnercenter/overview
- 
+
   - title: Use the PowerShell module (open source)
     linkLists:
       - linkListType: download
@@ -79,7 +79,7 @@ landingContent:
             url: https://github.com/microsoft/Partner-Center-PowerShell
       - linkListType: reference
         links:
-          - text: PowerShell commands 
+          - text: PowerShell commands
             url: https://docs.microsoft.com/powershell/partnercenter
 
   - title: Use the Swagger API for CSP partners

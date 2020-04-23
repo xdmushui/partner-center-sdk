@@ -16,16 +16,16 @@ ms.localizationpriority: medium
 
 Gets the specified product resource using a product ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A product ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
-To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product. 
+To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -35,9 +35,9 @@ Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z
 
 ### Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](<../includes/java-sdk-support.md>)]
 
-To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product. 
+To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -47,7 +47,7 @@ Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZ
 
 ### PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](<../includes/powershell-module-support.md>)]
 
 To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
 
@@ -55,13 +55,13 @@ To find a specific product by ID, execute the [**Get-PartnerProduct**](https://g
 Get-PartnerProduct -ProductId 'DZH318Z0BQ3Q'
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
 ### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  | 
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  |
 
 ### URI parameter
 
@@ -71,7 +71,6 @@ Use the following path parameters to get the specified product.
 |------------------------|----------|----------|-----------------------------------------------------------------|
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | country                | string   | Yes      | A country/region ID.                                            |
-
 
 ### Request headers
 
@@ -85,14 +84,13 @@ None.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products/{product-id}?country=US HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response body contains a [Product](product-resources.md#product) resource.
 
@@ -124,8 +122,8 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
         "id": "Azure",
         "displayName": "Azure",
         "subType": {
-			"id": "VirtualMachines",
-			"displayName": "VirtualMachines"
+            "id": "VirtualMachines",
+            "displayName": "VirtualMachines"
         }
     },
     "isMicrosoftProduct": true,

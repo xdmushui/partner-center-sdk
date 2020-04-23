@@ -35,11 +35,13 @@ When you purchase an add-on to a subscription you are updating the original subs
 Here are the steps:
 
 1.  Get an interface to the operations for the subscription.
+
     ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
 2.  Use that interface to instantiate a subscription object. This gets you the parent subscription details, including the order id.
+
     ``` csharp
     var parentSubscription = subscriptionOperations.Get();
     ```
@@ -120,7 +122,7 @@ Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(pa
 |-----------|----------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
- 
+
 
 ### URI parameters
 
@@ -131,7 +133,7 @@ Use the following parameters to identify the customer and order.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
 | **order-id**           | **guid** | Y        | The order identifier.                                                              |
 
- 
+
 
 ### Request headers
 
@@ -152,7 +154,7 @@ The following tables describe the properties in the request body.
 | CreationDate        | string           | N        | The date the order was created, in date-time format. |
 | Attributes          | object           | N        | Contains "ObjectType": "Order".                      |
 
- 
+
 
 ## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
@@ -168,13 +170,13 @@ The following tables describe the properties in the request body.
 | PartnerIdOnRecord    | string | N        | The MPN ID of the partner of record.                         |
 | Attributes           | object | N        | Contains "ObjectType": "OrderLineItem".                      |
 
- 
+
 
 ### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
 MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
@@ -274,11 +276,3 @@ Date: Wed, 25 Jan 2017 23:01:08 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

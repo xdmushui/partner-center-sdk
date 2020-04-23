@@ -8,7 +8,7 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Get an availability by ID 
+# Get an availability by ID
 
 **Applies To**
 
@@ -19,20 +19,20 @@ Gets an availability for the specified product and SKU using an availability ID.
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID. 
-- A SKU ID. 
-- An availability ID. 
+- A product ID.
+- A SKU ID.
+- An availability ID.
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
-### C# 
+### C#
 
 To get details of a specific [availability](product-resources.md#availability), start by using the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific [SKU's](product-resources.md#sku) operations. From the resulting interface, select the **Availabilities** property to obtain an interface with the available operations for Availabilities. After that, pass the availability ID to the **ById()** method to get the operations for that specific availability and then call **Get()** or **GetAsync()** to retrieve the availability details.
 
 ```csharp
 IAggregatePartner partnerOperations;
 string countryCode;
-string productId; 
+string productId;
 string skuId;
 string availabilityId;
 
@@ -49,7 +49,7 @@ To get details of a specific [availability](product-resources.md#availability), 
 ```java
 IAggregatePartner partnerOperations;
 String countryCode;
-String productId; 
+String productId;
 String skuId;
 String availabilityId;
 
@@ -85,8 +85,6 @@ Use the following path and query parameters to get a specific availability using
 | sku-id                 | string   | Yes      | A GUID formatted string that identifies the SKU.                |
 | availability-id        | string   | Yes      | A GUID formatted string that identifies the availability.       |
 | country-code           | string   | Yes      | A country/region ID.                                            |
-
- 
 ### Request headers
 
 - See [Headers](headers.md) for more information.

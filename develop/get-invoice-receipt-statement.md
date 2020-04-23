@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-Retrieves an invoice receipt statement using invoice ID and the receipt ID. 
+Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
 > [!IMPORTANT]
 > This feature is only applicable to Taiwan tax receipts.
@@ -34,7 +34,7 @@ To get an invoice receipt statement by ID, starting with Partner Center SDK v1.1
 var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Receipts.ById(selectedReceipt).Documents.Statement.Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs 
+**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -52,7 +52,7 @@ Use the following query parameter to get the invoice receipt statement.
 |------------|--------|-----------------------------------------------------------------------------------------------------------|
 | invoice-id | string | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 | receipt-id | string | Yes      | The value is a receipt-id that allows the reseller to filter the receipts for a given invoice. |
- 
+
 ### Request headers
 
 - See [Headers](headers.md) for more information.

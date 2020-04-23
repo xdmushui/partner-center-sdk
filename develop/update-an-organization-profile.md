@@ -52,7 +52,7 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 |---------|-------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/organization HTTP/1.1 |
 
- 
+
 
 ### Request headers
 
@@ -158,11 +158,3 @@ Date: Mon, 21 Mar 2016 05:48:41 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

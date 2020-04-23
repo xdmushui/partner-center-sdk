@@ -53,7 +53,7 @@ billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.B
 |---------|---------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -63,7 +63,7 @@ Use the following query parameter to update the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+
 
 ### Request headers
 
@@ -170,11 +170,3 @@ Date: Mon, 23 Nov 2015 18:20:43 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

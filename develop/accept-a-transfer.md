@@ -7,7 +7,7 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Accept a transfer 
+# Accept a transfer
 
 **Applies to:**
 

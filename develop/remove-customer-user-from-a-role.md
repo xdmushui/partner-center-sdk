@@ -48,7 +48,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers/{user-ID} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -60,7 +60,7 @@ Use the following URI parameters to identify the correct customer, role and user
 | **role-id**            | **guid** | Y        | The value is a GUID formatted **role-id** that identifies the role.                |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that identifies a single user account.   |
 
- 
+
 
 ### Request headers
 
@@ -81,7 +81,7 @@ MS-CorrelationId: 87d18a45-81fc-40cf-921a-b91cb82d67fe
 X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 Content-Length: 0
-Connection: Keep-Alive  
+Connection: Keep-Alive
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
@@ -104,11 +104,3 @@ MS-CV: es01VX8do0u2aTXw.0
 MS-ServerId: 101112616
 Date: Tue, 20 Dec 2016 23:16:35 GMT
 ```
-
- 
-
- 
-
-
-
-

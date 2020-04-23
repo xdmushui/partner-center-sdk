@@ -92,7 +92,7 @@ Represent a summary of the individual details for an invoice type (for example, 
 
 ## InvoiceSummaries
 
-Represent a collection of type [InvoiceSummary](#invoicesummary) that contain the individual details for an invoice type per currency.  
+Represent a collection of type [InvoiceSummary](#invoicesummary) that contain the individual details for an invoice type per currency.
 
 | Property            | Type                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|

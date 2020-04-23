@@ -21,8 +21,8 @@ Gets a SKU for the specified product using the specified SKU ID.
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A product ID. 
-- A SKU ID. 
+- A product ID.
+- A SKU ID.
 
 
 ## <span id="C_"/><span id="c_"/>C#
@@ -33,7 +33,7 @@ To get the details of a specific SKU, start by following the steps in [Get a pro
 ``` csharp
 IAggregatePartner partnerOperations;
 string countryCode;
-string productId; 
+string productId;
 string skuId;
 
 // Get the SKU details.
@@ -49,7 +49,7 @@ var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus
 |---------|---------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
 
- 
+
 
 ### URI parameter
 
@@ -61,7 +61,7 @@ Use the following path and query parameters to get a SKU for the specified produ
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 
- 
+
 
 ### Request headers
 

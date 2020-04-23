@@ -37,7 +37,7 @@ Next, get an interface to the partner profile operations collection from the **I
 
 var legalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfile.Get();
 
-// Change the address and primary contact phone number. 
+// Change the address and primary contact phone number.
 legalBusinessProfile.Address.PhoneNumber = "4255550110";
 legalBusinessProfile.PrimaryContact.PhoneNumber = "4255550110";
 
@@ -54,7 +54,7 @@ var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfil
 |---------|--------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/legalbusiness HTTP/1.1 |
 
- 
+
 
 ### Request headers
 
@@ -190,11 +190,3 @@ Date: Tue, 21 Mar 2017 22:03:15 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -37,7 +37,7 @@ To get a line item's activation link, use your [**IAggregatePartner.Customers**]
 // string orderId;
 // string lineItemNumber
 
-// get the activation link for the specific line item 
+// get the activation link for the specific line item
 var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
 
@@ -93,7 +93,7 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
         "uri": "<link populated here>",
         "method": "GET",
         "headers": [
-          
+
         ]
       }
     }
@@ -103,7 +103,7 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
       "uri": "/customers/8c5b65fd-c725-4f50-8d9c-97ec9169fdd0/orders/03fb46b3-bf8c-49aa-b908-ca2e93bcc04a/lineitems/0/activationlinks",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

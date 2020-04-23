@@ -71,7 +71,6 @@ Get-PartnerCustomer -CustomerId '2ca7de6c-c05c-46b5-b689-32e53573a97a'
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id} HTTP/1.1 |
 
- 
 
 ### URI parameter
 
@@ -80,8 +79,6 @@ Use the following query parameter to a specific customer.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-
- 
 
 ### Request headers
 
@@ -94,15 +91,14 @@ None.
 ### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1    
-Authorization: Bearer <token> 
-Accept: application/json    
-MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9  
-MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b  
+GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id> HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9
+MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, this method returns a [Customer](customer-resources.md#customer) resource in the response body.
 
@@ -139,7 +135,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
         "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/company",
         "method": "GET",
         "headers": [
-          
+
         ]
       }
     },
@@ -170,7 +166,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
         "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014/profiles/billing",
         "method": "GET",
         "headers": [
-          
+
         ]
       }
     },
@@ -189,7 +185,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
       "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },
@@ -198,11 +194,3 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
   }
 }
 ```
-
- 
-
- 
-
-
-
-

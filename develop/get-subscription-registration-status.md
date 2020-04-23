@@ -7,15 +7,15 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Get subscription registration status 
+# Get subscription registration status
 
 **Applies To**
 
 - Partner Center
 
-How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure Reserved VM Instances.  
+How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure Reserved VM Instances.
 
-To purchase an Azure Reserved VM Instance using the Partner Center API, you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. This method allows you to retrieve the status of that registration. 
+To purchase an Azure Reserved VM Instance using the Partner Center API, you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. This method allows you to retrieve the status of that registration.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -48,14 +48,14 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
 ### URI parameters
 
-Use the following path parameters to identify the customer and subscription. 
+Use the following path parameters to identify the customer and subscription.
 
 | Name                    | Type       | Required | Description                                                   |
 |-------------------------|------------|----------|---------------------------------------------------------------|
 | customer-id             | string     | Yes      | A GUID formatted string that identifies the customer.         |
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
- 
+
 ### Request headers
 
 - See [Headers](headers.md) for more information.
@@ -80,7 +80,7 @@ Connection: Keep-Alive
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
-If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.  
+If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.
 
 ### Response success and error codes
 

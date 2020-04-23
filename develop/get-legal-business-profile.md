@@ -44,7 +44,7 @@ var billingProfile = partnerOperations.Profiles.LegalBusinessProfile.Get();
 |---------|--------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/legalbusiness HTTP/1.1 |
 
- 
+
 
 ### Request headers
 

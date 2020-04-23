@@ -40,7 +40,7 @@ Address address = new Address()
     AddressLine1 = "One Microsoft Way",
     City = "Redmond",
     State = "WA",
-    PostalCode = "98052",    
+    PostalCode = "98052",
     Country = "US"
 };
 
@@ -55,10 +55,10 @@ try
 {
     // Change to an invalid postal code for this address.
     address.PostalCode = "98007";
-             
+
     // Validate the address.
     result = partnerOperations.Validations.IsAddressValid(address);
-    
+
     Console.WriteLine("ERROR: The code should have thrown an exception - BadRequest(400).");
 }
 catch (PartnerException exception)
@@ -104,7 +104,7 @@ try
 catch (Exception exception)
 {
     System.out.println("Address is invalid");
-    
+
     if (! StringHelper.isNullOrWhiteSpace(exception.getMessage()))
     {
         System.out.println(exception.getMessage());
@@ -152,7 +152,7 @@ This table describes the required properties in the request body.
 ```http
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
 MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c

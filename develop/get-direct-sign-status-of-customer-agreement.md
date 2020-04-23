@@ -1,6 +1,6 @@
 ---
 title: Get customer's direct signing status for Microsoft Customer Agreement.
-description: You can use the DirectSignedCustomerAgreementStatus resource to get the status of a customer's direct signing (direct acceptance) of the Microsoft Customer Agreement. 
+description: You can use the DirectSignedCustomerAgreementStatus resource to get the status of a customer's direct signing (direct acceptance) of the Microsoft Customer Agreement.
 ms.date: 02/11/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -26,7 +26,7 @@ This article explains how you can retrieve the status of a customer's direct acc
 ## REST request
 
 To retrieve the status of a customer's direct acceptance of the Microsoft Customer Agreement,
-create a REST request to retrieve the [DirectSignedCustomerAgreementStatus](./customer-agreement-direct-sign-status-resource.md) for the customer. 
+create a REST request to retrieve the [DirectSignedCustomerAgreementStatus](./customer-agreement-direct-sign-status-resource.md) for the customer.
 
 ### Request syntax
 
@@ -56,7 +56,7 @@ None.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/directSignedMicrosoftCustomerAgreementStatus HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
@@ -66,14 +66,14 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 
 If successful, this method returns a [**DirectSignedCustomerAgreementStatus** resource](./customer-agreement-direct-sign-status-resource.md) in the response body.
 
-The resource has an **isSigned** property that indicates the customer's direct signing (direct acceptance) status. 
+The resource has an **isSigned** property that indicates the customer's direct signing (direct acceptance) status.
 
 - A value of **true** indicates that the agreement has been signed (accepted) directly by the customer.
 - A value of **false** indicates that the agreement has *not* been signed (accepted) directly by the customer.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. 
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information.
 
 Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 

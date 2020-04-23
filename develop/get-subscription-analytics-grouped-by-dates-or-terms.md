@@ -1,8 +1,8 @@
 ---
 title: Get subscription analytics grouped by dates or terms
-description: How to get subscription analytics information grouped by dates or terms. 
+description: How to get subscription analytics information grouped by dates or terms.
 ms.assetid: 5D0C0649-F64D-40A9-ACCC-2077E2D2BA4E
-ms.date: 06/27/2018 
+ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
@@ -43,7 +43,7 @@ Use the following required path parameters to identify your organization and to 
 
 The group by parameter must be composed as a series of comma separated, field values.
 
-An unencoded example looks like this:  
+An unencoded example looks like this:
 
 ```http
 ?groupby=termField1,dateField1,termField2
@@ -53,27 +53,27 @@ The following table shows a list of the supported fields for group by.
 
 | Field	| Type | Description |
 |-------|------|-------------|
-| customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |  
-| customerName | string | The name of the customer. |  
-| customerMarket | string | The country/region that the customer does business in. |  
-| id | string | A GUID-formatted string that identifies the subscription. |  
-| status | string | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |  
-| productName | string | The name of the product. |  
-| subscriptionType | string | The subscription type. Note: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |  
-| autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |  
-| partnerId	 | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |  
-| friendlyName | string | The name of the subscription. |  
-| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| customerTenantId | string | A GUID-formatted string that identifies the customer tenant. |
+| customerName | string | The name of the customer. |
+| customerMarket | string | The country/region that the customer does business in. |
+| id | string | A GUID-formatted string that identifies the subscription. |
+| status | string | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
+| productName | string | The name of the product. |
+| subscriptionType | string | The subscription type. Note: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
+| autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |
+| partnerId	 | string | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| friendlyName | string | The name of the subscription. |
+| partnerName | string | Name of the partner for whom the subscription was purchased |
 | providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
-| creationDate | string in UTC date time format | The date the subscription was created. |  
-| effectiveStartDate | string in UTC date time format | The date the subscription starts. |  
-| commitmentEndDate | string in UTC date time format | The date the subscription ends. |  
-| currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |  
-| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null. |  
-| trialStartDate | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |  
-| lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |  
-| deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |  
-| lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |  
+| creationDate | string in UTC date time format | The date the subscription was created. |
+| effectiveStartDate | string in UTC date time format | The date the subscription starts. |
+| commitmentEndDate | string in UTC date time format | The date the subscription ends. |
+| currentStateEndDate | string in UTC date time format | The date that the current status of the subscription will change. |
+| trialToPaidConversionDate | string in UTC date time format | The date that the subscription converts from trial to paid. The default value is null. |
+| trialStartDate | string in UTC date time format | The date that the trial period for the subscription started. The default value is null. |
+| lastUsageDate | string in UTC date time format | The date that the subscription was last used. The default value is null. |
+| deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |
+| lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |
 
 ### Filter fields
 
@@ -98,7 +98,7 @@ None.
 ### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?groupBy=subscriptionType  
+GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?groupBy=subscriptionType
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3123

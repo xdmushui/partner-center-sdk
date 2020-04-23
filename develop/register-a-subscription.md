@@ -15,9 +15,9 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-Register an existing [Subscription](subscription-resources.md) so that it is enabled for ordering Azure reservations.  
+Register an existing [Subscription](subscription-resources.md) so that it is enabled for ordering Azure reservations.
 
-To purchase an Azure reservation you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure reservations. 
+To purchase an Azure reservation you must have at least one existing CSP Azure subscription. This method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure reservations.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -29,7 +29,7 @@ To purchase an Azure reservation you must have at least one existing CSP Azure s
 ## <span id="C_"/><span id="c_"/>C#
 
 
-To register a customer's subscription, retrieve an interface to subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, call the [**Subscription.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method with the subscription ID to identify the subscription that you are registering. 
+To register a customer's subscription, retrieve an interface to subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, call the [**Subscription.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method with the subscription ID to identify the subscription that you are registering.
 
 Finally, call the **Registration.Register()** method to register the subscription and retrieve a URI that can be used to get the subscription registration status. For more information, see [Get subscription registration status](get-subscription-registration-status.md).
 
@@ -52,18 +52,18 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations HTTP/1.1 |
 
- 
+
 
 ### URI parameters
 
-Use the following path parameters to identify the customer and subscription. 
+Use the following path parameters to identify the customer and subscription.
 
 | Name                    | Type       | Required | Description                                                   |
 |-------------------------|------------|----------|---------------------------------------------------------------|
 | customer-id             | string     | Yes      | A GUID formatted string that identifies the customer.         |
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
- 
+
 
 ### Request headers
 
@@ -90,7 +90,7 @@ Connection: Keep-Alive
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
 
 
-If successful, the response contains a **Location** header with a URI that can be used to retrieve the subscription registration status. Save this URI for use with other related REST APIs. For an example of how to retrieve the status, see [Get subscription registration status](get-subscription-registration-status.md). 
+If successful, the response contains a **Location** header with a URI that can be used to retrieve the subscription registration status. Save this URI for use with other related REST APIs. For an example of how to retrieve the status, see [Get subscription registration status](get-subscription-registration-status.md).
 
 ### Response success and error codes
 
@@ -107,11 +107,3 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 MS-CV: iqOqN0FnaE2y0HcD.0
 MS-ServerId: 030020525
 ```
-
- 
-
- 
-
-
-
-

@@ -36,7 +36,7 @@ The following example code shows how you can get the estimate links to query unb
  IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
 // read estimate links for currencycode
-var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(curencyCode).Get();  
+var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(curencyCode).Get();
 ```
 
 For a similar example, see the following:

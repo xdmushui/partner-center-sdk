@@ -1,6 +1,6 @@
 ---
 title: Get agreement metadata for Microsoft Cloud Agreement
-description: This article explains how to get agreement metadata for Microsoft Cloud Agreement. 
+description: This article explains how to get agreement metadata for Microsoft Cloud Agreement.
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-> [!NOTE]  
+> [!NOTE]
 > The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany

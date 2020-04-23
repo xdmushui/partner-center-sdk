@@ -71,9 +71,9 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 ```http
-{  
-    "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",  
-    "status": "cancelled",  
+{
+    "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",
+    "status": "cancelled",
 }
 ```
 

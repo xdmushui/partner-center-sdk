@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center
 
 
-How to update an order for a customer in a cart. 
+How to update an order for a customer in a cart.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
@@ -55,7 +55,7 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 |---------|-------------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id} HTTP/1.1              |
 
- 
+
 
 ### URI parameters
 
@@ -66,7 +66,7 @@ Use the following path parameters to identify the customer, and specify the cart
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
 
- 
+
 
 ### Request headers
 
@@ -113,19 +113,19 @@ MS-CorrelationId: 0e93c70c-977a-4a88-9580-7cf084c73286
 X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 Content-Length: 496
 Expect: 100-continue
 
-{  
-    {  
+{
+    {
         "Id":"b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
         "CreationTimestamp":"2018-03-15T17:15:02.3840528Z",
         "LastModifiedTimestamp":"2018-03-15T17:15:02.3840528Z",
         "ExpirationTimestamp":"0001-01-01T00:00:00",
         "LastModifiedUser":"2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
-        "LineItems":[  
-            {  
+        "LineItems":[
+            {
                 "Id":0,
                 "CatalogItemId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
                 "FriendlyName":"A_sample_Azure_RI",
@@ -180,7 +180,7 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",
                 "duration": "1Year"
-            }            
+            }
             "orderGroup": "0"
         }
     ],
@@ -196,11 +196,3 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

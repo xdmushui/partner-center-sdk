@@ -1,7 +1,7 @@
 ---
 title: Update autorenew for a commercial marketplace subscription
 description: Update the autorenew property for a Subscription resource that matches the customer and subscription ID.
-ms.assetid: 
+
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -51,7 +51,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 | Method    | Request URI                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
- 
+
 ### URI parameter
 
 This table lists the required query parameter to suspend the subscription.

@@ -51,8 +51,6 @@ var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profil
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
 
- 
-
 ### URI parameter
 
 Use the following query parameter to get the billing profile.
@@ -60,8 +58,6 @@ Use the following query parameter to get the billing profile.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-
- 
 
 ### Request headers
 
@@ -131,11 +127,3 @@ Date: Mon, 23 Nov 2015 18:13:43 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

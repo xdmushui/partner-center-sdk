@@ -60,7 +60,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles HTTP/1.1                 |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers    |
 
- 
+
 
 ### URI parameter
 
@@ -72,7 +72,7 @@ Use the following query parameter to identify the correct customer.
 | **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                                                                            |
 | **role-id**            | **guid** | N        | The value is a GUID formatted **role-id** that belongs to a type of role. You can get these ids by querying all the directory roles for a customer, across all user accounts. (The second scenario, above). |
 
- 
+
 
 ### Request headers
 

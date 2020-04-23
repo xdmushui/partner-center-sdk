@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 # Get invoice billed commercial consumption line items
 
 **Applies to:**
- 
+
 - Partner Center
 
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
@@ -93,7 +93,7 @@ while (fetchNext)
             seekBasedResourceCollection = scopedPartnerOperations.Invoices.ById(invoiceId).By("onetime", "usagelineitems", curencyCode, period, pageMaxSizeReconLineItems).Seek(seekBasedResourceCollection.ContinuationToken, SeekOperation.Next);
         }
     }
-}  
+}
 ```
 
 For a similar example, see the following:
