@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 
-This topic describes how to retrieve a collection of devices in a specified device batch for a specified customer. Each device resource contains details about the device.
+This article describes how to retrieve a collection of devices in a specified device batch for a specified customer. Each device resource contains details about the device.
 
 ## Prerequisites
 

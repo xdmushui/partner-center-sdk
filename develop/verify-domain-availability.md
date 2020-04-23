@@ -43,7 +43,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                              |
 |----------|--------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to verify domain availability.
 
@@ -61,15 +61,15 @@ Use the following query parameter to verify domain availability.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 HEAD https://api.partnercenter.microsoft.com/v1/domains/contoso.onmicrosoft.com HTTP/1.1
@@ -87,11 +87,11 @@ Connection: Keep-Alive
 
 If the domain exists it is not available for use and a response status code 200 OK is returned. If the domain is not found it is available for use and a response status code 404 Not Found is returned.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for when the domain is already in use**
+### Response example for when the domain is already in use
 
 ```http
 HTTP/1.1 200 OK
@@ -103,7 +103,7 @@ MS-ServerId: 201022015
 Date: Tue, 31 Jan 2017 22:22:35 GMT
 ```
 
-**Response example for when the domain is available**
+### Response example for when the domain is available
 
 ```http
 HTTP/1.1 404 Not Found

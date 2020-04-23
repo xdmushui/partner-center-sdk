@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-This topic describes how to get a list of all user accounts that belong to one of your customers.
+This article describes how to get a list of all user accounts that belong to one of your customers.
 
 To look up a single user account by ID, see [Get a user account by ID](get-a-user-account-by-id.md).
 

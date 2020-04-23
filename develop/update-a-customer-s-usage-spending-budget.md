@@ -56,14 +56,14 @@ var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudg
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
  
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to update the billing profile.
 
@@ -73,17 +73,17 @@ Use the following query parameter to update the billing profile.
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
 
-**Request body**
+### Request body
 
 The full resource.
 
 
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
@@ -109,12 +109,12 @@ X-Locale: "en-US"
 If successful, this method returns a user's spending budget with the updated amount.
 
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

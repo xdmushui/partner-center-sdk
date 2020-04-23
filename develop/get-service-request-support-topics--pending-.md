@@ -37,7 +37,7 @@ ResourceCollection<SupportTopic> supportTopicsCollection = partnerOperations.Ser
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                           |
 |---------|---------------------------------------------------------------------------------------|
@@ -45,15 +45,15 @@ ResourceCollection<SupportTopic> supportTopicsCollection = partnerOperations.Ser
 
  
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/servicerequests/supporttopics HTTP/1.1
@@ -69,11 +69,11 @@ X-Locale: en-US
 
 If successful, this method returns a collection of the valid topics for a support request.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

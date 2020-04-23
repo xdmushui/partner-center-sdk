@@ -22,7 +22,7 @@ Gets the company profile of a customer.
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
@@ -54,13 +54,13 @@ CustomerCompanyProfile companyProfile = partnerOperations.getCustomers().byId(cu
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                             |
 |---------|-------------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/profiles/company HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to get the company profile.
 
@@ -69,15 +69,15 @@ Use the following query parameter to get the company profile.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/profiles/company HTTP/1.1
@@ -95,11 +95,11 @@ Connection: Keep-Alive
 
 If successful, this method returns information in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

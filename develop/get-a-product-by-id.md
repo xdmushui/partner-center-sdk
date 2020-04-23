@@ -57,13 +57,13 @@ Get-PartnerProduct -ProductId 'DZH318Z0BQ3Q'
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  | 
 
-**URI parameter**
+### URI parameter
 
 Use the following path parameters to get the specified product.
 
@@ -73,15 +73,15 @@ Use the following path parameters to get the specified product.
 | country                | string   | Yes      | A country/region ID.                                            |
 
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products/{product-id}?country=US HTTP/1.1
@@ -96,7 +96,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 
 If successful, the response body contains a [Product](product-resources.md#product) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -106,7 +106,7 @@ This method returns the following error codes:
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                     |
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

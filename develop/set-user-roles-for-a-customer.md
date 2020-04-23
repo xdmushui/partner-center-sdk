@@ -21,7 +21,7 @@ Within a customer account, there's a set of directory roles. You can assign user
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -51,7 +51,7 @@ var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).Dire
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                 |
 |----------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).Dire
 
  
 
-**URI parameter**
+### URI parameter
 
 Use the following URI parameters to identify the correct customer and role. To identify the user to whom to assign the role, supply the identifying information in the request body.
 
@@ -70,11 +70,11 @@ Use the following URI parameters to identify the correct customer and role. To i
 
  
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the required properties in the request body.
 
@@ -87,7 +87,7 @@ This table describes the required properties in the request body.
 
  
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/directoryroles/f023fd81-a637-4b56-95fd-791ac0226033/usermembers HTTP/1.1
@@ -116,11 +116,11 @@ Expect: 100-continue
 
 This method returns the user account with the role id attached when the user is successfully assigned the role.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created

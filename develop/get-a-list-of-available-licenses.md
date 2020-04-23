@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-This topic describes how to get a list of licenses available to users of the specified customer.
+This article describes how to get a list of licenses available to users of the specified customer.
 
 The following examples return licenses available from **group1**, the default license group that represents licenses managed by Azure Active Directory (Azure AD). To get available licenses for a specified license group, see [Get a list of available licenses by license group](get-a-list-of-available-licenses-by-license-group.md).
 

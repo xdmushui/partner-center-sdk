@@ -63,7 +63,7 @@ Use the following query parameter to delete a customer.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **order-id** | **string** | Y        | The value is a string denoting the order IDs which need to be canceled. |
+| **order-id** | **string** | Y        | The value is a string denoting the order IDs that need to be canceled. |
 
 ### Request headers
 

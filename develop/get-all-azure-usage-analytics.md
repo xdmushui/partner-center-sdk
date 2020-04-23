@@ -28,7 +28,7 @@ How to get all the Azure usage analytics information for your customers.
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI |
 |---------|-------------|
@@ -36,7 +36,7 @@ How to get all the Azure usage analytics information for your customers.
 
  
 
-**URI parameters**
+### URI parameters
 
 <table>
   <thead>
@@ -183,15 +183,15 @@ How to get all the Azure usage analytics information for your customers.
 </table>
 
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/usage/azure HTTP/1.1
@@ -206,11 +206,11 @@ Content-Length: 0
 
 If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 {
