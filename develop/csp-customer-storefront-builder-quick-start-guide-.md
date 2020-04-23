@@ -123,7 +123,6 @@ Customers can belong to these countries:
 | GB           | United Kingdom |
 | US           | United States  |
 
-
 ## Partner experience scenarios
 
 ### Deployment scenario

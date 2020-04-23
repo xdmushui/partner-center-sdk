@@ -72,7 +72,6 @@ Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agree
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-
 ## REST request
 
 To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:

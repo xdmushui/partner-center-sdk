@@ -66,7 +66,6 @@ var agreementDocument = partnerOperations.AgreementTemplates.ById(microsoftCusto
 
 A complete sample can be found in the [GetAgreementDocument](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDocument.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-
 ## REST request
 
 To retrieve a link to download the Microsoft Customer Agreement template:
@@ -394,5 +393,3 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 | Yemen | YE | en-US, ar-SA |
 | Zambia | ZM | en-US |
 | Zimbabwe | ZW | en-US |
-
-

@@ -24,7 +24,6 @@ How to check the inventory for a specific set of catalog items.
 
 ## C#
 
-
 To check the inventory, build an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) object using an [InventoryItem](product-resources.md#inventoryitem) object for each item to be checked. Then, use an **IAggregatePartner.Extensions** accessor, scope it down to **Product** and then select the country using the **ByCountry()** method. Finally, call the **CheckInventory()** method with your **InventoryCheckRequest** object.
 
 ``` csharp
