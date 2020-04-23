@@ -90,8 +90,8 @@ MS-RequestId: a45e6643-1caf-4429-8f90-07c03d85bc2b
 Date: Thu, 24 Mar 2016 05:21:01 GMT
 
 {
-    _content	{System.Net.Http.ByteArrayContent}	System.Net.Http.HttpContent {System.Net.Http.ByteArrayContent}
-    _content	{byte[219753]}	byte[]
-    _headers	{Content-Type: application/pdf Content-Disposition: attachment; filename=Invoice_G000024132.pdf}
+    _content    {System.Net.Http.ByteArrayContent}    System.Net.Http.HttpContent {System.Net.Http.ByteArrayContent}
+    _content    {byte[219753]}    byte[]
+    _headers    {Content-Type: application/pdf Content-Disposition: attachment; filename=Invoice_G000024132.pdf}
 }
 ```

@@ -137,13 +137,13 @@ Date: Wed, 14 Mar 2018 22:19:43 GMT
 Content-Length: 440
 
 {
-	"id": "DZH318XZXPHL",
-	"productId": "DZH318Z0BQ3Q",
-	"skuId": "0001",
-	"catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXPHL",
+    "id": "DZH318XZXPHL",
+    "productId": "DZH318Z0BQ3Q",
+    "skuId": "0001",
+    "catalogItemId": "DZH318Z0BQ3Q:0001:DZH318XZXPHL",
     "defaultCurrency": {
-		"code": "USD",
-		"symbol": "$"
+        "code": "USD",
+        "symbol": "$"
     },
     "segment": "commercial",
     "country": "US",
@@ -153,8 +153,8 @@ Content-Length: 440
         "duration": "P1Y",
         "description": "1 Year Prepaid"
     }],
-	"product": { ... },
-	"sku": { ... },
+    "product": { ... },
+    "sku": { ... },
     "links": {
         "self": {
             "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US",
