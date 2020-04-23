@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a collection of entitlements
 
-
 **Applies To**
 
 - Partner Center
@@ -18,7 +17,6 @@ ms.localizationpriority: medium
 How to get a collection of entitlements.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 - A customer identifier.
@@ -35,6 +33,7 @@ string customerId;
 // Get the collection of entitlements.
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
+
 To populate expiry dates for the entitlements to be retrieved, call the same methods above and set the optional boolean parameter **showExpiry** to true **Get(true)** or **GetAsync(true)**. This indicates that entitlement expiry dates are required (when applicable).
 
 > [!IMPORTANT]
@@ -42,14 +41,11 @@ To populate expiry dates for the entitlements to be retrieved, call the same met
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-
 ### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/entitlements HTTP/1.1                            |
-
- 
 
 ### URI parameters
 
@@ -59,9 +55,7 @@ Use the following path and query parameters when creating the request.
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
 | entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, all types will be retrieved |
-| showExpiry | boolean | No | Optional flag which indicates if entitlements exipry dates are required. |
-
- 
+| showExpiry | boolean | No | Optional flag which indicates if entitlements expiry dates are required. |
 
 ### Request headers
 
@@ -84,7 +78,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
@@ -132,7 +125,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
       "dynamicAttributes": {
                "reservationType": "virtualmachines"
         }
-    },    
+    },
     {
       "includedEntitlements": [
         {
@@ -177,12 +170,11 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 }  
 ```
 
-
 ## <span id="AdditionalExamples"/><span id="additionalexamples"/>Additional Examples   
 
 The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
 
-**C# example**   
+### C# example
 
 To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the **Entitlements** interface and use the **Get()** or **GetAsync()** methods.
 
@@ -306,12 +298,11 @@ Date: Mon, 28 Jan 2019 18:31:43 GMT
 }
 ```
 
-
 The following examples show you how to retrieve information about products and reservations from an entitlement.
 
 ### <span id="VirtualMachineReservationExample_SDK_1.8"/><span id="virtualmachinereservationexample_sdk_1.8"/><span id="VIRTUALMACHINERESERVATIONEXAMPLE_SDK_1.8"/>Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
 
-**C# example**   
+### C# example
 
 To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
 
@@ -364,7 +355,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 
 ### <span id="ReservationExample_SDK_1.9"/><span id="reservationexample_sdk_1.9"/><span id="RESERVATIONEXAMPLE_SDK_1.9"/>Retrieve reservation details from an entitlement by using SDK V1.9  
 
-**C# example**  
+### C# example
 
 To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
 
@@ -383,10 +374,10 @@ Accept: application/json
 MS-RequestId: cdc428d2-035b-41c4-9a32-e643c4471cbd
 MS-CorrelationId: 799eee8d-07d1-452a-a035-388259df137c
 X-Locale: en-US
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 ```
 
-### Response example  
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -414,7 +405,5 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 }
 ```
 
-### API Consumers  
+### API Consumers
 Partners who are using the API to query virtual machine reserved instance entitlements - Update the request URI from **/customers/{customerId}/entitlements to /customers/{customerId}/entitlements?entitlementType=virtualmachinereservedinstance** to maintain backward compatibility. In order to consume virtual machine or Azure SQL with enhanced contract, update the request URI to **/customers/{customerId}/entitlements?entitlementType=reservedinstance**.
-
-
