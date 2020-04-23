@@ -19,12 +19,12 @@ ms.localizationpriority: medium
 
 Gets an **Offer** resource that matches the offer ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An offer ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## <span id="examples">Examples
 
 ### C#
 
@@ -69,7 +69,7 @@ To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://githu
 Get-PartnerOffer -Country $countryCode -OfferId $offerId
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -105,7 +105,7 @@ X-Locale: <locale-id>
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns an **Offer** resource in the response body.
 

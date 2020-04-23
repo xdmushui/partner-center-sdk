@@ -18,11 +18,11 @@ ms.localizationpriority: medium
 
 How to get subscription analytics information for your customers filtered by a search query.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -105,7 +105,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST Response
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 
@@ -147,6 +147,6 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 }
 ```
 
-## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
+## See also
 
  - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 
 Describes resources related to licenses.
 
-## <span id="License"/><span id="license"/><span id="LICENSE"/>License
+## License
 
 Describes a user license.
 
@@ -31,7 +31,7 @@ Describes a user license.
 | productSKU   | ProductSku                                                     | The sku of the product that corresponds to the license.        |
 | attributes   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the license.          |
 
-## <span id="LicenseUpdate"/><span id="licenseupdate"/><span id="LICENSEUPDATE"/>LicenseUpdate
+## LicenseUpdate
 
 Provides information used to assign or remove licenses from a user.
 
@@ -42,7 +42,7 @@ Provides information used to assign or remove licenses from a user.
 | licenseWarnings  | array of objects                                               | Array of [LicenseWarning](#licensewarning) objects.       |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                  |
 
-## <span id="LicenseAssignment"/><span id="licenseassignment"/><span id="LICENSEASSIGNMENT"/>LicenseAssignment
+## LicenseAssignment
 
 Provides information needed for a license update operation.
 
@@ -51,7 +51,7 @@ Provides information needed for a license update operation.
 | excludedPlans | array of strings | The service plan identifiers to be excluded from availability to the user. |
 | skuId         | string           | The product SKU identifier for the license.                                |
 
-## <span id="LicenseWarning"/><span id="licensewarning"/><span id="LICENSEWARNING"/>LicenseWarning
+## LicenseWarning
 
 Contains warning information that occurred during a license update
 operation.
@@ -62,7 +62,7 @@ operation.
 | message      | string           | The warning message.                                |
 | servicePlans | array of strings | The service plan names associated with the warning. |
 
-## <span id="ProductSku"/><span id="productsku"/><span id="PRODUCTSKU"/>ProductSku
+## ProductSku
 
 Describes product details.
 
@@ -110,7 +110,7 @@ Describes product details.
 </tbody>
 </table>
 
-## <span id="ServicePlan"/><span id="serviceplan"/><span id="SERVICEPLAN"/>ServicePlan
+## ServicePlan
 
 Identifies a deployable service within a product SKU. A product can have
 many service plans.
@@ -123,7 +123,7 @@ many service plans.
 | capabilityStatus | string | The service plan status of the service plan.                                                                      |
 | targetType       | string | The target type of the service plan. This identifies whether the product is applicable to a "User" or a "Tenant". |
 
-## <span id="SubscribedSku"/><span id="subscribedsku"/><span id="SUBSCRIBEDSKU"/>SubscribedSku
+## SubscribedSku
 
 Describes a subscribed product owned by a tenant.
 

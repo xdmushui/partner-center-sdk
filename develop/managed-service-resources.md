@@ -21,7 +21,7 @@ Managed services are services to which a partner has delegated admin
 privileges. Partners can provide support for and file service requests
 on the behalf of their managed services.
 
-## <span id="ManagedService"/><span id="managedservice"/><span id="MANAGEDSERVICE"/>ManagedService
+## ManagedService
 
 Describes a managed service.
 
@@ -33,7 +33,7 @@ Describes a managed service.
 | Links      | ManagedServiceLinks | The resource links corresponding to the managed service. |
 | Attributes | ResourceAttributes  | The metadata attributes corresponding to the agreement.  |
 
-## <span id="ManagedServiceLinks"/><span id="managedservicelinks"/><span id="MANAGEDSERVICELINKS"/>ManagedServiceLinks
+## ManagedServiceLinks
 
 Contains the links that allow the partner with delegated admin
 permissions to provide support for the service.

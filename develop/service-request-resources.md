@@ -20,7 +20,7 @@ Partners can file service requests on behalf of their partners to report
 disruptions services provided by Microsoft or to request other technical
 support that they are incapable of providing.
 
-## <span id="ServiceRequest"/><span id="servicerequest"/><span id="SERVICEREQUEST"/>ServiceRequest
+## ServiceRequest
 
 Describes a service request filed by a partner, including how that
 request is progressing.
@@ -48,7 +48,7 @@ request is progressing.
 | CountryCode      | string                                                        | The country corresponding to the service request.                                    |
 | Attributes       | ResourceAttributes                                            | The metadata attributes corresponding to the service request.                        |
 
-## <span id="ServiceRequestContact"/><span id="servicerequestcontact"/><span id="SERVICEREQUESTCONTACT"/>ServiceRequestContact
+## ServiceRequestContact
 
 Describes a contact that creates or modifies a service request.
 
@@ -61,7 +61,7 @@ Describes a contact that creates or modifies a service request.
 | Email        | string                                                    | The email of the contact.                              |
 | PhoneNumber  | string                                                    | The phone number of the contact.                       |
 
-## <span id="ServiceRequestNote"/><span id="servicerequestnote"/><span id="SERVICEREQUESTNOTE"/>ServiceRequestNote
+## ServiceRequestNote
 
 Describes a note attached to a service request.
 
@@ -71,7 +71,7 @@ Describes a note attached to a service request.
 | CreatedDate   | date   | The date and time when the note was created. |
 | Text          | string | The text of the note.                        |
 
-## <span id="ServiceRequestOrganization"/><span id="servicerequestorganization"/><span id="SERVICEREQUESTORGANIZATION"/>ServiceRequestOrganization
+## ServiceRequestOrganization
 
 Describes the organization for which the service request is created.
 
@@ -81,7 +81,7 @@ Describes the organization for which the service request is created.
 | Name        | string | The name of the organization.         |
 | PhoneNumber | string | The phone number of the organization. |
 
-## <span id="SupportTopic"/><span id="supporttopic"/><span id="SUPPORTTOPIC"/>SupportTopic
+## SupportTopic
 
 Describes a support topic. Service requests specify a support topic to
 ensure that they are processed quickly and effectively.

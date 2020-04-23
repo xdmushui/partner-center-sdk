@@ -20,7 +20,7 @@ How to get an [Azure Rate Card](azure-rate-card-resources.md) with prices for Mi
 
 Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## <span id="examples">Examples
 
 ### C#
 
@@ -54,7 +54,7 @@ To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://git
 Get-PartnerAzureRateCard -SharedServices
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -92,7 +92,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 

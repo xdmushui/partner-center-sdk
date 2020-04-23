@@ -18,11 +18,11 @@ ms.localizationpriority: medium
 
 Gets an object representing a user's support profile.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get your support profile, use your **IAggregatePartner.Profiles** collection. Call the [**SupportProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.getasync) methods.
 
@@ -34,7 +34,7 @@ SupportProfile supportProfile = partnerOperations.Profiles.SupportProfile.Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: GetSupportProfile.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -60,7 +60,7 @@ MS-RequestId: 07029132-385d-416f-a9a6-df5e9e4c78d3
 MS-CorrelationId: 20604323-50bf-4738-9968-c5486ab32be0
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns a **SupportProfile** object in the response body.
 

@@ -19,11 +19,11 @@ ms.localizationpriority: medium
 
 Gets an object representing the partner's organization profile.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## <span id="examples">Examples
 
 ### C#
 
@@ -59,7 +59,7 @@ To get your organiztion profile, execute the [**Get-PartnerOrganizationProfile**
 Get-PartnerOrganizationProfile
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -85,7 +85,7 @@ MS-RequestId: b85cb7ab-cc2e-4966-93f0-cf0d8377a93f
 MS-CorrelationId: 1bb03149-88d2-4bc2-9cc1-d6e83890fa9e
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns an **OrganizationProfile** object in the response body.
 
