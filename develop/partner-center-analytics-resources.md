@@ -105,7 +105,7 @@ Represents all of the analytical data for a subscription.
 |        productName        |             string             |                                                                The name of the product.                                                                |
 |     subscriptionType      |             string             |       The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".       |
 |     autoRenewEnabled      |            boolean             |                                         A value indicating whether the subscription is renewed automatically.                                          |
-|         partnerId         |             string             | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+|         partnerId         |             string             | The MPN ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
 |       friendlyName        |             string             |                                                             The name of the subscription.                                                              |
 |        partnerName        |             string             |                                              Name of the partner for whom the subscription was purchased                                               |
 |       providerName        |             string             |            When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.             |
@@ -143,7 +143,7 @@ Represents all of the analytical data for a search.
 | keywordCountry | string | The country specified in the search. |
 | detailsViewed | Boolean | Indicates if search details were viewed. |
 | keywordIndustryFocus | string | The industry to search within, for example, healthcare. |
-| mpnId | string | The Microsoft Partner Network (MPN) ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| mpnId | string | The Microsoft Partner Network (MPN) ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
 | partnerMarket | string | Locale where the partner conducts business. |
 | keywordProduct | string | The product specified in the search. |
 | referralSubmitted | Boolean | Indicates if a referral was submitted. |
