@@ -112,6 +112,7 @@ Content-Length: 1530
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9
 MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
+
 {
   "id": "eebd1b55-5360-4438-a11d-5c06918c3014",
   "commerceId": "99e6a635-48e7-424d-9059-c9db944e3c54",
@@ -180,9 +181,7 @@ MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
     "self": {
       "uri": "/customers/eebd1b55-5360-4438-a11d-5c06918c3014",
       "method": "GET",
-      "headers": [
-
-      ]
+      "headers": []
     }
   },
   "attributes": {
