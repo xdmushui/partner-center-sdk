@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # License resources
 
-
 **Applies To**
 
 - Partner Center
@@ -20,7 +19,6 @@ ms.localizationpriority: medium
 Describes resources related to licenses.
 
 ## <span id="License"/><span id="license"/><span id="LICENSE"/>License
-
 
 Describes a user license.
 
@@ -35,7 +33,6 @@ Describes a user license.
 
 ## <span id="LicenseUpdate"/><span id="licenseupdate"/><span id="LICENSEUPDATE"/>LicenseUpdate
 
-
 Provides information used to assign or remove licenses from a user.
 
 | Property         | Type                                                           | Description                                               |
@@ -47,7 +44,6 @@ Provides information used to assign or remove licenses from a user.
 
 ## <span id="LicenseAssignment"/><span id="licenseassignment"/><span id="LICENSEASSIGNMENT"/>LicenseAssignment
 
-
 Provides information needed for a license update operation.
 
 | Property      | Type             | Description                                                                |
@@ -56,7 +52,6 @@ Provides information needed for a license update operation.
 | skuId         | string           | The product SKU identifier for the license.                                |
 
 ## <span id="LicenseWarning"/><span id="licensewarning"/><span id="LICENSEWARNING"/>LicenseWarning
-
 
 Contains warning information that occurred during a license update
 operation.
@@ -68,7 +63,6 @@ operation.
 | servicePlans | array of strings | The service plan names associated with the warning. |
 
 ## <span id="ProductSku"/><span id="productsku"/><span id="PRODUCTSKU"/>ProductSku
-
 
 Describes product details.
 
@@ -118,7 +112,6 @@ Describes product details.
 
 ## <span id="ServicePlan"/><span id="serviceplan"/><span id="SERVICEPLAN"/>ServicePlan
 
-
 Identifies a deployable service within a product SKU. A product can have
 many service plans.
 
@@ -131,7 +124,6 @@ many service plans.
 | targetType       | string | The target type of the service plan. This identifies whether the product is applicable to a "User" or a "Tenant". |
 
 ## <span id="SubscribedSku"/><span id="subscribedsku"/><span id="SUBSCRIBEDSKU"/>SubscribedSku
-
 
 Describes a subscribed product owned by a tenant.
 
@@ -147,5 +139,4 @@ Describes a subscribed product owned by a tenant.
 | servicePlans     | array of ServicePlan resources                                 | The collection of service plans of a product.                                                     |
 | capabilityStatus | string                                                         | The sku status of a product.                                                                      |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the resource.                                            |
-
 

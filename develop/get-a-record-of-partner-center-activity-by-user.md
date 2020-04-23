@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a record of Partner Center activity
 
-
 **Applies To**
 
 - Partner Center
@@ -23,11 +22,9 @@ Use this API to retrieve audit records for the previous 30 days from the current
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve a record of Partner Center operations, first establish the date range for the records you want to retrieve. The code example that follows employs only a start date, but you can also include an end date. See the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) method for more information. Next, create the variables you need for the type of filter you want to apply, and assign the appropriate values. For example, to filter by company name substring, create a variable to hold the substring. To filter by customer ID, create a variable to hold the ID.
 
@@ -80,7 +77,6 @@ while (auditRecordEnumerator.HasValue)
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Folder**: Auditing
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/> REST Request
-
 
 ### Request syntax
 
@@ -170,7 +166,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
 
 If successful, this method returns a set of activities that meet the filters.
 

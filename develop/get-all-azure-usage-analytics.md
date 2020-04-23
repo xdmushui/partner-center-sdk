@@ -177,7 +177,6 @@ How to get all the Azure usage analytics information for your customers.
   </tbody>
 </table>
 
-
 ### Request headers
 
 - See [Headers](headers.md) for more information.
@@ -197,7 +196,6 @@ Content-Length: 0
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
 

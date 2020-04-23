@@ -9,23 +9,19 @@ ms.localizationpriority: medium
 
 # Remove a reseller relationship with a customer
 
-
 **Applies To**
 
 - Partner Center
 
-
 Remove a reseller relationship with a customer that you no longer have transactions with.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - All Azure Reserved VM Instance orders must be cancelled before a reseller relationship is removed. Call Azure support for cancelling any open Azure Reserved VM Instance orders.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To remove the reseller relationship for a customer, you must first ensure that any active Azure Reserved VM Instances for that customer are cancelled and that all active subscriptions for that customer are suspended. To do this, determine the ID of the customer for whom you want to delete the reseller relationship (in the following code example, the user is prompted to provide the customer identifier).
 
@@ -36,7 +32,6 @@ Then, retrieve a collection of the customer's subscriptions by calling the [**IA
 After confirming that all active Azure Reserved VM Instances for that customer are cancelled and all active subscriptions are suspended, you can remove the reseller relationship for the customer. First, create a new [Customer](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object with the [Customer.RelationshipToPartner](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer.relationshiptopartner) property set to [**CustomerPartnerRelationship.None**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerpartnerrelationship). Then call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method using the customer identifier to specify the customer, and call the **Patch** method, passing in the new customer object.
 
 To re-establish the relationship, repeat the process of [requesting a reseller relationship](https://docs.microsoft.com/partner-center/develop/request-reseller-relationship).
-
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -80,9 +75,7 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: DeletePartnerCustomerRelationship.cs
 
-
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -126,7 +119,6 @@ Date: Fri, 12 Jan 2018 00:31:55 GMT
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, this method removes a reseller relationship for the specified customer.
 

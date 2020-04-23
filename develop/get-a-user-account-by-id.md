@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a user account by ID
 
-
 **Applies To**
 
 - Partner Center
@@ -21,7 +20,6 @@ Get a specific user account for a customer.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve a user account for a customer, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to retrieve the specific user. Finally, call the [**Users.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.getasync) method to retrieve the user account.
 
@@ -37,7 +35,6 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerUserDetails.cs
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -75,7 +72,6 @@ Host: api.partnercenter.microsoft.com
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, this method returns the user account for the customer.
 

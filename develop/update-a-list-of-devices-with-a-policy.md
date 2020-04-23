@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update a list of devices with a policy
 
-
 **Applies To**
 
 - Partner Center
@@ -20,14 +19,12 @@ How to update a list of devices with a configuration policy for the specified cu
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - The customer identifier.
 - The policy identifier.
 - The device identifiers of the devices to update.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update a list of devices with the specified configuration policy, first, instantiate a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [KeyValuePair](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)[**(PolicyCategory,**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.policycategory)string) and add the policy to apply, as shown in the following code example. You will need the policy identifier of the policy.
 
@@ -74,7 +71,6 @@ var trackingLocation =
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateDevicesPolicy.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
@@ -140,7 +136,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve the status of this batch process. Save this URI for use with other related REST APIs.
 

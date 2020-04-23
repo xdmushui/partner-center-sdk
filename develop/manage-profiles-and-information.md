@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Manage accounts and profiles
 
-
 **Applies To**
 
 - Partner Center

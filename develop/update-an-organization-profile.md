@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Update an organization profile
 
-
 **Applies To**
 
 - Partner Center
@@ -22,11 +21,9 @@ Updates a partner's billing profile.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update your organization profile, retrieve the profile and make any necessary changes. Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the **Update()** method.
 
@@ -44,7 +41,6 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
@@ -105,7 +101,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns an **OrganizationProfile** object in the response body.
 

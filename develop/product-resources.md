@@ -10,16 +10,13 @@ ms.localizationpriority: medium
 
 # Products resources
 
-
 **Applies To**
 
 - Partner Center
 
 Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 
-
 ## Product
-
 
 Represents a purchasable good or service. A product by itself is not a purchasable item.
 
@@ -35,7 +32,6 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 
 ## ItemType
 
-
 Represents the type of a product.
 
 | Property        | Type                          | Description                                                                          |
@@ -46,7 +42,6 @@ Represents the type of a product.
 
 ## ProductLinks
 
-
 Contains a list of links for a [Product](#product).
 
 | Property        | Type                                                          | Description                                          |
@@ -55,7 +50,6 @@ Contains a list of links for a [Product](#product).
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
 
 ## Sku
-
 
 Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
 
@@ -94,7 +88,6 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | sku		      | [Sku](#sku)						| The SKU this availability corresponds to. |
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
-
 
 ## Term
 

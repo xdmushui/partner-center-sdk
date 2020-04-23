@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Transition a subscription
 
-
 **Applies To**
 
 - Partner Center
@@ -22,13 +21,11 @@ Upgrades a customer's subscription to a specified target subscription.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - Two subscription IDs, one for the initial subscription and one for the target subscription.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To upgrade a customer's subscription, first [get that's customer's subscription](get-a-subscription-by-id.md). Then, obtain a list of upgrades for that subscription by calling the **Upgrades** property followed by the **Get()** or **GetAsync()** methods. Choose a target upgrade from that list of upgrades, and then call the **Upgrades** property of the initial subscription, followed by the **Create()** method.
 
@@ -44,7 +41,6 @@ UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerI
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpgradeSubscription.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
@@ -145,7 +141,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns an **Upgrade** result resource in the response body.
 

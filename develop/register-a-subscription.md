@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Register a subscription
 
-
 **Applies To**
 
 - Partner Center
@@ -21,13 +20,11 @@ To purchase an Azure reservation you must have at least one existing CSP Azure s
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To register a customer's subscription, retrieve an interface to subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, call the [**Subscription.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method with the subscription ID to identify the subscription that you are registering.
 
@@ -42,9 +39,7 @@ Finally, call the **Registration.Register()** method to register the subscriptio
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).Registration.Register();
 ```
 
-
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -84,7 +79,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
 
 If successful, the response contains a **Location** header with a URI that can be used to retrieve the subscription registration status. Save this URI for use with other related REST APIs. For an example of how to retrieve the status, see [Get subscription registration status](get-subscription-registration-status.md).
 

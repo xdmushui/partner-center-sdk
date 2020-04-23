@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Manage billing
 
-
 **Applies To**
 
 - Partner Center

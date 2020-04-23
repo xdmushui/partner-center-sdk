@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Upgrade resources
 
-
 **Applies To**
 
 - Partner Center
@@ -22,7 +21,6 @@ Describes the resources used to upgrade a user from a source
 subscription to a target subscription.
 
 ## <span id="Upgrade"/><span id="upgrade"/><span id="UPGRADE"/>Upgrade
-
 
 Describes the behavior of an individual upgrade resource.
 
@@ -37,7 +35,6 @@ Describes the behavior of an individual upgrade resource.
 
 ## <span id="UpgradeError"/><span id="upgradeerror"/><span id="UPGRADEERROR"/>UpgradeError
 
-
 Describes a reason why an upgrade cannot be performed.
 
 | Property          | Type               | Description                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -48,7 +45,6 @@ Describes a reason why an upgrade cannot be performed.
 | Attributes        | ResourceAttributes | The metadata attributes corresponding to the error.                                                                                                                                                                                                                                                                                                                                             |
 
 ## <span id="UpgradeResult"/><span id="upgraderesult"/><span id="UPGRADERESULT"/>UpgradeResult
-
 
 Describes a the result of the subscription upgrade process.
 
@@ -63,7 +59,6 @@ Describes a the result of the subscription upgrade process.
 
 ## <span id="UserLicenseError"/><span id="userlicenseerror"/><span id="USERLICENSEERROR"/>UserLicenseError
 
-
 Describes errors arising from failed user license transfer.
 
 | Property     | Type                   | Description                                                               |
@@ -73,5 +68,4 @@ Describes errors arising from failed user license transfer.
 | Email        | string                 | The email of the user.                                                    |
 | Errors       | array of ServiceFaults | A list of exceptions thrown when trying to perform user license transfer. |
 | Attributes   | ResourceAttributes     | The metadata attributes corresponding to the license.                     |
-
 

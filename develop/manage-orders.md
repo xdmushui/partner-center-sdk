@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Manage orders
 
-
 **Applies To**
 
 - Partner Center

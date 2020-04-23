@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Retrieve a relationship request URL
 
-
 **Applies To**
 
 - Partner Center
@@ -21,11 +20,9 @@ How to retrieve a relationship request URL to send to a customer.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To retrieve a relationship request URL, first use [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) to get an interface to the partner's customer operations. Next, use the [**RelationshipRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.relationshiprequest) property to get an interface to customer relationship request operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationshiprequests.icustomerrelationshiprequest.getasync) method to retrieve the URL.
 
@@ -38,7 +35,6 @@ var customerRelationshipRequest = partnerOperations.Customers.RelationshipReques
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerRelationshipRequest.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
 
 ### Request syntax
 
@@ -68,7 +64,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, the response contains the [RelationshipRequest](relationships-resources.md#relationshiprequest) object.
 

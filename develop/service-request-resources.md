@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Service request resources
 
-
 **Applies To**
 
 - Partner Center
@@ -22,7 +21,6 @@ disruptions services provided by Microsoft or to request other technical
 support that they are incapable of providing.
 
 ## <span id="ServiceRequest"/><span id="servicerequest"/><span id="SERVICEREQUEST"/>ServiceRequest
-
 
 Describes a service request filed by a partner, including how that
 request is progressing.
@@ -52,7 +50,6 @@ request is progressing.
 
 ## <span id="ServiceRequestContact"/><span id="servicerequestcontact"/><span id="SERVICEREQUESTCONTACT"/>ServiceRequestContact
 
-
 Describes a contact that creates or modifies a service request.
 
 | Property     | Type                                                      | Description                                            |
@@ -66,7 +63,6 @@ Describes a contact that creates or modifies a service request.
 
 ## <span id="ServiceRequestNote"/><span id="servicerequestnote"/><span id="SERVICEREQUESTNOTE"/>ServiceRequestNote
 
-
 Describes a note attached to a service request.
 
 | Property      | Type   | Description                                  |
@@ -76,7 +72,6 @@ Describes a note attached to a service request.
 | Text          | string | The text of the note.                        |
 
 ## <span id="ServiceRequestOrganization"/><span id="servicerequestorganization"/><span id="SERVICEREQUESTORGANIZATION"/>ServiceRequestOrganization
-
 
 Describes the organization for which the service request is created.
 
@@ -88,7 +83,6 @@ Describes the organization for which the service request is created.
 
 ## <span id="SupportTopic"/><span id="supporttopic"/><span id="SUPPORTTOPIC"/>SupportTopic
 
-
 Describes a support topic. Service requests specify a support topic to
 ensure that they are processed quickly and effectively.
 
@@ -98,5 +92,4 @@ ensure that they are processed quickly and effectively.
 | Description | string             | The description of the support topic.                         |
 | Id          | string             | The unique id of the support topic.                           |
 | Attributes  | ResourceAttributes | The metadata attributes corresponding to the service request. |
-
 

@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Utility resources
 
-
 **Applies To**
 
 - Partner Center
@@ -20,7 +19,6 @@ ms.localizationpriority: medium
 
 The Partner Center REST API contains many resources which describe
 general-purpose data models used throughout the SDK.
-
 
 ## <span id="address"/><span id="ADDRESS"/>Address
 
@@ -42,7 +40,6 @@ market](get-market-specific-validation-data.md).
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
 | PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional. |
 
-
 ## <span id="Contact"/><span id="contact"/><span id="CONTACT"/>Contact
 
 Describes contact information for a specific individual.
@@ -54,7 +51,6 @@ Describes contact information for a specific individual.
 | Email       | string | The contact's email address. |
 | PhoneNumber | string | The contact's phone number.  |
 
-
 ## <span id="FieldFilter"/><span id="fieldfilter"/><span id="FIELDFILTER"/>FieldFilter
 
 Describes a filter that can be applied to search results.
@@ -62,7 +58,6 @@ Describes a filter that can be applied to search results.
 | Property | Type   | Description                                                                                                                                                                                        |
 |----------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Operator | string | The filter operator: "equals", "not\_equals", "greater\_than", "greater\_than\_or\_equals", "less\_than", "less\_than\_or\_equals", "substring", "and", "or", "starts\_with", "not\_starts\_with". |
-
 
 ## <span id="FileInfo"/><span id="fileinfo"/><span id="FILEINFO"/>FileInfo
 
@@ -76,7 +71,6 @@ Represents an external file uploaded to Partner Center.
 | FileSize                 | long   | The size of the file.                         |
 | Id                       | string | The unique ID for the file upload.            |
 
-
 ## <span id="Link"/><span id="link"/><span id="LINK"/>Link
 
 Contains a URI link and associated information.
@@ -86,7 +80,6 @@ Contains a URI link and associated information.
 | URI      | string                 | The URI.                           |
 | Method   | string                 | The method represented by the URI. |
 | Headers  | Array of KeyValuePairs | The headers for the link.          |
-
 
 ## <span id="PasswordProfile"/><span id="passwordprofile"/><span id="PASSWORDPROFILE"/>PasswordProfile
 
@@ -100,7 +93,6 @@ Describes a specific password and if that password needs to be changed.
 | Password            | [SecureString](#securestring) | The password.                                                          |
 | ForceChangePassword | boolean                       | Determines if the password needs to be forcibly changed on next login. |
 
-
 ## <span id="ResourceLinks"/><span id="resourcelinks"/><span id="RESOURCELINKS"/>ResourceLinks
 
 Contains a list of links for a resource.
@@ -112,7 +104,6 @@ Contains a list of links for a resource.
 | Previous   | [Link](#link)                             | The previous page of items.                        |
 | Attributes | [ResourceAttributes](#resourceattributes) | The metadata attributes corresponding to the user. |
 
-
 ## <span id="ResourceAttributes"/><span id="resourceattributes"/><span id="RESOURCEATTRIBUTES"/>ResourceAttributes
 
 Contains attribute metadata for a resource.
@@ -122,7 +113,6 @@ Contains attribute metadata for a resource.
 | Etag       | string | The etag, also known as the object version. |
 | ObjectType | string | The type of object of the base resource.    |
 
-
 ## <span id="SecureString"/><span id="securestring"/><span id="SECURESTRING"/>SecureString
 
 Stores secured information, such as a password.
@@ -130,7 +120,6 @@ Stores secured information, such as a password.
 | Property | Type | Description                       |
 |----------|------|-----------------------------------|
 | Length   | int  | The length of the secured string. |
-
 
 ## <span id="ValidationCode"/><span id="validationcode"/><span id="VALIDATIONCODE"/>ValidationCode
 

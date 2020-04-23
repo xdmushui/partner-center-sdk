@@ -9,24 +9,19 @@ ms.localizationpriority: medium
 
 # Update a cart
 
-
 **Applies To**
 
 - Partner Center
-
 
 How to update an order for a customer in a cart.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A Cart ID for an existing cart.
 
-
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
 
@@ -45,7 +40,6 @@ var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId)
 ```
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -79,7 +73,6 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                               |
 
-
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
 | Property             | Type                        | Required     | Description                                                                                        |
@@ -94,7 +87,6 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
-
 
 ### Request example
 
@@ -137,7 +129,6 @@ Expect: 100-continue
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 

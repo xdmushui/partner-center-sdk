@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a list of offers for a market
 
-
 **Applies To**
 
 - Partner Center

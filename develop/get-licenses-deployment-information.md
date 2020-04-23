@@ -17,9 +17,7 @@ How to get deployment information for Office and Dynamics licenses.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
-
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
@@ -28,7 +26,6 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 | Method  | Request URI                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/deployment/license/ HTTP/1.1 |
-
 
 ### Request headers
 
@@ -44,7 +41,6 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 | groupby           | string   | <p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p><ul><li><strong>serviceCode</strong></li><li><strong>serviceName</strong></li><li><strong>channel</strong></li><li><strong>customerTenantId</strong></li><li><strong>customerName</strong></li><li><strong>productId</strong></li><li><strong>productName</strong></li></ul><p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p><ul><li><strong>licensesDeployed</strong></li><li><strong>licensesSold</strong></li></ul> | No |
 | processedDateTime | DateTime | One can specify the date from which usage data was processed. Defaults to the latest date when the data was processed | No |
 
-
 ### Request example
 
 ```http
@@ -56,7 +52,6 @@ MS-CorrelationId: 9cbdf63c-2608-4ad8-b0a9-abae27d859d9
 X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
-
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 

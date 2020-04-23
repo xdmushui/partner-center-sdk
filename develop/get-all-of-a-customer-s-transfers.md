@@ -9,7 +9,6 @@ ms.localizationpriority: medium
 
 # Get a customer's transfers
 
-
 **Applies To**
 
 - Partner Center
@@ -58,7 +57,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
 
 If successful, this method returns a list of [TransferEntity](transfer-entity-resources.md) resources in the response body.
 

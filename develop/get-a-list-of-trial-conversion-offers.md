@@ -44,7 +44,6 @@ var conversions =
 |---------|-----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions HTTP/1.1 |
 
-
 ### URI parameter
 
 Use the following path parameters to identify the customer and trial subscription.
@@ -53,7 +52,6 @@ Use the following path parameters to identify the customer and trial subscriptio
 |-----------------|--------|----------|-----------------------------------------------------------------|
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.           |
 | subscription-id | string | Yes      | A GUID formatted string that identifies the trial subscription. |
-
 
 ### Request headers
 
