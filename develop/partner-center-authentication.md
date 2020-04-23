@@ -26,9 +26,9 @@ Partner Center utilizes Azure Active Directory for authentication. When interact
 
 1. To begin, you need to make sure that you have both a primary Partner Center account, and an integration sandbox Partner Center account. For more information, see [Set up Partner Center accounts for API access](set-up-api-access-in-partner-center.md). Make note of the Azure AAD App registration ID and Secret (client secret is required for App only identification) for both your primary account and your integration sandbox account.
 
-2. Sign in to Azure AD from the Azure management portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
+2. Sign in to Azure AD from the Azure portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
 
-3. In the Azure management portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
+3. In the Azure portal, **Add application**. Search for "Microsoft Partner Center", which is the Microsoft Partner Center application. Set the **Delegated Permissions** to **Access Partner Center API**. If you are using Partner Center for Microsoft Cloud Germany or Partner Center for Microsoft Cloud for US Government, this step is mandatory. If you are using Partner Center global instance, this step is optional. CSP Partners can use the App Management feature in the Partner Center portal to bypass this step for Partner Center global instance.
 
 ## App-only authentication
 
@@ -115,7 +115,7 @@ The partner consent process can be performed in a number of ways. To help partne
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using ASP.NET to capture consent, request a refresh token, and securely store it in Azure Key Vault. Perform the following steps to create the required prerequisites for this sample.
 
-1. Create an instance of Azure Key Vault using the Azure management portal or the following PowerShell commands. Before executing the command be sure to modify the parameter values accordingly. The vault name must be unique.
+1. Create an instance of Azure Key Vault using the Azure portal or the following PowerShell commands. Before executing the command be sure to modify the parameter values accordingly. The vault name must be unique.
 
     ```azurepowershell-interactive
     Login-AzureRmAccount
@@ -128,7 +128,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
     If you need help creating the instance of Azure Key Vault see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal](https://docs.microsoft.com/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell](https://docs.microsoft.com/azure/key-vault/quick-create-powershell) for step by step directions on how to create an instance of Azure Key Vault, then set and retrieve a secret.
 
-2. Create an Azure AD Application and a key using the Azure management portal or the following commands.
+2. Create an Azure AD Application and a key using the Azure portal or the following commands.
 
     ```azurepowershell-interactive
     Connect-AzureAD
@@ -144,7 +144,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
     Be sure to make note of the application identifier and secret values because they will be used in the steps below.
 
-3. Grant the newly create Azure AD application the read secrets permissions using the Azure management portal or the following commands.
+3. Grant the newly create Azure AD application the read secrets permissions using the Azure portal or the following commands.
 
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
@@ -203,7 +203,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using JSP to capture consent, request a refresh token, and secure store in Azure Key Vault. Perform the following to create the required prerequisites for this sample.
 
-1. Create an instance of Azure Key Vault using the Azure management portal or the following PowerShell commands. Before executing the command be sure to modify the parameter values accordingly. The vault name must be unique.
+1. Create an instance of Azure Key Vault using the Azure portal or the following PowerShell commands. Before executing the command be sure to modify the parameter values accordingly. The vault name must be unique.
 
     ```azurepowershell-interactive
     Login-AzureRmAccount
@@ -216,7 +216,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
     If you need help creating the instance of Azure Key Vault see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal](https://docs.microsoft.com/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell](https://docs.microsoft.com/azure/key-vault/quick-create-powershell) for step by step direction on how to create an instance of Azure Key Vault and set and retrieve a secret.
 
-2. Create an Azure AD Application and a key using the Azure management portal or the following commands.
+2. Create an Azure AD Application and a key using the Azure portal or the following commands.
 
     ```azurepowershell-interactive
     Connect-AzureAD
@@ -232,7 +232,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 
     Be sure to document the application identifier and secret values because they will be used in the steps below.
 
-3. Grant the newly created Azure AD application the read secrets permissions using the Azure management portal or the following commands.
+3. Grant the newly created Azure AD application the read secrets permissions using the Azure portal or the following commands.
 
     ```azurepowershell-interactive
     $app = Get-AzureADApplication -Filter {AppId -eq 'ENTER-APP-ID-HERE'}
