@@ -26,14 +26,14 @@ This resource represents the products to which the customer has right to use bec
 
 | Property | Type | Description |
 |----------|------|-------------|
-| referenceOrder | [ReferenceOrder](#referenceorder) | The order reference which resulted in the entitlement. |
+| referenceOrder | [ReferenceOrder](#referenceorder) | The order reference that resulted in the entitlement. |
 | productId | string | The ID of the product. |
 | skuID | string | The ID of the SKU. |
 | quantity | int | The quantity of entitlements (excludes Unfulfilled/Transfered entitlements). |
 | quantityDetails | IEnumerable<[QuantityDetail](#quantitydetail)> | The list of entitlement quantity details (the number of items and status of each quantity). |
 | entitlementType | string | The type of entitlement. (Updated to string from [EntitlementType](#entitlementtype) in SDK 1.8.) |
 | entitledArtifacts | IEnumerable<[Artifact](#artifact)> | The list of artifacts associated with the entitlement. |
-| IncludedEntitlements | IEnumerable<[Entitlement](#artifact)> | The list of entitlements which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
+| IncludedEntitlements | IEnumerable<[Entitlement](#artifact)> | The list of entitlements, which are implicitly included as a result of the ProductId / SkuId purchase from catalog. |
 | ExpiryDate | string in UTC date-time format  | The entitlement expiry date (if applicable). |
 
 
@@ -78,7 +78,7 @@ The artifact associated with the entitlement.
 | Property | Type | Description |
 |----------|------|-------------|
 | artifactType | string | The type of artifact. (Updated to string from [ArtifactType](#artifacttype) in SDK V1.8) |
-| dynamicAttributes | Dictionary&lt;string, object&gt; | Dynamic attributes containing artifacttype specific values. For example when artifactType = "reservedinstance", this will contain "reservationType" = "virtualmachines" or "reservationType" = "sqldatabases" denoting virtual machine reserved instance or Azure SQL reserved instance. (Available starting in SDK v1.9) |
+| dynamicAttributes | Dictionary&lt;string, object&gt; | Dynamic attributes containing artifacttype specific values. For example when artifactType = "reservedinstance", this property will contain "reservationType" = "virtualmachines" or "reservationType" = "sqldatabases" denoting virtual machine reserved instance or Azure SQL reserved instance. (Available starting in SDK v1.9) |
 
 
 ## <span id="ArtifactType"/><span id="artifacttype"/><span id="ARTIFACTTYPE"/>ArtifactType

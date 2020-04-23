@@ -116,7 +116,7 @@ Before making a one-time purchase, complete the following steps:
 
 ## Order submission
 
-To submit your order, do the following steps:
+To submit your order, follow these steps:
 
 1. Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart-resources.md), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](order-resources.md).
 

@@ -91,7 +91,7 @@ Content-Length: 195
 ## How to authenticate the callback
 
 
-To authenticate the callback event received from Partner Center, do the following:
+To authenticate the callback event received from Partner Center, follow these steps:
 
 1.	Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
 2.	Download the certificate used to sign the content (x-ms-certificate-url).
