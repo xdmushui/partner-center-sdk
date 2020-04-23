@@ -45,8 +45,6 @@ To retrieve a list of indirect resellers with whom the specified customer has a 
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/relationships HTTP/1.1 |
 
-
-
 ### URI parameter
 
 Use the following path parameter to identify the customer.
@@ -54,8 +52,6 @@ Use the following path parameter to identify the customer.
 | Name        | Type   | Required | Description                                           |
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
-
-
 
 ### Request headers
 

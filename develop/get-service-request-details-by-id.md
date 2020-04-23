@@ -51,8 +51,6 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 |-----------|---------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1  |
 
-
-
 ### URI parameter
 
 Use the following URI parameter to get the specified service request.
@@ -60,8 +58,6 @@ Use the following URI parameter to get the specified service request.
 | Name                  | Type     | Required | Description                                 |
 |-----------------------|----------|----------|---------------------------------------------|
 | **servicerequest-id** | **guid** | Y        | A GUID that identifies the service request. |
-
-
 
 ### Request headers
 

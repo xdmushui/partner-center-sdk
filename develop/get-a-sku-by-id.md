@@ -49,8 +49,6 @@ var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus
 |---------|---------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
 
-
-
 ### URI parameter
 
 Use the following path and query parameters to get a SKU for the specified product using the specified SKU ID.
@@ -60,8 +58,6 @@ Use the following path and query parameters to get a SKU for the specified produ
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
-
-
 
 ### Request headers
 

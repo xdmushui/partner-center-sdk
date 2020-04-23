@@ -77,8 +77,6 @@ This table describes the [TransferLineItem](transfer-entity-resources.md#transfe
 | transferError        | string                     | No       | Applied after transferEntity is accepted in case of an error.                                        |
 | status               | string                     | No       | The status of the lineitem in the transferEntity.                                                    |
 
-
-
 ### Request example
 
 ```http

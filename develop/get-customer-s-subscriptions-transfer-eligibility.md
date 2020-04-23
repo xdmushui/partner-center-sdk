@@ -35,8 +35,6 @@ How to get a collection of a customer's subscriptions that are eligible/ineligib
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/transferseligibility?transferType={transfer-type} HTTP/1.1 |
 
-
-
 ### URI parameter
 
 This table lists the required query parameter to get all the subscriptions.
@@ -45,8 +43,6 @@ This table lists the required query parameter to get all the subscriptions.
 |--------------------|--------|----------|-------------------------------------------------------|
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 | transfer-type      | string | Yes      | The type of transfer that is intended.                |
-
-
 
 ### Request headers
 
