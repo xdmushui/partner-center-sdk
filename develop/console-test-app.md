@@ -36,7 +36,7 @@ To modify the list of scenarios that are run, comment out lines in **IPartnerSce
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 [Download the sample code](https://go.microsoft.com/fwlink/p/?LinkId=2026887) and modify it as necessary.
 
