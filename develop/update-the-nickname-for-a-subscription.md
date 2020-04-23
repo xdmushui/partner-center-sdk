@@ -57,7 +57,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -68,7 +68,7 @@ This table lists the required query parameter to update the subscription nicknam
 | **customer-tenant-id**  | **guid** | Y        | The **customer-tenant-id** (a GUID). |
 | **id-for-subscription** | **guid** | Y        | The subscription ID (a GUID).        |
 
- 
+
 
 ### Request headers
 
@@ -174,11 +174,3 @@ Connection: Keep-Alive
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -1,6 +1,6 @@
 ---
 title: Partner Center webhooks
-description: Webhooks allow partners to register for resource change events. 
+description: Webhooks allow partners to register for resource change events.
 ms.date: 04/10/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -17,9 +17,9 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner's registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center. 
+The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner's registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center.
 
-Partners can select from Webhook events, like the following, that are supported by Partner Center.  
+Partners can select from Webhook events, like the following, that are supported by Partner Center.
 
 - **Test Event ("test-created")**
 
@@ -27,10 +27,10 @@ Partners can select from Webhook events, like the following, that are supported 
 
 - **Subscription Updated Event ("subscription-updated")**
 
-    This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API. 
- 
+    This event is raised when the subscription changes. These events will be generated when there is an internal change in addition to when changes are made through the Partner Center API.
+
     >[!NOTE]
-    >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered. 
+    >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.
 
 - **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
@@ -38,18 +38,18 @@ Partners can select from Webhook events, like the following, that are supported 
 
 - **Referral Created Event ("referral-created")**
 
-    This event is raised when the referral is created. 
+    This event is raised when the referral is created.
 
 - **Referral Updated Event ("referral-updated")**
 
-    This event is raised when the referral is updated. 
+    This event is raised when the referral is updated.
 
 - **Invoice Ready Event ("invoice-ready")**
 
     This event is raised when the new invoice is ready.
 
 
-Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add. 
+Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add.
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
@@ -62,7 +62,7 @@ For a complete list of Webhook events supported by Partner Center, see [Partner 
 
 ## Receiving events from Partner Center
 
-To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery. 
+To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery.
 
 The following sample shows an event posted from Partner Center.
 
@@ -82,10 +82,10 @@ Content-Length: 195
     "ResourceName": "test",
     "AuditUri": null,
     "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
-} 
+}
 ```
 
->[!NOTE] 
+>[!NOTE]
 >The Authorization header has a scheme of "Signature". This is a base64 encoded signature of the content.
 
 ## How to authenticate the callback
@@ -170,7 +170,7 @@ Vary: Accept-Encoding
 MS-CorrelationId: c0bcf3a3-46e9-48fd-8e05-f674b8fd5d66
 MS-RequestId: 79419bbb-06ee-48da-8221-e09480537dfc
 X-Locale: en-US
- 
+
 [ "subscription-updated", "test-created", "usagerecords-thresholdExceeded" ]
 ```
 
@@ -193,7 +193,7 @@ Accept: */*
 Host: api.partnercenter.microsoft.com
 Accept-Encoding: gzip, deflate
 Content-Length: 219
- 
+
 {
     "WebhookUrl": "{{YourCallbackUrl}}",
     "WebhookEvents": ["subscription-updated", "test-created"]
@@ -210,7 +210,7 @@ Content-Type: application/json; charset=utf-8
 content-encoding: gzip
 Vary: Accept-Encoding
 MS-CorrelationId: 718f2336-8b56-4f42-93ac-54896047c59a
-MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2 
+MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 {
     "SubscriberId": "e82cac64-dc67-4cd3-849b-78b6127dd57d",
@@ -221,7 +221,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 
 
-### View a registration  
+### View a registration
 
 Returns the Webhooks event registration for a tenant.
 
@@ -264,7 +264,7 @@ X-Locale: en-US
 
 ### Update an event registration
 
-Updates an existing event registration. 
+Updates an existing event registration.
 
 #### Resource URL
 
@@ -281,7 +281,7 @@ Accept: */*
 Host: api.partnercenter.microsoft.com
 Accept-Encoding: gzip, deflate
 Content-Length: 258
- 
+
 {
     "WebhookUrl": "{{YourCallbackUrl}}",
     "WebhookEvents": ["subscription-updated", "test-created"]
@@ -298,7 +298,7 @@ Content-Type: application/json; charset=utf-8
 content-encoding: gzip
 Vary: Accept-Encoding
 MS-CorrelationId: 718f2336-8b56-4f42-93ac-54896047c59a
-MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2 
+MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 {
     "SubscriberId": "e82cac64-dc67-4cd3-849b-78b6127dd57d",
@@ -310,10 +310,10 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 ### Send a test event to validate your registration
 
-Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event. 
+Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event.
 
 >[!NOTE]
->There is a throttle limit of 2 requests per minute when posting a validation event. 
+>There is a throttle limit of 2 requests per minute when posting a validation event.
 
 #### Resource URL
 

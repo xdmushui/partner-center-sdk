@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 ## <span id="Entitlement"/><span id="entitlement"/><span id="ENTITLEMENT"/>Entitlement
 
 
-This resource represents the products to which the customer has right to use because of partner purchase on items from the catalog. 
+This resource represents the products to which the customer has right to use because of partner purchase on items from the catalog.
 
 | Property | Type | Description |
 |----------|------|-------------|
@@ -39,7 +39,7 @@ This resource represents the products to which the customer has right to use bec
 
 ## <span id="ReferenceOrder"/><span id="referenceorder"/><span id="REFERENCEORDER"/>ReferenceOrder
 
-The order reference of an entitlement. 
+The order reference of an entitlement.
 
 | Property | Type | Description |
 |----------|------|-------------|
@@ -60,7 +60,7 @@ Represents the details of an entitlement quantity.
 
 ## <span id="EntitlementType"/><span id="entitlementtype"/><span id="ENTITLEMENTTYPE"/>EntitlementType
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Deprecated in SDK v1.9
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement.
@@ -73,7 +73,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 ## <span id="Artifact"/><span id="artifact"/><span id="ARTIFACT"/>Artifact
 
-The artifact associated with the entitlement.  
+The artifact associated with the entitlement.
 
 | Property | Type | Description |
 |----------|------|-------------|
@@ -83,7 +83,7 @@ The artifact associated with the entitlement.
 
 ## <span id="ArtifactType"/><span id="artifacttype"/><span id="ARTIFACTTYPE"/>ArtifactType
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Deprecated in SDK v1.9
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
@@ -95,7 +95,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 
 ## <span id="ReservedInstanceArtifact"/><span id="reservedinstanceartifact"/><span id="RESERVEDINSTANCEARTIFACT"/>ReservedInstanceArtifact
 
-The artifact associated with an Azure Reserved Instance entitlement. It inherits from the [Artifact](#artifact) class. 
+The artifact associated with an Azure Reserved Instance entitlement. It inherits from the [Artifact](#artifact) class.
 
 | Property   | Type                           | Description                                        |
 |------------|--------------------------------|----------------------------------------------------|
@@ -105,7 +105,7 @@ The artifact associated with an Azure Reserved Instance entitlement. It inherits
 
 ## <span id="ReservedInstanceArtifactDetails"/><span id="reservedinstanceartifactdetails"/><span id="RESERVEDINSTANCEARTIFACTDETAILS"/>ReservedInstanceArtifactDetails
 
-Represents the entity returned upon invocation of the Azure Reserved Instance artifact link. 
+Represents the entity returned upon invocation of the Azure Reserved Instance artifact link.
 
 
 |   Property   |           Type           |                          Description                          |
@@ -131,10 +131,10 @@ Represents an individual reservation.
 
 ## <span id="VirtualMachineReservedInstanceArtifact"/><span id="virtualmachinereservedinstanceartifact"/><span id="VIRTUALMACHINERESERVEDARTIFACT"/>VirtualMachineReservedInstanceArtifact
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Deprecated in SDK v1.9
 
-The artifact associated with an Azure Reserved Virtual Machine Instance entitlement. It inherits from the [Artifact](#artifact) class.  
+The artifact associated with an Azure Reserved Virtual Machine Instance entitlement. It inherits from the [Artifact](#artifact) class.
 
 | Property   | Type                              | Description                                        |
 |------------|-----------------------------------|----------------------------------------------------|
@@ -144,10 +144,10 @@ The artifact associated with an Azure Reserved Virtual Machine Instance entitlem
 
 ## <span id="VirtualMachineReservedInstanceArtifactDetails"/><span id="virtualmachinereservedinstanceartifactdetails"/><span id="VIRTUALMACHINERESERVEDARTIFACTDETAILS"/>VirtualMachineReservedInstanceArtifactDetails
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Deprecated in SDK v1.9
 
-Represents the entity returned upon invocation of the Azure Reserved Virtual Machine Instance artifact link.  
+Represents the entity returned upon invocation of the Azure Reserved Virtual Machine Instance artifact link.
 
 | Property                    | Type                                                                 | Description           |
 |-----------------------------|----------------------------------------------------------------------|-----------------------|
@@ -157,7 +157,7 @@ Represents the entity returned upon invocation of the Azure Reserved Virtual Mac
 
 ## <span id="VirtualMachineReservation"/><span id="virtualmachinereservation"/><span id="VIRTUALMACHINERESERVATION"/>VirtualMachineReservation
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Deprecated in SDK v1.9
 
 Represents an individual virtual machine reservation.

@@ -38,11 +38,11 @@ To process the device policy update request, call the [**IAggregatePartner.Custo
 ``` csharp
 IAggregatePartner partnerOperations;
 string selectedCustomerId;
-string selectedConfigurationPolicyId; 
+string selectedConfigurationPolicyId;
 string selectedDeviceId;
 
-// Indicate the policy to apply to the list of devices. 
-List<KeyValuePair<PolicyCategory, string>> 
+// Indicate the policy to apply to the list of devices.
+List<KeyValuePair<PolicyCategory, string>>
     policyToBeAdded = new List<KeyValuePair<PolicyCategory, string>>
 {
     new KeyValuePair<PolicyCategory, string>
@@ -60,14 +60,14 @@ List<Device> devices = new List<Device>
 };
 
 // Instantiate a DevicePolicyUpdateRequest object.
-DevicePolicyUpdateRequest 
+DevicePolicyUpdateRequest
     devicePolicyUpdateRequest = new DevicePolicyUpdateRequest
 {
-    Devices = devices             
+    Devices = devices
 };
 
 // Process the DevicePolicyUpdateRequest.
-var trackingLocation = 
+var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DevicePolicy.Update(devicePolicyUpdateRequest);
 ```
 
@@ -82,7 +82,7 @@ var trackingLocation =
 |-----------|-----------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/DevicePolicyUpdates HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -92,7 +92,7 @@ Use the following path parameters when creating the request.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+
 
 ### Request headers
 
@@ -164,11 +164,3 @@ MS-CV: rCXyd8Z/lUSxUd0P.0
 MS-ServerId: 020021921
 Date: Thu, 28 Sep 2017 21:33:05 GMT
 ```
-
- 
-
- 
-
-
-
-

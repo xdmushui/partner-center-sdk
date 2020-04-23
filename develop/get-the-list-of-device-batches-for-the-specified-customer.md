@@ -35,7 +35,7 @@ To get the collection of device batches for the specified customer, first call t
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 
-var devicesBatches = 
+var devicesBatches =
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.Get();
 ```
 
@@ -50,7 +50,7 @@ var devicesBatches =
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -60,7 +60,7 @@ Use the following path parameters when creating the request.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
+
 
 ### Request headers
 
@@ -74,7 +74,7 @@ None
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/deviceBatches HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c

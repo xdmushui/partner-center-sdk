@@ -37,7 +37,7 @@ The **ProductUpgradesEligibility** resource provides information about the custo
 | upgradeId            | string                                       | The upgrade ID if a product upgrade for given family is already in place. |
 | reason               | string                                       | The reason for which customer isn't eligible for product upgrade. |
 | productFamily        | string                                       | The product family for which the upgrade is requested for. |
-| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.
 
 ## ProductUpgradesStatus
 
@@ -72,7 +72,7 @@ The **UpgradeProduct** resource provides information about the product being upg
 | Property | Type |Description |
 |----------------------|----------------------------------------------|----------------------------------------------------------------|
 | id                   | string                                       | A GUID-formatted string that identifies the product. |
-| name                 | string                                       | The friendly name of product being upgraded. |  
+| name                 | string                                       | The friendly name of product being upgraded. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. |
 
 ## ErrorDetails

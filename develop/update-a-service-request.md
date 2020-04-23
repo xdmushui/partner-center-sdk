@@ -53,7 +53,7 @@ ServiceRequest updatedServiceRequest = partnerOperations.ServiceRequests.ById(ex
 |-----------|---------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -63,7 +63,7 @@ Use the following URI parameter to update the service request.
 |-----------------------|----------|----------|---------------------------------------------|
 | **servicerequest-id** | **guid** | Y        | A GUID that identifies the service request. |
 
- 
+
 
 ### Request headers
 
@@ -165,11 +165,3 @@ Date: Mon, 09 Jan 2017 23:31:15 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

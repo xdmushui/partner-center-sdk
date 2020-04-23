@@ -33,7 +33,7 @@ To verify if a domain is available, first call [**IAggregatePartner.Domains**](h
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// const string domain = "contoso.onmicrosoft.com";  
+// const string domain = "contoso.onmicrosoft.com";
 
 bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 ```
@@ -49,7 +49,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 |----------|--------------------------------------------------------------------------|
 | **HEAD** | [*{baseURL}*](partner-center-rest-urls.md)/v1/domains/{domain} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -59,7 +59,7 @@ Use the following query parameter to verify domain availability.
 |------------|------------|----------|-----------------------------------------------|
 | **domain** | **string** | Y        | A string that identifies the domain to check. |
 
- 
+
 
 ### Request headers
 
@@ -114,11 +114,3 @@ MS-CV: RRmc+bEw9U2e97CC.0
 MS-ServerId: 202010406
 Date: Tue, 31 Jan 2017 22:36:01 GMT
 ```
-
- 
-
- 
-
-
-
-

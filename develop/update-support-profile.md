@@ -33,7 +33,7 @@ To update your support profile, first [get your support profile](get-support-pro
 ``` csharp
 // IAggregatePartner partnerOperations;
 
-// updated profile 
+// updated profile
 SupportProfile newSupportProfile = new SupportProfile
 {
    Email = supportProfile.Email,

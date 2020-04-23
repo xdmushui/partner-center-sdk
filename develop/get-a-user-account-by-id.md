@@ -45,8 +45,6 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
 
- 
-
 ### URI parameter
 
 Use the following URI parameters to identify the correct customer and user.
@@ -56,7 +54,7 @@ Use the following URI parameters to identify the correct customer and user.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                       |
 
- 
+
 
 ### Request headers
 
@@ -121,9 +119,9 @@ Date: Wed, 21 Dec 2016 22:59:10 GMT
 }
 ```
 
- 
 
- 
+
+
 
 
 

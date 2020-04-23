@@ -1,5 +1,5 @@
 ---
-title: Cancel software purchases 
+title: Cancel software purchases
 description: Self-serve option to cancel software subscriptions and perpetual software purchases using Partner Center APIs.
 ms.date: 12/19/2019
 ms.service: partner-dashboard

@@ -35,7 +35,7 @@ IAggregatePartner partnerOperations;
 string selectedCustomerId;
 string selectedConfigurationPolicyId;
 
-ConfigurationPolicy retrievedConfigurationPolicy = 
+ConfigurationPolicy retrievedConfigurationPolicy =
     partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedConfigurationPolicyId).Get();
 ```
 
@@ -50,7 +50,7 @@ ConfigurationPolicy retrievedConfigurationPolicy =
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -61,7 +61,7 @@ Use the following path and query parameters when creating the request.
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 | policy-id   | string | Yes      | A GUID-formatted string that identifies the policy.   |
 
- 
+
 
 ### Request headers
 
@@ -75,7 +75,7 @@ None
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c
@@ -118,11 +118,3 @@ Date: Tue, 25 Jul 2017 18:08:27 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -97,7 +97,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -109,7 +109,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -121,7 +121,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     }
   ],
@@ -130,7 +130,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/transfers/46e8ed67-8adf-4f65-b3d8-d31318080556",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

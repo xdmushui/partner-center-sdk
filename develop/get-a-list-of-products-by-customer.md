@@ -71,7 +71,7 @@ This method returns the following error codes:
 
 | HTTP Status Code | Error code   | Description                     |
 |------------------|--------------|---------------------------------|
-| 403 | 400036 | Access to the requested targetView is not allowed. | 
+| 403 | 400036 | Access to the requested targetView is not allowed. |
 
 #### Response example
 
@@ -81,7 +81,7 @@ Content-Length: 1909
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: cad955c2-8efc-47fe-b112-548ff002ba18
 MS-RequestId: ae7288e2-2673-4ad4-8c12-7aad818d5949
- 
+
 {
     "totalCount": 2,
     "items": [

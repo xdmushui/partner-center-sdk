@@ -16,9 +16,9 @@ ms.localizationpriority: medium
 
 How to make a one-time purchase of software and reservation products such as software subscriptions, perpetual software, and Azure Reserved Virtual Machine (VM) Instances, using the Partner Center API.
 
-> [!NOTE]  
-> Software subscriptions are not available in the following markets:  
->  
+> [!NOTE]
+> Software subscriptions are not available in the following markets:
+>
 > | Unavailable Markets            | &nbsp;                            | &nbsp;                                   |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Papua New Guinea                         |
@@ -58,7 +58,7 @@ How to make a one-time purchase of software and reservation products such as sof
 > | Gabon                          | Norfolk Island                    | Wallis and Futuna                        |
 > | Gambia                         | Northern Mariana Islands          | Yemen                                    |
 > | Gibraltar                      | Palau                             | &nbsp;                                   |
->  
+>
 &nbsp;
 > [!NOTE]
 > To purchase perpetual software, you must have been previously qualified. Contact support for more information.
@@ -112,7 +112,7 @@ Before making a one-time purchase, complete the following steps:
 3. Retrieve the [availability](product-resources.md#availability) for the [SKU](product-resources.md#sku). You will need the **CatalogItemId** of the availability when placing the order. To get this value, use one of the following APIs:
 
     - [Get a list of availabilities for a SKU](get-a-list-of-availabilities-for-a-sku.md)
-    - [Get an availability using the availability ID](get-an-availability-by-id.md)  
+    - [Get an availability using the availability ID](get-an-availability-by-id.md)
 
 ## Order submission
 
@@ -143,7 +143,7 @@ As part of managing the lifecycle of your one-time purchases in Partner Center, 
 
 ## Invoice and reconciliation
 
-The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges.  
+The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges.
 
 ### Balance and payment
 
@@ -158,11 +158,11 @@ To get a collection of invoices that show both recurring and one time charges, s
 
 ### Single Invoice
 
-To retrieve a specific invoice using the invoice ID, see [Get an invoice by ID](get-invoice-by-id.md).  
+To retrieve a specific invoice using the invoice ID, see [Get an invoice by ID](get-invoice-by-id.md).
 
 ### Reconciliation
 
-To get a collection of invoice line item details (Reconciliation line items) for a specific invoice ID, see [Get invoice line items](get-invoiceline-items.md).  
+To get a collection of invoice line item details (Reconciliation line items) for a specific invoice ID, see [Get invoice line items](get-invoiceline-items.md).
 
 ### Download an invoice as a PDF
 

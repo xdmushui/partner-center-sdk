@@ -1,6 +1,6 @@
 ---
 title: Get all search analytics information
-description: How to get all the search analytics information. 
+description: How to get all the search analytics information.
 ms.assetid: CCF9D929-EE5F-4141-9884-ECA559A5171B
 ms.date: 06/27/2018
 ms.service: partner-dashboard
@@ -18,12 +18,12 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud for US Government
 
 
-How to get all the search analytics information for your customers. 
+How to get all the search analytics information for your customers.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only. 
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -33,8 +33,6 @@ How to get all the search analytics information for your customers.
 | Method  | Request URI |
 |---------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/search HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -46,7 +44,7 @@ How to get all the search analytics information for your customers.
 | aggregationLevel | string | The *aggregationLevel* parameter requires a *groupby*. The *aggregationLevel* parameter applies to all date fields present in the *groupby*. </br> **Example:**</br>  `.../search?groupby=termField1,dateField1,termField2&aggregationLevel=day` |
 |       top        | string |                                                                     The page limit is 10000. Takes any value less than 10000.  </br> **Example:**</br>  `.../search?top=100`                                                                     |
 |       skip       | string |                                                                                  Number of rows to skip. </br> **Example:**</br> `.../search?top=100&skip=100`                                                                                   |
-  
+
 ### Request headers
 
 - See [Headers](headers.md) for more information.

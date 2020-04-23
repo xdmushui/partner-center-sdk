@@ -37,7 +37,7 @@ To get an invoice statement by ID, use your **IPartner.Invoices** collection and
 var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Documents.Statement.Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceStatement.cs 
+**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceStatement.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
@@ -57,7 +57,7 @@ Use the following query parameter to get the invoice statement.
 |------------|------------|----------|----------------------------------------------------------------------------------------------------|
 | invoice-id | string     | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 
- 
+
 
 ### Request headers
 

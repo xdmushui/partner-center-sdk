@@ -104,7 +104,7 @@ Historically the [resource owner password credentials grant](https://tools.ietf.
 
 The partner consent process is an interactive process where the partner authenticates using multi-factor authentication, consents to the application, and a refresh token is stored in a secure repository such as Azure Key Vault. We recommend that a dedicated account for integration purposes be used for this process.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The appropriate multi-factor authentication solution should be enabled for the service account used in the partner consent process. If it is not then the resulting refresh token will not be compliant with security requirements.
 
 ### Samples for App + User authentication
@@ -171,13 +171,13 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```xml
     <!-- AppID that represents CSP application -->
     <add key="ida:CSPApplicationId" value="" />
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate to your environment.
-        The following application secret is for sample application only. please do not use secret directly from the config file.    
+        The following application secret is for sample application only. please do not use secret directly from the config file.
     -->
     <add key="ida:CSPApplicationSecret" value="" />
 
-    <!-- 
+    <!--
         Endpoint address for the instance of Azure KeyVault. This is
         the DNS Name for the instance of Key Vault that you provisioned.
      -->
@@ -186,18 +186,18 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     <!-- App ID that is given access for KeyVault to store refresh tokens -->
     <add key="ida:KeyVaultClientId" value="" />
 
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate
         to your environment. The following application secret is for sample
-        application only. please do not use secret directly from the config file.    
+        application only. please do not use secret directly from the config file.
     -->
     <add key="ida:KeyVaultClientSecret" value="" />
     ```
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > Sensitive information such as application secrets should not be stored in configuration files. It was done here because this is a sample application. With your production application we strongly recommend that you use certificate-based authentication. See [Certificate credentials for application authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials) for more information.
 
-8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
+8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.
 
 ### Java (app+user authentication)
 
@@ -287,10 +287,10 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
     </filter>
     ```
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > Sensitive information such as application secrets should not be stored in configurations files. It was done here because this is a sample application. With your production application, we strongly recommend that you use certificate based authenticate. See [Key Vault Certificate authentication](https://github.com/Azure-Samples/key-vault-java-certificate-authentication) for more information.
 
-8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.  
+8. When you run this sample project it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token which is stored in the configured instance of Azure Key Vault.
 
 ## Cloud Solution Provider authentication
 
@@ -315,9 +315,9 @@ To help partners understand how to perform each required operation, we have deve
     ```xml
     <!-- AppID that represents CSP application -->
     <add key="ida:CSPApplicationId" value="" />
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate to your environment.
-        The following application secret is for sample application only. please do not use secret directly from the config file.    
+        The following application secret is for sample application only. please do not use secret directly from the config file.
     -->
     <add key="ida:CSPApplicationSecret" value="" />
 
@@ -327,9 +327,9 @@ To help partners understand how to perform each required operation, we have deve
     <!-- AppID that is given access for keyvault to store the refresh tokens -->
     <add key="ida:KeyVaultClientId" value="" />
 
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate to your environment.
-        The following application secret is for sample application only. please do not use secret directly from the config file.    
+        The following application secret is for sample application only. please do not use secret directly from the config file.
     -->
     <add key="ida:KeyVaultClientSecret" value="" />
     ```
@@ -381,7 +381,7 @@ To help control panel vendors understand how to perform each required operation,
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > User credentials from a Cloud Solution Provider partner should not be stored. The refresh token obtained through the partner consent process should be stored and used to request access tokens for interacting with any Microsoft API.
 
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
@@ -397,9 +397,9 @@ To help control panel vendors understand how to perform each required operation,
     <!-- AppID that represents Control panel vendor application -->
     <add key="ida:CPVApplicationId" value="" />
 
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate to your environment.
-        The following application secret is for sample application only. please do not use secret directly from the config file.    
+        The following application secret is for sample application only. please do not use secret directly from the config file.
     -->
     <add key="ida:CPVApplicationSecret" value="" />
 
@@ -409,9 +409,9 @@ To help control panel vendors understand how to perform each required operation,
     <!-- AppID that is given access for keyvault to store the refresh tokens -->
     <add key="ida:KeyVaultClientId" value="" />
 
-    <!-- 
+    <!--
         Please use certificate as your client secret and deploy the certificate to your environment.
-        The following application secret is for sample application only. please do not use secret directly from the config file.    
+        The following application secret is for sample application only. please do not use secret directly from the config file.
     -->
     <add key="ida:KeyVaultClientSecret" value="" />
     ```
@@ -464,7 +464,7 @@ After these permissions have been established, the sample performs operations us
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. See the [partner consent](#partner-consent) for additional details and an example.
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > User credentials from a Cloud Solution Provider partner should not be stored. The refresh token obtained through the partner consent process should be stored and used to request access tokens for interacting with any Microsoft API.
 
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using the following command

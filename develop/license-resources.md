@@ -27,7 +27,7 @@ Describes a user license.
 >[!NOTE]
 >Unsupported on Partner Center operated by 21Vianet.
 
- 
+
 
 | Property     | Type                                                           | Description                                                    |
 |--------------|----------------------------------------------------------------|----------------------------------------------------------------|
@@ -35,7 +35,7 @@ Describes a user license.
 | productSKU   | ProductSku                                                     | The sku of the product that corresponds to the license.        |
 | attributes   | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the license.          |
 
- 
+
 
 ## <span id="LicenseUpdate"/><span id="licenseupdate"/><span id="LICENSEUPDATE"/>LicenseUpdate
 
@@ -49,7 +49,7 @@ Provides information used to assign or remove licenses from a user.
 | licenseWarnings  | array of objects                                               | Array of [LicenseWarning](#licensewarning) objects.       |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                  |
 
- 
+
 
 ## <span id="LicenseAssignment"/><span id="licenseassignment"/><span id="LICENSEASSIGNMENT"/>LicenseAssignment
 
@@ -61,7 +61,7 @@ Provides information needed for a license update operation.
 | excludedPlans | array of strings | The service plan identifiers to be excluded from availability to the user. |
 | skuId         | string           | The product SKU identifier for the license.                                |
 
- 
+
 
 ## <span id="LicenseWarning"/><span id="licensewarning"/><span id="LICENSEWARNING"/>LicenseWarning
 
@@ -75,7 +75,7 @@ operation.
 | message      | string           | The warning message.                                |
 | servicePlans | array of strings | The service plan names associated with the warning. |
 
- 
+
 
 ## <span id="ProductSku"/><span id="productsku"/><span id="PRODUCTSKU"/>ProductSku
 
@@ -126,7 +126,7 @@ Describes product details.
 </tbody>
 </table>
 
- 
+
 
 ## <span id="ServicePlan"/><span id="serviceplan"/><span id="SERVICEPLAN"/>ServicePlan
 
@@ -142,7 +142,7 @@ many service plans.
 | capabilityStatus | string | The service plan status of the service plan.                                                                      |
 | targetType       | string | The target type of the service plan. This identifies whether the product is applicable to a "User" or a "Tenant". |
 
- 
+
 
 ## <span id="SubscribedSku"/><span id="subscribedsku"/><span id="SUBSCRIBEDSKU"/>SubscribedSku
 
@@ -161,13 +161,5 @@ Describes a subscribed product owned by a tenant.
 | servicePlans     | array of ServicePlan resources                                 | The collection of service plans of a product.                                                     |
 | capabilityStatus | string                                                         | The sku status of a product.                                                                      |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the resource.                                            |
-
- 
-
- 
-
- 
-
-
 
 

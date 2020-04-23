@@ -95,7 +95,7 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
 {
     "totalCount": 37,
     "items": [{
-        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de", 
+        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de",
         "entitlementId": "a356ac8c-e310-44f4-bf85-C7f29044af99",
         "friendlyName": "nickname",
         "quantity": 1,
@@ -130,11 +130,3 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

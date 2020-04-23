@@ -35,7 +35,7 @@ To get the status of a device batch upload, first call the [**IAggregatePartner.
 // string selectedCustomerId;
 // string selectedTrackingId;
 
-var status = 
+var status =
     partnerOperations.Customers.ById(selectedCustomerId).BatchUploadStatus.ById(selectedTrackingId).Get();
 ```
 
@@ -50,7 +50,7 @@ var status =
 |---------|-------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/batchJobStatus/{batchtracking-id} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -61,7 +61,7 @@ Use the following path parameters when creating the request.
 | customer-id      | string | Yes      | A GUID-formatted string that identifies the customer.                                                                                                                          |
 | batchtracking-id | string | Yes      | A GUID-formatted identifier that is used to retrieve a device batch upload status. This ID is returned in the Location header when the device batch is successfully submitted. |
 
- 
+
 
 ### Request headers
 
@@ -75,7 +75,7 @@ None
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/batchjobstatus/0127ed8e-ff72-4983-a3d8-e8d8bd378932 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c

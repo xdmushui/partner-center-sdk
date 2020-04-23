@@ -50,8 +50,6 @@ ResourceCollection<ServiceRequest> serviceRequests = partnerOperations.Customers
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/servicerequests HTTP/1.1 |
 
- 
-
 ### URI parameter
 
 Use the following query parameter to get all service requests for the customer.
@@ -59,8 +57,6 @@ Use the following query parameter to get all service requests for the customer.
 | Name                   | Type     | Required | Description                            |
 |------------------------|----------|----------|----------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.. |
-
- 
 
 ### Request headers
 
@@ -122,11 +118,3 @@ Date: Tue, 24 Nov 2015 07:19:21 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

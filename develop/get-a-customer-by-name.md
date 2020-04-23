@@ -39,7 +39,7 @@ Finally, to execute the filter and get the result, first use [**IAggregatePartne
 IAggregatePartner partnerOperations;
 
 // Specify the partial string to filter by (to match Contoso).
-string searchPrefix = "cont"  
+string searchPrefix = "cont"
 
 // Create a simple field filter.
 var fieldFilter = new SimpleFieldFilter(
@@ -81,8 +81,8 @@ An unencoded example looks like this:
 
 ```http
 ?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}
-```  
-  
+```
+
 The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |

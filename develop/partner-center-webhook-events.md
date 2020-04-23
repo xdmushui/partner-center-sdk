@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Partner Center webhook events are resource change events delivered in the form of HTTP POSTs to a registered URL. To receive an event from Partner Center, you host a callback where Partner Center can POST the event. The event is digitally signed so you can validate that it was sent from Partner Center. 
+Partner Center webhook events are resource change events delivered in the form of HTTP POSTs to a registered URL. To receive an event from Partner Center, you host a callback where Partner Center can POST the event. The event is digitally signed so you can validate that it was sent from Partner Center.
 
 For information on how to receive events, authenticate a callback, and use the Partner Center webhook APIs to create, view, and update an event registration, see [Partner Center Webhooks](partner-center-webhooks.md).
 
@@ -55,10 +55,10 @@ This event allows you to self-onboard and test your registration by requesting a
 
 ### Subscription Updated Event
 
-This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API.  This event will be only be generated when there are commerce level changes, for example, when the number of licenses are modified and when the state of the subscription changes. It will not be generated when resources are created within the subscription. 
+This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API.  This event will be only be generated when there are commerce level changes, for example, when the number of licenses are modified and when the state of the subscription changes. It will not be generated when resources are created within the subscription.
 
 >[!NOTE]
->There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.  
+>There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.
 
 #### Properties
 
@@ -77,7 +77,7 @@ This event is raised when the specified subscription changes. A Subscription Upd
     "EventName": "subscription-updated",
     "ResourceUri": "http://api.partnercenter.microsoft.com/webhooks/v1/customers/{{CustomerId}}/subscriptions/{{SubscriptionId}}",
     "ResourceName": "subscription",
-    "AuditUri": "https://api.partnercenter.microsoft.com/v1/auditrecords/{{AuditId}}", 
+    "AuditUri": "https://api.partnercenter.microsoft.com/v1/auditrecords/{{AuditId}}",
     "ResourceChangeUtcDate": "2017-11-16T16:19:06.3520276+00:00"
 }
 ```
@@ -110,7 +110,7 @@ This event is raised when the amount of Microsoft Azure usage for any customer e
 
 ### Referral Created Event
 
-This event is raised when the referral is created. 
+This event is raised when the referral is created.
 
 #### Properties
 

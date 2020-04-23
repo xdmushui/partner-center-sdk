@@ -46,7 +46,7 @@ var customerRelationshipRequest = partnerOperations.Customers.RelationshipReques
 |---------|----------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/relationshiprequests HTTP/1.1 |
 
- 
+
 
 ### Request headers
 
@@ -89,7 +89,7 @@ MS-RequestId: ee519026-4c67-4113-bec7-a38aca621bf0
 MS-CV: jbYZRWjU3E262f8o.0
 MS-ServerId: 030020643
 Date: Fri, 19 May 2017 22:32:07 GMT
-﻿
+
 {
     "url": "https://portal.office.com/partner/partnersignup.aspx?type=ResellerRelationship&id=3b33e682-00c3-41ee-9dd2-a548adf56438&csp=1&msppid=0",
     "attributes": {
@@ -97,11 +97,3 @@ Date: Fri, 19 May 2017 22:32:07 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -57,7 +57,7 @@ updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subsc
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
 
- 
+
 
 ### URI parameter
 
@@ -68,7 +68,7 @@ This table lists the required query parameter to suspend the subscription.
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
+
 
 ### Request headers
 
@@ -175,11 +175,3 @@ Connection: Keep-Alive
     }
 }
 ```
-
- 
-
- 
-
-
-
-
