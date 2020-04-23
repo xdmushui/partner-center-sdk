@@ -16,25 +16,19 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 How to get subscription analytics information for your customers filtered by a search query.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 ### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?filter={filter_string} |
-
- 
 
 ### URI parameters
 
@@ -44,8 +38,7 @@ Use the following required path parameter to identify your organization and filt
 |------|------|----------|-------------|
 | filter_string | string | Yes | The filter to apply to the subscription analytics. See the Filter syntax and Filter fields sections for the syntax, fields, and operators to use in this parameter. |
  
-
-**Filter syntax**
+### Filter syntax
 
 The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
 
@@ -54,13 +47,12 @@ An unencoded example looks like this:
 - Boolean: ?filter=Field operator Value
 - Contains ?filter=contains(field,'value')
 
-
-**Filter fields**
+### Filter fields
 
 The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
 The following are examples of filter strings:  
- 
+
 ```http
 autoRenewEnabled eq true
 

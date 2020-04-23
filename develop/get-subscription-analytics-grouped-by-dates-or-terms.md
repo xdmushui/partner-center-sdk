@@ -17,17 +17,13 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 How to get subscription analytics information for your customers grouped by dates or terms.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
-
 
 ### Request syntax
 
@@ -35,7 +31,6 @@ How to get subscription analytics information for your customers grouped by date
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?groupby={groupby_queries} |
 
- 
 ### URI parameters
 
 Use the following required path parameters to identify your organization and to group the results.
@@ -44,9 +39,7 @@ Use the following required path parameters to identify your organization and to 
 |------|------|----------|-------------|
 | groupby_queries | pairs of strings and dateTime | Yes | The terms and dates to filter the result. |
 
- 
-
-**GroupBy syntax**
+### GroupBy syntax
 
 The group by parameter must be composed as a series of comma separated, field values.
 
@@ -82,7 +75,7 @@ The following table shows a list of the supported fields for group by.
 | deprovisionedDate | string in UTC date time format | The date that the subscription was deprovisioned. The default value is null. |  
 | lastRenewalDate | string in UTC date time format | The date that the subscription was last renewed. The default value is null. |  
 
-**Filter fields**
+### Filter fields
 
 The following table lists optional filter fields and their descriptions:
 
@@ -93,7 +86,6 @@ The following table lists optional filter fields and their descriptions:
 | filter | string | One or more statements that filter the rows in the response. Each filter statement contains a field name from the response body and a value that are associated with the **eq**, **ne**, or for certain fields, the **contains** operator. Statements can be combined using **and** or **or**. String values must be surrounded by single quotes in the filter parameter. See the following section for a list of fields that can be filtered and the operators that are supported with those fields. |
 | aggregationLevel | string | Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: **day**, **week**, or **month**. If the value is not specified, the default is **dateRange**. **Note**: This parameter applies only when a date field is passed as part of the groupBy parameter. |
 | groupBy | string | A statement that applies data aggregation only to the specified fields. |
-
 
 ### Request headers
 
@@ -176,4 +168,4 @@ MS-RequestId: ec8f62e5-1d92-47e9-8d5d-1924af105123
 
 ## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
 
- - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
+[Partner Center Analytics - Resources](partner-center-analytics-resources.md)

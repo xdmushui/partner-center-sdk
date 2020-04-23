@@ -58,14 +58,11 @@ var customers = partnerOperations.Customers.Query(myQuery);
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-
 ### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size}&filter={filter} HTTP/1.1 |
-
- 
 
 ### URI parameters
 
@@ -76,9 +73,7 @@ Use the following query parameters.
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional. |
 | filter | filter | Yes      | The filter to apply to customers. This must be an encoded string.              |
 
- 
-
-**Filter Syntax**
+### Filter Syntax
 
 You must compose the filter parameter as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
 
@@ -95,8 +90,6 @@ The following table describes the required key-value pairs:
 | Field    | The field to filter. The valid values can be found in [**CustomerSearchField**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield). |
 | Value    | The value to filter by. The case of the value is ignored.                                                                |
 | Operator | The operator to apply. The only supported value for this customer scenario is "starts\_with".                            |
-
- 
 
 ### Request headers
 
@@ -120,7 +113,6 @@ Connection: Keep-Alive
 ```
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
 
 If successful, this method returns a collection of matching [Customer](customer-resources.md#customer) resources in the response body.
 
@@ -240,11 +232,3 @@ Date: Fri, 24 Feb 2017 22:08:20 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

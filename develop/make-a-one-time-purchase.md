@@ -145,20 +145,25 @@ As part of managing the lifecycle of your one-time purchases in Partner Center, 
 
 The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges.  
 
-**Balance and payment**
+### Balance and payment
+
 To get current account balance in your default currency type that is a balance of both recurring and one-time charges, see [Get your current account balance](get-the-reseller-s-current-account-balance.md)
 
-**Multi-currency balance and payment**
+### Multi-currency balance and payment
+
 To get your current account balance and a collection of invoice summaries containing an invoice summary with both recurring and one-time charges for each of your customer's currency types, see [Get invoice summaries](get-invoice-summaries.md).
 
-**Invoices**
+### Invoices
 To get a collection of invoices that show both recurring and one time charges, see [Get a collection of invoices](get-a-collection-of-invoices.md).
 
-**Single Invoice**
+### Single Invoice
+
 To retrieve a specific invoice using the invoice ID, see [Get an invoice by ID](get-invoice-by-id.md).  
 
-**Reconciliation**
+### Reconciliation
+
 To get a collection of invoice line item details (Reconciliation line items) for a specific invoice ID, see [Get invoice line items](get-invoiceline-items.md).  
 
-**Download an invoice as a PDF**
+### Download an invoice as a PDF
+
 To retrieve an invoice statement in PDF form using an invoice ID, see [Get an invoice statement](get-invoice-statement.md).

@@ -106,7 +106,7 @@ Use the following query parameters when creating the request.
 
  
 
-**Filter Syntax**
+### Filter syntax
 You must compose the filter parameter as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
 
 An unencoded example looks like this:

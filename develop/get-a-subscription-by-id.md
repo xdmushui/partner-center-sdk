@@ -93,7 +93,7 @@ If successful, this method returns a [Subscription](subscription-resources.md) r
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for a standard subscription**
+### Response example for a standard subscription
 
 ```http
 HTTP/1.1 200 OK
@@ -140,7 +140,7 @@ Date: Fri, 27 Jan 2017 21:51:40 GMT
 }
 ```
 
-**Response example for an add-on subscription**
+### Response example for an add-on subscription
 
 The response for an add-on subscription includes the parent subscription ID in the body and in the links.
 

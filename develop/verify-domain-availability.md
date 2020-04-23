@@ -91,7 +91,7 @@ If the domain exists it is not available for use and a response status code 200 
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for when the domain is already in use**
+### Response example for when the domain is already in use
 
 ```http
 HTTP/1.1 200 OK
@@ -103,7 +103,7 @@ MS-ServerId: 201022015
 Date: Tue, 31 Jan 2017 22:22:35 GMT
 ```
 
-**Response example for when the domain is available**
+### Response example for when the domain is available
 
 ```http
 HTTP/1.1 404 Not Found

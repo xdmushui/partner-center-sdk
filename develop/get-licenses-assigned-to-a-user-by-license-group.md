@@ -154,7 +154,7 @@ Date: June 24 2016 22:00:25 PST
 }
 ```
 
-**Response example (no matching licenses found)**
+### Response example (no matching licenses found)
 
 If no matching licenses can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 

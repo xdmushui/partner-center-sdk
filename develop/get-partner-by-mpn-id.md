@@ -86,7 +86,7 @@ If successful, the response body contains the [MpnProfile](profile-resources.md#
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example (success)**
+### Response example (success)
 
 ```http
 HTTP/1.1 200 OK
@@ -114,7 +114,7 @@ Date: Thu, 13 Apr 2017 18:13:40 GMT
 }
 ```
 
-**Response example (failure)**
+### Response example (failure)
 
 ```http
 HTTP/1.1 404 Not Found

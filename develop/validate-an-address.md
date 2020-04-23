@@ -179,7 +179,7 @@ If the request fails, the method returns a status code 400 as demonstrated in th
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response - validation succeeded example**
+### Response - validation succeeded example
 
 ```http
 HTTP/1.1 200 OK
@@ -191,7 +191,7 @@ MS-ServerId: 030011719
 Date: Mon, 13 Mar 2017 23:56:12 GMT
 ```
 
-**Response - validation failed example**
+### Response - validation failed example
 
 ```http
 HTTP/1.1 400 Bad Request
