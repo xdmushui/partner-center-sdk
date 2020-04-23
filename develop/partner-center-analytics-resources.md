@@ -29,7 +29,7 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 - [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
 
-This scenario returns your analytics information in a collection of [Azure usage](#azure_usage) resources.
+This scenario returns your analytics information in a collection of [Azure usage](#azure-usage-resource) resources.
 
 ## Azure usage resource
 
@@ -57,7 +57,7 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 - [Get all indirect resellers analytics information](get-all-indirect-resellers-analytics.md)
 
-This scenario returns your analytics information in a collection of [indirect resellers](#indirect_resellers) resources.
+This scenario returns your analytics information in a collection of [indirect resellers](#indirect-resellers-resource) resources.
 
 ## Indirect resellers resource
 
@@ -89,7 +89,7 @@ The following scenarios show you how to use the Analytics API to retrieve all yo
 - [Get subscription analytics information filtered by a search query](get-subscription-analytics-by-search-query.md)
 - [Get subscription analytics information grouped by dates or terms](get-subscription-analytics-grouped-by-dates-or-terms.md)
 
-All of these scenarios return your analytics information in a collection of [Subscription](#subscription) resources.
+All of these scenarios return your analytics information in a collection of [Subscription](#subscription-resource) resources.
 
 ## Subscription resource
 
@@ -130,7 +130,7 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 - [Get all search analytics information](get-all-search-analytics.md)
 
-This scenario returns your analytics information in a collection of [Search](#search_resource) resources.
+This scenario returns your analytics information in a collection of [Search](#search-resource) resources.
 
 ## Search resource
 
@@ -163,7 +163,7 @@ The following scenario shows you how to use the Analytics API to retrieve all yo
 
 - [Get all referrals analytics information](get-all-referrals-analytics.md)
 
-This scenario returns your analytics information in a collection of [Referrals](#referrals) resources.
+This scenario returns your analytics information in a collection of [Referrals](#referrals-resource) resources.
 
 > [!NOTE]
 > Referrals analytics are not available to the Partner Center operated by 21Vianet.

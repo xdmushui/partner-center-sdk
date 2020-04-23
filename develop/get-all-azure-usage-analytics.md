@@ -197,7 +197,7 @@ Content-Length: 0
 
 ## Response
 
-If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#azure_usage) resources.
+If successful, the response body contains a collection of [Azure usage](partner-center-analytics-resources.md#csp-program-azure-usage-analytics) resources.
 
 ### Response success and error codes
 

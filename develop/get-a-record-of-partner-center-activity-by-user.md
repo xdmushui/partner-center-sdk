@@ -76,7 +76,7 @@ while (auditRecordEnumerator.HasValue)
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Folder**: Auditing
 
-##  REST Request
+## REST Request
 
 ### Request syntax
 
@@ -123,11 +123,11 @@ The following table describes the required key-value pairs:
 <tbody>
 <tr class="odd">
 <td>Field</td>
-<td>The field to filter. The supported values can be found in <a href="#request">Request syntax</a>.</td>
+<td>The field to filter. The supported values can be found in <a href="#rest-request">Request syntax</a>.</td>
 </tr>
 <tr class="even">
 <td>Value</td>
-<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#request">Request syntax</a>:
+<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#rest-request">Request syntax</a>:
 <ul>
 <li><p>searchSubstring - Replace with the name of the company. You can enter a substring to match part of the company name (for example `bri` will match `Fabrikam, Inc`).</p>
 <p>Example: &quot;Value&quot;:&quot;bri&quot;</p></li>
@@ -139,7 +139,7 @@ The following table describes the required key-value pairs:
 </tr>
 <tr class="odd">
 <td>Operator</td>
-<td>The operator to apply. The supported operators can be found in <a href="#request">Request syntax</a>.</td>
+<td>The operator to apply. The supported operators can be found in <a href="#rest-request">Request syntax</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-##  REST Response
+## REST Response
 
 If successful, this method returns a set of activities that meet the filters.
 
@@ -185,7 +185,7 @@ MS-CV: 4xDKynq/zE2im0wj.0
 MS-ServerId: 030011719
 Date: Tue, 27 Jun 2017 22:19:46 GMT
 
-﻿{
+{
     "totalCount": 2,
     "items": [{
             "partnerId": "3b33e682-00c3-41ee-9dd2-a548adf56438",

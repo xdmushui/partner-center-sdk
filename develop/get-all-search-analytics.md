@@ -61,7 +61,7 @@ Content-Length: 0
 
 ## Response
 
-If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search_resource) resources.
+If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search-resource) resources.
 
 ### Response success and error codes
 

@@ -60,7 +60,7 @@ Content-Length: 0
 
 ## Response
 
-If successful, the response body contains a collection of [Referrals](partner-center-analytics-resources.md#referrals) resources.
+If successful, the response body contains a collection of [Referrals](partner-center-analytics-resources.md#referrals-resource) resources.
 
 ### Response success and error codes
 

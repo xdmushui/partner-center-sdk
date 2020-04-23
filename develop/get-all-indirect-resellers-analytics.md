@@ -241,7 +241,7 @@ Content-Length: 0
 
 ## Response
 
-If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#indirect_resellers) resources.
+If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#csp-program-indirect-resellers-analytics) resources.
 
 ### Response success and error codes
 
