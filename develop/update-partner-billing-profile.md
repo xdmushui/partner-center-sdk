@@ -19,11 +19,11 @@ ms.localizationpriority: medium
 
 Updates a partner's billing profile
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To update a partner billing profile, retrieve the existing profile. Once you have updated the profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the **Update()** method.
 
@@ -40,7 +40,7 @@ BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.Billing
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateBillingProfile.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -102,7 +102,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns a **BillingProfile** object in the response body.
 

@@ -19,11 +19,11 @@ ms.localizationpriority: medium
 
 How to get all the search analytics information for your customers.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -59,9 +59,9 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
-If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search_resource) resources.
+If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search-resource) resources.
 
 ### Response success and error codes
 
@@ -85,6 +85,6 @@ Each response comes with an HTTP status code that indicates success or failure a
 }
 ```
 
-## <span id="See_Also"/><span id="see_also"/><span id="SEE_ALSO"/>See also
+## See also
 
 - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)

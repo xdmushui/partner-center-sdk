@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying. For more information about this test-in-production (TiP) environment, see [Set up API access in Partner Center](set-up-api-access-in-partner-center.md).
 
-## <span id="Integration_sandbox_constraints"/><span id="integration_sandbox_constraints"/><span id="INTEGRATION_SANDBOX_CONSTRAINTS"/>Integration sandbox constraints
+## Integration sandbox constraints
 
 If you run automated build verification tests, conduct testing in production, or perform manual testing in the integration sandbox, you may reach the maximum limits for the integration sandbox. These limits are 75 customers, 5 subscriptions per customer, and 25 seats per subscription.
 
@@ -75,13 +75,13 @@ To clean up at the end of your test run so there's space for the next round of t
 
 - [Suspend a subscription](suspend-a-subscription.md) so that you can remove it.
 
-## <span id="Best_practices_for_REST_development"/><span id="best_practices_for_rest_development"/><span id="BEST_PRACTICES_FOR_REST_DEVELOPMENT"/>Best practices for REST development
+## Best practices for REST development
 
 - Use a network trace tool so that you can see your request, the response, and if there were any errors in the HTTP status code in the response. For more information about error handling, see [Partner Center REST error codes](error-codes.md).
 
 - Use a new Correlation ID for each call made to the Partner Center REST API. This ensures better logging and will help during debugging. For more information, see [Partner Center REST headers](headers.md).
 
-## <span id="Troubleshooting_tips_for_common_REST_problems"/><span id="troubleshooting_tips_for_common_rest_problems"/><span id="TROUBLESHOOTING_TIPS_FOR_COMMON_REST_PROBLEMS"/>Troubleshooting tips for common REST problems
+## Troubleshooting tips for common REST problems
 
 - Review all header properties, including the URL and API version.
 

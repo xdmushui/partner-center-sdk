@@ -20,11 +20,11 @@ This article describes how to retrieve a record of operations that was performed
 
 Use this API to retrieve audit records for the previous 30 days from the current date, or for a date range specified by including the start date and/or the end date. Note, however, that for performance reasons activity log data availability is limited to the previous 90 days. Requests with a start date greater than 90 days prior to the current date will receive a bad request exception (error code: 400) and an appropriate message.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To retrieve a record of Partner Center operations, first establish the date range for the records you want to retrieve. The following code example only uses a start date, but you can also include an end date. For more information, see the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) method. Next, create the variables you need for the type of filter you want to apply, and assign the appropriate values. For example, to filter by company name substring, create a variable to hold the substring. To filter by customer ID, create a variable to hold the ID.
 
@@ -76,7 +76,7 @@ while (auditRecordEnumerator.HasValue)
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Folder**: Auditing
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/> REST Request
+## REST Request
 
 ### Request syntax
 
@@ -123,11 +123,11 @@ The following table describes the required key-value pairs:
 <tbody>
 <tr class="odd">
 <td>Field</td>
-<td>The field to filter. The supported values can be found in <a href="#request">Request syntax</a>.</td>
+<td>The field to filter. The supported values can be found in <a href="#rest-request">Request syntax</a>.</td>
 </tr>
 <tr class="even">
 <td>Value</td>
-<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#request">Request syntax</a>:
+<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#rest-request">Request syntax</a>:
 <ul>
 <li><p>searchSubstring - Replace with the name of the company. You can enter a substring to match part of the company name (for example `bri` will match `Fabrikam, Inc`).</p>
 <p>Example: &quot;Value&quot;:&quot;bri&quot;</p></li>
@@ -139,7 +139,7 @@ The following table describes the required key-value pairs:
 </tr>
 <tr class="odd">
 <td>Operator</td>
-<td>The operator to apply. The supported operators can be found in <a href="#request">Request syntax</a>.</td>
+<td>The operator to apply. The supported operators can be found in <a href="#rest-request">Request syntax</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -165,7 +165,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+## REST Response
 
 If successful, this method returns a set of activities that meet the filters.
 
@@ -185,7 +185,7 @@ MS-CV: 4xDKynq/zE2im0wj.0
 MS-ServerId: 030011719
 Date: Tue, 27 Jun 2017 22:19:46 GMT
 
-﻿{
+{
     "totalCount": 2,
     "items": [{
             "partnerId": "3b33e682-00c3-41ee-9dd2-a548adf56438",

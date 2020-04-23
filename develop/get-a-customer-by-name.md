@@ -19,12 +19,12 @@ ms.localizationpriority: medium
 
 Gets a collection of [Customer](customer-resources.md#customer) resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A user-constructed filter.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get a collection of customers that match a filter, first instantiate a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object to create the filter. You'll need to pass a string that contains the [**CustomerSearchField**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield), and indicate the type of filter operation as [**FieldFilterOperation.StartsWith**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.fieldfilteroperation). That's the only field filter operation supported by the customers end point. You'll also need to provide the string to filter by.
 
@@ -53,7 +53,7 @@ var customers = partnerOperations.Customers.Query(myQuery);
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: FilterCustomers.cs
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+##  REST Request
 
 ### Request syntax
 
@@ -109,7 +109,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+##  REST Response
 
 If successful, this method returns a collection of matching [Customer](customer-resources.md#customer) resources in the response body.
 

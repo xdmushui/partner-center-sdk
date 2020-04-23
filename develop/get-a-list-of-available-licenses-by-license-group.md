@@ -16,13 +16,13 @@ ms.localizationpriority: medium
 
 How to get a list of licenses for the specified license groups available to users of the specified customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer identifier.
 - A list of one or more license group identifiers.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get a list of available licenses for the specified license groups, start by instantiating a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**LicenseGroupId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get the value of the [**SubscribedSkus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscribedskus) property to retrieve an interface to customer subscribed SKU collection operations. Finally, pass the list of license groups to the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to retrieve the list of subscribed SKUs with details on available license units.
 
@@ -43,7 +43,7 @@ List<LicenseGroupId> licenseGroupIds = new List<LicenseGroupId>() { LicenseGroup
 var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get(licenseGroupIds);
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+##  REST Request
 
 ### Request syntax
 
@@ -82,7 +82,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+##  REST Response
 
 If successful, the response body contains a collection of [SubscribedSku](license-resources.md#subscribedsku) resources.
 

@@ -23,7 +23,7 @@ information about how to use these elements, including sample code, see
 the [Scenarios](scenarios.md) section and the [Partner Center
 samples](partner-center-samples.md) section.
 
-## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
+## In this section
 
 <table>
 <colgroup>

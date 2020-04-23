@@ -20,7 +20,7 @@ ms.localizationpriority: medium
 Describes a product listed in the reseller catalog that they can offer
 to their customers.
 
-## <span id="Offer"/><span id="offer"/><span id="OFFER"/>Offer
+## Offer
 
 | Property                    | Type                      | Description                                                                                                                                                                |
 |-----------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ to their customers.
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
 
-## <span id="OfferCategory"/><span id="offercategory"/><span id="OFFERCATEGORY"/>OfferCategory
+## OfferCategory
 
 Describes the categorization of an offer. This includes the rank or
 priority of this offer category compared to others in the same product
@@ -70,7 +70,7 @@ line.
 | links      | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the OfferCategory.                                                                                                                     |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the OfferCategory.                                                                                                                |
 
-## <span id="OfferLinks"/><span id="offerlinks"/><span id="OFFERLINKS"/>OfferLinks
+## OfferLinks
 
 Contains links for learning more information about the offer.
 
@@ -81,7 +81,7 @@ Contains links for learning more information about the offer.
 | next      | Link | The next page of items.     |
 | previous  | Link | The previous page of items. |
 
-## <span id="OfferProduct"/><span id="offerproduct"/><span id="OFFERPRODUCT"/>OfferProduct
+## OfferProduct
 
 A product or service which may have more than one offer associated with it, each with different sets of features and targeted at different customer needs.
 

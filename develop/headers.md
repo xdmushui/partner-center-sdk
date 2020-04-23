@@ -20,7 +20,7 @@ ms.localizationpriority: medium
 The following HTTP request and response headers are supported by the
 Partner Center REST API. Not all API calls accept all headers.
 
-## <span id="Request_headers"/><span id="request_headers"/><span id="REQUEST_HEADERS"/>Request headers
+## Request headers
 
 The following HTTP request headers are supported by the Partner Center
 REST API.
@@ -36,7 +36,7 @@ REST API.
 | MS-PartnerCenter-Application | Optional. Specifies the name of the application that is using the Partner Center REST API.                                                                                                                                                                                             | string     |
 | X-Locale:                    | Optional. Specifies the language in which the rates are returned. Default is "en-US". For a list of supported values, see [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md).                                                                                                                                                                                                  | string     |
 
-## <span id="Response_headers"/><span id="response_headers"/><span id="RESPONSE_HEADERS"/>Response headers
+## Response headers
 
 The following HTTP response headers may be returned by the Partner
 Center REST API.

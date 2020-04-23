@@ -19,11 +19,11 @@ How to get partner licenses usage information aggregated to include all customer
 > [!NOTE]
 > This scenario is superceded by [Get licenses usage information](get-licenses-usage-information.md).
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To retrieve aggregated data on licenses deployment, first get an interface to partner level analytics collection operations from the [**IAggregatePartner.Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.analytics) property. Then retrieve an interface to the partner level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.ipartneranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**PartnerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.partnerlicensesusageinsights) objects.
 
@@ -33,7 +33,7 @@ To retrieve aggregated data on licenses deployment, first get an interface to pa
 var partnerLicensesUsageAnalytics = partnerOperations.Analytics.Licenses.Usage.Get();
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -61,7 +61,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the response body contains a collection of [PartnerLicensesUsageInsights](analytics-resources.md#partnerlicensesusageinsights) resources that provide information about the licenses used.
 

@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 Describes the behavior of a Cloud Solution Provider's profiles.
 
-## <span id="BillingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>BillingProfile
+## BillingProfile
 
 Describes a partner's billing profile.
 
@@ -35,7 +35,7 @@ Describes a partner's billing profile.
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.            |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
 
-## <span id="LegalBusinessProfile"/><span id="legalbusinessprofile"/><span id="LEGALBUSINESSPROFILE"/>LegalBusinessProfile
+## LegalBusinessProfile
 
 Describes a partner's legal business profile.
 
@@ -52,7 +52,7 @@ Describes a partner's legal business profile.
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
 | attributes             | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |
 
-## <span id="MpnProfile"/><span id="mpnprofile"/><span id="MPNPROFILE"/>MpnProfile
+## MpnProfile
 
 Describes a partner's Microsoft Partner Network profile.
 
@@ -64,7 +64,7 @@ Describes a partner's Microsoft Partner Network profile.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
-## <span id="OrganizationProfile"/><span id="organizationprofile"/><span id="ORGANIZATIONPROFILE"/>OrganizationProfile
+## OrganizationProfile
 
 Describes a partner's organization profile.
 
@@ -82,7 +82,7 @@ Describes a partner's organization profile.
 | links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                       |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                  |
 
-## <span id="SupportProfile"/><span id="supportprofile"/><span id="SUPPORTPROFILE"/>SupportProfile
+## SupportProfile
 
 Describes a partner's support profile.
 

@@ -19,12 +19,12 @@ How to retrieve a collection of device batches for the specified customer.
 
 Each device batch contains summary status information about devices that have been enrolled in zero-touch deployment.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - The customer identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To get the collection of device batches for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Then, retrieve the value of the [**DeviceBatches**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.devicebatches) property to get an interface to device batch collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.getasync) method to retrieve the collection.
 
@@ -38,7 +38,7 @@ var devicesBatches =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetDevicesBatches.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -74,7 +74,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the response body contains the collection of [DeviceBatch](device-deployment-resources.md#devicebatch) resources.
 

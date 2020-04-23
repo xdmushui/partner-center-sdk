@@ -20,12 +20,12 @@ Gets a commercial marketplace subscription activation link by the order line ite
 
 In the Partner Center dashboard, you can do this operation by selecting either a **Specific Subscription** under **Subscription** on the main page, or selecting the **Go to Publisher's site** link next to the subscription to activate on the **Subscriptions** page.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - Completed order with product that needs activation.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
@@ -41,7 +41,7 @@ To get a line item's activation link, use your [**IAggregatePartner.Customers**]
 var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -67,7 +67,7 @@ MS-RequestId: 3705fc6d-4127-4a87-bdba-9658f73fe019
 MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST Response
 
 If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
 

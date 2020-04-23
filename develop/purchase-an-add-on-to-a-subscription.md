@@ -8,7 +8,7 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# <span id="pc_apiv2.purchase_an_add-on_to_a_subscription"/>Purchase an add-on to a subscription
+# Purchase an add-on to a subscription
 
 **Applies To**
 
@@ -18,14 +18,14 @@ ms.localizationpriority: medium
 
 How to purchase an add-on to an existing subscription.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID. This is the existing subscription for which to purchase an add-on offer.
 - An offer ID that identifies the add-on offer to purchase.
 
-## <span id="Purchasing_an_add-on_through_code"/><span id="purchasing_an_add-on_through_code"/><span id="PURCHASING_AN_ADD-ON_THROUGH_CODE"/>Purchasing an add-on through code
+## Purchasing an add-on through code
 
 When you purchase an add-on to a subscription you are updating the original subscription order with the order for the add-on. In the following, customerId is the customer ID, subscriptionId is the subscription ID, and addOnOfferId is the offer ID for the add-on.
 
@@ -67,7 +67,7 @@ Here are the steps:
     Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(parentSubscription.OrderId).Patch(orderToUpdate);
     ```
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To purchase an add-on, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription that has the add-on offer. Use that [**interface**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get). Why do you need the subscription details? Because you need the order id of the subscription order. That's the order to be updated with the add-on.
 
@@ -109,7 +109,7 @@ Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(pa
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: AddSubscriptionAddOn.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -134,7 +134,7 @@ See [Partner Center REST headers](headers.md) for more information.
 
 The following tables describe the properties in the request body.
 
-## <span id="Order"/><span id="order"/><span id="ORDER"/>Order
+## Order
 
 | Name                | Type             | Required | Description                                          |
 |---------------------|------------------|----------|------------------------------------------------------|
@@ -144,7 +144,7 @@ The following tables describe the properties in the request body.
 | CreationDate        | string           | N        | The date the order was created, in date-time format. |
 | Attributes          | object           | N        | Contains "ObjectType": "Order".                      |
 
-## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
+## OrderLineItem
 
 | Name                 | Type   | Required | Description                                                  |
 |----------------------|--------|----------|--------------------------------------------------------------|
@@ -194,7 +194,7 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns the updated subscription order in the response body.
 

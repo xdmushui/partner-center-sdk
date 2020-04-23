@@ -16,11 +16,11 @@ ms.localizationpriority: medium
 
 How to retrieve a list of the signed-in partner's indirect resellers.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"/><span id="c_"/>C#
+## C#
 
 To retrieve a list of indirect resellers with whom the signed-in partner has a relationship, first get an interface to relationship collection operations from the [**partnerOperations.Relationships**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property. Then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.irelationshipcollection.get) or [**Get\_Async**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.irelationshipcollection.getasync) method, passing a member of the [**PartnerRelationshipType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype) enumeration to identify the relationship type. To retrieve indirect resellers, you must use IsIndirectCloudSolutionProviderOf.
 
@@ -32,7 +32,7 @@ var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipT
 
 **Sample**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellers.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -91,7 +91,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the response body contains a collection of [PartnerRelationship](relationships-resources.md) resources to identify the resellers.
 

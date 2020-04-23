@@ -16,14 +16,14 @@ ms.localizationpriority: medium
 
 Gets an availability for the specified product and SKU using an availability ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A product ID.
 - A SKU ID.
 - An availability ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
@@ -67,7 +67,7 @@ To get details of a specific [availability](product-resources.md#availability), 
 Get-PartnerProductAvailability -Product $productId -SkuId $skuId -AvailabilityId $availabilityId
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
 ### Request syntax
 
@@ -106,7 +106,7 @@ MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the response body contains an [Availability](product-resources.md#availability) resource.
 

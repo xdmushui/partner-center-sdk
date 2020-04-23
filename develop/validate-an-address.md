@@ -21,11 +21,11 @@ How to validate an address using the address validation API.
 
 The address validation API should only be used for pre-validation of customer profile updates. Use it with the understanding that if the country is the United States, Canada, China, or Mexico, the state field is validated against a list of valid states for the respective country. In all other countries, this test does not occur, and the API only checks that the state is a valid string.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Examples
 
 ### C#
 
@@ -122,7 +122,7 @@ To validate an address, execute the [**Test-PartnerAddress**](https://github.com
 Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Country 'US' -PostalCode '98004' -State 'WA'
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+##  REST Request
 
 ### Request syntax
 
@@ -169,7 +169,7 @@ Content-Length: 129
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, the method returns a status code 200 as demonstrated in the Response - validation succeeded example shown below.
 

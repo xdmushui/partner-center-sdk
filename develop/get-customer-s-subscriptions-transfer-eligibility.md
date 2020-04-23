@@ -18,12 +18,12 @@ ms.localizationpriority: medium
 
 How to get a collection of a customer's subscriptions that are eligible/ineligible for transfer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## Request
 
 ### Request syntax
 
@@ -59,7 +59,7 @@ MS-CorrelationId: cd589c16-dc94-49ad-e529-125c258573d6
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## Response
 
 If successful, this method returns a collection of [TransferEligibility](transfer-eligibility-resources.md) resources in the response body.
 

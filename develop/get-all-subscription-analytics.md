@@ -63,7 +63,7 @@ Content-Length: 0
 
 ## REST response
 
-If successful, the response body contains a collection of [**Subscription**](partner-center-analytics-resources.md#subscription) resources.
+If successful, the response body contains a collection of [**Subscription**](partner-center-analytics-resources.md#subscription-resource) resources.
 
 ### Response success and error codes
 
