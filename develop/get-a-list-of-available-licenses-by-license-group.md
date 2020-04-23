@@ -33,7 +33,7 @@ To get a list of available licenses for the specified license groups, start by i
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 
-// To get subscribed SKUs available for group1, the license group for Azure Active Directory (AAD). 
+// To get subscribed SKUs available for group1, the license group for Azure Active Directory (AAD).
 List<LicenseGroupId> licenseGroupIds = new List<LicenseGroupId>() { LicenseGroupId.Group1};
 var customerUserAadSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get(licenseGroupIds);
 
@@ -49,7 +49,7 @@ var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(s
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                                  |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,9 +57,9 @@ var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(s
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group2 HTTP/1.1                        |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
- 
 
-**URI parameter**
+
+### URI parameter
 
 Use the following path and query parameters to identify the customer and the license groups.
 
@@ -68,17 +68,17 @@ Use the following path and query parameters to identify the customer and the lic
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
 | licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
- 
 
-**Request headers**
+
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1
@@ -95,11 +95,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains a collection of [SubscribedSku](license-resources.md#subscribedsku) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -233,7 +233,7 @@ Date: Sat, 10 Jun 2017 00:19:44 GMT
 }
 ```
 
-**Response example (no matching SKUs found)**
+### Response example (no matching SKUs found)
 
 If no matching subscribed SKUs can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 
@@ -256,9 +256,9 @@ Date: Fri, 09 Jun 2017 22:50:11 GMT
 }
 ```
 
- 
 
- 
+
+
 
 
 

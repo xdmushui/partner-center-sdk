@@ -30,8 +30,8 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 
 To get a subscription's resource usage information:
 
-1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method. 
-2. Call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property. 
+1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
+2. Call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property.
 3. Call the **Get()** or **GetAsync()** methods.
 
 ``` csharp

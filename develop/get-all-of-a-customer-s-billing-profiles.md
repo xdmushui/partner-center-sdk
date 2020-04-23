@@ -26,7 +26,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -45,15 +45,13 @@ var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profil
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to get the billing profile.
 
@@ -61,17 +59,15 @@ Use the following query parameter to get the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/profiles/billing HTTP/1.1
@@ -86,11 +82,11 @@ MS-CorrelationId: 51d521b3-62db-4682-b75d-fb8ab09113b2
 
 If successful, this method returns a collection of [Profile](profile-resources.md) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -131,11 +127,3 @@ Date: Mon, 23 Nov 2015 18:13:43 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

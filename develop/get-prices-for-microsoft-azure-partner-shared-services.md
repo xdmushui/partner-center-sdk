@@ -22,7 +22,7 @@ Prices differ by market and currency, and this API takes location into considera
 
 ## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
 
-### C# 
+### C#
 
 To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.getshared) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
@@ -56,13 +56,13 @@ Get-PartnerAzureRateCard -SharedServices
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                               |
 |---------|---------------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure-shared?currency={currency}&region={region} |
 
-**URI parameters**
+### URI parameters
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -71,15 +71,15 @@ Get-PartnerAzureRateCard -SharedServices
 
 If the optional X-Locale header is included in the request, its value determines the language used for the details in the response.
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/ratecards/azure-shared HTTP/1.1
@@ -96,11 +96,11 @@ Connection: Keep-Alive
 
 If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

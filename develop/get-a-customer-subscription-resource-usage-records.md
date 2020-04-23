@@ -1,7 +1,7 @@
 ---
 title: Get usage data for subscription by resource
 description: You can use the ResourceUsageRecord resource to get a customer's resource usage records for specific Azure services or resources during the current billing period.
-ms.assetid: 
+
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month for individual resources provisioned in your Azure plan. You can use this resource to get a customer's resource usage records for specific Azure services or resources during the current billing period. This API returns data that was not available previously through Azure spending APIs.
+This article describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month for individual resources provisioned in your Azure plan. You can use this resource to get a customer's resource usage records for specific Azure services or resources during the current billing period. This API returns data that was not available previously through Azure spending APIs.
 
 *This route does not support Microsoft Azure (MS-AZR-0145P) subscriptions.*
 

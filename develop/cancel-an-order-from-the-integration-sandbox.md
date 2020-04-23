@@ -24,15 +24,15 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- An integration sandbox partner account with a customer having active reserved instance / software / 3rd party SaaS subscription orders.
+- An integration sandbox partner account with a customer having active reserved instance / software / third-party SaaS subscription orders.
 
 ## C#
 
-To cancel an order from the integration sandbox, pass your account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
+To cancel an order from the integration sandbox, pass your account credentials to the [**`CreatePartnerOperations`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**`IPartner`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
-To select a particular [Order](order-resources.md#order) use the partner operations and call [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **Orders.ById()** with order identifier to specify the order and finally **Get** or **GetAsync** method to retrieve it.
+To select a particular [Order](order-resources.md#order), use the partner operations and call [**`Customers.ById()`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **`Orders.ById()`** with order identifier to specify the order and finally **`Get`** or **`GetAsync`** method to retrieve it.
 
-Set the [**Order.Status**](order-resources.md#order) property to "cancelled" and use the **Patch()** method to update the order.
+Set the [**`Order.Status`**](order-resources.md#order) property to `cancelled` and use the **`Patch()`** method to update the order.
 
 ``` csharp
 // IPartnerCredentials tipAccountCredentials;
@@ -63,7 +63,7 @@ Use the following query parameter to delete a customer.
 | Name                   | Type     | Required | Description                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
-| **order-id** | **string** | Y        | The value is a string denoting the order id which need to be cancelled. |
+| **order-id** | **string** | Y        | The value is a string denoting the order IDs that need to be canceled. |
 
 ### Request headers
 
@@ -71,9 +71,9 @@ See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
 ```http
-{  
-    "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",  
-    "status": "cancelled",  
+{
+    "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",
+    "status": "cancelled",
 }
 ```
 
@@ -93,7 +93,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 ## REST response
 
-If successful, this method returns the cancelled order.
+If successful, this method returns the canceled order.
 
 ### Response success and error codes
 

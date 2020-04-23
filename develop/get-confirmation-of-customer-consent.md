@@ -1,6 +1,6 @@
 ---
 title: Get confirmation of customer acceptance of Microsoft Cloud Agreement
-description: This topic explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement. 
+description: This article explains how to get confirmation of customer acceptance of the Microsoft Cloud Agreement.
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-> [!NOTE]  
+> [!NOTE]
 > The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
@@ -45,7 +45,7 @@ var cloudAgreements = partnerOperations.Customers.ById(selectedCustomerId).Agree
 
 A complete sample can be found in the [GetCustomerAgreements](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetCustomerAgreements.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
-## .NET (version 1.9 - 1.13) 
+## .NET (version 1.9 - 1.13)
 
 To retrieve confirmation of customer acceptance provided previously:
 
@@ -93,7 +93,7 @@ To retrieve confirmation of customer acceptance provided previously, see the fol
 
 ### REST request
 
-Create a new **Agreement** resource with the relevant certification information.  
+Create a new **Agreement** resource with the relevant certification information.
 
 #### Request syntax
 
@@ -121,7 +121,7 @@ None.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/14876998-c0dc-46e6-9d0c-65a57a6c32ec/agreements HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
@@ -146,7 +146,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 {
     "totalCount": 2,
     "items":
-    [ 
+    [
         {
             "primaryContact":
             {

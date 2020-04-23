@@ -27,35 +27,35 @@ Get the expected address format based on the iso code for the market.
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                 |
 |---------|---------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/countryvalidationrules/{isocode-id} HTTP/1.1 |
 
- 
 
-**URI parameter**
+
+### URI parameter
 
 | Name           | Type       | Required | Description                         |
 |----------------|------------|----------|-------------------------------------|
 | **isocode-id** | **string** | Y        | The two-character ISO country code. |
 
- 
 
-**Request headers**
+
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/countryvalidationrules/{isocode-id} HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
@@ -66,11 +66,11 @@ MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
 
 If successful, this method returns a **CountryInformation** object in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

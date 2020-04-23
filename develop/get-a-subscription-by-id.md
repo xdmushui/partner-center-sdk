@@ -24,7 +24,7 @@ Gets a [Subscription](subscription-resources.md) resource that matches the custo
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
 
 ## <span id="C_"/><span id="c_"/>C#
@@ -44,16 +44,14 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                |
 |---------|----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
 
- 
 
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameters to get the subscription.
 
@@ -62,21 +60,19 @@ This table lists the required query parameters to get the subscription.
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/A356AC8C-E310-44F4-BF85-C7F29044AF99 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 8f489776-a3f3-47cb-91c3-538e1f70f560
 MS-CorrelationId: e72e1dc3-4abd-4ce0-908b-d23fdaedcb28
@@ -86,14 +82,13 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, this method returns a [Subscription](subscription-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for a standard subscription**
+### Response example for a standard subscription
 
 ```http
 HTTP/1.1 200 OK
@@ -106,7 +101,7 @@ MS-ServerId: 202010406
 Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 {
-    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99", 
+    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99",
     "entitlementId": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",
     "offerId": "MS-AZR-0145P",
     "offerName": "Microsoft Azure",
@@ -140,7 +135,7 @@ Date: Fri, 27 Jan 2017 21:51:40 GMT
 }
 ```
 
-**Response example for an add-on subscription**
+### Response example for an add-on subscription
 
 The response for an add-on subscription includes the parent subscription ID in the body and in the links.
 
@@ -193,11 +188,3 @@ Date: Fri, 27 Jan 2017 00:12:53 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

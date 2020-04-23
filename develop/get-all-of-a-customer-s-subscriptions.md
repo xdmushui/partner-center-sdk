@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get a customer's subscriptions
 
-
 **Applies To**
 
 - Partner Center
@@ -22,12 +21,10 @@ How to get a collection of a customer's subscriptions.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a list of all of a customer's subscriptions, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to identify the customer. Then use the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property to retrieve an interface to subscription collection operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) methods to retrieve the customer's subscriptions collection.
 
@@ -42,16 +39,13 @@ var customerSubscriptions = partnerOperations.Customers.ById(customerId).Subscri
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameter to get all the subscriptions.
 
@@ -59,17 +53,16 @@ This table lists the required query parameter to get all the subscriptions.
 |--------------------|--------|----------|-------------------------------------------------------|
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 
- 
 
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions HTTP/1.1
@@ -85,11 +78,11 @@ Connection: Keep-Alive
 
 If successful, this method returns a collection of [Subscription](subscription-resources.md) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -102,7 +95,7 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
 {
     "totalCount": 37,
     "items": [{
-        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de", 
+        "id": "83ef9d05-4169-4ef9-9657-0e86b1eab1de",
         "entitlementId": "a356ac8c-e310-44f4-bf85-C7f29044af99",
         "friendlyName": "nickname",
         "quantity": 1,
@@ -137,11 +130,3 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

@@ -25,7 +25,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## <span id="C_"/><span id="c_"/>C#
 
@@ -44,15 +44,13 @@ ResourceCollection<ServiceRequest> serviceRequests = partnerOperations.Customers
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/servicerequests HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to get all service requests for the customer.
 
@@ -60,17 +58,15 @@ Use the following query parameter to get all service requests for the customer.
 |------------------------|----------|----------|----------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.. |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/servicerequests HTTP/1.1
@@ -85,11 +81,11 @@ MS-CorrelationId: 998e31a1-3f17-4471-a9ee-7678dd72e033
 
 If successful, this method returns a collection of **Service Request** resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -122,11 +118,3 @@ Date: Tue, 24 Nov 2015 07:19:21 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

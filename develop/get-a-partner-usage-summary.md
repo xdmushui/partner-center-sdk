@@ -1,7 +1,7 @@
 ---
 title: Get a usage summary for a partner
 description: You can use the PartnerUsageSummary resource to get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
-ms.assetid: 
+
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

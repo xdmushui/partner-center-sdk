@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get a collection of resources that represents all of a partner's customers.
+This article describes how to get a collection of resources that represents all of a partner's customers.
 
 > [!TIP]
 > You can also perform this operation in the Partner Center dashboard. On the main page, under **Customer management**, select **View Customers**. Or, on the sidebar, select **Customers**.

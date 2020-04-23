@@ -50,7 +50,7 @@ request is progressing.
 | CountryCode      | string                                                        | The country corresponding to the service request.                                    |
 | Attributes       | ResourceAttributes                                            | The metadata attributes corresponding to the service request.                        |
 
- 
+
 
 ## <span id="ServiceRequestContact"/><span id="servicerequestcontact"/><span id="SERVICEREQUESTCONTACT"/>ServiceRequestContact
 
@@ -66,7 +66,7 @@ Describes a contact that creates or modifies a service request.
 | Email        | string                                                    | The email of the contact.                              |
 | PhoneNumber  | string                                                    | The phone number of the contact.                       |
 
- 
+
 
 ## <span id="ServiceRequestNote"/><span id="servicerequestnote"/><span id="SERVICEREQUESTNOTE"/>ServiceRequestNote
 
@@ -79,7 +79,7 @@ Describes a note attached to a service request.
 | CreatedDate   | date   | The date and time when the note was created. |
 | Text          | string | The text of the note.                        |
 
- 
+
 
 ## <span id="ServiceRequestOrganization"/><span id="servicerequestorganization"/><span id="SERVICEREQUESTORGANIZATION"/>ServiceRequestOrganization
 
@@ -92,7 +92,7 @@ Describes the organization for which the service request is created.
 | Name        | string | The name of the organization.         |
 | PhoneNumber | string | The phone number of the organization. |
 
- 
+
 
 ## <span id="SupportTopic"/><span id="supporttopic"/><span id="SUPPORTTOPIC"/>SupportTopic
 
@@ -106,13 +106,5 @@ ensure that they are processed quickly and effectively.
 | Description | string             | The description of the support topic.                         |
 | Id          | string             | The unique id of the support topic.                           |
 | Attributes  | ResourceAttributes | The metadata attributes corresponding to the service request. |
-
- 
-
- 
-
- 
-
-
 
 

@@ -1,6 +1,6 @@
 ---
 title: Get a list of devices for the specified batch and customer
-description: How to retrieve a collection of devices and device details in the specified device batch for a customer. 
+description: How to retrieve a collection of devices and device details in the specified device batch for a customer.
 ms.assetid: 13FD2D2D-1EF3-4BE2-977D-83577DA57F51
 ms.date: 07/25/2019
 ms.service: partner-dashboard
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
 
-This topic describes how to retrieve a collection of devices in a specified device batch for a specified customer. Each device resource contains details about the device.
+This article describes how to retrieve a collection of devices in a specified device batch for a specified customer. Each device resource contains details about the device.
 
 ## Prerequisites
 

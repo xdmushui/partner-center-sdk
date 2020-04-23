@@ -39,7 +39,7 @@ Finally, to execute the filter and get the result, first use [**IAggregatePartne
 IAggregatePartner partnerOperations;
 
 // Specify the partial string to filter by (to match Contoso).
-string searchPrefix = "cont"  
+string searchPrefix = "cont"
 
 // Create a simple field filter.
 var fieldFilter = new SimpleFieldFilter(
@@ -58,16 +58,13 @@ var customers = partnerOperations.Customers.Query(myQuery);
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size}&filter={filter} HTTP/1.1 |
 
- 
-
-**URI parameters**
+### URI parameters
 
 Use the following query parameters.
 
@@ -76,9 +73,7 @@ Use the following query parameters.
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional. |
 | filter | filter | Yes      | The filter to apply to customers. This must be an encoded string.              |
 
- 
-
-**Filter Syntax**
+### Filter Syntax
 
 You must compose the filter parameter as a series of comma separated, key-value pairs. Each key and value must be individually quoted and separated by a colon. The entire filter must be encoded.
 
@@ -86,8 +81,8 @@ An unencoded example looks like this:
 
 ```http
 ?filter{"Field":"CompanyName","Value":"cont","Operator":"starts_with"}
-```  
-  
+```
+
 The following table describes the required key-value pairs:
 
 | Key      | Value                                                                                                                    |
@@ -96,17 +91,15 @@ The following table describes the required key-value pairs:
 | Value    | The value to filter by. The case of the value is ignored.                                                                |
 | Operator | The operator to apply. The only supported value for this customer scenario is "starts\_with".                            |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter=%7B%22Field%22%3A%22CompanyName%22%2C%22Value%22%3A%22Cont%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
@@ -121,14 +114,13 @@ Connection: Keep-Alive
 
 ## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
 
-
 If successful, this method returns a collection of matching [Customer](customer-resources.md#customer) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -240,11 +232,3 @@ Date: Fri, 24 Feb 2017 22:08:20 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

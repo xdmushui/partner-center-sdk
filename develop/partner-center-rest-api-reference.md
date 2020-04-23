@@ -23,7 +23,7 @@ The Partner Center REST API helps Cloud Solution Provider (CSP) partners integra
 
 For more information about what the API can do, including sample code, see the [Scenarios](scenarios.md) topic, including the background overview.
 
-Before you begin coding, read the [Get started](get-started.md) topic. This topic contains information about setting up your test and production accounts, getting authentication working, and finding the sample code.
+Before you begin coding, read the [Get started](get-started.md) topic. This article contains information about setting up your test and production accounts, getting authentication working, and finding the sample code.
 
 ## Topics
 

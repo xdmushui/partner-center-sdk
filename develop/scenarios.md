@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
 
-Note that there are different versions of Partner Center available that include different capabilities. Not all scenarios are supported in all versions of Partner Center. To learn more, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
+There are different versions of Partner Center available that include different capabilities. Not all scenarios are supported in all versions of Partner Center. To learn more, see [Developing for Partner Center for Microsoft National Cloud](developing-for-partner-center-for-microsoft-national-cloud.md).
 
 ## Scenarios supported by the Partner Center SDK
 
@@ -141,7 +141,7 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="create-a-customer.md">Create a customer</a></p></li>
 <li><p><a href="create-a-customer-for-an-indirect-reseller.md">Create a customer for an indirect reseller</a></p></li>
 <li><p><a href="request-reseller-relationship.md">Retrieve a relationship request URL</a></p></li>
-<li><p><a href="remove-a-reseller-relationship-with-a-customer.md">Remove a reseller relationship with a customer</a></p></li> 
+<li><p><a href="remove-a-reseller-relationship-with-a-customer.md">Remove a reseller relationship with a customer</a></p></li>
 </ul>
 <p>Look up a customer</p>
 <ul>
@@ -153,7 +153,7 @@ All of the following scenarios can be completed three different ways:
 <ul>
 <li><p><a href="get-all-of-a-customer-s-orders.md">Get all of a customer&#39;s orders</a></p></li>
 <li><p><a href="get-a-list-of-orders-by-customer-and-billing-cycle-type.md">Get a list of orders by customer and billing cycle type</a></p></li>
-<li><p><a href="get-a-collection-of-entitlements.md">Get a collection of entitlements</a></p></li> 
+<li><p><a href="get-a-collection-of-entitlements.md">Get a collection of entitlements</a></p></li>
 <li><p><a href="get-all-of-a-customer-s-subscriptions.md">Get a customer&#39;s subscriptions</a></p></li>
 <li><p><a href="update-the-nickname-for-a-subscription.md">Update the nickname for a subscription</a></p></li>
 </ul>
@@ -201,7 +201,7 @@ All of the following scenarios can be completed three different ways:
 </ul>
 <p>Make a one-time purchase</p>
 <ul>
-<li><p><a href="make-a-one-time-purchase.md">Make a one-time purchase</a></p></li> 
+<li><p><a href="make-a-one-time-purchase.md">Make a one-time purchase</a></p></li>
 </ul>
 <p>Get offers from the catalog</p>
 <ul>
@@ -273,7 +273,7 @@ All of the following scenarios can be completed three different ways:
 <li><p><a href="create-a-service-request-.md">Create a service request</a></p></li>
 <li><p><a href="get-service-request-support-topics--pending-.md">Get service request support topics</a></p></li>
 <li><p><a href="get-all-service-requests-for-a-customer.md">Get all service requests for a customer</a></p></li>
-<li><p><a href="get-service-request-details-by-id.md">Get service request details by ID</a></p></li> 
+<li><p><a href="get-service-request-details-by-id.md">Get service request details by ID</a></p></li>
 <li><p><a href="update-a-service-request.md">Update a service request</a></p></li>
 </ul></td>
 </tr>
@@ -281,10 +281,10 @@ All of the following scenarios can be completed three different ways:
   <td><p><a href="https://docs.microsoft.com/partner/develop/referrals">Referrals</a></p></td>
   <td><p>Referrals</p>
 	<ul>
-	  <li><p><a href="https://docs.microsoft.com/partner/develop/create-a-referral">Create a referral</a></p></li> 
-	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-list-of-referrals">Get a list of referrals</a></p></li> 
-	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-referral-by-id">Get a referral by ID</a></p></li> 
-	  <li><p><a href="https://docs.microsoft.com/partner/develop/update-a-referral">Update a referral</a></p></li> 
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/create-a-referral">Create a referral</a></p></li>
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-list-of-referrals">Get a list of referrals</a></p></li>
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/get-a-referral-by-id">Get a referral by ID</a></p></li>
+	  <li><p><a href="https://docs.microsoft.com/partner/develop/update-a-referral">Update a referral</a></p></li>
 	</ul>
   </td>
 </tr>

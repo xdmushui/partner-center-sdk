@@ -21,9 +21,9 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 
 ## <span id="Get_the_code"/><span id="get_the_code"/><span id="GET_THE_CODE"/>Get the code
 
-[Download the Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkId=746681)  
+[Download the Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkId=746681)
 
-> [!NOTE]  
+> [!NOTE]
 > API access to Partner Center for indirect resellers is not a supported scenario.
 
 ## <span id="Determine_your_version_of_Partner_Center"/><span id="determine_your_version_of_partner_center"/><span id="DETERMINE_YOUR_VERSION_OF_PARTNER_CENTER"/>Determine your version of Partner Center
@@ -44,12 +44,12 @@ For tips and suggestions about testing and debugging, including more information
 
 ## <span id="sdk_config_auth"/><span id="SDK_CONFIG_AUTH"/>Configure your authentication
 
-To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).  
+To configure your Azure AD authentication so that you can use the Partner Center APIs, see [Partner Center authentication](partner-center-authentication.md).
 
 > [!IMPORTANT]
 > Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
-Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly. 
-> 
+Partner Center uses Azure AD for authentication, and to use the Partner Center APIs you must configure your authentication settings correctly.
+>
 > For more information, see [Enable secure application model](enable-secure-app-model.md).
 
 ## <span id="Get_help"/><span id="get_help"/><span id="GET_HELP"/>Get help

@@ -37,27 +37,27 @@ To get a line item's activation link, use your [**IAggregatePartner.Customers**]
 // string orderId;
 // string lineItemNumber
 
-// get the activation link for the specific line item 
+// get the activation link for the specific line item
 var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                               |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
 
-**Request headers**
+### Request headers
 
 See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/8c5b65fd-c725-4f50-8d9c-97ec9169fdd0/orders/03fb46b3-bf8c-49aa-b908-ca2e93bcc04a/lineitems/0/activationlinks HTTP/1.1
@@ -71,11 +71,11 @@ MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 
 If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -93,7 +93,7 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
         "uri": "<link populated here>",
         "method": "GET",
         "headers": [
-          
+
         ]
       }
     }
@@ -103,7 +103,7 @@ Date: Fri, 20 Nov 2015 01:08:23 GMT
       "uri": "/customers/8c5b65fd-c725-4f50-8d9c-97ec9169fdd0/orders/03fb46b3-bf8c-49aa-b908-ca2e93bcc04a/lineitems/0/activationlinks",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

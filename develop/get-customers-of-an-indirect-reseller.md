@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 
 # Get customers of an indirect reseller
 
-
 **Applies To**
 
 - Partner Center
@@ -19,12 +18,10 @@ How to get a list of the customers of an indirect reseller.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - The tenant identifier of the indirect reseller.
 
 ## <span id="C_"/><span id="c_"/>C#
-
 
 To get a collection of customers that have a relationship with the specified indirect reseller, first instantiate a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object to create the filter. You'll need to pass the [**CustomerSearchField.IndirectReseller**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customersearchfield) enumeration member converted to a string, and indicate [**FieldFilterOperation.StartsWith**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.fieldfilteroperation) as the type of filter operation. You'll also need to provide the tenant identifier of the indirect reseller to filter by.
 
@@ -40,8 +37,8 @@ string indirectResellerId;
 
 // Create a filter.
 var filter = new SimpleFieldFilter(
-    CustomerSearchField.IndirectReseller.ToString(), 
-    FieldFilterOperation.StartsWith, 
+    CustomerSearchField.IndirectReseller.ToString(),
+    FieldFilterOperation.StartsWith,
     indirectResellerId);
 
 // Create an iQuery object to pass to the Query method.
@@ -72,15 +69,13 @@ while (customersEnumerator.HasValue)
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers?size={size}?filter={filter} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameters to create the request.
 
@@ -89,17 +84,15 @@ Use the following query parameters to create the request.
 | size   | int    | No       | The number of results to be displayed at one time. This parameter is optional.                                                                                                                                                                                                                |
 | filter | filter | Yes      | The query that filters the search. To retrieve customers for a specified indirect reseller, you must insert the indirect reseller identifier and include and encode the following string: {"Field":"IndirectReseller","Value":"{indirect reseller identifier}","Operator":"starts\_with"}. |
 
- 
-
-**Request headers**
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example (encoded)**
+### Request example (encoded)
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter=%7B%22Field%22%3A%22IndirectReseller%22%2C%22Value%22%3A%22484e548c-f5f3-4528-93a9-c16c6373cb59%22%2C%22Operator%22%3A%22starts_with%22%7D HTTP/1.1
@@ -111,7 +104,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-**Request example (decoded)**
+### Request example (decoded)
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers?size=0&filter={"Field":"IndirectReseller","Value":"484e548c-f5f3-4528-93a9-c16c6373cb59","Operator":"starts_with"} HTTP/1.1
@@ -125,14 +118,13 @@ Host: api.partnercenter.microsoft.com
 
 ## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
 
-
 If successful, the response body contains information about the reseller's customers.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -202,18 +194,10 @@ Date: Tue, 11 Apr 2017 23:31:28 GMT
             "attributes": {
                 "objectType": "Customer"
             }
-        }, 
+        },
     ],
     "attributes": {
         "objectType": "Collection"
     }
 }
 ```
-
- 
-
- 
-
-
-
-

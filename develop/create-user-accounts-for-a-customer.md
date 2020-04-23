@@ -87,7 +87,7 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
       "userPrincipalName": "userid@domain.onmicrosoft.com",
       "firstName": "First",
       "lastName": "Last",
-      "displayName": "User name",  
+      "displayName": "User name",
       "immutableId": "Some unique ID",
       "passwordProfile":{
                  password: "abCD123*",

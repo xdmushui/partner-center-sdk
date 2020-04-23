@@ -47,15 +47,15 @@ billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.B
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
 
- 
 
-**URI parameter**
+
+### URI parameter
 
 Use the following query parameter to update the billing profile.
 
@@ -63,18 +63,18 @@ Use the following query parameter to update the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
 
-**Request headers**
+
+### Request headers
 
 - **If-Match**: "&lt;ETag&gt;" is required for concurrency detection.
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The full resource.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/profiles/billing HTTP/1.1
@@ -125,11 +125,11 @@ Expect: 100-continue
 
 If successful, this method returns updated [Profile](profile-resources.md) resource properties in the response body. This call requires an ETag for concurrency detection.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -170,11 +170,3 @@ Date: Mon, 23 Nov 2015 18:20:43 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

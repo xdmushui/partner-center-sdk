@@ -33,7 +33,7 @@ To update your support profile, first [get your support profile](get-support-pro
 ``` csharp
 // IAggregatePartner partnerOperations;
 
-// updated profile 
+// updated profile
 SupportProfile newSupportProfile = new SupportProfile
 {
    Email = supportProfile.Email,
@@ -49,7 +49,7 @@ SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                     |
 |---------|---------------------------------------------------------------------------------|
@@ -57,15 +57,15 @@ SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile
 
 
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The full support profile resource.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/supportprofile HTTP/1.1
@@ -93,11 +93,11 @@ Expect: 100-continue
 
 If successful, this method returns updated **SupportProfile** object properties in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

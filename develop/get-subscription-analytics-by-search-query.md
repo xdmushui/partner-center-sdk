@@ -1,6 +1,6 @@
 ---
 title: Get subscription analytics by search query
-description: How to get subscription analytics information filtered by a search query. 
+description: How to get subscription analytics information filtered by a search query.
 ms.date: 05/10/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -16,56 +16,48 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-
 How to get subscription analytics information for your customers filtered by a search query.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
-
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-
-**Request syntax**
+### Request syntax
 
 | Method | Request URI |
 |--------|-------------|
 | **GET** | [*\{baseURL\}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?filter={filter_string} |
 
- 
-
-**URI parameters**
+### URI parameters
 
 Use the following required path parameter to identify your organization and filter the search.
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | filter_string | string | Yes | The filter to apply to the subscription analytics. See the Filter syntax and Filter fields sections for the syntax, fields, and operators to use in this parameter. |
- 
 
-**Filter syntax**
+### Filter syntax
 
-The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.  
+The filter parameter must be composed as a series of field, value and operator combinations. Multiple combinations can be combined using **and** or **or** operators.
 
 An unencoded example looks like this:
 - String: ?filter=Field operator 'Value'
 - Boolean: ?filter=Field operator Value
 - Contains ?filter=contains(field,'value')
 
-
-**Filter fields**
+### Filter fields
 
 The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
 
-The following are examples of filter strings:  
- 
+The following are examples of filter strings:
+
 ```http
 autoRenewEnabled eq true
 
 autoRenewEnabled eq true and customerMarket eq 'US'
-```  
+```
 
 The following table shows a list of the supported fields and support operators for the filter parameter. String values must be surrounded by single quotes.
 
@@ -81,7 +73,7 @@ The following table shows a list of the supported fields and support operators f
 | autoRenewEnabled | eq,ne | A value indicating whether the subscription is renewed automatically. |
 | partnerId | eq,ne | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
 | friendlyName | contains | The name of the subscription. |
-| partnerName | string | Name of the partner for whom the subscription was purchased |  
+| partnerName | string | Name of the partner for whom the subscription was purchased |
 | providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.
 | creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
 | effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
@@ -94,15 +86,15 @@ The following table shows a list of the supported fields and support operators f
 | lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
 
 
-**Request headers** 
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/partner/v1/analytics/subscriptions?filter=autoRenewEnabled eq true
@@ -119,11 +111,11 @@ Content-Length: 0
 
 If successful, the response body contains a collection of [Subscription](partner-center-analytics-resources.md#subscription) resources that meet the fileter criteria.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

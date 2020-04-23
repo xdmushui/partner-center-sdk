@@ -17,9 +17,9 @@ ms.localizationpriority: medium
 
 To purchase an Azure reservation for a customer using the Partner Center API, you must have an existing Microsoft Azure (**MS-AZR-0145P**) subscription or Azure plan for them.
 
-> [!NOTE]  
+> [!NOTE]
 > Azure reservations are not available in the following markets:
->  
+>
 > | Unavailable Markets            | &nbsp;                            | &nbsp;                                   |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Papua New Guinea                         |
@@ -59,12 +59,12 @@ To purchase an Azure reservation for a customer using the Partner Center API, yo
 > | Gabon                          | Norfolk Island                    | Wallis and Futuna                        |
 > | Gambia                         | Northern Mariana Islands          | Yemen                                    |
 > | Gibraltar                      | Palau                             | &nbsp;                                   |
->  
+>
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID for an active CSP Azure subscription or an Azure plan.
 
 ## How to purchase Microsoft Azure reservations
@@ -94,7 +94,7 @@ Once you have identified the active subscription that you want to add the Azure 
 
 After registering your subscription, you should confirm that the registration process is completed by checking the registration status. To do this, see [Get subscription registration status](get-subscription-registration-status.md).
 
-> [!NOTE]  
+> [!NOTE]
 > When purchasing Microsoft Azure reservation for a customer with an Azure plan, you must register the Azure plan first. Similar to a Microsoft Azure (**MS-AZR-0145P**) subscription, an Azure plan is represented by a Partner Center [Subscription](subscription-resources.md) resource. Hence, you can use the same [Register a subscription](register-a-subscription.md) method to register an Azure plan.
 
 ## Discovery
@@ -123,7 +123,7 @@ Before purchasing an Azure reservation, complete the following steps:
     - [Get a list of availabilities for a SKU (by country)](get-a-list-of-availabilities-for-a-sku.md)
     - [Get an availability using the availability ID](get-an-availability-by-id.md)
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Each Microsoft Azure reservation product has different availabilities for Microsoft Azure (**MS-AZR-0145P**) subscription and Azure plan. To [Get a list of products (by country)](get-a-list-of-products.md), or [Get a list of SKUs for a product (by country)](get-a-list-of-skus-for-a-product.md), or [Get a list of availabilities for a SKU (by country)](get-a-list-of-availabilities-for-a-sku.md) which are applicable to Azure plan only, specify the "reservationScope=AzurePlan" parameter.
 
 ## Order submission
@@ -141,7 +141,7 @@ To submit your Azure reservation order, do the following:
 
 ## Get order details
 
-Once you have created your Azure reservation order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​
+Once you have created your Azure reservation order, you can retrieve the details of an individual order using the order ID, or get a list of orders for a customer. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a list of a customer's orders.​
 
 - To get the details of an individual order using the order ID. See, [Get an order by ID](get-an-order-by-id.md).
 
@@ -155,22 +155,28 @@ As part of managing the lifecycle of your Azure reservations in Partner Center, 
 
 ## Invoice and reconciliation
 
-The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for Azure reservations.  
+The following scenarios show you how to programmatically view your customer's [invoices](invoice-resources.md), and get your account balances and summaries that include one-time charges for Azure reservations.
 
-**Balance and payment​**
+### Balance and payment​
+
 To get current account balance in your default currency type that is a balance of ​both recurring and one-time (Azure reservation) charges, see [Get your current account balance](get-the-reseller-s-current-account-balance.md)
 
-**Multi-currency balance and payment**​
+### Multi-currency balance and payment
+
 To get your current account balance and a collection of invoice summaries containing an invoice summary with both recurring and one-time charges for each of your customer's currency types, see [Get invoice summaries](get-invoice-summaries.md).
 
-**Invoices​**
+### Invoices​
+
 To get a collection of invoices that show both recurring and one time charges, see [Get a collection of invoices](get-a-collection-of-invoices.md). ​
 
-**Single Invoice​**
+### Single Invoice​
+
 To retrieve a specific invoice using the invoice ID, see [Get an invoice by ID](get-invoice-by-id.md).  ​
 
-**Reconciliation**​
+### Reconciliation
+
 To get a collection of invoice line item details (Reconciliation line items) for a specific invoice ID, see [Get invoice line items](get-invoiceline-items.md).  ​
 
-**Download an invoice as a PDF**
+### Download an invoice as a PDF
+
 To retrieve an invoice statement in PDF form using an invoice ID, see [Get an invoice statement](get-invoice-statement.md).

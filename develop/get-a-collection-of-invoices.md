@@ -42,8 +42,8 @@ Next, use the [**Enumerators**](https://docs.microsoft.com/dotnet/api/microsoft.
 bool isUnpaged = (this.invoicePageSize <= 0);
 
 // If the scenario is unpaged, get all the invoices, otherwise get the first page.
-var invoicesPage = (isUnpaged) 
-                 ? partnerOperations.Invoices.Get() 
+var invoicesPage = (isUnpaged)
+                 ? partnerOperations.Invoices.Get()
                  : partnerOperations.Invoices.Query(QueryFactory.Instance.BuildIndexedQuery(this.invoicePageSize));
 
 // Create an invoice enumerator for traversing the invoice pages.
@@ -54,12 +54,12 @@ while (invoicesEnumerator.HasValue)
 {
     // Print the current invoice results page.
     var invoices = invoicesEnumerator.Current.Items;
-    
+
     foreach (var i in invoices)
     {
-        Console.WriteLine(String.Format("{0,3}. {1}  {2}  {3,16:C2}", 
-            lineCounter++, 
-            i.Id, 
+        Console.WriteLine(String.Format("{0,3}. {1}  {2}  {3,16:C2}",
+            lineCounter++,
+            i.Id,
             i.InvoiceDate.ToString("yyyy&#39;-&#39;MM&#39;-&#39;dd&#39;T&#39;HH&#39;:&#39;mm&#39;:&#39;ss&#39;Z&#39;"),
             i.TotalCharges));
     }
@@ -78,15 +78,15 @@ For a slightly different example, see **Sample**: [Console test app](console-tes
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                  |
 |---------|----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices?size={size}&offset={offset} HTTP/1.1  |
 
- 
 
-**URI parameters**
+
+### URI parameters
 
 Use the following query parameters when creating the request.
 
@@ -95,21 +95,21 @@ Use the following query parameters when creating the request.
 | size   | int  | No       | The number of invoice resources to return in the response. This parameter is optional. |
 | offset | int  | No       | The zero-based index of the first invoice to return.                                   |
 
- 
 
-**Request headers**
+
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices?size=200&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c
@@ -123,11 +123,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains the collection of [Invoice](invoice-resources.md#invoice) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -269,9 +269,9 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
 }
 ```
 
- 
 
- 
+
+
 
 
 

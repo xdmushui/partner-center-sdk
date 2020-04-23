@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-This topic explains how to delete an existing user account for a customer.
+This article explains how to delete an existing user account for a customer.
 
 ## Prerequisites
 

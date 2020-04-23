@@ -36,7 +36,7 @@ var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
-To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode). 
+To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode).
 ``` csharp
 // CustomerQualification is an enum
 // GCC validation is type ValidationCode
@@ -47,14 +47,14 @@ var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 ## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification?code={validationCode} HTTP/1.1 |
 
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to update the qualification.
 
@@ -64,15 +64,15 @@ Use the following query parameter to update the qualification.
 | **validationCode**     | int  | No       | Only needed for Government Community Cloud.                                                                                                            |
 
 
-**Request headers**
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The integer value from the [**CustomerQualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification?code=<validation-code> HTTP/1.1
@@ -88,11 +88,11 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

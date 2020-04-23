@@ -39,12 +39,12 @@ ConfigurationPolicy configPolicyToBeUpdated = new ConfigurationPolicy()
 {
     Name= "Test Config Policy",
     Id = selectedConfigurationPolicyId,
-    PolicySettings = new List<PolicySettingsType>() { 
-        PolicySettingsType.OobeUserNotLocalAdmin, 
+    PolicySettings = new List<PolicySettingsType>() {
+        PolicySettingsType.OobeUserNotLocalAdmin,
         PolicySettingsType.RemoveOemPreinstalls }
 };
 
-ConfigurationPolicy updatedConfigurationPolicy = 
+ConfigurationPolicy updatedConfigurationPolicy =
     partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedConfigurationPolicyId).Patch(configPolicyToBeUpdated);
 ```
 
@@ -53,15 +53,15 @@ ConfigurationPolicy updatedConfigurationPolicy =
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
- 
 
-**URI parameter**
+
+### URI parameter
 
 Use the following path parameters when creating the request.
 
@@ -70,13 +70,13 @@ Use the following path parameters when creating the request.
 | customer-id | string | Yes      | A GUID-formatted string that identifies the customer.         |
 | policy-id   | string | Yes      | A GUID-formatted string that identifies the policy to update. |
 
- 
 
-**Request headers**
+
+### Request headers
 
 - See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The request body must contain an object that provides the policy information.
 
@@ -89,13 +89,13 @@ The request body must contain an object that provides the policy information.
 | devicesAssigned | number           | No       | No        | The number of devices.                                                                                                                                   |
 | policySettings  | array of strings | Yes      | Yes       | The policy settings: "none","remove\_oem\_preinstalls","oobe\_user\_not\_local\_admin","skip\_express\_settings","skip \_oem\_registration,"skip\_eula". |
 
- 
 
-**Request example**
+
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/customers/47021739-3426-40bf-9601-61b4b6d7c793/policies/56edf752-ee77-4fd8-b7f5-df1f74a3a9ac HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c
@@ -119,11 +119,11 @@ Host: api.partnercenter.microsoft.com
 
 If successful, the response body contains the [ConfigurationPolicy](device-deployment-resources.md#configurationpolicy) resource for the new policy.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -149,11 +149,3 @@ Date: Tue, 25 Jul 2017 18:10:29 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

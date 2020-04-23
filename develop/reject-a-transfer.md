@@ -20,7 +20,7 @@ ms.localizationpriority: medium
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A transfer identifier for an existing transfer.
 
 ## REST request
@@ -109,7 +109,7 @@ Date: Fri, 27 Mar 2020 17:50:33 GMT
       "quantity": 20,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     }
   ],
@@ -118,7 +118,7 @@ Date: Fri, 27 Mar 2020 17:50:33 GMT
       "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/transfers/ac4a9d22-ba07-444e-890f-cfe084eed498",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

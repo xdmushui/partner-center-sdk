@@ -17,12 +17,12 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-Gets a collection of all the orders for a specified customer. Note that there is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
+Gets a collection of all the orders for a specified customer. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
 ## C\#
 

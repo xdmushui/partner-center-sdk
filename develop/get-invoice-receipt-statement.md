@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-Retrieves an invoice receipt statement using invoice ID and the receipt ID. 
+Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
 > [!IMPORTANT]
 > This feature is only applicable to Taiwan tax receipts.
@@ -34,17 +34,17 @@ To get an invoice receipt statement by ID, starting with Partner Center SDK v1.1
 var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Receipts.ById(selectedReceipt).Documents.Statement.Get();
 ```
 
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs 
+**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs
 
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                            |
 |---------|------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/receipts/{receipt-id}/documents/statement HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to get the invoice receipt statement.
 
@@ -52,16 +52,16 @@ Use the following query parameter to get the invoice receipt statement.
 |------------|--------|-----------------------------------------------------------------------------------------------------------|
 | invoice-id | string | Yes      | The value is an invoice-id that allows the reseller to filter the results for a given invoice. |
 | receipt-id | string | Yes      | The value is a receipt-id that allows the reseller to filter the receipts for a given invoice. |
- 
-**Request headers**
+
+### Request headers
 
 - See [Headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/<invoice-id>/receipts/<receipt-id>/documents/statement HTTP/1.1
@@ -75,11 +75,11 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 
 If successful, this method returns a pdf stream in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

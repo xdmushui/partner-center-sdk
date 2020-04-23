@@ -23,7 +23,7 @@ How to purchase an add-on to an existing subscription.
 
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID. This is the existing subscription for which to purchase an add-on offer.
 - An offer ID that identifies the add-on offer to purchase.
 
@@ -35,11 +35,13 @@ When you purchase an add-on to a subscription you are updating the original subs
 Here are the steps:
 
 1.  Get an interface to the operations for the subscription.
+
     ``` csharp
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
 2.  Use that interface to instantiate a subscription object. This gets you the parent subscription details, including the order id.
+
     ``` csharp
     var parentSubscription = subscriptionOperations.Get();
     ```
@@ -114,15 +116,15 @@ Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(pa
 ## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
 
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                              |
 |-----------|----------------------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/orders/{order-id} HTTP/1.1 |
 
- 
 
-**URI parameters**
+
+### URI parameters
 
 Use the following parameters to identify the customer and order.
 
@@ -131,13 +133,13 @@ Use the following parameters to identify the customer and order.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that identifies the customer. |
 | **order-id**           | **guid** | Y        | The order identifier.                                                              |
 
- 
 
-**Request headers**
+
+### Request headers
 
 See [Partner Center REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 The following tables describe the properties in the request body.
 
@@ -152,7 +154,7 @@ The following tables describe the properties in the request body.
 | CreationDate        | string           | N        | The date the order was created, in date-time format. |
 | Attributes          | object           | N        | Contains "ObjectType": "Order".                      |
 
- 
+
 
 ## <span id="orderLineItem"/><span id="orderlineitem"/><span id="ORDERLINEITEM"/>OrderLineItem
 
@@ -168,13 +170,13 @@ The following tables describe the properties in the request body.
 | PartnerIdOnRecord    | string | N        | The MPN ID of the partner of record.                         |
 | Attributes           | object | N        | Contains "ObjectType": "OrderLineItem".                      |
 
- 
 
-**Request example**
+
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/orders/CF3B0E37-BE0B-4CDD-B584-D1A97D98A922 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 17a2658e-d2cc-439b-a2f0-2aefd9344fbc
 MS-CorrelationId: 60efdd24-17ef-4080-9b02-4fc315f916ff
@@ -212,11 +214,11 @@ Expect: 100-continue
 
 If successful, this method returns the updated subscription order in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -274,11 +276,3 @@ Date: Wed, 25 Jan 2017 23:01:08 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

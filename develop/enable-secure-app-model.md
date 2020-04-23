@@ -19,7 +19,7 @@ You can use the new model to elevate security for Partner Center API integration
 
 ## Scope
 
-This topic concerns the following actors:
+This article concerns the following actors:
 
 - CPVs
   - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.
@@ -52,7 +52,7 @@ The following overview documents and sample code describe how partners can imple
 
 ## REST
 
-To to make REST calls with the Secure Application Model framework with sample code, you must do the following:
+To to make REST calls with the Secure Application Model framework with sample code, follow these steps:
 
 1. [Create a web app](#create-a-web-app)
 2. [Get an authorization code](#get-authorization-code)

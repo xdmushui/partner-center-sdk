@@ -1,5 +1,5 @@
 ---
-title: Cancel software purchases 
+title: Cancel software purchases
 description: Self-serve option to cancel software subscriptions and perpetual software purchases using Partner Center APIs.
 ms.date: 12/19/2019
 ms.service: partner-dashboard
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-You can cancel software subscriptions and perpetual software purchases that are within the cancellation window from the purchase date using the Partner Center APIs. You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
+You can use the Partner Center APIs to cancel software subscriptions and perpetual software purchases (as long as those purchases were made within the cancellation window from the purchase date). You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ To cancel a software order,
 
 3. Call the **Get** or **GetAsync** method to retrieve the order.
 
-4. Set the [**Order.Status**](order-resources.md#order) property to "cancelled".
+4. Set the [**Order.Status**](order-resources.md#order) property to `cancelled`.
 
 5. (Optional) If you want to specify certain line items for cancellation, set the [**Order.LineItems**](order-resources.md#order) to list of line items that you want to cancel.
 
@@ -110,7 +110,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 ## REST response
 
-If successful, this method returns the order with cancelled line items.
+If successful, this method returns the order with canceled line items.
 
 The order status will be marked as either **cancelled** (if all the line items in the order are cancelled), or **completed** (if not all line items in the order are cancelled).
 
@@ -120,7 +120,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ### Response example
 
-In the following example response, you can see that the quantity of line item with the offer identifier **DG7GMGF0FKZV:0003:DG7GMGF0DWMS** has become zero (0). This change means that the line item that was marked for cancellation has been cancelled successfully. The example order contains other line items that were not cancelled, which means that the status of the overall order will be marked as **completed**, not **cancelled**.
+In the following example response, you can see that the quantity of line item with the offer identifier **`DG7GMGF0FKZV:0003:DG7GMGF0DWMS`** has become zero (0). This change means that the line item that was marked for cancellation has been cancelled successfully. The example order contains other line items that weren't cancelled, which means that the status of the overall order will be marked as **completed**, not **cancelled**.
 
 ```http
 HTTP/1.1 200 OK
