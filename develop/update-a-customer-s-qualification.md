@@ -35,6 +35,7 @@ var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
 To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode).
+
 ``` csharp
 // CustomerQualification is an enum
 // GCC validation is type ValidationCode
@@ -76,10 +77,9 @@ Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
-3
 ```
 
-##  REST Response
+## REST response
 
 If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 

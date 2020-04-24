@@ -85,7 +85,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-##  REST Response
+## REST response
 
 If successful, the response body contains the collection of [License](license-resources.md#license) resources.
 

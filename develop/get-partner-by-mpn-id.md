@@ -77,7 +77,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-##  REST Response
+## REST response
 
 If successful, the response body contains the [MpnProfile](profile-resources.md#mpnprofile) resource for the partner.
 

@@ -70,6 +70,7 @@ Use the following query parameter to delete a customer.
 For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
+
 ```http
 {
     "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",

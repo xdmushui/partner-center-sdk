@@ -109,7 +109,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-##  REST Response
+## REST response
 
 If successful, this method returns a collection of matching [Customer](customer-resources.md#customer) resources in the response body.
 

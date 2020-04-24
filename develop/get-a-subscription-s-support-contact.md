@@ -76,7 +76,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-##  REST Response
+## REST response
 
 If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.
 

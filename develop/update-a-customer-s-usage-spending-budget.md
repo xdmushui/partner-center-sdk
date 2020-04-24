@@ -91,7 +91,7 @@ X-Locale: "en-US"
 }
 ```
 
-##  REST Response
+## REST response
 
 If successful, this method returns a user's spending budget with the updated amount.
 
@@ -126,4 +126,3 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
     }
 }
 ```
-

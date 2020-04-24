@@ -71,7 +71,7 @@ Get-PartnerAzureRateCard
 | currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (for example `EUR`). The default is `USD`. |
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (for example `FR`). The default is `US`.        |
 
-You can include the optional X-Locale [header](headers.md#request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
+You can include the optional X-Locale [header](headers.md#rest-request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
 
 - If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
 - If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency, and language.

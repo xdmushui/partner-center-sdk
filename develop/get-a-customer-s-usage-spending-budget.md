@@ -45,6 +45,7 @@ var newUsageBudget = new SpendingBudget()
 // Update the customer's usage budget.
 var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Get();
 ```
+
 ## REST request
 
 ### Request syntax

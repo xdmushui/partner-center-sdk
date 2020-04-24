@@ -73,7 +73,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-##  REST Response
+## REST response
 
 If successful, the response body contains a collection of [Conversion](conversions-resources.md#conversionresult) resources.
 

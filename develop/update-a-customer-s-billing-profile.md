@@ -112,7 +112,7 @@ Expect: 100-continue
 }
 ```
 
-##  REST Response
+## REST response
 
 If successful, this method returns updated [Profile](profile-resources.md) resource properties in the response body. This call requires an ETag for concurrency detection.
 

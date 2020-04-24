@@ -104,7 +104,7 @@ Expect: 100-continue
 }
 ```
 
-##  REST Response
+## REST response
 
 If successful, the response body contains the [SupportContact](subscription-resources.md#supportcontact) resource.
 

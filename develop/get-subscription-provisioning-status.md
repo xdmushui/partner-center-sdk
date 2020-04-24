@@ -110,4 +110,5 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 ## Remarks
 
 - During a seat change assignment, the status field in [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) is set to "pending".
+
 - The status field is updated every fifteen minutes.
