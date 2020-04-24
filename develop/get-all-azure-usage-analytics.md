@@ -76,21 +76,21 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong>eq</strong> or <strong>ne</strong> operators, and statements can be combined using <strong><code>and</code></strong> or <strong><code>or</code></strong>. You can specify the following fields:</p>
+        <p>The <em>filter</em> parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <strong><code>eq</code></strong> or <strong><code>ne</code></strong> operators, and statements can be combined using <strong><code>and</code></strong> or <strong><code>or</code></strong>. You can specify the following s:</p>
         <ul>
-          <li><em>customerTenantId</em></li>
-          <li><em>customerName</em></li>
-          <li><em>subscriptionId</em></li>
-          <li><em>subscriptionName</em></li>
-          <li><em>usageDate</em></li>
-          <li><em>resourceLocation</em></li>
-          <li><em>meterCategory</em></li>
-          <li><em>meterSubcategory</em></li>
-          <li><em>meterUnit</em></li>
-          <li><em>reservationOrderId</em></li>
-          <li><em>reservationId</em></li>
-          <li><em>consumptionMeterId</em></li>
-          <li><em>serviceType</em></li>
+          <li><code>customerTenantId</code></li>
+          <li><code>customerName</code></li>
+          <li><code>subscriptionId</code></li>
+          <li><code>subscriptionName</code></li>
+          <li><code>usageDate</code></li>
+          <li><code>resourceLocation</code></li>
+          <li><code>meterCategory</code></li>
+          <li><code>meterSubcategory</code></li>
+          <li><code>meterUnit</code></li>
+          <li><code>reservationOrderId</code></li>
+          <li><code>reservationId</code></li>
+          <li><code>consumptionMeterId</code></li>
+          <li><code>serviceType</code></li>
         </ul>
         <p><strong>Example:</strong></br>
           <code>.../usage/azure?filter=meterCategory eq &#39;Data Management&#39;</code>
@@ -120,21 +120,21 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field [order],field [order],...</code>. The <em>field</em> parameter can be one of the following strings:</p>
+        <p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field [order],field [order],...</code>. The <code>field</code> parameter can be one of the following strings:</p>
         <ul>
           <li><code>customerTenantId</code></li>
-          <li><code>customerName<code></li>
-          <li></code>subscriptionId<code></li>
+          <li><code>customerName</code></li>
+          <li><code>subscriptionId</code></li>
           <li><code>subscriptionName</code></li>
-          <li><code>usageDate<code></li>
-          <li></code>resourceLocation<code></li>
+          <li><code>usageDate</code></li>
+          <li><code>resourceLocation</code></li>
           <li><code>meterCategory</code></li>
-          <li><code>meterSubcategory<code></li>
-          <li></code>meterUnit<code></li>
+          <li><code>meterSubcategory</code></li>
+          <li><code>meterUnit</code></li>
           <li><code>reservationOrderId</code></li>
           <li><code>reservationId</code></li>
-          <li><code>consumptionMeterId<code></li>
-          <li><code>serviceType<code></li>
+          <li><code>consumptionMeterId</code></li>
+          <li><code>serviceType</code></li>
         </ul>
         <p>The <em>order</em> parameter is optional and can be <code>asc</code> or <code>desc</code>; to specify ascending or descending order for each field, respectively. The default is <code>asc</code>.</p>
         <p><strong>Example:</strong><br/>
@@ -152,19 +152,19 @@ How to get all the Azure usage analytics information for your customers.
       <td>
         <p>A statement that applies data aggregation only to the specified fields. You can specify the following fields:</p>
         <ul>
-          <li><em>customerTenantId</em></li>
-          <li><em>customerName</em></li>
-          <li><em>subscriptionId</em></li>
-          <li><em>subscriptionName</em></li>
-          <li><em>usageDate</em></li>
-          <li><em>resourceLocation</em></li>
-          <li><em>meterCategory</em></li>
-          <li><em>meterSubcategory</em></li>
-          <li><em>meterUnit</em></li>
-          <li><em>reservationOrderId</em></li>
-          <li><em>reservationId</em></li>
-          <li><em>consumptionMeterId</em></li>
-          <li><em>serviceType</em></li>
+          <li><code>customerTenantId</code></li>
+          <li><code>customerName</code></li>
+          <li><code>subscriptionId</code></li>
+          <li><code>subscriptionName</code></li>
+          <li><code>usageDate</code></li>
+          <li><code>resourceLocation</code></li>
+          <li><code>meterCategory</code></li>
+          <li><code>meterSubcategory</code></li>
+          <li><code>meterUnit</code></li>
+          <li><code>reservationOrderId</code></li>
+          <li><code>reservationId</code></li>
+          <li><code>consumptionMeterId</code></li>
+          <li><code>serviceType</code></li>
         </ul>
         <p>The returned data rows will contain the fields specified in the <code>groupby</code> parameter as well as the <em>Quantity</em>.</p>
         <p>The <code>groupby</code> parameter can be used with the
