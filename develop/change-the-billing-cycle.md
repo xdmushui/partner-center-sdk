@@ -87,7 +87,7 @@ For more information, see [Partner Center REST headers](headers.md).
 
 The following tables describe the properties in the request body.
 
-## Order
+### Order
 
 | Property           | Type             | Required | Description                                                                |
 |--------------------|------------------|----------|----------------------------------------------------------------------------|
@@ -98,7 +98,7 @@ The following tables describe the properties in the request body.
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
 
-## OrderLineItem
+### OrderLineItem
 
 | Property             | Type   | Required | Description                                                                        |
 |----------------------|--------|----------|------------------------------------------------------------------------------------|

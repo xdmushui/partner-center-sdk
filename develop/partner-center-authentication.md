@@ -34,7 +34,7 @@ Partner Center uses Azure Active Directory for authentication. When interacting 
 
 If you would like to use app-only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by leveraging the following instructions.
 
-### .NET (app-only authentication)
+## .NET (app-only authentication)
 
 ```csharp
 public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
@@ -50,7 +50,7 @@ public static IAggregatePartner GetPartnerCenterTokenUsingAppCredentials()
 }
 ```
 
-### Java (app-only authentication)
+## Java (app-only authentication)
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -67,9 +67,9 @@ public IAggregatePartner getAppPartnerOperations()
 }
 ```
 
-### REST (app-only authentication)
+## REST (app-only authentication)
 
-#### REST request
+### REST request
 
 ```http
 POST https://login.microsoftonline.com/{tenantId}/oauth2/token HTTP/1.1
@@ -83,7 +83,7 @@ Expect: 100-continue
 resource=https%3A%2F%2Fgraph.windows.net&client_id={client-id-here}&client_secret={client-secret-here}&grant_type=client_credentials
 ```
 
-#### REST response
+### REST response
 
 ```http
 HTTP/1.1 200 OK
@@ -111,7 +111,7 @@ The partner consent process is an interactive process where the partner authenti
 
 The partner consent process can be performed in a number of ways. To help partners understand how to perform each required operation, we have developed the following samples. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-### .NET (app+user authentication)
+## .NET (app+user authentication)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using ASP.NET to capture consent, request a refresh token, and securely store it in Azure Key Vault. Perform the following steps to create the required prerequisites for this sample.
 
@@ -166,6 +166,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```
 
 6. Open the *PartnerConsent* project found in the `Partner-Center-DotNet-Samples\secure-app-model\keyvault` directory.
+
 7. Populate the application settings found in the [web.config](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/PartnerConsent/Web.config)
 
     ```xml
@@ -199,7 +200,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 
 8. When you run this sample project, it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token that is stored in the configured instance of Azure Key Vault.
 
-### Java (app+user authentication)
+## Java (app+user authentication)
 
 The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model/keyvault) sample project demonstrates how to utilize a website developed using JSP to capture consent, request a refresh token, and secure store in Azure Key Vault. Perform the following to create the required prerequisites for this sample.
 
@@ -254,6 +255,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
     ```
 
 6. Open the *PartnerConsent* project found in the `Partner-Center-Java-Samples\secure-app-model\keyvault` directory.
+
 7. Populate the application settings found in the [web.xml](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/secure-app-model/keyvault/partnerconsent/src/main/webapp/WEB-INF/web.xml) file
 
     ```xml
@@ -300,7 +302,7 @@ Cloud Solution Provider partners can use the refresh token obtained through the 
 
 To help partners understand how to perform each required operation, we have developed the following samples. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-### .NET (CSP authentication)
+## .NET (CSP authentication)
 
 1. If you have not already done so, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
@@ -344,7 +346,7 @@ To help partners understand how to perform each required operation, we have deve
 
 6. When you run this sample project, it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf. Finally, it requests an access token to interact with Microsoft Graph on behalf of the specified customer.
 
-### Java (CSP authentication)
+## Java (CSP authentication)
 
 1. If you have not done so already, perform the [partner consent process](#partner-consent).
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using Visual Studio or the following command
@@ -367,6 +369,7 @@ To help partners understand how to perform each required operation, we have deve
     ```
 
 5. When you run this sample project, it obtains the refresh token obtained during the partner consent process. Then, it requests an access token to interact with the Partner Center SDK on the partner's behalf.
+
 6. Optional - uncomment the *RunAzureTask* and *RunGraphTask* function calls if you want to see how to interact with Azure Resource Manager and Microsoft Graph on behalf of the customer.
 
 ## Control Panel Provider authentication
@@ -377,7 +380,7 @@ Control panel vendors need to have each partner they support perform the [partne
 
 To help control panel vendors understand how to perform each required operation, we have developed the following samples. When you implement the appropriate solution in your environment, it is important that you develop a solution that is complaint with your coding standards and security policies.
 
-### .NET (CPV authentication)
+## .NET (CPV authentication)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. For more information an example, see [partner consent](#partner-consent).
 
@@ -391,6 +394,7 @@ To help control panel vendors understand how to perform each required operation,
     ```
 
 3. Open the `CPVApplication` project found in the `Partner-Center-DotNet-Samples\secure-app-model\keyvault` directory.
+
 4. Update the application settings found in the [App.config](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CPVApplication/App.config) file.
 
     ```xml
@@ -460,7 +464,7 @@ To help control panel vendors understand how to perform each required operation,
 
 After these permissions have been established, the sample performs operations using Azure AD Graph on behalf of the customer.
 
-### Java (CPV authentication)
+## Java (CPV authentication)
 
 1. Develop and deploy a process for Cloud Solution Provider partners to provide the appropriate consent. For more information and an example, see the [partner consent](#partner-consent).
 
@@ -474,6 +478,7 @@ After these permissions have been established, the sample performs operations us
     ```
 
 3. Open the `cpvsample` project found in the `Partner-Center-Java-Samples\secure-app-model\keyvault` directory.
+
 4. Update the application settings found in the [application.properties](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/secure-app-model/keyvault/cpvsample/src/main/resources/application.properties) file.
 
     ```java

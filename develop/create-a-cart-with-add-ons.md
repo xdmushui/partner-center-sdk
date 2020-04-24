@@ -218,7 +218,7 @@ MS-CorrelationId: 182474ba-7303-4d0f-870a-8c7fba5ccc4b
 }
 ```
 
-### REST Response
+## REST response
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 

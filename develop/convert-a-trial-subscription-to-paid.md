@@ -158,7 +158,7 @@ Expect: 100-continue
 }
 ```
 
-### REST response
+## REST response
 
 If successful, the response body contains a [ConversionResult](conversions-resources.md#conversionresult) resource.
 
