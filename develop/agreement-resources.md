@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
 
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany

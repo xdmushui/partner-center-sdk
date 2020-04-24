@@ -49,7 +49,7 @@ Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZ
 
 [!INCLUDE [Partner Center PowerShell module support details](<../includes/powershell-module-support.md>)]
 
-To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
+To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** parameter. The **CountryCode** parameter is options, if it isn't specified then the country associated with the reseller will be used.
 
 ```powershell
 Get-PartnerProduct -ProductId 'DZH318Z0BQ3Q'
@@ -74,7 +74,7 @@ Use the following path parameters to get the specified product.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

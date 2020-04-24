@@ -80,7 +80,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -90,7 +90,7 @@ This table describes the required properties in the request body.
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [BillingProfile](#billing-profile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
 | [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
-| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. The indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
+| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. The indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value isn't supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 
 #### Billing profile
 
@@ -100,7 +100,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 |------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | email            | string                                   | Yes      | The customer's email address.                                                                                                                                                                                   |
 | culture          | string                                   | Yes      | Their preferred culture for communication and currency, such as "en-US". See [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) for the supported cultures. |
-| language         | string                                   | Yes      | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
+| language         | string                                   | Yes      | The default language. Two character language codes (for example `en` or `fr`) are supported.                                                                                                                                |
 | company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 

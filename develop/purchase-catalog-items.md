@@ -20,7 +20,7 @@ The following scenario demonstrates the generic process for purchasing items fro
 
 Select products and SKUs and check their availability using the following Partner Center API models:
 
-- [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself is not a purchasable item.​​
+- [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself isn't a purchasable item.​​
 - [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
 - [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
 

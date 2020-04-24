@@ -64,11 +64,11 @@ Use the following query parameter to identify the correct customer.
 |------------------------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller.                                                      |
 | **user-id**            | **guid** | N        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                                                                            |
-| **role-id**            | **guid** | N        | The value is a GUID formatted **role-id** that belongs to a type of role. You can get these ids by querying all the directory roles for a customer, across all user accounts. (The second scenario, above). |
+| **role-id**            | **guid** | N        | The value is a GUID formatted **role-id** that belongs to a type of role. You can get these IDs by querying all the directory roles for a customer, across all user accounts. (The second scenario, above). |
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

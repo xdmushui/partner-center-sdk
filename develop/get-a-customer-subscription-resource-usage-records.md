@@ -23,7 +23,7 @@ This article describes how to get the **ResourceUsageRecord** resource. This res
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
+- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look up the identifier in Partner Center. Choose the customer from the list of customers, then select **Account**, then save their **Microsoft ID**.
 - A subscription identifier
 
 ## C\#
@@ -68,7 +68,7 @@ This table lists the required query parameters to get the customer's rated usage
 
 #### Request headers
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

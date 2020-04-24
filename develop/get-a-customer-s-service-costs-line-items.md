@@ -20,7 +20,7 @@ Gets a customer's service cost line items for the specified billing period.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 - A customer identifier.
-- A billing period indicator (**mostrecent**).
+- A billing period indicator (**`mostrecent`**).
 
 ## C\#
 
@@ -57,7 +57,7 @@ Use the following path parameters to identify the customer and the billing perio
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

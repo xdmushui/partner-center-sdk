@@ -27,7 +27,7 @@ The CSP Customer Storefront Builder code is subject to the license available in 
 >[!NOTE]
 >You are responsible for the storefront website management, maintenance, and any issues that might result from website creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
 
-For additional information, also see the following topics: [CSP customer web storefront](csp-customer-web-storefront.md) and [console test app](console-test-app.md).
+For additional information, also see the following articles: [CSP customer web storefront](csp-customer-web-storefront.md) and [console test app](console-test-app.md).
 
 ## Considerations
 
@@ -38,7 +38,7 @@ The CSP Customer Storefront Builder is intended as a quick way to create a websi
 - This website, once deployed, is fully owned and managed by the partner. Microsoft does not have access to this website, or any data related to the website. Partners are responsible for maintenance and management of the website. Microsoft will not provide any live website or other support related to the CSP Customer Storefront Builder or any website created by using the CSP Customer Storefront Builder.
 - Partner Center cannot directly access or upgrade this website with new or changed SDK or API features. Any new features or enhancements must be owned, developed, and managed by partners, including adding new Partner Center SDK or API features.
 - This CSP Customer Storefront Builder currently provides the ability to configure payment to a PayPal Pro/PayU Money (for India) account. If partners need to change the payment processor, they will need to change the code to support their preferred payment method.
-- Any payment related information added in the CSP Customer Storefront Builder is not stored or maintained in Partner Center.
+- Any payment related information added in the CSP Customer Storefront Builder isn't stored or maintained in Partner Center.
 - PayPal payment configuration will work in any geographies where PayPal is available. PayPal availability and support is solely controlled by PayPal, and may be discontinued at any time by PayPal.
 - PayU payment configuration will work only in India currently. PayU availability and support is solely controlled by PayU and may be discontinued at any time by PayU.
 - Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).

@@ -31,7 +31,7 @@ The following invoice-related resources are available through the Partner Center
 | paidAmount | number  | The amount paid by the partner. Negative if a payment was received.  |
 | currencyCode | string  | A code that indicates the currency used for all invoice item amounts and totals. |
 | currencySymbol  | string | The currency symbol used for all invoice item amounts and totals. |
-| pdfDownloadLink | string  | A link to download the invoice in PDF format. This link is not returned as part of the search results, and is populated only if the invoice is accessed by ID. This link auto-expires in 30 minutes. |
+| pdfDownloadLink | string  | A link to download the invoice in PDF format. This link isn't returned as part of the search results, and is populated only if the invoice is accessed by ID. This link auto-expires in 30 minutes. |
 | invoiceDetails  | array of [InvoiceDetail](#invoicedetail) objects  | The invoice details.  |
 | amendments      | array of [Invoice](#invoice) objects   | The amendments to this invoice.  |
 | documentType    | string | The document type of the invoice: "Credit Note", "Invoice". |

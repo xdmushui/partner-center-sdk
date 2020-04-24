@@ -53,11 +53,11 @@ Use the following parameters to provide the offer ID and country code.
 | Name         | Type       | Required | Description                       |
 |--------------|------------|----------|-----------------------------------|
 | **offer-id** | **guid**   | Y        | A GUID that identifies the offer. |
-| **country**  | **string** | Y        | The country code (e.g. US).       |
+| **country**  | **string** | Y        | The country code (for example `US`).       |
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

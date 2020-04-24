@@ -21,7 +21,7 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier (**customer-tenant-id**). If you do not have a customer's identifier, you can look up the identifier in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
+- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look up the identifier in Partner Center. Choose the customer from the list of customers, then select **Account**, then save their **Microsoft ID**.
 - A subscription identifier.
 
 *This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
@@ -69,7 +69,7 @@ This table lists the required query parameters to get the rated usage informatio
 
 #### Request headers
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

@@ -40,17 +40,17 @@ Use the following required path parameter to identify your organization and filt
 
 ### Filter syntax
 
-The filter parameter must be composed as a series of field, value, and operator combinations. Multiple combinations can be combined using **and** or **or** operators.
+The filter parameter must be composed as a series of field, value, and operator combinations. Multiple combinations can be combined using **`and`** or **`or`** operators.
 
 An unencoded example looks like this:
 
-- String: ?filter=Field operator 'Value'
-- Boolean: ?filter=Field operator Value
-- Contains ?filter=contains(field,'value')
+- String: `?filter=Field operator 'Value'`
+- Boolean: `?filter=Field operator Value`
+- Contains `?filter=contains(field,'value')`
 
 ### Filter fields
 
-The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **eq** or **ne** operators, and some fields also support the **contains**, **gt**, **lt**, **ge**, and **le** operators. Statements can be combined using **and** or **or** operators.
+The filter parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **`eq`** or **`ne`** operators. Some fields also support the **`contains`**, **`gt`**, **`lt`**, **`ge`**, and **`le`** operators. Statements can be combined using **`and`** or **`or`** operators.
 
 The following are examples of filter strings:
 
@@ -64,32 +64,31 @@ The following table shows a list of the supported fields and support operators f
 
 | Parameter | Supported operators | Description |
 |-----------|---------------------|-------------|
-| autoRenewEnabled | eq,ne | A value indicating whether the subscription is renewed automatically. |
-| commitmentEndDate | eq, ne, gt, lt, ge, le  | The date the subscription ends. |
-| creationDate | eq, ne, gt, lt, ge, le  | The date the subscription was created. |
-| currentStateEndDate | eq, ne, gt, lt, ge, le | The date that the current status of the subscription will change. |
-| customerMarket | eq,ne | The country/region that the customer does business in. |
-| customerName | contains | The name of the customer. |
-| customerTenantId | eq,ne | A GUID-formatted string that identifies the customer tenant. |
-| deprovisionedDate | eq, ne, gt, lt, ge, le | The date that the subscription was deprovisioned. The default value is null. |
-| effectiveStartDate | eq, ne, gt, lt, ge, le | The date the subscription starts. |
-| friendlyName | contains | The name of the subscription. |
-| id | eq,ne | A GUID-formatted string that identifies the subscription. |
-| lastRenewalDate | eq, ne, gt, lt, ge, le | The date that the subscription was last renewed. The default value is null. |
-| lastUsageDate | eq, ne, gt, lt, ge, le | The date that the subscription was last used. The default value is null. |
-| partnerId | eq,ne | The MPN ID. For a direct reseller, this will be the MPN ID of the partner. For an indirect reseller, this will be the MPN ID of the indirect reseller. |
+| autoRenewEnabled | `eq`, `ne` | A value indicating whether the subscription is renewed automatically. |
+| commitmentEndDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le`  | The date the subscription ends. |
+| creationDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le`  | The date the subscription was created. |
+| currentStateEndDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date that the current status of the subscription will change. |
+| customerMarket | `eq`, `ne` | The country/region that the customer does business in. |
+| customerName | `contains` | The name of the customer. |
+| customerTenantId | `eq`, `ne` | A GUID-formatted string that identifies the customer tenant. |
+| deprovisionedDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date that the subscription was deprovisioned. The default value is null. |
+| effectiveStartDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date the subscription starts. |
+| friendlyName | `contains` | The name of the subscription. |
+| id | `eq`, `ne` | A GUID-formatted string that identifies the subscription. |
+| lastRenewalDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date that the subscription was last renewed. The default value is null. |
+| lastUsageDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date that the subscription was last used. The default value is null. |
+| partnerId | `eq`, `ne` | The MPN ID. For a direct reseller, this value will be the MPN ID of the partner. For an indirect reseller, this value will be the MPN ID of the indirect reseller. |
 | partnerName | string | Name of the partner for whom the subscription was purchased |
-| productName | contains, eq,ne | The name of the product. |
+| productName | `contains`, `eq`, `ne` | The name of the product. |
 | providerName | string | When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.|
-| status | eq,ne | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
-| subscriptionType | eq,ne | The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
-| trialStartDate | eq, ne, gt, lt, ge, le | The date that the trial period for the subscription started. The default value is null. |
-| trialToPaidConversionDate | eq, ne, gt, lt, ge, le  | The date that the subscription converts from trial to paid. The default value is null. |
-
+| status | `eq`, `ne` | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
+| subscriptionType | `eq`, `ne` | The subscription type. **Note**: This field is case-sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
+| trialStartDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le` | The date that the trial period for the subscription started. The default value is null. |
+| trialToPaidConversionDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le`  | The date that the subscription converts from trial to paid. The default value is null. |
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

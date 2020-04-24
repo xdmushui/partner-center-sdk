@@ -61,7 +61,7 @@ Use the following query parameter to update the qualification.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -98,7 +98,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 "governmentcommunitycloud"
 ```
 
-## Related topics
+## Related articles
 
 - [Get a customer's qualification](get-a-customer-s-qualification.md)
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)

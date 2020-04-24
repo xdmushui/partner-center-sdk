@@ -54,7 +54,7 @@ This table lists the required query parameters to get the offers.
 ### Request headers
 
 - A **locale-id** formatted as a string is required.
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

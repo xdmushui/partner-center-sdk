@@ -18,11 +18,11 @@ ms.localizationpriority: medium
 
 The Partner Center Webhook APIs allow partners to register for resource change events. These events are delivered in the form of HTTP POSTs to the partner's registered URL. To receive an event from Partner Center, partners will host a callback where Partner Center can POST the resource change event. The event will be digitally signed so that the partner can verify that it was sent from Partner Center.
 
-Partners can select from Webhook events, like the following, that are supported by Partner Center.
+Partners can select from Webhook events, like the following examples, that are supported by Partner Center.
 
 - **Test Event ("test-created")**
 
-    This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
+    This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You can see the failure messages that are being received from Microsoft while trying to deliver the event. This restriction only applies to "test-created" events. Data older than seven days will be purged.
 
 - **Subscription Updated Event ("subscription-updated")**
 
@@ -47,7 +47,7 @@ Partners can select from Webhook events, like the following, that are supported 
 
     This event is raised when the new invoice is ready.
 
-Future Webhook events will be added for resources that change in the system that the partner is not in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be extremely useful in determing which new events to add.
+Future Webhook events will be added for resources that change in the system that the partner isn't in control of, and further updates will be made to get those events as close to "real time" as possible. Feedback from Partners on which events add value to their business will be useful in determining what new events to add.
 
 For a complete list of Webhook events supported by Partner Center, see [Partner Center webhook events](partner-center-webhook-events.md).
 
@@ -57,7 +57,7 @@ For a complete list of Webhook events supported by Partner Center, see [Partner 
 
 ## Receiving events from Partner Center
 
-To receive events from Partner Center, you must expose a publicly accessible endpoint; and because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to re-deploy or re-configure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will me moved into an offline queue and no further attempts will be made at delivery.
+To receive events from Partner Center, you must expose a publicly accessible endpoint. Because this endpoint is exposed, you must validate that the communication is from Partner Center. All Webhook events that you receive are digitally signed with a certificate that chains to the Microsoft Root. A link to the certificate used to sign the event will also be provided. This will allow the certificate to be renewed without you having to redeploy or reconfigure your service. Partner Center will make 10 attempts to deliver the event. If the event is still not delivered after 10 attempts, it will be moved into an offline queue and no further attempts will be made at delivery.
 
 The following sample shows an event posted from Partner Center.
 
@@ -93,7 +93,7 @@ To authenticate the callback event received from Partner Center, follow these st
 4. Verify the "Organization" of the certificate.
 5. Read the content with UTF8 encoding into a buffer.
 6. Create an RSA Crypto Provider.
-7. Verify the data matches what was signed with the specified hash algorithm (e.g. SHA256).
+7. Verify the data matches what was signed with the specified hash algorithm (for example SHA256).
 8. If the verification succeeds, process the message.
 
 > [!NOTE]
@@ -131,7 +131,7 @@ The following sample shows the structure of a Partner Center event.
 
 ### Authentication
 
-All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. You must acquire an access token to access https://api.partnercenter.microsoft.com. This is the same token that is used to access the rest of the Partner Center APIs.
+All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. Acquire an access token to access https://api.partnercenter.microsoft.com. This token is the same token that is used to access the rest of the Partner Center APIs.
 
 ### Get a list of events
 
@@ -294,7 +294,7 @@ MS-RequestId: f04b1b5e-87b4-4d95-b087-d65fffec0bd2
 
 ### Send a test event to validate your registration
 
-Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted 7 days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event.
+Generates a test event to validate the Webhooks registration. This test is intended to validate that you can receive events from Partner Center. Data for these events will be deleted seven days after the initial event is created. You must be registered for the "test-created" event, using the registration API, before sending a validation event.
 
 >[!NOTE]
 >There is a throttle limit of 2 requests per minute when posting a validation event.
@@ -333,7 +333,7 @@ X-Locale: en-US
 
 ### Verify that the event was delivered
 
-Returns the current state of the validation event. This can be helpful for trouble shooting event delivery issues. The Response contains a result for each attempt that is made to deliver the event.
+Returns the current state of the validation event. This verification can be helpful for troubleshooting event delivery issues. The Response contains a result for each attempt that is made to deliver the event.
 
 #### Resource URL
 
@@ -491,7 +491,7 @@ namespace Webhooks.Security
             var certificateUrl = GetHeaderValue(request.Headers, CertificateUrlHeader);
             var certificate = await GetCertificate(certificateUrl);
             var content = await GetContentAsync(request);
-            var alg = signatureAlgorithm.Split('-'); // e.g. RSA-SHA1
+            var alg = signatureAlgorithm.Split('-'); // for example RSA-SHA1
             var isValid = false;
 
             var logger = GetLoggerIfAvailable(request);
