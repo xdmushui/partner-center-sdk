@@ -49,7 +49,7 @@ This table lists the required query parameter to get all the qualification.
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -86,6 +86,6 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ```
 
-## Related topics
+## Related articles
 
 - [Update a customer's qualification](update-a-customer-s-qualification.md)

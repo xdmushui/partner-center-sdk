@@ -58,7 +58,7 @@ Use the following path parameters to identify the customer and subscription.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

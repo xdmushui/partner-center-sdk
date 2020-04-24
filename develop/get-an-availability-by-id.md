@@ -1,6 +1,6 @@
 ---
-title: Get an availability by ID
-description: Gets an availability for the specified product and SKU using an availability ID.
+title: Get the availability by ID
+description: Gets the availability for the specified product and SKU using an availability ID.
 ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 09/17/2019
 ms.service: partner-dashboard
@@ -8,13 +8,13 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Get an availability by ID
+# Get the availability by ID
 
 **Applies To**
 
 - Partner Center
 
-Gets an availability for the specified product and SKU using an availability ID.
+Gets the availability for the specified product and SKU using an availability ID.
 
 ## Prerequisites
 
@@ -85,9 +85,10 @@ Use the following path and query parameters to get a specific availability using
 | sku-id                 | string   | Yes      | A GUID formatted string that identifies the SKU.                |
 | availability-id        | string   | Yes      | A GUID formatted string that identifies the availability.       |
 | country-code           | string   | Yes      | A country/region ID.                                            |
+
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

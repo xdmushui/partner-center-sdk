@@ -60,7 +60,7 @@ Use the following query parameter to update the billing profile.
 ### Request headers
 
 - **If-Match**: "&lt;ETag&gt;" is required for concurrency detection.
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

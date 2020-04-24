@@ -90,7 +90,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -102,7 +102,7 @@ This table describes the **Order** properties in the request body.
 | ---- | ---- | -------- | ----------- |
 | id | string | No | An order identifier that is supplied upon successful creation of the order. |
 | referenceCustomerId | string | Yes | The customer identifier. |
-| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature is not yet generally available. Support for annual billing is coming soon. |
+| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature isn't yet generally available. Support for annual billing is coming soon. |
 | lineItems | array of objects | Yes | An array of [**OrderLineItem**](#orderlineitem) resources. |
 | creationDate | string | No | The date the order was created, in date-time format. Applied upon successful creation of the order. |
 | attributes | object | No | Contains "ObjectType": "Order". |
@@ -119,7 +119,7 @@ This table describes the **OrderLineItem** properties in the request body.
 | parentSubscriptionId | string | No | Optional. The ID of the parent subscription in an add-on offer. Applies to PATCH only. |
 | friendlyName | string | No | Optional. The friendly name for the subscription defined by the partner to help disambiguate. |
 | quantity | int | Yes | The number of licenses for a license-based subscription. |
-| partnerIdOnRecord | string | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. **Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller is not recorded and as a consequence incentive calculations may not include the sale.** |
+| partnerIdOnRecord | string | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. **Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller isn't recorded and as a consequence incentive calculations may not include the sale.** |
 | attributes | object | No | Contains "ObjectType":"OrderLineItem". |
 
 ### Request example

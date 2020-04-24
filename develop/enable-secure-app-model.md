@@ -23,7 +23,7 @@ This article concerns the following actors:
 
 - CPVs
   - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.
-  - A CPV is not a CSP partner with direct access to the Partner Center dashboard or APIs.
+  - A CPV isn't a CSP partner with direct access to the Partner Center dashboard or APIs.
 - CSP indirect providers and CSP direct partners who are using app ID + user authentication and directly integrate with Partner Center APIs.
 
 ## Security requirements

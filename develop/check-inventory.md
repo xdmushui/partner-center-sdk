@@ -67,7 +67,7 @@ Use the following query parameter to check the inventory.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

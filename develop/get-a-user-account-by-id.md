@@ -53,7 +53,7 @@ Use the following URI parameters to identify the correct customer and user.
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

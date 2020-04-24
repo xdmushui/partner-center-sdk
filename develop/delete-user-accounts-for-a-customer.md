@@ -65,7 +65,7 @@ Use the following query parameters to identify the customer and user.
 
 ### Request headers
 
-See [Partner Center REST Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 ### Request body
 

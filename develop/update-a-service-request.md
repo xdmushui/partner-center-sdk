@@ -59,7 +59,7 @@ Use the following URI parameter to update the service request.
 
 ### Request headers
 
-- See [Partner Center REST Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

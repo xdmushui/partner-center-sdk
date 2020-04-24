@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 - Partner Center
 
 > [!NOTE]
-> The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+> The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
@@ -111,7 +111,7 @@ Use the following query parameter to specify the customer you are confirming.
 
 #### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

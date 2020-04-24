@@ -157,14 +157,14 @@ How to get all the indirect resellers analytics information for your customers.
         <td>aggregationLevel</td>
         <td>string</td>
         <td><p>Specifies the time range for which to retrieve aggregate data. Can be one of the following strings: &quot;day&quot;, &quot;week&quot;, or &quot;month&quot;. If unspecified, the default is &quot;day&quot;.</p>
-        <p><em>aggregationLevel</em> is not supported without a <strong>groupby</strong>. <em>aggregationLevel</em> applies to all <strong>datefields</strong> present in the <strong>groupby</strong></p>
+        <p><code>aggregationLevel</code> isn't supported without a <code>aggregationLevel</code>. <code>aggregationLevel</code> applies to all <strong>datefields</strong> present in the <code>aggregationLevel</code></p>
         </td>
     </tr>
     <tr>
         <td>orderby</td>
         <td>string</td>
         <td>
-            <p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code> The field parameter can be one of the following strings:</p>
+            <p>A statement that orders the result data values for each install. The syntax is <code>...&orderby=field[order],field [order],...</code>. The field parameter can be one of the following strings:</p>
             <ul>
                 <li>&quot;partnerTenantId&quot;</li>
                 <li>&quot;id&quot;</li>
@@ -181,7 +181,7 @@ How to get all the indirect resellers analytics information for your customers.
                 <li>&quot;subscriptionCount&quot;</li>
                 <li>&quot;licenseCount&quot;</li>
             </ul>
-            <p>The <em>order</em> parameter is optional, and can be &quot;asc&quot; or &quot;desc&quot; to specify ascending or descending order for each field. The default is &quot;asc&quot;.</p>
+            <p>The <em>order</em> parameter is optional, and can be <code>asc</code> or <code>desc</code>; to specify ascending or descending order for each field. The default is <code>asc</code>.</p>
             <p><strong>Example:</strong></br>
                 <code>...&orderby=market,subscriptionCount</code>
             </p>
@@ -206,13 +206,13 @@ How to get all the indirect resellers analytics information for your customers.
                 <li><em>firstSubscriptionDeprovisionedDate</em></li>
                 <li><em>latestSubscriptionDeprovisionedDate</em></li>
             </ul>
-            <p>The returned data rows will contain the fields specified in the <em>groupby</em> parameter as well as the following:</p>
+            <p>The data rows returned contain the fields specified in the <code>groupby</code> clause, and the following fields:</p>
             <ul>
                 <li><em>indirectResellerCount</em></li>
                 <li><em>licenseCount</em></li>
                 <li><em>subscriptionCount</em></li>
             </ul>
-            <p>The <em>groupby</em> parameter can be used with the <em>aggregationLevel</em> parameter.</p>
+            <p>The <code>groupby</code> parameter can be used with the <code>aggregationLevel</code> parameter.</p>
             <p><strong>Example:</strong></br>
                 <code>...&groupby=ageGroup,market&aggregationLevel=week</code>
             </p>
@@ -239,7 +239,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## Response
+## REST Response
 
 If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#csp-program-indirect-resellers-analytics) resources.
 

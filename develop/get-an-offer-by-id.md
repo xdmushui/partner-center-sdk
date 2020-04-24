@@ -87,7 +87,7 @@ Get-PartnerOffer -Country $countryCode -OfferId $offerId
 ### Request headers
 
 - A **locale-id** formatted as a string is required.
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

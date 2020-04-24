@@ -24,11 +24,17 @@ How to restore a deleted **User** by customer ID and user ID.
 
 ## When can you restore a deleted user account?
 
-The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. You can only restore a deleted user account during this thirty day window. Once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
+The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. You can only restore a deleted user account during this thirty-day window. Once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
 
 ## C#
 
-To restore a user, create a new instance of the [**CustomerUser**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.customeruser) class, and set the value of the [**User.State**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.user.state) property to [**UserState.Active**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.userstate). You restore a deleted user by setting the user's state to active. Note that you do not have to repopulate the remaining fields in the user resource. Those values will automatically be restored from the deleted, inactive user resource. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user. Finally, call the [**Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.patch) method and pass the **CustomerUser** instance to send the request to restore the user.
+To restore a user, create a new instance of the [**CustomerUser**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.customeruser) class, and set the value of the [**User.State**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.user.state) property to [**UserState.Active**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.userstate).
+
+You restore a deleted user by setting the user's state to active. You do not have to repopulate the remaining fields in the user resource. Those values will automatically be restored from the deleted, inactive user resource. 
+
+Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user.
+
+Finally, call the [**Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.patch) method and pass the **CustomerUser** instance to send the request to restore the user.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -65,7 +71,7 @@ Use the following query parameters to specify the customer id and user id.
 
 ### Request headers
 
-- See [Partner Center REST Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 
@@ -73,7 +79,7 @@ This table describes the required properties in the request body.
 
 | Name       | Type   | Required | Description                                                            |
 |------------|--------|----------|------------------------------------------------------------------------|
-| State      | string | Y        | The user state. To restore a deleted user, this must contain "active". |
+| State      | string | Y        | The user state. To restore a deleted user, this string must contain "active". |
 | Attributes | object | N        | Contains "ObjectType": "CustomerUser".                                 |
 
 ### Request example
@@ -100,7 +106,7 @@ Expect: 100-continue
 
 ## REST Response
 
-If successful, this method returns the restored user information in the response body.
+If successful, the response returns the restored user information in the response body.
 
 ### Response success and error codes
 

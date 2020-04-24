@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 How to cancel reserved instance, software, and commercial marketplace Software as a Service (SaaS) subscription orders from integration sandbox accounts.
 
 >[!NOTE]
->Please be aware that cancelling of reserved instance, software, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
+>Please be aware that the cancellations of reserved instance, software, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts. To cancel production orders please contact Partner Center support.
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ Use the following query parameter to delete a customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 ```http

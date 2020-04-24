@@ -45,7 +45,7 @@ BillingProfile billingProfile = partnerOperations.Profiles.BillingProfile.Get();
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

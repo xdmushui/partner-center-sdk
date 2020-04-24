@@ -67,7 +67,7 @@ Use the following query parameter to identify the correct customer.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

@@ -95,7 +95,7 @@ Use the following query parameters when creating the request.
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

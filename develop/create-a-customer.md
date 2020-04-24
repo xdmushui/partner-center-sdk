@@ -136,7 +136,7 @@ Customer newCustomer = partnerOperations.getCustomers().create( customerToCreate
 
 To create a customer execute the [**New-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md) command.
 
-### Powershell example
+### PowerShell example
 
 ```powershell
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
@@ -154,7 +154,7 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
 - A request ID and correlation ID are required.
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -173,7 +173,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | email            | string                                   | The customer's email address.                                                                                                                                                                                   |
 | culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) for the supported cultures. |
-| language         | string                                   | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
+| language         | string                                   | The default language. Two character language codes (for example `en` or `fr`) are supported.                                                                                                                                |
 | company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 

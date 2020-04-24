@@ -125,7 +125,7 @@ Use the following path parameters to identify the customer and user.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -192,7 +192,7 @@ Date: Thu, 20 Apr 2017 21:50:39 GMT
 }
 ```
 
-### Response example (license is not available)
+### Response example (license isn't available)
 
 ```http
 HTTP/1.1 400 Bad Request

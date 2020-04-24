@@ -47,7 +47,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

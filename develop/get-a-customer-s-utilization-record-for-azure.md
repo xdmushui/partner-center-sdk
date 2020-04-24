@@ -24,7 +24,7 @@ You can get the utilization records of a customer's Azure subscription for a spe
 - A customer identifier.
 - A subscription identifier.
 
-This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API is not supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at daily level per meter per resource. This is equivalent to the daily grain data provided by the Azure utilization API. You will need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
+This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API isn't supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at a daily level per meter per resource. This rate consumption is equivalent to the daily grain data provided by the Azure utilization API. You'll need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
 
 ## Azure utilization API
 
@@ -39,8 +39,10 @@ This REST API is paged. If the response payload is larger than a single page, yo
 To obtain the Azure Utilization Records:
 
 1. Get the customer ID and subscription ID.
+
 2. Call the [**IAzureUtilizationCollection.Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.utilization.iazureutilizationcollection.query) method to return a [**ResourceCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.resourcecollection-1) that contains the utilization records.
-3. Obtain an Azure utilization record enumerator to traverse the utilization pages. You must do this because the resource collection is paged.
+
+3. Obtain an Azure utilization record enumerator to traverse the utilization pages. This step is required, because the resource collection is paged.
 
 - **Sample**: [Console test app](console-test-app.md)
 - **Project**: Partner Center SDK Samples
@@ -147,7 +149,7 @@ Use the following path and query parameters to get the utilization records.
 
 #### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 
@@ -171,7 +173,7 @@ Host: api.partnercenter.microsoft.com
 
 ### REST response
 
-If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. If the Azure utilization data is not yet ready in a dependent system, this method returns an HTTP Status Code 204 with a Retry-After header.
+If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. If the Azure utilization data isn't yet ready in a dependent system, this method returns an HTTP Status Code 204 with a Retry-After header.
 
 #### Response success and error codes
 

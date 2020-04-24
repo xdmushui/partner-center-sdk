@@ -22,11 +22,11 @@ How to determine if a domain is available for use.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A domain (e.g. "contoso.onmicrosoft.com").
+- A domain (for example `contoso.onmicrosoft.com`).
 
 ## C#
 
-To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
+To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This method retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -37,7 +37,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CheckDomainAvailability.cs
 
-## Request
+## REST Request
 
 ### Request syntax
 
@@ -55,7 +55,7 @@ Use the following query parameter to verify domain availability.
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -74,9 +74,9 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## Response
+## REST Response
 
-If the domain exists it is not available for use and a response status code 200 OK is returned. If the domain is not found it is available for use and a response status code 404 Not Found is returned.
+If the domain exists, it isn't available for use and a response status code 200 OK is returned. If the domain isn't found, it's available for use and a response status code 404 Not Found is returned.
 
 ### Response success and error codes
 

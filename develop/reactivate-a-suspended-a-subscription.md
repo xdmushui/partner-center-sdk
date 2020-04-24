@@ -65,7 +65,7 @@ This table lists the required query parameter to reactivate the subscription.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

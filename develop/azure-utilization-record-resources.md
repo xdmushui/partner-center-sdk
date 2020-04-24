@@ -20,7 +20,7 @@ The Azure utilization record contains details about the utilization of an Azure 
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine a Rate Card query to [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, which are customizable. Location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. By default, the API uses your partner profile settings in Partner Center and your browser language, and those settings are customizable. The location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
 ## AzureUtilizationRecord
 
@@ -29,7 +29,7 @@ Describes the properties of an Azure utilization record resource.
 | Property       | Type                                      | Required | Description                                                                                                                                                                             |
 |----------------|-------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | usageStartTime | string                                    | Yes      | The start of the usage aggregation time range. The response is grouped by the time of consumption (when the resource was actually used vs. when was it reported to the billing system). |
-| usageEndTime   | string                                    | Yes      | The end of the usage aggregation time range. The response is grouped by the time of consumption (when the resource was actually used vs. when was it reported to the billing system).   |
+| usageEndTime   | string                                    | Yes      | The end of the usage aggregation time range. The response is grouped by the time of consumption. That is, when the resource was actually used vs. when was it reported to the billing system.   |
 | resource       | object                                    | Yes      | Contains an [AzureResource](#azureresource) object.                                                                                                                                     |
 | quantity       | number                                    | Yes      | The quantity consumed of the [AzureResource.](#azureresource)                                                                                                                           |
 | unit           | string                                    | No       | The type of quantity (hours, bytes, etc.) This property is optional                                                                                                                     |

@@ -18,7 +18,7 @@ Resources that represent purchasable goods or services. Includes resources for d
 
 ## Product
 
-Represents a purchasable good or service. A product by itself is not a purchasable item.
+Represents a purchasable good or service. A product by itself isn't a purchasable item.
 
 | Property           | Type                          | Description                                                              |
 |--------------------|-------------------------------|--------------------------------------------------------------------------|
@@ -115,7 +115,7 @@ Represents a single item in an inventory check operation. This resource is used 
 | Property         | Type                                                              | Description                                                                      |
 |------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | productId        | string                                                            | (Required) The ID of the [product](#product).                            |
-| skuId            | string                                                            | The ID of the [SKU](#sku). When using this resource as input to an inventory request, this value is optional. If this value is not provided, then all SKUs under the product will be considered as target items of the inventory check operation.      |
+| skuId            | string                                                            | The ID of the [SKU](#sku). When using this resource as input to an inventory request, this value is optional. If this value isn't provided, then all SKUs under the product will be considered as target items of the inventory check operation.      |
 | isRestricted     | bool                                                              | Indicates whether this item was found to have a restricted inventory.            |
 | restrictions     | array of [InventoryRestriction](#inventoryrestriction)            | The details of any restrictions that are found for this item. This property will only be populated if **isRestricted** = "true". |
 

@@ -64,7 +64,7 @@ This table lists the required query parameter to update the subscription nicknam
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

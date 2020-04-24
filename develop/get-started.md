@@ -24,7 +24,7 @@ The Partner Center SDK includes a managed API and a REST API for partners to use
 [Download the Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkId=746681)
 
 > [!NOTE]
-> API access to Partner Center for indirect resellers is not a supported scenario.
+> API access to Partner Center for indirect resellers isn't a supported scenario.
 
 ## Determine your version of Partner Center
 

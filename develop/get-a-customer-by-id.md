@@ -80,7 +80,7 @@ Use the following query parameter to a specific customer.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

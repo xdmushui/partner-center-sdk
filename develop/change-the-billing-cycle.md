@@ -81,7 +81,7 @@ This table lists the required query parameter to change the quantity of the subs
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 ### Request body
 

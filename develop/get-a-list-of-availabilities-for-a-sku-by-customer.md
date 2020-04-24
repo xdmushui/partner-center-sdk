@@ -42,11 +42,11 @@ You can use the following methods to get a collection of availabilities for a sp
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
 | customer-tenant-id | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
 | product-id | string | Yes | A string that identifies the product. |
-| sku-id | string | Yes | A tring that identifies the SKU. |
+| sku-id | string | Yes | A string that identifies the SKU. |
 
 #### Request header
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 #### Request body
 

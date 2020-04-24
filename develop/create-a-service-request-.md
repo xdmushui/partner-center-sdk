@@ -67,7 +67,7 @@ Use the following URI parameter to identify the agent locale.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

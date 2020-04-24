@@ -41,7 +41,7 @@ var startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 01);
 
 // First perform the query, then get the enumerator. Choose one of the following and comment out the other two.
 
-// To retrieve audit records by company name substring (e.g. "bri" matches "Fabrikam, Inc.").
+// To retrieve audit records by company name substring (for example "bri" matches "Fabrikam, Inc.").
 var searchSubstring="bri";
 var filter = new SimpleFieldFilter(AuditRecordSearchField.CompanyName.ToString(), FieldFilterOperation.Substring, searchSubstring);
 var auditRecordsPage = partnerOperations.AuditRecords.Query(startDate.Date, query: QueryFactory.Instance.BuildSimpleQuery(filter));
