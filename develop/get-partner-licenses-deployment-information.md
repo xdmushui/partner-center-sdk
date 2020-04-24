@@ -43,7 +43,7 @@ var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.De
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

@@ -57,7 +57,7 @@ Use the following URI parameter to get the specified service request.
 
 ### Request headers
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

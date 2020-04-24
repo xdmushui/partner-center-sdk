@@ -57,7 +57,7 @@ Use the following path parameters when creating the request.
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

@@ -29,7 +29,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### URI parameters
 

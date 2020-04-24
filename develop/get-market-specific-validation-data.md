@@ -39,7 +39,7 @@ Get the expected address format based on the iso code for the market.
 
 ### Request headers
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

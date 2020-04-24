@@ -88,7 +88,7 @@ The following table shows a list of the supported fields and support operators f
 
 ### Request headers
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

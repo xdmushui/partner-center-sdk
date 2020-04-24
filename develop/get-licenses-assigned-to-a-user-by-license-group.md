@@ -67,7 +67,7 @@ Use the following path and query parameters to identify the customer, user and l
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

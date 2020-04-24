@@ -52,7 +52,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

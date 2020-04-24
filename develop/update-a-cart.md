@@ -58,7 +58,7 @@ Use the following path parameters to identify the customer, and specify the cart
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

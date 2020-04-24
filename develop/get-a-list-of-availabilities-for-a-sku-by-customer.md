@@ -46,7 +46,7 @@ You can use the following methods to get a collection of availabilities for a sp
 
 #### Request header
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

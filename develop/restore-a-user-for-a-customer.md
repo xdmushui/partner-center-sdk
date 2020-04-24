@@ -71,7 +71,7 @@ Use the following query parameters to specify the customer id and user id.
 
 ### Request headers
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

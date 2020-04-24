@@ -64,7 +64,7 @@ Use the following path and query parameters to identify the customer and the lic
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

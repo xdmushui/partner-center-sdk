@@ -64,7 +64,7 @@ Use the following URI parameters to identify the correct customer and role. To i
 
 ### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

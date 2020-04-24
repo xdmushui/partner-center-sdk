@@ -50,7 +50,7 @@ BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.Billing
 
 ### Request headers
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

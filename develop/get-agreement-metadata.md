@@ -111,7 +111,7 @@ To retrieve agreement metadata for Microsoft Cloud Agreement, first create a RES
 
 #### Request headers
 
-- For more information, see [Partner Center REST headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

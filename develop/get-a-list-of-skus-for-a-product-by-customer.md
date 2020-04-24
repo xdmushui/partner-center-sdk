@@ -44,7 +44,7 @@ Gets a collection of SKUs for a particular product that is available to an exist
 
 #### Request header
 
-- For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

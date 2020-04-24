@@ -43,7 +43,7 @@ You can use the following methods to get a collection of products for an existin
 
 #### Request header
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 

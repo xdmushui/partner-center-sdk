@@ -223,7 +223,7 @@ How to get all the indirect resellers analytics information for your customers.
 
 ### Request headers
 
-- See [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
