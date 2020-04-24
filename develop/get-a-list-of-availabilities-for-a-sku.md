@@ -55,17 +55,15 @@ var availabilities = partnerOperations.Products.ByCountry(countryCode).ById(prod
 
 ```
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                                                                                              |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities?country={country-code}&targetSegment={target-segment} HTTP/1.1     |
 
-#### URI parameters
+### URI parameters
 
 Use the following path and query parameters to get a list of availabilities for a SKU.
 
@@ -77,17 +75,17 @@ Use the following path and query parameters to get a list of availabilities for 
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
 | reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify `reservationScope=AzurePlan` to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request examples
+### Request examples
 
-##### Availabilities for SKU by country
+#### Availabilities for SKU by country
 
 Follow this example to get a list of availabilities for a given SKU by country:
 
@@ -99,7 +97,7 @@ MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02
 MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58
 ```
 
-##### Availabilities for VM reservations (Azure plan)
+#### Availabilities for VM reservations (Azure plan)
 
 Follow this example to get a list of availabilities by country for Azure VM reservation SKUs. This example is for SKUs that apply to Azure plans:
 
@@ -111,7 +109,7 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-##### Availabilities for VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
+#### Availabilities for VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
 
@@ -123,11 +121,11 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-### REST response
+## REST response
 
 If successful, the response body contains a collection of [**Availability**](product-resources.md#availability) resources.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For a full list, see [Partner Center error codes](error-codes.md).
 
@@ -137,7 +135,7 @@ This method returns the following error codes:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Access to the requested **targetSegment** is not allowed.                                                     |
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

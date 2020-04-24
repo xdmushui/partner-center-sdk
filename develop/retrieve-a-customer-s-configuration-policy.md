@@ -23,7 +23,7 @@ How to retrieve the specified configuration policy for the specified customer.
 - The customer identifier.
 - The policy identifier.
 
-## C#
+## C\#
 
 To retrieve a configuration policy for the specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to retrieve an interface to operations on the specified customer. Next, call the [**ConfigurationPolicies.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicycollection.byid) method with the policy ID to retrieve an interface to configuration policy operations for the specified policy. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.iconfigurationpolicy.getasync) method to retrieve the configuration policy.
 
@@ -38,7 +38,7 @@ ConfigurationPolicy retrievedConfigurationPolicy =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetConfigurationPolicy.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -76,7 +76,7 @@ Content-Length: 0
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, the response contains the requested [ConfigurationPolicy](device-deployment-resources.md#configurationpolicy) resource.
 

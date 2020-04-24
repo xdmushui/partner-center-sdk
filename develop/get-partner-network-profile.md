@@ -23,9 +23,7 @@ Gets an object representing the partner's MPN profile.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## Examples
-
-### C#
+## C\#
 
 To get a partner network profile, use your **IAggregatePartner.Profiles** collection and call the **MpnProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.impnprofile.getasync) methods.
 
@@ -37,7 +35,7 @@ var mpnProfile = partnerOperations.Profiles.MpnProfile.Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**:PartnerCenterSDK.FeaturesSamples **Class**: GetMPNProfile.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -49,7 +47,7 @@ To get a partner network profile, use your **IAggregatePartner.getProfiles** fun
 MpnProfile mpnProfile = partnerOperations.getProfiles().getMpnProfile().get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -59,7 +57,7 @@ To get a partner network profile, execute the [**Get-PartnerMpnProfile**](https:
 Get-PartnerMpnProfile
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -86,7 +84,7 @@ MS-CorrelationId: cb9f3209-d020-4bf9-871c-e1f1c75348f8
 Connection: Keep-Alive
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a **MPNProfile** object in the response body.
 

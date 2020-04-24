@@ -25,7 +25,7 @@ Gets a list of deleted CustomerUser resources for a customer by customer ID. You
 
 The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. If you want to restore a deleted user account within the thirty day window, see [Restore a deleted user for a customer](restore-a-user-for-a-customer.md). Once deleted and marked "inactive", the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)). To get a list of deleted users that have not yet been purged, you must query for user accounts that have been set to inactive.
 
-## C#
+## C\#
 
 To retrieve a list of deleted users, construct a query that filters for customer users whose status is set to inactive. First, create the filter by instantiating a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object with the parameters as shown in the following code snippet. Then create the query using the [**BuildIndexedQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildindexedquery) method. If you do not want paged results, you can use the [**BuildSimpleQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildsimplequery) method instead. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Finally, call the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.query) method to send the request.
 
@@ -45,7 +45,7 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.Q
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerInactiveUsers.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -83,7 +83,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of [CustomerUser](user-resources.md#customeruser) resources in the response body.
 

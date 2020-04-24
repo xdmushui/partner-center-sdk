@@ -101,11 +101,9 @@ For a similar example, see:
 - Project: **Partner Center SDK Samples**
 - Class: **GetUnBilledConsumptionReconLineItemsPaging.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 You can use the following syntaxes for your REST request, depending on your use case. For more information, see the descriptions for each syntax.
 
@@ -115,7 +113,7 @@ You can use the following syntaxes for your REST request, depending on your use 
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Use this syntax for large invoices. Use this syntax with a specified size and 0-based offset to return a paged list of line items. |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
-##### URI parameters
+#### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -128,27 +126,27 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. The default size is 2000.                    |
 | seekOperation          | string | No       | Set `seekOperation=Next` to get the next page of reconciliation line items.                |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-### REST response
+## REST response
 
 If successful, the response contains the collection of line item details.
 
 *For the line item **ChargeType**, the value **Purchase** is mapped to **New** and the value **Refund** is mapped to **Cancel**.*
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Request-response examples
+## Request-response examples
 
-#### Request-response example 1
+### Request-response example 1
 
 The following details apply to this example:
 
@@ -156,7 +154,7 @@ The following details apply to this example:
 - **InvoiceLineItemType**: **UsageLineItems**
 - **Period**: **Previous**
 
-##### Request example 1
+#### Request example 1
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1//invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
@@ -169,7 +167,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-#### Response example 1
+### Response example 1
 
 ```http
 HTTP/1.1 200 OK

@@ -40,7 +40,7 @@ var invoice = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoice.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -74,7 +74,7 @@ MS-RequestId: 8ac25aa5-9537-4b6d-b782-aa0c8e979e99
 MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns an [Invoice](invoice-resources.md#invoice) resource in the response body.
 

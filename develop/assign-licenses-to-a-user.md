@@ -160,7 +160,7 @@ Expect: 100-continue
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, an HTTP response status code 201 is returned and the response body contains a [LicenseUpdate](license-resources.md#licenseupdate) resource with the license information.
 

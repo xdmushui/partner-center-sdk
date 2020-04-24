@@ -24,7 +24,7 @@ How to update a list of devices with a configuration policy for the specified cu
 - The policy identifier.
 - The device identifiers of the devices to update.
 
-## C#
+## C\#
 
 To update a list of devices with the specified configuration policy, first, instantiate a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [KeyValuePair](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)[**(PolicyCategory,**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.policycategory)string) and add the policy to apply, as shown in the following code example. You will need the policy identifier of the policy.
 
@@ -70,7 +70,7 @@ var trackingLocation =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateDevicesPolicy.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -135,7 +135,7 @@ Connection: Keep-Alive
 }
 ```
 
-## Response
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve the status of this batch process. Save this URI for use with other related REST APIs.
 

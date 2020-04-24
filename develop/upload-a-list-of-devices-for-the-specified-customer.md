@@ -24,7 +24,7 @@ How to upload a list of information about devices to an existing batch for the s
 - The device batch identifier.
 - The list of device resources that provide the information about the individual devices.
 
-## C#
+## C\#
 
 To upload a list of devices to an existing device batch, first, instantiate a new [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**Device**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device) and populate the list with the devices. The following combinations of populated properties are required at a minimum for identifying each device:
 
@@ -65,7 +65,7 @@ var trackingLocation =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateDevices.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -140,7 +140,7 @@ Expect: 100-continue
 ]
 ```
 
-## Response
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve device upload status. Save this URI for use with other related REST APIs.
 

@@ -105,11 +105,9 @@ For a similar example, see:
 - Project: **Partner Center SDK Samples**
 - Class: **GetUnBilledReconLineItemsPaging.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 You can use the following syntaxes for your REST request, depending on your use case. For more information, see the descriptions for each syntax.
 
@@ -119,7 +117,7 @@ You can use the following syntaxes for your REST request, depending on your use 
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
-##### URI parameters
+#### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -134,15 +132,15 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-### REST response
+## REST response
 
 If successful, the response contains the collection of line item details.
 

@@ -102,11 +102,9 @@ For a similar example, see the following:
 - Project: **Partner Center SDK Samples**
 - Class: **GetBilledConsumptionReconLineItemsPaging.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 Use the first syntax to return a full list of every line item for the given invoice. For large invoices, use the second syntax with a specified size and 0-based offset to return a paged list of line items. Use the third syntax to get the next page of recon line items using `seekOperation = "Next"`.
 
@@ -116,7 +114,7 @@ Use the first syntax to return a full list of every line item for the given invo
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&size={size}&seekOperation=Next                               |
 
-##### URI parameters
+#### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -130,27 +128,27 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000       |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items. |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-### REST response
+## REST response
 
 If successful, the response contains the collection of line item details.
 
 For the line item **ChargeType**, the value **Purchase** is mapped to **New**. The value **Refund** is mapped to **Cancel**.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### REST examples
+## REST examples
 
-#### Request-response example 1
+### Request-response example 1
 
 The details for this example REST request and response are as follows:
 
@@ -158,7 +156,7 @@ The details for this example REST request and response are as follows:
 - **InvoiceLineItemType**: **UsageLineItems**
 - **Period**: **Previous**
 
-##### Request example 1
+#### Request example 1
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode=usd&period=previous&size=2000 HTTP/1.1
@@ -171,7 +169,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 1
+#### Response example 1
 
 ```http
 HTTP/1.1 200 OK
@@ -318,7 +316,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
 }
 ```
 
-#### Request-response example 2
+### Request-response example 2
 
 The details for this example REST request and response are as follows:
 
@@ -327,7 +325,7 @@ The details for this example REST request and response are as follows:
 - **Period**: **Previous**
 - **SeekOperation**: **Next**
 
-##### Request example 2
+#### Request example 2
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/T000001234/lineitems?provider=onetime&invoiceLineItemType=usagelineitems&currencyCode=usd&period=previous&size=2000&seekoperation=next HTTP/1.1
@@ -341,7 +339,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-### Response example 2
+## Response example 2
 
 ```http
 HTTP/1.1 200 OK

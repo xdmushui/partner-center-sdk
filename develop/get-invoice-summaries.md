@@ -48,29 +48,27 @@ For more information, see the following example code:
 - Project: **PartnerSDK.FeatureSample**
 - Class: **GetInvoiceSummaries.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                                   |
 |---------|-------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summaries HTTP/1.1     |
 
-##### URI parameter
+#### URI parameter
 
 None.
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/summaries HTTP/1.1
@@ -81,15 +79,15 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) resource in the response body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

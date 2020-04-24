@@ -21,7 +21,7 @@ How to update an order for a customer in a cart.
 - A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A Cart ID for an existing cart.
 
-## C#
+## C\#
 
 To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
 
@@ -39,7 +39,7 @@ cart.LineItems.ToArray()[0].Quantity++;
 var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Put(cart);
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -128,7 +128,7 @@ Expect: 100-continue
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 

@@ -23,7 +23,7 @@ Gets an object representing the partner's billing profile.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## C#
+## C\#
 
 To get a partner billing profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ibillingprofile.getasync) methods.
 
@@ -35,7 +35,7 @@ BillingProfile billingProfile = partnerOperations.Profiles.BillingProfile.Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: GetBillingProfile.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -61,7 +61,7 @@ MS-RequestId: a0dd6cde-b24c-413c-af24-416446dc5599
 MS-CorrelationId: 1bb03149-88d2-4bc2-9cc1-d6e83890fa9e
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a **BillingProfile** object in the response body.
 

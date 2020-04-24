@@ -21,9 +21,7 @@ Gets the specified product resource using a product ID.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A product ID.
 
-## Examples
-
-### C#
+## C\#
 
 To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product.
 
@@ -33,7 +31,7 @@ To find a specific product by ID, use your **IAggregatePartner.Products** collec
 Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z0BQ3Q").Get();
 ```
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](<../includes/java-sdk-support.md>)]
 
@@ -45,7 +43,7 @@ To find a specific product by ID, use your **IAggregatePartner.getProducts** fun
 Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZH318Z0BQ3Q").get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](<../includes/powershell-module-support.md>)]
 

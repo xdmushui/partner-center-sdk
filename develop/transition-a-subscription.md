@@ -25,7 +25,7 @@ Upgrades a customer's subscription to a specified target subscription.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - Two subscription IDs, one for the initial subscription and one for the target subscription.
 
-## C#
+## C\#
 
 To upgrade a customer's subscription, first [get that's customer's subscription](get-a-subscription-by-id.md). Then, obtain a list of upgrades for that subscription by calling the **Upgrades** property followed by the **Get()** or **GetAsync()** methods. Choose a target upgrade from that list of upgrades, and then call the **Upgrades** property of the initial subscription, followed by the **Create()** method.
 
@@ -40,7 +40,7 @@ UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerI
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpgradeSubscription.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -140,7 +140,7 @@ Expect: 100-continue
 }
 ```
 
-## Response
+## REST response
 
 If successful, this method returns an **Upgrade** result resource in the response body.
 

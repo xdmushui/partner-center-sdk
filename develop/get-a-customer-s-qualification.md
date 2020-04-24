@@ -20,7 +20,7 @@ How to get a customer's qualification.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A customer identifier.
 
-## C#
+## C\#
 
 To get a customer's qualification, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier. Then use the [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property to retrieve a [**ICustomerQualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) interface. Finally, call [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) to retrieve the customer's qualification.
 
@@ -31,7 +31,7 @@ To get a customer's qualification, call the [**IAggregatePartner.Customers.ById*
 var customerQualification = partnerOperations.Customers.ById(customerId).Qualification.Get();
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -65,7 +65,7 @@ MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a qualification value in the response body.  Below is an example of the **GET** call on a customer with the **education** qualification.
 

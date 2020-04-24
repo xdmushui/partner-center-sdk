@@ -62,7 +62,7 @@ This table describes the required properties in the request body.
 | [Domain](#domain)                                     | object | Yes                                           | Contains the domain information. |
 | [DomainFederationSettings](#domain-federation-settings) | object | Yes (If AuthenticationType = `Federated`)     | The domain federation settings to be used if the domain is a `Federated` domain and not a `Managed` domain. |
 
-#### Domain
+### Domain
 
 This table describes the required and optional **Domain** properties in the request body.
 
@@ -77,7 +77,7 @@ This table describes the required and optional **Domain** properties in the requ
 | Status                                                | string           | Yes      | The domain status. For example, `Verified`. Supported values:  `Unverified`, `Verified`, `PendingDeletion`.                               |
 | VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: `None`, `DnsRecord`, `Email`.                                    |
 
-##### Domain federation settings
+### Domain federation settings
 
 This table describes the required and optional **DomainFederationSettings** properties in the request body.
 

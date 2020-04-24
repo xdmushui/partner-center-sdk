@@ -24,9 +24,7 @@ Gets a **Customer** resource that corresponds to a customer ID.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports app+user credentials or app-only authentication.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
-## Examples
-
-### C#
+## C\#
 
 To get a customer by ID, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, then call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.getasync) methods.
 
@@ -39,7 +37,7 @@ Customer customerInfo = partnerOperations.Customers.ById(customerIdToRetrieve).G
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerInformation.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -52,7 +50,7 @@ To get a customer by ID, use your **IAggregatePartner.getCustomers** function, c
 Customer customerInfo = partnerOperations.getCustomers().byId(customerIdToRetrieve).get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -62,7 +60,7 @@ To get a customer by ID, execute the [**Get-PartnerCustomer**](https://github.co
 Get-PartnerCustomer -CustomerId '2ca7de6c-c05c-46b5-b689-32e53573a97a'
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -96,7 +94,7 @@ MS-CorrelationId: a176c585-b5de-4d65-824c-67a6deb45cd9
 MS-RequestId: 74ca1db9-df92-41c6-a362-a16433b0542b
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a [Customer](customer-resources.md#customer) resource in the response body.
 

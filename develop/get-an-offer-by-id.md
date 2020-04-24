@@ -24,9 +24,7 @@ Gets an **Offer** resource that matches the offer ID.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - An offer ID.
 
-## Examples
-
-### C#
+## C\#
 
 To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country with a call to **ByCountry()**, and then call the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
 
@@ -41,7 +39,7 @@ var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -56,7 +54,7 @@ To find a specific offer by ID, use your **IAggregatePartner.getOffers** functio
 Offer offer = partnerOperations.getOffers().byCountry(countryCode).byId(offerId).get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -69,7 +67,7 @@ To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://githu
 Get-PartnerOffer -Country $countryCode -OfferId $offerId
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -105,7 +103,7 @@ X-Locale: <locale-id>
 Connection: Keep-Alive
 ```
 
-## Response
+## REST response
 
 If successful, this method returns an **Offer** resource in the response body.
 

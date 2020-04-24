@@ -49,11 +49,9 @@ var upgradeId = Regex.Split(productUpgradeLocationHeader, "/")[1];
 
 ```
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method   | Request URI                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
@@ -88,15 +86,15 @@ Connection: Keep-Alive
 }
 ```
 
-### REST response
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve product upgrade status. Save this URI for use with other related REST APIs.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 202 Accepted

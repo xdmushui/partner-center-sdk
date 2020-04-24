@@ -23,7 +23,7 @@ How to get all the search analytics information for your customers.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -59,7 +59,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains a collection of [Search](partner-center-analytics-resources.md#search-resource) resources.
 

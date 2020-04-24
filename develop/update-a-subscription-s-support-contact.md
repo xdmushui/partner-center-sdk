@@ -25,7 +25,7 @@ How to update a subscription's support contact to one of the partner's value add
 - A subscription identifier.
 - Information about the new support contact: tenant identifier, Microsoft Partner Network identifier, and name. The support contact must be one of the partner's value added resellers.
 
-## C#
+## C\#
 
 To update a subscription's support contact, first instantiate and populate a [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.supportcontact) object with the new values. Then use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the subscription ID. Then, use the [**SupportContact**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.supportcontact) property to obtain an interface to support contact operations. Finally, call the [**Update**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionsupportcontact.update) or [**UpdateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionsupportcontact.updateasync) method with the populated SupportContact object to update the support contact.
 
@@ -48,7 +48,7 @@ var updatedSupportContact = partnerOperations.Customers.ById(customerId).Subscri
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateSubscriptionSupportContact.cs
 
-##  REST Request
+## REST request
 
 ### Request syntax
 

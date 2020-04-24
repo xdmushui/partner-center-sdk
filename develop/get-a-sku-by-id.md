@@ -22,7 +22,7 @@ Gets a SKU for the specified product using the specified SKU ID.
 - A product ID.
 - A SKU ID.
 
-## C#
+## C\#
 
 To get the details of a specific SKU, start by following the steps in [Get a product by ID](get-a-product-by-id.md) to get the interface for a specific product's operations. From the resulting interface, select the **Skus** property to obtain an interface with the available operations for SKUs. Pass the SKU ID to the **ById()** method, and call **Get()** or **GetAsync()** to retrieve the SKU details.
 
@@ -36,7 +36,7 @@ string skuId;
 var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus.ById(skuId).Get();
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -76,7 +76,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains a [SKU](product-resources.md#sku) resource.
 

@@ -24,7 +24,7 @@ How to determine if a domain is available for use.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - A domain (for example `contoso.onmicrosoft.com`).
 
-## C#
+## C\#
 
 To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This method retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
@@ -37,7 +37,7 @@ bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CheckDomainAvailability.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -74,7 +74,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## REST Response
+## REST response
 
 If the domain exists, it isn't available for use and a response status code 200 OK is returned. If the domain isn't found, it's available for use and a response status code 404 Not Found is returned.
 

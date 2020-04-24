@@ -123,11 +123,14 @@ cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 To create an order for a customer:
 
 1. Instantiate a Cart object.
+
 2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
 3. Obtain an interface to cart operations by calling the **IAggregatePartner.getCustomers().byId** function with the customer ID to identify the customer, and then retrieving the interface from the **getCart** function.
+
 4. Call the **create** function to create the cart.
 
-### Java example
+## Java example
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -166,10 +169,10 @@ Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().
 To create an order for a customer:
 
 1. Instantiate a Cart object.
-2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
-3. Execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
 
-### PowerShell example
+2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
+3. Execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
 
 ```powershell
 # $customerId

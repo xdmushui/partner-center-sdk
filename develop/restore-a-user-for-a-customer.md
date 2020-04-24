@@ -26,7 +26,7 @@ How to restore a deleted **User** by customer ID and user ID.
 
 The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. You can only restore a deleted user account during this thirty-day window. Once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
 
-## C#
+## C\#
 
 To restore a user, create a new instance of the [**CustomerUser**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.customeruser) class, and set the value of the [**User.State**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.user.state) property to [**UserState.Active**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.users.userstate).
 
@@ -52,7 +52,7 @@ var restoredCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CustomerUserRestore.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -104,7 +104,7 @@ Expect: 100-continue
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, the response returns the restored user information in the response body.
 

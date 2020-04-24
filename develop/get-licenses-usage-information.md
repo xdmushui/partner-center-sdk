@@ -19,7 +19,7 @@ How to get licenses usage information at the workload level for Office and Dynam
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -53,7 +53,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains the following fields containing data about licenses usage.
 

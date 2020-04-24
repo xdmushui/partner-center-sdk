@@ -41,7 +41,7 @@ For an example, see the following sample:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetCustomerUsageRecords.cs**
 
-## REST Request
+## REST request
 
 ### Request syntax
 

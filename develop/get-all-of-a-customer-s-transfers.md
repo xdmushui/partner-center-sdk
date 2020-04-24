@@ -56,7 +56,7 @@ MS-CorrelationId: dec58181-67b5-4831-c2c9-2fa099122f5d
 Connection: Keep-Alive
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a list of [TransferEntity](transfer-entity-resources.md) resources in the response body.
 

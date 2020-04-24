@@ -21,7 +21,7 @@ How to get a collection of entitlements.
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 - A customer identifier.
 
-## C#
+## C\#
 
 To get an entitlements collection for a customer, obtain an interface to [**Entitlement**](entitlement-resources.md#entitlement) operations by calling the  [**IAggregatePartner.Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, retrieve the interface from the **Entitlements** property and call the **Get()** or **GetAsync()** method to retrieve the collection of entitlements.
 
@@ -38,7 +38,7 @@ To populate expiry dates for the entitlements to be retrieved, call the same met
 > [!IMPORTANT]
 > On-premise entitlement types do not have expiry dates.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -76,7 +76,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## REST Response
+## REST response
 
 If successful, the response body contains a collection of [Entitlement](entitlement-resources.md#entitlement) resources.
 
@@ -173,7 +173,7 @@ Date: Mon, 19 Mar 2018 07:42:51 GMT
 
 The following example shows you how to retrieve a specific type of entitlements along with expiry dates (when applicable)
 
-### C# example
+### C\# example
 
 To retrieve a specific type of entitlements, obtain the **ByEntitlementType** interface from the **Entitlements** interface and use the **Get()** or **GetAsync()** methods.
 
@@ -301,7 +301,7 @@ The following examples show you how to retrieve information about products and r
 
 ### Retrieve virtual machine reservation details from an entitlement by using SDK V1.8
 
-### C# example
+### C\# example
 
 To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
 
@@ -353,7 +353,7 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 
 ### Retrieve reservation details from an entitlement by using SDK V1.9
 
-### C# example
+### C\# example
 
 To retrieve more details related to the reservations from a reserved instance entitlement, invoke the URI exposed under ```entitledArtifacts.link``` with ```artifactType = reservedinstance```.
 

@@ -22,7 +22,7 @@ How to retrieve a list of trial conversion offers.
 - A customer identifier.
 - A subscription ID for an active trial subscription.
 
-## C#
+## C\#
 
 To get a list of trial conversions available, start by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the trial subscription ID. Next, use the [**Conversions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) property to obtain an interface to the available operations on conversions, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) method to retrieve a collection of available [**Conversion**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion) offers.
 
@@ -36,7 +36,7 @@ var conversions =
     partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId).Conversions.Get();
 ```
 
-##  REST Request
+## REST request
 
 ### Request syntax
 

@@ -25,7 +25,7 @@ allocated for a customer's usage.
 - A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the
     customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## C#
+## C\#
 
 To update a customer's usage spending budget, first create a new
 [**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
@@ -48,7 +48,7 @@ var newUsageBudget = new SpendingBudget()
 var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
 ```
 
-##  REST Request
+## REST request
 
 ### Request syntax
 

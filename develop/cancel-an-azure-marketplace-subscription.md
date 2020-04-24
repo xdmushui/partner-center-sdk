@@ -29,7 +29,7 @@ To cancel a commercial marketplace subscription in the Partner Center dashboard:
 2. Select the subscription that you wish to cancel.
 3. Choose the **Cancel subscription** option, then select **Submit**.
 
-## C#
+## C\#
 
 To cancel a customer's subscription:
 
@@ -121,7 +121,7 @@ Connection: Keep-Alive
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns deleted [Subscription](subscription-resources.md) resource properties in the response body.
 

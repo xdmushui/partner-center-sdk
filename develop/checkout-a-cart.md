@@ -24,9 +24,7 @@ How to checkout an order for a customer in a cart.
 - A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A Cart ID for an existing cart.
 
-## Examples
-
-### C#
+## C\#
 
 To checkout an order for a customer, get a reference to the cart using the cart and customer identifier. Finally, call the **Create** or **CreateAsync** functions to complete the order.
 
@@ -38,7 +36,7 @@ To checkout an order for a customer, get a reference to the cart using the cart 
 var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Checkout();
 ```
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](<../includes/java-sdk-support.md>)]
 
@@ -52,7 +50,7 @@ To checkout an order for a customer, get a reference to the cart using the cart 
 Cart cart = partnerOperations.getCustomers().byId(customerId).getCart().byId(cartId).checkout();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](<../includes/powershell-module-support.md>)]
 

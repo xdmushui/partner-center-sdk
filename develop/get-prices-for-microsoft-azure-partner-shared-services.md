@@ -22,7 +22,7 @@ Prices differ by market and currency, and this API takes location into considera
 
 ## Example Code
 
-## C#
+## C\#
 
 To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.getshared) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
@@ -54,7 +54,7 @@ To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://git
 Get-PartnerAzureRateCard -SharedServices
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -92,7 +92,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## REST Response
+## REST response
 
 If the request is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 

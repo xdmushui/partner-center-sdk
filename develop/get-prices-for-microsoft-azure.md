@@ -22,9 +22,7 @@ To track usage and help predict your monthly bill and the bills for individual c
 
 Prices differ by market and currency, and this API takes location into consideration. By default, the API uses your partner profile settings in Partner Center and your browser language, and those settings are customizable. The location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office. For more information, see [URI parameters](#uri-parameters).
 
-## Examples
-
-### C#
+## C\#
 
 To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
@@ -36,7 +34,7 @@ var azureRateCard = partner.RateCards.Azure.Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -48,7 +46,7 @@ To obtain the Azure Rate Card, call the **IAzureRateCard.get** function to retur
 AzureRateCard azureRateCard = partner.getRateCards().getAzure().get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 

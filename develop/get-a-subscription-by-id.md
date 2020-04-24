@@ -25,7 +25,7 @@ Gets a [Subscription](subscription-resources.md) resource that matches the custo
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - A subscription ID.
 
-## C#
+## C\#
 
 To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription. Use that [**interface**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get).
 
@@ -39,7 +39,7 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscription.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -76,7 +76,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a [Subscription](subscription-resources.md) resource in the response body.
 

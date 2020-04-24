@@ -22,7 +22,7 @@ A partner can update a customer's qualification to be "Education" or "Government
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id).
 
-## C#
+## C\#
 
 To update a customer's qualification to "Education", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
@@ -42,7 +42,7 @@ To update a customer's qualification to **GovernmentCommunityCloud** on an exist
 var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
 ```
 
-##  REST Request
+## REST request
 
 ### Request syntax
 

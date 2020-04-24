@@ -23,7 +23,7 @@ Gets the managed services for a customer. In other words, get links to all of th
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
-## C#
+## C\#
 
 To display a list of all the managed services for a customer, use your **IAggregatePartner.Customers** collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ManagedServices**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.managedservices) property, followed by the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.managedservices.imanagedservicecollection.getasync) methods.
 
@@ -36,7 +36,7 @@ ResourceCollection<ManagedService> managedServices = partnerOperations.Customers
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: CustomerManagedServices.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -70,7 +70,7 @@ MS-RequestId: 4ff57220-f17b-4d8f-8e09-78334c57ba00
 MS-CorrelationId: 03d6064a-f048-4aee-8892-ed46dc5c8bee
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of **Managed Service** objects in the response body.
 

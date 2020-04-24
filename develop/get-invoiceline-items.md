@@ -99,15 +99,13 @@ For a similar example, see the following:
 - Project: **Partner Center SDK Samples**
 - Class: **GetInvoiceLineItems.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 Make your request using the appropriate syntax for the billing provider in your scenario.
 
-##### Office
+#### Office
 
 The following syntax applies when the billing provider is **Office**.
 
@@ -115,7 +113,7 @@ The following syntax applies when the billing provider is **Office**.
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=office&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1                               |
 
-##### Microsoft Azure (MS-AZR-0145P) subscription
+#### Microsoft Azure (MS-AZR-0145P) subscription
 
 The following syntaxes apply when the billing provider has a Microsoft Azure (MS-AZR-0145P) subscription.
 
@@ -133,7 +131,7 @@ The following syntaxes apply when the billing provider is **OneTime**. This incl
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&size={size} HTTP/1.1  |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/onetime/billinglineitems&size={size}?seekOperation=Next                           |
 
-##### Previous syntaxes
+#### Previous syntaxes
 
 If you are using the following syntaxes, be sure to use the appropriate syntax for your use case.
 
@@ -147,7 +145,7 @@ You should use **onetime** to query all commercial consumption line items instea
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/{billing-provider}/{invoice-line-item-type}?size={size}&offset={offset} HTTP/1.1  | For large invoices, you can use this syntax with a specified size and 0-based offset to return a paged list of line items. |
 | GET | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems/OneTime/{invoice-line-item-type}?seekOperation=Next                               | You can use this syntax for an invoice with a billing-provider value of **OneTime** and set **seekOperation** to **Next** to get the next page of invoice line items. |
 
-###### URI parameters
+##### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -161,34 +159,34 @@ Use the following URI and query parameters when creating the request.
 | seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
 | hasPartnerEarnedCredit | bool | No | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when billing provider type is OneTime and InvoiceLineItemType is UsageLineItems. |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-### REST response
+## REST response
 
 If successful, the response contains the collection of line item details.
 
 *For the line item **ChargeType**, the value **Purchase** is mapped to **New**. The value **Refund** is mapped to **Cancel**.*
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### REST request-response examples
 
-#### Request-response example 1
+### Request-response example 1
 
 In this example, the details are as follows:
 
 - **BillingProvider**: **Office**
 - **InvoiceLineItemType**: **BillingLineItems**
 
-##### Request example 1
+#### Request example 1
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Office&nvoicelineitemtype=BillingLineItems&size=2&offset=0 HTTP/1.1
@@ -201,7 +199,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 1
+#### Response example 1
 
 ```http
 HTTP/1.1 200 OK
@@ -303,14 +301,14 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-#### Request-response example 2
+### Request-response example 2
 
 In the following example, the details are as follows:
 
 - **BillingProvider**: **Azure**
 - **InvoiceLineItemType**: **BillingLineItems**
 
-##### Request example 2
+#### Request example 2
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Azure&invoicelineitemtype=BillingLineItems&size=2&offset=0 HTTP/1.1
@@ -323,7 +321,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 2
+#### Response example 2
 
 ```http
 HTTP/1.1 200 OK
@@ -441,14 +439,14 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-#### Request-response example 3
+### Request-response example 3
 
 In the following example, the details are as follows:
 
 - **BillingProvider**: **Azure**
 - **InvoiceLineItemType**: **UsageLineItems**
 
-##### Request example 3
+#### Request example 3
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/1234000000/lineitems?provider=Azure&invoicelineitemtype=UsageLineItems&size=2&offset=0 HTTP/1.1
@@ -461,7 +459,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 3
+#### Response example 3
 
 ```http
 HTTP/1.1 200 OK
@@ -559,14 +557,14 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-#### Request-response example 4
+### Request-response example 4
 
 In the following example, the details are as follows:
 
 - **BillingProvider**: **OneTime**
 - **InvoiceLineItemType**: **BillingLineItems**
 
-##### Request example 4
+#### Request example 4
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?size=2&offset=0 HTTP/1.1
@@ -579,7 +577,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 4
+#### Response example 4
 
 ```http
 HTTP/1.1 200 OK
@@ -712,7 +710,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 }
 ```
 
-#### Request-response example 5
+### Request-response example 5
 
 In the following example, there is paging using a continuation token. The details are as follows:
 
@@ -720,7 +718,7 @@ In the following example, there is paging using a continuation token. The detail
 - **InvoiceLineItemType**: **BillingLineItems**
 - **SeekOperation**: **Next**
 
-##### Request example 5
+#### Request example 5
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/G000024135/lineitems/OneTime/BillingLineItems?seekOperation=Next HTTP/1.1
@@ -734,7 +732,7 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Response example 5
+#### Response example 5
 
 ```http
 HTTP/1.1 200 OK

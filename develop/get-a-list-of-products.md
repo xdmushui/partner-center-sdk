@@ -29,10 +29,14 @@ You can use the following methods to get a collection of products available in a
 To get a list of products:
 
 1. Use your **IAggregatePartner.Products** collection to select the country by using the **ByCountry()** method.
+
 2. Select the catalog view using the **ByTargetView()** method.
+
 3. (Optional) Select the reservation scope using the **ByReservationScope()** method.
-3. (Optional) Select the target segment using the **ByTargetSegment()** method.
-4. Call the **Get()** or **GetAsync()** method to return the collection.
+
+4. (Optional) Select the target segment using the **ByTargetSegment()** method.
+
+5. Call the **Get()** or **GetAsync()** method to return the collection.
 
 ```csharp
 IAggregatePartner partnerOperations;
@@ -51,7 +55,7 @@ ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US"
 
 ```
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -72,7 +76,7 @@ ResourceCollection<Products> products = partnerOperations.getProducts().byCountr
 ResourceCollection<Products> products = partnerOperations.getProducts().byCountry("US").byTargetView("Azure").byTargetSegment("commercial").get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -86,17 +90,15 @@ To get a list of products:
 Get-PartnerProduct -Catalog 'Azure' -Segment 'commercial'
 ```
 
-## REST
+## REST request
 
-### Rest request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------- |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products?country={country}&targetView={targetView}&targetSegment={targetSegment} HTTP/1.1 |
 
-##### URI parameters
+#### URI parameters
 
 Use the following path and query parameters to get a list of products.
 
@@ -107,17 +109,17 @@ Use the following path and query parameters to get a list of products.
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <ul><li>**commercial**</li><li>**education**</li><li>**government**</li><li>**nonprofit**</li></ul> |
 | reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify `reservationScope=AzurePlan` to get a list of products that are applicable to Azure plans. Exclude this parameter to get a list of products for Azure reservations, which are applicable to Microsoft Azure (**MS-AZR-0145P**) subscriptions.  |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request examples
+### Request examples
 
-##### Products by country
+#### Products by country
 
 Follow this example to get a list of products by country for Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans.
 
@@ -129,7 +131,7 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-##### Azure VM reservations (Azure plan)
+#### Azure VM reservations (Azure plan)
 
 Follow this example to get a list of products by country for Azure VM reservations that are applicable to Azure plans.
 
@@ -141,7 +143,7 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-##### Azure VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
+#### Azure VM reservations for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 Follow this example to get a list of products by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
 
@@ -153,11 +155,11 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-### REST response
+## REST response
 
 If successful, the response body contains a collection of [**Product**](product-resources.md#product) resources.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -168,7 +170,7 @@ This method returns the following error codes:
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
 | 403                  | 400036       | Access to the requested targetView is not allowed.                                                        |
 
-#### Response example
+### Response example
 
 ```http
 {

@@ -25,7 +25,7 @@ Gets a collection of [Subscription](subscription-resources.md) resources that co
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - An order ID.
 
-## C#
+## C\#
 
 To get a list of subscriptions by order, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the **ByOrder()** method. Finish by calling [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.getasync).
 
@@ -39,7 +39,7 @@ ResourceCollection<Subscription> customerSubscriptions = partnerOperations.Custo
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: SubscriptionsByOrder.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -75,7 +75,7 @@ MS-CorrelationId: c49004b1-224f-4d86-a607-6c8bcc52cfdd
 Connection: Keep-Alive
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a collection of [Subscription](subscription-resources.md) resources in the response body.
 

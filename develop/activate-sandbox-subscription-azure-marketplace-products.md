@@ -24,7 +24,7 @@ How to activate subscription for commercial marketplace Software as a Service (S
 - An integration sandbox partner account with a customer having an active subscription for commercial marketplace SaaS products.
 - For partners using Partner Center .NET SDK, you must use SDK version 1.14.0 or higher to access this capability.
 
-## C#
+## C\#
 
 Use the following steps to activate a subscription for commercial marketplace SaaS products:
 

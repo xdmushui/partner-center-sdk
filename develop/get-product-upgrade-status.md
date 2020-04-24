@@ -27,9 +27,12 @@ You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#product
 To check if a customer is eligible to upgrade to Azure plan:
 
 1. Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.
+
 2. Use the **IAggregatePartner.ProductUpgrades** collection.
-2. Call the **ById** method and pass in the **upgrade-id**.
-3. Call the **CheckStatus** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradeStatus** object.
+
+3. Call the **ById** method and pass in the **upgrade-id**.
+
+4. Call the **CheckStatus** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradeStatus** object.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -52,19 +55,16 @@ if (productUpgradeEligibility.IsEligibile)
 }
 
 ```
-```
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method   | Request URI |
 |----------|-----------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/{upgrade-id}/status HTTP/1.1 |
 
-#### URI parameter
+### URI parameter
 
 Use the following query parameter to specify the customer for whom you're getting a product upgrade status.
 
@@ -72,15 +72,15 @@ Use the following query parameter to specify the customer for whom you're gettin
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
 | **upgrade-id** | GUID | Yes | The value is a GUID-formatted upgrade identifier. You can use this identifier to specify an upgrade to track. |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.
 
-#### Request example
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/productupgrades/42d075a4-bfe7-43e7-af6d-7c68a57edcb4/status  HTTP/1.1
@@ -106,15 +106,15 @@ Connection: Keep-Alive
 }
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 Ok

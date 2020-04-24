@@ -33,7 +33,7 @@ In the Partner Center dashboard, this operation can be performed by navigating t
 - A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 - An order ID.
 
-## C#
+## C\#
 
 To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
@@ -62,7 +62,7 @@ var order = new Order()
 var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orderId).Patch(order);
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 

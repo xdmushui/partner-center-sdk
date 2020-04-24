@@ -25,9 +25,7 @@ In the Partner Center dashboard, you can do this operation by selecting either a
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 - Completed order with product that needs activation.
 
-## Examples
-
-### C#
+## C\#
 
 To get a line item's activation link, use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID. Then call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid) method with your specified  [**OrderId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.id). Then, call the [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) with **ById()** method with the line item number identifier.  Finally, call the **ActivationLinks()** method.
 
@@ -41,7 +39,7 @@ To get a line item's activation link, use your [**IAggregatePartner.Customers**]
 var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineItems.ById(lineItemNumber).ActivationLinks();
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -67,7 +65,7 @@ MS-RequestId: 3705fc6d-4127-4a87-bdba-9658f73fe019
 MS-CorrelationId: b12260fb-82de-4701-a25f-dcd367690645
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of [Customer](customer-resources.md#customer) resources in the response body.
 
