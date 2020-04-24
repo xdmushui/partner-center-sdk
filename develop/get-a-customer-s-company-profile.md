@@ -70,7 +70,7 @@ Use the following query parameter to get the company profile.
 
 ### Request headers
 
-- See [Partner Center REST Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

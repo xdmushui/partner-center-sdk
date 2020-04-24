@@ -124,7 +124,7 @@ Represents all of the analytical data for a subscription.
 ## Search analytics
 
 > [!NOTE]
-> CSP program membership is not required to get search analytics.
+> CSP program membership isn't required to get search analytics.
 
 The following scenario shows you how to use the Analytics API to retrieve all your Partner Center search analytics information.
 
@@ -157,7 +157,7 @@ Represents all of the analytical data for a search.
 ## Referrals analytics
 
 > [!NOTE]
-> CSP program membership is not required to get referrals analytics.
+> CSP program membership isn't required to get referrals analytics.
 
 The following scenario shows you how to use the Analytics API to retrieve all your Partner Center referrals analytics information.
 

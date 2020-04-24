@@ -56,7 +56,7 @@ Use the following path and query parameters to get a SKU for the specified produ
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

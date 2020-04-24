@@ -27,7 +27,7 @@ Represents a relationship between two partners.
 | mpnId            | string                                                         | The Microsoft Partner Network (MPN) identifier of the partner.                                                                                 |
 | name             | string                                                         | The name of the partner.                                                                                                                       |
 | relationshipType | string                                                         | The type of relationship.                                                                                                                      |
-| state            | string                                                         | The state of the relationship (e.g. "active").                                                                                                 |
+| state            | string                                                         | The state of the relationship (for example `active`).                                                                                                 |
 | attributes       | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                                                                                       |
 
 ## RelationshipRequest
@@ -39,4 +39,3 @@ partner.
 |------------|----------------------------------------------------------------|-------------------------------|
 | url        | string                                                         | The relationship request URL. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.      |
-

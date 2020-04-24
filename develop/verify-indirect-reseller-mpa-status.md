@@ -124,7 +124,7 @@ You may receive responses similar to the following examples when the signing sta
 
 ##### Non-GUID formatted CSP tenant ID
 
-The following example response is returned when the CSP tenant ID that you passed to the API is not a GUID.
+The following example response is returned when the CSP tenant ID that you passed to the API isn't a GUID.
 
 ```http
 HTTP/1.1 400 Bad Request

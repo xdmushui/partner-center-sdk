@@ -1,6 +1,6 @@
 ---
 title: Analytics
-description: You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the topics listed here.
+description: You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the articles listed here.
 ms.assetid: 22C1320C-5EDF-443C-B545-88641FBA2358
 ms.date: 07/27/2018
 ms.service: partner-dashboard
@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 
 **Applies To**
 
- - Partner Center
- - Partner Center operated by 21Vianet
- - Partner Center for Microsoft Cloud Germany
- - Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center operated by 21Vianet
+- Partner Center for Microsoft Cloud Germany
+- Partner Center for Microsoft Cloud for US Government
 
-You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the topics listed here.
+You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the articles listed here:
 
 - [Partner Center Analytics - Resources](partner-center-analytics-resources.md)
 - [Get all Azure usage analytics information](get-all-azure-usage-analytics.md)
@@ -31,4 +31,3 @@ You can use the Partner Center SDK and APIs to programmatically retrieve analyti
 - [Get customer licenses usage information](get-customer-licenses-usage-information.md)
 - [Get partner licenses deployment information](get-partner-licenses-deployment-information.md)
 - [Get partner licenses usage information](get-partner-licenses-usage-information.md)
-

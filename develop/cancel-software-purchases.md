@@ -71,7 +71,7 @@ Use the following query parameters to delete a customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -112,7 +112,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 If successful, this method returns the order with canceled line items.
 
-The order status will be marked as either **cancelled** (if all the line items in the order are cancelled), or **completed** (if not all line items in the order are cancelled).
+The order status will be marked as either **cancelled** if all the line items in the order are cancelled, or **completed** if not all line items in the order are canceled.
 
 ### Response success and error codes
 
@@ -120,7 +120,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ### Response example
 
-In the following example response, you can see that the quantity of line item with the offer identifier **`DG7GMGF0FKZV:0003:DG7GMGF0DWMS`** has become zero (0). This change means that the line item that was marked for cancellation has been cancelled successfully. The example order contains other line items that weren't cancelled, which means that the status of the overall order will be marked as **completed**, not **cancelled**.
+In the following example response, you can see that the quantity of line item with the offer identifier **`DG7GMGF0FKZV:0003:DG7GMGF0DWMS`** has become zero (0). This change means that the line item that was marked for cancellation has been canceled successfully. The example order contains other line items that weren't canceled, which means that the status of the overall order will be marked as **completed**, not **cancelled**.
 
 ```http
 HTTP/1.1 200 OK

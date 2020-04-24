@@ -105,7 +105,7 @@ Historically the [resource owner password credentials grant](https://tools.ietf.
 The partner consent process is an interactive process where the partner authenticates using multi-factor authentication, consents to the application, and a refresh token is stored in a secure repository such as Azure Key Vault. We recommend that a dedicated account for integration purposes be used for this process.
 
 > [!IMPORTANT]
-> The appropriate multi-factor authentication solution should be enabled for the service account used in the partner consent process. If it is not then the resulting refresh token will not be compliant with security requirements.
+> The appropriate multi-factor authentication solution should be enabled for the service account used in the partner consent process. If it isn't then the resulting refresh token will not be compliant with security requirements.
 
 ### Samples for App + User authentication
 
