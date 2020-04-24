@@ -154,7 +154,7 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
 - A request ID and correlation ID are required.
-For more information, see [Partner Center REST headers](headers.md).
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
