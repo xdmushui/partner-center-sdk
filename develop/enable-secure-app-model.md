@@ -55,9 +55,13 @@ The following overview documents and sample code describe how partners can imple
 To to make REST calls with the Secure Application Model framework with sample code, follow these steps:
 
 1. [Create a web app](#create-a-web-app)
+
 2. [Get an authorization code](#get-authorization-code)
+
 3. [Get a refresh token](#get-refresh-token)
+
 4. [Get an access token](#get-access-token)
+
 5. [Make a Partner Center API call](#make-partner-center-api-calls)
 
 > [!TIP]
@@ -68,15 +72,23 @@ To to make REST calls with the Secure Application Model framework with sample co
 You must create and register a web app in Partner Center before making REST calls.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
+
 2. Create an Azure Active Directory (Azure AD) app.
+
 3. Give delegated application permissions to the following resources, *depending on your application's requirements*. If necessary, you can add more delegated permissions for application resources.
-    1. **Microsoft Partner Center** (some tenants show this as **SampleBECApp**)
-    2. **Azure Management APIs** (if you are planning to call Azure APIs)
-    3. **Windows Azure Active Directory**
+
+   1. **Microsoft Partner Center** (some tenants show this as **SampleBECApp**)
+
+   2. **Azure Management APIs** (if you are planning to call Azure APIs)
+
+   3. **Windows Azure Active Directory**
+
 4. Make sure that the home URL of your app is set to an endpoint where a live web app is running. This app will need to accept the [authorization code](#get-authorization-code) from the Azure AD login call. For example, in the example code in [the following section](#get-authorization-code), the web app is running at `https://localhost:44395/`.
+
 5. Note the following information from your web app's settings in Azure AD:
-    - Application ID
-    - Application secret
+
+   - Application ID
+   - Application secret
 
 > [!NOTE]
 > It is recommended to [use a certificate as your application secret](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
@@ -86,9 +98,13 @@ You must create and register a web app in Partner Center before making REST call
 You must get an authorization code for your web app to accept from the Azure AD login call:
 
 1. Log in to Azure AD at the following URL: <https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1>. Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
+
 2. Replace **Application-Id** with your Azure AD app ID (GUID).
+
 3. When prompted, log in with your user account with MFA configured.
+
 4. When prompted, enter additional MFA information (phone number or email address) to verify your login.
+
 5. After you are logged in, the browser will redirect the call to your web app endpoint with your authorization code. For example, the following sample code redirects to `https://localhost:44395/`.
 
 #### Authorization code call trace
@@ -112,7 +128,9 @@ code=AuthorizationCodeValue&id_token=IdTokenValue&<rest of properties for state>
 You must then use your authorization code to get a refresh token:
 
 1. Make a POST call to the Azure AD login endpoint `https://login.microsoftonline.com/CSPTenantID/oauth2/token` with the authorization code. For an example, see the following [sample call](#sample-refresh-call).
+
 2. Note the refresh token that is returned.
+
 3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](https://docs.microsoft.com/rest/api/keyvault/).
 
 > [!IMPORTANT]
