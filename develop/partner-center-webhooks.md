@@ -146,7 +146,7 @@ Returns a list of the events that are currently supported by the Webhook APIs.
 
 ### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/events
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/events`
 
 ### Request example
 
@@ -180,7 +180,7 @@ Registers a tenant to receive the specified events.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -224,7 +224,7 @@ Returns the Webhooks event registration for a tenant.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -262,7 +262,7 @@ Updates an existing event registration.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -309,7 +309,7 @@ Generates a test event to validate the Webhooks registration. This test is inten
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents`
 
 ### Request example
 
@@ -345,7 +345,7 @@ Returns the current state of the validation event. This verification can be help
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{correlationId}
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{correlationId}`
 
 ### Request example
 
