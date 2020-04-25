@@ -24,9 +24,10 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An integration sandbox partner account with a customer having active reserved instance / software / third-party SaaS subscription orders.
 
-## C#
+## C\#
 
 To cancel an order from the integration sandbox, pass your account credentials to the [**`CreatePartnerOperations`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**`IPartner`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
@@ -70,6 +71,7 @@ Use the following query parameter to delete a customer.
 For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
+
 ```http
 {
     "id": "UKXASSO1dezh3HdxClHxSp5UEFXGbAnt1",

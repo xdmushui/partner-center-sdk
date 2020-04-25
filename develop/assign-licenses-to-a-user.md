@@ -19,8 +19,11 @@ How to assign licenses to a customer user.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier. The customer should have a subscription with an available license to assign.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A customer user identifier. This ID identifies the user to whom to assign the license.
+
 - A product SKU identifier that identifies the product for the license.
 
 ## Assigning licenses through code
@@ -160,7 +163,7 @@ Expect: 100-continue
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, an HTTP response status code 201 is returned and the response body contains a [LicenseUpdate](license-resources.md#licenseupdate) resource with the license information.
 

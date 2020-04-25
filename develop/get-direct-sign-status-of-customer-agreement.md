@@ -69,6 +69,7 @@ If successful, this method returns a [**DirectSignedCustomerAgreementStatus** re
 The resource has an **isSigned** property that indicates the customer's direct signing (direct acceptance) status.
 
 - A value of **true** indicates that the agreement has been signed (accepted) directly by the customer.
+
 - A value of **false** indicates that the agreement has *not* been signed (accepted) directly by the customer.
 
 ### Response success and error codes

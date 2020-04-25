@@ -23,7 +23,7 @@ Retrieves the partner's current account balance. A summary of the balance and to
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## C#
+## C\#
 
 To retrieve your account balance, use your **IAggregatePartner.Invoices** collection, and then call the **Summary** property. Then call the **Get** function, and finally call the **BalanceAmount** property.
 
@@ -37,7 +37,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceSummary.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -64,7 +64,7 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns an [InvoiceSummary](invoice-resources.md#invoicesummary) resource in the response.
 

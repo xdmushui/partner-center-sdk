@@ -88,12 +88,19 @@ Content-Length: 195
 To authenticate the callback event received from Partner Center, follow these steps:
 
 1. Verify the required headers are present (Authorization, x-ms-certificate-url, x-ms-signature-algorithm).
+
 2. Download the certificate used to sign the content (x-ms-certificate-url).
+
 3. Verify the Certificate Chain.
+
 4. Verify the "Organization" of the certificate.
+
 5. Read the content with UTF8 encoding into a buffer.
+
 6. Create an RSA Crypto Provider.
+
 7. Verify the data matches what was signed with the specified hash algorithm (for example SHA256).
+
 8. If the verification succeeds, process the message.
 
 > [!NOTE]
@@ -138,7 +145,8 @@ All calls to the Webhook APIs are authenticated using the Bearer token in the Au
 Returns a list of the events that are currently supported by the Webhook APIs.
 
 ### Resource URL
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/events
+
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/events`
 
 ### Request example
 
@@ -172,7 +180,7 @@ Registers a tenant to receive the specified events.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -216,7 +224,7 @@ Returns the Webhooks event registration for a tenant.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -254,7 +262,7 @@ Updates an existing event registration.
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration`
 
 ### Request example
 
@@ -301,7 +309,7 @@ Generates a test event to validate the Webhooks registration. This test is inten
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents`
 
 ### Request example
 
@@ -337,7 +345,7 @@ Returns the current state of the validation event. This verification can be help
 
 #### Resource URL
 
-https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{correlationId}
+`https://api.partnercenter.microsoft.com/webhooks/v1/registration/validationEvents/{correlationId}`
 
 ### Request example
 

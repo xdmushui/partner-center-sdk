@@ -24,31 +24,10 @@ points for your apps to work correctly.
 The following table describes the base URLs to use with the different
 versions of Partner Center:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Partner Center Version</th>
-<th>Base URL</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Partner Center</p>
-<p>Partner Center for Microsoft Cloud Germany</p>
-<p>Partner Center for Microsoft Cloud for US Government</p></td>
-<td><em><a href="https://api.partnercenter.microsoft.com">https://api.partnercenter.microsoft.com</a></em></td>
-</tr>
-<tr class="even">
-<td>Partner Center operated by 21Vianet</td>
-<td><em><a href="https://partner.partnercenterapi.microsoftonline.cn">https://partner.partnercenterapi.microsoftonline.cn</a></em></td>
-</tr>
-</tbody>
-</table>
+| Partner Center Version  | Base URL  |
+|---------|---------|
+|Partner Center</br>Partner Center for Microsoft Cloud Germany</br>Partner Center for Microsoft Cloud for US Government     | `https://api.partnercenter.microsoft.com`        |
+|Partner Center operated by 21Vianet  |  `https://partner.partnercenterapi.microsoftonline.cn`       |
 
 >[!NOTE]
 >The token authority for Partner Center for Microsoft Cloud Germany Azure AD Library is: https://login.microsoftonline.de.
-

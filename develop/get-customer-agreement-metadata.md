@@ -27,6 +27,7 @@ You must retrieve the agreement metadata for the Microsoft Customer Agreement be
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports App+User authentication only.
 
 ## .NET (version 1.14 or newer)
@@ -54,6 +55,7 @@ A complete sample can be found in the [GetAgreementDetails](https://github.com/P
 To retrieve the agreement metadata for Microsoft Customer Agreement:
 
 1. Create a REST request to retrieve the [AgreementMetaData](./agreement-metadata-resources.md) collection.
+
 2. Use the **agreementType** query parameter to scope the result to only the Microsoft Customer Agreement.
 
 ### Request syntax

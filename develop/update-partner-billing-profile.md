@@ -23,7 +23,7 @@ Updates a partner's billing profile
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## C#
+## C\#
 
 To update a partner billing profile, retrieve the existing profile. Once you have updated the profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the **Update()** method.
 
@@ -40,7 +40,7 @@ BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.Billing
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateBillingProfile.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -102,7 +102,7 @@ Expect: 100-continue
 }
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a **BillingProfile** object in the response body.
 

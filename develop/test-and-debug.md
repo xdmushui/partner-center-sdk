@@ -32,10 +32,15 @@ By default, partners cannot provision Azure plans using their sandbox accounts. 
 For partners whose sandbox accounts have been approved to provision Azure plans, the following limits apply:
 
 - Each sandbox partner account can have up to 10 Azure plans across all customer tenants (no matter how the plans are distributed among the customers).
+
 - A direct bill partner can create up to one Azure plan per customer tenant.
+
 - An indirect provider can create up to three Azure plans per customer tenant (for different indirect resellers specified as the Partner-of-Record).
+
 - Each Azure plan can have up to three Azure subscriptions.
+
 - Each CSP Azure subscription under your sandbox account is limited to four virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than four VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.
+
 - Each sandbox partner account has a spending limit of $2000 (USD) per billing cycle across all Azure plans. Once a partner reaches the spend limit, all Azure plans will be temporarily disabled until the next billing cycle.
 
 ### Cloud Solution Provider (CSP) Azure subscription offers
@@ -45,7 +50,9 @@ CSP Azure subscription offers are no longer available by default to sandbox acco
 For partners whose sandbox accounts have been approved for CSP Azure subscription offers, the following limits apply:
 
 - You can have up to a maximum of 375 active subscriptions (75 customers x 5 subscriptions per customer). However, only 10 of which can be CSP Azure subscriptions.
+
 - When a CSP Azure subscription reaches $200 of Azure usage, its resources are temporarily disabled until its next billing cycle. It is still considered an active subscription and is counted towards the 10 active Azure subscriptions limit.
+
 - Each CSP Azure subscription under your sandbox account is limited to four virtual machine (VM) cores per data center. Therefore, you cannot provision VM SKUs that require more than four VM cores. Certain specialized VM SKUs such as GPU cores are also excluded.
 
 > [!Important]

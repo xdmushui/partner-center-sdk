@@ -24,15 +24,19 @@ This article explains how you can retrieve confirmation(s) of a customer's accep
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
-- A customer identifier (**customer-tenant-id**).
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## .NET
 
 To retrieve confirmation(s) of customer acceptance that was previously provided:
 
 - Use the **IAggregatePartner.Customers** collection and call **ById** method with the specified customer identifier.
+
 - Fetch the **Agreements** property and filter the results to Microsoft Customer Agreement by calling **ByAgreementType** method.
+
 - Call **Get** or **GetAsync** method.
 
 ```csharp
@@ -51,6 +55,7 @@ A complete sample can be found in the [GetCustomerAgreements](https://github.com
 To retrieve confirmation of customer acceptance that was previously provided:
 
 1. Create a REST request to retrieve the [Agreements](./agreement-resources.md) collection for the customer.
+
 2. Use the **agreementType** query parameter to scope the results to only the Microsoft Customer Agreement.
 
 ### Request syntax

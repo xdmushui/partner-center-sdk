@@ -21,8 +21,10 @@ How to add a verified domain to the list of approved domains for an existing cus
 ## Prerequisites
 
 - You must be a Partner who is a domain registrar.
+
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (**CustomerTenantId**). If you don't have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the list of customers, selecting **Account**, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## Adding a verified domain
 
@@ -62,7 +64,7 @@ This table describes the required properties in the request body.
 | [Domain](#domain)                                     | object | Yes                                           | Contains the domain information. |
 | [DomainFederationSettings](#domain-federation-settings) | object | Yes (If AuthenticationType = `Federated`)     | The domain federation settings to be used if the domain is a `Federated` domain and not a `Managed` domain. |
 
-#### Domain
+### Domain
 
 This table describes the required and optional **Domain** properties in the request body.
 
@@ -77,7 +79,7 @@ This table describes the required and optional **Domain** properties in the requ
 | Status                                                | string           | Yes      | The domain status. For example, `Verified`. Supported values:  `Unverified`, `Verified`, `PendingDeletion`.                               |
 | VerificationMethod                                    | string           | Yes      | The domain verification method type. Supported values: `None`, `DnsRecord`, `Email`.                                    |
 
-##### Domain federation settings
+### Domain federation settings
 
 This table describes the required and optional **DomainFederationSettings** properties in the request body.
 

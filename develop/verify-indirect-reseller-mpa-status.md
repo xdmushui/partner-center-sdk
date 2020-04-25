@@ -11,22 +11,24 @@ ms.localizationpriority: medium
 
 **Applies to:**
 
-* Partner Center
-* Partner Center for Microsoft Cloud for US Government
+- Partner Center
+- Partner Center for Microsoft Cloud for US Government
 
 You can verify whether an indirect reseller has signed the Microsoft Partner Agreement using their Microsoft Partner Network (MPN) ID or Cloud Solution Provider (CSP) tenant ID (Microsoft ID). You can use one of these identifiers to check the Microsoft Partner Agreement signing status using the **AgreementStatus** API.
 
 ## Prerequisites
 
-* Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-* The MPN ID or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
+- The MPN ID or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
 
 ## C\#
 
 To get the Microsoft Partner Agreement signature status of an indirect reseller:
 
- 1. Use your **IAggregatePartner.Compliance** collection tocall the **AgreementSignatureStatus** property.
- 2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
+1. Use your **IAggregatePartner.Compliance** collection to call the **AgreementSignatureStatus** property.
+
+2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -40,17 +42,15 @@ var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementS
 - Project: **PartnerCenterSDK.FeaturesSamples**
 - Class: **GetAgreementSignatureStatus.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method | Request URI |
 | ------ | ----------- |
 | **GET** | *[{baseURL}](partner-center-rest-urls.md)*/v1/compliance/{ProgramName}/agreementstatus?mpnId={MpnId}&tenantId={TenantId} |
 
-##### URI parameters
+#### URI parameters
 
 You must provide one of the following two query parameters to identify the partner. If you don't provide one of these two query parameters, you will receive a **400 (Bad request)** error.
 
@@ -59,13 +59,13 @@ You must provide one of the following two query parameters to identify the partn
 | **MpnId** | int | No | A Microsoft Partner Network ID that identifies the indirect reseller. |
 | **TenantId** | GUID | No | A Microsoft ID that identifies the CSP account of the indirect reseller. |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](https://docs.microsoft.com/partner-center/develop/headers).
 
-#### Request examples
+### Request examples
 
-##### Request using MPN ID
+#### Request using MPN ID
 
 The following example request gets the indirect reseller's Microsoft Partner Agreement signing status using the indirect reseller's Microsoft Partner Network ID.
 
@@ -79,7 +79,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-##### Request using CSP tenant ID
+#### Request using CSP tenant ID
 
 The following example request gets the indirect reseller's Microsoft Partner Agreement signing status using the indirect reseller's CSP tenant ID (Microsoft ID).
 
@@ -93,13 +93,13 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-### REST response
+## REST response
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/partner-center/develop/error-codes).
 
-#### Response example (success)
+### Response example (success)
 
 The following example response successfully returns whether the indirect reseller has signed the Microsoft Partner Agreement.
 
@@ -118,11 +118,11 @@ Connection: close
 }
 ```
 
-#### Response examples (failure)
+### Response examples (failure)
 
 You may receive responses similar to the following examples when the signing status of the indirect reseller's Microsoft Partner Agreement can't be returned.
 
-##### Non-GUID formatted CSP tenant ID
+#### Non-GUID formatted CSP tenant ID
 
 The following example response is returned when the CSP tenant ID that you passed to the API isn't a GUID.
 
@@ -144,7 +144,7 @@ Connection: close
 }
 ```
 
-##### Non-numeric MPN ID
+#### Non-numeric MPN ID
 
 The following example response is returned when the MPN ID that you passed to the API is non-numeric.
 
@@ -166,7 +166,7 @@ Connection: close
 }
 ```
 
-##### No MPN ID or CSP tenant ID
+#### No MPN ID or CSP tenant ID
 
 The following example response is returned when you haven't passed an MPN ID or CSP tenant ID to the API. You must pass one of the two ID types to the API.
 
@@ -188,7 +188,7 @@ Connection: close
 }
 ```
 
-##### Both MPN ID and CSP tenant ID passed
+#### Both MPN ID and CSP tenant ID passed
 
 The following example response is returned when you pass both the MPN ID and CSP tenant ID to the API. You must pass *only one* of the two identifier types to the API.
 

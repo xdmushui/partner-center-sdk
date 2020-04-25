@@ -20,11 +20,14 @@ How to update a list of devices with a configuration policy for the specified cu
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- The customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The policy identifier.
+
 - The device identifiers of the devices to update.
 
-## C#
+## C\#
 
 To update a list of devices with the specified configuration policy, first, instantiate a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [KeyValuePair](https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2)[**(PolicyCategory,**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.policycategory)string) and add the policy to apply, as shown in the following code example. You will need the policy identifier of the policy.
 
@@ -70,7 +73,7 @@ var trackingLocation =
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateDevicesPolicy.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -135,7 +138,7 @@ Connection: Keep-Alive
 }
 ```
 
-## Response
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve the status of this batch process. Save this URI for use with other related REST APIs.
 

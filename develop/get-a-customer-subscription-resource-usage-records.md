@@ -23,7 +23,9 @@ This article describes how to get the **ResourceUsageRecord** resource. This res
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look up the identifier in Partner Center. Choose the customer from the list of customers, then select **Account**, then save their **Microsoft ID**.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription identifier
 
 ## C\#
@@ -31,6 +33,7 @@ This article describes how to get the **ResourceUsageRecord** resource. This res
 To get resource usage records of a customer for a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
+
 2. Call the Subscriptions property, as well as **UsageRecords**, then the **Resources** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
@@ -47,17 +50,15 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetSubscriptionUsageRecordsByResource.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1 |
 
-##### URI parameters
+#### URI parameters
 
 This table lists the required query parameters to get the customer's rated usage information.
 
@@ -66,15 +67,15 @@ This table lists the required query parameters to get the customer's rated usage
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
 | **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/resourceusagerecords HTTP/1.1
@@ -84,15 +85,15 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns a **PagedResourceCollection\<ResourceUsageRecord>** resource in the response body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

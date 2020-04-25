@@ -21,6 +21,7 @@ You can use the following methods get a collection of details for unbilled invoi
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
 ## C\#
@@ -28,17 +29,21 @@ You can use the following methods get a collection of details for unbilled invoi
 To get the line items for the specified invoice, retrieve the invoice object:
 
 1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
 
 The invoice object contains all of the information for the specified invoice:
 
 - **Provider** identifies the source of the unbilled detail information (for example, **OneTime**).
+
 - **InvoiceLineItemType** specifies the type (for example, **BillingLineItem**).
 
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
 1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
+
 3. Create an enumerator to traverse the collection. For an example, see the following sample code.
 
 The following sample code uses a **foreach** loop to process the **InvoiceLineItems** collection. A separate collection of line items is retrieved for each **InvoiceLineItemType**.
@@ -105,11 +110,9 @@ For a similar example, see:
 - Project: **Partner Center SDK Samples**
 - Class: **GetUnBilledReconLineItemsPaging.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 You can use the following syntaxes for your REST request, depending on your use case. For more information, see the descriptions for each syntax.
 
@@ -119,7 +122,7 @@ You can use the following syntaxes for your REST request, depending on your use 
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
-##### URI parameters
+#### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
@@ -134,15 +137,15 @@ Use the following URI and query parameters when creating the request.
 | size                   | number | No       | The maximum number of items to return. Default size is 2000                     |
 | seekOperation          | string | No       | Set seekOperation=Next to get the next page of recon line items.                |
 
-#### Request headers
+### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-### REST response
+## REST response
 
 If successful, the response contains the collection of line item details.
 

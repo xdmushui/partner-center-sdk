@@ -19,11 +19,12 @@ Get a list of all the roles/permissions attached to a user account. Variations i
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
-## C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or <strong>GetAsync()</strong>method.
+## C\#
+
+To retrieve all the directory roles for a specified customer, first retrieve the specified customer ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, followed by the **Get()** or **GetAsync()**method.
 
 ``` csharp
 // string selectedCustomerId;
@@ -34,7 +35,7 @@ var directoryRoles = partnerOperations.Customers.ById(selectedCustomerId).Direct
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerDirectoryRoles.cs
 
-To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or <strong>GetAsync()</strong>method.
+To retrieve a list of customer users that have a given role, first retrieve the specified customer ID and the directory role ID. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **DirectoryRoles** property, then **ById()** method, then the **UserMembers** property, the followed by the **Get()** or **GetAsync()** method.
 
 ``` csharp
 // string selectedCustomerId;
@@ -46,7 +47,7 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetCustomerDirectoryRoleUserMembers.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -82,7 +83,7 @@ MS-RequestId: b1317092-f087-471e-a637-f66523b2b94c
 MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a list of the roles associated with the given user account.
 

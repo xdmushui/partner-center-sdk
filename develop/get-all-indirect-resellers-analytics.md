@@ -23,7 +23,7 @@ How to get all the indirect resellers analytics information for your customers.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with User credentials only.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -239,7 +239,7 @@ Content-Type: application/json
 Content-Length: 0
 ```
 
-## REST Response
+## REST response
 
 If successful, the response body contains a collection of [indirect resellers](partner-center-analytics-resources.md#csp-program-indirect-resellers-analytics) resources.
 

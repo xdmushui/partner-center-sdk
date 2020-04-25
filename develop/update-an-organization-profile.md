@@ -23,7 +23,7 @@ Updates a partner's billing profile.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## C#
+## C\#
 
 To update your organization profile, retrieve the profile and make any necessary changes. Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the **Update()** method.
 
@@ -40,7 +40,7 @@ OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.Orga
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -100,7 +100,7 @@ Expect: 100-continue
 }
 ```
 
-## Response
+## REST response
 
 If successful, this method returns an **OrganizationProfile** object in the response body.
 
