@@ -20,9 +20,10 @@ How to retrieve the details of an existing customer service request using the se
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A service request ID.
 
-## C#
+## C\#
 
 To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object.
 
@@ -39,7 +40,7 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 ));
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -77,7 +78,7 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 0
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a **Service Request** resource in the response body.
 

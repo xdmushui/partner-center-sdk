@@ -19,9 +19,10 @@ How to get a list of the indirect resellers that have a relationship with a spec
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- The customer identifier.
 
-## C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
+## C\#
 
 To retrieve a list of indirect resellers with whom the specified customer has a relationship, first get an interface to customer collection operations for the specific customer from the [**partnerOperations.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property by providing the customer ID to identify the customer. Then call the [**Relationships.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.get) or [**Get\_Async**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.getasync) method to get the list of indirect resellers.
 
@@ -34,7 +35,7 @@ To retrieve a list of indirect resellers with whom the specified customer has a 
 
 **Sample**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellersOfCustomer.cs
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -70,7 +71,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains a collection of [PartnerRelationship](relationships-resources.md) resources to identify the resellers.
 

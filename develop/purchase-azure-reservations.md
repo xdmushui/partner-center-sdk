@@ -64,7 +64,9 @@ To purchase an Azure reservation for a customer using the Partner Center API, yo
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription ID for an active CSP Azure subscription or an Azure plan.
 
 ## How to purchase Microsoft Azure reservations
@@ -72,8 +74,11 @@ To purchase an Azure reservation for a customer using the Partner Center API, yo
 Once you have identified the active CSP Azure subscription that you want to add an Azure reservation to, use the following steps to purchase it:
 
 1. [Enablement](#enablement) - Register an active CSP Azure subscription to enable it for purchasing Azure reservations.
+
 2. [Discovery](#discovery) - Find and select the Azure reservation products and SKUs you want to purchase and check their availability.
+
 3. [Order submission](#order-submission) - Create a shopping cart with the items in your order and submit it.
+
 4. [Get order details](#get-order-details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type.
 
 After you have purchased Azure reservations, the following scenarios show you how to manage their lifecycle by getting information about your Azure reservation entitlements, and how to retrieve balance statements, invoices, and invoice summaries.
@@ -88,6 +93,7 @@ Enablement means associating an existing Microsoft Azure (**MS-AZR-0145P**) subs
 A subscription is required due to the following:
 
 1. To check if the customer is eligible to deploy resources and hence purchase Azure Reserved VM Instances in a region or not.
+
 2. To provide capacity priority for deployments on a subscription. This is applicable only to single scope Azure Reserved VM Instances with the **capacity priority** option selected.
 
 Once you have identified the active subscription that you want to add the Azure reservation to, you must register the subscription so that it is enabled for Azure reservations. To register an existing [Subscription](subscription-resources.md) resource so that it is enabled for ordering Azure reservations, see [Register a subscription](register-a-subscription.md).
@@ -102,7 +108,9 @@ After registering your subscription, you should confirm that the registration pr
 Once the subscription is enabled for purchasing Azure reservations, you're ready to select products and SKUs and check their availability using the following Partner Center API models:
 
 - [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself isn't a purchasable item.​​
+
 - [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
+
 - [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
 
 Before purchasing an Azure reservation, complete the following steps:

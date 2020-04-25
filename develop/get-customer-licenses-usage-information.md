@@ -23,7 +23,7 @@ How to get licenses deployment insights for a specific customer.
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## C#
+## C\#
 
 To retrieve aggregated data on deployment for a specified customer, first call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then get an interface to customer level analytics collection operations from the [**Analytics**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.analytics) property. Next, retrieve an interface to the customer level licenses analytics collection from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.analytics.icustomeranalyticscollection.licenses) property. Finally, call the [**Usage.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) method to get the aggregated data on licenses usage. If the method succeeds you'll get a collection of [**CustomerLicensesUsageInsights**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.analytics.customerlicensesusageinsights) objects.
 
@@ -34,7 +34,7 @@ To retrieve aggregated data on deployment for a specified customer, first call t
 var customerLicensesDeploymentAnalytics = partnerOperations.Customers.ById(customerIdToRetrieve).Analytics.Licenses.Usage.Get();
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -71,7 +71,7 @@ MS-PartnerCenter-Client: Partner Center .NET SDK
 Host: api.partnercenter.microsoft.com
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains a collection of [CustomerLicensesUsageInsights](analytics-resources.md#customerlicensesusageinsights) resources that provide information about licenses usage.
 

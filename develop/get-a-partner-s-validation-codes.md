@@ -20,10 +20,12 @@ If you are interested in having your organization or your customers organization
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - Confirmed validation after filling out form [here](https://products.office.com/government/eligibility-validation?ReqType=CSPPartner).
+
 - A customer without a qualification.
 
-## C#
+## C\#
 
 To get a list of all of a partner's validation codes, call **GetValidationCodes**.
 
@@ -34,7 +36,7 @@ IAggregatePartner partnerOperations = PartnerService.Instance.CreatePartnerOpera
 var gccValidations = partnerOperations.Validations.GetValidationCodes();
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -60,7 +62,7 @@ MS-CorrelationId: 283b9b70-963a-4159-9920-f2bdf7ab7fce
 MS-RequestId: 7266f5f6-30ca-4672-9eb6-6c9d6dd0e9d3
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a list of [**ValidationCode**](utility-resources.md#validationcode) resources in the response body.
 

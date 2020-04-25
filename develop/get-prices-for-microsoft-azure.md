@@ -22,9 +22,7 @@ To track usage and help predict your monthly bill and the bills for individual c
 
 Prices differ by market and currency, and this API takes location into consideration. By default, the API uses your partner profile settings in Partner Center and your browser language, and those settings are customizable. The location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office. For more information, see [URI parameters](#uri-parameters).
 
-## Examples
-
-### C#
+## C\#
 
 To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
@@ -36,7 +34,7 @@ var azureRateCard = partner.RateCards.Azure.Get();
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -48,7 +46,7 @@ To obtain the Azure Rate Card, call the **IAzureRateCard.get** function to retur
 AzureRateCard azureRateCard = partner.getRateCards().getAzure().get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -73,9 +71,10 @@ Get-PartnerAzureRateCard
 | currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (for example `EUR`). The default is `USD`. |
 | region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (for example `FR`). The default is `US`.        |
 
-You can include the optional X-Locale [header](headers.md#request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
+You can include the optional X-Locale [header](headers.md#rest-request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
 
 - If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
+
 - If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency, and language.
 
 ### Request header

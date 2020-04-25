@@ -18,16 +18,21 @@ You can purchase add-ons through a cart. For more information about what is curr
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
 A cart enables the purchase of a base offer and its corresponding add-ons. Follow these steps to create a cart:
 
 1. Instantiate a [**Cart**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart) object.
+
 2. Create a list of [**CartLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects which represent the base offer(s), and assign the list to the cart's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property.
+
 3. Under each base offer's cart line item, populate the list of **AddOnItems** with other **CartLineItem** objects that each represent an add-on that will be purchased against that base offer.
+
 4. Obtain an interface to cart operations by using [**IAggregatePartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) to call the [**ICustomerCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
+
 5. Finally, call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.carts.icartcollection.createasync) method to create the cart.
 
 ### C\# example
@@ -74,6 +79,7 @@ var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart
 Follow these steps to create a cart which will enable the purchase of add-on(s) against existing base subscription(s):
 
 1. Create a **Cart** with a new **CartLineItem** containing the subscription ID in the **ProvisioningContext** property with key "ParentSubscriptionId".
+
 2. Call the **Create** or **CreateAsync** method.
 
 ```csharp
@@ -214,7 +220,7 @@ MS-CorrelationId: 182474ba-7303-4d0f-870a-8c7fba5ccc4b
 }
 ```
 
-### REST Response
+## REST response
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 

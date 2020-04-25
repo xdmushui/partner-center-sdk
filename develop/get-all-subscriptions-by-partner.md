@@ -22,12 +22,12 @@ How to get a list of subscriptions provided by a given partner to a specified cu
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A partner Microsoft Partner Network (MPN) identifier.
 
-## Examples
-
-### C#
+## C\#
 
 To get a list of subscriptions provided by a given partner to a specified customer, first use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then get an interface to customer subscription collection operations from the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, and call the [**ByPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.bypartner) method with the MPN ID to identify the partner and retrieve an interface to partner subscription operations. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientireentitycollectionretrievaloperations-2.getasync) method to get the collection.
 
@@ -41,7 +41,7 @@ var customerSubscriptionsByMpnId = partnerOperations.Customers.ById(customerId).
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionsByMpnid.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -55,7 +55,7 @@ To get a list of subscriptions provided by a given partner to a specified custom
 ResourceCollection<Subscription> customerSubscriptionsByMpnId = partnerOperations.getCustomers().byId(customerId).getSubscriptions().byPartner(partnerMpnId).get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -68,7 +68,7 @@ To get a list of subscriptions provided by a given partner to a specified custom
 Get-PartnerCustomerSubscription -CustomerId $customerId -MpnId $partnerMpnId
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -106,7 +106,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains the collection of [Subscription](subscription-resources.md) resources.
 

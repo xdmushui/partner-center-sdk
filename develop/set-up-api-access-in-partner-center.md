@@ -46,15 +46,20 @@ This section describes how to set up a primary Partner account and an integratio
 ### Create an integration sandbox
 
 1. Sign in to Partner Dashboard with a global admin account (your primary Partner account.)
+
 2. From the **Settings** menu (gear icon), choose **Partner settings**.
+
 3. On the **Account settings** page, choose **Integration sandbox**.
 
     >[!NOTE]
     >If you don't see an Integration sandbox option, you might not have a global admin account. You also might be using an integration sandbox account and an integration sandbox has already been set up.
 
 4. Enter the contact information for the integration sandbox admin account. Then, choose **Create account**. Wait a few minutes for a confirmation message that the account has been created.
+
 5. After you see the confirmation message, sign out of Partner Dashboard.
+
 6. Sign back in with your new integration sandbox admin account. Be sure to use the format **username@domain** for your credentials along with the password that you just specified.
+
 7. Choose **Set Up Account** above **Current Tasks** to complete the sandbox account setup.
 
 ### Enable API access
@@ -62,11 +67,17 @@ This section describes how to set up a primary Partner account and an integratio
 After your account is set up, you must enable API access before you can use the Partner Center SDK with the integration sandbox. You need to enable access to the API separately for both your primary Partner account and your integration sandbox account.
 
 1. Sign into Partner Dashboard using a global admin account.
+
 2. From the **Settings** menu (gear icon), select **Partner settings**.
+
 3. On the **Account settings** page, choose **App management**.
+
 4. If you do not already have an existing app, add a new web app. If you have an existing web app, choose the **Add key** button.
+
 5. Copy the app registration information, especially the **Key** if you're creating a web app, and store it in a safe place.
+
 6. Sign out of Partner Dashboard.
+
 7. Sign back in with your integration sandbox account. Repeat steps 2-5 to enable API access in the integration sandbox.
 
 ## Write and test code
@@ -86,4 +97,5 @@ To use your solution with real customer data, you must change from your integrat
 When you're ready to use your tested code in your primary Partner account, you must get an Azure AD security token. This security token is based on your Partner Center app, key and domain (instead of your integration sandbox app, key and domain).
 
 1. Follow the steps in [Partner Center authentication](partner-center-authentication.md) to get an Azure AD security token using your primary Partner Center credentials. (You previously followed these steps to get an Azure AD security token for your integration sandbox.)
+
 2. Replace the integration security token in your code with the new security token for your primary Partner account.

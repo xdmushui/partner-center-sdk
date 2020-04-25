@@ -23,7 +23,7 @@ Gets a collection that contains all the offers for a specific market.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## C#
+## C\#
 
 To get a list of offers in a given market, use your **IAggregatePartner.Offers** collection, select the market by country, and call the **Get()** or **Get Async()** method.
 

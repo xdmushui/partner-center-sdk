@@ -18,10 +18,12 @@ Remove a reseller relationship with a customer that you no longer have transacti
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - All Azure Reserved VM Instance orders must be canceled before a reseller relationship is removed. Call Azure support for canceling any open Azure Reserved VM Instance orders.
 
-## C#
+## C\#
 
 To remove the reseller relationship for a customer, first ensure that any active Azure Reserved VM Instances for that customer are canceled. Next, ensure that all active subscriptions for that customer are suspended. To do so, determine the ID of the customer for whom you want to delete the reseller relationship. In the following code example, the user is prompted to provide the customer identifier.
 
@@ -75,7 +77,7 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: DeletePartnerCustomerRelationship.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -118,7 +120,7 @@ Date: Fri, 12 Jan 2018 00:31:55 GMT
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, this method removes a reseller relationship for the specified customer.
 

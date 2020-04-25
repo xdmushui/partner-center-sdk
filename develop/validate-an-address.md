@@ -25,9 +25,7 @@ The address validation API should only be used for pre-validation of customer pr
 
 Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## Examples
-
-### C#
+## C\#
 
 To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.Validations** property, and call the **IsAddressValid** method with the address object.
 
@@ -76,7 +74,7 @@ catch (PartnerException exception)
 }
 ```
 
-### Java
+## Java
 
 To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.getValidations** function, and call the **isAddressValid** method with the address object.
 
@@ -112,7 +110,7 @@ catch (Exception exception)
 }
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -122,7 +120,7 @@ To validate an address, execute the [**Test-PartnerAddress**](https://github.com
 Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Country 'US' -PostalCode '98004' -State 'WA'
 ```
 
-##  REST Request
+## REST request
 
 ### Request syntax
 
@@ -169,7 +167,7 @@ Content-Length: 129
 }
 ```
 
-## Response
+## REST response
 
 If successful, the method returns a status code 200 as demonstrated in the Response - validation succeeded example shown below.
 

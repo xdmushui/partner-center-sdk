@@ -23,9 +23,7 @@ Gets an object representing the partner's organization profile.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## Examples
-
-### C#
+## C\#
 
 To get your organization profile, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.iorganizationprofile.getasync) methods.
 
@@ -37,7 +35,7 @@ OrganizationProfile organizationProfile = partnerOperations.Profiles.Organizatio
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: GetOrganizationProfile.cs
 
-### Java
+## Java
 
 [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
@@ -49,7 +47,7 @@ To get your organization profile, use your **IAggregatePartner.getProfiles** fun
 OrganizationProfile organizationProfile = partnerOperations.getProfiles().getOrganizationProfile().get();
 ```
 
-### PowerShell
+## PowerShell
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -59,7 +57,7 @@ To get your organization profile, execute the [**Get-PartnerOrganizationProfile*
 Get-PartnerOrganizationProfile
 ```
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -85,7 +83,7 @@ MS-RequestId: b85cb7ab-cc2e-4966-93f0-cf0d8377a93f
 MS-CorrelationId: 1bb03149-88d2-4bc2-9cc1-d6e83890fa9e
 ```
 
-## Response
+## REST response
 
 If successful, this method returns an **OrganizationProfile** object in the response body.
 

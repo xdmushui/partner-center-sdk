@@ -66,20 +66,25 @@ How to make a one-time purchase of software and reservation products such as sof
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## Making a one-time purchase
 
 To make a one-time purchase, use the following steps:
 
 1. [Enablement](#enablement) - (Azure Reserved VM Instance only) Register an active CSP Azure subscription to enable it for purchasing any reservation product.
+
 2. [Discovery](#discovery) - Find and select the products and SKUs you want to purchase and check their availability.
+
 3. [Order submission](#order-submission) - Create a shopping cart with the items in your order and submit it.
+
 4. [Get order details](#get-order-details) - Review the details of an order, all the orders for a customer, or view orders by billing cycle type.
 
 After you have made your one-time purchase, the following scenarios show you how to manage the lifecycle of your products by getting information about your entitlements, and how to retrieve balance statements, invoices, and invoice summaries.
 
 - [Lifecycle management](#lifecycle-management)
+
 - [Invoice and reconciliation](#invoice-and-reconciliation)
 
 ## Enablement
@@ -93,7 +98,9 @@ After registering your subscription, you should confirm that the registration pr
 Once the subscription is enabled, you're ready to select products and SKUs and check their availability using the following Partner Center API models:
 
 - [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself isn't a purchasable item.
+
 - [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. SKUs represent the different shapes of the product.
+
 - [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
 Before making a one-time purchase, complete the following steps:
@@ -154,6 +161,7 @@ To get current account balance in your default currency type that is a balance o
 To get your current account balance and a collection of invoice summaries containing an invoice summary with both recurring and one-time charges for each of your customer's currency types, see [Get invoice summaries](get-invoice-summaries.md).
 
 ### Invoices
+
 To get a collection of invoices that show both recurring and one time charges, see [Get a collection of invoices](get-a-collection-of-invoices.md).
 
 ### Single Invoice

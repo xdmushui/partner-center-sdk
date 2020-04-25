@@ -19,9 +19,10 @@ Update details in an existing user account for your customer.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
 
-## C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
+## C\#
 
 To update the details for a specified customer user, first retrieve the specified customer ID and user to update. Then, create an updated version of the user in a new **CustomerUser** object. Then, use your **IAggregatePartner.Customers** collection and call the **ById()** method. Then call the **Users** property, the **ById()** method, followed by the **Patch()** method.
 
@@ -48,7 +49,7 @@ User updatedCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserUpdate.cs
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -88,7 +89,7 @@ MS-CorrelationId: 8a53b025-d5be-4d98-ab20-229d1813de76
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a user account with the updated information.
 

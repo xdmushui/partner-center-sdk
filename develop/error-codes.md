@@ -63,6 +63,6 @@ The following table and code sample describes the schema of an error response:
 
   ],
   "source": <string>
-## }
+}
 WWW-Authenticate: OAuth realm=urn:cpsvc:cpid:{some cid}
 ```

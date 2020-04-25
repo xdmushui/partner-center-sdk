@@ -20,9 +20,10 @@ A partner can update a customer's qualification to be "Education" or "Government
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id).
 
-## C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
+## C\#
 
 To update a customer's qualification to "Education", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
@@ -35,6 +36,7 @@ var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
 To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode).
+
 ``` csharp
 // CustomerQualification is an enum
 // GCC validation is type ValidationCode
@@ -42,7 +44,7 @@ To update a customer's qualification to **GovernmentCommunityCloud** on an exist
 var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
 ```
 
-##  REST Request
+## REST request
 
 ### Request syntax
 
@@ -76,10 +78,9 @@ Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
-3
 ```
 
-##  REST Response
+## REST response
 
 If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 

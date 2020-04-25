@@ -28,6 +28,7 @@ This article describes how to get a collection that contains all the offer categ
 To get a list of offer categories in a given country/region and locale:
 
 1. Use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection to call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context.
+
 2. Inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
 
 ``` csharp
@@ -62,7 +63,7 @@ This table lists the required query parameters to get the offer categories.
 
 A **locale-id** formatted as a string is required.
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

@@ -31,6 +31,7 @@ This article describes how to get a collection of resources that represents all 
 To get a list of all customers:
 
 1. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
+
 2. Retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
 
 ``` csharp
@@ -57,6 +58,7 @@ For an example, see the following:
 To get a list of all customers:
 
 1. Use the [**IAggregatePartner.getCustomers**] function to get a reference to the customer operations.
+
 2. Retrieve the customer list using the **query()** function.
 
 ```java
@@ -109,7 +111,7 @@ Use the following query parameter to get a list of customers.
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

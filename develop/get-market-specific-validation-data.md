@@ -23,7 +23,7 @@ Get the expected address format based on the iso code for the market.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## Request
+## REST request
 
 ### Request syntax
 
@@ -55,7 +55,7 @@ MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
 ```
 
-## Response
+## REST response
 
 If successful, this method returns a **CountryInformation** object in the response body.
 

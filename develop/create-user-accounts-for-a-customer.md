@@ -19,14 +19,17 @@ Create a new user account for your customer.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
 To obtain a new user account for a customer:
 
 1. Create a new **CustomerUser** object with the relevant user information.
+
 2. Use your **IAggregatePartner.Customers** collection and call the **ById()** method.
+
 3. Call the **Users** property, followed by the **Create** method.
 
 ``` csharp
@@ -63,12 +66,12 @@ Use the following query parameters to identify the correct customer.
 
 | Name | Type | Required | Description |
 |----- |----- | -------- |------------ |
-| **customer-tenant-id** | **guid** | Y | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
+| **customer-tenant-id** | **guid** | Y | The value is a GUID formatted **customer-tenant-id**. It allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **user-id** | **guid** | N | The value is a GUID formatted **user-id** that belongs to a single user account. |
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
