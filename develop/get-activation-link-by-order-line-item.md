@@ -23,6 +23,7 @@ In the Partner Center dashboard, you can do this operation by selecting either a
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - Completed order with product that needs activation.
 
 ## C\#
@@ -49,7 +50,7 @@ var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineI
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

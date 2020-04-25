@@ -19,7 +19,9 @@ Gets a SKU for the specified product using the specified SKU ID.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A product ID.
+
 - A SKU ID.
 
 ## C\#

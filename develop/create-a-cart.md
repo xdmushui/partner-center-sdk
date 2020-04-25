@@ -21,15 +21,19 @@ You can add an order for a customer in a cart. For more information about what i
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
 To create an order for a customer:
 
 1. Instantiate a Cart object.
+
 2. Create a list of **CartLineItem** objects, and assign the list to the cart's LineItems property. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
 3. Obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
+
 4. Call the **Create** or **CreateAsync** method to create the cart.
 
 ### C\# example

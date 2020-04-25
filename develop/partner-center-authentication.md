@@ -20,6 +20,7 @@ ms.localizationpriority: medium
 Partner Center uses Azure Active Directory for authentication. When interacting with the Partner Center API, SDK, or PowerShell module you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app only or app + user authentication can be used with the Partner Center. However, there are two important items that need to be considered
 
 - Use multi-factor authentication when accessing the Partner Center API using app + user authentication. For more information regarding this change, see [Enable secure application model](enable-secure-app-model.md).
+
 - Not all of the operations the Partner Center API support app only authentication. There are certain scenarios where you'll be required to use app + user authentication. Under the *Prerequisites* heading on each [Scenario](https://docs.microsoft.com/partner-center/develop/scenarios) article, you'll find documentation that states whether app only authentication, app + user authentication, or both are supported.
 
 ## Initial setup
@@ -305,6 +306,7 @@ To help partners understand how to perform each required operation, we have deve
 ## .NET (CSP authentication)
 
 1. If you have not already done so, perform the [partner consent process](#partner-consent).
+
 2. Clone the [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) repository using Visual Studio or the following command
 
     ```bash
@@ -312,6 +314,7 @@ To help partners understand how to perform each required operation, we have deve
     ```
 
 3. Open the `CSPApplication` project found in the `Partner-Center-DotNet-Samples\secure-app-model\keyvault` directory.
+
 4. Update the application settings found in the [App.config](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CSPApplication/App.config) file.
 
     ```xml
@@ -349,6 +352,7 @@ To help partners understand how to perform each required operation, we have deve
 ## Java (CSP authentication)
 
 1. If you have not done so already, perform the [partner consent process](#partner-consent).
+
 2. Clone the [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) repository using Visual Studio or the following command
 
     ```bash
@@ -356,6 +360,7 @@ To help partners understand how to perform each required operation, we have deve
     ```
 
 3. Open the `cspsample` project found in the `Partner-Center-Java-Samples\secure-app-model\keyvault` directory.
+
 4. Update the application settings found in the [application.properties](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/secure-app-model/keyvault/cspsample/src/main/resources/application.properties) file.
 
      ```java

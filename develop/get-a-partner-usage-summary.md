@@ -29,6 +29,7 @@ You can use the **PartnerUsageSummary** resource to get a partner usage summary 
 To get a usage summary for all customers that purchased a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner**.
+
 2. Call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods:
 
     ``` csharp

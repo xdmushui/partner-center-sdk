@@ -74,6 +74,7 @@ Get-PartnerAzureRateCard
 You can include the optional X-Locale [header](headers.md#rest-request-headers) in your request. If you don't include the X-Locale header, the default value ("en-US") is used.
 
 - If you provide currency and region parameters in your request, the value of X-Locale is used to determine the response's language.
+
 - If you don't provide region and currency parameters in your request, the value of X-Locale is used to determine the response's region, currency, and language.
 
 ### Request header

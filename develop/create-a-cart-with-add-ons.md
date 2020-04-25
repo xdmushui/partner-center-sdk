@@ -18,7 +18,8 @@ You can purchase add-ons through a cart. For more information about what is curr
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you don't have a customer's ID, you can look up the ID in Partner Center. Choose the customer from the list of customers, select Account, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
@@ -78,6 +79,7 @@ var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart
 Follow these steps to create a cart which will enable the purchase of add-on(s) against existing base subscription(s):
 
 1. Create a **Cart** with a new **CartLineItem** containing the subscription ID in the **ProvisioningContext** property with key "ParentSubscriptionId".
+
 2. Call the **Create** or **CreateAsync** method.
 
 ```csharp

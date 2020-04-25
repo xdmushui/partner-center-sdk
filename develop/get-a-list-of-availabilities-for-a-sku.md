@@ -19,8 +19,11 @@ This article describes how to get a collection of availabilities in a particular
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A product identifier.
+
 - A SKU identifier.
+
 - A country.
 
 ## C\#
@@ -28,8 +31,11 @@ This article describes how to get a collection of availabilities in a particular
 To get the list of [availabilities](product-resources.md#availability) for a [SKU](product-resources.md#sku):
 
 1. Follow the steps in [Get a SKU by ID](get-a-sku-by-id.md) to get the interface for a specific SKU's operations.
+
 2. From the SKU interface, select the **Availabilities** property to get an interface with the operations for availabilities.
+
 3. (Optional) Use the **ByTargetSegment()** method to filter the availabilities by target segment.
+
 4. Call **Get()** or **GetAsync()** to retrieve a collection of the availabilities for this SKU.
 
 ``` csharp

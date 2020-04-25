@@ -23,6 +23,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A service request ID.
 
 ## C\#

@@ -21,13 +21,15 @@ You can use the **SubscriptionMonthlyUsageRecord** resource collection to get su
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look up the identifier in Partner Center. Choose the customer from the list of customers, then select **Account**, then save their **Microsoft ID**.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
 To get subscription usage records for a customer of a specific Azure service or resource during the current billing period.:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
+
 2. Then call the **Subscriptions** property, as well as **UsageRecords** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp

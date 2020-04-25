@@ -24,6 +24,7 @@ This article concerns the following actors:
 - CPVs
   - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.
   - A CPV isn't a CSP partner with direct access to the Partner Center dashboard or APIs.
+
 - CSP indirect providers and CSP direct partners who are using app ID + user authentication and directly integrate with Partner Center APIs.
 
 ## Security requirements
@@ -97,7 +98,7 @@ You must create and register a web app in Partner Center before making REST call
 
 You must get an authorization code for your web app to accept from the Azure AD login call:
 
-1. Log in to Azure AD at the following URL: <https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1>. Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
+1. Log in to Azure AD at the following URL: [https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1](https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1). Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
 
 2. Replace **Application-Id** with your Azure AD app ID (GUID).
 

@@ -20,7 +20,9 @@ If you are interested in having your organization or your customers organization
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - Confirmed validation after filling out form [here](https://products.office.com/government/eligibility-validation?ReqType=CSPPartner).
+
 - A customer without a qualification.
 
 ## C\#

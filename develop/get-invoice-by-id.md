@@ -22,6 +22,7 @@ Retrieves a given invoice using the invoice ID.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A valid Invoice ID.
 
 ## C\#
@@ -29,6 +30,7 @@ Retrieves a given invoice using the invoice ID.
 To get an invoice by ID:
 
 1. Use your **IPartner.Invoices** collection and call the **ById()** method.
+
 2. Call the **Get()** or **GetAsync()** methods.
 
 ``` csharp
@@ -58,7 +60,7 @@ Use the following query parameter to get the invoice.
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

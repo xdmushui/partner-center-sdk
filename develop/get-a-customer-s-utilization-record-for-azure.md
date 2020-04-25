@@ -21,7 +21,9 @@ You can get the utilization records of a customer's Azure subscription for a spe
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone app and App+User credentials.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription identifier.
 
 This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API isn't supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at a daily level per meter per resource. This rate consumption is equivalent to the daily grain data provided by the Azure utilization API. You'll need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.

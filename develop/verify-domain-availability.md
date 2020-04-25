@@ -22,6 +22,7 @@ How to determine if a domain is available for use.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A domain (for example `contoso.onmicrosoft.com`).
 
 ## C\#

@@ -21,7 +21,9 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look up the identifier in Partner Center. Choose the customer from the list of customers, then select **Account**, then save their **Microsoft ID**.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription identifier.
 
 *This API only supports Microsoft Azure (MS-AZR-0145P) subscriptions. If you are using an Azure plan, see [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md) instead.*
@@ -31,6 +33,7 @@ You can use the [**AzureResourceMonthlyUsageRecord**](https://docs.microsoft.com
 To get a subscription's resource usage information:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
+
 2. Call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property.
 3. Call the **Get()** or **GetAsync()** methods.
 

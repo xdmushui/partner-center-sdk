@@ -20,6 +20,7 @@ This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
 ## C\#
@@ -27,6 +28,7 @@ This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145
 To get the commercial line items for the specified invoice, you must retrieve the invoice object:
 
 1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 
 The **Provider** identifies the source of the billed detail information (for example, **onetime**). The **InvoiceLineItemType** specifies the type (for example, **UsageLineItem**).
@@ -36,6 +38,7 @@ The following example code uses a **foreach** loop to process the line items col
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
 1. Pass the instance's **BillingProvider** and **InvoiceLineItemType** to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
 3. Create an enumerator to traverse the collection as shown in the following example.
 

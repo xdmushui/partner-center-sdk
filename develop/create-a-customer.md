@@ -24,14 +24,16 @@ This article explains how to create a new customer.
 As a cloud solution provider (CSP) partner, when you create a customer you can place orders on behalf of the customer. When you create a customer, you also create:
 
 - An Azure Active Directory (AD) tenant object for the customer.
+
 - A relationship between the reseller and customer, used for delegated admin privileges.
+
 - A user name and password to sign in as an admin for the customer.
 
 Once the customer is created, be sure to save the customer ID and Azure AD details for future use with the Partner Center SDK (for example, account management).
 
 ## Prerequisites
 
-Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 > [!IMPORTANT]
 > To create a customer tenant you must provide a valid physical address during the creation process. An address can be validated by following the steps outlined in the
@@ -42,6 +44,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 To add a customer:
 
 1. Instantiate a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile).
+
 2. Add the new customer to your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
 
 ### C\# example
@@ -92,6 +95,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 To create a new customer:
 
 1. Create a new instance of the **CustomerBillingProfile** and the **CustomerCompanyProfile** objects. Be sure to populate the required fields.
+
 2. Create the customer by calling the **IAggregatePartner.getCustomers().create** function.
 
 ### Java example
@@ -151,7 +155,9 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 ### Request headers
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
+
 - A request ID and correlation ID are required.
+
 - For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body

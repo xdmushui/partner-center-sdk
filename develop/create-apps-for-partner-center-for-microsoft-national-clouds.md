@@ -39,17 +39,25 @@ For web apps, use the following procedures to register your application ID.
 ### Configure API access permissions for web app
 
 1. Choose your app. Go to **Settings** of the Web app.
+
 2. In **API Access** section, choose **Required permissions**
+
 3. For Windows Azure Active directory permissions:
+
     1. Choose **Windows Azure Active Directory permissions**.
+
     2. In **Applications permissions**, select Read directory data.
+
     3. Save the permissions.
+
 4. Note the application ID in the **Properties** section of your web app.
 
 ### Add a secret key to your app
 
 1. Go to the **Keys** section of your web app.
+
 2. Enter key description and select duration as 1 or 2 years, as you need.
+
 3. Save and copy the secret key value. **This value will not be shown again once you leave this page.**
 
 You should have the following details from the web app configuration:
@@ -59,10 +67,14 @@ You should have the following details from the web app configuration:
 
 ### Register the Web app in Partner Center
 
-1. Log in to <https://partnercenter.microsoft.com>.
+1. Log in to [https://partnercenter.microsoft.com](https://partnercenter.microsoft.com).
+
 2. Choose **Dashboard**, then choose **Account Settings**, then choose **App Management**.
+
 3. In the **Web App** section, choose **Register existing app**.
+
 4. Select the web app you created in Azure portal.
+
 5. Choose **register your app**.
 
 ## Native apps
@@ -81,20 +93,32 @@ Native apps do not need to be registered to Partner Center. But these apps need 
 ### Configure API access permissions for native app
 
 1. Choose your app. Go to **Settings**.
+
 2. In API Access, choose **Required permissions**.
+
 3. Choose **Windows Azure Active Directory permissions**. In **Delegated permissions**, select these permissions:
+
     - **Sign in and read user profile**
     - **Read directory data**
     - **Access the directory as the signed-in user**
     - **Read all groups**
+
 4. Save the permissions.
+
 5. Choose **Add** in **Required permissions**.
+
 6. Choose **Select an API**.
+
     1. In the search box, enter **Microsoft Partner Center** and select it from the results list.
+
     2. Choose **Select**.
+
 7. Choose **Select permissions**.
+
     1. Select **Access Partner Center PPE**.
+    
     2. Choose **Select**.
+
 8. Choose **Done**.
 
 >[!IMPORTANT]

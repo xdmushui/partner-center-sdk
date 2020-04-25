@@ -24,6 +24,7 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An integration sandbox partner account with a customer having active reserved instance / software / third-party SaaS subscription orders.
 
 ## C\#

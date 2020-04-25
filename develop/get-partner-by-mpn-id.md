@@ -24,6 +24,7 @@ The technique shown here verifies the partner's Microsoft Partner Network identi
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - The partner MPN ID to verify. If you omit this value, the request retrieves the MPN profile of the signed-in partner.
 
 ## C\#

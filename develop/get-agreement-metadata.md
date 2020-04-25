@@ -22,7 +22,9 @@ ms.localizationpriority: medium
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
+
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication..
 
 ## .NET (version 1.14 or newer)

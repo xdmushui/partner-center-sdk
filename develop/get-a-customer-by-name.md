@@ -22,6 +22,7 @@ Gets a collection of [Customer](customer-resources.md#customer) resources that m
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A user-constructed filter.
 
 ## C\#

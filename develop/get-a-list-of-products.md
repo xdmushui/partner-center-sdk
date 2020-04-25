@@ -22,6 +22,7 @@ You can use the following methods to get a collection of products available in a
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A country.
 
 ## C\#
@@ -62,8 +63,10 @@ ResourceCollection<Product> products = partnerOperations.Products.ByCountry("US"
 To get a list of products:
 
 1. Use your **IAggregatePartner.getProducts** function to select the country by using the **byCountry()** function.
+
 2. Select the catalog view using the **byTargetView()** function.
 3. (Optional) Select the target segment using the **byTargetSegment()** function.
+
 4. Call the **get()** function to return the collection.
 
 ```java
@@ -83,6 +86,7 @@ ResourceCollection<Products> products = partnerOperations.getProducts().byCountr
 To get a list of products:
 
 1. Execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command.
+
 2. Select the catalog by specifying the **Catalog** parameter.
 3. (Optional) Select the target segment by specifying the **Segment** parameter.
 

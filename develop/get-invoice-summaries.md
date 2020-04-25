@@ -22,6 +22,7 @@ You can use the **InvoiceSummaries** to retrieve an invoice summary which shows 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A valid invoice identifier.
 
 ## C\#
@@ -29,6 +30,7 @@ You can use the **InvoiceSummaries** to retrieve an invoice summary which shows 
 To retrieve an [**InvoiceSummaries**](invoice-resources.md#invoicesummaries) collection that contains an [**InvoiceSummary**](invoice-resources.md#invoicesummary) for each currency type:
 
 1. Use your **IAggregatePartner.Invoices** collection to call the **Summaries** property.
+
 2. Call the **Get()** method.
 3. To get the balance of an individual [**InvoiceSummary**](invoice-resources.md#invoicesummary), access the **BalanceAmount** property for that member of the collection.
 

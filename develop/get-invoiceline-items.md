@@ -28,6 +28,7 @@ This API also supports the **provider** types of **azure** and **office** for Mi
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An invoice identifier. This identifies the invoice for which to retrieve the line items.
 
 ## C\#
@@ -35,6 +36,7 @@ This API also supports the **provider** types of **azure** and **office** for Mi
 To get the line items for the specified invoice:
 
 1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object. The invoice object contains all of the information for the specified invoice.
 3. Use the invoice object's [**InvoiceDetails**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoice.invoicedetails) property to get access to a collection of [**InvoiceDetail**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail) objects, each of which contains a [**BillingProvider**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.billingprovider) and an [**InvoiceLineItemType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.invoices.invoicedetail.invoicelineitemtype). The **BillingProvider** identifies the source of the invoice detail information (such as **Office**, **Azure**, **OneTime**), and the **InvoiceLineItemType** specifies the type (for example, **BillingLineItem**).
 
@@ -43,6 +45,7 @@ The following example code uses a **foreach** loop to process the **InvoiceDetai
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
 1. Pass the instance's **BillingProvider** and **InvoiceLineItemType** to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+
 2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicelineitemcollection.getasync) method to retrieve the associated line items.
 3. Create an enumerator to traverse the collection as shown in the following example.
 

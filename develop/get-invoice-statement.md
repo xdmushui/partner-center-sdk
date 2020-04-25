@@ -22,6 +22,7 @@ Retrieves an invoice statement using the invoice ID.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A valid Invoice ID.
 
 ## C\#

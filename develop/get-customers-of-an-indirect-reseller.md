@@ -19,6 +19,7 @@ How to get a list of the customers of an indirect reseller.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - The tenant identifier of the indirect reseller.
 
 ## C\#

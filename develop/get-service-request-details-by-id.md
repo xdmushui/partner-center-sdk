@@ -20,6 +20,7 @@ How to retrieve the details of an existing customer service request using the se
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A service request ID.
 
 ## C\#

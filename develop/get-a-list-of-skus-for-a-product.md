@@ -19,6 +19,7 @@ You can get a collection of SKUs available in a country for a specific product u
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A product identifier.
 
 ## C\#
@@ -26,9 +27,13 @@ You can get a collection of SKUs available in a country for a specific product u
 To get the list of SKUs for a product:
 
 1. Get an interface for a specific product's operations by following the steps in [Get a product by ID](get-a-product-by-id.md).
+
 2. From the interface, select the **Skus** property to obtain an interface with the available operations for SKUs.
+
 3. Call the **Get()** or **GetAsync()** method to retrieve a collection of the available SKUs for the product.
+
 4. (Optional) Select the reservation scope using the **ByReservationScope()** method.
+
 5. (Optional) Use the **ByTargetSegment()** method to filter the SKUs by target segment before calling **Get()** or **GetAsync()**.
 
 ``` csharp
@@ -60,8 +65,11 @@ var skus = partnerOperations.Products.ByCountry(countryCode).ById(productIdForAz
 To get the list of SKUs for a product:
 
 1. Get an interface for a specific product's operations by following the steps in [Get a product by ID](get-a-product-by-id.md).
+
 2. From the interface, select the **getSkus** function to obtain an interface with the available operations for SKUs.
+
 3. Call the **get()** function to retrieve a collection of the available SKUs for the product.
+
 4. (Optional) Use the **byTargetSegment()** function to filter the SKUs by target segment before calling the **get()** function.
 
 ```java
@@ -85,6 +93,7 @@ var segmentSkus = partnerOperations.getProducts().byCountry(countryCode).byId(pr
 To get the list of SKUs for a product:
 
 1. Execute the [**Get-PartnerProductSku**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProductSku.md) command.
+
 2. (Optional) Specify the **Segment** parameter to filter the SKUs by target segment.
 
 ```powershell

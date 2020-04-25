@@ -18,7 +18,9 @@ You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#product
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
-- The customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The product family.
 
 ## C\#
@@ -26,6 +28,7 @@ You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#product
 To check if a customer is eligible to upgrade to Azure plan:
 
 1. Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.
+
 2. Use the **IAggregatePartner.ProductUpgrades** collection.
 3. Call the **CheckEligibility** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradesEligibility** object.
 

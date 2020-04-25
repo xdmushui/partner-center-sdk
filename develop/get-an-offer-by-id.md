@@ -22,6 +22,7 @@ Gets an **Offer** resource that matches the offer ID.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An offer ID.
 
 ## C\#

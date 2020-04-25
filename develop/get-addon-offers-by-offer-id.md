@@ -22,6 +22,7 @@ How to get the add-ons for an offer ID.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An offer ID. If you don't have the offer ID, see [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md).
 
 ## C\#
