@@ -26,8 +26,9 @@ You can verify whether an indirect reseller has signed the Microsoft Partner Agr
 
 To get the Microsoft Partner Agreement signature status of an indirect reseller:
 
- 1. Use your **IAggregatePartner.Compliance** collection tocall the **AgreementSignatureStatus** property.
- 2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
+1. Use your **IAggregatePartner.Compliance** collection to call the **AgreementSignatureStatus** property.
+
+2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
