@@ -25,7 +25,7 @@ If you run automated build verification tests, conduct testing in production, or
 
 - The 25-seats limit means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This limitation includes trials.
 
-- Usage summary can't be obtained on sandbox accounts, as this account is primarly meant for testing purpose.
+- Usage summary can't be obtained on sandbox accounts, as those accounts are for testing purposes.
 
 - APIs related to billing and invoice will not work in the sandbox, as no invoices are generated for the test account.
 
