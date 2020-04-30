@@ -27,7 +27,7 @@ If you run automated build verification tests, conduct testing in production, or
 
 - Usage summary can't be obtained on sandbox accounts, as this account is primarly meant for testing purpose.
 
-- APIs related to billing and invoice will not work in Sandbox as no invoices are generated on for this test account.
+- APIs related to billing and invoice will not work in the sandbox, as no invoices are generated for the test account.
 
 
 ### Azure plan
