@@ -23,7 +23,12 @@ To test your code, you should use your integration sandbox account in Partner Ce
 
 If you run automated build verification tests, conduct testing in production, or perform manual testing in the integration sandbox, you may reach the maximum limits for the integration sandbox. These limits are 75 customers, 5 subscriptions per customer, and 25 seats per subscription.
 
-The 25-seats limit means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This limitation includes trials.
+- The 25-seats limit means you cannot acquire an offer in the sandbox that has a minimum seat requirement that exceeds 25 seats. This limitation includes trials.
+
+- Usage summary can't be obtained on sandbox accounts, as this account is primarly meant for testing purpose.
+
+- APIs related to billing and invoice will not work in Sandbox as no invoices are generated on for this test account.
+
 
 ### Azure plan
 
