@@ -34,7 +34,7 @@ landingContent:
           - text: Example scenarios
             url: scenarios.md
 
-  - title: Use the .NET SDK (v1.15.2)
+  - title: Use the .NET SDK (v1.15.3)
     linkLists:
       - linkListType: download
         links:
