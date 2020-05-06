@@ -72,6 +72,9 @@ while (invoicesEnumerator.HasValue)
 
 For a slightly different example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetPagedInvoices.cs
 
+> [!NOTE] 
+> The same API is used for all modern commercial purchases as well as 145p and Office licenses. Size and offset are only considered for legacy invoices. For all modern commercial purchases, pagesize & offset will be ignored.
+
 ## REST request
 
 ### Request syntax
