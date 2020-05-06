@@ -32,7 +32,7 @@ If you run automated build verification tests, conduct testing in production, or
 
 ### Azure plan
 
-By default, partners cannot provision Azure plans using their sandbox accounts. Partners who need to do so with their sandbox account must apply for access. To apply for access, reach out to your reach out to your Microsoft account manager or business contact. Partners who have previously applied for access to provision Microsoft Azure (MS-AZR-0145P) subscriptions in their sandbox accounts do not need to apply for access again. They will be granted access to provision Azure plans automatically.
+By default, partners cannot provision Azure plans using their sandbox accounts. Partners who need to do so with their sandbox account must apply for access. To apply for access, reach out to your Microsoft account manager or business contact. Partners who have previously applied for access to provision Microsoft Azure (MS-AZR-0145P) subscriptions in their sandbox accounts do not need to apply for access again. They will be granted access to provision Azure plans automatically.
 
 For partners whose sandbox accounts have been approved to provision Azure plans, the following limits apply:
 
