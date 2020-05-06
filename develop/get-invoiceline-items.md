@@ -157,7 +157,7 @@ Use the following URI and query parameters when creating the request.
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
 | billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime".               |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
-| size                   | number | No       | The maximum number of items to return.                            |
+| size                   | number | No       | The maximum number of items to return. Default max size = 2000    |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
 | seekOperation          | string | No       | If **billing-provider** equals **OneTime**, set **seekOperation** equal to **Next** to get the next page of invoice line items. |
 | hasPartnerEarnedCredit | bool | No | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when billing provider type is OneTime and InvoiceLineItemType is UsageLineItems. |
