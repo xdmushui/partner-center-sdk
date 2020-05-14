@@ -7,7 +7,7 @@ ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Create a SelfServePolicy
+# Update a SelfServePolicy
 
 **Applies to:**
 
