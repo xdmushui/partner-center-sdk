@@ -28,7 +28,7 @@ This topic explains how to obtain a list of all partner user requests within a t
 
 | Method  | Request URI                                                        |
 |---------|--------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/pcapi/v1/partnerRequests |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/partnerRequests |
 
 ### Request headers
 
@@ -37,7 +37,7 @@ This topic explains how to obtain a list of all partner user requests within a t
 ### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/pcapi/v1/partnerRequests HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/partnerRequests HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partnercenter.microsoft.com
 Content-Type: application/json
