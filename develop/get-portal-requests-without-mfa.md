@@ -7,7 +7,7 @@ ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a list of portal access without MFA
+# Get portal requests without MFA
 
 Applies to:
 
