@@ -215,7 +215,7 @@
 #### [Verify domain availability](verify-domain-availability.md)
 #### [Delete a customer account from the integration sandbox](delete-a-customer-account-from-the-integration-sandbox.md)
 ### [Security](partner-security-requirements.md)
-#### [Get a list of portal access without MFA](get-portal-request-without-mfa.md)
+#### [Get portal requests without MFA](get-portal-requests-without-mfa.md)
 #### [Get API request summary](get-api-request-summary.md)
 #### [Get API request details](get-api-request-details.md)
 ## [Partner Center REST API reference](partner-center-rest-api-reference.md)
