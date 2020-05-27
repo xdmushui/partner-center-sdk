@@ -1,5 +1,5 @@
 ---
-title: Get a list of portal access without MFA
+title: Get portal requests without MFA
 description: Obtains a list of user requests without MFA
 ms.date: 05/03/2020
 ms.service: partner-dashboard
