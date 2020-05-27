@@ -22,6 +22,6 @@ This section describes the ways that partners can programmatically get the detai
 
 ## Understand MFA adoption status
 
-- [Get a list of portal access without MFA](get-portal-request-without-mfa.md)
+- [Get portal requests without MFA](get-portal-requests-without-mfa.md)
 - [Get API request summary](get-api-request-summary.md)
 - [Get API request details](get-api-request-details.md)
