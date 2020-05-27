@@ -50,7 +50,7 @@ Connection: keep-alive
 
 ## REST Response
 
-If successful, this method returns a collection of [Portal request](mfa-resources.md#Portal-request-without-MFA) resources in the response body.
+If successful, this method returns a collection of [Portal request](mfa-resources.md#portal-request-without-mfa) resources in the response body.
 
 ### Response success and error codes
 
