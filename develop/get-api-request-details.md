@@ -34,6 +34,10 @@ This topic explains how to obtain a list of all partner user requests within a t
 
 - See [Partner Center REST headers](headers.md) for more information.
 
+### Request body
+
+None.
+
 ### Request example
 
 ```http
