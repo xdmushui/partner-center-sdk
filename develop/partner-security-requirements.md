@@ -14,7 +14,7 @@ Applies to:
 
 - Partner Center
 
-This section describes the ways that partners can programmatically get the details on MFA metric. 
+This section provides the details on metrics related to MFA adoption status. 
 
 ## Partner Security Requirements Overview
 
