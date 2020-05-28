@@ -31,6 +31,10 @@ This topic explains how to get the MFA adoption status for each partner within a
 
 - See [Partner Center REST headers](headers.md) for more information.
 
+### Request body
+
+None.
+
 ### Request example
 
 ```http
