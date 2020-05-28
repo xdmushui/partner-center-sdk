@@ -60,14 +60,14 @@ MS-RequestId: 566330a7-1e4b-4848-9c23-f135c70fd810
 Date: Thu, 21 May 2020 22:29:17 GMT
 [
     {
-        "loginDate": "2020-03-22",
+        "loginDate": "2020-05-20",
         "mfaCompliantRequestCount": 7,
         "totalRequestCount": 7,
         "applicationId": "14f38d7d-c4fc-448a-b2df-0fc60e75465a",
         "applicationName": ""
     },
     {
-        "loginDate": "2020-03-22",
+        "loginDate": "2020-05-19",
         "mfaCompliantRequestCount": 7,
         "totalRequestCount": 14,
         "applicationId": "60a00bf2-0644-4279-83b3-87ddf96f2509",
