@@ -1,6 +1,6 @@
 ---
 title: Get the MFA adoption status
-description: Get a list of MFA adoption status for each partner using the Partner REST API.
+description: Get a list of multi-factor authentication adoption status for each partner using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center API
 
-This article explains how to get the MFA adoption status for each partner within a tenant.
+This article explains how to get the multi-factor authentication (MFA) adoption status for each partner within a tenant.
 
 ## Prerequisites
 
