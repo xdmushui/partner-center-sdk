@@ -1,10 +1,10 @@
 ---
 title: Get portal requests without MFA
-description: Obtains a list of user requests without MFA
-ms.date: 05/03/2020
+description: Get a list of user requests without multi-factor authentication (MFA) using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
+ms.date: 05/29/2020
 ---
 
 # Get portal requests without MFA
@@ -13,13 +13,13 @@ Applies to:
 
 - Partner Center API
 
-This topic explains how to obtain a list of most recent requests, which made by users who access Partner Center portal without completing MFA authentication.
+This article explains how to obtain a list of most recent requests, which made by users who access Partner Center portal without completing multi-factor authentication (MFA).
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -48,7 +48,7 @@ Connection: keep-alive
 
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of [Portal request](mfa-resources.md#portal-request-without-mfa) resources in the response body.
 
