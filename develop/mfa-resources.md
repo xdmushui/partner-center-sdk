@@ -8,13 +8,13 @@ ms.localizationpriority: medium
 ms.date: 05/29/2020
 ---
 
-# Partner Security requirements resources
+# Partner security requirements resources
 
 **Applies to:**
 
 - Partner Center
 
-This article helps you understand multi-factor authentication (MFA) adoption details, to help your organization meet Partner Security requirement status. 
+This article helps you understand multi-factor authentication (MFA) adoption details, to help your organization meet partner security requirement status. 
 
 ## Portal request without MFA
 
