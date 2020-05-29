@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center API
 
-This article explains how to obtain a list of most recent requests, which made by users who access Partner Center portal without completing multi-factor authentication (MFA).
+This article explains how to obtain a list of the most recent requests from users who access Partner Center portal without completing multi-factor authentication (MFA).
 
 ## Prerequisites
 
