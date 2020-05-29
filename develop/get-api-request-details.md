@@ -1,10 +1,10 @@
 ---
 title: Get a list of all partner user requests
-description: Obtains a list of all partner user requests
-ms.date: 05/03/2020
+description: Obtains a list of all partner user requests using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
+ms.date: 05/03/2020
 ---
 
 # Get App and User API requests
@@ -22,7 +22,7 @@ This topic explains how to obtain a list of all partner user requests within a t
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -47,7 +47,7 @@ Host: api.partnercenter.microsoft.com
 Content-Type: application/json
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of [API request details](mfa-resources.md#api-request-details) resources in the response body.
 
