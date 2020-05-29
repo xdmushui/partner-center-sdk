@@ -13,7 +13,7 @@ Applies to:
 
 - Partner Center API
 
-This topic explains how to obtain a list of all partner user requests within a tenant.
+This article explains how to obtain a list of all partner user requests within a tenant using REST APIs.
 
  > [!NOTE]
  > This API only returns the most recent API requests made by APP + User credential with maximum 10K limit.
