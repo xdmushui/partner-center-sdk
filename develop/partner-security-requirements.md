@@ -1,22 +1,22 @@
 ---
-title: Partner Security Requirements
-description: This section describes the ways that partners can programmatically get the details on MFA metric. 
-ms.date: 05/20/2020
+title: Partner security requirements
+description: Understand the REST APIs that help you enforce multi-factor authentication for your partner tenant. 
 ms.assetid: B39B335E-5B18-4432-8F9E-8B7E84037A3C
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
+ms.date: 05/29/2020
 ---
 
-# Partner Security Requirements status
+# Partner security requirements status
 
 Applies to:
 
 - Partner Center
 
-This section provides the details on metrics related to MFA adoption status. 
+This article describes lists the REST APIs related to multi-factor authentication (MFA) in Partner Center. These APIs help you enforce MFA for each user account in your partner tenant. 
 
-## Partner Security Requirements Overview
+## Partner security requirements overview
 
 - [Overview](https://docs.microsoft.com/partner-center/partner-security-requirements)
 
