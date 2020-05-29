@@ -1,10 +1,10 @@
 ---
 title: Get the MFA adoption status
-description: Obtains a list of MFA adoption status for each partner
-ms.date: 05/03/2020
+description: Get a list of MFA adoption status for each partner using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
+ms.date: 05/29/2020
 ---
 
 # Get MFA adoption status
@@ -13,13 +13,13 @@ Applies to:
 
 - Partner Center API
 
-This topic explains how to get the MFA adoption status for each partner within a tenant.
+This article explains how to get the MFA adoption status for each partner within a tenant.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -44,10 +44,9 @@ Host: api.partnercenter.microsoft.com
 Content-Type: application/json
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns a collection of [API request summarized by Application](mfa-resources.md#api-request-summarized-by-application) resources in the response body.
-
 
 ### Response success and error codes
 
