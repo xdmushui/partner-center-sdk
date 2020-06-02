@@ -12,9 +12,6 @@ ms.localizationpriority: medium
 **Applies To**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 How to get a collection of a customer's subscriptions that are eligible/ineligible for transfer.
 
