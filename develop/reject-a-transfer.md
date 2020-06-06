@@ -12,9 +12,6 @@ ms.localizationpriority: medium
 **Applies to:**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 ## Prerequisites
 
