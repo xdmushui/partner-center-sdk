@@ -19,7 +19,7 @@ How to make a one-time purchase of software and reservation products such as sof
 > [!NOTE]
 > Software subscriptions are not available in the following markets:
 >
-> | Unavailable Markets            | &nbsp;                            | &nbsp;                                   |
+> | Unavailable markets            | Unavailable markets (continued...) | Unavailable markets (continued...)      |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Papua New Guinea                         |
 > | American Samoa                 | Grenada                           | Pitcairn Islands                         |
