@@ -20,7 +20,7 @@ To purchase an Azure reservation for a customer using the Partner Center API, yo
 > [!NOTE]
 > Azure reservations are not available in the following markets:
 >
-> | Unavailable Markets            | &nbsp;                            | &nbsp;                                   |
+> | Unavailable markets            | Unavailable markets (continued...) | Unavailable markets (continued...)      |
 > |--------------------------------|-----------------------------------|------------------------------------------|
 > | Åland Islands                  | Greenland                         | Papua New Guinea                         |
 > | American Samoa                 | Grenada                           | Pitcairn Islands                         |
