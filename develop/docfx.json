@@ -36,7 +36,6 @@
       "breadcrumb_path": "/partner-center/develop/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None",
-      "feedback_github_repo": "",
       "feedback_product_url": "https://docs.microsoft.com/answers/topics/partner-center-api.html",
       "author": "JasonWHowell",
       "manager": "jasonh",
