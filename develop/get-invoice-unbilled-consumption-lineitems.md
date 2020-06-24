@@ -17,6 +17,9 @@ How to get a collection of unbilled commercial consumption line item details.
 
 You can use the following methods to get a collection of details unbilled commercial consumption line items (also known as open usage line items) programmatically.
 
+>[!NOTE]
+>Daily-rated usage normally takes 24 hours to appear in Partner Center or to be accessed through the API.
+
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
