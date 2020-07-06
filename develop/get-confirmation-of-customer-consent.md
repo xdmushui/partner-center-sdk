@@ -5,6 +5,8 @@ ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get confirmation of customer acceptance of Microsoft Cloud Agreement

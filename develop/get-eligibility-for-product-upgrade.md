@@ -5,6 +5,8 @@ ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Check a customer's eligibility for upgrading to an Azure plan
