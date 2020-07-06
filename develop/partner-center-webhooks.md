@@ -5,6 +5,8 @@ ms.date: 04/10/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: cychua
+ms.author: cychua
 ---
 
 # Partner Center webhooks

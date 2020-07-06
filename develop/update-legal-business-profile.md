@@ -6,6 +6,8 @@ ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: parthpandyaMSFT
+ms.author: parthp
 ---
 
 # Update the partner legal business profile
