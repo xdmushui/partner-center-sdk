@@ -1,7 +1,7 @@
 ---
-title: Get a list of self serve prolicies
-description: How to get a collection of resources representing a customers self serve policies.
-ms.date: 04/13/2020
+title: Get a list of self-serve policies
+description: How to get a collection of resources representing a customer's self-serve policies.
+ms.date: 07/06/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
@@ -9,13 +9,13 @@ author: amitravat
 ms.author: amrava
 ---
 
-# Get a list of self serve policies
+# Get a list of self-serve policies
 
 **Applies to:**
 
 - Partner Center
 
-This topic describes how to get a collection of resources that represents self serve polices for an entity.
+This article describes how to get a collection of resources that represents self-serve policies for an entity.
 
 ## Prerequisites
 
@@ -35,11 +35,11 @@ Use the following query parameter to get a list of customers.
 
 | Name          | Type       | Required | Description                                        |
 |---------------|------------|----------|----------------------------------------------------|
-| **entity_id** | **string** | Y        | The entity identifier requesting access for. This will be the customers tenant id. |
+| **entity_id** | **string** | Y        | The entity identifier requesting access for. This will be the customer's tenant ID. |
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Headers](headers.md).
 
 ### Request body
 
