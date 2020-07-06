@@ -5,6 +5,8 @@ ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Create a cart

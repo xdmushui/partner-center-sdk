@@ -6,6 +6,8 @@ ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: v-sumukh
+ms.author: v-sumukh
 ---
 
 # Analytics resources

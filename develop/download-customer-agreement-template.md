@@ -5,6 +5,8 @@ ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: cychua
+ms.author: cychua
 ---
 
 # Get a download link for the Microsoft Customer Agreement template
