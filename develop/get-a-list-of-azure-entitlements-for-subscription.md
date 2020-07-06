@@ -5,6 +5,8 @@ ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of Azure entitlements for a subscription
