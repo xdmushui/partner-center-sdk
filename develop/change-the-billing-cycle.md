@@ -5,6 +5,8 @@ ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: sourishdeb
+ms.author: sodeb
 ---
 
 # Change the billing cycle

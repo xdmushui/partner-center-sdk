@@ -6,6 +6,8 @@ ms.date: 06/19/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get a list of orders by customer and billing cycle type
