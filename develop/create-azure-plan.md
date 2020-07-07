@@ -5,6 +5,8 @@ ms.date: 01/02/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: mowrim
+ms.author: mowrim
 ---
 
 # Create an Azure plan
