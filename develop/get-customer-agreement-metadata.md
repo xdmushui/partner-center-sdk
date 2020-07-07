@@ -5,8 +5,8 @@ ms.date: 8/29/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: dineshvu
-ms.author: dineshvu
+author: khakiali
+ms.author: alikhaki
 ---
 
 # Get agreement metadata for the Microsoft Customer Agreement
