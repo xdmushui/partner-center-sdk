@@ -6,6 +6,8 @@ ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Customer resources

@@ -5,8 +5,8 @@ ms.date: 11/08/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: dineshvu
-ms.author: dineshvu
+author: khakiali
+ms.author: alikhaki
 ---
 
 # Get a partner's validation codes
