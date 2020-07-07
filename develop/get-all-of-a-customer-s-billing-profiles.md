@@ -6,8 +6,8 @@ ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: rbars
-ms.author: rbars
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get a customer's billing profile
