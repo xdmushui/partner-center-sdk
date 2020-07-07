@@ -6,6 +6,8 @@ ms.date: 10/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of availabilities for a SKU (by customer)
