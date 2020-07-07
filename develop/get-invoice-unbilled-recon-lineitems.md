@@ -5,8 +5,8 @@ ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: dineshvu
-ms.author: dineshvu
+author: sourishdeb
+ms.author: sodeb
 ---
 
 # Get invoice's unbilled reconciliation line items

@@ -6,8 +6,8 @@ ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: khpavan
-ms.author: sakhanda
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get indirect resellers of a customer

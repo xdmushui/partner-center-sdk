@@ -5,6 +5,8 @@ ms.date: 01/12/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Remove a reseller relationship with a customer
