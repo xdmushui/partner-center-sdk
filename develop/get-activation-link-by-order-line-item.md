@@ -6,6 +6,8 @@ ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 # Get activation link by order line item
 

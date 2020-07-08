@@ -6,6 +6,8 @@ ms.date: 05/28/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Create user accounts for a customer

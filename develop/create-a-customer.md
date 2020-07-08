@@ -6,8 +6,8 @@ ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
-author: rbars
-ms.author: rbars
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Create a customer

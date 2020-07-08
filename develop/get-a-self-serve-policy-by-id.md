@@ -5,6 +5,8 @@ ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a self serve policy by ID

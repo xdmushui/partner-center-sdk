@@ -6,6 +6,8 @@ ms.date: 01/08/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a SKU by ID

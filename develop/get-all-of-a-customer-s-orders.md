@@ -6,6 +6,8 @@ ms.date: 06/19/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get all of a customer's orders
