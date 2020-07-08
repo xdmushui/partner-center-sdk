@@ -5,6 +5,8 @@ ms.date: 09/19/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get confirmation of customer acceptance of Microsoft Customer Agreement

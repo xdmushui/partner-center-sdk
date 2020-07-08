@@ -6,6 +6,8 @@ ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: Kim-Davis
+ms.author: kimnich
 ---
 
 # Get all referrals analytics information

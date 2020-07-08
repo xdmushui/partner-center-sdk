@@ -5,6 +5,8 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ms.date: 05/29/2020
+author: amitravat
+ms.author: amrava
 ---
 
 # Get MFA adoption status

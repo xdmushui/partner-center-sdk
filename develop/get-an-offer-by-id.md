@@ -6,6 +6,8 @@ ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: brentserbus
+ms.author: brserbus
 ---
 
 # Get an offer by ID

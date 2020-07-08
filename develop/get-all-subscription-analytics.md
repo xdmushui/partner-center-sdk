@@ -6,6 +6,8 @@ ms.date: 08/02/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get all subscription analytics information
