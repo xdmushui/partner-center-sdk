@@ -1,11 +1,11 @@
 ---
 title: Get all monthly usage records for a subscription.
 description: You can use the AzureResourceMonthlyUsageRecord resource collection to get a list of services within a customer's subscription and their associated rated usage information.
-ms.assetid: 037D71B9-8E8B-4BC0-8388-9CBC97218CED
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get all monthly usage records for a subscription.

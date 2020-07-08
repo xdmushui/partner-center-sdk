@@ -4,7 +4,8 @@ description: This article explains how to get agreement metadata for Microsoft C
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get agreement metadata for Microsoft Cloud Agreement

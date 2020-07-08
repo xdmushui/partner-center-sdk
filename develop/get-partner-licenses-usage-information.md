@@ -1,11 +1,9 @@
 ---
 title: Get partner licenses usage information
 description: How to get partner licenses usage information aggregated to include all customers.
-ms.assetid: 87BCC8FC-5C29-4245-8607-BB62ABC03EDE
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get partner licenses usage information

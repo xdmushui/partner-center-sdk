@@ -4,7 +4,6 @@ description: Release notes for the latest version of the Partner Center .NET SDK
 ms.date: 12/09/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # .NET SDK release notes

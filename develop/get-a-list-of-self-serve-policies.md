@@ -4,7 +4,6 @@ description: How to get a collection of resources representing a customer's self
 ms.date: 07/06/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: amitravat
 ms.author: amrava
 ---

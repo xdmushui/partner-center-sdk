@@ -4,7 +4,6 @@ description: CSP partners can use Partner Center APIs to view and manage their A
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Azure spending

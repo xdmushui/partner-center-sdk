@@ -1,11 +1,9 @@
 ---
 title: Partner Center REST error codes
 description: Description of error codes and success responses from the Partner Center APIs.
-ms.assetid: 08AC1F2E-5847-4AD8-AE5B-0173C5DB589A
 ms.date: 06/25/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Partner Center REST error codes

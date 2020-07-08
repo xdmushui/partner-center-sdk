@@ -4,7 +4,8 @@ description: How to get a collection of a customer's subscriptions that are elig
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get a customer's subscriptions transfer eligibility

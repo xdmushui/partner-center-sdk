@@ -4,7 +4,8 @@ description: You can use the DirectSignedCustomerAgreementStatus resource to get
 ms.date: 02/11/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get the status of a customer's direct signing (direct acceptance) of Microsoft Customer Agreement

@@ -1,11 +1,11 @@
 ---
 title: Get add-ons for an offer ID
 description: How to get the add-ons for an offer ID.
-ms.assetid: 647EBB14-7ABF-47A4-A342-7A691D8B2BA4
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get add-ons for an offer ID

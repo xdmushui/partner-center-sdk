@@ -5,7 +5,8 @@ description: You can use the PartnerUsageSummary resource to get a partner usage
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get a usage summary for a partner

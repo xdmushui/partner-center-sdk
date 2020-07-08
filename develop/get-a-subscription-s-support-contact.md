@@ -1,11 +1,9 @@
 ---
 title: Get a subscription's support contact
 description: How to get a subscription's support contact.
-ms.assetid: 328299D7-88A6-4CB5-BD94-2BB6E25D6563
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get a subscription's support contact

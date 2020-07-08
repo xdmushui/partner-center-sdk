@@ -1,11 +1,9 @@
 ---
 title: Get subscription analytics grouped by dates or terms
 description: How to get subscription analytics information grouped by dates or terms.
-ms.assetid: 5D0C0649-F64D-40A9-ACCC-2077E2D2BA4E
 ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get subscription analytics grouped by dates or terms

@@ -4,7 +4,6 @@ description: How to get subscription analytics information filtered by a search 
 ms.date: 05/10/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get subscription analytics information filtered by a search query

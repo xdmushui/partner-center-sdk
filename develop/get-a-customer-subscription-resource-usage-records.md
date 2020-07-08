@@ -5,7 +5,6 @@ description: You can use the ResourceUsageRecord resource to get a customer's re
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get usage data for subscription by resource

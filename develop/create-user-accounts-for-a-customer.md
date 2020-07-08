@@ -1,11 +1,11 @@
 ---
 title: Create user accounts for a customer
 description: Create a new user account for your customer.
-ms.assetid: E46AB186-F4E1-4A00-AE62-28A843F9C288
 ms.date: 05/28/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Create user accounts for a customer

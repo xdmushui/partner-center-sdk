@@ -1,11 +1,11 @@
 ---
 title: Get a subscription by ID
 description: Gets a Subscription resource that matches the customer ID and the subscription ID.
-ms.assetid: 0A91755F-C5AB-4CB1-9E61-6C927F6AA5C5
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a subscription by ID

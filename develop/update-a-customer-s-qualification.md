@@ -4,7 +4,8 @@ description: Updates a customer's qualification, including the address associate
 ms.date: 11/08/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Update a customer's qualification

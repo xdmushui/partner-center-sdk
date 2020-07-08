@@ -1,11 +1,11 @@
 ---
 title: Manage accounts and profiles
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage their user accounts and profiles.
-ms.assetid: 7E2D461D-279E-4E6C-ACFA-BC96AAE8503C
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: parthpandyaMSFT
+ms.author: parthp
 ---
 
 # Manage accounts and profiles

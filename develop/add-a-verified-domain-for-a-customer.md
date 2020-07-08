@@ -4,7 +4,6 @@ description: Add a verified domain to the list of approved domains for a custome
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Add a verified domain for a customer

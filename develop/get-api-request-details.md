@@ -3,8 +3,9 @@ title: Get a list of all partner user requests
 description: Get a list of all partner user requests using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.localizationpriority: medium
 ms.date: 05/29/2020
+author: cychua
+ms.author: cychua
 ---
 
 # Get App and User API requests

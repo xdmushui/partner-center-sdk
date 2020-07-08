@@ -1,11 +1,11 @@
 ---
 title: Get the availability by ID
 description: Gets the availability for the specified product and SKU using an availability ID.
-ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get the availability by ID

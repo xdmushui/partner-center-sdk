@@ -4,7 +4,6 @@ description: You can use the AzureEntitlement resource to  get a collection of A
 ms.date: 07/06/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: amitravat
 ms.author: amrava
 ---

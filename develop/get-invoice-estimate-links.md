@@ -5,7 +5,8 @@ ms.date: 09/24/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.assetid:
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get invoice estimate links

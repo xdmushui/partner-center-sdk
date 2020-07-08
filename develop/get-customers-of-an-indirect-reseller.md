@@ -1,11 +1,11 @@
 ---
 title: Get customers of an indirect reseller
 description: How to get a list of the customers of an indirect reseller.
-ms.assetid: 2920F056-E6B8-4C66-9EEA-4577BEC034F9
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get customers of an indirect reseller

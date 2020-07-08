@@ -1,11 +1,9 @@
 ---
 title: Invoice resources
 description: Multiple invoice-related resources are available through the Partner Center APIs. These resources are related to invoice and line item details.
-ms.assetid: FDD151CC-3473-46DF-A422-265DCBC8A498
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Invoice resources

@@ -4,7 +4,6 @@ description: How to update an order for a customer in a cart.
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Update a cart

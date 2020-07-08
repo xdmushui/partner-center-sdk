@@ -5,7 +5,6 @@ description: You can use a spending budget (the SpendingBudget object) to update
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get a customer's usage spending budget

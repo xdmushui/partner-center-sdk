@@ -4,7 +4,6 @@ description: You can use the AgreementStatus API to verify whether an indirect r
 ms.date: 10/30/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Verify an indirect reseller's Microsoft Partner Agreement signing status
