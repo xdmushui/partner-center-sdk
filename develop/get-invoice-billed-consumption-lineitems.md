@@ -5,6 +5,8 @@ ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get invoice billed commercial consumption line items

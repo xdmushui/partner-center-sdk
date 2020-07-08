@@ -6,6 +6,8 @@ ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: cychua
+ms.author: cychua
 ---
 
 # Partner Center REST API reference

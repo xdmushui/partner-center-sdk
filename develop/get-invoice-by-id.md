@@ -6,6 +6,8 @@ ms.date: 06/10/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get invoice by ID
