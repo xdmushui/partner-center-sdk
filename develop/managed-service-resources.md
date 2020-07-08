@@ -1,11 +1,9 @@
 ---
 title: Managed service resources
 description: Managed services are services to which a partner has delegated admin privileges. Partners can provide support for and file service requests on the behalf of their managed services.
-ms.assetid: B05E9585-72E4-4330-8721-A88EC4C193D7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Managed service resources

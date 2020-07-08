@@ -1,11 +1,9 @@
 ---
 title: Console test app
 description: This console test app provides sample code for all scenarios supported by the Partner Center APIs. You can also use it for testing.
-ms.assetid: 56F5B4C6-CE87-4D13-9D8C-09F38E946292
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Console test app

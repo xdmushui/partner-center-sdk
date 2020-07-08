@@ -3,7 +3,6 @@ title: Get portal requests without MFA
 description: Get a list of user requests without multi-factor authentication (MFA) using the Partner REST API.
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.localizationpriority: medium
 ms.date: 05/29/2020
 ---
 

@@ -4,7 +4,6 @@ description: How to get a partner's Government Community Cloud validation codes.
 ms.date: 11/08/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: khakiali
 ms.author: alikhaki
 ---

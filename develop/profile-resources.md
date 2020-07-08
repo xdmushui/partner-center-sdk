@@ -1,11 +1,9 @@
 ---
 title: Profile resources
 description: Describes the behavior of a Cloud Solution Provider's profiles.
-ms.assetid: 42F2959B-D70D-41A7-9A50-E22A2356A339
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Profile resources

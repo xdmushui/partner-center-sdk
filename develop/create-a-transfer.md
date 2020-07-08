@@ -4,7 +4,6 @@ description: How to create a transfer of subscriptions for a customer.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create a transfer

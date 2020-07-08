@@ -4,7 +4,6 @@ description: You can use the ProductUpgradeRequest resource to determine the sta
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get the product upgrade status for a customer

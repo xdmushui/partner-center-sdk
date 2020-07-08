@@ -1,11 +1,9 @@
 ---
 title: Auditing resources
 description: Resources used with Partner Center audit operations.
-ms.assetid: FEF0BED4-2CEB-46D2-9365-D7D3C50AF0E3
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Auditing resources

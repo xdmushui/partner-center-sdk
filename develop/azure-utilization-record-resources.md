@@ -1,11 +1,9 @@
 ---
 title: Azure utilization record resources
 description: The Azure utilization record contains details about the utilization of an Azure subscription resource.
-ms.assetid: 4C1EEEB3-DB25-4D61-BFED-C4AB5D3BB5CF
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: amitravat
 ms.author: amrava
 ---

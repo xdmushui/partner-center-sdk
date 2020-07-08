@@ -1,11 +1,9 @@
 ---
 title: Device deployment resources
 description: Resources related to Partner Center device deployment.
-ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Device deployment resources

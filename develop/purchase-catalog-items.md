@@ -1,11 +1,9 @@
 ---
 title: Purchase catalog items
 description: How to purchase catalog items using the Partner Center API.
-ms.assetid: B9B1B66A-D1AD-44E8-85AA-49D9C2A94BE5
 ms.date: 07/12/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Purchase catalog items

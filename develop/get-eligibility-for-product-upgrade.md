@@ -4,7 +4,6 @@ description: You can use the ProductUpgradeRequest resource to return a ProductU
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: khpavan
 ms.author: sakhanda
 ---

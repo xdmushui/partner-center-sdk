@@ -1,11 +1,9 @@
 ---
 title: Get the status of a device batch upload
 description: How to get the status of a device batch upload for a specified customer.
-ms.assetid: 2965869E-824A-497E-9A77-6FC1BA18C55B
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get the status of a device batch upload

@@ -4,7 +4,6 @@ description: Get a download link for Microsoft Customer Agreement template.
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: cychua
 ms.author: cychua
 ---

@@ -1,11 +1,9 @@
 ---
 title: Create a customer
 description: How to create a new customer.
-ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: dineshvu
 ms.author: dineshvu
 ---

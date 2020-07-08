@@ -4,7 +4,6 @@ description: The AgreementDocument resource represents an agreement document.
 ms.date: 08/28/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---

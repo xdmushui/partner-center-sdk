@@ -5,7 +5,6 @@ description: Update the autorenew property for a Subscription resource that matc
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Update autorenew for a commercial marketplace subscription

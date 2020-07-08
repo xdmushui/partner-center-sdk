@@ -1,11 +1,9 @@
 ---
 title: Customer resources
 description: Customer resources that represent a customer or reseller.
-ms.assetid: C7EC2657-62F2-43B3-B171-2F74498D45E0
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: dineshvu
 ms.author: dineshvu
 ---

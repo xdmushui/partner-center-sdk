@@ -4,7 +4,6 @@ description: You can get a collection of commercial consumption invoice line ite
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: khpavan
 ms.author: sakhanda
 ---

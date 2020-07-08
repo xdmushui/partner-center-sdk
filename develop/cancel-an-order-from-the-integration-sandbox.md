@@ -4,7 +4,6 @@ description: Cancel orders from integration sandbox accounts.
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Cancel an order from the integration sandbox

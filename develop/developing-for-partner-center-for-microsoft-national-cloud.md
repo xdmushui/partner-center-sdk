@@ -4,11 +4,9 @@ description: Partner Center SDK differences when developing for Partner Center f
 MS-HAID:
 - 'pc\_apiv2.developing\_with\_different\_partner\_center\_versions'
 - 'pc\_apiv2.developing\_for\_partner\_center\_for\_microsoft\_national\_cloud'
-ms.assetid: 13D45776-4837-48F5-AB8B-605FD1D3D52D
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Developing for Partner Center for Microsoft National Clouds

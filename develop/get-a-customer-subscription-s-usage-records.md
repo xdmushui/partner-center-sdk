@@ -5,7 +5,6 @@ description: You can use the SubscriptionMonthlyUsageRecord resource collection 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get subscription usage records for a customer

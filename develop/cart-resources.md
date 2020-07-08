@@ -4,7 +4,6 @@ description: A partner places an order when a customer wants to buy a subscripti
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Cart resources

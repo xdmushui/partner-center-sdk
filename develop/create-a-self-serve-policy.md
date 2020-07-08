@@ -4,7 +4,6 @@ description: How to create a new self serve policy.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create a SelfServePolicy

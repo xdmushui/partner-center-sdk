@@ -1,11 +1,9 @@
 ---
 title: Manage customers
 description: This section describes the ways that Cloud Solution Provider partners can use the Partner Center to programmatically manage customer accounts.
-ms.assetid: C8D81324-5D5A-4C42-933F-6C0552FB882D
 ms.date: 02/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Manage customers
