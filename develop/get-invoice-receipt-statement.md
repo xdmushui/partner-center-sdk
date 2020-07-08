@@ -4,7 +4,6 @@ description: Retrieves an invoice receipt statement using invoice ID and the rec
 ms.date: 02/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get invoice receipt statement

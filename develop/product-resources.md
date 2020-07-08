@@ -1,11 +1,9 @@
 ---
 title: Products resources
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
-ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
 ms.date: 04/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Products resources

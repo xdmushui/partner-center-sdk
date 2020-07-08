@@ -5,7 +5,6 @@ description: You can use the SubscriptionUsageSummary resource to get a subscrip
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get usage summary for customer's subscription

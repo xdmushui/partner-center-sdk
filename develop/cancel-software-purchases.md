@@ -4,7 +4,6 @@ description: Self-serve option to cancel software subscriptions and perpetual so
 ms.date: 12/19/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Cancel software purchases

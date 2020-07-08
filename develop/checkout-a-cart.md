@@ -4,7 +4,6 @@ description: How to checkout an order for a customer in a cart.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Checkout a cart

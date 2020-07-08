@@ -1,11 +1,9 @@
 ---
 title: Get a customer's subscriptions
 description: How to get a collection of a customer's subscriptions.
-ms.assetid: 1C9E986B-2887-460B-9D71-4520BB18C32A
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get a customer's subscriptions

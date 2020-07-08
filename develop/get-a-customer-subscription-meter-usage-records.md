@@ -4,7 +4,6 @@ description: You can use the MeterUsageRecord resource collection to get meter u
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get usage data for subscription by meter

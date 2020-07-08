@@ -4,7 +4,6 @@ description: Partners can collaborate with Microsoft on the development of partn
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Join the Partner Center API and SDK Early Adopter Program

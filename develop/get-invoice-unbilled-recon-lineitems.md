@@ -4,7 +4,6 @@ description: You can get a collection of unbilled reconciliation line item detai
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: sourishdeb
 ms.author: sodeb
 ---

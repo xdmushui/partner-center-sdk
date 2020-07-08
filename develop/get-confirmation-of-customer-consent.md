@@ -4,7 +4,6 @@ description: This article explains how to get confirmation of customer acceptanc
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 aauthor: khakiali
 ms.author: alikhaki
 ---

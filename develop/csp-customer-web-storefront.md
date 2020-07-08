@@ -1,11 +1,9 @@
 ---
 title: CSP customer web storefront
 description: This sample website code shows a working online store for customers to buy subscriptions to Microsoft products.
-ms.assetid: 0726B1CA-97A1-42E6-92AD-25787BFE0C67
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # CSP customer web storefront

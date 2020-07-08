@@ -1,11 +1,9 @@
 ---
 title: CSP Customer Storefront Builder Quick Start Guide
 description: Create an online marketplace to sell cloud solution provider (CSP) offers using the CSP Customer Storefront Builder.
-ms.assetid: 333EE80D-E49E-4E89-87FB-3F02AC48C236
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # CSP Customer Storefront Builder Quick Start Guide

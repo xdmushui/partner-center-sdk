@@ -4,7 +4,6 @@ description: The AgreementMetadata resource collection describes agreement types
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---

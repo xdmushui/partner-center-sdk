@@ -4,7 +4,6 @@ description: The DirectSignedCustomerAgreementStatus resource represents the sta
 ms.date: 02/11/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---

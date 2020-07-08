@@ -1,10 +1,8 @@
 ---
 title: Partner Security requirements resources
 description: Understand multi-factor authentication (MFA) adoption details to meet Partner Security Requirements.
-ms.assetid: 1A8C28E2-2E67-41DA-B451-5A052FF12115
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ms.date: 05/29/2020
 ---
 

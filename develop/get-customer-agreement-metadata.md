@@ -4,7 +4,6 @@ description: This article explains how to get agreement metadata for Microsoft C
 ms.date: 8/29/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: khakiali
 ms.author: alikhaki
 ---

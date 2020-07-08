@@ -4,7 +4,6 @@ description: How to add an order with add-ons for a customer in a cart.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: rbars
 ms.author: rbars
 ---

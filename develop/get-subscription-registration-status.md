@@ -4,7 +4,6 @@ description: Get the status of a subscription that has been registered for use w
 ms.date: 03/19/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get subscription registration status

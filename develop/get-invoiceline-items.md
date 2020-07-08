@@ -1,11 +1,9 @@
 ---
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice using the Partner Center APIs.
-ms.assetid: 3EE2F67D-8D99-4FAB-A2D6-D33BAD1F324F
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get invoice line items

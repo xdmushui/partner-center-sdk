@@ -1,11 +1,9 @@
 ---
 title: Register a subscription
 description: Register an existing subscription so that it is enabled for ordering Azure reservations.
-ms.assetid: 9B853BF2-855C-4EB3-BBE5-7ECC1336AE08
 ms.date: 07/27/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Register a subscription

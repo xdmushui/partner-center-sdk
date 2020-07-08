@@ -5,7 +5,6 @@ description: Developers can create and manage a subscription for commercial mark
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create a subscription for commercial marketplace products

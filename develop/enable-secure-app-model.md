@@ -4,7 +4,6 @@ description: Secure your Partner Center and control panel apps.
 ms.date: 01/20/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
-ms.localizationpriority: medium
 author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---

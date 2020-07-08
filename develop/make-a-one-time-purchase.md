@@ -4,7 +4,6 @@ description: How to make a one-time purchase of software and reservation product
 ms.date: 10/09/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Make a one-time purchase

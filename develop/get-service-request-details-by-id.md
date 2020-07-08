@@ -4,7 +4,6 @@ description: How to retrieve the details of an existing customer service request
 ms.date: 02/06/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get service request details by ID

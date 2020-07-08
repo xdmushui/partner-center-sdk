@@ -4,7 +4,6 @@ description: You can get a collection of unbilled commercial consumption line it
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get invoice unbilled commercial consumption line items

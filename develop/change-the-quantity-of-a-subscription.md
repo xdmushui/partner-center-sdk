@@ -1,11 +1,9 @@
 ---
 title: Change the quantity of a subscription
 description: Update a subscription to increase or decrease the quantity of licenses for a customer.
-ms.assetid: 10535C45-63BF-4E75-A6E5-E03ADC1DF8DC
 ms.date: 06/05/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Change the quantity of a subscription

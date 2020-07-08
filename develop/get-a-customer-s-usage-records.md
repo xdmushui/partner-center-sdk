@@ -4,7 +4,6 @@ description: You can use the CustomerMonthlyUsageRecord resource collection to g
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get usage records for all customers

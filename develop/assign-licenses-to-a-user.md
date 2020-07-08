@@ -1,11 +1,9 @@
 ---
 title: Assign licenses to a user
 description: How to assign licenses to a customer user.
-ms.assetid: 872C7444-DF89-4EB5-8C1E-1D8E2934A40E
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Assign licenses to a user

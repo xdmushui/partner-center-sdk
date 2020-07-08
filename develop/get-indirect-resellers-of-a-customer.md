@@ -1,11 +1,9 @@
 ---
 title: Get indirect resellers of a customer
 description: How to get a list of the indirect resellers that have a relationship with a specified customer.
-ms.assetid: C3C4BE9A-97E8-41AD-AB28-6F9CB7DCE475
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 author: dineshvu
 ms.author: dineshvu
 ---

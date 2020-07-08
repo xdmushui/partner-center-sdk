@@ -4,7 +4,6 @@ description: How to get licenses usage information at the workload level for Off
 ms.date: 10/25/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get licenses usage information
