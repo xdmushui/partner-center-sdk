@@ -16,6 +16,10 @@ ms.subservice:  partnercenter-sdk
 
 Gets a collection of items representing valid topics for service requests.
 
+   > [!IMPORTANT]
+   > The get service request support topics API will be unsupported and decommissioned by August 31, 2020. This API was used by partners to programmatically get required data to create service request API which is also being decommissioned. Partners should use the Partner Center user interface to create partner support tickets. The user experience offers partners additional information while creating support cases such as recommended steps and documents for the area they are having problems with. The partner center team has also enhanced the user experience by customizing the service request forms to ask for information specific to the problem area that the support engineers need to more quickly and accurately resolve your issues.
+
+
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
