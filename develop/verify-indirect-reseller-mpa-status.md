@@ -210,9 +210,9 @@ Connection: close
 }
 ```
 
-#### Indirect Reseller MPN Id is either invalid or not migrated from PMC
+#### CSP Indirect Reseller MPN Id is either invalid or not migrated from Partner Membership Center to Partner Center
 
-The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from PMC. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
+The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -234,9 +234,9 @@ Connection: close
 }
 ```
 
-#### Indirect Provider region and Indirect Reseller region does not match
+#### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when Indirect reseller MPN ID passed region doesn't match with Indirect Provider region. [Learn more](https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -254,13 +254,13 @@ Connection: close
     "data": [
         "https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview" 
     ],
-    "source": "ComplianceController"
+    "source": "PartnerFD"
 }
 ```
 
-#### Partner CSP in PC but not signed MPA
+#### CSP Indirect Reseller account exists in Partner Center but hasn't signed the MPA
 
-The following example response is returned when Partner Center can recognize the passed MPN ID and a CSP enrollment associated to the given MPN Id but not signed the agreement. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx)
+The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -282,9 +282,9 @@ Connection: close
 }
 ```
 
-#### Partner MPN in PC but no CSP enrollment in PC
+#### No CSP Indirect Reseller account is associated with the given MPN ID
 
-The following example response is returned when Partner Center can recognize the passed MPN ID but there is no CSP enrollment associated to the given MPN Id. [Learn More](https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
+The following example response is returned when Partner Center can recognize the MPN ID passed in the request but there is no CSP enrollment associated to the given MPN ID. [Learn More](https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -306,9 +306,9 @@ Connection: close
 }
 ```
 
-#### PC Can't recognize the TenantId passed
+#### Invalid Tenant ID
 
-The following example response is returned when Partner Center can't recognize the Tenant ID passed in the request.
+The following example response is returned when Partner Center doesn't find any account associated to the Tenant ID passed in the request.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -322,15 +322,15 @@ Date: Fri, 24 Jul 2020 11:56:46 GMT
 Connection: close
 {
     "code": 2205,
-    "description": "Partner Center can't recongize the tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124",
+    "description": "Partner Center doesn't find any account associated to the Tenant ID 53dd1e09-3c86-4945-abca-8274d0ac3124",
     "data": [],
     "source": "PartnerFD"
 }
 ```
 
-#### PC Can recognize the TenantId passed but didn't signed the MPA
+#### No MPA found with the given Tenant ID
 
-The following example response is returned when Partner Center cant recognize the Tenant ID passed in the request but the CSP account associated to the tenant not signed the MPA.
+The following example response is returned when Partner Center can't find any MPA signature with the given Tenant ID.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -344,7 +344,7 @@ Date: Fri, 24 Jul 2020 11:56:46 GMT
 Connection: close
 {
     "code": 2206,
-    "description": "PC Account associated to Tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124 not signed the agreement",
+    "description": "Parnter Center Account associated to Tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124 hasn't signed the agreement",
     "data": [],
     "source": "PartnerFD"
 }
