@@ -16,11 +16,14 @@ ms.subservice:  partnercenter-sdk
 
 How to create a partner center service request.
 
+   > [!IMPORTANT]
+   > The create partner service request API will be unsupported and decommissioned by August 31, 2020. Partners should use the Partner Center user interface to create partner support tickets. The user experience offers partners additional information while creating support cases such as recommended steps and documents for the area they are having problems with. The partner center team has also enhanced the user experience by customizing the service request forms to ask for information specific to the problem area that the support engineers need to more quickly and accurately resolve your issues.
+
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-- A support topic ID. If you do not have a support topic ID, see [Get service request support topics](get-service-request-support-topics--pending-.md).
+- A support topic ID. If you don't have a support topic ID, see [Get service request support topics](get-service-request-support-topics--pending-.md).
 
 ## C\#
 
@@ -28,7 +31,7 @@ To create a service request:
 
 1. Create and populate a [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object with the title, description, severity, and support topic id. To add additional information, the [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object supports an optional collection of [**Notes**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.notes), but does not support links to files for uploading.
 
-2. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object and a string containing the locale of the organization creating the service request (the agent locale).
+2. Once the object is created, call the [**IAggregatePartner.ServiceRequests.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.ipartnerservicerequestcollection.create) method, passing it the newly created ServiceRequest object, and a string containing the locale of the organization creating the service request (the agent locale).
 
 ### C\# example
 
@@ -78,15 +81,15 @@ This table describes the required and optional properties in the request body.
 | Title            | string                                                                      | Y        | The service request title.                                                           |
 | Description      | string                                                                      | Y        | The description.                                                                     |
 | Severity         | string                                                                      | Y        | The severity: "unknown", "critical", "moderate", or "minimal".                       |
-| SupportTopicId   | string                                                                      | Y        | The id of the support topic.                                                         |
+| SupportTopicId   | string                                                                      | Y        | The ID of the support topic.                                                         |
 | SupportTopicName | string                                                                      | N        | The name of the support topic.                                                       |
-| Id               | string                                                                      | N        | The id of the service request.                                                       |
+| ID               | string                                                                      | N        | The ID of the service request.                                                       |
 | Status           | string                                                                      | N        | The status of the service request: "none", "open", "closed", or "attention\_needed". |
 | Organization     | [ServiceRequestOrganization](service-request-resources.md#servicerequestorganization) | N        | Organization for which the service request is created.                               |
 | PrimaryContact   | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | Primary Contact on the service request.                                              |
 | LastUpdatedBy    | [ServiceRequestContact](service-request-resources.md#servicerequestcontact)           | N        | "Last Updated By" contact for changes to the service request.                        |
 | ProductName      | string                                                                      | N        | The name of the product that corresponds to the service request.                     |
-| ProductId        | string                                                                      | N        | The id of the product.                                                               |
+| ProductId        | string                                                                      | N        | The ID of the product.                                                               |
 | CreatedDate      | date                                                                        | N        | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                                        | N        | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                                        | N        | The date that the service request was last closed.                                   |
