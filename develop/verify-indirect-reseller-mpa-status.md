@@ -209,3 +209,143 @@ Connection: close
     "source": "ComplianceController"
 }
 ```
+
+#### Indirect Reseller MPN Id is either invalid or not migrated from PMC
+
+The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from PMC. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 321
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 9240230a-413f-4880-acbd-96d59a165474
+MS-RequestId: 92caacb1-8c9e-49af-8f85-83f271c85056
+MS-CV: V8eVMXvaBE6LHyq6.0
+MS-ServerId: 0000005B
+Date: Fri, 24 Jul 2020 11:56:46 GMT
+Connection: close
+{
+    "code": 2200,
+    "description": "MPN Id 998743 is either invalid or not yet migrated to Partner Center. Please advise your reseller to migrate the reseller MPN ID to Partner Center to continue with this order.",
+    "data": [
+        "https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx"
+    ],
+    "source": "PartnerFD"
+}
+```
+
+#### Indirect Provider region and Indirect Reseller region does not match
+
+The following example response is returned when Indirect reseller MPN ID passed region doesn't match with Indirect Provider region. [Learn more](https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview) about CSP Regions.
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 119
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: b4e67a78-0692-45d1-b408-04b9178a8ac6
+MS-RequestId: aa04fb9d-c6b6-4754-8a6a-86e00cdd5ccb
+MS-CV: WTsLWK5UlUW9sZjH.0
+MS-ServerId: 0000005B
+Date: Wed, 16 Oct 2019 09:02:30 GMT
+Connection: close
+{
+    "code": 2201,
+    "description": "The CSP region of the MPN ID 1234567 doesn’t match the CSP region from where you are placing the order. Provide the MPN ID for the CSP region where you are placing the order.",
+    "data": [
+        "https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview" 
+    ],
+    "source": "ComplianceController"
+}
+```
+
+#### Partner CSP in PC but not signed MPA
+
+The following example response is returned when Partner Center can recognize the passed MPN ID and a CSP enrollment associated to the given MPN Id but not signed the agreement. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx)
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 321
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 9240230a-413f-4880-acbd-96d59a165474
+MS-RequestId: 92caacb1-8c9e-49af-8f85-83f271c85056
+MS-CV: V8eVMXvaBE6LHyq6.0
+MS-ServerId: 0000005B
+Date: Fri, 24 Jul 2020 11:56:46 GMT
+Connection: close
+{
+    "code": 2203,
+    "description": "MPN Id 123456 has not signed Microsoft Partner Agreement (MPA) for the CSP region where the order is being placed. Please advise your reseller to sign MPA to continue with the order.",
+    "data": [
+        "https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx"
+    ],
+    "source": "PartnerFD"
+}
+```
+
+#### Partner MPN in PC but no CSP enrollment in PC
+
+The following example response is returned when Partner Center can recognize the passed MPN ID but there is no CSP enrollment associated to the given MPN Id. [Learn More](https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 321
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 9240230a-413f-4880-acbd-96d59a165474
+MS-RequestId: 92caacb1-8c9e-49af-8f85-83f271c85056
+MS-CV: V8eVMXvaBE6LHyq6.0
+MS-ServerId: 0000005B
+Date: Fri, 24 Jul 2020 11:56:46 GMT
+Connection: close
+{
+    "code": 2204,
+    "description": "MPN Id 123456 is not associated with a CSP Indirect Reseller account in Partner Center. Please advise your reseller to enroll into the CSP program as an indirect reseller in Partner Center.",
+    "data": [
+        "https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx"
+    ],
+    "source": "PartnerFD"
+}
+```
+
+#### PC Can't recognize the TenantId passed
+
+The following example response is returned when Partner Center can't recognize the Tenant ID passed in the request.
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 321
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 9240230a-413f-4880-acbd-96d59a165474
+MS-RequestId: 92caacb1-8c9e-49af-8f85-83f271c85056
+MS-CV: V8eVMXvaBE6LHyq6.0
+MS-ServerId: 0000005B
+Date: Fri, 24 Jul 2020 11:56:46 GMT
+Connection: close
+{
+    "code": 2205,
+    "description": "Partner Center can't recongize the tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124",
+    "data": [],
+    "source": "PartnerFD"
+}
+```
+
+#### PC Can recognize the TenantId passed but didn't signed the MPA
+
+The following example response is returned when Partner Center cant recognize the Tenant ID passed in the request but the CSP account associated to the tenant not signed the MPA.
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Length: 321
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 9240230a-413f-4880-acbd-96d59a165474
+MS-RequestId: 92caacb1-8c9e-49af-8f85-83f271c85056
+MS-CV: V8eVMXvaBE6LHyq6.0
+MS-ServerId: 0000005B
+Date: Fri, 24 Jul 2020 11:56:46 GMT
+Connection: close
+{
+    "code": 2206,
+    "description": "PC Account associated to Tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124 not signed the agreement",
+    "data": [],
+    "source": "PartnerFD"
+}
+```
