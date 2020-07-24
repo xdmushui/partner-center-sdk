@@ -1,7 +1,7 @@
 ---
 title: Verify an indirect reseller's Microsoft Partner Agreement signing status
 description: You can use the AgreementStatus API to verify whether an indirect reseller has signed the Microsoft Partner Agreement.
-ms.date: 10/30/2019
+ms.date: 07/24/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.localizationpriority: medium
@@ -212,7 +212,7 @@ Connection: close
 
 #### CSP Indirect Reseller MPN Id is either invalid or not migrated from Partner Membership Center to Partner Center
 
-The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
+The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -236,7 +236,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/partner-center/regional-authorization-overview) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -260,7 +260,7 @@ Connection: close
 
 #### CSP Indirect Reseller account exists in Partner Center but hasn't signed the MPA
 
-The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx)
+The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://partner.microsoft.com/resources/detail/verify-mpa-acceptance-status-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -284,7 +284,7 @@ Connection: close
 
 #### No CSP Indirect Reseller account is associated with the given MPN ID
 
-The following example response is returned when Partner Center can recognize the MPN ID passed in the request but there is no CSP enrollment associated to the given MPN ID. [Learn More](https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
+The following example response is returned when Partner Center can recognize the MPN ID passed in the request but there is no CSP enrollment associated to the given MPN ID. [Learn More](https://partner.microsoft.com/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
