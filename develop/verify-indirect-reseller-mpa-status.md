@@ -226,9 +226,9 @@ Date: Fri, 24 Jul 2020 11:56:46 GMT
 Connection: close
 {
     "code": 2200,
-    "description": "MPN Id 998743 is either invalid or not yet migrated to Partner Center. Please advise your reseller to migrate the reseller MPN ID to Partner Center to continue with this order.",
+    "description": "MPN Id 123456 is either invalid or not yet migrated to Partner Center. Please advise your reseller to migrate the reseller MPN ID to Partner Center to continue with this order.",
     "data": [
-        "https://partner.microsoft.com/en-gb/resources/detail/migrate-pmc-pc-mpa-guide-pptx"
+        "https://partner.microsoft.com/en-us/resources/detail/migrate-pmc-pc-mpa-guide-pptx"
     ],
     "source": "PartnerFD"
 }
@@ -322,7 +322,7 @@ Date: Fri, 24 Jul 2020 11:56:46 GMT
 Connection: close
 {
     "code": 2205,
-    "description": "Partner Center doesn't find any account associated to the Tenant ID 53dd1e09-3c86-4945-abca-8274d0ac3124",
+    "description": "Partner Center doesn't find any account associated to the Tenant ID 12345678-ACBD-1234-ABCD-123456789ABC",
     "data": [],
     "source": "PartnerFD"
 }
@@ -344,7 +344,7 @@ Date: Fri, 24 Jul 2020 11:56:46 GMT
 Connection: close
 {
     "code": 2206,
-    "description": "Parnter Center Account associated to Tenant Id 53dd1e09-3c86-4945-abca-8274d0ac3124 hasn't signed the agreement",
+    "description": "Parnter Center Account associated to Tenant Id 12345678-ACBD-1234-ABCD-123456789ABC hasn't signed the agreement",
     "data": [],
     "source": "PartnerFD"
 }
