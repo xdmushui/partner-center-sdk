@@ -139,7 +139,7 @@ The following sample shows the structure of a Partner Center event.
 
 ### Authentication
 
-All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. Acquire an access token to access https://api.partnercenter.microsoft.com. This token is the same token that is used to access the rest of the Partner Center APIs.
+All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. Acquire an access token to access `https://api.partnercenter.microsoft.com`. This token is the same token that is used to access the rest of the Partner Center APIs.
 
 ### Get a list of events
 
