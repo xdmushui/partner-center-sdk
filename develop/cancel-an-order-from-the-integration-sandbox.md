@@ -21,7 +21,7 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 >Please be aware that the cancellations of reserved instance, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts.  
 
 To cancel production orders of software through API, use [cancel-software-purchases](cancel-software-purchases.md).
-You can also cancel production orders of software through dashboard using [cancel a purchase](https://docs.microsoft.com/partner-center/csp-software-subscriptions.md).
+You can also cancel production orders of software through dashboard using [cancel a purchase](https://docs.microsoft.com/partner-center/csp-software-subscriptions).
 
 ## Prerequisites
 
