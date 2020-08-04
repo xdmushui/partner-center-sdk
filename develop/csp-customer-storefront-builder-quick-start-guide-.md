@@ -170,7 +170,7 @@ To deploy an enhanced or customized CSP Customer Storefront:
 
 - Partners can at any time configure pre-approved transactions for (a) all current and future customers OR (b) specific customers.
 
-  - Pre-approved customers are not required to pay on the portal when they add new subscriptions, purchase additional seats to existing subscriptions, or renew a subscription.
+  - Pre-approved customers are not required to pay on the portal when they add new subscriptions, purchase additional licenses to existing subscriptions, or renew a subscription.
 
   - Pre-approved customers will not be redirected to PayPal or PayU (for India) for payment during these transactions.
 
@@ -219,11 +219,11 @@ To deploy an enhanced or customized CSP Customer Storefront:
 
 - Customers can navigate to the **My Subscriptions** page where they can view all subscriptions (license-based as well as usage-based), including those maintained in Partner Center.
 
-### Add seats to existing subscriptions scenario
+### Add licenses to existing subscriptions scenario
 
-- From the **My Orders** section, customers can add more seats to existing subscriptions. Customers can add more seats anytime during a subscription year.
+- From the **My Orders** section, customers can add more licenses to existing subscriptions. Customers can add more licenses anytime during a subscription year.
 
-- Each added seat does not change the end date of the subscription. However, the price of the subscription changes based on the date on which you add the seat, and where that date is in the year. Pricing is prorated on a daily basis to only charge for the remaining days of the year.
+- Each added license does not change the end date of the subscription. However, the price of the subscription changes based on the date on which you add the license, and where that date is in the year. Pricing is prorated on a daily basis to only charge for the remaining days of the year.
 
 ### Add more subscriptions scenario
 
@@ -245,7 +245,7 @@ To deploy an enhanced or customized CSP Customer Storefront:
 
 - If the customer is pre-approved for transactions by the admin, the payment experience is not presented for the above scenarios. Instead, the partner can send the invoice for payment to the pre-approved customer.
 
-- For all new purchases, you can add more seats, add subscriptions and renew. A customer can pay a partner using this website through PayPal or PayU (for India).
+- For all new purchases, you can add more licenses, add subscriptions and renew. A customer can pay a partner using this website through PayPal or PayU (for India).
 
 - This website is integrated with PayPal or PayU (for India) and allows partners to accept payments from their customers. PayPal or PayU (for India) credits this amount in a partner's account. PayPal or PayU (for India) Bank account management is outside of this website and is managed on PayPal.com or PayUmoney.com respectively.
 
@@ -253,8 +253,8 @@ To deploy an enhanced or customized CSP Customer Storefront:
 
 ### Prorated pricing scenario
 
-- This website supports prorated pricing in cases when customers add more seats to an existing subscription.
+- This website supports prorated pricing in cases when customers add more licenses to an existing subscription.
 
 - Each subscription expires after one year and cannot be changed after the subscription is purchased.
 
-- The end date of the subscription will not change by adding additional seats. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more seat on day two, the price for the new seat will be $364. If you add one more seat 10 days later, the price will be $354.
+- The end date of the subscription will not change by adding additional licenses. Customers will be charged for the remaining number of days until the end date. For example, if on day one the subscription cost is $365, and you add one more license on day two, the price for the new license will be $364. If you add one more license 10 days later, the price will be $354.
