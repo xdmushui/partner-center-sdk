@@ -31,7 +31,7 @@ This account is for testing your code and its integration with the Partner Cente
 
 The integration sandbox account and the primary account act independently, and do not share admin accounts, user accounts, customers, orders, subscriptions, or other data.
 
-The integration sandbox supports transactions with a limited number of customers, orders, subscriptions, seats, etc.
+The integration sandbox supports transactions with a limited number of customers, orders, subscriptions, licenses, etc.
 
 By policy, integration sandbox accounts are for integration testing purposes only.
 

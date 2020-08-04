@@ -316,6 +316,6 @@ Microsoft provides a list of **offers**. These are specific SKUs of products lik
 
 CSP partners are resellers who have customers and sell them Microsoft products from the current offer list. After the customers sign their agreement, the reseller places an **order** for one or more offers. Some offers include **add-ons** like more space or extra features, which are tracked together with the parent offer. The orders are processed, and then the customer is able to use their **subscriptions**. Microsoft bills the reseller or distributor each month based on the number of licenses and the usage for each customer.
 
-Subscriptions can be added, and the number of seats or add-ons can be increased or decreased. If a customer fails to pay, misuses the subscription, or engages in fraud, then Microsoft, the distributor, or the reseller are all able to suspend the subscription. It will be permanent if it's not reactivated within the limits of the CSP program.
+Subscriptions can be added, and the number of licenses or add-ons can be increased or decreased. If a customer fails to pay, misuses the subscription, or engages in fraud, then Microsoft, the distributor, or the reseller are all able to suspend the subscription. It will be permanent if it's not reactivated within the limits of the CSP program.
 
 You can check which subscriptions a customer is **entitled** to use (ie, which ones are currently paid for, not suspended, and not replaced by a newer order).
