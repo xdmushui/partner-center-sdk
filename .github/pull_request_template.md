@@ -23,7 +23,7 @@ Thank you for contributing to Partner Center SDK documentation.
    **C. Who is the primary contact that owns this document?**
    >
 
-3. Quality control** checks:
+3. **Quality control** checks:
 
 - [ ] A. **Acrolinx:** Make sure your Acrolinx score is **above 80 minimum**, but higher is better, and **0 spelling issues**. Acrolinx helps us in English, but also helps our system ensure translation to localized languages is possible.
 
