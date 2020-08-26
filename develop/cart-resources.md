@@ -69,7 +69,7 @@ Represents an error that occurs after a cart is created.
 
 | Property         | Type                                   | Description                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
-| errorCode        | [CartErrorCode](#carterrorcode) | The type of cart error.                                                                       |
+| errorCode        | [Partner Center error codes](error-codes.md) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
 
 ## CartCheckoutResult
