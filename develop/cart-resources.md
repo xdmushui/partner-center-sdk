@@ -1,6 +1,6 @@
 ---
 title: Cart resources
-description: A partner places an order when a customer wants to buy a subscription from a list of offers.
+description: A partner places an order in a cart when a customer wants to buy a subscription from a list of offers.
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
