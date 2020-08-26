@@ -1,7 +1,7 @@
 ---
 title: Partner Center REST error codes
 description: Description of error codes and success responses from the Partner Center APIs.
-ms.date: 06/25/2019
+ms.date: 08/26/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 # Acrolinx: The score of this doc is 70, since the error text is coming from outside source. We cannot change that text.
