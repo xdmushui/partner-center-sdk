@@ -56,7 +56,35 @@ To use the Retry-after delay, do the following:
 
 In the long run every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the few API’s listed below. Partner Center will be collecting the telemetry on each of the API’s and will dynamically adjust the throttling limits. The following table lists the API’s where throttling is currently enforced.  
 
-:::image type="content" source="images/apithrottles.png" alt-text="Throttled APIs":::
+
+|**Operation**|	**Partner Center documentation**|	 	
+|------------------------|----------------------------|
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions|get-all-of-a-customer-s-subscriptions| 	
+|https://api.partnercenter.microsoft.com/v1/productUpgrades/eligibility|get-eligibility-for-product-upgrade| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|get a subscription by id| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|get all customer orders| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}/provisioningstatus|get subscription provisioning status| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|manage orders and manage a subscription| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/addons|get a list of add ons for a subscription| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements|get a list of azure entitlements for subscription| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|create an order| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus|get subscription registration status| 	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|transition a subscription|			
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/transfers|get all customers transfers|	
+|https://api.partnercenter.microsoft.com/v1/productUpgrades/{upgrade-id}/status|get product upgrade status|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id|			
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/orders/{order-id}|purchase an addon to a subscription|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|create a cart|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}/checkout|checkout a cart|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|update a cart|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|register a subscription|	
+|https://api.partnercenter.microsoft.com/v1/productupgrades|create product upgrade entity|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
+get a list of trial conversion offers|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
+convert a trial subscription to paid|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}|get a customer by id|
 
 ### Error code response:
 
