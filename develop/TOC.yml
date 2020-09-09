@@ -19,6 +19,8 @@
       href: console-test-app.md
   - name: Set up API access in Partner Center
     href: set-up-api-access-in-partner-center.md
+  - name: API throttling guidance
+    href: api-throttling-guidance.md
   - name: Partner Center authentication
     href: partner-center-authentication.md
   - name: Enable secure application model
