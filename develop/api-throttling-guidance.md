@@ -32,9 +32,9 @@ The most common causes of throttling of clients include:
 
 ## Best practices to avoid throttling 
  
-Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time which will also cause requests to be throttled. You should instead leverage change tracking and change notifications. Additionally, you should be able to leverage activity logs for detecting changes, see [Partner Center activity logs](get-a-record-of-paratner-center-activity-by-user.md) for more information.  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
+Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time which will also cause requests to be throttled. You should instead leverage change tracking and change notifications. Additionally, you should be able to leverage activity logs for detecting changes, see [Partner Center activity logs](get-a-record-of-partner-center-activity-by-user.md) for more information.  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
 
-## Best practices to avoid throttling
+## Best practices to handle throttling
 
 The following are best practices for handling throttling: 
 
