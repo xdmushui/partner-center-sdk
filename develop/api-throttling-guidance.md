@@ -136,7 +136,7 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive 
 
 **Response**:    
-
+```http
 { 
 
     "totalCount": 17, 
@@ -384,7 +384,7 @@ Connection: Keep-Alive
     } 
 
 } 
-
+```
  
 
   
