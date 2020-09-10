@@ -118,7 +118,7 @@ List of operationtype/resources can be found in below API docs.
 ### Response example
 
 **Request**:  
-
+```http
 Http Get call:  https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=2020-09-02&endDate=2020-09-02&size=50 
 
 Authorization: Bearer <token> 
@@ -134,6 +134,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 
 Connection: Keep-Alive 
+```
 
 **Response**:    
 ```http
