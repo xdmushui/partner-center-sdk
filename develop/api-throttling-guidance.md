@@ -20,7 +20,7 @@ Throttling limits vary based on the scenario. For example, if you are performing
 
 ## What happens when throttling occurs? 
 
-When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time.. Throttling behavior can depend depends on the type and number of requests.   
+When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time.. Throttling behavior depends on the type and number of requests.   
 
 ### Common throttling scenarios 
 
