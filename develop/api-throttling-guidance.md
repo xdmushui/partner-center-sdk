@@ -70,7 +70,7 @@ In the long run every single Partner Center API that calls the endpoint “api.p
 |https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements|get a list of azure entitlements for subscription| 	
 |https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|create an order| 	
 |https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus|get subscription registration status| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|transition a subscription|			
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|transition a subscription|		
 |https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/transfers|get all customers transfers|	
 |https://api.partnercenter.microsoft.com/v1/productUpgrades/{upgrade-id}/status|get product upgrade status|	
 |https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id|			
@@ -80,10 +80,8 @@ In the long run every single Partner Center API that calls the endpoint “api.p
 |https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|update a cart|	
 |https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|register a subscription|	
 |https://api.partnercenter.microsoft.com/v1/productupgrades|create product upgrade entity|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
-get a list of trial conversion offers|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
-convert a trial subscription to paid|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|get a list of trial conversion offers|	
+|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|convert a trial subscription to paid|	
 |https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}|get a customer by id|
 
 ### Error code response:
@@ -118,7 +116,7 @@ List of operationtype/resources can be found in below API docs.
 ### Response example
 
 **Request**:  
-
+```http
 Http Get call:  https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=2020-09-02&endDate=2020-09-02&size=50 
 
 Authorization: Bearer <token> 
@@ -134,6 +132,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 
 Connection: Keep-Alive 
+```
 
 **Response**:    
 ```http
