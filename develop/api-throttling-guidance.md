@@ -20,7 +20,7 @@ Throttling limits vary based on the scenario. For example, if you are performing
 
 ## What happens when throttling occurs? 
 
-When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time.. Throttling behavior can depend depends on the type and number of requests.   
+When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time. Throttling behavior can depends on the type and number of requests.   
 
 ### Common throttling scenarios 
 
@@ -59,35 +59,21 @@ In the long run every single Partner Center API that calls the endpoint “api.p
 
 |**Operation**|	**Partner Center documentation**|	 	
 |------------------------|----------------------------|
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions|get-all-of-a-customer-s-subscriptions| 	
-|https://api.partnercenter.microsoft.com/v1/productUpgrades/eligibility|get-eligibility-for-product-upgrade| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|get a subscription by id| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|get all customer orders| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}/provisioningstatus|get subscription provisioning status| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|manage orders and manage a subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/addons|get a list of add ons for a subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements|get a list of azure entitlements for subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|create an order| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus|get subscription registration status| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|transition a subscription|			
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/transfers|get all customers transfers|	
-|https://api.partnercenter.microsoft.com/v1/productUpgrades/{upgrade-id}/status|get product upgrade status|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id|			
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/orders/{order-id}|purchase an addon to a subscription|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|create a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}/checkout|checkout a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|update a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|register a subscription|	
-|https://api.partnercenter.microsoft.com/v1/productupgrades|create product upgrade entity|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
-get a list of trial conversion offers|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|
-convert a trial subscription to paid|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}|get a customer by id|
+|{baseURL}/v1/customers/{customer_id}/orders|[create an order](https://docs.microsoft.com/partner-center/develop/create-an-order)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|[transition a subscription](https://docs.microsoft.com/partner-center/develop/transition-a-subscription)|
+|{baseURL}/v1/customers/{customer-tenant-id}/orders/{order-id}|[purchase an addon to a subscription](https://docs.microsoft.com/partner-center/develop/purchase-an-add-on-to-a-subscription)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[create a cart](https://docs.microsoft.com/partner-center/develop/create-a-cart)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}/checkout|[checkout a cart](https://docs.microsoft.com/partner-center/develop/checkout-a-cart)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[update a cart](https://docs.microsoft.com/partner-center/develop/update-a-cart)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](https://docs.microsoft.com/partner-center/develop/register-a-subscription)|
+|{baseURL}/v1/productupgrades|[create product upgrade entity](https://docs.microsoft.com/partner-center/develop/create-product-upgrade-entity)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](https://docs.microsoft.com/partner-center/develop/convert-a-trial-subscription-to-paid)|
+|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](https://docs.microsoft.com/partner-center/develop/get-a-customer-by-id)|
+|{baseURL}/v1/productUpgrades/eligibility|[get-eligibility-for-product-upgrade](https://docs.microsoft.com/partner-center/develop/get-eligibility-for-product-upgrade)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[Manage Subscription](https://docs.microsoft.com/partner-center/develop/manage-orders#manage-a-subscription)|
 
 ### Error code response:
-
+```http
 HTTP/1.1 429 Too Many Requests 
 
 Content-Length: 84 
@@ -99,7 +85,7 @@ Retry-After: 57
 Date: Tue, 21 Jul 2020 04:10:58 GMT 
 
 { "statusCode": 429, "message": "Rate limit is exceeded. Try again in 57 seconds." } 
-
+```
 
 ## Example of activity log
 
@@ -118,7 +104,7 @@ List of operationtype/resources can be found in below API docs.
 ### Response example
 
 **Request**:  
-
+```http
 Http Get call:  https://api.partnercenter.microsoft.com/v1/auditrecords?startDate=2020-09-02&endDate=2020-09-02&size=50 
 
 Authorization: Bearer <token> 
@@ -134,6 +120,7 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com 
 
 Connection: Keep-Alive 
+```
 
 **Response**:    
 ```http
