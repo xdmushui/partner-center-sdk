@@ -59,6 +59,7 @@ In the long run, every single Partner Center API that calls the endpoint “api.
 
 |**Operation**|	**Partner Center documentation**|	 	
 |------------------------|----------------------------|
+
 |{baseURL}/v1/customers/{customer_id}/orders|[create an order](https://docs.microsoft.com/partner-center/develop/create-an-order)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|[transition a subscription](https://docs.microsoft.com/partner-center/develop/transition-a-subscription)|
 |{baseURL}/v1/customers/{customer-tenant-id}/orders/{order-id}|[purchase an addon to a subscription](https://docs.microsoft.com/partner-center/develop/purchase-an-add-on-to-a-subscription)|
@@ -71,6 +72,7 @@ In the long run, every single Partner Center API that calls the endpoint “api.
 |{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](https://docs.microsoft.com/partner-center/develop/get-a-customer-by-id)|
 |{baseURL}/v1/productUpgrades/eligibility|[get-eligibility-for-product-upgrade](https://docs.microsoft.com/partner-center/develop/get-eligibility-for-product-upgrade)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[Manage Subscription](https://docs.microsoft.com/partner-center/develop/manage-orders#manage-a-subscription)|
+
 
 ### Error code response:
 ```http
