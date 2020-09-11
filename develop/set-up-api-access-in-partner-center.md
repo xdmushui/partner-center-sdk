@@ -47,7 +47,7 @@ This section describes how to set up a primary Partner account and an integratio
 
 2. From the **Settings** menu (gear icon), choose **Partner settings**.
 
-3. On the **Account settings** page, choose **Integration sandbox**.
+3. Choose **Integration sandbox** tab.
 
     >[!NOTE]
     >If you don't see an Integration sandbox option, you might not have a global admin account. You also might be using an integration sandbox account and an integration sandbox has already been set up.
