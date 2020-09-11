@@ -59,19 +59,18 @@ In the long run, every single Partner Center API that calls the endpoint “api.
 
 |**Operation**|	**Partner Center documentation**|	 	
 |------------------------|----------------------------|
-
-|{baseURL}/v1/customers/{customer_id}/orders|[create an order](https://docs.microsoft.com/partner-center/develop/create-an-order)|
-|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|[transition a subscription](https://docs.microsoft.com/partner-center/develop/transition-a-subscription)|
-|{baseURL}/v1/customers/{customer-tenant-id}/orders/{order-id}|[purchase an addon to a subscription](https://docs.microsoft.com/partner-center/develop/purchase-an-add-on-to-a-subscription)|
-|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[create a cart](https://docs.microsoft.com/partner-center/develop/create-a-cart)|
-|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}/checkout|[checkout a cart](https://docs.microsoft.com/partner-center/develop/checkout-a-cart)|
-|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[update a cart](https://docs.microsoft.com/partner-center/develop/update-a-cart)|
-|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](https://docs.microsoft.com/partner-center/develop/register-a-subscription)|
-|{baseURL}/v1/productupgrades|[create product upgrade entity](https://docs.microsoft.com/partner-center/develop/create-product-upgrade-entity)|
-|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](https://docs.microsoft.com/partner-center/develop/convert-a-trial-subscription-to-paid)|
-|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](https://docs.microsoft.com/partner-center/develop/get-a-customer-by-id)|
-|{baseURL}/v1/productUpgrades/eligibility|[get-eligibility-for-product-upgrade](https://docs.microsoft.com/partner-center/develop/get-eligibility-for-product-upgrade)|
-|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[Manage Subscription](https://docs.microsoft.com/partner-center/develop/manage-orders#manage-a-subscription)|
+|{baseURL}/v1/customers/{customer_id}/orders|[create an order](create-an-order.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|[transition a subscription](transition-a-subscription.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/orders/{order-id}|[purchase an addon to a subscription](purchase-an-add-on-to-a-subscription.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[create a cart](create-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}/checkout|[checkout a cart](checkout-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[update a cart](update-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](register-a-subscription.md)|
+|{baseURL}/v1/productupgrades|[create product upgrade entity](create-product-upgrade-entity.md)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](get-a-customer-by-id.md)|
+|{baseURL}/v1/productUpgrades/eligibility|[get eligibility for product upgrade](get-eligibility-for-product-upgrade.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[manage subscription](manage-orders.md#manage-a-subscription)|
 
 
 ### Error code response:
