@@ -14,13 +14,13 @@ ms.author: vijvala
 
 - Partner Center
 
-Microsoft is implementing API throttling to allow more consistent performance within a time span for partners calling the Partner Center API’s. Throttling limits the number of requests to a service in a time span to prevent overuse of resources. While Partner Center is designed to handle a high volume of requests, if an overwhelming number of requests occur by few partners, throttling helps maintain optimal performance and reliability for all partners.  
+Microsoft is implementing API throttling to allow more consistent performance within a time span for partners calling the Partner Center APIs. Throttling limits the number of requests to a service in a time span to prevent overuse of resources. While Partner Center is designed to handle a high volume of requests, if an overwhelming number of requests occur by few partners, throttling helps maintain optimal performance and reliability for all partners.  
 
 Throttling limits vary based on the scenario. For example, if you are performing a large volume of writes, the possibility for throttling is higher than if you are only performing reads.
 
 ## What happens when throttling occurs? 
 
-When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time.. Throttling behavior depends on the type and number of requests.   
+When a throttling threshold is exceeded, Partner Center limits any further requests from that client for a period of time. Throttling behavior depends on the type and number of requests.   
 
 ### Common throttling scenarios 
 
@@ -32,7 +32,7 @@ The most common causes of throttling of clients include:
 
 ## Best practices to avoid throttling 
  
-Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time which will also cause requests to be throttled. You should instead leverage change tracking and change notifications. Additionally, you should be able to leverage activity logs for detecting changes, see [Partner Center activity logs](get-a-record-of-partner-center-activity-by-user.md) for more information.  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
+Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time, which will also cause requests to be throttled. You should instead leverage change tracking and change notifications. Additionally, you should be able to leverage activity logs for detecting changes, see [Partner Center activity logs](get-a-record-of-partner-center-activity-by-user.md) for more information.  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
 
 ## Best practices to handle throttling
 
@@ -52,40 +52,29 @@ To use the Retry-after delay, do the following:
 
 3. If the request fails again with a 429 error code, you are still being throttled. Retry with Exponential backoff, use the recommended Retry-After delay and retry the request until it succeeds.
 
-## API’s currently impacted by throttling
+## APIs currently impacted by throttling
 
-In the long run every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the few API’s listed below. Partner Center will be collecting the telemetry on each of the API’s and will dynamically adjust the throttling limits. The following table lists the API’s where throttling is currently enforced.  
+In the long run, every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the few APIs listed below. Partner Center will be collecting the telemetry on each of the APIs and will dynamically adjust the throttling limits. The following table lists the APIs where throttling is currently enforced.  
 
 
 |**Operation**|	**Partner Center documentation**|	 	
 |------------------------|----------------------------|
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions|get-all-of-a-customer-s-subscriptions| 	
-|https://api.partnercenter.microsoft.com/v1/productUpgrades/eligibility|get-eligibility-for-product-upgrade| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|get a subscription by id| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|get all customer orders| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}/provisioningstatus|get subscription provisioning status| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}|manage orders and manage a subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/addons|get a list of add ons for a subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/azureEntitlements|get a list of azure entitlements for subscription| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders|create an order| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/subscriptions/{subscription_id}/registrationstatus|get subscription registration status| 	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|transition a subscription|		
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/transfers|get all customers transfers|	
-|https://api.partnercenter.microsoft.com/v1/productUpgrades/{upgrade-id}/status|get product upgrade status|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer_id}/orders/{order_id}|get an order by id|			
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/orders/{order-id}|purchase an addon to a subscription|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|create a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}/checkout|checkout a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/carts/{cart-id}|update a cart|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|register a subscription|	
-|https://api.partnercenter.microsoft.com/v1/productupgrades|create product upgrade entity|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|get a list of trial conversion offers|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions|convert a trial subscription to paid|	
-|https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}|get a customer by id|
+|{baseURL}/v1/customers/{customer_id}/orders|[create an order](create-an-order.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades|[transition a subscription](transition-a-subscription.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/orders/{order-id}|[purchase an addon to a subscription](purchase-an-add-on-to-a-subscription.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[create a cart](create-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}/checkout|[checkout a cart](checkout-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/carts/{cart-id}|[update a cart](update-a-cart.md)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](register-a-subscription.md)|
+|{baseURL}/v1/productupgrades|[create product upgrade entity](create-product-upgrade-entity.md)|
+|{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](get-a-customer-by-id.md)|
+|{baseURL}/v1/productUpgrades/eligibility|[get eligibility for product upgrade](get-eligibility-for-product-upgrade.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[manage subscription](manage-orders.md#manage-a-subscription)|
+
 
 ### Error code response:
-
+```http
 HTTP/1.1 429 Too Many Requests 
 
 Content-Length: 84 
@@ -97,7 +86,7 @@ Retry-After: 57
 Date: Tue, 21 Jul 2020 04:10:58 GMT 
 
 { "statusCode": 429, "message": "Rate limit is exceeded. Try again in 57 seconds." } 
-
+```
 
 ## Example of activity log
 
