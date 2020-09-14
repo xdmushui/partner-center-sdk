@@ -411,16 +411,12 @@
   - name: Provide support
     href: provide-support.md
     items:
-    - name: Create a service request
-      href: create-a-service-request-.md
     - name: "Get a subscription's support contact"
       href: get-a-subscription-s-support-contact.md
     - name: Get all service requests for a customer
       href: get-all-service-requests-for-a-customer.md
     - name: Get service request details by ID
       href: get-service-request-details-by-id.md
-    - name: Get service request support topics
-      href: get-service-request-support-topics--pending-.md
     - name: Get the managed services for a customer by ID
       href: get-the-managed-services-for-a-customer-by-id.md
     - name: Update a service request
