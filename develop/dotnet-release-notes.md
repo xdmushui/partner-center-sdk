@@ -1,7 +1,7 @@
 ---
 title: Partner Center .NET SDK release notes
 description: Release notes for the latest version of the Partner Center .NET SDK.
-ms.date: 07/21/2020
+ms.date: 09/18/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
