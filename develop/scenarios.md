@@ -270,8 +270,6 @@ All of the following scenarios can be completed three different ways:
 </ul>
 <p>Manage service requests</p>
 <ul>
-<li><p><a href="create-a-service-request-.md">Create a service request</a></p></li>
-<li><p><a href="get-service-request-support-topics--pending-.md">Get service request support topics</a></p></li>
 <li><p><a href="get-all-service-requests-for-a-customer.md">Get all service requests for a customer</a></p></li>
 <li><p><a href="get-service-request-details-by-id.md">Get service request details by ID</a></p></li>
 <li><p><a href="update-a-service-request.md">Update a service request</a></p></li>
