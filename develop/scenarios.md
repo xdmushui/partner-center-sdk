@@ -310,7 +310,7 @@ Sometimes, Microsoft works directly with resellers who sell to customers. Altern
 
 ### What's getting sold?
 
-Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+Microsoft provides a list of **offers**. These are specific SKUs of products like Office 365 or Intune. Offers are either **license-based** (the cost depends on the number of machines they get installed on) or **usage-based** (the cost depends on the amount of memory and computation used). For more information, see [Partner offers in the Cloud Solution Provider program/partner-center/csp-offers).
 
 CSP partners are resellers who have customers and sell them Microsoft products from the current offer list. After the customers sign their agreement, the reseller places an **order** for one or more offers. Some offers include **add-ons** like more space or extra features, which are tracked together with the parent offer. The orders are processed, and then the customer is able to use their **subscriptions**. Microsoft bills the reseller or distributor each month based on the number of licenses and the usage for each customer.
 

@@ -19,7 +19,7 @@ Partner Center uses Azure Active Directory for authentication. When interacting 
 
 - Use multi-factor authentication when accessing the Partner Center API using app + user authentication. For more information regarding this change, see [Enable secure application model](enable-secure-app-model.md).
 
-- Not all of the operations the Partner Center API support app only authentication. There are certain scenarios where you'll be required to use app + user authentication. Under the *Prerequisites* heading on each [Scenario](https://docs.microsoft.com/partner-center/develop/scenarios) article, you'll find documentation that states whether app only authentication, app + user authentication, or both are supported.
+- Not all of the operations the Partner Center API support app only authentication. There are certain scenarios where you'll be required to use app + user authentication. Under the *Prerequisites* heading on each [Scenario/partner-center/develop/scenarios) article, you'll find documentation that states whether app only authentication, app + user authentication, or both are supported.
 
 ## Initial setup
 
@@ -125,7 +125,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     New-AzureRmKeyVault -Name 'Contoso-Vault' -ResourceGroupName 'ContosoResourceGroup' -Location 'East US'
     ```
 
-    For more information about creating an Azure Key Vault, see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal](https://docs.microsoft.com/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell](https://docs.microsoft.com/azure/key-vault/quick-create-powershell). Then set and retrieve a secret.
+    For more information about creating an Azure Key Vault, see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell/azure/key-vault/quick-create-powershell). Then set and retrieve a secret.
 
 2. Create an Azure AD Application and a key using the Azure portal or the following commands.
 
@@ -195,7 +195,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
     ```
 
     > [!IMPORTANT]
-    > Sensitive information such as application secrets should not be stored in configuration files. It was done here because this is a sample application. With your production application we strongly recommend that you use certificate-based authentication. For more information, see [Certificate credentials for application authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials).
+    > Sensitive information such as application secrets should not be stored in configuration files. It was done here because this is a sample application. With your production application we strongly recommend that you use certificate-based authentication. For more information, see [Certificate credentials for application authentication/azure/active-directory/develop/active-directory-certificate-credentials).
 
 8. When you run this sample project, it will prompt you for authentication. After successfully authenticating, an access token is requested from Azure AD. The information returned from Azure AD includes a refresh token that is stored in the configured instance of Azure Key Vault.
 
@@ -214,7 +214,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
     New-AzureRmKeyVault -Name 'Contoso-Vault' -ResourceGroupName 'ContosoResourceGroup' -Location 'East US'
     ```
 
-    For more information about creating an Azure Key Vault, see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal](https://docs.microsoft.com/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell](https://docs.microsoft.com/azure/key-vault/quick-create-powershell).
+    For more information about creating an Azure Key Vault, see [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal/azure/key-vault/quick-create-portal) or [Quickstart: Set and retrieve a secret from Azure Key Vault using PowerShell/azure/key-vault/quick-create-powershell).
 
 2. Create an Azure AD Application and a key using the Azure portal or the following commands.
 

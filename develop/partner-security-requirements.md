@@ -16,7 +16,7 @@ This article describes lists the REST APIs related to multi-factor authenticatio
 
 ## Partner security requirements overview
 
-- [Overview](https://docs.microsoft.com/partner-center/partner-security-requirements)
+- [Overview/partner-center/partner-security-requirements)
 
 ## Understand MFA adoption status
 

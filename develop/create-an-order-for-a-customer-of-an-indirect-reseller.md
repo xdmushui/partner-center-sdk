@@ -30,15 +30,15 @@ To create an order for a customer of an indirect reseller:
 
 1. Get a collection of the indirect resellers that have a relationship with the signed-in partner.
 
-2. Get a local variable to the item in the collection that matches the indirect reseller ID. This step helps you access the reseller's [**MpnId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
+2. Get a local variable to the item in the collection that matches the indirect reseller ID. This step helps you access the reseller's [**MpnId**](/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
 
-3. Instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer.
+3. Instantiate an [**Order**](/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer.
 
-4. Create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller. You must have at least one order line item.
+4. Create a list of [**OrderLineItem**](/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller. You must have at least one order line item.
 
-5. Obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+5. Obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
-6. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
+6. Call the [**Create**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
 ### C\# example
 
@@ -108,7 +108,7 @@ This table describes the **Order** properties in the request body.
 | ---- | ---- | -------- | ----------- |
 | id | string | No | An order identifier that is supplied upon successful creation of the order. |
 | referenceCustomerId | string | Yes | The customer identifier. |
-| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature isn't yet generally available. Support for annual billing is coming soon. |
+| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature isn't yet generally available. Support for annual billing is coming soon. |
 | lineItems | array of objects | Yes | An array of [**OrderLineItem**](#orderlineitem) resources. |
 | creationDate | string | No | The date the order was created, in date-time format. Applied upon successful creation of the order. |
 | attributes | object | No | Contains "ObjectType": "Order". |

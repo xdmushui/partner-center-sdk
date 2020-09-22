@@ -17,7 +17,7 @@ ms.author: rbars
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-You can add an order for a customer in a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+You can add an order for a customer in a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
 ## Prerequisites
 

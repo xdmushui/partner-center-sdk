@@ -21,7 +21,7 @@ How to cancel reserved instance, software, and commercial marketplace Software a
 >Please be aware that the cancellations of reserved instance, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts.  
 
 To cancel production orders of software through API, use [cancel-software-purchases](cancel-software-purchases.md).
-You can also cancel production orders of software through dashboard using [cancel a purchase](https://docs.microsoft.com/partner-center/csp-software-subscriptions).
+You can also cancel production orders of software through dashboard using [cancel a purchase](/partner-center/csp-software-subscriptions).
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ You can also cancel production orders of software through dashboard using [cance
 
 ## C\#
 
-To cancel an order from the integration sandbox, pass your account credentials to the [**`CreatePartnerOperations`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**`IPartner`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
+To cancel an order from the integration sandbox, pass your account credentials to the [**`CreatePartnerOperations`**](/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**`IPartner`**](/dotnet/api/microsoft.store.partnercenter.ipartner) interface to get partner operations.
 
-To select a particular [Order](order-resources.md#order), use the partner operations and call [**`Customers.ById()`**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **`Orders.ById()`** with order identifier to specify the order and finally **`Get`** or **`GetAsync`** method to retrieve it.
+To select a particular [Order](order-resources.md#order), use the partner operations and call [**`Customers.ById()`**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer, followed by **`Orders.ById()`** with order identifier to specify the order and finally **`Get`** or **`GetAsync`** method to retrieve it.
 
 Set the [**`Order.Status`**](order-resources.md#order) property to `cancelled` and use the **`Patch()`** method to update the order.
 

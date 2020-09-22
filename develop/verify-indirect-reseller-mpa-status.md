@@ -27,7 +27,7 @@ To get the Microsoft Partner Agreement signature status of an indirect reseller:
 
 1. Use your **IAggregatePartner.Compliance** collection to call the **AgreementSignatureStatus** property.
 
-2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
+2. Call the [**Get()**/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -60,7 +60,7 @@ You must provide one of the following two query parameters to identify the partn
 
 ### Request headers
 
-For more information, see [Partner Center REST headers](https://docs.microsoft.com/partner-center/develop/headers).
+For more information, see [Partner Center REST headers/partner-center/develop/headers).
 
 ### Request examples
 
@@ -96,7 +96,7 @@ Host: api.partnercenter.microsoft.com
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/partner-center/develop/error-codes).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes/partner-center/develop/error-codes).
 
 ### Response example (success)
 
@@ -235,7 +235,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/partner-center/regional-authorization-overview) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more/partner-center/regional-authorization-overview) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
