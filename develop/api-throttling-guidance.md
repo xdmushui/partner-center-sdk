@@ -96,9 +96,9 @@ In the response, you will get a result with changes to specific operation type.â
 
 List of operationtype/resources can be found in below API docs.  
 
-- [Auditing resources](https://docs.microsoft.com/partner-center/develop/auditing-resources)  
+- [Auditing resources](/partner-center/develop/auditing-resources)  
 
-- [Get a record of a Partner Center activity by user](https://docs.microsoft.com/partner-center/develop/get-a-record-of-partner-center-activity-by-user)  
+- [Get a record of a Partner Center activity by user](/partner-center/develop/get-a-record-of-partner-center-activity-by-user)  
 
 
 

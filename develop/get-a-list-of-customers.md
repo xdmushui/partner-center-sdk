@@ -30,9 +30,9 @@ This article describes how to get a collection of resources that represents all 
 
 To get a list of all customers:
 
-1. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
+1. Use the [**IAggregatePartner.Customers**/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
 
-2. Retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
+2. Retrieve the customer list using the [**Query()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
 
 ``` csharp
 // IAggregatePartner partnerOperations;

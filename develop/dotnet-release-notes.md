@@ -8,7 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # .NET SDK release notes
 
-The following release notes are available for new versions of [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter). You can find [.NET SDK samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) on GitHub. You can find the [Partner Center .NET API reference](https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest&preserve-view=true) in the .NET API Browser.
+The following release notes are available for new versions of [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter). You can find [.NET SDK samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) on GitHub. You can find the [Partner Center .NET API reference](/dotnet/api/?view=partnercenter-dotnet-latest&preserve-view=true) in the .NET API Browser.
 
 ## Version 1.16.2
 

@@ -129,7 +129,7 @@ Represents the details of an inventory restriction. This is only applicable for 
 
 ## BillingCycleType
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of billing cycle.
+An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cycle.
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|

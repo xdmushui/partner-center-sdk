@@ -29,10 +29,10 @@ Gets a collection of Order resources that correspond to a given customer and bil
 
 To get a collection of a customer's orders:
 
-1. Use your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID.
+1. Use your [**IAggregatePartner.Customers**/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the selected customer ID.
 
-2. Call the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the **ByBillingCycleType()** method with your specified  [**BillingCycleType**](product-resources.md#billingcycletype).
-3. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) method.
+2. Call the [**Orders**/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property and the **ByBillingCycleType()** method with your specified  [**BillingCycleType**](product-resources.md#billingcycletype).
+3. Call the [**Get()**/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;

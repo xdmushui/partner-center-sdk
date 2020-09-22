@@ -34,7 +34,7 @@ Partners can select from Webhook events, like the following examples, that are s
 
 - **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
-    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://docs.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
+    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 - **Referral Created Event ("referral-created")**
 

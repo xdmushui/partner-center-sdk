@@ -26,7 +26,7 @@ A partner can update a customer's qualification to be "Education" or "Government
 
 ## C\#
 
-To update a customer's qualification to "Education", call **[Update](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
+To update a customer's qualification to "Education", call **[Update/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**/dotnet/api/microsoft.store.partnercenter.models.customers.customer?view=partnercenter-dotnet-latest).
 
 ``` csharp
 // CustomerQualification is an enum
@@ -68,7 +68,7 @@ For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-The integer value from the [**CustomerQualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
+The integer value from the [**CustomerQualification**/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
 
 ### Request example
 
@@ -83,7 +83,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## REST response
 
-If successful, this method returns updated [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
+If successful, this method returns updated [**Qualification**/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
 
 ### Response success and error codes
 

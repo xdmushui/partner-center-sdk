@@ -73,7 +73,7 @@ Represents an error that occurs when a transfer is accepted.
 
 ## TransferErrorCode
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of order error.
+An [Enum/dotnet/api/system.enum) with values that indicate a type of order error.
 
 | Value | Position | Description |
 | --- | --- | --- |

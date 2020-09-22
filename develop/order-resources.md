@@ -88,7 +88,7 @@ Represents the full subscription associated with the order.
 
 ## OrderStatus
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the state of the order.
+An [Enum/dotnet/api/system.enum) with values that indicate the state of the order.
 
 | Value              | Position     | Description                                     |
 |--------------------|--------------|-------------------------------------------------|
