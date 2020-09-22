@@ -96,9 +96,9 @@ In the response, you will get a result with changes to specific operation type.â
 
 List of operationtype/resources can be found in below API docs.  
 
-- [Auditing resources](/partner-center/develop/auditing-resources)  
+- [Auditing resources](auditing-resources.md)  
 
-- [Get a record of a Partner Center activity by user](/partner-center/develop/get-a-record-of-partner-center-activity-by-user)  
+- [Get a record of a Partner Center activity by user](get-a-record-of-partner-center-activity-by-user.md)  
 
 
 
@@ -375,4 +375,3 @@ Connection: Keep-Alive
 ```
  
 
-  

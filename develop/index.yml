@@ -45,7 +45,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Managed .NET API reference
-            url: https://docs.microsoft.com/dotnet/api/
+            url: /dotnet/api/
           - text: Release notes for .NET SDK versions
             url: dotnet-release-notes.md
 
@@ -54,7 +54,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Partner Center REST API reference
-            url: https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference
+            url: partner-center-rest-api-reference.md
 
   - title: Use the Java SDK (open source)
     linkLists:
@@ -67,7 +67,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Java API reference
-            url: https://docs.microsoft.com/java/partnercenter/overview
+            url: /java/partnercenter/overview
 
   - title: Use the PowerShell module (open source)
     linkLists:
@@ -80,7 +80,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: PowerShell commands
-            url: https://docs.microsoft.com/powershell/partnercenter
+            url: /powershell/partnercenter
 
   - title: Use the Swagger API for CSP partners
     linkLists:
