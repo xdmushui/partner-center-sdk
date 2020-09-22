@@ -45,7 +45,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Managed .NET API reference
-            url: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
+            url: https://docs.microsoft.com/dotnet/api/
           - text: Release notes for .NET SDK versions
             url: dotnet-release-notes.md
 

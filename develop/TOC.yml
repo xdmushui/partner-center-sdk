@@ -535,7 +535,7 @@
   - name: Partner Center webhooks
     href: partner-center-webhooks.md
 - name: Partner Center Managed .NET API reference
-  href: https://docs.microsoft.com/dotnet/api/?view=partnercenter-dotnet-latest
+  href: https://docs.microsoft.com/dotnet/api/
   items:
   - name: Partner Center .NET API version release notes
     href: dotnet-release-notes.md
