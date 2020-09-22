@@ -131,7 +131,7 @@ The following table describes the required key-value pairs:
 <p>Example: &quot;Value&quot;:&quot;bri&quot;</p></li>
 <li><p>customerId - Replace with a GUID formatted string that represents the customer identifier.</p>
 <p>Example: &quot;Value&quot;:&quot;0c39d6d5-c70d-4c55-bc02-f620844f3fd1&quot;</p></li>
-<li><p>resourceType - Replace with the type of resource for which to retrieve audit records (for example, Subscription). The available resource types are defined in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype"><strong>ResourceType</strong></a>.</p>
+<li><p>resourceType - Replace with the type of resource for which to retrieve audit records (for example, Subscription). The available resource types are defined in <a href="/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype"><strong>ResourceType</strong></a>.</p>
 <p>Example: &quot;Value&quot;:&quot;Subscription&quot;</p></li>
 </ul></td>
 </tr>

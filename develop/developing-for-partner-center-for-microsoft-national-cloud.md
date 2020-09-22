@@ -53,11 +53,11 @@ The differences for partners between *Partner Center* and *Partner Center for Mi
   - Partners must manually create or update their customers' users in the Office 365 admin center or through the Azure portal. See [Azure Active Directory Documentation](/azure/active-directory/).
 
 - You can't manage the licenses for your customer's users using the Partner Center for Microsoft Cloud Germany portal or APIs. Instead, you must use the Office 365 admin center or Azure Active Directly Group license management (coming soon) to manage their licenses.
-  - (Optional) you can use Azure AD Graph API. See [Add or Remove Licenses from a user](https://msdn.microsoft.com/library/azure/ad/graph/api/functions-and-actions#assignLicense). For Partner Center for Microsoft Cloud Germany, be sure to use the Graph endpoint `https://graph.cloudapi.de` instead of `https://graph.windows.net`.
+  - (Optional) you can use Azure AD Graph API. See [Assign Licenses to a user](/graph/api/user-assignlicense). For Partner Center for Microsoft Cloud Germany, be sure to use the Graph endpoint `https://graph.cloudapi.de` instead of `https://graph.windows.net`.
 
-- You can't programmatically reset a password for a customer user or full partner user. Use the Office 365 admin center or Azure portal. See [Reset the password for a user in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-users-reset-password-azure-portal/). For step 1, you must sign in to the Azure portal for Microsoft Cloud Germany.
+- You can't programmatically reset a password for a customer user or full partner user. Use the Office 365 admin center or Azure portal. See [Reset the password for a user in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-reset-password-azure-portal). For step 1, you must sign in to the Azure portal for Microsoft Cloud Germany.
 
-- Developers must register their app ID manually to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud Germany. For more information, see [Register app details for Partner Center for Microsoft National Cloud](/partner-center/develop/create-apps-for-partner-center-for-microsoft-national-clouds).
+- Developers must register their app ID manually to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud Germany. For more information, see [Register app details for Partner Center for Microsoft National Cloud](create-apps-for-partner-center-for-microsoft-national-clouds.md).
 
 ## Partner Center for Microsoft Cloud for US Government
 
@@ -77,4 +77,4 @@ The differences for partners between *Partner Center* and *Partner Center for Mi
 
 - REST endpoints for Partner Center for Microsoft Cloud for US Government are the same as for Partner Center: `https://api.partnercenter.microsoft.com`.
 
-- Developers must register their app ID manually to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud for US Government. For more information, see [Register app details for Partner Center for Microsoft National Cloud](/partner-center/develop/create-apps-for-partner-center-for-microsoft-national-clouds).
+- Developers must register their app ID manually to integrate Partner Center API/SDK functionality in their app for Partner Center for Microsoft Cloud for US Government. For more information, see [Register app details for Partner Center for Microsoft National Cloud](create-apps-for-partner-center-for-microsoft-national-clouds.md).

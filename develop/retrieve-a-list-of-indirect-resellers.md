@@ -62,7 +62,7 @@ Use the following query parameter to identify the relationship type.
 <td>relationship_type</td>
 <td>string</td>
 <td>Yes</td>
-<td>The value is the string representation of one of the member names found in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype"><strong>PartnerRelationshipType</strong></a>.
+<td>The value is the string representation of one of the member names found in <a href="/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype"><strong>PartnerRelationshipType</strong></a>.
 <p>If the partner is signed in as a provider and you want to get a list of the indirect resellers with whom they have established a relationship, use IsIndirectCloudSolutionProviderOf.</p>
 <p>If the partner is signed in as a reseller and you want to get a list of the indirect providers with whom they have established a relationship, use IsIndirectResellerOf.</p></td>
 </tr>

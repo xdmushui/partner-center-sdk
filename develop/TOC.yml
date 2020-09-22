@@ -424,16 +424,16 @@
     - name: "Update a subscription's support contact"
       href: update-a-subscription-s-support-contact.md
   - name: Referrals
-    href: https://docs.microsoft.com/partner/develop/referrals
+    href: /partner/develop/referrals
     items:
     - name: Create a referral
-      href: https://docs.microsoft.com/partner/develop/create-a-referral
+      href: /partner/develop/create-a-referral
     - name: Get a list of referrals
-      href: https://docs.microsoft.com/partner/develop/get-a-list-of-referrals
+      href: /partner/develop/get-a-list-of-referrals
     - name: Get a referral by ID
-      href: https://docs.microsoft.com/partner/develop/get-a-referral-by-id
+      href: /partner/develop/get-a-referral-by-id
     - name: Update a referral
-      href: https://docs.microsoft.com/partner/develop/update-a-referral
+      href: /partner/develop/update-a-referral
   - name: Utilities
     href: utilities.md
     items:
@@ -535,11 +535,11 @@
   - name: Partner Center webhooks
     href: partner-center-webhooks.md
 - name: Partner Center Managed .NET API reference
-  href: https://docs.microsoft.com/dotnet/api/
+  href: /dotnet/api/
   items:
   - name: Partner Center .NET API version release notes
     href: dotnet-release-notes.md
 - name: Partner Center Java API reference
-  href: https://docs.microsoft.com/java/partnercenter
+  href: /java/partnercenter
 - name: Partner Center PowerShell commands
-  href: https://docs.microsoft.com/powershell/partnercenter
+  href: /powershell/partnercenter
