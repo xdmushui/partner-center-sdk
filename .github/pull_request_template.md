@@ -2,13 +2,13 @@ Thank you for contributing to Partner Center SDK documentation.
 
 # Pull Request information:
 
-## For public repo contributors, 
+## For public contributors: 
 
 1. Use this repo for your changes https://github.com/MicrosoftDocs/partner-center-sdk/
 
 2. We will review your Pull Request as soon as we can. 
 
-## For Microsoft contributors,
+## For Microsoft contributors:
 
 1. Use the private repo at https://github.com/MicrosoftDocs/partner-center-sdk-pr/
 
@@ -37,6 +37,5 @@ Thank you for contributing to Partner Center SDK documentation.
 - We'll use review in the GitHub site to provide feedback if changes are needed. Once all feedback is addressed, we'll merge the pull request into master branch. The live site publishes twice a day, morning and afternoon.
 
 ## For additional assistance:
-- Email: `Jason Howell`
-- Mention:`@JasonWHowell`
+- Email `PartnerDocs` or mention`@PartnerDocs`
 =================
