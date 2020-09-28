@@ -27,7 +27,7 @@ This account is where you create real orders for real customers. If you make any
 
 ### Integration sandbox account
 
-This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will not appear in your invoice.
+This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will appear in your invoice, however, you do not have to pay the invoice amount. Invoice pdf will have a disclaimer as "DO NOT PAY. THIS IS A SANDBOX INVOICE AND NO ACTION IS REQUIRED."
 
 The integration sandbox account and the primary account act independently, and do not share admin accounts, user accounts, customers, orders, subscriptions, or other data.
 
