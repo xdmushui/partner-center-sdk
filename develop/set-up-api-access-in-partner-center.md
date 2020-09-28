@@ -17,6 +17,9 @@ ms.subservice:  partnercenter-sdk
 
 This article describes the accounts you need to develop against the Partner Center SDK. This article also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
 
+>[!NOTE]
+>To get access to APIs, your tenant must be a CSP tenant and you must be either an indirect provider or a Direct bill partner.
+
 ## Account definitions
 
 To help you integrate and test your API integration, Partner Center supports two kinds of accounts:
