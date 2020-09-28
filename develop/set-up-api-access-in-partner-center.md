@@ -17,6 +17,9 @@ ms.subservice:  partnercenter-sdk
 
 This article describes the accounts you need to develop against the Partner Center SDK. This article also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
 
+>[!NOTE]
+>To get access to APIs, your tenant must be a CSP tenant and you must be either an indirect provider or a Direct bill partner.
+
 ## Account definitions
 
 To help you integrate and test your API integration, Partner Center supports two kinds of accounts:
@@ -27,7 +30,7 @@ This account is where you create real orders for real customers. If you make any
 
 ### Integration sandbox account
 
-This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will not appear in your invoice.
+This account is for testing your code and its integration with the Partner Center APIs before you deploy it broadly. Changes and transactions you make when you are signed into the integration sandbox account will appear in your invoice, however, you do not have to pay the invoice amount. Invoice pdf will have a disclaimer as "DO NOT PAY. THIS IS A SANDBOX INVOICE AND NO ACTION IS REQUIRED."
 
 The integration sandbox account and the primary account act independently, and do not share admin accounts, user accounts, customers, orders, subscriptions, or other data.
 
