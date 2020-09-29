@@ -15,7 +15,7 @@ ms.subservice:  partnercenter-sdk
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This article explains how to delete a customer account from the Testing in Production (Tip) integration sandbox.
+This article explains, how to break the relationship between the partner and the customer account and regain the quota for Testing in Production (Tip) integration sandbox.
 
 > [!IMPORTANT]
 > When you delete a customer account, all resources associated with that customer tenant will be purged.
