@@ -33,6 +33,12 @@ How to get all the Azure usage analytics information for your customers.
 
 ### URI parameters
 
+|Parameter  |Type    |Description  |
+|:-----------|:--------|:------|
+|top        |string  |The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data. |
+|skip       |int     |The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.  |
+|filter     |string   |The *filter* parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the <code>eq</code> or <code>ne</code> operators, and statements can be combined using <code>and</code> or <code>or</code>. You can specify the following s:<br/><br/>- <code>customerTenantId</code><br/>- <code>customerName</code><br/>- <code>subscriptionId</code><br/>- <code>subscriptionName</code><br/>- <code>usageDate</code><br/>- <code>resourceLocation</code><br/>- <code>meterCategory</code><br/>- <code>meterSubcategory</code><br/>- <code>meterUnit</code><br/>- <code>reservationOrderId</code><br/>- <code>reservationId</code><br/>- <code>consumptionMeterId</code><br/>- <code>serviceType</code><br/><br/>**Example:**<br/><code>.../usage/azure?filter=meterCategory eq &#39;Data Management&#39;</code><br/><br/>**Example:**<br/><code>.../usage/azure?filter=meterCategory eq &#39;Data Management&#39; or (usageDate le cast(&#39;2018-01-01&#39;, Edm.DateTimeOffset) and usageDate le cast(&#39;2018-04-01&#39;, Edm.DateTimeOffset))</code>  |
+
 <table>
   <thead>
       <th>
@@ -54,7 +60,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>string</p>
       </td>
       <td>
-        <p>The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data.</p>
+        <p></p>
       </td>
     </tr>
     <tr>
@@ -65,7 +71,7 @@ How to get all the Azure usage analytics information for your customers.
         <p>int</p>
       </td>
       <td>
-        <p>The number of rows to skip in the query. Use this parameter to page through large data sets. For example, <code>top=10000 and skip=0</code> retrieves the first 10000 rows of data, <code>top=10000 and skip=10000</code> retrieves the next 10000 rows of data, and so on.</p>
+        <p></p>
       </td>
     </tr>
     <tr>
