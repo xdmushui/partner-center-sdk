@@ -107,11 +107,11 @@ An unencoded example looks like this:
 
 The following table describes the required key-value pairs:
 
-| Key                 | Value |
-|:--------------------|:------|
-| Field | The field to filter. The supported values can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).                                                |
-| Value | The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request):<br/><br/>            *searchSubstring* - Replace with the name of the company. You can enter a substring to match part of the company name (for example `bri` will match `Fabrikam, Inc`).<br/>**Example:** &quot;Value&quot;:&quot;bri&quot;<br/><br/>    *customerId* - Replace with a GUID formatted string that represents the customer identifier.<br/>**Example:** &quot;Value&quot;:&quot;0c39d6d5-c70d-4c55-bc02-f620844f3fd1&quot;<br/><br/>                 *resourceType* - Replace with the type of resource for which to retrieve audit records (for example, Subscription). The available resource types are defined in [ResourceType](/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype).<br/>**Example:** &quot;Value&quot;:&quot;Subscription&quot;                                                              |
-|Operator | The operator to apply. The supported operators can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).   |
+| Key                 | Value                             |
+|:--------------------|:----------------------------------|
+| Field               | The field to filter. The supported values can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).                                         |
+| Value               | The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request):<br/><br/>                                                                *searchSubstring* - Replace with the name of the company. You can enter a substring to match part of the company name (for example, `bri` will match `Fabrikam, Inc`).<br/>**Example:** <code>&quot;Value&quot;:&quot;bri&quot;</code><br/><br/>                                                                *customerId* - Replace with a GUID formatted string that represents the customer identifier.<br/>**Example:** <code>&quot;Value&quot;:&quot;0c39d6d5-c70d-4c55-bc02-f620844f3fd1&quot;</code><br/><br/>                                                                                        *resourceType* - Replace with the type of resource for which to retrieve audit records (for example, <code>Subscription</code>). The available resource types are defined in [ResourceType](/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype).<br/>**Example:** <code>&quot;Value&quot;:&quot;Subscription&quot;</code>                                 |
+| Operator          | The operator to apply. The supported operators can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).   |
 
 ### Request headers
 
