@@ -60,7 +60,7 @@ You must provide one of the following two query parameters to identify the partn
 
 ### Request headers
 
-For more information, see [Partner Center REST] (headers.md).
+For more information, see [Partner Center REST](headers.md).
 
 ### Request examples
 
@@ -96,7 +96,7 @@ Host: api.partnercenter.microsoft.com
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error] (error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error](error-codes.md).
 
 ### Response example (success)
 
@@ -235,7 +235,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more] (regional-authorization-overview.md) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](regional-authorization-overview.md) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
