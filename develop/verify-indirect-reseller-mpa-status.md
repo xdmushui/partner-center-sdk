@@ -235,7 +235,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](regional-authorization-overview.md) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](./regional-authorization-overview.md) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
