@@ -68,9 +68,9 @@ Describes product details.
 |----------------|------------------|-----------------------------------------------------|
 | id             | string           | The product identifier.                             |
 | name           | string           | The user principal identifier.                      |
-| skuPartNumber  | string           | The SKU part number name for the product. For example, for Office 365 Plan E3, this value is <code>EnterprisePack</code>. This property can be used in place of id if the id isn't available.                |
-| targetType     | string           | The target type of the product. This property identifies whether the product is applicable to a <code>User</code> or a <code>Tenant</code>.                                                                    |
-| licenseGroupId | string           | Identifies via a group identifier the authority or service that manages the productSku license. Products are segregated under license groups for better manageability.<br/><br/>                                                                                     <code>group1</code> - All products whose licenses can be managed by Azure Active Directory (AAD).<br/><br/>                                            <code>group2</code> - Minecraft product licenses.                                         |
+| skuPartNumber  | string           | The SKU part number name for the product. For example, for Office 365 Plan E3, this value is `EnterprisePack`. This property can be used in place of id if the id isn't available.                |
+| targetType     | string           | The target type of the product. This property identifies whether the product is applicable to a `User` or a `Tenant`.                                                                    |
+| licenseGroupId | string           | Identifies via a group identifier the authority or service that manages the productSku license. Products are segregated under license groups for better manageability.<br/><br/>                                                                                     `group1` - All products whose licenses can be managed by Azure Active Directory (AAD).<br/><br/>                                            `group2` - Minecraft product licenses.                                         |
 
 ## ServicePlan
 
