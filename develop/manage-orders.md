@@ -70,4 +70,4 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Transition a subscription](transition-a-subscription.md)
 - [Cancel a commercial marketplace subscription](cancel-an-azure-marketplace-subscription.md)
 
-For more information about the process of reviewing offers, creating orders, or working with subscriptions, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information about the process of reviewing offers, creating orders, or working with subscriptions, see [Scenarios](scenarios.md).

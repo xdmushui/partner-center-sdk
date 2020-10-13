@@ -34,4 +34,4 @@ Work with other partners
 - [Get partner by MPN ID](get-partner-by-mpn-id.md)
 - [Get all subscriptions by partner](get-all-subscriptions-by-partner.md)
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information, see [Scenarios](scenarios.md).

@@ -64,49 +64,13 @@ operation.
 
 Describes product details.
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>id</td>
-<td>string</td>
-<td>The product identifier.</td>
-</tr>
-<tr class="even">
-<td>name</td>
-<td>string</td>
-<td>The user principal identifier.</td>
-</tr>
-<tr class="odd">
-<td>skuPartNumber</td>
-<td>string</td>
-<td>The SKU part number name for the product. For example, for Office 365 Plan E3, this value is <code>EnterprisePack</code>. This property can be used in place of id if the id isn't available.</td>
-</tr>
-<tr class="even">
-<td>targetType</td>
-<td>string</td>
-<td>The target type of the product. This property identifies whether the product is applicable to a <code>User</code> or a <code>Tenant</code>.</td>
-</tr>
-<tr class="odd">
-<td>licenseGroupId</td>
-<td>string</td>
-<td>Identifies via a group identifier the authority or service that manages the productSku license. Products are segregated under license groups for better manageability.
-<p><code>group1</code> - All products whose licenses can be managed by Azure Active Directory (AAD).</p>
-<p><code>group2</code> - Minecraft product licenses.</p></td>
-</tr>
-</tbody>
-</table>
+| Property       | Type             | Description                                         |
+|----------------|------------------|-----------------------------------------------------|
+| id             | string           | The product identifier.                             |
+| name           | string           | The user principal identifier.                      |
+| skuPartNumber  | string           | The SKU part number name for the product. For example, for Office 365 Plan E3, this value is `EnterprisePack`. This property can be used in place of id if the id isn't available.                |
+| targetType     | string           | The target type of the product. This property identifies whether the product is applicable to a `User` or a `Tenant`.                                                                    |
+| licenseGroupId | string           | Identifies via a group identifier the authority or service that manages the productSku license. Products are segregated under license groups for better manageability.<br/><br/>                                                                                     `group1` - All products whose licenses can be managed by Azure Active Directory (AAD).<br/><br/>                                            `group2` - Minecraft product licenses.                                         |
 
 ## ServicePlan
 

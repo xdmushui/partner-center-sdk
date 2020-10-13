@@ -43,4 +43,4 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get usage data for a subscription](get-all-monthly-usage-records-for-a-subscription.md
 - [Get usage summary for all of a customer's subscriptions](get-a-customer-usage-summary.md)
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information, see [Scenarios](scenarios.md).
