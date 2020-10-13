@@ -22,4 +22,4 @@ This section describes the ways that partners can use Partner Center to programm
 - [Verify domain availability](verify-domain-availability.md)
 - [Delete a customer account from the integration sandbox](delete-a-customer-account-from-the-integration-sandbox.md)
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information, see [Scenarios](scenarios.md).
