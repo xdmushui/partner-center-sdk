@@ -46,7 +46,7 @@ All of the following scenarios can be completed three different ways:
 | **Managing customer accounts:** Learn how to do many aspects of customer account management, such as creating and deleting customer accounts or a customer's user accounts, managing and validating customer account details, managing user accounts, and assigning licenses.  | [Manage customers](manage-customers.md)  |
 | **Managing orders:** Learn all the ways you can programmatically manage customer orders and subscriptions. This area includes purchasing Azure reservations, creating orders, getting offers from the catalog, and managing trial conversion offers.   | [Manage orders](manage-orders.md)  |
 | **Providing support:** Learn how to administer services for a customer, how to get or update support contacts for a subscription, and how to manage service requests.  | [Provide support](provide-support.md)   |
-| **Referrals:** Learn how to create a referral, get a list of referrals, or update a referral.  | [Referrals](/partner/develop/referrals.md)  |
+| **Referrals:** Learn how to create a referral, get a list of referrals, or update a referral.  | [Referrals](/partner/develop/referrals)  |
 | **Utilities:** Learn how to validate an address, get address formatting rules by market, verify domain availability, delete a customer account from the integration sandbox, or get a record of Partner Center activity. | [Utilities](utilities.md)  |
 | **Security:** Learn about the REST APIs related to multi-factor authentication (MFA) in Partner Center. These APIs help you enforce MFA for each user account in your partner tenant.  | [Partner security requirements status](partner-security-requirements.md)  |
 
