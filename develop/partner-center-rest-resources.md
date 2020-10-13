@@ -25,7 +25,8 @@ samples](partner-center-samples.md) section.
 
 ## In this section
 
-|                                                                     |                                                    |
+
+| Area                                                                    | Related resources                                                   |
 |---------------------------------------------------------------------|----------------------------------------------------|
 | Agreements                                | [Agreement](agreement-resources.md)<br/>                                            [AgreementMetaData](agreement-metadata-resources.md)<br/>                                                                                 [AgreementDocument](agreement-document-resources.md)<br/>                                                                                       [DirectSignedCustomerAgreementStatus](customer-agreement-direct-sign-status-resource.md)                                                                                                                       |
 | [Analytics](analytics-resources.md)                                 | PartnerLicensesDeploymentInsights<br/>                                             PartnerLicensesUsageInsights<br/>                                                                                               CustomerLicensesDeploymentInsights<br/>                                                                                           CustomerLicensesUsageInsights                                                                                               |
