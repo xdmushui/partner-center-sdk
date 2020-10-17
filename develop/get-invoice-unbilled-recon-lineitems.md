@@ -29,9 +29,9 @@ You can use the following methods get a collection of details for unbilled invoi
 
 To get the line items for the specified invoice, retrieve the invoice object:
 
-1. Call the [**ById**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+1. Call the [**ById**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
 
-2. Call the [**Get**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
+2. Call the [**Get**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
 
 The invoice object contains all of the information for the specified invoice:
 
@@ -41,9 +41,9 @@ The invoice object contains all of the information for the specified invoice:
 
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
-1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+1. Pass the instance's BillingProvider and InvoiceLineItemType to the [**By**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
 
-2. Call the [**Get**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
+2. Call the [**Get**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
 
 3. Create an enumerator to traverse the collection. For an example, see the following sample code.
 
