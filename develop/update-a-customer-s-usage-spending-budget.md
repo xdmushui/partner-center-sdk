@@ -26,11 +26,11 @@ allocated for a customer's usage.
 ## C\#
 
 To update a customer's usage spending budget, first create a new
-[**SpendingBudget**/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
-[**IAggregatePartner.Customers**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Then access the [**UsageBudget**/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
-property and pass the updated usage budget to the [**Patch()**/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
-[**PatchAsync()**/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
+[**SpendingBudget**](/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
+[**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's ID. Then access the [**UsageBudget**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
+property and pass the updated usage budget to the [**Patch()**](/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
+[**PatchAsync()**](/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
