@@ -29,9 +29,9 @@ Gets a collection of all the orders for a specified customer. There is a delay o
 
 To obtain a collection of all of a customer's orders:
 
-1. Use your [**IAggregatePartner.Customers**/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method.
+1. Use your [**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method.
 
-2. Call the [**Orders**/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**Get()**/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) methods.
+2. Call the [**Orders**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property, followed by the [**Get()**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.get) or [**GetAsync()**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.getasync) methods.
 
 ``` csharp
 // IAggregatePartner partnerOperations;

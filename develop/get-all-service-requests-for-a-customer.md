@@ -28,7 +28,7 @@ In the Partner Center dashboard, this operation can be performed by first [selec
 
 ## C\#
 
-To display a list of all of a customer's service requests, use your **IAggregatePartner.Customers** collection and call the [**ById()**/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ServiceRequests**/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicerequests) property, followed by the [**Get()**/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.get) or [**GetAsync()**/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.getasync) methods.
+To display a list of all of a customer's service requests, use your **IAggregatePartner.Customers** collection and call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**ServiceRequests**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.servicerequests) property, followed by the [**Get()**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.get) or [**GetAsync()**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.getasync) methods.
 
 ``` csharp
 // IAggregatePartner partnerOperations;

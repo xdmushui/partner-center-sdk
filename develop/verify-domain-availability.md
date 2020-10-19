@@ -25,7 +25,7 @@ How to determine if a domain is available for use.
 
 ## C\#
 
-To verify if a domain is available, first call [**IAggregatePartner.Domains**/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This method retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
+To verify if a domain is available, first call [**IAggregatePartner.Domains**](/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This method retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
 ``` csharp
 // IAggregatePartner partnerOperations;

@@ -22,7 +22,7 @@ Prices differ by market and currency, and this API takes location into considera
 
 ## C\#
 
-To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
+To obtain the Azure Rate Card, call the [**IAzureRateCard.Get**](/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.get) method to return an [**AzureRateCard**](/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
 ```csharp
 // IAggregatePartner partnerOperations;
