@@ -8,6 +8,22 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
+ - Name: Federal government partners
+   href:
+   - name: Create your Partner Center Federal govt. account
+     href
+   - name: Use the sandbox
+     href:
+   - name: API onboarding
+     href:
+   - name: Scenarios
+     href:
+   - name: Manage customer accounts
+     href: 
+   - name: Manage orders and products 
+     href:
+   - name: Billing
+     href:
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
