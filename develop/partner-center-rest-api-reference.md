@@ -1,14 +1,14 @@
 ---
 title: Partner Center REST API reference
-description: The Partner Center REST API helps CSP partners integrate their existing CRM or billing software with the Microsoft systems that manage customer accounts, place orders, manage subscriptions, and handle support requests.
-ms.date: 05/29/2019
+description: CSP partners can use the Partner Center REST API to integrate their existing CRM and billing software with Microsoft systems and better manage customer accounts.
+ms.date: 11/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: cychua
 ms.author: cychua
 ---
 
-# Partner Center REST API reference
+# Partner Center REST API reference to REST URLs, headers, resources, events, and other topics
 
 **Applies to:**
 
