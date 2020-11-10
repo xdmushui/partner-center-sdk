@@ -1,12 +1,12 @@
 ---
 title: Verify a partner MPN ID
-description: Learn how to verify a partner's Microsoft Partner Network identifier (MPN ID) by requesting the partner's MPN profile via C# or the Partner Center REST API.
+description: Learn how to verify a partner's Microsoft Partner Network identifier (MPN ID) by requesting the partner's MPN profile via C\# or the Partner Center REST API.
 ms.date: 09/29/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Verify a partner MPN ID
+# Verify a partner MPN ID via C\# or the Partner Center REST API
 
 **Applies To**
 

@@ -6,7 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Activate a sandbox subscription for commercial marketplace products
+# Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
 
 **Applies to:**
 

@@ -6,7 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Add a verified domain for a customer
+# Add a verified domain to the list of approved domains for an existing customer 
 
 **Applies to:**
 

@@ -6,7 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Partner Center REST headers
+# Partner Center REST and response headers supported by the Partner Center REST API 
 
 **Applies To**
 
