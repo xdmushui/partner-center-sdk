@@ -1,6 +1,6 @@
 ---
 title: Accept a transfer
-description: How to accept a transfer of subscriptions for a customer.
+description: Learn how to use the Partner Center REST API to accept a transfer of subscriptions for a customer. Includes REST request syntax, headers, and REST responses.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

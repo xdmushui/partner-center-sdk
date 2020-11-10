@@ -1,6 +1,6 @@
 ---
 title: Scenarios
-description: Learn how Cloud Solution Provider program partners can use the Partner Center API to programmatically manage accounts, orders, support, and billing.
+description: Learn how Cloud Solution Provider program partners can use the Partner Center API to programmatically manage customer accounts, orders, support, and billing.
 ms.date: 10/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

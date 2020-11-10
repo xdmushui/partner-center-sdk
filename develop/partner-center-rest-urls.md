@@ -1,6 +1,6 @@
 ---
 title: Partner Center REST URLs
-description: Partner Center is available in different countries and regions around the world. Some versions of Partner Center might require different end points for your apps to work correctly.
+description: Partner Center is available in different countries and regions. Learn which Partner Center end points and base REST URLs your apps should use to work properly.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: cychua
 ms.author: cychua
 ---
 
-# Partner Center REST URLs
+# Different Partner Center REST URL end points for use in certain countries or regions
 
 **Applies To**
 

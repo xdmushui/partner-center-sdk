@@ -1,6 +1,6 @@
 ---
 title: Add a verified domain for a customer
-description: Add a verified domain to the list of approved domains for a customer in Partner Center.
+description: Learn how to add a verified domain to the list of approved domains for a customer in Partner Center. Do so using Partner Center APIs and REST APIs.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

@@ -1,6 +1,6 @@
 ---
 title: Partner Center REST headers
-description: The following HTTP request and response headers are supported by the Partner Center REST API.
+description: Learn about the HTTP REST request headers and REST response headers supported by the Partner Center REST API. 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
