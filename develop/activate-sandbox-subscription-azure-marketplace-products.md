@@ -1,18 +1,18 @@
 ---
 title: Activate a sandbox subscription for commercial marketplace products
-description: Activate a sandbox subscription for commercial marketplace products.
+description: Learn how to use C/# and Partner Center REST APIs to activate a sandbox subscription for commercial marketplace products.
 ms.date: 09/10/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Activate a sandbox subscription for commercial marketplace products
+# Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
 
 **Applies to:**
 
 - Partner Center
 
-How to activate subscription for commercial marketplace Software as a Service (SaaS) products from integration sandbox accounts to enable billing.
+How to activate a subscription for commercial marketplace Software as a Service (SaaS) products from integration sandbox accounts to enable billing.
 
 > [!NOTE]
 > It's only possible to activate a subscription for commercial marketplace SaaS products from integration sandbox accounts. If you have a production subscription, you must visit the publisher's site to complete the setup process. Subscription billing will begin only after setup is complete.
