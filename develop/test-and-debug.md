@@ -1,12 +1,12 @@
 ---
-title: Test and debug
-description: To test your code, you should use your integration sandbox account in Partner Center (and the corresponding tokens) so that you don't accidentally incur new charges that your company is responsible for paying.
+title: Test and debug with integration sandbox
+description: Learn how to use your Partner Center integration sandbox account (and related tokens) to test and debug your code so you don't accidentally incur new charges.
 ms.date: 09/11/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Test and debug
+# Test and debug with your Partner Center integration sandbox to avoid paying unexpected charges
 
 **Applies To**
 
