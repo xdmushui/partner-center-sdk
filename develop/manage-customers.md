@@ -74,4 +74,4 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get a list of self serve policies](get-a-list-of-self-serve-policies.md)
 - [Get a self serve policy by ID](get-a-self-serve-policy-by-id.md)
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information, see [Scenarios](scenarios.md).

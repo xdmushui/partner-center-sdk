@@ -88,7 +88,7 @@ A complete sample can be found in the [GetCustomerAgreements](https://github.com
 
 To retrieve confirmation of customer acceptance provided previously:
 
-Use the [**Get-PartnerCustomerAgreement**](https://docs.microsoft.com/powershell/module/partnercenter/get-partnercustomeragreement) command.
+Use the [**Get-PartnerCustomerAgreement**](/powershell/module/partnercenter/get-partnercustomeragreement) command.
 
 ```powershell
 Get-PartnerCustomerAgreement -CustomerId '14876998-c0dc-46e6-9d0c-65a57a6c32ec'

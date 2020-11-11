@@ -17,7 +17,7 @@ ms.subservice:  partnercenter-sdk
 
 Cloud Solution Provider (CSP) partners can view and manage their Azure spending through Partner Center APIs. They can also programmatically view their customers' spending against an Azure spending budget.
 
-For more information, see [scenarios in which CSP partners can use the Partner Center APIs to manage customer and partner accounts and orders](scenarios.md), specifically the [background section](scenarios.md#background).
+For more information, see [scenarios in which CSP partners can use the Partner Center APIs to manage customer and partner accounts and orders](scenarios.md).
 
 ## Partner usage management
 

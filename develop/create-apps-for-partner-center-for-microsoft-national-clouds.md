@@ -18,7 +18,7 @@ ms.subservice:  partnercenter-sdk
 
 Developers must register details about their app with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
 
-For Partner Center for Microsoft Cloud for US Government, you currently must manage apps through PowerShell. For more information, see the [Azure PowerShell reference documentation](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0#applications).
+For Partner Center for Microsoft Cloud for US Government, you currently must manage apps through PowerShell. For more information, see the [Azure PowerShell reference documentation](/powershell/module/Azuread/#applications).
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
@@ -32,7 +32,7 @@ For web apps, use the following procedures to register your application ID.
 
 1. Navigate to the [Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
 
-2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 ### Configure API access permissions for web app
 
@@ -86,7 +86,7 @@ Native apps do not need to be registered to Partner Center. But these apps need 
 
 1. Navigate to the [Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page to register your app. Sign in to the Azure portal using either a work or school account or a personal Microsoft account.
 
-2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+2. Select **New registration**. For more information, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
 ### Configure API access permissions for native app
 

@@ -55,7 +55,7 @@ Represents the details of an entitlement quantity.
 > [!IMPORTANT]
 > Deprecated in SDK v1.9
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement.
+An [Enum](/dotnet/api/system.enum) with values that indicate the type of entitlement.
 
 | Value | Description |
 |-------|-------------|
@@ -76,7 +76,7 @@ The artifact associated with the entitlement.
 > [!IMPORTANT]
 > Deprecated in SDK v1.9
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
+An [Enum](/dotnet/api/system.enum) with values that indicate the type of entitlement artifact.
 
 | Value                          | Description                                                                             |
 |--------------------------------| ----------------------------------------------------------------------------------------|

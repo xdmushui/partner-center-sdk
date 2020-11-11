@@ -23,9 +23,8 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 
 ## Manage service requests
 
-- [Get service request support topics](get-service-request-support-topics--pending-.md)
 - [Get all service requests for a customer](get-all-service-requests-for-a-customer.md)
 - [Get service request details by ID](get-service-request-details-by-id.md)
 - [Update a service request](update-a-service-request.md)
 
-For more information, see [Scenarios](scenarios.md), specifically the [Background](scenarios.md#background) section.
+For more information, see [Scenarios](scenarios.md).

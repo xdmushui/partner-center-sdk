@@ -34,7 +34,7 @@ Partners can select from Webhook events, like the following examples, that are s
 
 - **Threshold Exceeded Event ("usagerecords-thresholdExceeded")**
 
-    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers](https://docs.microsoft.com/partner-center/set-an-azure-spending-budget-for-your-customers).
+    This event is raised when the amount of Microsoft Azure usage for any customer exceeds their usage spending budget (their threshold). For more information, see  [Set an Azure spending budget for your customers/partner-center/set-an-azure-spending-budget-for-your-customers).
 
 - **Referral Created Event ("referral-created")**
 
@@ -139,7 +139,7 @@ The following sample shows the structure of a Partner Center event.
 
 ### Authentication
 
-All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. Acquire an access token to access https://api.partnercenter.microsoft.com. This token is the same token that is used to access the rest of the Partner Center APIs.
+All calls to the Webhook APIs are authenticated using the Bearer token in the Authorization Header. Acquire an access token to access `https://api.partnercenter.microsoft.com`. This token is the same token that is used to access the rest of the Partner Center APIs.
 
 ### Get a list of events
 

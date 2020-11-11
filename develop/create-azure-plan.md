@@ -20,7 +20,7 @@ You can purchase, create, and manage an Azure plan using the Partner Center APIs
 
 * [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
 * The customer identifier. If you don't have a customer's identifier, follow the steps in [Get a list of customers](get-a-list-of-customers.md). Alternatively, sign in to Partner Center, choose the customer from the list of customers, select **Account**, then save their **Microsoft ID**.
-* [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](https://docs.microsoft.com/partner-center/confirm-customer-agreement).
+* [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](/partner-center/confirm-customer-agreement).
 
 ## Get the catalog item for Azure plan
 
@@ -68,16 +68,16 @@ You can suspend an existing Azure plan by following the steps in [Suspend a subs
 
 *You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.*
 
-For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/rest/api/resources/subscriptions).
+For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](/rest/api/resources/subscriptions).
 
-To remove existing Azure reservations, you must [cancel the reservations](https://docs.microsoft.com/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation).
+To remove existing Azure reservations, you must [cancel the reservations](/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation).
 After you suspend an Azure plan, you can reactivate it.
 
 For details on how to reactivate an Azure plan, see [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 
 ## Transition existing CSP offers to Azure plan
 
-You can't create an Azure plan for an existing customer with a Microsoft Azure (MS-AZR-0145P) subscription. However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to follow these steps:
+You can't create an Azure plan for an existing customer with a Microsoft Azure (MS-AZR-0145P) subscription. However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to follow these steps:
 
 * [Check whether the customer is eligible for a transition to Azure plan](get-eligibility-for-product-upgrade.md)
 * [Initiate a product upgrade for the customer](create-product-upgrade-entity.md)

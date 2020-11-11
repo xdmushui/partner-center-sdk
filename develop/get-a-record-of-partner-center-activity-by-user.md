@@ -24,13 +24,13 @@ Use this API to retrieve audit records for the previous 30 days from the current
 
 ## C\#
 
-To retrieve a record of Partner Center operations, first establish the date range for the records you want to retrieve. The following code example only uses a start date, but you can also include an end date. For more information, see the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) method. Next, create the variables you need for the type of filter you want to apply, and assign the appropriate values. For example, to filter by company name substring, create a variable to hold the substring. To filter by customer ID, create a variable to hold the ID.
+To retrieve a record of Partner Center operations, first establish the date range for the records you want to retrieve. The following code example only uses a start date, but you can also include an end date. For more information, see the [**Query**](/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) method. Next, create the variables you need for the type of filter you want to apply, and assign the appropriate values. For example, to filter by company name substring, create a variable to hold the substring. To filter by customer ID, create a variable to hold the ID.
 
-In the following example, sample code is provided to filter by a company name substring, customer ID, or resource type. Choose one and comment out the others. In each case, you first instantiate a [**SimpleFieldFilter**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object using its default [**constructor**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter.-ctor) to create the filter. You'll need to pass a string that contains the field to search, and the appropriate operator to apply, as shown. You also must provide the string to filter by.
+In the following example, sample code is provided to filter by a company name substring, customer ID, or resource type. Choose one and comment out the others. In each case, you first instantiate a [**SimpleFieldFilter**](/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter) object using its default [**constructor**](/dotnet/api/microsoft.store.partnercenter.models.query.simplefieldfilter.-ctor) to create the filter. You'll need to pass a string that contains the field to search, and the appropriate operator to apply, as shown. You also must provide the string to filter by.
 
-Next, use the [**AuditRecords**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.auditrecords) property to get an interface to audit record operations, and call the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) or [**QueryAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.queryasync) method to execute the filter and get the collection of [**AuditRecord's**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.auditrecord) that represent the first page of the result. Pass the method the start date, an optional end date not used in the example here, and an [**IQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.iquery) object that represents a query on an entity. The IQuery object is created by passing the filter created above to the [**QueryFactory's**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) [**BuildSimpleQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildsimplequery) method.
+Next, use the [**AuditRecords**](/dotnet/api/microsoft.store.partnercenter.ipartner.auditrecords) property to get an interface to audit record operations, and call the [**Query**](/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.query) or [**QueryAsync**](/dotnet/api/microsoft.store.partnercenter.auditrecords.iauditrecordscollection.queryasync) method to execute the filter and get the collection of [**AuditRecord's**](/dotnet/api/microsoft.store.partnercenter.models.auditing.auditrecord) that represent the first page of the result. Pass the method the start date, an optional end date not used in the example here, and an [**IQuery**](/dotnet/api/microsoft.store.partnercenter.models.query.iquery) object that represents a query on an entity. The IQuery object is created by passing the filter created above to the [**QueryFactory's**](/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) [**BuildSimpleQuery**](/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildsimplequery) method.
 
-Once you have the initial page of items, use the [**Enumerators.AuditRecords.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) method to create an enumerator that you can use to iterate through the remaining pages.
+Once you have the initial page of items, use the [**Enumerators.AuditRecords.Create**](/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) method to create an enumerator that you can use to iterate through the remaining pages.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -107,40 +107,11 @@ An unencoded example looks like this:
 
 The following table describes the required key-value pairs:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Field</td>
-<td>The field to filter. The supported values can be found in <a href="#rest-request">Request syntax</a>.</td>
-</tr>
-<tr class="even">
-<td>Value</td>
-<td>The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in <a href="#rest-request">Request syntax</a>:
-<ul>
-<li><p>searchSubstring - Replace with the name of the company. You can enter a substring to match part of the company name (for example `bri` will match `Fabrikam, Inc`).</p>
-<p>Example: &quot;Value&quot;:&quot;bri&quot;</p></li>
-<li><p>customerId - Replace with a GUID formatted string that represents the customer identifier.</p>
-<p>Example: &quot;Value&quot;:&quot;0c39d6d5-c70d-4c55-bc02-f620844f3fd1&quot;</p></li>
-<li><p>resourceType - Replace with the type of resource for which to retrieve audit records (for example, Subscription). The available resource types are defined in <a href="https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype"><strong>ResourceType</strong></a>.</p>
-<p>Example: &quot;Value&quot;:&quot;Subscription&quot;</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Operator</td>
-<td>The operator to apply. The supported operators can be found in <a href="#rest-request">Request syntax</a>.</td>
-</tr>
-</tbody>
-</table>
+| Key                 | Value                             |
+|:--------------------|:----------------------------------|
+| Field               | The field to filter. The supported values can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).                                         |
+| Value               | The value to filter by. The case of the value is ignored. The following value parameters are supported as shown in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request):<br/><br/>                                                                *searchSubstring* - Replace with the name of the company. You can enter a substring to match part of the company name (for example, `bri` will match `Fabrikam, Inc`).<br/>**Example:** `"Value":"bri"`<br/><br/>                                                                *customerId* - Replace with a GUID formatted string that represents the customer identifier.<br/>**Example:** `"Value":"0c39d6d5-c70d-4c55-bc02-f620844f3fd1"`<br/><br/>                                                                                        *resourceType* - Replace with the type of resource for which to retrieve audit records (for example, Subscription). The available resource types are defined in [ResourceType](/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype).<br/>**Example:** `"Value":"Subscription"`                                 |
+| Operator          | The operator to apply. The supported operators can be found in [Request syntax](get-a-record-of-partner-center-activity-by-user.md#rest-request).   |
 
 ### Request headers
 

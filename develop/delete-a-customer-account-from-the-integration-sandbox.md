@@ -15,7 +15,7 @@ ms.subservice:  partnercenter-sdk
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This article explains how to delete a customer account from the Testing in Production (Tip) integration sandbox.
+This article explains, how to break the relationship between the partner and the customer account and regain the quota for Testing in Production (Tip) integration sandbox.
 
 > [!IMPORTANT]
 > When you delete a customer account, all resources associated with that customer tenant will be purged.
@@ -32,11 +32,11 @@ This article explains how to delete a customer account from the Testing in Produ
 
 To delete a customer from the Tip integration sandbox:
 
-1. Pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations.
+1. Pass your Tip account credentials to the [**CreatePartnerOperations**](/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations.
 
 2. Use the partner operations interface to retrieve the collection of entitlements:
 
-    1. Call the [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer.
+    1. Call the [**Customers.ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer.
 
     2. Call the **Entitlements** property.
 

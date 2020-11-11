@@ -29,9 +29,9 @@ You can use the following methods to get a collection of details unbilled commer
 
 To get the line items for the specified invoice:
 
-1. Call the [**ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
+1. Call the [**ById**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.byid) method to get an interface to invoice operations for the specified invoice.
 
-2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
+2. Call the [**Get**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the invoice object.
 
 The **invoice object** contains all of the information for the specified invoice. The **Provider** identifies the source of the unbilled detail information (for example, **OneTime**). The **InvoiceLineItemType** specifies the type (for example, **UsageLineItem**).
 
@@ -39,9 +39,9 @@ The following example code uses a **foreach** loop to process the **InvoiceLineI
 
 To get a collection of line items that correspond to an **InvoiceDetail** instance:
 
-1. Pass the instance's **BillingProvider** and **InvoiceLineItemType** to the [**By**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
+1. Pass the instance's **BillingProvider** and **InvoiceLineItemType** to the [**By**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.by) method.
 
-2. Call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
+2. Call the [**Get**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoice.getasync) method to retrieve the associated line items.
 3. Create an enumerator to traverse the collection as shown in the following example.
 
 ``` csharp
@@ -127,7 +127,7 @@ Use the following URI and query parameters when creating the request.
 | provider               | string | Yes      | The provider: "**OneTime**".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "**UsageLineItems**", "**UsageLineItems**".               |
 | currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
-| period                 | string | Yes      | The period for unbilled recon (for example: **current**, **previous**).                      |
+| period                 | string | Yes      | The period for unbilled recon (for example: **current**, **previous**).<br/><br/>**Previous** – if the billing cycle is 01/01/2020 – 01/31/2020 then, most likely that your invoice is generated between 02/06/2020 and 02/08/2020 UTC time. If you need to query your unbilled usage data of the billing cycle (01/01/2020 – 01/31/2020) on any time between 02/01/2020 and the invoice-generated date (which is between 02/06/2020 and 02/08/2020 UTC time), then, you need to choose Period as "Previous".<br/><br/>**Current** – if the billing cycle is 01/01/2020 – 01/31/2020 then, most likely that your invoice is generated between 02/06/2020 and 02/08/2020 UTC time. If you need to query your unbilled usage data of the billing cycle (01/01/2020 – 01/31/2020) on any time between 01/01/2020 and 01/31/2020 which is within your billing cycle, then, you need to choose Period as "Current". |
 | size                   | number | No       | The maximum number of items to return. The default size is 2000.                    |
 | seekOperation          | string | No       | Set `seekOperation=Next` to get the next page of reconciliation line items.                |
 

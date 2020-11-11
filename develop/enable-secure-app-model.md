@@ -30,7 +30,7 @@ This article concerns the following actors:
 
 ## Security requirements
 
-For details on security requirements, see [Partner Security Requirements](https://docs.microsoft.com/partner-center/partner-security-requirements).
+For details on security requirements, see [Partner Security Requirements](/partner-center/partner-security-requirements).
 
 ## Secure Application Model
 
@@ -93,7 +93,7 @@ You must create and register a web app in Partner Center before making REST call
    - Application secret
 
 > [!NOTE]
-> It is recommended to [use a certificate as your application secret](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
+> It is recommended to [use a certificate as your application secret](/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
 
 ### Get authorization code
 
@@ -133,10 +133,10 @@ You must then use your authorization code to get a refresh token:
 
 2. Note the refresh token that is returned.
 
-3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](https://docs.microsoft.com/rest/api/keyvault/).
+3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](/rest/api/keyvault/).
 
 > [!IMPORTANT]
-> The refresh token must be [stored as a secret](https://docs.microsoft.com/rest/api/keyvault/setsecret/setsecret) in Key Vault.
+> The refresh token must be [stored as a secret](/rest/api/keyvault/setsecret/setsecret) in Key Vault.
 
 #### Sample refresh call
 
@@ -224,7 +224,7 @@ Host: api.partnercenter.microsoft.com
 
 You can use the [Partner Center PowerShell module](https://www.powershellgallery.com/packages/PartnerCenter) to reduce the required infrastructure to exchange an authorization code for an access token. This method is optional for making [Partner Center REST calls](#rest).
 
-For more information on this process, see [Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) PowerShell documentation.
+For more information on this process, see [Secure App Model](/powershell/partnercenter/secure-app-model) PowerShell documentation.
 
 1. Install the Azure AD and Partner Center PowerShell modules.
 
@@ -236,7 +236,7 @@ For more information on this process, see [Secure App Model](https://docs.micros
     Install-Module PartnerCenter
     ```
 
-2. Use the **[New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
+2. Use the **[New-PartnerAccessToken](/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
 
     ```powershell
     $credential = Get-Credential
@@ -253,4 +253,4 @@ For more information on this process, see [Secure App Model](https://docs.micros
     $token.RefreshToken | clip
     ```
 
-You should store the refresh token value in a secure repository, such as Azure Key Vault. For more information on how to leverage the secure application module with PowerShell, see the [multi-factor authentication](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth) article.
+You should store the refresh token value in a secure repository, such as Azure Key Vault. For more information on how to leverage the secure application module with PowerShell, see the [multi-factor authentication](/powershell/partnercenter/multi-factor-auth) article.

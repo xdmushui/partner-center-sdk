@@ -13,13 +13,13 @@ ms.subservice:  partnercenter-sdk
 - Partner Center
 - Partner Center for Microsoft Cloud for US Government
 
-You can verify whether an indirect reseller has signed the Microsoft Partner Agreement using their Microsoft Partner Network (MPN) ID or Cloud Solution Provider (CSP) tenant ID (Microsoft ID). You can use one of these identifiers to check the Microsoft Partner Agreement signing status using the **AgreementStatus** API.
+You can verify whether an indirect reseller has signed the Microsoft Partner Agreement using their Microsoft Partner Network (MPN) ID (PGA/PLA) or Cloud Solution Provider (CSP) tenant ID (Microsoft ID). You can use one of these identifiers to check the Microsoft Partner Agreement signing status using the **AgreementStatus** API.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-- The MPN ID or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
+- The MPN ID (PGA/PLA) or the CSP tenant ID (Microsoft ID) of the indirect reseller. *You must use one of these two identifiers.*
 
 ## C\#
 
@@ -27,12 +27,12 @@ To get the Microsoft Partner Agreement signature status of an indirect reseller:
 
 1. Use your **IAggregatePartner.Compliance** collection to call the **AgreementSignatureStatus** property.
 
-2. Call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
+2. Call the [**Get()**](/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.get) or [**GetAsync()**](/dotnet/api/microsoft.store.partnercenter.compliance.iagreementsignaturestatus.getasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
 
-var agreementSignatureStatusByMpnId = partnerOperations.Compliance.AgreementSignatureStatus.Get(mpnId:"Enter MPN Id");
+var agreementSignatureStatusByMpnId = partnerOperations.Compliance.AgreementSignatureStatus.Get(mpnId:"Enter MPN Id (PGA/PLA)");
 
 var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementSignatureStatus.Get(tenantId: "Enter Tenant Id");
 ```
@@ -55,16 +55,16 @@ You must provide one of the following two query parameters to identify the partn
 
 | Name | Type | Required | Description |
 | ---- | ---- | -------- | ----------- |
-| **MpnId** | int | No | A Microsoft Partner Network ID that identifies the indirect reseller. |
+| **MpnId** | int | No | A Microsoft Partner Network ID (PGA/PLA) that identifies the indirect reseller. |
 | **TenantId** | GUID | No | A Microsoft ID that identifies the CSP account of the indirect reseller. |
 
 ### Request headers
 
-For more information, see [Partner Center REST headers](https://docs.microsoft.com/partner-center/develop/headers).
+For more information, see [Partner Center REST](headers.md).
 
 ### Request examples
 
-#### Request using MPN ID
+#### Request using MPN ID (PGA/PLA)
 
 The following example request gets the indirect reseller's Microsoft Partner Agreement signing status using the indirect reseller's Microsoft Partner Network ID.
 
@@ -96,7 +96,7 @@ Host: api.partnercenter.microsoft.com
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](https://docs.microsoft.com/partner-center/develop/error-codes).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error](error-codes.md).
 
 ### Response example (success)
 
@@ -145,7 +145,7 @@ Connection: close
 
 #### Non-numeric MPN ID
 
-The following example response is returned when the MPN ID that you passed to the API is non-numeric.
+The following example response is returned when the MPN ID (PGA/PLA) that you passed to the API is non-numeric.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -167,7 +167,7 @@ Connection: close
 
 #### No MPN ID or CSP tenant ID
 
-The following example response is returned when you haven't passed an MPN ID or CSP tenant ID to the API. You must pass one of the two ID types to the API.
+The following example response is returned when you haven't passed an MPN ID (PGA/PLA) or CSP tenant ID to the API. You must pass one of the two ID types to the API.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -189,7 +189,7 @@ Connection: close
 
 #### Both MPN ID and CSP tenant ID passed
 
-The following example response is returned when you pass both the MPN ID and CSP tenant ID to the API. You must pass *only one* of the two identifier types to the API.
+The following example response is returned when you pass both the MPN ID (PGA/PLA) and CSP tenant ID to the API. You must pass *only one* of the two identifier types to the API.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -209,9 +209,9 @@ Connection: close
 }
 ```
 
-#### CSP Indirect Reseller MPN Id is either invalid or not migrated from Partner Membership Center to Partner Center
+#### CSP Indirect Reseller MPN Id (PGA/PLA) is either invalid or not migrated from Partner Membership Center to Partner Center
 
-The following example response is returned when Indirect reseller MPN ID passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
+The following example response is returned when Indirect reseller MPN ID (PGA/PLA) passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -235,7 +235,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/partner-center/regional-authorization-overview) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID (PGA/PLA) doesn't match with region of the Indirect Provider. [Learn more](/partner-center/regional-authorization-overview) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -283,7 +283,7 @@ Connection: close
 
 #### No CSP Indirect Reseller account is associated with the given MPN ID
 
-The following example response is returned when Partner Center can recognize the MPN ID passed in the request but there is no CSP enrollment associated to the given MPN ID. [Learn More](https://partner.microsoft.com/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
+The following example response is returned when Partner Center can recognize the MPN ID (PGA/PLA) passed in the request but there is no CSP enrollment associated to the given MPN ID (PGA/PLA). [Learn More](https://partner.microsoft.com/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
 
 ```http
 HTTP/1.1 400 Bad Request
