@@ -8,6 +8,8 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
+  - name: Partner sandbox capabilities that support reseller relationship
+    href: sandbox-scenario.md
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
