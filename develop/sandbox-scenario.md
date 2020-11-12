@@ -80,8 +80,6 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 Follow the [Remove Reseller Relationship](https://docs.microsoft.com/en-us/partner-center/develop/remove-a-reseller-relationship-with-a-customer) for the customer for details. However, there are some differences between the Product and Sandbox capabilities.
 
-:::image type="content" source="Images/sandbox.png" alt-text="Sandbox capabilities":::
-
 ### REQUEST SYNTAX
 
 |**Method**|**Delete**|
