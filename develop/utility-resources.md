@@ -36,7 +36,8 @@ market](get-market-specific-validation-data.md).
 | Region       | string | n/a               | The region.                                                                                      |
 | FirstName    | string | (1, 50)           | The first name of a contact at the customer's company/organization.                              |
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
-| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional. |
+| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional.|
+|PhoneNumber|string|n/a|The phone number of a contact at the customer's company/organization. In customer profile, this property is mandatory for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). Otherwise this is optional.|
 
 ## Contact
 
