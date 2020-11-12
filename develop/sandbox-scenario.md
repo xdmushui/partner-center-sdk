@@ -1,7 +1,7 @@
 ---
 title: Partner sandbox capabilities that support reseller relationship
 description: Partner sandbox has ability to support relationships between the partner and the customer
-ms.date:11/10/2020
+ms.date: 11/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -78,7 +78,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 4. Sandbox Remove Reseller Relationship will call Delete customer AP. This will remove the relationship as well as delete the customer tenant. {baseURL}/v1/Customers/{customer-Tenant-id}
 
-Follow the [Remove Reseller Relationship](https://docs.microsoft.com/en-us/partner-center/develop/remove-a-reseller-relationship-with-a-customer) for the customer for details. However, there are some differences between the Product and Sandbox capabilities.
+Follow the [Remove Reseller Relationship](https://docs.microsoft.com/partner-center/develop/remove-a-reseller-relationship-with-a-customer) for the customer for details. However, there are some differences between the Product and Sandbox capabilities.
 
 ### REQUEST SYNTAX
 
@@ -95,8 +95,8 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ## Next steps
 
-- [Activate Sandbox subscriptions for Azure Marketplace products](https://docs.microsoft.com/en-us/partner-center/develop/activate-sandbox-subscription-azure-marketplace-products)
+- [Activate Sandbox subscriptions for Azure Marketplace products](develop/activate-sandbox-subscription-azure-marketplace-products.md)
 
-- [Cancel an order from Sandbox](https://docs.microsoft.com/partner-center/develop/cancel-an-order-from-the-integration-sandbox)
+- [Cancel an order from Sandbox](cancel-an-order-from-the-integration-sandbox.md)
 
-- [Test and debug](https://docs.microsoft.com/partner-center/develop/test-and-debug) 
+- [Test and debug](test-and-debug.md) 
