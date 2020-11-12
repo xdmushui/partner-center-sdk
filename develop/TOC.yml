@@ -439,9 +439,9 @@
       href: /partner/develop/get-a-referral-by-id
     - name: Update a referral
       href: /partner/develop/update-a-referral
-  - name: Utilities
-    href: utilities.md
-    items:
+- name: Utilities
+  href: utilities.md
+  items:
     - name: Validate an address
       href: validate-an-address.md
     - name: Get address formatting rules by market
@@ -450,9 +450,9 @@
       href: verify-domain-availability.md
     - name: Delete a customer account from the integration sandbox
       href: delete-a-customer-account-from-the-integration-sandbox.md
-  - name: Security
-    href: partner-security-requirements.md
-    items:
+- name: Security
+  href: partner-security-requirements.md
+  items:
     - name: Get portal requests without MFA
       href: get-portal-requests-without-mfa.md
     - name: Get API request summary
