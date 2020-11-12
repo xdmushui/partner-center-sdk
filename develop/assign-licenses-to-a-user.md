@@ -1,12 +1,12 @@
 ---
 title: Assign licenses to a user
-description: How to assign licenses to a customer user.
+description: Learn how to assign licenses to a customer user via Partner Center APIs, such as the use of C\# or REST APIs.
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Assign licenses to a user
+# Assign licenses to a user via Partner Center APIs
 
 **Applies to:**
 

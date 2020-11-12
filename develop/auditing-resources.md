@@ -1,12 +1,12 @@
 ---
 title: Auditing resources
-description: Resources used with Partner Center audit operations.
+description: Learn about Partner Center API auditing resources, like AuditRecord, that you can use to get a record of Partner Center activity.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Auditing resources
+# Auditing resources that help you get a record of Partner Center activity
 
 **Applies to:**
 

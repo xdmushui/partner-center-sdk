@@ -1,6 +1,6 @@
 ---
 title: API throttling guidance
-description: When throttling can occur
+description: For partners calling Partner Center APIs, learn which APIs are impacted by Microsoft API throttling and best practices to avoid or better handle throttling. 
 ms.date: 09/09/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: vijvala
 ms.author: vijvala
 ---
 
-# API throttling guidance 
+# API throttling guidance for partners calling Partner Center APIs 
 
 **Applies to**
 
