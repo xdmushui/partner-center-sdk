@@ -53,7 +53,7 @@ The **CustomerCompanyProfile** resource is additional information about the comp
 
 ## CustomerBillingProfile
 
-The **CustomerBillingProfile** resource is additional information used for billing the customer.
+The **CustomerBillingProfile** resource is additional information used to bill the customer.
 
 | Property       | Type                                                           | Description                                                                                                                                            |
 |----------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|

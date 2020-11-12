@@ -20,7 +20,7 @@ general-purpose data models used throughout the SDK.
 
 ## Address
 
-An address to use for the customer or for partner profiles. For more
+Address to use for the customer or partner profiles. For more
 information about the supported formats and properties in different
 countries/regions, see [Get address formatting rules by
 market](get-market-specific-validation-data.md).
