@@ -428,9 +428,9 @@
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
       href: activate-sandbox-subscription-azure-marketplace-products.md
-  - name: Referrals
-    href: /partner/develop/referrals
-    items:
+- name: Referrals
+  href: /partner/develop/referrals
+  items:
     - name: Create a referral
       href: /partner/develop/create-a-referral
     - name: Get a list of referrals
