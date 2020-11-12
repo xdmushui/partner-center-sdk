@@ -1,5 +1,5 @@
 ---
-title: API Throttling guidance
+title: API throttling guidance
 description: When throttling can occur
 ms.date: 09/09/2020
 ms.service: partner-dashboard

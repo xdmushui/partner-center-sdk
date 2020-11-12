@@ -1,6 +1,6 @@
 ---
 title: Analytics resources
-description: Partner Center resources for data used to report on usage, deployment, and consumption.
+description: Partner Center resources contain data about usage, deployment, and consumption. Includes insights on license deployment and usage by partners and customers.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
