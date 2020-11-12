@@ -1,6 +1,6 @@
 ---
-title: Azure rate card resources
-description: The Azure Rate Card provides real-time prices for Azure offers.
+title: Azure rate card - current Azure pricing
+description: Learn how to use the Azure Rate Card to get real-time, current prices for Azure offers in your region. Azure Rate Card is accessed via Partner Center REST API.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: amitravat
 ms.author: amrava
 ---
 
-# Azure rate card resources
+# Azure rate card resources to get real-time, current Azure prices on Azure offers in your region
 
 **Applies to:**
 

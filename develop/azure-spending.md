@@ -1,12 +1,12 @@
 ---
-title: Azure spending
-description: CSP partners can use Partner Center APIs to view and manage their Azure spending. They can also programmatically view their customers' Azure spending against their budget.
+title: Azure spending API resources
+description: Learn how CSP partners can use Partner Center APIs to view and manage partner and customer Azure spending and usage against their budget.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Azure spending
+# Azure spending API resources to manage partner or customer spending and usage against a budget 
 
 **Applies to:**
 
