@@ -422,11 +422,11 @@
    items:
     - name: Partner sandbox capabilities that support reseller relationship
       href: sandbox-scenario.md
-    - name: Test and debug with your Partner Center integration sandbox to avoid paying unexpected charges
+    - name: Test and debug sandbox
       href: test-and-debug.md
     - name: Cancel an order from the integration sandbox
       href: cancel-an-order-from-the-integration-sandbox.md
-    - name: Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
+    - name: Activate sandbox subscription 
       href: activate-sandbox-subscription-azure-marketplace-products.md
 - name: Referrals
   href: /partner/develop/referrals
