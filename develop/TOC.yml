@@ -8,8 +8,7 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
-  - name: Partner sandbox capabilities that support reseller relationship
-    href: sandbox-scenario.md
+  
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
@@ -26,9 +25,7 @@
   - name: Partner Center authentication
     href: partner-center-authentication.md
   - name: Enable secure application model
-    href: enable-secure-app-model.md
-  - name: Test and debug
-    href: test-and-debug.md
+    href: enable-secure-app-model.md  
   - name: Early Adopter Program
     href: early-adopter-program.md
 - name: Scenarios
@@ -289,9 +286,9 @@
       href: restore-a-user-for-a-customer.md
     - name: Set user roles for a customer
       href: set-user-roles-for-a-customer.md
-    - name: "Update a customer's billing profile"
+    - name: Update a customer's billing profile
       href: update-a-customer-s-billing-profile.md
-    - name: "Update a customer's qualification"
+    - name: Update a customer's qualification
       href: update-a-customer-s-qualification.md
     - name: Update the nickname for a subscription
       href: update-the-nickname-for-a-subscription.md
@@ -326,14 +323,10 @@
       href: purchase-azure-reservations.md
     - name: Purchase a subscription for commercial marketplace products
       href: create-subscription-azure-marketplace-products.md
-    - name: Activate a sandbox subscription for commercial marketplace products
-      href: activate-sandbox-subscription-azure-marketplace-products.md
     - name: Cancel a commercial marketplace subscription
       href: cancel-an-azure-marketplace-subscription.md
     - name: Cancel software purchases
       href: cancel-software-purchases.md
-    - name: Cancel an order from the integration sandbox
-      href: cancel-an-order-from-the-integration-sandbox.md
     - name: Change the quantity of a subscription
       href: change-the-quantity-of-a-subscription.md
     - name: Convert a trial subscription to paid
@@ -425,6 +418,16 @@
       href: update-a-service-request.md
     - name: "Update a subscription's support contact"
       href: update-a-subscription-s-support-contact.md
+-  name: Integration sandbox
+   items:
+    - name: Partner sandbox capabilities that support reseller relationship
+      href: sandbox-scenario.md
+    - name: Test and debug with your Partner Center integration sandbox to avoid paying unexpected charges
+      href: test-and-debug.md
+    - name: Cancel an order from the integration sandbox
+      href: cancel-an-order-from-the-integration-sandbox.md
+    - name: Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
+      href: activate-sandbox-subscription-azure-marketplace-products.md
   - name: Referrals
     href: /partner/develop/referrals
     items:
