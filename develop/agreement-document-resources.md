@@ -8,7 +8,7 @@ author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---
 
-# Agreement document resources supported by Partner Center in the Microsoft public cloud.
+# Agreement document resources supported by Partner Center in the Microsoft public cloud
 
 **Applies to:**
 

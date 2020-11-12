@@ -8,7 +8,7 @@ author: v-sumukh
 ms.author: v-sumukh
 ---
 
-# Analytics resources
+# Analytics API resources that help you report on license usage, deployment, and consumption
 
 **Applies to:**
 
