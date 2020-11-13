@@ -1,7 +1,7 @@
 ---
 title: Utility resources
 description: The Partner Center REST API contains many resources which describe general-purpose data models used throughout the SDK.
-ms.date: 11/08/2018
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -35,8 +35,9 @@ market](get-market-specific-validation-data.md).
 | Country      | string | (2, 2)            | The country/region in ISO country code format.                                                   |
 | Region       | string | n/a               | The region.                                                                                      |
 | FirstName    | string | (1, 50)           | The first name of a contact at the customer's company/organization.                              |
+| MiddleName   | string | (1, 50)           | The middle name of a contact at the customer's company/organization. This property is optional.  |
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
-| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional. |
+| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. <br/><br/>In customer profile, this property is mandatory if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here. |
 
 ## Contact
 
