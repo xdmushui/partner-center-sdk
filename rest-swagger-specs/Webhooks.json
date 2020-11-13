@@ -1,0 +1,1067 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Microsoft Partner Webhooks Api",
+    "description": "API's for partners to register for Partner Center webhooks",
+    "version": "v1"
+  },
+  "host": "api.partnercenter.microsoft.com",
+  "basePath": "/webhooks",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v{version}/registration": {
+      "get": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Gets the tenant's registration",
+        "operationId": "Registration_Partner_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Updates the user's tenant registration.",
+        "operationId": "Registration_Partner_Put",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            },
+            "description": "Webhook event registration model"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Creates the user's tenant registration.",
+        "operationId": "Registration_Partner_Post",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            },
+            "description": "Webhook event registration model"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "409": {
+            "description": "Registration already exists, use the PUT method to update a registration."
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/internalApp/registration": {
+      "get": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Gets the tenant's registration",
+        "operationId": "Registration_InternalApp_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Updates the user's tenant registration.",
+        "operationId": "Registration_InternalApp_Put",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            },
+            "description": "Webhook event registration model"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Creates the user's tenant registration.",
+        "operationId": "Registration_InternalApp_Post",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "registration",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            },
+            "description": "Webhook event registration model"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookRegistration"
+            }
+          },
+          "409": {
+            "description": "Registration already exists, use the PUT method to update a registration."
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/registration/validationEvents/{correlationId}": {
+      "get": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Retrieves the status of a test webhook given the correlationId",
+        "operationId": "Registration_Partner_GetValidationEvent",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "correlationId",
+            "in": "path",
+            "required": true,
+            "description": "CorrelationId returned from the original test method"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookValidationEvent"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/internalApp/registration/validationEvents/{correlationId}": {
+      "get": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Retrieves the status of a test webhook given the correlationId",
+        "operationId": "Registration_InternalApp_GetValidationEvent",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "correlationId",
+            "in": "path",
+            "required": true,
+            "description": "CorrelationId returned from the original test method"
+          },
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/WebhookValidationEvent"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/registration/validationEvents": {
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Creates a test event to be delivered as a webhook",
+        "operationId": "Registration_Partner_PostValidationEvent",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a correlationId that can be used to query for the state. This state will be deleted after 7 days.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/internalApp/registration/validationEvents": {
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "summary": "Creates a test event to be delivered as a webhook",
+        "operationId": "Registration_InternalApp_PostValidationEvent",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a correlationId that can be used to query for the state. This state will be deleted after 7 days.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/registration/events": {
+      "get": {
+        "tags": [
+          "RegistrationEvents"
+        ],
+        "summary": "List of all events.",
+        "operationId": "RegistrationEvents_Partner_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/v{version}/internalApp/registration/events": {
+      "get": {
+        "tags": [
+          "RegistrationEvents"
+        ],
+        "summary": "List of all events.",
+        "operationId": "RegistrationEvents_InternalApp_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "version",
+            "in": "path",
+            "required": true
+          },
+          {
+            "type": "string",
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header."
+          },
+          {
+            "type": "string",
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "A unique identifier for the call, used to ensure idempotency. In the case of a timeout, the retry call should include the same value. Upon receiving a response (success or business failure), the value should be reset for the next call."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "description": "There was a missing or an invalid input.The response body will provide the error details."
+          },
+          "404": {
+            "description": "The resource is not found or not available with the given input parameters."
+          },
+          "500": {
+            "description": "The partner API service or one of its dependencies failed to fulfill the request. Callers may retry this."
+          },
+          "401": {
+            "description": "The request was not authenticated. The client needs to authenticate with the partner API service first."
+          },
+          "403": {
+            "description": "The request was authenticated but was refused since the caller does not have the rights to invoke it."
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "PartnerResourceChangeCallBack": {
+      "type": "object",
+      "x-typeName": "PartnerResourceChangeCallBack",
+      "required": [
+        "eventName",
+        "resourceUri",
+        "resourceName",
+        "resourceChangeUtcDate"
+      ],
+      "properties": {
+        "eventName": {
+          "type": "string"
+        },
+        "resourceUri": {
+          "type": "string"
+        },
+        "resourceName": {
+          "type": "string"
+        },
+        "auditUri": {
+          "type": "string"
+        },
+        "resourceChangeUtcDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "PartnerResourceChangeEvent": {
+      "type": "object",
+      "x-typeName": "PartnerResourceChangeEvent",
+      "properties": {
+        "partnerId": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "resourceUri": {
+          "type": "string"
+        },
+        "resourceName": {
+          "type": "string"
+        },
+        "auditUri": {
+          "type": "string"
+        },
+        "resourceChangeUtcDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "WebhookRegistrationSummary": {
+      "type": "object",
+      "x-typeName": "WebhookRegistrationSummary",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "PagedResourceCollection[WebhookRegistration]": {
+      "type": "object",
+      "x-typeName": "PagedResourceCollection[WebhookRegistration]",
+      "properties": {
+        "continuationToken": {
+          "type": "string"
+        },
+        "totalCount": {
+          "type": "integer",
+          "readOnly": true,
+          "format": "int32"
+        },
+        "items": {
+          "type": "array",
+          "readOnly": true,
+          "items": {
+            "$ref": "#/definitions/WebhookRegistration"
+          }
+        },
+        "links": {
+          "$ref": "#/definitions/ResourceLinks"
+        },
+        "attributes": {
+          "readOnly": true,
+          "$ref": "#/definitions/ResourceAttributes"
+        }
+      }
+    },
+    "WebhookRegistration": {
+      "type": "object",
+      "x-typeName": "WebhookRegistration",
+      "properties": {
+        "subscriberId": {
+          "type": "string"
+        },
+        "webhookUrl": {
+          "type": "string"
+        },
+        "webhookEvents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "signatureTokenToMsSignatureHeader": {
+          "type": "boolean"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "lastModifiedTimestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "ResourceLinks": {
+      "type": "object",
+      "x-typeName": "ResourceLinks",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/Link"
+        },
+        "next": {
+          "$ref": "#/definitions/Link"
+        },
+        "previous": {
+          "$ref": "#/definitions/Link"
+        }
+      }
+    },
+    "ResourceAttributes": {
+      "type": "object",
+      "x-typeName": "ResourceAttributes",
+      "properties": {
+        "etag": {
+          "type": "string"
+        },
+        "objectType": {
+          "type": "string"
+        }
+      }
+    },
+    "Link": {
+      "type": "object",
+      "x-typeName": "Link",
+      "properties": {
+        "uri": {
+          "type": "string",
+          "readOnly": true
+        },
+        "method": {
+          "type": "string",
+          "readOnly": true
+        },
+        "body": {
+          "type": "string",
+          "readOnly": true
+        },
+        "headers": {
+          "type": "array",
+          "readOnly": true,
+          "items": {
+            "$ref": "#/definitions/KeyValuePair[String,String]"
+          }
+        }
+      }
+    },
+    "KeyValuePair[String,String]": {
+      "type": "object",
+      "x-typeName": "KeyValuePair[String,String]",
+      "properties": {
+        "key": {
+          "type": "string",
+          "readOnly": true
+        },
+        "value": {
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "WebhookValidationEvent": {
+      "type": "object",
+      "x-typeName": "WebhookValidationEvent",
+      "properties": {
+        "correlationId": {
+          "type": "string"
+        },
+        "partnerId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "callbackUrl": {
+          "type": "string"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WebhookResponse"
+          }
+        }
+      }
+    },
+    "WebhookResponse": {
+      "type": "object",
+      "x-typeName": "WebhookResponse",
+      "properties": {
+        "responseCode": {
+          "type": "string"
+        },
+        "responseMessage": {
+          "type": "string"
+        },
+        "systemError": {
+          "type": "boolean"
+        },
+        "dateTimeUtc": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "responses": {},
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "description": "Bearer authentication token",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}
