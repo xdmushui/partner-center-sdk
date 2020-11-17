@@ -20,7 +20,7 @@ general-purpose data models used throughout the SDK.
 
 ## Address
 
-An address to use for the customer or for partner profiles. For more
+Address to use for the customer or partner profiles. For more
 information about the supported formats and properties in different
 countries/regions, see [Get address formatting rules by
 market](get-market-specific-validation-data.md).
@@ -37,7 +37,10 @@ market](get-market-specific-validation-data.md).
 | FirstName    | string | (1, 50)           | The first name of a contact at the customer's company/organization.                              |
 | MiddleName   | string | (1, 50)           | The middle name of a contact at the customer's company/organization. This property is optional.  |
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
-| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. <br/><br/>In customer profile, this property is mandatory if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here. |
+
+| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional.|
+|PhoneNumber|string|n/a|The phone number of a contact at the customer's company/organization. In customer profile, this property is mandatory for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). Otherwise this is optional.|
+
 
 ## Contact
 

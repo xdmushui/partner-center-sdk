@@ -187,8 +187,10 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 | Name   | Type   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
-| domain | string | The customer's domain name, such as contoso.onmicrosoft.com.                                                                           |
-| organizationRegistrationNumber | string | The customer’s organization registration number (also referred to as the INN number in certain countries). <br/><br/>Completing this field is required if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here.                                                                                                                                   |
+
+| domain | string | The customer's domain name, such as contoso.onmicrosoft.com. |
+|organizationRegistrationNumber|String|The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). For customer’s company/organization located in other countries this should not be specified.|
+
 
 ### Request example
 
@@ -233,7 +235,7 @@ If successful, this API returns a [Customer](customer-resources.md#customer) res
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+Responses come with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### Response example
 
