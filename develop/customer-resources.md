@@ -1,7 +1,7 @@
 ---
 title: Customer resources
 description: Customer resources that represent a customer or reseller.
-ms.date: 01/13/2020
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
@@ -49,6 +49,7 @@ The **CustomerCompanyProfile** resource is additional information about the comp
 | companyName | string                                                         | The name of the company or organization.                                          |
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                  |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                             |
+| organizationRegistrationNumber | string                                     | The customer’s organization registration number (also referred to as the INN number in certain countries). <br/><br/>Completing this field is required only if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here.  |
 
 ## CustomerBillingProfile
 
