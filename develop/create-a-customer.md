@@ -1,7 +1,7 @@
 ---
 title: Create a customer
 description: How to create a new customer.
-ms.date: 09/17/2019
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
@@ -187,7 +187,10 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 | Name   | Type   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
+
 | domain | string | The customer's domain name, such as contoso.onmicrosoft.com. |
+|organizationRegistrationNumber|String|The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). For customer’s company/organization located in other countries this should not be specified.|
+
 
 ### Request example
 
@@ -232,7 +235,7 @@ If successful, this API returns a [Customer](customer-resources.md#customer) res
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+Responses come with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### Response example
 

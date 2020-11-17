@@ -1,7 +1,7 @@
 ---
 title: Utility resources
 description: The Partner Center REST API contains many resources which describe general-purpose data models used throughout the SDK.
-ms.date: 11/08/2018
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -20,7 +20,7 @@ general-purpose data models used throughout the SDK.
 
 ## Address
 
-An address to use for the customer or for partner profiles. For more
+Address to use for the customer or partner profiles. For more
 information about the supported formats and properties in different
 countries/regions, see [Get address formatting rules by
 market](get-market-specific-validation-data.md).
@@ -35,8 +35,12 @@ market](get-market-specific-validation-data.md).
 | Country      | string | (2, 2)            | The country/region in ISO country code format.                                                   |
 | Region       | string | n/a               | The region.                                                                                      |
 | FirstName    | string | (1, 50)           | The first name of a contact at the customer's company/organization.                              |
+| MiddleName   | string | (1, 50)           | The middle name of a contact at the customer's company/organization. This property is optional.  |
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
-| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional. |
+
+| PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional.|
+|PhoneNumber|string|n/a|The phone number of a contact at the customer's company/organization. In customer profile, this property is mandatory for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). Otherwise this is optional.|
+
 
 ## Contact
 
