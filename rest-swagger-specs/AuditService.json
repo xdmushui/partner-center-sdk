@@ -17,7 +17,7 @@
           "Audit"
         ],
         "summary": "Gets the audit records between a given date range\r\nIf the number of records is more than a page full, a continuation token will be returned and the continuation token can be used to get the next set of audit records.\r\nThis service only supports AuditRecord retrieval for the last 90 days and a maximum window of 30 days.",
-        "operationId": "Gets the audit records for a given date range. If the number of records exceeds the page size, a continuation token is returned. The continuation token can be used to get the next page of audit records.",
+        "operationId": "Gets Audit Records",
         "consumes": [],
         "produces": [
           "application/json",
@@ -135,7 +135,7 @@
           "Audit"
         ],
         "summary": "Gets the audit record for the provided Id.",
-        "operationId": "Retrieves an audit record which corresponds to the provided Id value.",
+        "operationId": "Gets Audit Record by ProvidedId",
         "consumes": [],
         "produces": [
           "application/json",
