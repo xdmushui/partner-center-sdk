@@ -18,7 +18,7 @@ This article describes how to get a collection of resources that represents self
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with Application+User credentials.
 
 ## C\#
 

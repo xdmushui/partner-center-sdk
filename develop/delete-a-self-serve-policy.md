@@ -16,7 +16,7 @@ This topic explains how to update a self serve policy.
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with Application+User credentials.
 
 ## C\#
 

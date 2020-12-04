@@ -16,13 +16,13 @@ This topic explains how to create a new self serve policy.
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with Application+User credentials.
 
 ## C\#
 
 Create a self serve policy:
 
-1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync)  method with the self serve policy info.
+1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync) method with the self serve policy info.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -129,7 +129,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new seld serve policy.
+If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new self serve policy.
 
 ### Response success and error codes
 
