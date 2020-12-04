@@ -1,5 +1,5 @@
 ---
-title: Cancel an order from the integration sandbox
+title: Cancel an order from integration sandbox
 description: Learn how to use Partner Center APIs to cancel different types of subscription orders from integration sandbox accounts.
 ms.date: 08/16/2019
 ms.service: partner-dashboard

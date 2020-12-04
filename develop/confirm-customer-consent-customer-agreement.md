@@ -1,12 +1,12 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement
-description: Confirm customer acceptance of the Microsoft Customer Agreement.
+description: Learn how to confirm customer acceptance of the Microsoft Customer Agreement using Partner Center APIs.
 ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Confirm customer acceptance of Microsoft Customer Agreement
+# Confirm customer acceptance of the Microsoft Customer Agreement using Partner Center APIs
 
 **Applies to:**
 

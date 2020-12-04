@@ -1,12 +1,12 @@
 ---
 title: Change the quantity of a subscription
-description: Update a subscription to increase or decrease the quantity of licenses for a customer.
+description: Learn how to use Partner Center APIs to change the quantity of licenses for a customer subscription. You can also do this in the Partner Center dashboard.
 ms.date: 06/05/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Change the quantity of a subscription
+# Change the quantity of licenses in a customer subscription
 
 **Applies to:**
 

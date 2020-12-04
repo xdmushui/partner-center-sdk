@@ -1,12 +1,12 @@
 ---
 title: Checkout a cart
-description: How to checkout an order for a customer in a cart.
+description: Learn how to check out an order for a customer in a cart using Partner Center APIs. You might do this to complete a customer order.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Checkout a cart
+# Checkout an order for a customer in a cart
 
 **Applies to:**
 
