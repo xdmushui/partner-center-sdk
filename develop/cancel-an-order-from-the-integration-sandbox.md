@@ -1,12 +1,12 @@
 ---
-title: Cancel an order from the integration sandbox
-description: Cancel orders from integration sandbox accounts.
+title: Cancel an order from integration sandbox
+description: Learn how to use Partner Center APIs to cancel different types of subscription orders from integration sandbox accounts.
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Cancel an order from the integration sandbox
+# Cancel an order from the integration sandbox using Partner Center APIs
 
 **Applies to:**
 
@@ -15,7 +15,7 @@ ms.subservice:  partnercenter-sdk
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to cancel reserved instance, software, and commercial marketplace Software as a Service (SaaS) subscription orders from integration sandbox accounts.
+This article describes how to use Partner Center APIs to cancel different types of subscription orders from integration sandbox accounts. Such orders can include reserved instances, software, and commercial marketplace Software as a Service (SaaS) subscription orders.
 
 >[!NOTE]
 >Please be aware that the cancellations of reserved instance, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts.  
