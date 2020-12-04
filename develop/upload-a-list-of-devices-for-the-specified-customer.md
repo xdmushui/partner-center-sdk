@@ -1,15 +1,12 @@
 ---
 title: Upload a list of devices to an existing batch for the specified customer
 description: How to upload a list of information about devices to an existing batch for the specified customer. This associates the devices with a device batch already created.
-ms.assetid: 5EC2895C-1361-4EBA-9D86-7125D4FE10D3
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Upload a list of devices to an existing batch for the specified customer
-
 
 **Applies To**
 
@@ -18,27 +15,33 @@ ms.localizationpriority: medium
 
 How to upload a list of information about devices to an existing batch for the specified customer. This associates the devices with a device batch already created.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- The customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The device batch identifier.
+
 - The list of device resources that provide the information about the individual devices.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To upload a list of devices to an existing device batch, first, instantiate a new [List/dotnet/api/system.collections.generic.list-1) of type [**Device**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device) and populate the list with the devices. The following combinations of populated properties are required at a minimum for identifying each device:
 
-To upload a list of devices to an existing device batch, first, instantiate a new [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**Device**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device) and populate the list with the devices. The following combinations of populated properties are required at a minimum for identifying each device:
+- [**HardwareHash**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**ProductKey**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey).
 
-- [**HardwareHash**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**ProductKey**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey).
-- [**HardwareHash**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**SerialNumber**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber).
-- [**HardwareHash**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**ProductKey**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey) + [**SerialNumber**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber).
-- [**HardwareHash**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) only.
-- [**ProductKey**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey) only.
-- [**SerialNumber**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber) + [**OemManufacturerName**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.oemmanufacturername) + [**ModelName**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.modelname).
+- [**HardwareHash**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**SerialNumber**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber).
 
-Then, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to retrieve an interface to operations on the specified customer. Next, call the [**DeviceBatches.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.byid) method with the device batch identifier to get an interface to operations for the specified batch. Finally, call the [**Devices.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicecollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicecollection.createasync) method with the list of devices to add the devices to the device batch.
+- [**HardwareHash**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) + [**ProductKey**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey) + [**SerialNumber**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber).
+
+- [**HardwareHash**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.hardwarehash) only.
+
+- [**ProductKey**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.productkey) only.
+
+- [**SerialNumber**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.serialnumber) + [**OemManufacturerName**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.oemmanufacturername) + [**ModelName**](/dotnet/api/microsoft.store.partnercenter.models.devicesdeployment.device.modelname).
+
+Then, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to retrieve an interface to operations on the specified customer. Next, call the [**DeviceBatches.ById**](/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicesbatchcollection.byid) method with the device batch identifier to get an interface to operations for the specified batch. Finally, call the [**Devices.Create**](/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicecollection.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.devicesdeployment.idevicecollection.createasync) method with the list of devices to add the devices to the device batch.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -62,24 +65,21 @@ List<Device> devicesToBeUploaded = new List<Device>
     }
 };
 
-var trackingLocation = 
+var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.ById(selectedDeviceBatchId).Devices.Create(devicesToBeUploaded);
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateDevices.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                            |
 |----------|------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/deviceBatches/{devicebatch-id}/devices HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following path and query parameters when creating the request.
 
@@ -88,13 +88,11 @@ Use the following path and query parameters when creating the request.
 | customer-id    | string | Yes      | A GUID-formatted string that identifies the customer. |
 | devicebatch-id | string | Yes      | A string identifier that identifies the device batch. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 The request body must contain an array of [Device](device-deployment-resources.md#device) objects. The following combinations of fields for identifying a device are accepted:
 
@@ -105,7 +103,7 @@ The request body must contain an array of [Device](device-deployment-resources.m
 - productKey only.
 - serialNumber + oemManufacturerName + modelName.
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/c7f3c849-129f-4b85-a96d-4f8e88b315a3/deviceBatches/Test/devices HTTP/1.1
@@ -148,16 +146,15 @@ Expect: 100-continue
 ]
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve device upload status. Save this URI for use with other related REST APIs.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 202 Accepted
@@ -169,11 +166,3 @@ MS-CV: OBkGN9pSN0a5xvua.0
 MS-ServerId: 101112012
 Date: Thu, 28 Sep 2017 20:08:46 GMT
 ```
-
- 
-
- 
-
-
-
-

@@ -1,15 +1,14 @@
 ---
 title: Get a collection of invoices
 description: How to retrieve a collection of the partner's invoices.
-ms.assetid: B5392987-3D2E-493B-9F97-A20055D5D46A
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: sourishdeb
+ms.author: sodeb
 ---
 
 # Get a collection of invoices
-
 
 **Applies To**
 
@@ -20,19 +19,17 @@ ms.localizationpriority: medium
 
 How to retrieve a collection of the partner's invoices.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
+To get a collection of all available invoices, use the [**Invoices**](/dotnet/api/microsoft.store.partnercenter.ipartner.invoices) property to get an interface to invoice operations, and then call the [**Get**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.getasync) method to retrieve the collection.
 
-To get a collection of all available invoices, use the [**Invoices**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.invoices) property to get an interface to invoice operations, and then call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.getasync) method to retrieve the collection.
+To get a paged collection of invoices, first call the [**BuildIndexedQuery**](/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildindexedquery) method and pass it the page size to create an [**IQuery**](/dotnet/api/microsoft.store.partnercenter.models.query.iquery) object. Next, use the [**Invoices**](/dotnet/api/microsoft.store.partnercenter.ipartner.invoices) property to get an interface to invoice operations, and then pass the IQuery object to the [**Query**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.query) or [**QueryAsync**](/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.queryasync) method to send the request and get the first page.
 
-To get a paged collection of invoices, first call the [**BuildIndexedQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory.buildindexedquery) method and pass it the page size to create an [**IQuery**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.iquery) object. Next, use the [**Invoices**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.invoices) property to get an interface to invoice operations, and then pass the IQuery object to the [**Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.query) or [**QueryAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.invoices.iinvoicecollection.queryasync) method to send the request and get the first page.
-
-Next, use the [**Enumerators**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.enumerators) property to get an interface to the collection of supported resource collection enumerators, and then call [**Invoices.Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) to create an enumerator for traversing the collection of invoices. Finally, use the enumerator to retrieve and work with each page of invoices as shown in the following code example. Each call to the [**Next**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.enumerators.iresourcecollectionenumerator-1.next) method sends a request for the next page of invoices based on the page size.
+Next, use the [**Enumerators**](/dotnet/api/microsoft.store.partnercenter.ipartner.enumerators) property to get an interface to the collection of supported resource collection enumerators, and then call [**Invoices.Create**](/dotnet/api/microsoft.store.partnercenter.factory.iresourcecollectionenumeratorfactory-1.create) to create an enumerator for traversing the collection of invoices. Finally, use the enumerator to retrieve and work with each page of invoices as shown in the following code example. Each call to the [**Next**](/dotnet/api/microsoft.store.partnercenter.enumerators.iresourcecollectionenumerator-1.next) method sends a request for the next page of invoices based on the page size.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -42,8 +39,8 @@ Next, use the [**Enumerators**](https://docs.microsoft.com/dotnet/api/microsoft.
 bool isUnpaged = (this.invoicePageSize <= 0);
 
 // If the scenario is unpaged, get all the invoices, otherwise get the first page.
-var invoicesPage = (isUnpaged) 
-                 ? partnerOperations.Invoices.Get() 
+var invoicesPage = (isUnpaged)
+                 ? partnerOperations.Invoices.Get()
                  : partnerOperations.Invoices.Query(QueryFactory.Instance.BuildIndexedQuery(this.invoicePageSize));
 
 // Create an invoice enumerator for traversing the invoice pages.
@@ -54,12 +51,12 @@ while (invoicesEnumerator.HasValue)
 {
     // Print the current invoice results page.
     var invoices = invoicesEnumerator.Current.Items;
-    
+
     foreach (var i in invoices)
     {
-        Console.WriteLine(String.Format("{0,3}. {1}  {2}  {3,16:C2}", 
-            lineCounter++, 
-            i.Id, 
+        Console.WriteLine(String.Format("{0,3}. {1}  {2}  {3,16:C2}",
+            lineCounter++,
+            i.Id,
             i.InvoiceDate.ToString("yyyy&#39;-&#39;MM&#39;-&#39;dd&#39;T&#39;HH&#39;:&#39;mm&#39;:&#39;ss&#39;Z&#39;"),
             i.TotalCharges));
     }
@@ -75,18 +72,18 @@ while (invoicesEnumerator.HasValue)
 
 For a slightly different example, see **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetPagedInvoices.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+> [!NOTE] 
+> The same API is used for all modern commercial purchases as well as 145p and Office licenses. Size and offset are only considered for legacy invoices. For all modern commercial purchases, pagesize & offset will be ignored.
 
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                  |
 |---------|----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices?size={size}&offset={offset} HTTP/1.1  |
 
- 
-
-**URI parameters**
+### URI parameters
 
 Use the following query parameters when creating the request.
 
@@ -95,21 +92,19 @@ Use the following query parameters when creating the request.
 | size   | int  | No       | The number of invoice resources to return in the response. This parameter is optional. |
 | offset | int  | No       | The zero-based index of the first invoice to return.                                   |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices?size=200&offset=0 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: e88d014d-ab70-41de-90a0-f7fd1797267d
 MS-CorrelationId: de894e18-f027-4ac0-8b5a-34f0c222af0c
@@ -118,16 +113,15 @@ MS-PartnerCenter-Application: Partner Center .NET SDK Samples
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
+## REST response
 
 If successful, the response body contains the collection of [Invoice](invoice-resources.md#invoice) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -268,11 +262,3 @@ Date: Thu, 24 Mar 2016 05:21:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

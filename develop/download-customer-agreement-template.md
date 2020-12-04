@@ -4,12 +4,13 @@ description: Get a download link for Microsoft Customer Agreement template.
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: cychua
+ms.author: cychua
 ---
 
 # Get a download link for the Microsoft Customer Agreement template
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -24,12 +25,17 @@ This article describes how to get a link to download the Microsoft Customer Agre
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports App+User authentication.
+
 - The customer's country to which the Microsoft Customer Agreement template applies.
+
 - The language in which the Microsoft Customer Agreement template should be localized.
 
 > [!IMPORTANT]
+>
 > - The Microsoft Customer Agreement is country-specific. When requesting for a link to download the Microsoft Customer Agreement template, Be sure to specify the correct country based on customer's location. or list of supported countries, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+>
 > - For some countries, the Microsoft Customer Agreement is available in multiple languages. For best customer experience, pick the language that best match the customer's needs. For list of supported languages, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
 > - This method is only supported with the Microsoft Customer Agreement.
 
@@ -39,40 +45,46 @@ To retrieve a link to download the Microsoft Customer Agreement template:
 
 1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
 
-```csharp
-// IAggregatePartner partnerOperations;
+   ```csharp
+   // IAggregatePartner partnerOperations;
 
-string agreementType = "MicrosoftCustomerAgreement";
+   string agreementType = "MicrosoftCustomerAgreement";
 
-AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
-```
+   AgreementMetaData microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.   ByAgreementType(agreementType).Get().Items.Single();
+   ```
 
 2. Use the IAggregatePartner.AgreementTemplates collection.
+
 3. Call the **ById** method and specify the **templateId** of the Microsoft Customer Agreement.
+
 4. Fetch the **Document** property.
+
 5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies. The query defaults to *US* if the method isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages). This method is **case-sensitive**.
-6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in. The query defaults to *en-US* if the method isn't specified or the country code specified isn't supported for the country specified. For list of supported language codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages)
+
+6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in. The query defaults to *en-US* if the method isn't specified or the country code specified isn't supported for the country specified. For list of supported language codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+
 7. Call the **Get** or **GetAsync** method.
 
-```csharp
-// IAggregatePartner partnerOperations;
+   ```csharp
+   // IAggregatePartner partnerOperations;
 
-string customerCountry = "US";
+   string customerCountry = "US";
 
-string languageForLocalization = "en-US";
+   string languageForLocalization = "en-US";
 
-var agreementDocument = partnerOperations.AgreementTemplates.ById(microsoftCustomerAgreementDetails.TemplateId).Document.ByCountry(customerCountry).ByLanguage(languageForLocalization).Get();
-```
+   var agreementDocument = partnerOperations.   AgreementTemplates.ById   (microsoftCustomerAgreementDetails.   TemplateId).Document.ByCountry   (customerCountry).ByLanguage   (languageForLocalization).Get();
+   ```
 
-A complete sample can be found in the [GetAgreementDocument](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDocument.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
-
+A complete sample can be found in the [GetAgreementDetails](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/GetAgreementDetails.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
 
 ## REST request
 
 To retrieve a link to download the Microsoft Customer Agreement template:
 
 1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+
 2. Create a REST request to fetch an [**AgreementDocument** resource](./agreement-document-resources.md). For an example, see the [request syntax](#request-syntax) example. You must specify the following information:
+
     - The **templateId** of the Microsoft Customer Agreement.
     - The country to which the Microsoft Customer Agreement template applies.
     - The language in which the Microsoft Customer Agreement template should be localized.
@@ -394,5 +406,3 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 | Yemen | YE | en-US, ar-SA |
 | Zambia | ZM | en-US |
 | Zimbabwe | ZW | en-US |
-
-

@@ -1,23 +1,21 @@
 ---
 title: Delete a customer account from the integration sandbox
 description: How to delete a customer account from the Testing in Production (Tip) integration sandbox.
-ms.assetid: B95431F6-EA7F-4C21-835F-6D6C303B05A5
 ms.date: 06/20/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Delete a customer account from the integration sandbox
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic explains how to delete a customer account from the Testing in Production (Tip) integration sandbox.
+This article explains, how to break the relationship between the partner and the customer account and regain the quota for Testing in Production (Tip) integration sandbox.
 
 > [!IMPORTANT]
 > When you delete a customer account, all resources associated with that customer tenant will be purged.
@@ -25,22 +23,33 @@ This topic explains how to delete a customer account from the Testing in Product
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (**customer-tenant-id**).
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - All Azure Reserved Virtual Machine Instances and software purchase orders must be cancelled before deleting a customer from the Tip integration sandbox.
 
 ## C\#
 
 To delete a customer from the Tip integration sandbox:
 
-1. Pass your Tip account credentials to the [**CreatePartnerOperations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations.
+1. Pass your Tip account credentials to the [**CreatePartnerOperations**](/dotnet/api/microsoft.store.partnercenter.partnerservice.instance) method to get an [**IPartner**](/dotnet/api/microsoft.store.partnercenter.ipartner) interface to partner operations.
+
 2. Use the partner operations interface to retrieve the collection of entitlements:
-    1. Call the [**Customers.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer.
+
+    1. Call the [**Customers.ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier to specify the customer.
+
     2. Call the **Entitlements** property.
+
     3. Call the **Get** or **GetAsync** method to retrieve the [**Entitlement**](entitlement-resources.md) collection.
+
 3. Make sure that all Azure Reserved Virtual Machine Instances and software purchase orders for that customer are cancelled. For each [**Entitlement**](entitlement-resources.md) in the collection:
+
     1. Use the [**entitlement.ReferenceOrder.Id**](entitlement-resources.md#referenceorder) to get a local copy of the corresponding [Order](order-resources.md#order) from the customer's collection of orders.
+
     2. Set the [**Order.Status**](order-resources.md#order) property to "Cancelled".
+
     3. Use the **Patch()** method to update the order.
+
 4. Cancel all orders. For example, the following code sample uses a loop to poll each order until its status is "Cancelled".
 
     ``` csharp
@@ -105,7 +114,7 @@ Use the following query parameter to delete a customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

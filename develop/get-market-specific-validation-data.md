@@ -1,11 +1,9 @@
 ---
 title: Get address formatting rules by market
 description: Get the expected address format based on the iso code for the market.
-ms.assetid: B02B3ECF-8020-4818-872F-9D70DCBC0228
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get address formatting rules by market
@@ -19,58 +17,51 @@ ms.localizationpriority: medium
 
 Get the expected address format based on the iso code for the market.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                 |
 |---------|---------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/countryvalidationrules/{isocode-id} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 | Name           | Type       | Required | Description                         |
 |----------------|------------|----------|-------------------------------------|
 | **isocode-id** | **string** | Y        | The two-character ISO country code. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/countryvalidationrules/{isocode-id} HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 124b0e41-a093-4fec-b871-3eeb45fd734b
 MS-CorrelationId: 5cfd634d-b936-47af-87f0-0f0217425dcc
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a **CountryInformation** object in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

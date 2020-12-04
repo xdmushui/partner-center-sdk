@@ -1,15 +1,12 @@
 ---
 title: Transition a subscription
 description: Upgrades a customer's subscription to a specified target subscription.
-ms.assetid: 54618BC1-6AF7-4518-925B-8A6A4C926CE7
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Transition a subscription
-
 
 **Applies To**
 
@@ -20,15 +17,15 @@ ms.localizationpriority: medium
 
 Upgrades a customer's subscription to a specified target subscription.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - Two subscription IDs, one for the initial subscription and one for the target subscription.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To upgrade a customer's subscription, first [get that's customer's subscription](get-a-subscription-by-id.md). Then, obtain a list of upgrades for that subscription by calling the **Upgrades** property followed by the **Get()** or **GetAsync()** methods. Choose a target upgrade from that list of upgrades, and then call the **Upgrades** property of the initial subscription, followed by the **Create()** method.
 
@@ -36,26 +33,23 @@ To upgrade a customer's subscription, first [get that's customer's subscription]
 // IAggregatePartner partnerOperations;
 // string selectedCustomerId;
 // string subscriptionIdForUpgrade;
-// Upgrade targetOffer; 
+// Upgrade targetOffer;
 
 UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(subscriptionIdForUpgrade).Upgrades.Create(targetOffer);
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpgradeSubscription.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades HTTP/1.1 |
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-target}/upgrades HTTP/1.1       |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to transition the subscription.
 
@@ -65,17 +59,15 @@ Use the following query parameter to transition the subscription.
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 | **id-for-target**       | **guid** | Y        | A GUID corresponding to the target subscription.  |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription}/upgrades HTTP/1.1
@@ -148,16 +140,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns an **Upgrade** result resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -259,11 +250,3 @@ Date: Fri, 29 Jan 2016 20:44:21 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

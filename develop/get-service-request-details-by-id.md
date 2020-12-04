@@ -4,11 +4,9 @@ description: How to retrieve the details of an existing customer service request
 ms.date: 02/06/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get service request details by ID
-
 
 **Applies To**
 
@@ -16,18 +14,17 @@ ms.localizationpriority: medium
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-How to retrieve the details of an existing customer service request using the service request identifier. 
+How to retrieve the details of an existing customer service request using the service request identifier.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A service request ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object. 
+To retrieve the details of an existing customer service request, call the [**IServiceRequestCollection.ById**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method, and pass in a [**ServiceRequest.Id**](/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest.id#Microsoft_Store_PartnerCenter_Models_ServiceRequests_ServiceRequest_Id) to identify and return an interface to the specific [**ServiceRequest**](/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -35,43 +32,38 @@ To retrieve the details of an existing customer service request, call the [**ISe
 
 ServiceRequest serviceRequestDetails = partnerOperations.ServiceRequests.ById(existingServiceRequest.Id).Get();
 
-Console.WriteLine(string.Format("The primary contact for the service request {0} is {1} {2}.", 
-    serviceRequestDetails.Title, 
+Console.WriteLine(string.Format("The primary contact for the service request {0} is {1} {2}.",
+    serviceRequestDetails.Title,
     serviceRequestDetails.PrimaryContact.FirstName,
     serviceRequestDetails.PrimaryContact.LastName,
-)); 
+));
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1  |
 
- 
+### URI parameter
 
-**URI parameter**
-
-Use the following URI parameter to get the specified service request. 
+Use the following URI parameter to get the specified service request.
 
 | Name                  | Type     | Required | Description                                 |
 |-----------------------|----------|----------|---------------------------------------------|
 | **servicerequest-id** | **guid** | Y        | A GUID that identifies the service request. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
@@ -82,19 +74,18 @@ MS-CorrelationId: fd969070-4e5f-4c6b-a3c6-1941283b39ae
 X-Locale: en-US
 Content-Type: application/json
 Host: api.partnercenter.microsoft.com
-Content-Length: 0 
+Content-Length: 0
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST response
 
+If successful, this method returns a **Service Request** resource in the response body.
 
-If successful, this method returns a **Service Request** resource in the response body. 
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

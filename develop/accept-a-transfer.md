@@ -1,26 +1,23 @@
 ---
-title: Accept a transfer
-description: How to accept a transfer of subscriptions for a customer.
+title: Accept a transfer of subscriptions
+description: Learn how to use the Partner Center REST API to accept a transfer of subscriptions for a customer. Includes REST request syntax, headers, and REST responses.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
-# Accept a transfer
+# Accept a transfer of subscriptions for a customer using Partner Center REST APIs
 
-Applies to:
+**Applies to:**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A transfer identifier for an existing transfer.
 
 ## REST request
@@ -42,7 +39,7 @@ Use the following path parameter to identify the customer and specify the transf
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request example
 
@@ -96,7 +93,6 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "quantity": 1,
           "partnerIdOnRecord": "5139005",
           "links": {
-            
           }
         }
       ],
@@ -107,16 +103,12 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
         "self": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/21b92393-ffce-4bc7-87c5-62cfa897d8f9",
           "method": "GET",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         },
         "patchOperation": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/21b92393-ffce-4bc7-87c5-62cfa897d8f9",
           "method": "PATCH",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         }
       },
       "attributes": {
@@ -140,7 +132,6 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "quantity": 1,
           "partnerIdOnRecord": "5139005",
           "links": {
-            
           }
         }
       ],
@@ -151,16 +142,12 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
         "self": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/7414b8ea-c167-4cc4-bc8e-b43efc177a46",
           "method": "GET",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         },
         "patchOperation": {
           "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/orders/7414b8ea-c167-4cc4-bc8e-b43efc177a46",
           "method": "PATCH",
-          "headers": [
-            
-          ]
+          "headers": [ ]
         }
       },
       "attributes": {
@@ -181,9 +168,7 @@ Date: Wed, 25 Mar 2020 19:13:06 GMT
           "friendlyName": "Project Online Essentials",
           "quantity": 1,
           "transferGroupId": "1",
-          "addonItems": [
-            
-          ],
+          "addonItems": [ ],
           "partnerIdOnRecord": "5139005",
           "billingCycle": "annual",
           "sourceSubscriptionId": "637FF8F6-D842-4573-8DA8-89765356CD1A"

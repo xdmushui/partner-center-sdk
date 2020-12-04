@@ -1,10 +1,11 @@
 ---
 title: Get agreement metadata for Microsoft Cloud Agreement
-description: This topic explains how to get agreement metadata for Microsoft Cloud Agreement. 
+description: This article explains how to get agreement metadata for Microsoft Cloud Agreement.
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get agreement metadata for Microsoft Cloud Agreement
@@ -13,8 +14,8 @@ ms.localizationpriority: medium
 
 - Partner Center
 
-> [!NOTE]  
-> The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+> [!NOTE]
+> The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
 > - Partner Center operated by 21Vianet
 > - Partner Center for Microsoft Cloud Germany
 > - Partner Center for Microsoft Cloud for US Government
@@ -22,7 +23,9 @@ ms.localizationpriority: medium
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.9 or newer is required.
+
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication..
 
 ## .NET (version 1.14 or newer)
@@ -61,7 +64,7 @@ AgreementMetaData microsoftCloudAgreement = agreements.Items.FirstOrDefault (agr
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
@@ -83,41 +86,39 @@ for (AgreementMetaData metadata : agreements)
 }
 ```
 
-A complete sample can be found in the [GetAgreementDetails](https://github.com/Microsoft/Partner-Center-Java-Samples/blob/master/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetAgreementDetails.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
+A complete sample can be found in the [GetAgreementDetails](https://github.com/microsoft/Partner-Center-Java-Samples/blob/master/sdk/src/main/java/com/microsoft/store/partnercenter/samples/agreements/GetAgreementDetails.java) class from the [console test app](https://github.com/Microsoft/Partner-Center-Java-Samples) project.
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To retrieve agreement metadata for the Microsoft Cloud Agreement:
 
-Use the [**Get-PartnerAgreementDetail**](https://docs.microsoft.com/powershell/module/partnercenter/partner-center/get-partneragreementdetail) command. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
+Use the [**Get-PartnerAgreementDetail**](/powershell/module/partnercenter/get-partneragreementdetail) command. Then search for the item within the collection, which corresponds to the Microsoft Cloud Agreement:
 
 ```powershell
 Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudAgreement'} | Select-Object -First 1
 ```
 
-## REST
-
-### REST request
+## REST request
 
 To retrieve agreement metadata for Microsoft Cloud Agreement, first create a REST Request to retrieve the **AgreementMetaData** collection. Then search for the item in the collection which corresponds to the Microsoft Cloud Agreement.
 
-#### Request syntax
+### Request syntax
 
 | Method | Request URI                                                         |
 |--------|---------------------------------------------------------------------|
 | GET    | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/agreements HTTP/1.1 |
 
-#### Request headers
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/agreements HTTP/1.1
@@ -127,15 +128,15 @@ MS-RequestId: 94e4e214-6b06-4fb7-96d1-94d559f9b47f
 MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns a collection of **AgreementMetaData** resources in the response body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -167,5 +168,3 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 ```
 
 To identify the resource in the response which corresponds to the Microsoft Cloud Agreement, look for the resource whose **agreementType** property has value "MicrosoftCloudAgreement".
-
----

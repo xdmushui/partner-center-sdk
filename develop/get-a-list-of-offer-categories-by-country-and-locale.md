@@ -1,23 +1,23 @@
 ---
 title: Get a list of offer categories by market
 description: How to get a collection that contains all the offer categories in a given country/region and locale.
-ms.assetid: 69174433-74C6-4294-ACAA-C2CE3D69CFEE
 ms.date: 07/25/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of offer categories by market
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get a collection that contains all the offer categories in a given country/region and locale.
+This article describes how to get a collection that contains all the offer categories in a given country/region and locale.
 
 ## Prerequisites
 
@@ -27,8 +27,9 @@ This topic describes how to get a collection that contains all the offer categor
 
 To get a list of offer categories in a given country/region and locale:
 
-1. Use your [**IAggregatePartner.Operations**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection to call the [**With()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context.
-2. Inspect the [**OfferCategories**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
+1. Use your [**IAggregatePartner.Operations**](/dotnet/api/microsoft.store.partnercenter.iaggregatepartner) collection to call the [**With()**](/dotnet/api/microsoft.store.partnercenter.iaggregatepartner.with) method on a given context.
+
+2. Inspect the [**OfferCategories**](/dotnet/api/microsoft.store.partnercenter.ipartner.offercategories) property of the resulting object.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -62,7 +63,7 @@ This table lists the required query parameters to get the offer categories.
 
 A **locale-id** formatted as a string is required.
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

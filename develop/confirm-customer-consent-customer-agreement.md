@@ -1,15 +1,14 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement
-description: Confirm customer acceptance of the Microsoft Customer Agreement. 
+description: Confirm customer acceptance of the Microsoft Customer Agreement.
 ms.date: 02/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Confirm customer acceptance of Microsoft Customer Agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -24,9 +23,13 @@ This article describes how to confirm or re-confirm customer acceptance of the M
 ## Prerequisites
 
 - If you are using the Partner Center .NET SDK, version 1.14 or newer is required.
+
 - Credentials as described in [Partner Center authentication](./partner-center-authentication.md). *This scenario only supports App+User authentication.*
-- A customer identifier (**customer-tenant-id**).
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The date (**dateAgreed**) when the customer accepted the Microsoft Customer Agreement.
+
 - Information about the user from the customer organization that accepted the Microsoft Customer Agreement. This includes:
   - First name
   - Last name
@@ -39,45 +42,47 @@ To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement
 
 1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
 
-```csharp
-// IAggregatePartner partnerOperations;
+   ```csharp
+   // IAggregatePartner partnerOperations;
 
-string agreementType = "MicrosoftCustomerAgreement";
+   string agreementType = "MicrosoftCustomerAgreement";
 
-var microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
-```
+   var microsoftCustomerAgreementDetails = partnerOperations.AgreementDetails.ByAgreementType(agreementType).Get().Items.Single();
+   ```
 
 2. Create a new **Agreement** object containing details of the confirmation.
+
 3. Use the **IAgreggatePartner.Customers** collection and call the **ById** method with the specified **customer-tenant-id**.
+
 4. Use the **Agreements** property, followed by calling **Create** or **CreateAsync**.
 
-```csharp
-// string selectedCustomerId;
+   ```csharp
+   // string selectedCustomerId;
 
-var agreementToCreate = new Agreement
-{
-    DateAgreed = DateTime.UtcNow,
-    TemplateId = microsoftCustomerAgreementDetails.TemplateId,
-    PrimaryContact = new Contact
-    {
-        FirstName = "Tania",
-        LastName = "Carr",
-        Email = "someone@example.com",
-        PhoneNumber = "1234567890"
-    }
-};
+   var agreementToCreate = new Agreement
+   {
+       DateAgreed = DateTime.UtcNow,
+       TemplateId = microsoftCustomerAgreementDetails.TemplateId,
+       PrimaryContact = new Contact
+       {
+           FirstName = "Tania",
+           LastName = "Carr",
+           Email = "someone@example.com",
+           PhoneNumber = "1234567890"
+       }
+   };
 
-Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Create(agreementToCreate);
-```
+   Agreement agreement = partnerOperations.Customers.ById(selectedCustomerId).Agreements.Create(agreementToCreate);
+   ```
 
 A complete sample can be found in the [CreateCustomerAgreement](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples/blob/master/Source/Partner%20Center%20SDK%20Samples/Agreements/CreateCustomerAgreement.cs) class from the [console test app](https://github.com/PartnerCenterSamples/Partner-Center-SDK-Samples) project.
-
 
 ## REST request
 
 To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
 
 1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+
 2. Create a new [**Agreement** resource](agreement-resources.md) to confirm that a customer has accepted the Microsoft Customer Agreement. Use the following [REST request syntax](#request-syntax).
 
 ### Request syntax
@@ -102,9 +107,9 @@ For more information, see [Partner Center REST headers](headers.md).
 
 This table describes the required properties in the REST request body.
 
-| Name      | Type   | Description                                                                                  |  
-|-----------|--------|----------------------------------------------------------------------------------------------|  
-| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Customer Agreement. |  
+| Name      | Type   | Description                                                                                  |
+|-----------|--------|----------------------------------------------------------------------------------------------|
+| Agreement | object | Details provided by partner to confirm customer acceptance of the Microsoft Customer Agreement. |
 
 #### Agreement
 
@@ -116,7 +121,7 @@ This table describes the minimum required fields to create an [**Agreement** res
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
 | type           | string | Agreement type accepted by the customer. Use "MicrosoftCustomerAgreement" if customer accepted the Microsoft Customer Agreement. |
-  
+
 #### Request example
 
 ```http
@@ -138,13 +143,13 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-### REST Response
+## REST response
 
 If successful, this method returns an [**Agreement** resource](./agreement-resources.md).
 
-#### Response success and error codes
+### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. 
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information.
 
 Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 

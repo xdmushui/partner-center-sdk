@@ -1,15 +1,14 @@
 ---
 title: Get a user account by ID
 description: Get a specific user account for a customer.
-ms.assetid: 758C2477-2EF9-4480-9724-C4A001BAC014
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get a user account by ID
-
 
 **Applies To**
 
@@ -18,12 +17,12 @@ ms.localizationpriority: medium
 Get a specific user account for a customer.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+## C\#
 
-To retrieve a user account for a customer, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to retrieve the specific user. Finally, call the [**Users.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.getasync) method to retrieve the user account.
+To retrieve a user account for a customer, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to retrieve the specific user. Finally, call the [**Users.Get**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.getasync) method to retrieve the user account.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -36,18 +35,15 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerUserDetails.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/users/{user-id} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following URI parameters to identify the correct customer and user.
 
@@ -56,17 +52,15 @@ Use the following URI parameters to identify the correct customer and user.
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **user-id**            | **guid** | Y        | The value is a GUID formatted **user-id** that belongs to a single user account.                                                                       |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/users/a9ef48bb-8758-4590-a312-d4a47bfaded4 HTTP/1.1
@@ -78,16 +72,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns the user account for the customer.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -120,11 +113,3 @@ Date: Wed, 21 Dec 2016 22:59:10 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

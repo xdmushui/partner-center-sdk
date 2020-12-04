@@ -1,15 +1,12 @@
 ---
 title: Get the partner's current account balance
 description: Retrieves the partner's current account balance. A summary of the balance and total charges of an invoice for both recurring and one-time charges.
-ms.assetid: 130C8230-6284-4B1F-8741-CA92E1ECA30F
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get the partner's current account balance
-
 
 **Applies To**
 
@@ -20,13 +17,11 @@ ms.localizationpriority: medium
 
 Retrieves the partner's current account balance. A summary of the balance and total charges of an invoice for both recurring and one-time charges.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To retrieve your account balance, use your **IAggregatePartner.Invoices** collection, and then call the **Summary** property. Then call the **Get** function, and finally call the **BalanceAmount** property.
 
@@ -40,26 +35,23 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceSummary.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                              |
 |---------|--------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/summary HTTP/1.1  |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/invoices/summary HTTP/1.1
@@ -70,16 +62,15 @@ MS-CorrelationId: 57eb2ca7-755f-450f-9187-eae1e75a0114
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns an [InvoiceSummary](invoice-resources.md#invoicesummary) resource in the response.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

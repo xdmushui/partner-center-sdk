@@ -1,16 +1,14 @@
 ---
 title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
-ms.assetid: E99B5EC3-2247-4CAD-B651-3000E36AF6B6
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Subscription resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

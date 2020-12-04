@@ -4,12 +4,13 @@ description: The AgreementMetadata resource collection describes agreement types
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: aarzh-AaronZhang
+ms.author: v-aarzh
 ---
 
 # Agreement metadata resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -23,7 +24,7 @@ The **AgreementMetaData** collection provides metadata about all the agreement t
 
 ## AgreementMetaData
 
-Agreement metadata returned includes the following:
+Agreement metadata returned includes the following properties:
 
 | Property      | Type               | Description                                                                       |
 |---------------|--------------------|-----------------------------------------------------------------------------------|

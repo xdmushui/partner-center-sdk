@@ -1,16 +1,14 @@
 ---
 title: Get a customer's utilization records for Azure
 description: You can use the Azure utilization API to get the utilization records of a customer's Azure subscription for a specified time period.
-ms.assetid: 0270DBEA-AAA3-46FB-B5F0-D72B9BAC3112
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get a customer's utilization records for Azure
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
@@ -21,16 +19,18 @@ You can get the utilization records of a customer's Azure subscription for a spe
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone app and App+User credentials.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription identifier.
 
-This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API is not supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at daily level per meter per resource. This is equivalent to the daily grain data provided by the Azure utilization API. You will need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
+This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API isn't supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at a daily level per meter per resource. This rate consumption is equivalent to the daily grain data provided by the Azure utilization API. You'll need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
 
 ## Azure utilization API
 
 This Azure utilization API provides access to utilization records for a time period that represents when the utilization was reported in the billing system. It provides access to the same utilization data that is used to create and calculate the reconciliation file. However, it does not have knowledge of billing system reconciliation file logic. You should not expect reconciliation file summary results to match the result retrieved from this API exactly for the same time period.
 
-For example, the billing system takes the same utilization data and applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes, all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for in the next reconciliation file. For the lateness rules of how the partner is billed, see [Get consumption data for an Azure subscription](https://docs.microsoft.com/previous-versions/azure/reference/mt219001(v=azure.100)).
+For example, the billing system takes the same utilization data and applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes, all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for in the next reconciliation file. For the lateness rules of how the partner is billed, see [Get consumption data for an Azure subscription](/previous-versions/azure/reference/mt219001(v=azure.100)).
 
 This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
 
@@ -38,9 +38,11 @@ This REST API is paged. If the response payload is larger than a single page, yo
 
 To obtain the Azure Utilization Records:
 
-1. Get the customer ID and subscription ID. 
-2. Call the [**IAzureUtilizationCollection.Query**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.utilization.iazureutilizationcollection.query) method to return a [**ResourceCollection**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.resourcecollection-1) that contains the utilization records. 
-3. Obtain an Azure utilization record enumerator to traverse the utilization pages. You must do this because the resource collection is paged.
+1. Get the customer ID and subscription ID.
+
+2. Call the [**IAzureUtilizationCollection.Query**](/dotnet/api/microsoft.store.partnercenter.utilization.iazureutilizationcollection.query) method to return a [**ResourceCollection**](/dotnet/api/microsoft.store.partnercenter.models.resourcecollection-1) that contains the utilization records.
+
+3. Obtain an Azure utilization record enumerator to traverse the utilization pages. This step is required, because the resource collection is paged.
 
 - **Sample**: [Console test app](console-test-app.md)
 - **Project**: Partner Center SDK Samples
@@ -75,7 +77,7 @@ while (utilizationRecordEnumerator.HasValue)
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the **IAzureUtilizationCollection.query** function to return a **ResourceCollection** that contains the utilization records. Because the resource collection is paged, you must then obtain an Azure utilization record enumerator to traverse the utilization pages.
 
@@ -110,7 +112,7 @@ while (utilizationRecordEnumerator.hasValue())
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To obtain the Azure Utilization Records, you first need a customer identifier and a subscription identifier. You then call the [**Get-PartnerCustomerSubscriptionUtilization**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomerSubscriptionUtilization.md). This command will return all records available for the specified period of time.
 
@@ -121,17 +123,15 @@ To obtain the Azure Utilization Records, you first need a customer identifier an
 Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -SubscriptionId $subscriptionId -StartDate (Get-Date).AddDays(-2).ToUniversalTime() -Granularity Hourly -ShowDetails
 ```
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method | Request URI |
 |------- | ----------- |
 | **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/utilizations/azure?start\_time={start-time}&end\_time={end-time}&granularity={granularity}&show\_details={True} |
 
-##### URI parameters
+#### URI parameters
 
 Use the following path and query parameters to get the utilization records.
 
@@ -145,15 +145,15 @@ Use the following path and query parameters to get the utilization records.
 | show_details | boolean | No | Specifies whether to get the instance-level usage details. The default is `true`. |
 | size | number | No | Specifies the number of aggregations returned by a single API call. The default is 1000. The max is 1000. |
 
-#### Request headers
+### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None
 
-#### Request example
+### Request example
 
 The following example request produces results similar to what the reconciliation file will show for the period 7/2 - 8/1. These results may not match exactly (see the section [Azure utilization API](#azure-utilization-api) for details).
 
@@ -169,15 +169,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-### REST response
+## REST response
 
-If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. If the Azure utilization data is not yet ready in a dependent system, this method returns an HTTP Status Code 204 with a Retry-After header.
+If successful, this method returns a collection of [Azure Utilization Record](azure-utilization-record-resources.md) resources in the response body. If the Azure utilization data isn't yet ready in a dependent system, this method returns an HTTP Status Code 204 with a Retry-After header.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read the HTTP status code, [error code type](error-codes.md), and additional parameters.
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

@@ -1,11 +1,11 @@
 ---
 title: Get an offer by ID
 description: Gets a Offer resource that matches the offer ID.
-ms.assetid: F5165C5A-7C93-4F8E-A733-641511BC8FB7
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: brentserbus
+ms.author: brserbus
 ---
 
 # Get an offer by ID
@@ -19,31 +19,30 @@ ms.localizationpriority: medium
 
 Gets an **Offer** resource that matches the offer ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An offer ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C#
-
-To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country with a call to **ByCountry()**, and then call the [**ByID()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
+To find a specific offer by ID, use your **IAggregatePartner.Offers** collection, establish the country with a call to **ByCountry()**, and then call the [**ByID()**](/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method. Then, call the [**Get()**](/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.get) or [**Get Async()**](/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.getasync) method.
 
 ```csharp
 // IAggretagePartner partnerOperations;
 // string countryCode;
 // string offerId;
 
-// retrieve the offer 
+// retrieve the offer
 var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
 
-### Java
+## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To find a specific offer by ID, use your **IAggregatePartner.getOffers** function, establish the country with a call to the **byCountry()** function, and then call the **byID()** function. Then call the **get()** function.
 
@@ -56,9 +55,9 @@ To find a specific offer by ID, use your **IAggregatePartner.getOffers** functio
 Offer offer = partnerOperations.getOffers().byCountry(countryCode).byId(offerId).get();
 ```
 
-### PowerShell
+## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerOffer.md) command, and specify the **CountryCode** and **OfferId** parameters.
 
@@ -69,31 +68,31 @@ To find a specific offer by ID, execute the [**Get-PartnerOffer**](https://githu
 Get-PartnerOffer -Country $countryCode -OfferId $offerId
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                    |
 |---------|------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}?country={country-id} HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 | Name           | Type       | Required | Description                           |
 |----------------|------------|----------|---------------------------------------|
 | **offer-id**   | **guid**   | Y        | A GUID that corresponds to the offer. |
 | **country-id** | **string** | Y        | The country/region ID.                |
 
-**Request headers**
+### Request headers
 
 - A **locale-id** formatted as a string is required.
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers/<offer-id>?country=<country-id> HTTP/1.1
@@ -105,15 +104,15 @@ X-Locale: <locale-id>
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
 If successful, this method returns an **Offer** resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

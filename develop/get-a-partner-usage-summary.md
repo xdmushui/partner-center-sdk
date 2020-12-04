@@ -1,16 +1,17 @@
 ---
 title: Get a usage summary for a partner
 description: You can use the PartnerUsageSummary resource to get a partner usage summary of all customers that purchased a specific Azure service or resource during the current billing period.
-ms.assetid: 
+
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get a usage summary for a partner
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
@@ -29,6 +30,7 @@ You can use the **PartnerUsageSummary** resource to get a partner usage summary 
 To get a usage summary for all customers that purchased a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner**.
+
 2. Call the **UsageSummary** property, followed by the **Get()** or **GetAsync()** methods:
 
     ``` csharp
@@ -43,25 +45,23 @@ For an example, see the following:
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetPartnerUsageSummary.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                         |
 |---------|---------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/usagesummary HTTP/1.1 |
 
-#### Request headers
+### Request headers
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/usagesummary HTTP/1.1
@@ -71,15 +71,15 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns a **PartnerUsageSummary** resource in the response body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

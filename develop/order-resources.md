@@ -1,16 +1,14 @@
 ---
 title: Order resources
 description: A partner places an order when a customer wants to buy a subscription from a list of offers.
-ms.assetid: 5CFA35FF-1C0D-461D-A942-309AFCD98395
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Order resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -35,7 +33,7 @@ Describes a partner's order.
 | transactionType    | string                                             | Read-only. The transaction type of the order. Supported values are 'UserPurchase', 'SystemPurchase', or 'SystemBilling' |
 | lineItems          | array of [OrderLineItem](#orderlineitem) resources | An itemized list of the offers the customer is purchasing including the quantity.        |
 | currencyCode       | string                                             | Read-only. The currency used when placing the order. Applied upon successful creation of the order.           |
-| currencySymbol     | string                                             | Read-only. The currency symbol assciated with the currency code. |
+| currencySymbol     | string                                             | Read-only. The currency symbol associated with the currency code. |
 | creationDate       | datetime                                           | Read-only. The date the order was created, in date-time format. Applied upon successful creation of the order.                                   |
 | status             | string                                             | Read-only. The status of the order.  Supported values are the member names found in [**OrderStatus**](#orderstatus).        |
 | links              | [OrderLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the Order.            |
@@ -74,8 +72,8 @@ Represents the resource links corresponding to the order.
 
 | Property           | Type                                         | Description                                                                   |
 |--------------------|----------------------------------------------|-------------------------------------------------------------------------------|
-| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve provisioning status for the order.       |
-| self               | [Link](utility-resources.md#Link)            | The link to retrieve the order resource.                                      |
+| provisioningStatus | [Link](utility-resources.md#link)            | When populated, the link to retrieve provisioning status for the order.       |
+| self               | [Link](utility-resources.md#link)            | The link to retrieve the order resource.                                      |
 
 ## OrderLineItemLinks
 
@@ -83,14 +81,14 @@ Represents the full subscription associated with the order.
 
 | Property           | Type                                         | Description                                                                          |
 |--------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
-| provisioningStatus | [Link](utility-resources.md#Link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
-| sku                | [Link](utility-resources.md#Link)            | The link to retrieve SKU information for the catalog item bought.                    |
-| subscription       | [Link](utility-resources.md#Link)            | When populated, the link to the full subscription information.                       |
-| activationLinks    | [Link](utility-resources.md#Link)            | When populated, the GET resource for links to activate the subscription.             |
+| provisioningStatus | [Link](utility-resources.md#link)            | When populated, the link to retrieve the [provisioning status](#orderlineitemprovisioningstatus) of the line item.       |
+| sku                | [Link](utility-resources.md#link)            | The link to retrieve SKU information for the catalog item bought.                    |
+| subscription       | [Link](utility-resources.md#link)            | When populated, the link to the full subscription information.                       |
+| activationLinks    | [Link](utility-resources.md#link)            | When populated, the GET resource for links to activate the subscription.             |
 
 ## OrderStatus
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the state of the order.
+An [Enum/dotnet/api/system.enum) with values that indicate the state of the order.
 
 | Value              | Position     | Description                                     |
 |--------------------|--------------|-------------------------------------------------|

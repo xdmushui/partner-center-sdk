@@ -1,15 +1,12 @@
 ---
 title: Verify domain availability
 description: How to determine if a domain is available for use.
-ms.assetid: 9ECF8241-3672-441D-B34D-83F7C23138B3
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Verify domain availability
-
 
 **Applies To**
 
@@ -20,38 +17,34 @@ ms.localizationpriority: medium
 
 How to determine if a domain is available for use.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A domain (e.g. "contoso.onmicrosoft.com").
 
-## <span id="C_"/><span id="c_"/>C#
+- A domain (for example `contoso.onmicrosoft.com`).
 
+## C\#
 
-To verify if a domain is available, first call [**IAggregatePartner.Domains**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
+To verify if a domain is available, first call [**IAggregatePartner.Domains**](/dotnet/api/microsoft.store.partnercenter.ipartner.domains) to obtain an interface to domain operations. Then call the [**ByDomain**](/dotnet/api/microsoft.store.partnercenter.domains.idomaincollection.bydomain) method with the domain to check. This method retrieves an interface to the operations available for a specific domain. Finally, call the [**Exists**](/dotnet/api/microsoft.store.partnercenter.domains.idomain.exists) method to see if the domain already exists.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
-// const string domain = "contoso.onmicrosoft.com";  
+// const string domain = "contoso.onmicrosoft.com";
 
 bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 ```
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CheckDomainAvailability.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                              |
 |----------|--------------------------------------------------------------------------|
 | **HEAD** | [*{baseURL}*](partner-center-rest-urls.md)/v1/domains/{domain} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to verify domain availability.
 
@@ -59,17 +52,15 @@ Use the following query parameter to verify domain availability.
 |------------|------------|----------|-----------------------------------------------|
 | **domain** | **string** | Y        | A string that identifies the domain to check. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 HEAD https://api.partnercenter.microsoft.com/v1/domains/contoso.onmicrosoft.com HTTP/1.1
@@ -82,16 +73,15 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
+If the domain exists, it isn't available for use and a response status code 200 OK is returned. If the domain isn't found, it's available for use and a response status code 404 Not Found is returned.
 
-If the domain exists it is not available for use and a response status code 200 OK is returned. If the domain is not found it is available for use and a response status code 404 Not Found is returned.
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for when the domain is already in use**
+### Response example for when the domain is already in use
 
 ```http
 HTTP/1.1 200 OK
@@ -103,7 +93,7 @@ MS-ServerId: 201022015
 Date: Tue, 31 Jan 2017 22:22:35 GMT
 ```
 
-**Response example for when the domain is available**
+### Response example for when the domain is available
 
 ```http
 HTTP/1.1 404 Not Found
@@ -114,11 +104,3 @@ MS-CV: RRmc+bEw9U2e97CC.0
 MS-ServerId: 202010406
 Date: Tue, 31 Jan 2017 22:36:01 GMT
 ```
-
- 
-
- 
-
-
-
-

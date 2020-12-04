@@ -1,15 +1,14 @@
 ---
 title: Get a customer's billing profile
 description: Gets the billing profile of a customer.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
-ms.assetid: 32914A31-87CC-4F9D-869C-CAFEDA2CAE41
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get a customer's billing profile
-
 
 **Applies To**
 
@@ -22,16 +21,15 @@ Gets the billing profile of a customer.
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, under the customer's name in the left sidebar, select **Account**. The billing profile can be found under the **Bill-to info** heading.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+## C\#
 
-To get a customer's billing profile, use your [**IPartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Profiles**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, followed by the [**Billing**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.billing) property. Finally, call the [**Get()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.get) or [**GetAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.getasync) methods.
+To get a customer's billing profile, use your [**IPartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection and call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method. Then call the [**Profiles**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.profiles) property, followed by the [**Billing**](/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerprofilecollection.billing) property. Finally, call the [**Get()**](/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.get) or [**GetAsync()**](/dotnet/api/microsoft.store.partnercenter.customers.profiles.icustomerreadonlyprofile-1.getasync) methods.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -42,18 +40,15 @@ var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profil
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetCustomerBillingProfile.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/profiles/billing HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to get the billing profile.
 
@@ -61,17 +56,15 @@ Use the following query parameter to get the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/profiles/billing HTTP/1.1
@@ -81,16 +74,15 @@ MS-RequestId: a5581a74-2778-4e34-9172-18baa4877081
 MS-CorrelationId: 51d521b3-62db-4682-b75d-fb8ab09113b2
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns a collection of [Profile](profile-resources.md) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -131,11 +123,3 @@ Date: Mon, 23 Nov 2015 18:13:43 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

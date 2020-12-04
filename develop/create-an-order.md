@@ -1,16 +1,14 @@
 ---
 title: Create an order
 description: How to create an order for a customer.
-ms.assetid: FE4949FA-7C4D-462D-8F32-FAADCF166875
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create an order
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -20,12 +18,14 @@ Creating an **order for Azure reserved VM instance products** applies *only* to:
 
 - Partner Center
 
-For information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+For information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - An offer identifier.
 
 ## C\#
@@ -33,9 +33,12 @@ For information about what is currently available to sell, see [Partner offers i
 To create an order for a customer:
 
 1. Instantiate an [**Order**](order-resources.md) object and set the **ReferenceCustomerID** property to the customer ID to record the customer.
+
 2. Create a list of [**OrderLineItem**](order-resources.md#orderlineitem) objects, and assign the list to the order's **LineItems** property. Each order line item contains the purchase information for one offer. You must have at least one order line item.
-3. Obtain an interface to order operations. First, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
-4. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
+
+3. Obtain an interface to order operations. First, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, retrieve the interface from the [**Orders**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+
+4. Call the [**Create**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -85,7 +88,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -170,14 +173,6 @@ If successful, the method returns an [Order](order-resources.md) resource in the
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-This method returns the following error codes:
-
-| HTTP Status Code     | Error code   | Description                                                                                               |
-|----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
-| 400                  | 2093         | Inventory is not available for the catalog item selected.                                                 |
-| 400                  | 2094         | Subscription is not a valid Azure subscription. Only applicable for Azure Reserved VM Instance purchase.     |
-| 400                  | 2095         | Subscription is not enabled for an Azure Reserved VM Instance purchase. |
-
 ### Response example
 
 ```http
@@ -206,7 +201,7 @@ Date: Thu, 15 Mar 2018 22:30:02 GMT
                 "headers": []
             }
         }
-    ],
+    } ],
     "creationDate": "2018-03-15T22:30:02.085152Z",
     "status": "pending",
     "links": {

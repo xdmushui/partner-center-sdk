@@ -4,23 +4,20 @@ description: How to withdraw a created transfer of subscriptions for a customer.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Withdraw a transfer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A transfer identifier for an existing transfer.
 
 ## REST request
@@ -42,8 +39,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
-
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request example
 

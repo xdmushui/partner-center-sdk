@@ -4,23 +4,20 @@ description: How to get details of a transfer of subscriptions for a customer.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get transfer details by id
 
-Applies to:
+**Applies to:**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A transfer identifier for an existing transfer.
 
 ## REST request
@@ -42,8 +39,7 @@ Use the following path parameter to identify the customer and specify the transf
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
-
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request example
 
@@ -97,7 +93,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -109,7 +105,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     },
     {
@@ -121,7 +117,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "quantity": 1,
       "partnerIdOnRecord": "5139005",
       "addonItems": [
-        
+
       ]
     }
   ],
@@ -130,7 +126,7 @@ Date: Fri, 27 Mar 2020 18:25:25 GMT
       "uri": "/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/transfers/46e8ed67-8adf-4f65-b3d8-d31318080556",
       "method": "GET",
       "headers": [
-        
+
       ]
     }
   },

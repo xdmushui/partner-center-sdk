@@ -1,16 +1,14 @@
 ---
 title: Create an order for a customer of an indirect reseller
 description: How to create an order for a customer of an indirect reseller.
-ms.assetid: 3B89F8CE-96A8-443F-927E-6351E24FDBFF
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create an order for a customer of an indirect reseller
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -19,8 +17,11 @@ How to create an order for a customer of an indirect reseller.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- The customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The offer identifier of the item to purchase.
+
 - The tenant identifier of the indirect reseller.
 
 ## C\#
@@ -28,11 +29,16 @@ How to create an order for a customer of an indirect reseller.
 To create an order for a customer of an indirect reseller:
 
 1. Get a collection of the indirect resellers that have a relationship with the signed-in partner.
-2. Get a local variable to the item in the collection that matches the indirect reseller ID. This step helps you access the reseller's [**MpnId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
-3. Instantiate an [**Order**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer.
-4. Create a list of [**OrderLineItem**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller. You must have at least one order line item.
-5. Obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
-6. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
+
+2. Get a local variable to the item in the collection that matches the indirect reseller ID. This step helps you access the reseller's [**MpnId**](/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationship.mpnid) property when you create the order.
+
+3. Instantiate an [**Order**](/dotnet/api/microsoft.store.partnercenter.models.orders.order) object and set the [**ReferenceCustomerID**](/dotnet/api/microsoft.store.partnercenter.models.orders.order.referencecustomerid) property to the customer identifier in order to record the customer.
+
+4. Create a list of [**OrderLineItem**](/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) objects, and assign the list to the order's [**LineItems**](/dotnet/api/microsoft.store.partnercenter.models.orders.order.lineitems) property. Each order line item contains the purchase information for one offer. Be sure to populate the [**PartnerIdOnRecord**](/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem.partneridonrecord) property in each line item with the MPN ID of the indirect reseller. You must have at least one order line item.
+
+5. Obtain an interface to order operations by calling the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and then retrieve the interface from the [**Orders**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
+
+6. Call the [**Create**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method to create the order.
 
 ### C\# example
 
@@ -90,7 +96,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -102,7 +108,7 @@ This table describes the **Order** properties in the request body.
 | ---- | ---- | -------- | ----------- |
 | id | string | No | An order identifier that is supplied upon successful creation of the order. |
 | referenceCustomerId | string | Yes | The customer identifier. |
-| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature is not yet generally available. Support for annual billing is coming soon. |
+| billingCycle | string | No | The frequency with which the partner is billed for this order. The default is &quot;Monthly&quot; and is applied upon successful creation of the order. Supported values are the member names found in [**BillingCycleType**](/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Note: the annual billing feature isn't yet generally available. Support for annual billing is coming soon. |
 | lineItems | array of objects | Yes | An array of [**OrderLineItem**](#orderlineitem) resources. |
 | creationDate | string | No | The date the order was created, in date-time format. Applied upon successful creation of the order. |
 | attributes | object | No | Contains "ObjectType": "Order". |
@@ -119,7 +125,7 @@ This table describes the **OrderLineItem** properties in the request body.
 | parentSubscriptionId | string | No | Optional. The ID of the parent subscription in an add-on offer. Applies to PATCH only. |
 | friendlyName | string | No | Optional. The friendly name for the subscription defined by the partner to help disambiguate. |
 | quantity | int | Yes | The number of licenses for a license-based subscription. |
-| partnerIdOnRecord | string | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. **Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller is not recorded and as a consequence incentive calculations may not include the sale.** |
+| partnerIdOnRecord | string | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. **Failure to provide the reseller MPN ID does not cause the order to fail. However, the reseller isn't recorded and as a consequence incentive calculations may not include the sale.** |
 | attributes | object | No | Contains "ObjectType":"OrderLineItem". |
 
 ### Request example

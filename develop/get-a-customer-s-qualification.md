@@ -4,9 +4,9 @@ description: How to get a customer's qualification.
 ms.date: 08/07/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
-
 
 # Get a customer's qualification
 
@@ -16,16 +16,15 @@ ms.localizationpriority: medium
 
 How to get a customer's qualification.
 
-
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier.
 
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-To get a customer's qualification, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier. Then use the [**Qualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property to retrieve a [**ICustomerQualification**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) interface. Finally, call [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) to retrieve the customer's qualification.
+To get a customer's qualification, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier. Then use the [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property to retrieve a [**ICustomerQualification**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) interface. Finally, call [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) to retrieve the customer's qualification.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -34,17 +33,15 @@ To get a customer's qualification, call the [**IAggregatePartner.Customers.ById*
 var customerQualification = partnerOperations.Customers.ById(customerId).Qualification.Get();
 ```
 
+## REST request
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/qualification HTTP/1.1 |
 
- 
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameter to get all the qualification.
 
@@ -52,15 +49,15 @@ This table lists the required query parameter to get all the qualification.
 |--------------------|--------|----------|-------------------------------------------------------|
 | **customer-tenant-id** | string | Yes      | A GUID-formatted string that identifies the customer. |
 
-**Request headers**
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification HTTP/1.1
@@ -70,20 +67,19 @@ MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 ```
 
-
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
 If successful, this method returns a qualification value in the response body.  Below is an example of the **GET** call on a customer with the **education** qualification.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
-Content-Length: 
+Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
@@ -92,6 +88,6 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ```
 
-## Related topics
- - [Update a customer's qualification](update-a-customer-s-qualification.md)
+## Related articles
 
+- [Update a customer's qualification](update-a-customer-s-qualification.md)

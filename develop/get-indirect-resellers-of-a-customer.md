@@ -1,11 +1,11 @@
 ---
 title: Get indirect resellers of a customer
 description: How to get a list of the indirect resellers that have a relationship with a specified customer.
-ms.assetid: C3C4BE9A-97E8-41AD-AB28-6F9CB7DCE475
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get indirect resellers of a customer
@@ -16,16 +16,15 @@ ms.localizationpriority: medium
 
 How to get a list of the indirect resellers that have a relationship with a specified customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- The customer identifier.
 
-## <span id="C_"/><span id="c_"/>C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+## C\#
 
-To retrieve a list of indirect resellers with whom the specified customer has a relationship, first get an interface to customer collection operations for the specific customer from the [**partnerOperations.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property by providing the customer ID to identify the customer. Then call the [**Relationships.Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.get) or [**Get\_Async**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.getasync) method to get the list of indirect resellers.
+To retrieve a list of indirect resellers with whom the specified customer has a relationship, first get an interface to customer collection operations for the specific customer from the [**partnerOperations.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.relationships) property by providing the customer ID to identify the customer. Then call the [**Relationships.Get**](/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.get) or [**Get\_Async**](/dotnet/api/microsoft.store.partnercenter.relationships.icustomerrelationshipcollection.getasync) method to get the list of indirect resellers.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -36,18 +35,15 @@ To retrieve a list of indirect resellers with whom the specified customer has a 
 
 **Sample**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellersOfCustomer.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/relationships HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following path parameter to identify the customer.
 
@@ -55,17 +51,15 @@ Use the following path parameter to identify the customer.
 |-------------|--------|----------|-------------------------------------------------------|
 | customer-id | string | Yes      | A GUID formatted string that identifies the customer. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/c501c3c4-d776-40ef-9ecf-9cefb59442c1/relationships HTTP/1.1
@@ -77,15 +71,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
 If successful, the response body contains a collection of [PartnerRelationship](relationships-resources.md) resources to identify the resellers.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

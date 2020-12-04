@@ -5,12 +5,13 @@ ms.assetid:
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of products (by customer)
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -22,13 +23,12 @@ You can use the following methods to get a collection of products for an existin
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier (**customer-tenant-id**).
 
-## REST
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-### Rest request
+## REST request
 
-#### Request syntax
+### Request syntax
 
 | Method | Request URI                                                                                                              |
 |--------|--------------------------------------------------------------------------------------------------------------------------|
@@ -39,17 +39,17 @@ You can use the following methods to get a collection of products for an existin
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
-| **targetView** | string | Yes | Identifies the target view of the catalog. The supported values are: <ul><li>**Azure**, which includes all Azure items</li><li>**AzureReservations**, which includes all Azure reservation items</li><li>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items</li><li>**AzureReservationsSQL**, which includes all SQL reservation items</li><li>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items</li><li>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans</li><li>**OnlineServices**, which  includes all online service items, including commercial marketplace products</li><li>**Software**, which  includes all software items</li><li>**SoftwareSUSELinux**, which includes all software SUSE Linux items</li><li>**SoftwarePerpetual**, which includes all perpetual software items</li><li>**SoftwareSubscriptions**, which includes all software subscription items </ul> |
+| **targetView** | string | Yes | Identifies the target view of the catalog. The supported values are: <br/><br/>**Azure**, which includes all Azure items<br/><br/>**AzureReservations**, which includes all Azure reservation items<br/><br/>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items<br/><br/>**AzureReservationsSQL**, which includes all SQL reservation items<br/><br/>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items<br/><br/>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans<br/><br/>**OnlineServices**, which  includes all online service items, including commercial marketplace products<br/><br/>**Software**, which  includes all software items<br/><br/>**SoftwareSUSELinux**, which includes all software SUSE Linux items<br/><br/>**SoftwarePerpetual**, which includes all perpetual software items<br/><br/>**SoftwareSubscriptions**, which includes all software subscription items  |
 
-#### Request header
+### Request header
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 Request for a list of Azure usage-based products available to a given customer. Products for both Microsoft Azure (MS-AZR-0145P) and Azure plans will be returned for customers in public cloud:
 
@@ -61,9 +61,9 @@ MS-RequestId: 83643f5e-5dfd-4375-88ed-054412460dc8
 MS-CorrelationId: b1939cb2-e83d-4fb0-989f-514fb741b734
 ```
 
-### Rest response
+## Rest response
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -71,9 +71,9 @@ This method returns the following error codes:
 
 | HTTP Status Code | Error code   | Description                     |
 |------------------|--------------|---------------------------------|
-| 403 | 400036 | Access to the requested targetView is not allowed. | 
+| 403 | 400036 | Access to the requested targetView is not allowed. |
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -81,7 +81,7 @@ Content-Length: 1909
 Content-Type: application/json; charset=utf-8
 MS-CorrelationId: cad955c2-8efc-47fe-b112-548ff002ba18
 MS-RequestId: ae7288e2-2673-4ad4-8c12-7aad818d5949
- 
+
 {
     "totalCount": 2,
     "items": [

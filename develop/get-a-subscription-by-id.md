@@ -1,15 +1,14 @@
 ---
 title: Get a subscription by ID
 description: Gets a Subscription resource that matches the customer ID and the subscription ID.
-ms.assetid: 0A91755F-C5AB-4CB1-9E61-6C927F6AA5C5
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a subscription by ID
-
 
 **Applies To**
 
@@ -20,17 +19,17 @@ ms.localizationpriority: medium
 
 Gets a [Subscription](subscription-resources.md) resource that matches the customer ID and the subscription ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription. Use that [**interface**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get).
+To get a subscription by ID, begin by obtaining an interface to the subscription operations by calling the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer, and the [**Subscriptions.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the subscription. Use that [**interface**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) to retrieve the subscription details by calling [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get).
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -42,18 +41,15 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscription.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                |
 |---------|----------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameters to get the subscription.
 
@@ -62,21 +58,19 @@ This table lists the required query parameters to get the subscription.
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
 | **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/subscriptions/A356AC8C-E310-44F4-BF85-C7F29044AF99 HTTP/1.1
-Authorization: Bearer <token> 
+Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 8f489776-a3f3-47cb-91c3-538e1f70f560
 MS-CorrelationId: e72e1dc3-4abd-4ce0-908b-d23fdaedcb28
@@ -84,16 +78,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a [Subscription](subscription-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example for a standard subscription**
+### Response example for a standard subscription
 
 ```http
 HTTP/1.1 200 OK
@@ -106,7 +99,7 @@ MS-ServerId: 202010406
 Date: Fri, 27 Jan 2017 21:51:40 GMT
 
 {
-    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99", 
+    "id": "A356AC8C-E310-44F4-BF85-C7F29044AF99",
     "entitlementId": "42226ED6-070A-4E0F-B80C-4CDFB3E97AA7",
     "offerId": "MS-AZR-0145P",
     "offerName": "Microsoft Azure",
@@ -140,7 +133,7 @@ Date: Fri, 27 Jan 2017 21:51:40 GMT
 }
 ```
 
-**Response example for an add-on subscription**
+### Response example for an add-on subscription
 
 The response for an add-on subscription includes the parent subscription ID in the body and in the links.
 
@@ -193,11 +186,3 @@ Date: Fri, 27 Jan 2017 00:12:53 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

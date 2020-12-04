@@ -1,11 +1,9 @@
 ---
 title: Get prices for Microsoft Azure Partner Shared Services
 description: How to get an Azure Rate Card with prices for Microsoft Azure Partner Shared Services.
-ms.assetid: B5B2F63A-D33F-4D76-8917-9952E6355746
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get prices for Microsoft Azure Partner Shared Services
@@ -18,13 +16,13 @@ ms.localizationpriority: medium
 
 How to get an [Azure Rate Card](azure-rate-card-resources.md) with prices for Microsoft Azure Partner Shared Services.
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. By default, the API uses your partner profile settings in Partner Center and your browser language, and those settings are customizable. The location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## Example Code
 
-### C# 
+## C\#
 
-To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.getshared) method to return an [**AzureRateCard**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
+To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](/dotnet/api/microsoft.store.partnercenter.ratecards.iazureratecard.getshared) method to return an [**AzureRateCard**](/dotnet/api/microsoft.store.partnercenter.models.ratecards.azureratecard) resource that contains the Azure prices.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -32,9 +30,9 @@ To obtain the Azure Rate Card, call the [**IAzureRateCard.GetShared**](https://d
 var azureRateCard = partner.RateCards.Azure.GetShared();
 ```
 
-### Java
+## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To obtain the Azure Rate Card, call the **IAzureRateCard.getShared** function to return rate card details that contains the Azure prices.
 
@@ -44,42 +42,42 @@ To obtain the Azure Rate Card, call the **IAzureRateCard.getShared** function to
 AzureRateCard azureRateCard = partner.getRateCards().getAzure().getShared();
 ```
 
-### PowerShell
+## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
-To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command and specify the **SharedServices** parameter to retrun rate card details that contains the Azure prices.
+To obtain the Azure Card, execute the [**Get-PartnerAzureRateCard**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerAzureRateCard.md) command and specify the **SharedServices** parameter to return rate card details that contains the Azure prices.
 
 ```powershell
 Get-PartnerAzureRateCard -SharedServices
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                               |
 |---------|---------------------------------------------------------------------------|
 | **GET** | *{baseURL}*/v1/ratecards/azure-shared?currency={currency}&region={region} |
 
-**URI parameters**
+### URI parameters
 
 | Name     | Type   | Required | Description                                                                                                                                                                               |
 |----------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (e.g. "EUR"). The default is the currency associated with the market in the partner profile. |
-| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (e.g. "FR"). The default is the country/region code set in the partner profile.        |
+| currency | string | No       | Optional three letter ISO code for the currency in which the resource rates will be provided (for example `EUR`). The default is the currency associated with the market in the partner profile. |
+| region   | string | No       | Optional two-letter ISO country/region code that indicates the market where the offer is purchased (for example `FR`). The default is the country/region code set in the partner profile.        |
 
 If the optional X-Locale header is included in the request, its value determines the language used for the details in the response.
 
-**Request headers**
+### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/ratecards/azure-shared HTTP/1.1
@@ -92,15 +90,15 @@ Host: api.partnercenter.microsoft.com
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
+## REST response
 
-If this is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
+If the request is successful, it returns an [Azure Rate Card](azure-rate-card-resources.md) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

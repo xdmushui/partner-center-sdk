@@ -1,15 +1,16 @@
 ---
 title: Get a list of Azure entitlements for a subscription
 description: You can use the AzureEntitlement resource to  get a collection of Azure entitlement resources that belong to a subscription.
-ms.date: 11/01/2019
+ms.date: 07/06/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of Azure entitlements for a subscription
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -18,7 +19,9 @@ You can use the [Azure entitlement resource](subscription-resources.md#azureenti
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier (**customer-tenant-id**). If you don't have a customer's identifier, you can look it up in Partner Center by choosing the customer from the customers list, selecting **Account**, then saving their **Microsoft ID**.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription identifier.
 
 ## REST request
@@ -40,7 +43,7 @@ The following table lists the required query parameters to get all the Azure ent
 
 ### Request headers
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -86,3 +89,4 @@ Date: Wed, 04 Oct 2019 05:50:45 GMT
    }],
     "attributes":{"objectType":"Collection"}
   }
+```

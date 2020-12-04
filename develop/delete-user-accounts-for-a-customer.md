@@ -1,25 +1,25 @@
 ---
 title: Delete a user account for a customer
 description: How to delete an existing user account for a customer.
-ms.assetid: 12097809-A62D-4929-9F1D-08676784BA39
 ms.date: 06/20/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Delete a user account for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
-This topic explains how to delete an existing user account for a customer.
+This article explains how to delete an existing user account for a customer.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, look up the ID in Partner Center. Choose the customer from the customers list, select **Account**, then save their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A user ID. If you do not have the user ID, see [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md).
 
 ## Deleting a user account
@@ -32,9 +32,11 @@ You can [restore a deleted user account for a customer](restore-a-user-for-a-cus
 
 To delete an existing customer user account:
 
-1. Use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer.
-2. Call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user.
-3. Call the [**Delete**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.delete) method to delete the user and set the user state to inactive.
+1. Use the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer.
+
+2. Call the [**Users.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method to identify the user.
+
+3. Call the [**Delete**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.delete) method to delete the user and set the user state to inactive.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -65,7 +67,7 @@ Use the following query parameters to identify the customer and user.
 
 ### Request headers
 
-See [Partner Center REST Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

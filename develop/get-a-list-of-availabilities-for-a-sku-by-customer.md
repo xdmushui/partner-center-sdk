@@ -5,12 +5,13 @@ ms.assetid:
 ms.date: 10/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of availabilities for a SKU (by customer)
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -22,37 +23,38 @@ You can use the following methods to get a collection of availabilities for a sp
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier (**customer-tenant-id**).
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A product identifier (**product-id**).
+
 - A SKU identifier (**sku-id**).
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method | Request URI                                                                                                                 |
 |--------|-----------------------------------------------------------------------------------------------------------------------------|
 | POST   | [*\{baseURL\}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/products/{product-id}/skus/{sku-id} HTTP/1.1 |
 
-#### Request URI parameters
+### Request URI parameters
 
 | Name               | Type | Required | Description                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
 | customer-tenant-id | GUID | Yes | The value is a GUID-formatted **customer-tenant-id**, which is an identifier that allows you to specify a customer. |
 | product-id | string | Yes | A string that identifies the product. |
-| sku-id | string | Yes | A tring that identifies the SKU. |
+| sku-id | string | Yes | A string that identifies the SKU. |
 
-#### Request header
+### Request header
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/65543400-f8b0-4783-8530-6d35ab8c6801/products/DZH318Z0BPS6/skus/0001/availabilities HTTP/1.1
@@ -62,9 +64,9 @@ MS-RequestId: 83643f5e-5dfd-4375-88ed-054412460dc8
 MS-CorrelationId: b1939cb2-e83d-4fb0-989f-514fb741b734
 ```
 
-### REST response
+## REST response
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -74,7 +76,7 @@ This method returns the following error codes:
 |------------------|------------|-------------|
 | 404 | 400013 | The parent product was not found. |
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 200 OK

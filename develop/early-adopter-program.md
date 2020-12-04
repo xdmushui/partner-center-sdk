@@ -1,15 +1,14 @@
 ---
-title: Join the Partner Center API and SDK Early Adopter Program 
+title: Join the Partner Center API and SDK Early Adopter Program
 description: Partners can collaborate with Microsoft on the development of partner features and capabilities.
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Join the Partner Center API and SDK Early Adopter Program
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -23,7 +22,9 @@ Partners can collaborate with Microsoft on the development of Partner Center API
 The following features are available to partners who join the Partner Center API and SDK Early Adopter Program:
 
 - **Access to prerelease versions of the Partner Center APIs and SDK**: we will announce new features and capabilities to the private Partner Center Early Adopter Program Yammer group.
+
 - **Monthly webinars**: a monthly webinar for early adopters will be conducted to answer questions, gather feedback, share schedules and timelines, and provide support for new features.
+
 - **Support from subject matter experts**: participants can provide feedback and communicate with subject matter experts (SMEs) in the private Yammer group.
 
 ## Join the program

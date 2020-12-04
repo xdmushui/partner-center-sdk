@@ -1,15 +1,12 @@
 ---
 title: Update a service request
 description: How to update an existing customer service request that a Cloud Solution Provider has filed with Microsoft on the customer's behalf.
-ms.assetid: 09C13775-739B-4CB9-9442-456E17F91452
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Update a service request
-
 
 **Applies To**
 
@@ -21,16 +18,15 @@ How to update an existing customer service request that a Cloud Solution Provide
 
 In the Partner Center dashboard, this operation can be performed by first [selecting a customer](get-a-customer-by-name.md). Then, select **Service management** on the left sidebar. Under the **Support requests** header, select the service request in question. To finish, make the desired changes to the service request then select **Submit.**
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - A service request ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To update a customer's service request, call the [**IServiceRequestCollection.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method with the service request id to identify and return the service request interface. Then call the [**IServiceRequest.Patch**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) or [**PatchAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) method to update the service request. To provide the updated values, create a new, empty [**ServiceRequest**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object and set only the property values that you want to change. Then pass that object in the call to the Patch or PatchAsync method.
+To update a customer's service request, call the [**IServiceRequestCollection.ById**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) method with the service request id to identify and return the service request interface. Then call the [**IServiceRequest.Patch**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) or [**PatchAsync**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) method to update the service request. To provide the updated values, create a new, empty [**ServiceRequest**](/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) object and set only the property values that you want to change. Then pass that object in the call to the Patch or PatchAsync method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -44,18 +40,15 @@ ServiceRequest updatedServiceRequest = partnerOperations.ServiceRequests.ById(ex
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdatePartnerServiceRequest.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
 | **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following URI parameter to update the service request.
 
@@ -63,17 +56,15 @@ Use the following URI parameter to update the service request.
 |-----------------------|----------|----------|---------------------------------------------|
 | **servicerequest-id** | **guid** | Y        | A GUID that identifies the service request. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 The request body should contain a [ServiceRequest](service-request-resources.md) resource. The only required values are those to be updated.
 
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/servicerequests/616122292874576 HTTP/1.1
@@ -117,16 +108,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a **Service Request** resource with updated properties in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -165,11 +155,3 @@ Date: Mon, 09 Jan 2017 23:31:15 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

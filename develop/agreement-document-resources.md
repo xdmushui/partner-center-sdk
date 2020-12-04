@@ -1,15 +1,16 @@
 ---
 title: Agreement document resources
-description: The AgreementDocument resource represents an agreement document.
+description: The AgreementDocument resource is a Microsoft agreement document for preview and download. It is supported by Partner Center in the Microsoft public cloud.
 ms.date: 08/28/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: aarzh-AaronZhang
+ms.author: v-aarzh
 ---
 
-# Agreement document resources
+# Agreement document resources supported by Partner Center in the Microsoft public cloud
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

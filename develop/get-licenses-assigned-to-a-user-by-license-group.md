@@ -1,11 +1,9 @@
 ---
 title: Get licenses assigned to a user by license group
 description: How to get a list of user assigned licenses for the specified license groups.
-ms.assetid: 8BC0B0BA-894D-42F8-8186-6963AA02E9F6
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get licenses assigned to a user by license group
@@ -16,18 +14,19 @@ ms.localizationpriority: medium
 
 How to get a list of user assigned licenses for the specified license groups.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A user identifier.
+
 - A list of one or more license group identifiers.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To check which licenses are assigned to a user from specified license groups, start by instantiating a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**LicenseGroupId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Then, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the user ID to identify the user. Then, get an interface to customer user license operations from the [**Licenses**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.licenses) property. Finally, pass the list of license groups to the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.getasync) method to retrieve the collection of licenses assigned to the user.
+To check which licenses are assigned to a user from specified license groups, start by instantiating a [List/dotnet/api/system.collections.generic.list-1) of type [**LicenseGroupId**](/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Then, use the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, call the [**Users.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) method with the user ID to identify the user. Then, get an interface to customer user license operations from the [**Licenses**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruser.licenses) property. Finally, pass the list of license groups to the [**Get**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomeruserlicensecollection.getasync) method to retrieve the collection of licenses assigned to the user.
 
 ``` csharp
 // string selectedCustomerUserId;
@@ -47,9 +46,9 @@ List<LicenseGroupId> licenseGroupIds = new List<LicenseGroupId>(){ LicenseGroupI
 var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).Licenses.Get(licenseGroupIds);
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,8 +56,7 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses?licenseGroupIds=Group2 HTTP/1.1                        |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users/{user-id}/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
-
-**URI parameter**
+### URI parameter
 
 Use the following path and query parameters to identify the customer, user and license groups.
 
@@ -68,17 +66,15 @@ Use the following path and query parameters to identify the customer, user and l
 | user-id         | string | Yes      | A GUID formatted string that identifies the user.                                                                                                                                                                                                                     |
 | licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/users/482e2152-4b49-48ec-b715-823365ce3d4c/licenses?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1
@@ -90,15 +86,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+## REST response
 
 If successful, the response body contains the collection of [License](license-resources.md#license) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -154,7 +150,7 @@ Date: June 24 2016 22:00:25 PST
 }
 ```
 
-**Response example (no matching licenses found)**
+### Response example (no matching licenses found)
 
 If no matching licenses can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 

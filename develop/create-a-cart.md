@@ -4,32 +4,37 @@ description: How to add an order for a customer in a cart.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Create a cart
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-You can add an order for a customer in a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](https://docs.microsoft.com/partner-center/csp-offers).
+You can add an order for a customer in a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## C\#
 
 To create an order for a customer:
 
 1. Instantiate a Cart object.
+
 2. Create a list of **CartLineItem** objects, and assign the list to the cart's LineItems property. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
 3. Obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
+
 4. Call the **Create** or **CreateAsync** method to create the cart.
 
 ### C\# example
@@ -118,16 +123,19 @@ cart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To create an order for a customer:
 
 1. Instantiate a Cart object.
+
 2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
 3. Obtain an interface to cart operations by calling the **IAggregatePartner.getCustomers().byId** function with the customer ID to identify the customer, and then retrieving the interface from the **getCart** function.
+
 4. Call the **create** function to create the cart.
 
-### Java example
+## Java example
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -161,15 +169,15 @@ Cart cartCreated = partnerOperations.getCustomers().byId(customerId).getCarts().
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To create an order for a customer:
 
 1. Instantiate a Cart object.
-2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
-3. Execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
 
-### PowerShell example
+2. Create a list of **CartLineItem** objects, and assign the list to the cart's line items. Each cart line item contains the purchase information for one product. You must have at least one cart line item.
+
+3. Execute the [**New-PartnerCustomerCart**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomerCart.md) command to create the cart.
 
 ```powershell
 # $customerId
@@ -207,7 +215,7 @@ Use the following path parameter to identify the customer.
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

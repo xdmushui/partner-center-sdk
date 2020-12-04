@@ -1,15 +1,14 @@
 ---
 title: Create a product upgrade entity for a customer
-description: You can use the ProductUpgradeRequest resource to create a product upgrade entity to upgrade a customer to a given product family. 
+description: You can use the ProductUpgradeRequest resource to create a product upgrade entity to upgrade a customer to a given product family.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Create a product upgrade entity for a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -18,7 +17,9 @@ You can create a product upgrade entity to upgrade a customer to a given product
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials. Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.
-- The customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - The product family to which you want to upgrade the customer.
 
 ## C\#
@@ -26,8 +27,11 @@ You can create a product upgrade entity to upgrade a customer to a given product
 To upgrade a customer to Azure plan:
 
 1. Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.
+
 2. Use the **IAggregatePartner.ProductUpgrades** collection.
+
 3. Call the **Create** method and pass in the **ProductUpgradesRequest** object, which will return a **location header** string.
+
 4. Extract the **upgrade-id** from the location header string which can be used to [query the upgrade status](get-product-upgrade-status.md).
 
 ```csharp
@@ -49,11 +53,9 @@ var upgradeId = Regex.Split(productUpgradeLocationHeader, "/")[1];
 
 ```
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method   | Request URI                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
@@ -88,15 +90,15 @@ Connection: Keep-Alive
 }
 ```
 
-### REST response
+## REST response
 
 If successful, the response contains a **Location** header that has a URI that can be used to retrieve product upgrade status. Save this URI for use with other related REST APIs.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-#### Response example
+### Response example
 
 ```http
 HTTP/1.1 202 Accepted

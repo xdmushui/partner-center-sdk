@@ -4,12 +4,13 @@ description: Update a subscription to monthly or annual billing.
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: sourishdeb
+ms.author: sodeb
 ---
 
 # Change the billing cycle
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -18,9 +19,9 @@ Applies to:
 
 Updates an [Order](order-resources.md) from monthly to annual billing or from annual to monthly billing.
 
-In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.  
+In the Partner Center dashboard, this operation can be performed by navigating to a customer's subscription details page. Once there, you will see an option defining the current billing cycle for the subscription with the ability to change and submit it.
 
-**Out of scope** for this topic:  
+**Out of scope** for this article:
 
 - Changing the billing cycle for trials
 - Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
@@ -30,12 +31,14 @@ In the Partner Center dashboard, this operation can be performed by navigating t
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer's Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - An order ID.
 
-## C#
+## C\#
 
-To change the frequency of the billing cycle, update the [**Order.BillingCycle**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle?view=partnercenter-dotnet-latest#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
+To change the frequency of the billing cycle, update the [**Order.BillingCycle**](/dotnet/api/microsoft.store.partnercenter.models.orders.order.billingcycle#Microsoft_Store_PartnerCenter_Models_Orders_Order_BillingCycle) property.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -62,7 +65,7 @@ var order = new Order()
 var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orderId).Patch(order);
 ```
 
-## REST Request
+## REST request
 
 ### Request syntax
 
@@ -74,20 +77,20 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.ById(orde
 
 This table lists the required query parameter to change the quantity of the subscription.
 
-| Name                   | Type | Required | Description                                                          |  
-|------------------------|------|----------|----------------------------------------------------------------------|  
-| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |  
-| **order-id**           | GUID |    Y     | The order identifier                                                 |  
+| Name                   | Type | Required | Description                                                          |
+|------------------------|------|----------|----------------------------------------------------------------------|
+| **customer-tenant-id** | GUID |    Y     | A GUID formatted **customer-tenant-id** that identifies the customer |
+| **order-id**           | GUID |    Y     | The order identifier                                                 |
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
 The following tables describe the properties in the request body.
 
-## Order
+### Order
 
 | Property           | Type             | Required | Description                                                                |
 |--------------------|------------------|----------|----------------------------------------------------------------------------|
@@ -98,7 +101,7 @@ The following tables describe the properties in the request body.
 | CreationDate       | datetime         |    N     | The date the order was created, in date-time format                        |
 | Attributes         | Object           |    N     | Contains "ObjectType": "OrderLineItem"                                     |
 
-## OrderLineItem
+### OrderLineItem
 
 | Property             | Type   | Required | Description                                                                        |
 |----------------------|--------|----------|------------------------------------------------------------------------------------|

@@ -1,19 +1,20 @@
 ---
 title: Agreement resources
-description: The Agreement resource represents a Microsoft cloud customer agreement.
+description: The Agreement resource represents a Microsoft cloud customer agreement with details of certification provided by the partner.  
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: aarzh-AaronZhang
+ms.author: v-aarzh
 ---
 
-# Agreement resources
+# Agreement resources representing a Microsoft cloud customer agreement
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
-The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It is not applicable to:
+The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
 
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany

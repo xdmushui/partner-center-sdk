@@ -1,16 +1,14 @@
 ---
 title: Product upgrade resources
 description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails.
-ms.assetid: DF237297-7956-42EE-8F09-4304F6EFBF26
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Product upgrade resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -37,7 +35,7 @@ The **ProductUpgradesEligibility** resource provides information about the custo
 | upgradeId            | string                                       | The upgrade ID if a product upgrade for given family is already in place. |
 | reason               | string                                       | The reason for which customer isn't eligible for product upgrade. |
 | productFamily        | string                                       | The product family for which the upgrade is requested for. |
-| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.  
+| attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.
 
 ## ProductUpgradesStatus
 
@@ -72,7 +70,7 @@ The **UpgradeProduct** resource provides information about the product being upg
 | Property | Type |Description |
 |----------------------|----------------------------------------------|----------------------------------------------------------------|
 | id                   | string                                       | A GUID-formatted string that identifies the product. |
-| name                 | string                                       | The friendly name of product being upgraded. |  
+| name                 | string                                       | The friendly name of product being upgraded. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. |
 
 ## ErrorDetails

@@ -1,16 +1,16 @@
 ---
-title: Azure rate card resources
-description: The Azure Rate Card provides real-time prices for Azure offers.
-ms.assetid: A42B4FFA-278E-41FF-B51E-E48C2CA70EEF
+title: Azure rate card - current Azure pricing
+description: Learn how to use the Azure Rate Card to get real-time, current prices for Azure offers in your region. Azure Rate Card is accessed via Partner Center REST API.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
-# Azure rate card resources
+# Azure rate card resources to get real-time, current Azure prices on Azure offers in your region
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
@@ -20,7 +20,7 @@ The Azure Rate Card provides real-time prices for Azure offers. Azure pricing is
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine a Rate Card query to [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
-Prices differ by market and currency, and this API takes location into consideration. By default, it uses your partner profile settings in Partner Center and your browser language, but those are customizable. This is especially relevant if you manage sales in multiple markets from a single, centralized office.
+Prices differ by market and currency, and this API takes location into consideration. By default, the API uses your partner profile settings in Partner Center and your browser language, and those settings are customizable. The location awareness is especially relevant if you manage sales in multiple markets from a single, centralized office.
 
 ## AzureRateCard
 
@@ -29,12 +29,11 @@ Describes the properties of an Azure Rate Card resource.
 | Property      | Type                                      | Description                                                       |
 |---------------|-------------------------------------------|-------------------------------------------------------------------|
 | currency      | string                                    | The currency in which the rates are provided.                     |
-| isTaxIncluded | boolean                                   | All rates are pretax, so this will always be returned as "false". |
+| isTaxIncluded | boolean                                   | All rates are pretax, so this property returns as `false`. |
 | locale        | string                                    | The culture in which the resource information is localized.       |
 | meters        | array of objects                          | Array of [AzureMeter](#azuremeter) objects.                       |
 | offerTerms    | array of objects                          | Array of [AzureOfferTerm](#azureofferterm) objects.               |
-| attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Contains "objectType": "AzureRateCard"   |
-
+| attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes. Contains `"objectType": "AzureRateCard"`   |
 
 ### Operations on the AzureRateCard resource
 
@@ -49,7 +48,7 @@ Describes the properties of an Azure Rate Card resource.
 | rates            | object           | Meter rates. The key is the meter quantity (string) and the value is the meter rate (number). |
 | tags             | array of strings | Optional meter tags. This array can be empty.                                                 |
 | category         | string           | Category of the resource.                                                                     |
-| subcategory      | string           | Sub-category of the resource.                                                                 |
+| subcategory      | string           | Subcategory of the resource.                                                                 |
 | region           | string           | Region of the id.                                                                             |
 | unit             | string           | The type of quantity (hours, bytes, etc.)                                                     |
 | includedQuantity | number           | Meter quantity that is included free of charge.                                               |

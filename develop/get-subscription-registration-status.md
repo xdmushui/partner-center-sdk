@@ -4,30 +4,29 @@ description: Get the status of a subscription that has been registered for use w
 ms.date: 03/19/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
-# Get subscription registration status 
+# Get subscription registration status
 
 **Applies To**
 
 - Partner Center
 
-How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure Reserved VM Instances.  
+How to get the subscription registration status for a customer subscription that has been enabled for purchasing Azure Reserved VM Instances.
 
-To purchase an Azure Reserved VM Instance using the Partner Center API, you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. This method allows you to retrieve the status of that registration. 
+To purchase an Azure Reserved VM Instance using the Partner Center API, you must have at least one existing CSP Azure subscription. The [Register a subscription](register-a-subscription.md) method allows you to register your existing CSP Azure subscription, enabling it for purchasing Azure Reserved VM Instances. This method allows you to retrieve the status of that registration.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription ID.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To get the registration status of a subscription, begin by using the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscription.ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method with the subscription ID to identify the subscription. Next, use the RegistrationStatus property to obtain an interface to the current subscription's registration status operations, and call the **Get** or **GetAsync** method to retrieve the **SubscriptionRegistrationStatus** object.
+To get the registration status of a subscription, begin by using the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get an interface to subscription operations by calling the [**Subscription.ById()**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method with the subscription ID to identify the subscription. Next, use the RegistrationStatus property to obtain an interface to the current subscription's registration status operations, and call the **Get** or **GetAsync** method to retrieve the **SubscriptionRegistrationStatus** object.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -38,33 +37,32 @@ To get the registration status of a subscription, begin by using the [**IAggrega
 var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).RegistrationStatus.Get();
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus HTTP/1.1 |
 
-**URI parameters**
+### URI parameters
 
-Use the following path parameters to identify the customer and subscription. 
+Use the following path parameters to identify the customer and subscription.
 
 | Name                    | Type       | Required | Description                                                   |
 |-------------------------|------------|----------|---------------------------------------------------------------|
 | customer-id             | string     | Yes      | A GUID formatted string that identifies the customer.         |
 | subscription-id         | string     | Yes      | A GUID formatted string that identifies the subscription.     |
 
- 
-**Request headers**
+### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/<customer-id>/subscriptions/<subscription-id>/registrationstatus HTTP/1.1
@@ -78,15 +76,15 @@ Expect: 100-continue
 Connection: Keep-Alive
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
+## REST response
 
-If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.  
+If successful, the response body contains a [SubscriptionRegistrationStatus](subscription-resources.md#subscriptionregistrationstatus) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK

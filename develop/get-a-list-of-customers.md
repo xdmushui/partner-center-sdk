@@ -1,23 +1,23 @@
 ---
 title: Get a list of customers
 description: How to get a collection of resources representing all of a partner's customers.
-ms.assetid: 6D636257-7C23-4DDF-9895-96F208B66232
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Get a list of customers
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud Germany
 - Partner Center for Microsoft Cloud for US Government
 
-This topic describes how to get a collection of resources that represents all of a partner's customers.
+This article describes how to get a collection of resources that represents all of a partner's customers.
 
 > [!TIP]
 > You can also perform this operation in the Partner Center dashboard. On the main page, under **Customer management**, select **View Customers**. Or, on the sidebar, select **Customers**.
@@ -30,8 +30,9 @@ This topic describes how to get a collection of resources that represents all of
 
 To get a list of all customers:
 
-1. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
-2. Retrieve the customer list using the [**Query()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
+1. Use the [**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection to create an **IPartner** object.
+
+2. Retrieve the customer list using the [**Query()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.query) or [**QueryAsync()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.queryasync) methods. (For instructions on creating a query, see the [**QueryFactory**](/dotnet/api/microsoft.store.partnercenter.models.query.queryfactory) class.)
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -52,11 +53,12 @@ For an example, see the following:
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To get a list of all customers:
 
 1. Use the [**IAggregatePartner.getCustomers**] function to get a reference to the customer operations.
+
 2. Retrieve the customer list using the **query()** function.
 
 ```java
@@ -83,7 +85,7 @@ while (customersEnumerator.hasValue())
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 Execute the [**Get-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerCustomer.md) command with no parameters to get a complete list of customers.
 
@@ -109,7 +111,7 @@ Use the following query parameter to get a list of customers.
 
 ### Request headers
 
-See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

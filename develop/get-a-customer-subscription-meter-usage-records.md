@@ -1,16 +1,14 @@
 ---
 title: Get usage data for subscription by meter
 description: You can use the MeterUsageRecord resource collection to get meter usage records of a customer for specific Azure services or resources during the current billing period.
-ms.assetid: 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Get usage data for subscription by meter
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany
@@ -21,17 +19,20 @@ You can use the **MeterUsageRecord** resource collection to get meter usage reco
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription ID
 
-*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for Microsoft Azure (MS-AZR-0145P) subscriptions.* This new route will support both Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans. In order to get this information for your Azure plan, you will need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
+*This new route is equivalent to `subscriptions/{subscription-id}/usagerecords/resources`, which will continue to function only for Microsoft Azure (MS-AZR-0145P) subscriptions.* This new route will support both Microsoft Azure (MS-AZR-0145P) subscriptions and Azure plans. In order to get this information for your Azure plan, you need to switch to this new route. Other than the properties mentioned in the following sections, the response is the same as the old route.
 
 ## C\#
 
 To get meter usage records of a customer for a specific Azure service or resource during the current billing period:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
-2. Call the Subscriptions property, as well as **UsageRecords**, then the **Meters** property. Finish by calling the Get() or GetAsync() methods.
+
+2. Call the Subscriptions property, and **UsageRecords**, then the **Meters** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
     // IAggregatePartner partnerOperations;
@@ -41,23 +42,21 @@ To get meter usage records of a customer for a specific Azure service or resourc
     var usageRecords = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscriptionId).UsageRecords.Meters.Get();
     ```
 
-For an example, see the following:
+For an example, see the following sample:
 
 - Sample: [Console test app](console-test-app.md)
 - Project: **PartnerSDK.FeatureSamples**
 - Class: **GetSubscriptionUsageRecordsByMeter.cs**
 
-## REST
+## REST request
 
-### REST request
-
-#### Request syntax
+### Request syntax
 
 | Method  | Request URI                                                                                                                             |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/meterusagerecords HTTP/1.1 |
 
-##### URI parameters
+#### URI parameters
 
 This table lists the required query parameters to get the customer's rated usage information.
 
@@ -66,15 +65,15 @@ This table lists the required query parameters to get the customer's rated usage
 | **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.     |
 | **subscription-id**    | **guid** | Y        | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. *For Azure plan subscription resources, provide the **plan-id** as the **subscription-id** in this route.* |
 
-#### Request headers
+### Request headers
 
-For more information, see [Headers](headers.md).
+For more information, see [Partner Center REST headers](headers.md).
 
-#### Request body
+### Request body
 
 None.
 
-#### Request example
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/meterusagerecords HTTP/1.1
@@ -84,15 +83,15 @@ MS-RequestId: e128c8e2-4c33-4940-a3e2-2e59b0abdc67
 MS-CorrelationId: 47c36033-af5d-4457-80a4-512c1626fac4
 ```
 
-### REST response
+## REST response
 
 If successful, this method returns a **PagedResourceCollection\<MeterUsageRecord>** resource in the response body.
 
-#### Response success and error codes
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters. For a full list, see [Error Codes](error-codes.md).
 
-#### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
+### Response example for Microsoft Azure (MS-AZR-0145P) subscriptions
 
 In this example, the customer purchased **145P Azure PayG**.
 
@@ -138,7 +137,7 @@ Date: Tue, 17 Sep 2019 20:31:45 GMT
 }
 ```
 
-### Response example for Azure plan
+## REST response example for Azure plan
 
 In this example, the customer purchased an Azure plan.
 

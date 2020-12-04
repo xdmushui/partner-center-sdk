@@ -1,16 +1,15 @@
 ---
 title: Resource usage record resources
 description: You can use the ResourceUsageRecord resource to describe the estimated monetary cost of a subscription's resource level usage in the current billing cycle.
-ms.assetid: 
+
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Resource usage record resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 

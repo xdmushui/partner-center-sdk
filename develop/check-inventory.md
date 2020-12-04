@@ -1,16 +1,14 @@
 ---
 title: Check inventory
 description: Check the inventory for a specific set of catalog items.
-ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Check inventory
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -19,11 +17,12 @@ How to check the inventory for a specific set of catalog items.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - One or more product IDs. Optionally, SKU IDs can also be specified.
-- Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU and can be determined from the [SKU's](product-resources.md#sku) **InventoryVariables** property. 
 
-## C#
+- Any additional context needed for verifying the inventory of the SKU(s) referenced by the provided product/SKU ID(s). These requirements may vary by type of product/SKU and can be determined from the [SKU's](product-resources.md#sku) **InventoryVariables** property.
 
+## C\#
 
 To check the inventory, build an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) object using an [InventoryItem](product-resources.md#inventoryitem) object for each item to be checked. Then, use an **IAggregatePartner.Extensions** accessor, scope it down to **Product** and then select the country using the **ByCountry()** method. Finally, call the **CheckInventory()** method with your **InventoryCheckRequest** object.
 
@@ -68,11 +67,11 @@ Use the following query parameter to check the inventory.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-The inventory request details, consisting of an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) resource containing one or more [InventoryItem](product-resources.md#inventoryitem) resources. 
+The inventory request details, consisting of an [InventoryCheckRequest](product-resources.md#inventorycheckrequest) resource containing one or more [InventoryItem](product-resources.md#inventoryitem) resources.
 
 ### Request example
 
@@ -89,7 +88,7 @@ Content-Type: application/json
 {"TargetItems":[{"ProductId":"DZH318Z0BQ3P"}],"InventoryContext":{"customerId":"d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d","azureSubscriptionId":"3A231FBE-37FE-4410-93FD-730D3D5D4C75","armRegionName":"Europe"}}
 ```
 
-## Response
+## REST response
 
 If successful, the response body contains a collection of [InventoryItem](product-resources.md#inventoryitem) objects populated with the restriction details, if any apply.
 
@@ -99,13 +98,6 @@ If successful, the response body contains a collection of [InventoryItem](produc
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
-
-This method returns the following error codes:
-
-| HTTP Status Code     | Error code   | Description                                                                                               |
-|----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
-| 400                  | 2001         | The request body is missing.                                                                              |
-| 400                  | 400026       | A required inventory context item is missing.                                                             |
 
 ### Response example
 

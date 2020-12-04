@@ -1,0 +1,551 @@
+- name: Partner Center developer resources
+  href: index.yml
+- name: Get started
+  href: get-started.md
+  items:
+  - name: Developing for Partner Center for Microsoft National Cloud
+    href: developing-for-partner-center-for-microsoft-national-cloud.md
+    items:
+    - name: Register app details for Partner Center
+      href: create-apps-for-partner-center-for-microsoft-national-clouds.md
+  
+  - name: Partner Center samples
+    href: partner-center-samples.md
+    items:
+    - name: CSP customer web storefront
+      href: csp-customer-web-storefront.md
+    - name: CSP Customer Storefront Builder Quick Start Guide
+      href: csp-customer-storefront-builder-quick-start-guide-.md
+    - name: Console test app
+      href: console-test-app.md
+  - name: Set up API access in Partner Center
+    href: set-up-api-access-in-partner-center.md
+  - name: API throttling guidance
+    href: api-throttling-guidance.md
+  - name: Partner Center authentication
+    href: partner-center-authentication.md
+  - name: Enable secure application model
+    href: enable-secure-app-model.md  
+  - name: Early Adopter Program
+    href: early-adopter-program.md
+- name: Scenarios
+  href: scenarios.md
+  items:
+  - name: Analytics
+    href: usage-analytics.md
+    items:
+    - name: Partner Center Analytics - Resources
+      href: partner-center-analytics-resources.md
+  - name: Get all Azure usage analytics information
+    href: get-all-azure-usage-analytics.md
+    items:
+    - name: Get all indirect resellers analytics information
+      href: get-all-indirect-resellers-analytics.md
+    - name: Get all referrals analytics information
+      href: get-all-referrals-analytics.md
+    - name: Get all search analytics information
+      href: get-all-search-analytics.md
+    - name: Get all subscription analytics information
+      href: get-all-subscription-analytics.md
+    - name: Get subscription analytics information filtered by a search query
+      href: get-subscription-analytics-by-search-query.md
+    - name: Get subscription analytics information grouped by dates or terms
+      href: get-subscription-analytics-grouped-by-dates-or-terms.md
+    - name: Get licenses deployment information
+      href: get-licenses-deployment-information.md
+    - name: Get licenses usage information
+      href: get-licenses-usage-information.md
+    - name: Get customer licenses deployment information
+      href: get-customer-licenses-deployment-information.md
+    - name: Get customer licenses usage information
+      href: get-customer-licenses-usage-information.md
+    - name: Get partner licenses deployment information
+      href: get-partner-licenses-deployment-information.md
+    - name: Get partner licenses usage information
+      href: get-partner-licenses-usage-information.md
+  - name: Audit operations
+    href: audit.md
+    items:
+    - name: Get a record of Partner Center activity
+      href: get-a-record-of-partner-center-activity-by-user.md
+  - name: Device deployment
+    href: device-deployment.md
+    items:
+    - name: Create a new configuration policy for the specified customer
+      href: create-a-new-configuration-policy-for-the-specified-customer.md
+    - name: Delete a configuration policy for the specified customer
+      href: delete-a-configuration-policy-for-the-specified-customer.md
+    - name: "Get a list of a customer's policies"
+      href: get-a-list-of-a-customer-s-policies.md
+    - name: "Retrieve a customer's configuration policy"
+      href: retrieve-a-customer-s-configuration-policy.md
+    - name: Update a configuration policy for the specified customer
+      href: update-a-configuration-policy-for-the-specified-customer.md
+    - name: Get the status of a device batch upload
+      href: get-the-status-of-a-device-batch-upload.md
+    - name: Get a list of device batches for the specified customer
+      href: get-the-list-of-device-batches-for-the-specified-customer.md
+    - name: Get a list of devices for the specified batch and customer
+      href: get-a-list-of-devices-for-the-specified-batch-and-customer.md
+    - name: Upload a list of devices to create a new batch for the specified customer
+      href: upload-a-list-of-devices-to-create-a-new-batch-for-the-specified-customer.md
+    - name: Upload a list of devices to an existing batch for the specified customer
+      href: upload-a-list-of-devices-for-the-specified-customer.md
+    - name: Update a list of devices with a policy
+      href: update-a-list-of-devices-with-a-policy.md
+    - name: Delete a device for the specified customer
+      href: delete-a-device-for-the-specified-customer.md
+  - name: Manage accounts and profiles
+    href: manage-profiles-and-information.md
+    items:
+    - name: "Get a customer's subscriptions by partner MPN ID"
+      href: get-all-subscriptions-by-partner.md
+    - name: Get an organization profile
+      href: get-an-organization-profile.md
+    - name: Get customers of an indirect reseller
+      href: get-customers-of-an-indirect-reseller.md
+    - name: Get indirect resellers of a customer
+      href: get-indirect-resellers-of-a-customer.md
+    - name: Get Microsoft Partner Network profile
+      href: get-partner-network-profile.md
+    - name: Get partner billing profile
+      href: get-partner-billing-profile.md
+    - name: Verify a partner MPN ID
+      href: get-partner-by-mpn-id.md
+    - name: Verify an indirect reseller’s Microsoft Partner Agreement signing status
+      href: verify-indirect-reseller-mpa-status.md
+    - name: Get support profile
+      href: get-support-profile.md
+    - name: Get the partner legal business profile
+      href: get-legal-business-profile.md
+    - name: Retrieve a list of indirect resellers
+      href: retrieve-a-list-of-indirect-resellers.md
+    - name: Update an organization profile
+      href: update-an-organization-profile.md
+    - name: Update the partner billing profile
+      href: update-partner-billing-profile.md
+    - name: Update support profile
+      href: update-support-profile.md
+    - name: Update the partner legal business profile
+      href: update-legal-business-profile.md
+  - name: Manage billing
+    href: manage-billing.md
+    items:
+    - name: Change the billing cycle
+      href: change-the-billing-cycle.md
+    - name: "Get a customer's service costs summary"
+      href: get-a-customer-s-service-costs-summary.md
+    - name: "Get a customer's service costs line items"
+      href: get-a-customer-s-service-costs-line-items.md
+    - name: Get a collection of invoices
+      href: get-a-collection-of-invoices.md
+    - name: "Get a customer's utilization records for Azure"
+      href: get-a-customer-s-utilization-record-for-azure.md
+    - name: Get an invoice by ID
+      href: get-invoice-by-id.md
+    - name: Get invoice billed consumption line items
+      href: get-invoice-billed-consumption-lineitems.md
+    - name: Get invoice estimate links
+      href: get-invoice-estimate-links.md
+    - name: Get invoice line items
+      href: get-invoiceline-items.md
+    - name: Get invoice receipt statement
+      href: get-invoice-receipt-statement.md
+    - name: Get invoice statement
+      href: get-invoice-statement.md
+    - name: Get invoice summaries
+      href: get-invoice-summaries.md
+    - name: Get invoice unbilled consumption line items
+      href: get-invoice-unbilled-consumption-lineitems.md
+    - name: Get invoice unbilled recon line items
+      href: get-invoice-unbilled-recon-lineitems.md
+    - name: Get prices for Microsoft Azure
+      href: get-prices-for-microsoft-azure.md
+    - name: Get prices for Microsoft Azure Partner Shared Services
+      href: get-prices-for-microsoft-azure-partner-shared-services.md
+    - name: "Get the partner's current account balance"
+      href: get-the-reseller-s-current-account-balance.md
+  - name: Azure spending
+    href: azure-spending.md
+    items:
+    - name: Get partner usage summary
+      href: get-a-partner-usage-summary.md
+    - name: Get all customer usage records for a partner
+      href: get-a-customer-s-usage-records.md
+    - name: Get customer usage summary
+      href: get-a-customer-usage-summary.md
+    - name: Get all subscription usage records for a customer
+      href: get-a-customer-subscription-s-usage-records.md
+    - name: Get subscription usage summary
+      href: get-a-customer-subscription-usage-summary.md
+    - name: Get all monthly usage records for a subscription
+      href: get-all-monthly-usage-records-for-a-subscription.md
+    - name: Get usage data for subscription by resource
+      href: get-a-customer-subscription-resource-usage-records.md
+    - name: Get usage data for subscription by meter
+      href: get-a-customer-subscription-meter-usage-records.md
+    - name: Get meter usage record resources
+      href: meter-usage-resources.md
+    - name: Get resource usage record resources
+      href: resource-usage-resources.md
+    - name: Get customer usage budget
+      href: get-a-customer-s-usage-spending-budget.md
+    - name: Update customer usage budget
+      href: update-a-customer-s-usage-spending-budget.md
+    - name: Product upgrade resources
+      href: product-upgrade-resources.md
+      items:
+      - name: Get product upgrade status
+        href: get-product-upgrade-status.md
+      - name: Get eligibility for product upgrade
+        href: get-eligibility-for-product-upgrade.md
+      - name: Create product upgrade entity for a customer
+        href: create-product-upgrade-entity.md
+    - name: Get a list of Azure entitlements for a subscription
+      href: get-a-list-of-azure-entitlements-for-subscription.md
+  - name: Manage customer accounts
+    href: manage-customers.md
+    items:
+    - name: Add a verified domain for a customer
+      href: add-a-verified-domain-for-a-customer.md
+    - name: Assign licenses to a user
+      href: assign-licenses-to-a-user.md
+    - name: Get agreement metadata for Microsoft Cloud Agreement
+      href: get-agreement-metadata.md
+    - name: Get agreement metadata for the Microsoft Customer Agreement
+      href: get-customer-agreement-metadata.md
+    - name: Get confirmation of customer acceptance of Microsoft Cloud Agreement
+      href: get-confirmation-of-customer-consent.md
+    - name: Download Microsoft Customer Agreement template
+      href: download-customer-agreement-template.md
+    - name: Get confirmation of customer acceptance of Microsoft Customer Agreement
+      href: get-confirmation-of-customer-agreement.md
+    - name: Get direct signing (direct acceptance) status of Microsoft Customer Agreement
+      href: get-direct-sign-status-of-customer-agreement.md
+    - name: Confirm customer acceptance of Microsoft Customer Agreement
+      href: confirm-customer-consent-customer-agreement.md
+    - name: Get licenses assigned to a user
+      href: check-which-licenses-are-assigned-to-a-user.md
+    - name: Get licenses assigned to a user by license group
+      href: get-licenses-assigned-to-a-user-by-license-group.md
+    - name: Create a customer
+      href: create-a-customer.md
+    - name: Create a customer for an indirect reseller
+      href: create-a-customer-for-an-indirect-reseller.md
+    - name: Create user accounts for a customer
+      href: create-user-accounts-for-a-customer.md
+    - name: Delete a user account for a customer
+      href: delete-user-accounts-for-a-customer.md
+    - name: Get a collection of entitlements
+      href: get-a-collection-of-entitlements.md
+    - name: Get a customer by ID
+      href: get-a-customer-by-id.md
+    - name: "Get a customer's billing profile"
+      href: get-all-of-a-customer-s-billing-profiles.md
+    - name: "Get a customer's company profile"
+      href: get-a-customer-s-company-profile.md
+    - name: "Get a customer's qualification"
+      href: get-a-customer-s-qualification.md
+    - name: "Get all of a customer's orders"
+      href: get-all-of-a-customer-s-orders.md
+    - name: "Get a customer's subscriptions"
+      href: get-all-of-a-customer-s-subscriptions.md
+    - name: "Get a customer's subscriptions transfer eligibility"
+      href: get-customer-s-subscriptions-transfer-eligibility.md
+    - name: "Get a customer's transfers"
+      href: get-all-of-a-customer-s-transfers.md
+    - name: "Get a customer's transfer details"
+      href: get-transfer-by-id.md
+    - name: Get a list of all user accounts for a customer
+      href: get-a-list-of-all-user-accounts-for-a-customer.md
+    - name: Get a list of available licenses
+      href: get-a-list-of-available-licenses.md
+    - name: Get a list of available licenses by license group
+      href: get-a-list-of-available-licenses-by-license-group.md
+    - name: Get a list of customers
+      href: get-a-list-of-customers.md
+    - name: Get a list of customers filtered by a search field
+      href: get-a-customer-by-name.md
+    - name: Get a list of orders by customer and billing cycle type
+      href: get-a-list-of-orders-by-customer-and-billing-cycle-type.md
+    - name: "Get a partner's validation codes"
+      href: get-a-partner-s-validation-codes.md
+    - name: Get a user account by ID
+      href: get-a-user-account-by-id.md
+    - name: Get user roles for a customer
+      href: get-user-roles-for-a-customer.md
+    - name: Remove a customer user from a role
+      href: remove-customer-user-from-a-role.md
+    - name: Remove a reseller relationship with a customer
+      href: remove-a-reseller-relationship-with-a-customer.md
+    - name: Retrieve a relationship request URL
+      href: request-reseller-relationship.md
+    - name: Reset user password for a customer
+      href: reset-user-password-for-a-customer.md
+    - name: Restore a deleted user for a customer
+      href: restore-a-user-for-a-customer.md
+    - name: Set user roles for a customer
+      href: set-user-roles-for-a-customer.md
+    - name: Update a customer's billing profile
+      href: update-a-customer-s-billing-profile.md
+    - name: Update a customer's qualification
+      href: update-a-customer-s-qualification.md
+    - name: Update the nickname for a subscription
+      href: update-the-nickname-for-a-subscription.md
+    - name: "Withdraw a customer's transfer"
+      href: withdraw-a-transfer.md
+    - name: "Create a customer's transfer"
+      href: create-a-transfer.md
+    - name: "Accept a customer's transfer"
+      href: accept-a-transfer.md
+    - name: "Reject a customer's transfer"
+      href: reject-a-transfer.md
+    - name: Update user accounts for a customer
+      href: update-user-accounts-for-a-customer.md
+    - name: View deleted users for a customer
+      href: view-a-deleted-user.md
+    - name: Create a self serve policy
+      href: create-a-self-serve-policy.md
+    - name: Delete a self serve policy
+      href: delete-a-self-serve-policy.md
+    - name: Get a list of self serve policies
+      href: get-a-list-of-self-serve-policies.md
+    - name: Get a self serve policy by ID
+      href: get-a-self-serve-policy-by-id.md
+    - name: Update a self serve policy
+      href: update-a-self-serve-policy.md
+  - name: Manage orders
+    href: manage-orders.md
+    items:
+    - name: Purchase an Azure plan
+      href: create-azure-plan.md
+    - name: Purchase Azure reservations
+      href: purchase-azure-reservations.md
+    - name: Purchase a subscription for commercial marketplace products
+      href: create-subscription-azure-marketplace-products.md
+    - name: Cancel a commercial marketplace subscription
+      href: cancel-an-azure-marketplace-subscription.md
+    - name: Cancel software purchases
+      href: cancel-software-purchases.md
+    - name: Change the quantity of a subscription
+      href: change-the-quantity-of-a-subscription.md
+    - name: Convert a trial subscription to paid
+      href: convert-a-trial-subscription-to-paid.md
+    - name: Check Inventory
+      href: check-inventory.md
+    - name: Checkout a cart
+      href: checkout-a-cart.md
+    - name: Create a cart
+      href: create-a-cart.md
+    - name: Create a cart with add-ons
+      href: create-a-cart-with-add-ons.md
+    - name: Create an order
+      href: create-an-order.md
+    - name: Create an order for a customer of an indirect reseller
+      href: create-an-order-for-a-customer-of-an-indirect-reseller.md
+    - name: Get a list of add-ons for a subscription
+      href: get-a-list-of-add-ons-for-a-subscription.md
+    - name: Get a list of availabilities for a SKU (by country)
+      href: get-a-list-of-availabilities-for-a-sku.md
+    - name: Get a list of availabilities for a SKU (by customer)
+      href: get-a-list-of-availabilities-for-a-sku-by-customer.md
+    - name: Get a list of offer categories by market
+      href: get-a-list-of-offer-categories-by-country-and-locale.md
+    - name: Get a list of offers for a market
+      href: get-a-list-of-offers-for-a-market.md
+    - name: Get a list of products (by country)
+      href: get-a-list-of-products.md
+    - name: Get a list of products (by customer)
+      href: get-a-list-of-products-by-customer.md
+    - name: Get a list of SKUs for a product (by country)
+      href: get-a-list-of-skus-for-a-product.md
+    - name: Get a list of SKUS for a product (by customer)
+      href: get-a-list-of-skus-for-a-product-by-customer.md
+    - name: Get a list of subscriptions by order
+      href: get-a-list-of-subscriptions-by-order.md
+    - name: Get a list of trial conversion offers
+      href: get-a-list-of-trial-conversion-offers.md
+    - name: Get a product by ID
+      href: get-a-product-by-id.md
+    - name: Get a SKU by ID
+      href: get-a-sku-by-id.md
+    - name: Get a subscription by ID
+      href: get-a-subscription-by-id.md
+    - name: Get activation link by order line item
+      href: get-activation-link-by-order-line-item.md
+    - name: Get add-ons for an offer ID
+      href: get-addon-offers-by-offer-id.md
+    - name: Get an availability by ID
+      href: get-an-availability-by-id.md
+    - name: Get an offer by ID
+      href: get-an-offer-by-id.md
+    - name: Get an order by ID
+      href: get-an-order-by-id.md
+    - name: Get subscription provisioning status
+      href: get-subscription-provisioning-status.md
+    - name: Get subscription registration status
+      href: get-subscription-registration-status.md
+    - name: Make a one-time purchase
+      href: make-a-one-time-purchase.md
+    - name: Purchase an add-on to a subscription
+      href: purchase-an-add-on-to-a-subscription.md
+    - name: Purchase catalog items
+      href: purchase-catalog-items.md
+    - name: Reactivate a suspended subscription
+      href: reactivate-a-suspended-a-subscription.md
+    - name: Register a subscription
+      href: register-a-subscription.md
+    - name: Suspend a subscription
+      href: suspend-a-subscription.md
+    - name: Transition a subscription
+      href: transition-a-subscription.md
+    - name: Update a cart
+      href: update-a-cart.md
+    - name: Update autorenew for a commercial marketplace subscription
+      href: update-autorenew-for-an-azure-marketplace-subscription.md
+  - name: Provide support
+    href: provide-support.md
+    items:
+    - name: "Get a subscription's support contact"
+      href: get-a-subscription-s-support-contact.md
+    - name: Get all service requests for a customer
+      href: get-all-service-requests-for-a-customer.md
+    - name: Get service request details by ID
+      href: get-service-request-details-by-id.md
+    - name: Get the managed services for a customer by ID
+      href: get-the-managed-services-for-a-customer-by-id.md
+    - name: Update a service request
+      href: update-a-service-request.md
+    - name: "Update a subscription's support contact"
+      href: update-a-subscription-s-support-contact.md
+-  name: Integration sandbox
+   items:
+    - name: Partner sandbox capabilities that support reseller relationship
+      href: sandbox-scenario.md
+    - name: Test and debug sandbox
+      href: test-and-debug.md
+    - name: Cancel an order from the integration sandbox
+      href: cancel-an-order-from-the-integration-sandbox.md
+    - name: Activate sandbox subscription 
+      href: activate-sandbox-subscription-azure-marketplace-products.md
+    - name: Delete a customer account from the integration sandbox
+      href: delete-a-customer-account-from-the-integration-sandbox.md
+- name: Referrals
+  href: /partner/develop/referrals
+  items:
+    - name: Create a referral
+      href: /partner/develop/create-a-referral
+    - name: Get a list of referrals
+      href: /partner/develop/get-a-list-of-referrals
+    - name: Get a referral by ID
+      href: /partner/develop/get-a-referral-by-id
+    - name: Update a referral
+      href: /partner/develop/update-a-referral
+- name: Utilities
+  href: utilities.md
+  items:
+    - name: Validate an address
+      href: validate-an-address.md
+    - name: Get address formatting rules by market
+      href: get-market-specific-validation-data.md
+    - name: Verify domain availability
+      href: verify-domain-availability.md
+    
+- name: Security
+  href: partner-security-requirements.md
+  items:
+    - name: Get portal requests without MFA
+      href: get-portal-requests-without-mfa.md
+    - name: Get API request summary
+      href: get-api-request-summary.md
+    - name: Get API request details
+      href: get-api-request-details.md
+- name: Partner Center REST API reference
+  href: partner-center-rest-api-reference.md
+  items:
+  - name: Partner Center REST URLs
+    href: partner-center-rest-urls.md
+  - name: Partner Center REST headers
+    href: headers.md
+  - name: Partner Center REST resources
+    href: partner-center-rest-resources.md
+    items:
+    - name: Agreement
+      href: agreement-resources.md
+    - name: Agreement metadata
+      href: agreement-metadata-resources.md
+    - name: Agreement document resources (preview)
+      href: agreement-document-resources.md
+    - name: Customer agreement direct signing (direct acceptance) status
+      href: customer-agreement-direct-sign-status-resource.md
+    - name: Analytics
+      href: analytics-resources.md
+    - name: Auditing
+      href: auditing-resources.md
+    - name: Azure rate card
+      href: azure-rate-card-resources.md
+    - name: Azure utilization record
+      href: azure-utilization-record-resources.md
+    - name: Cart
+      href: cart-resources.md
+    - name: Conversions
+      href: conversions-resources.md
+    - name: Country information
+      href: country-information-resources.md
+    - name: Customer
+      href: customer-resources.md
+    - name: Customer usage
+      href: customer-usage-resources.md
+    - name: Device deployment
+      href: device-deployment-resources.md
+    - name: Entitlement
+      href: entitlement-resources.md
+    - name: Invoice
+      href: invoice-resources.md
+    - name: License
+      href: license-resources.md
+    - name: Managed service
+      href: managed-service-resources.md
+    - name: Offer
+      href: offer-resources.md
+    - name: Order
+      href: order-resources.md
+    - name: Profile
+      href: profile-resources.md
+    - name: Products
+      href: product-resources.md
+    - name: Relationships
+      href: relationships-resources.md
+    - name: Self serve policy
+      href: self-serve-policy-resources.md
+    - name: Service costs
+      href: service-costs-resources.md
+    - name: Service request
+      href: service-request-resources.md
+    - name: Subscription
+      href: subscription-resources.md
+    - name: Subscription usage
+      href: subscription-usage-resources.md
+    - name: Upgrade
+      href: upgrade-resources.md
+    - name: User
+      href: user-resources.md
+    - name: Utility resources
+      href: utility-resources.md
+  - name: Partner Center REST error codes
+    href: error-codes.md
+  - name: Partner Center REST events
+    href: partner-center-webhook-events.md
+  - name: Partner Center supported languages and locales
+    href: partner-center-supported-languages-and-locales.md
+  - name: Partner Center webhooks
+    href: partner-center-webhooks.md
+- name: Partner Center Managed .NET API reference
+  href: /dotnet/api/
+  items:
+  - name: Partner Center .NET API version release notes
+    href: dotnet-release-notes.md
+- name: Partner Center Java API reference
+  href: /java/partnercenter
+- name: Partner Center PowerShell commands
+  href: /powershell/partnercenter

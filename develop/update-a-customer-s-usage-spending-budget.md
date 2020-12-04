@@ -1,15 +1,12 @@
 ---
 title: Update a customer's usage spending budget
 description: Update the spending budget allocated for a customer's usage.
-ms.assetid: D7843FBF-81FC-4FA0-8396-6365E12FB01B
 ms.date: 02/05/2018
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Update a customer's usage spending budget
-
 
 **Applies To**
 
@@ -20,22 +17,20 @@ ms.localizationpriority: medium
 Update the [spending budget](customer-usage-resources.md#customerusagesummary)
 allocated for a customer's usage.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the
-    customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+## C\#
 
 To update a customer's usage spending budget, first create a new
-[**SpendingBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
-[**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
-method with the specified customer's ID. Then access the [**UsageBudget**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
-property and pass the updated usage budget to the [**Patch()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
-[**PatchAsync()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
+[**SpendingBudget**](/dotnet/api/microsoft.store.partnercenter.models.usage.spendingbudget) object with the updated amount. Then use the
+[**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection) collection and call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid)
+method with the specified customer's ID. Then access the [**UsageBudget**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.usagebudget)
+property and pass the updated usage budget to the [**Patch()**](/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patch) or
+[**PatchAsync()**](/dotnet/api/microsoft.store.partnercenter.usage.icustomerusagespendingbudget.patchasync) method.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -43,7 +38,7 @@ property and pass the updated usage budget to the [**Patch()**](https://docs.mic
 
 // Create a new spending budget with the udpated amount.
 var newUsageBudget = new SpendingBudget()
-{  
+{
     Amount = 100
 };
 
@@ -51,19 +46,15 @@ var newUsageBudget = new SpendingBudget()
 var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudget.Patch(newUsageBudget);
 ```
 
+## REST request
 
-
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
-
-
-**Request syntax**
+### Request syntax
 
 | Method    | Request URI                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |   
- 
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/usagebudget  HTTP/1.1 |
 
-**URI parameter**
+### URI parameter
 
 Use the following query parameter to update the billing profile.
 
@@ -71,19 +62,15 @@ Use the following query parameter to update the billing profile.
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-
-**Request body**
+### Request body
 
 The full resource.
 
-
-**Request example**
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/usagebudget HTTP/1.1
@@ -102,19 +89,15 @@ X-Locale: "en-US"
 }
 ```
 
-
-
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
+## REST response
 
 If successful, this method returns a user's spending budget with the updated amount.
 
-
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -141,4 +124,3 @@ Date: Tue, 10 Nov 2015 19:09:59 GMT
     }
 }
 ```
-

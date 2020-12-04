@@ -1,22 +1,22 @@
 ---
 title: Create a customer
 description: How to create a new customer.
-ms.assetid: 7EA3E23F-0EA8-49CB-B98A-C4B74F559873
-ms.date: 09/17/2019
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Create a customer
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
 - Partner Center for Microsoft Cloud for US Government
 
-This topic explains how to create a new customer.
+This article explains how to create a new customer.
 
 > [!IMPORTANT]
 > If you are an indirect provider and you want to create a customer for an indirect reseller, please see [Create a customer for an indirect reseller](create-a-customer-for-an-indirect-reseller.md).
@@ -24,14 +24,16 @@ This topic explains how to create a new customer.
 As a cloud solution provider (CSP) partner, when you create a customer you can place orders on behalf of the customer. When you create a customer, you also create:
 
 - An Azure Active Directory (AD) tenant object for the customer.
+
 - A relationship between the reseller and customer, used for delegated admin privileges.
+
 - A user name and password to sign in as an admin for the customer.
 
 Once the customer is created, be sure to save the customer ID and Azure AD details for future use with the Partner Center SDK (for example, account management).
 
 ## Prerequisites
 
-Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
 > [!IMPORTANT]
 > To create a customer tenant you must provide a valid physical address during the creation process. An address can be validated by following the steps outlined in the
@@ -41,8 +43,9 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 
 To add a customer:
 
-1. Instantiate a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile).
-2. Add the new customer to your [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
+1. Instantiate a new [**Customer**](/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object. Be sure to fill in the [**BillingProfile**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile).
+
+2. Add the new customer to your [**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection by calling [**Create**](/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync).
 
 ### C\# example
 
@@ -87,11 +90,12 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 ## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 To create a new customer:
 
 1. Create a new instance of the **CustomerBillingProfile** and the **CustomerCompanyProfile** objects. Be sure to populate the required fields.
+
 2. Create the customer by calling the **IAggregatePartner.getCustomers().create** function.
 
 ### Java example
@@ -132,11 +136,9 @@ Customer newCustomer = partnerOperations.getCustomers().create( customerToCreate
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 To create a customer execute the [**New-PartnerCustomer**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md) command.
-
-### Powershell example
 
 ```powershell
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
@@ -153,8 +155,10 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 ### Request headers
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
+
 - A request ID and correlation ID are required.
-- See [Partner Center REST headers](headers.md) for more information.
+
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -173,7 +177,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | email            | string                                   | The customer's email address.                                                                                                                                                                                   |
 | culture          | string                                   | Their preferred culture for communication and currency, such as "en-US". See [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) for the supported cultures. |
-| language         | string                                   | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
+| language         | string                                   | The default language. Two character language codes (for example `en` or `fr`) are supported.                                                                                                                                |
 | company\_name    | string                                   | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
@@ -184,6 +188,8 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 | Name   | Type   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
 | domain | string | The customer's domain name, such as contoso.onmicrosoft.com. |
+|organizationRegistrationNumber|String|The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). For customer’s company/organization located in other countries this should not be specified.|
+
 
 ### Request example
 
@@ -228,7 +234,7 @@ If successful, this API returns a [Customer](customer-resources.md#customer) res
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+Responses come with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### Response example
 

@@ -4,12 +4,13 @@ description: Secure your Partner Center and control panel apps.
 ms.date: 01/20/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
-ms.localizationpriority: medium
+author: aarzh-AaronZhang
+ms.author: v-aarzh
 ---
 
 # Enabling the Secure Application Model framework
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -19,16 +20,17 @@ You can use the new model to elevate security for Partner Center API integration
 
 ## Scope
 
-This topic concerns the following actors:
+This article concerns the following actors:
 
 - CPVs
   - A CPV is an independent software vendor that develops apps for use by CSP partners to integrate with Partner Center APIs.
-  - A CPV is not a CSP partner with direct access to the Partner Center dashboard or APIs.
+  - A CPV isn't a CSP partner with direct access to the Partner Center dashboard or APIs.
+
 - CSP indirect providers and CSP direct partners who are using app ID + user authentication and directly integrate with Partner Center APIs.
 
 ## Security requirements
 
-For details on security requirements, see [Partner Security Requirements](https://docs.microsoft.com/partner-center/partner-security-requirements).
+For details on security requirements, see [Partner Security Requirements](/partner-center/partner-security-requirements).
 
 ## Secure Application Model
 
@@ -45,19 +47,23 @@ The following overview documents and sample code describe how partners can imple
 - [.NET Samples](https://github.com/microsoft/Partner-Center-DotNet-Samples/tree/master/secure-app-model)
 - [Java Samples](https://github.com/microsoft/Partner-Center-Java-Samples/tree/master/secure-app-model)
 
-    [!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+    [!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
 
 - [REST instructions and samples](#rest)
 - [PowerShell instructions and samples](#powershell)
 
 ## REST
 
-To to make REST calls with the Secure Application Model framework with sample code, you must do the following:
+To to make REST calls with the Secure Application Model framework with sample code, follow these steps:
 
 1. [Create a web app](#create-a-web-app)
+
 2. [Get an authorization code](#get-authorization-code)
+
 3. [Get a refresh token](#get-refresh-token)
+
 4. [Get an access token](#get-access-token)
+
 5. [Make a Partner Center API call](#make-partner-center-api-calls)
 
 > [!TIP]
@@ -68,27 +74,39 @@ To to make REST calls with the Secure Application Model framework with sample co
 You must create and register a web app in Partner Center before making REST calls.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
+
 2. Create an Azure Active Directory (Azure AD) app.
+
 3. Give delegated application permissions to the following resources, *depending on your application's requirements*. If necessary, you can add more delegated permissions for application resources.
-    1. **Microsoft Partner Center** (some tenants show this as **SampleBECApp**)
-    2. **Azure Management APIs** (if you are planning to call Azure APIs)
-    3. **Windows Azure Active Directory**
+
+   1. **Microsoft Partner Center** (some tenants show this as **SampleBECApp**)
+
+   2. **Azure Management APIs** (if you are planning to call Azure APIs)
+
+   3. **Windows Azure Active Directory**
+
 4. Make sure that the home URL of your app is set to an endpoint where a live web app is running. This app will need to accept the [authorization code](#get-authorization-code) from the Azure AD login call. For example, in the example code in [the following section](#get-authorization-code), the web app is running at `https://localhost:44395/`.
+
 5. Note the following information from your web app's settings in Azure AD:
-    - Application ID
-    - Application secret
+
+   - Application ID
+   - Application secret
 
 > [!NOTE]
-> It is recommended to [use a certificate as your application secret](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
+> It is recommended to [use a certificate as your application secret](/azure/active-directory/develop/active-directory-certificate-credentials). However, you can also create an application key in the Azure portal. The sample code in [the following section](#get-authorization-code) uses an application key.
 
 ### Get authorization code
 
 You must get an authorization code for your web app to accept from the Azure AD login call:
 
-1. Log in to Azure AD at the following URL: <https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1>. Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
+1. Log in to Azure AD at the following URL: [https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1](https://login.microsoftonline.com/common/oauth2/authorize?client_id=Application-Id&response_mode=form_post&response_type=code%20id_token&scope=openid%20profile&nonce=1). Be sure to log in with the user account from which you will make Partner Center API calls (such as an admin agent or sales agent account).
+
 2. Replace **Application-Id** with your Azure AD app ID (GUID).
+
 3. When prompted, log in with your user account with MFA configured.
+
 4. When prompted, enter additional MFA information (phone number or email address) to verify your login.
+
 5. After you are logged in, the browser will redirect the call to your web app endpoint with your authorization code. For example, the following sample code redirects to `https://localhost:44395/`.
 
 #### Authorization code call trace
@@ -112,11 +130,13 @@ code=AuthorizationCodeValue&id_token=IdTokenValue&<rest of properties for state>
 You must then use your authorization code to get a refresh token:
 
 1. Make a POST call to the Azure AD login endpoint `https://login.microsoftonline.com/CSPTenantID/oauth2/token` with the authorization code. For an example, see the following [sample call](#sample-refresh-call).
+
 2. Note the refresh token that is returned.
-3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](https://docs.microsoft.com/rest/api/keyvault/).
+
+3. Store the refresh token in Azure Key Vault. For more information, see the [Key Vault API documentation](/rest/api/keyvault/).
 
 > [!IMPORTANT]
-> The refresh token must be [stored as a secret](https://docs.microsoft.com/rest/api/keyvault/setsecret/setsecret) in Key Vault.
+> The refresh token must be [stored as a secret](/rest/api/keyvault/setsecret/setsecret) in Key Vault.
 
 #### Sample refresh call
 
@@ -200,11 +220,11 @@ Host: api.partnercenter.microsoft.com
 
 ## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
 You can use the [Partner Center PowerShell module](https://www.powershellgallery.com/packages/PartnerCenter) to reduce the required infrastructure to exchange an authorization code for an access token. This method is optional for making [Partner Center REST calls](#rest).
 
-For more information on this process, see [Secure App Model](https://docs.microsoft.com/powershell/partnercenter/secure-app-model) PowerShell documentation.
+For more information on this process, see [Secure App Model](/powershell/partnercenter/secure-app-model) PowerShell documentation.
 
 1. Install the Azure AD and Partner Center PowerShell modules.
 
@@ -216,7 +236,7 @@ For more information on this process, see [Secure App Model](https://docs.micros
     Install-Module PartnerCenter
     ```
 
-2. Use the **[New-PartnerAccessToken](https://docs.microsoft.com/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
+2. Use the **[New-PartnerAccessToken](/powershell/module/partnercenter/new-partneraccesstoken)** command to perform the consent process and capture the required refresh token.
 
     ```powershell
     $credential = Get-Credential
@@ -233,4 +253,4 @@ For more information on this process, see [Secure App Model](https://docs.micros
     $token.RefreshToken | clip
     ```
 
-You should store the refresh token value in a secure repository, such as Azure Key Vault. For more information on how to leverage the secure application module with PowerShell, see the [multi-factor authentication](https://docs.microsoft.com/powershell/partnercenter/multi-factor-auth) article.
+You should store the refresh token value in a secure repository, such as Azure Key Vault. For more information on how to leverage the secure application module with PowerShell, see the [multi-factor authentication](/powershell/partnercenter/multi-factor-auth) article.

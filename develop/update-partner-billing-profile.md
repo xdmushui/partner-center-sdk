@@ -1,15 +1,14 @@
 ---
 title: Update the partner billing profile
 description: Updates a partner's billing profile.
-ms.assetid: F924B390-90C6-43B3-BB12-F4831464EC1F
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: parthpandyaMSFT
+ms.author: parthp
 ---
 
 # Update the partner billing profile
-
 
 **Applies To**
 
@@ -20,13 +19,11 @@ ms.localizationpriority: medium
 
 Updates a partner's billing profile
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To update a partner billing profile, retrieve the existing profile. Once you have updated the profile, use your **IAggregatePartner.Profiles** collection and call the **BillingProfile** property. Finally, call the **Update()** method.
 
@@ -43,26 +40,23 @@ BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.Billing
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateBillingProfile.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                              |
 |---------|--------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/billing HTTP/1.1 |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/billing HTTP/1.1
@@ -108,16 +102,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a **BillingProfile** object in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -161,11 +154,3 @@ Date: Mon, 21 Mar 2016 05:47:16 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

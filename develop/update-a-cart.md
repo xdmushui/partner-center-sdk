@@ -4,35 +4,29 @@ description: How to update an order for a customer in a cart.
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Update a cart
-
 
 **Applies To**
 
 - Partner Center
 
+How to update an order for a customer in a cart.
 
-How to update an order for a customer in a cart. 
-
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier. If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A Cart ID for an existing cart.
 
-
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
 
 Finally, call the **Put()** or **PutAsync()** method to create the order.
-
-
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -46,18 +40,15 @@ cart.LineItems.ToArray()[0].Quantity++;
 var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Put(cart);
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                 |
 |---------|-------------------------------------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/carts/{cart-id} HTTP/1.1              |
 
- 
-
-**URI parameters**
+### URI parameters
 
 Use the following path parameters to identify the customer, and specify the cart to be updated.
 
@@ -66,13 +57,11 @@ Use the following path parameters to identify the customer, and specify the cart
 | **customer-id** | string   | Yes      | A GUID formatted customer-id that identifies the customer.             |
 | **cart-id**     | string   | Yes      | A GUID formatted cart-id that identifies the cart.                     |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 This table describes the [Cart](cart-resources.md) properties in the request body.
 
@@ -84,7 +73,6 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 | expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                               |
-
 
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
@@ -101,8 +89,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
 
-
-**Request example**
+### Request example
 
 ```http
 PUT /v1/customers/d6bf25b7-e0a8-4f2d-a31b-97b55cfc774d/carts/65faf57b-0205-47ee-92b3-08dcf233ea73/ HTTP/1.1
@@ -113,19 +100,19 @@ MS-CorrelationId: 0e93c70c-977a-4a88-9580-7cf084c73286
 X-Locale: en-US
 MS-PartnerCenter-Client: Partner Center .NET SDK
 Content-Type: application/json
-Host: api.partnercenter.microsoft.com 
+Host: api.partnercenter.microsoft.com
 Content-Length: 496
 Expect: 100-continue
 
-{  
-    {  
+{
+    {
         "Id":"b4c8fdea-cbe4-4d17-9576-13fcacbf9605",
         "CreationTimestamp":"2018-03-15T17:15:02.3840528Z",
         "LastModifiedTimestamp":"2018-03-15T17:15:02.3840528Z",
         "ExpirationTimestamp":"0001-01-01T00:00:00",
         "LastModifiedUser":"2713ccd7-ea3b-470a-9cfb-451d5d0482cc",
-        "LineItems":[  
-            {  
+        "LineItems":[
+            {
                 "Id":0,
                 "CatalogItemId":"DG7GMGF0DWTL:0001:DG7GMGF0DSJB",
                 "FriendlyName":"A_sample_Azure_RI",
@@ -142,16 +129,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
-
+## REST response
 
 If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -180,7 +166,7 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
                 "subscriptionId": "3D5ECED6-1151-44C7-AEE6-70A4BB725666",
                 "scope": "shared",
                 "duration": "1Year"
-            }            
+            }
             "orderGroup": "0"
         }
     ],
@@ -196,11 +182,3 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

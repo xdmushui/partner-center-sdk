@@ -1,15 +1,14 @@
 ---
 title: Get a list of offers for a market
 description: Gets a collection that contains all the offers for a specific market.
-ms.assetid: 9251B841-498D-4B20-A90B-EB493A8FF212
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get a list of offers for a market
-
 
 **Applies To**
 
@@ -20,13 +19,11 @@ ms.localizationpriority: medium
 
 Gets a collection that contains all the offers for a specific market.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To get a list of offers in a given market, use your **IAggregatePartner.Offers** collection, select the market by country, and call the **Get()** or **Get Async()** method.
 
@@ -38,18 +35,15 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 
 **Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: Offers.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                          |
 |---------|--------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
- 
-
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameters to get the offers.
 
@@ -57,38 +51,35 @@ This table lists the required query parameters to get the offers.
 |----------------|------------|----------|------------------------|
 | **country-id** | **string** | Y        | The country/region ID. |
 
- 
-
-**Request headers**
+### Request headers
 
 - A **locale-id** formatted as a string is required.
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers?country=<country-id> HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 X-Locale: <locale-id>
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a collection of **Offer** resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -165,11 +156,3 @@ Date: Mon, 23 Nov 2015 23:20:44 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

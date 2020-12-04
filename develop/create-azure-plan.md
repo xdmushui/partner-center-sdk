@@ -1,16 +1,16 @@
 ---
-title: Create an Azure plan 
+title: Create an Azure plan
 description: Developers can purchase, create, and manage Azure plans programmatically using Partner Center APIs.
-ms.assetid: 
 ms.date: 01/02/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: mowrim
+ms.author: mowrim
 ---
 
 # Create an Azure plan
 
-Applies to:
+**Applies to:**
 
 * Partner Center
 
@@ -19,16 +19,16 @@ You can purchase, create, and manage an Azure plan using the Partner Center APIs
 ## Prerequisites
 
 * [Partner Center authentication](partner-center-authentication.md) credentials. This scenario supports authentication with both standalone App and App+User credentials.
-* The customer identifier. If you don't have a customer's identifier, follow the steps in [Get a list of customers](get-a-list-of-customers.md) or sign in to Partner Center, choose the customer from the customers list, select **Account**, then save their **Microsoft ID**.
-* [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](https://docs.microsoft.com/partner-center/confirm-customer-agreement).
+* The customer identifier. If you don't have a customer's identifier, follow the steps in [Get a list of customers](get-a-list-of-customers.md). Alternatively, sign in to Partner Center, choose the customer from the list of customers, select **Account**, then save their **Microsoft ID**.
+* [Confirmation of the customer's acceptance of the Microsoft Customer Agreement](/partner-center/confirm-customer-agreement).
 
 ## Get the catalog item for Azure plan
 
 Before you can create an Azure plan for a customer, you need to retrieve the corresponding catalog item. You can retrieve the catalog item using the existing Partner Center catalog APIs with the following resource models.
 
-* **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself is not a purchasable item.
+* **[Product](product-resources.md#product)**: A grouping construct for purchasable goods or services. A product itself isn't a purchasable item.
 * **[SKU](product-resources.md#sku)**: A purchasable Stock Keeping Unit (SKU) under a product. SKUs represent the different shapes of the product.
-* **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency or industry segment).
+* **[Availability](product-resources.md#availability)**: A configuration in which a SKU is available for purchase (such as country, currency, or industry segment).
 
 To obtain the catalog item for an Azure plan, complete the following steps:
 
@@ -40,7 +40,7 @@ To obtain the catalog item for an Azure plan, complete the following steps:
 
 ## Create and submit an order
 
-To submit your order for an Azure plan, do the following:
+To submit your order for an Azure plan, follow these steps:
 
 1. [Create a cart](create-a-cart.md) to hold the collection of catalog items that you intend to buy. When you create a [cart](cart-resources.md#cart), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [order](order-resources.md#order). (You can also [update a cart](update-a-cart.md).)
 
@@ -68,16 +68,16 @@ You can suspend an existing Azure plan by following the steps in [Suspend a subs
 
 *You can only suspend an existing Azure plan if it no longer has any active usage assets associated with it, including Azure usage subscriptions and Azure reservations.*
 
-For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](https://docs.microsoft.com/rest/api/resources/subscriptions).
+For details on how to disable Azure usage subscriptions, see [Azure API on subscription lifecycle management](/rest/api/resources/subscriptions).
 
-To remove existing Azure reservations, you must [cancel the reservations](https://docs.microsoft.com/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation).  
+To remove existing Azure reservations, you must [cancel the reservations](/partner-center/azure-reservations-manage#cancel-or-exchange-a-reservation).
 After you suspend an Azure plan, you can reactivate it.
 
 For details on how to reactivate an Azure plan, see [Reactivate a suspended subscription](reactivate-a-suspended-a-subscription.md)
 
 ## Transition existing CSP offers to Azure plan
 
-You can't create an Azure plan for an existing customer with a Microsoft Azure (MS-AZR-0145P) subscription. However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](https://docs.microsoft.com/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to do the following:
+You can't create an Azure plan for an existing customer with a Microsoft Azure (MS-AZR-0145P) subscription. However, you can [transition a customer from their existing CSP Azure offers to Azure services under the Azure plan](/partner-center/azure-plan-transition) in the new commerce experience in the CSP program from within Partner Center. To transition an existing customer, use the product upgrade APIs to follow these steps:
 
 * [Check whether the customer is eligible for a transition to Azure plan](get-eligibility-for-product-upgrade.md)
 * [Initiate a product upgrade for the customer](create-product-upgrade-entity.md)
@@ -92,7 +92,6 @@ You can track [Azure spending](azure-spending.md) by querying for usage summary 
 * [Get customer usage summary](get-a-customer-usage-summary.md)
 * [Get all subscription usage records for a customer](get-a-customer-subscription-s-usage-records.md)
 * [Get subscription usage summary](get-a-customer-subscription-usage-summary.md)
-* [Get all monthly usage records for a subscription](get-all-monthly-usage-records-for-a-subscription.md)
 * [Get usage data for subscription by resource](get-a-customer-subscription-resource-usage-records.md)
 * [Get usage data for subscription by meter](get-a-customer-subscription-meter-usage-records.md)
 * [Get meter usage record resources](meter-usage-resources.md)

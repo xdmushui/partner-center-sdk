@@ -1,16 +1,14 @@
 ---
 title: Country information resources
 description: Descriptive metadata for a country/region.
-ms.assetid: 19460437-5611-49A1-A7E7-704420C1DE8F
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Country information resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet
@@ -40,7 +38,7 @@ The following resources are descriptive metadata for a country/region.
 | VatIdRegex                    | string             | The tax ID regular expression.                                                                     |
 | PhoneNumberRegex              | string             | The phone number regular expression.                                                               |
 | IsRegistrationNumberSupported | boolean            | Indicates whether a registration number is supported or not.                                       |
-| IsTaxIdSupported              | boolean            | Indicates whether a tax ID is supported or not. Note that this is different than IsVatIdSupported. |
+| IsTaxIdSupported              | boolean            | Indicates whether a tax ID is supported or not. This is different than IsVatIdSupported. |
 | ResellerAgreementRegion       | string             | The reseller agreement region.                                                                     |
 | GeographicRegion              | string             | The geographic region.                                                                             |
 | CountryCallingCodesList       | array of strings   | The calling codes supported in the country/region.                                                 |
@@ -66,7 +64,7 @@ Describes the address formatting rules for a country/region.
 | TaxIdSample             | string             | The tax ID sample.                                                                                 |
 | VatIdRegex              | string             | The tax ID regular expression.                                                                     |
 | PhoneNumberRegex        | string             | The phone number regular expression.                                                               |
-| IsTaxIdSupported        | boolean            | Indicates whether a tax ID is supported or not. Note that this is different than IsVatIdSupported. |
+| IsTaxIdSupported        | boolean            | Indicates whether a tax ID is supported or not. This property is different than IsVatIdSupported. |
 | IsTaxIdOptional         | boolean            | Indicates whether a tax ID is optional or not.                                                     |
 | CountryCallingCodesList | array of strings   | The calling codes supported in the country/region.                                                 |
 | Attributes              | ResourceAttributes | The metadata attributes corresponding to the CountryInformation resource.                          |

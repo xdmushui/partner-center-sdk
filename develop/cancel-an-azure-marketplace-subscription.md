@@ -1,16 +1,14 @@
 ---
 title: Cancel a commercial marketplace subscription
 description: Cancel a commercial marketplace Subscription resource that matches a customer and subscription ID.
-ms.assetid: 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Cancel a commercial marketplace subscription
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -19,7 +17,9 @@ You can cancel a commercial marketplace [subscription](subscription-resources.md
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer ID (**customer-tenant-id**). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A subscription ID.
 
 ## Partner Center dashboard method
@@ -27,17 +27,23 @@ You can cancel a commercial marketplace [subscription](subscription-resources.md
 To cancel a commercial marketplace subscription in the Partner Center dashboard:
 
 1. [Select a customer](get-a-customer-by-name.md).
+
 2. Select the subscription that you wish to cancel.
+
 3. Choose the **Cancel subscription** option, then select **Submit**.
 
-## C#
+## C\#
 
 To cancel a customer's subscription:
 
 1. [Get the subscription by ID](get-a-subscription-by-id.md).
-2. Change the subscription's [**Status**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) property. For information on **Status** codes, see [SubscriptionStatus enumeration](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus).
-3. After the change is made, use your **IAggregatePartner.Customers** collection and call the **ById()** method.
-4. Call the [**Subscriptions**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method.
+
+2. Change the subscription's [**Status**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) property. For information on **Status** codes, see [SubscriptionStatus enumeration](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus).
+
+3. After the change is made, use your **`IAggregatePartner.Customers`** collection and call the **ById()** method.
+
+4. Call the [**Subscriptions**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) property, followed by the [**ById()**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid) method.
+
 5. Call the **Patch()** method.
 
 ``` csharp
@@ -72,7 +78,7 @@ This table lists the required query parameter to suspend the subscription.
 
 ### Request headers
 
-- See [Headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -122,7 +128,7 @@ Connection: Keep-Alive
 }
 ```
 
-## REST Response
+## REST response
 
 If successful, this method returns deleted [Subscription](subscription-resources.md) resource properties in the response body.
 

@@ -1,15 +1,12 @@
 ---
 title: Profile resources
 description: Describes the behavior of a Cloud Solution Provider's profiles.
-ms.assetid: 42F2959B-D70D-41A7-9A50-E22A2356A339
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Profile resources
-
 
 **Applies To**
 
@@ -20,8 +17,7 @@ ms.localizationpriority: medium
 
 Describes the behavior of a Cloud Solution Provider's profiles.
 
-## <span id="BillingProfile"/><span id="billingprofile"/><span id="BILLINGPROFILE"/>BillingProfile
-
+## BillingProfile
 
 Describes a partner's billing profile.
 
@@ -37,10 +33,7 @@ Describes a partner's billing profile.
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.            |
 | attributes          | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.       |
 
- 
-
-## <span id="LegalBusinessProfile"/><span id="legalbusinessprofile"/><span id="LEGALBUSINESSPROFILE"/>LegalBusinessProfile
-
+## LegalBusinessProfile
 
 Describes a partner's legal business profile.
 
@@ -51,16 +44,13 @@ Describes a partner's legal business profile.
 | primaryContact         | [Contact](utility-resources.md#contact)                       | The primary contact for the company or organization.                                                                                                                 |
 | companyApproverAddress | [Address](utility-resources.md#address)                       | The company approver address.                                                                                                                                        |
 | companyApproverEmail   | string                                                         | The company approver email.                                                                                                                                          |
-| vettingStatus          | string                                                         | The vetting status. This value is the string representation of the one of the member names found in [**VettingStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.partners.vettingstatus).           |
-| vettingSubStatus       | string                                                         | The vetting sub-status. This value is the string representation of the one of the member names found in [**VettingSubStatus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.partners.vettingsubstatus). |
+| vettingStatus          | string                                                         | The vetting status. This value is the string representation of the one of the member names found in [**VettingStatus**](/dotnet/api/microsoft.store.partnercenter.models.partners.vettingstatus).           |
+| vettingSubStatus       | string                                                         | The vetting sub-status. This value is the string representation of the one of the member names found in [**VettingSubStatus**](/dotnet/api/microsoft.store.partnercenter.models.partners.vettingsubstatus). |
 | profileType            | string                                                         | The partner profile type.                                                                                                                                            |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
 | attributes             | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |
 
- 
-
-## <span id="MpnProfile"/><span id="mpnprofile"/><span id="MPNPROFILE"/>MpnProfile
-
+## MpnProfile
 
 Describes a partner's Microsoft Partner Network profile.
 
@@ -72,10 +62,7 @@ Describes a partner's Microsoft Partner Network profile.
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
 
- 
-
-## <span id="OrganizationProfile"/><span id="organizationprofile"/><span id="ORGANIZATIONPROFILE"/>OrganizationProfile
-
+## OrganizationProfile
 
 Describes a partner's organization profile.
 
@@ -93,10 +80,7 @@ Describes a partner's organization profile.
 | links          | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                       |
 | attributes     | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                  |
 
- 
-
-## <span id="SupportProfile"/><span id="supportprofile"/><span id="SUPPORTPROFILE"/>SupportProfile
-
+## SupportProfile
 
 Describes a partner's support profile.
 
@@ -108,13 +92,4 @@ Describes a partner's support profile.
 | profileType | string                                                         | The partner profile type.                             |
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
-
- 
-
- 
-
- 
-
-
-
 

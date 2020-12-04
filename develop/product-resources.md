@@ -1,27 +1,22 @@
 ---
 title: Products resources
-description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.  
-ms.assetid: 80C1F9B5-35FB-4DD8-B501-03467E1D75AD
+description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 ms.date: 04/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Products resources
-
 
 **Applies To**
 
 - Partner Center
 
-Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.   
-
+Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 
 ## Product
 
-
-Represents a purchasable good or service. A product by itself is not a purchasable item.
+Represents a purchasable good or service. A product by itself isn't a purchasable item.
 
 | Property           | Type                          | Description                                                              |
 |--------------------|-------------------------------|--------------------------------------------------------------------------|
@@ -33,10 +28,7 @@ Represents a purchasable good or service. A product by itself is not a purchasab
 | publisherName      | string                        | The name of the product's publisher if available.                          |
 | links              | [ProductLinks](#productlinks) | The resource links contained within the product.                         |
 
-
-
 ## ItemType
-
 
 Represents the type of a product.
 
@@ -46,10 +38,7 @@ Represents the type of a product.
 | displayName     | string                        | The display name for this type.                                                      |
 | subType         | [ItemType](#itemtype)         | Optional. An object that describes a sub-type categorization for this item type.     |
 
- 
-
 ## ProductLinks
-
 
 Contains a list of links for a [Product](#product).
 
@@ -58,12 +47,9 @@ Contains a list of links for a [Product](#product).
 | skus            | [Link](utility-resources.md#link)                             | The link for accessing the underlying SKUs.          |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within this resource.   |
 
-
-
 ## Sku
 
-
-Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product. 
+Represents a purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.
 
 | Property               | Type             | Description                                                                           |
 |------------------------|------------------|---------------------------------------------------------------------------------------|
@@ -81,41 +67,38 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
-
-
 ## Availability
 
-Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment). 
+Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
-| Property        | Type												| Description                                                                         |
+| Property        | Type                        | Description                                                                         |
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
-| id              | string												| The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
-| productId       | string												| The ID of the [product](#product) that contains this availability.           |
-| skuId           | string												| The ID of the [SKU](#sku) that contains this availability.                   |
-| catalogItemId   | string												| The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
-| defaultCurrency | string												| The default currency supported for this availability.                               |
-| segment         | string												| The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
+| id              | string                        | The ID for this availability. This ID is unique only within the context of its parent [product](#product) and [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time span after retrieving it.  |
+| productId       | string                        | The ID of the [product](#product) that contains this availability.           |
+| skuId           | string                        | The ID of the [SKU](#sku) that contains this availability.                   |
+| catalogItemId   | string                        | The unique identifier for this item in the catalog. This is the ID that must be populated into the [OrderLineItem.OfferId](order-resources.md#orderlineitem) or [CartLineItem.CatalogItemId](cart-resources.md#cartlineitem) properties when purchasing the parent [SKU](#sku). **Note** This ID can change over time. You should only rely on this value within a short time after retrieving it. It should only be accessed and used at the time of purchase.  |
+| defaultCurrency | string                        | The default currency supported for this availability.                               |
+| segment         | string                        | The industry segment for this availability. Supported values are: Commercial, Education, Government, NonProfit. |
 | country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
 | isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
 | isRenewable     | bool                                                | Indicates whether this availability is renewable. |
-| product		  | [Product](#product)               | The product this availability corresponds to. |
-| sku		      | [Sku](#sku)						| The SKU this availability corresponds to. |
+| product      | [Product](#product)               | The product this availability corresponds to. |
+| sku          | [Sku](#sku)            | The SKU this availability corresponds to. |
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
 
-
 ## Term
 
-Represents a term for which the availability can be purchased. 
+Represents a term for which the availability can be purchased.
 
-| Property              | Type																				| Description                                                                         |
+| Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| duration              | string																			| An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
-| description           | string																			| The description of the term.           |
+| duration              | string                                      | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years). |
+| description           | string                                      | The description of the term.           |
 
 ## InventoryCheckRequest
 
-Represents a request to check inventory against certain catalog items. 
+Represents a request to check inventory against certain catalog items.
 
 | Property         | Type                                                | Description                                                                                 |
 |------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------|
@@ -123,20 +106,16 @@ Represents a request to check inventory against certain catalog items.
 | inventoryContext | key/value pairs                                     | The dictionary of context values that are needed to carry out the inventory check(s). Each [SKU](#sku) of the products will define which values (if any) are needed to carry out this operation.  |
 | links            | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the inventory check request.                            |
 
-
-
 ## InventoryItem
 
-Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.  
+Represents a single item in an inventory check operation. This resource is used for specifying the target items in an input request and is also used to represent the output results of the inventory check operation.
 
 | Property         | Type                                                              | Description                                                                      |
 |------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | productId        | string                                                            | (Required) The ID of the [product](#product).                            |
-| skuId            | string                                                            | The ID of the [SKU](#sku). When using this resource as input to an inventory request, this value is optional. If this value is not provided, then all SKUs under the product will be considered as target items of the inventory check operation.      |
+| skuId            | string                                                            | The ID of the [SKU](#sku). When using this resource as input to an inventory request, this value is optional. If this value isn't provided, then all SKUs under the product will be considered as target items of the inventory check operation.      |
 | isRestricted     | bool                                                              | Indicates whether this item was found to have a restricted inventory.            |
 | restrictions     | array of [InventoryRestriction](#inventoryrestriction)            | The details of any restrictions that are found for this item. This property will only be populated if **isRestricted** = "true". |
-
-
 
 ## InventoryRestriction
 
@@ -148,11 +127,9 @@ Represents the details of an inventory restriction. This is only applicable for 
 | description      | string                | The description of the inventory restriction.                                               |
 | properties       | key/value pairs       | The dictionary of properties that may provide further details on the restriction.           |
 
-
-
 ## BillingCycleType
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of billing cycle.
+An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cycle.
 
 | Value              | Position     | Description                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
@@ -161,4 +138,3 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
-

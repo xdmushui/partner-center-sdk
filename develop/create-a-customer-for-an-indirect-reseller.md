@@ -1,16 +1,16 @@
 ---
 title: Create a customer for an indirect reseller
 description: An indirect provider can create a customer for an indirect reseller.
-ms.assetid: F6196EE1-1B72-4D0A-BE6E-56A243671CDE
-ms.date: 06/03/2019
+ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: dineshvu
+ms.author: dineshvu
 ---
 
 # Create a customer for an indirect reseller
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 
@@ -19,16 +19,20 @@ An indirect provider can create a customer for an indirect reseller.
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
+
 - The tenant identifier of the indirect reseller.
+
 - The indirect reseller must have a partnership with the indirect provider.
 
 ## C\#
 
 To add a new customer for an indirect reseller:
 
-1. Instantiate a new [**Customer**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.customers.customer.associatedpartnerid) property.
-2. Use the [**IAggregatePartner.Customers**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations. 
-3. Call the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
+1. Instantiate a new [**Customer**](/dotnet/api/microsoft.store.partnercenter.models.customers.customer) object and then instantiate and populate the [**BillingProfile**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile) and [**CompanyProfile**](/dotnet/api/microsoft.store.partnercenter.models.customers.customercompanyprofile). Be sure to assign the indirect reseller ID to the [**AssociatedPartnerID**](/dotnet/api/microsoft.store.partnercenter.models.customers.customer.associatedpartnerid) property.
+
+2. Use the [**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) property to get an interface to customer collection operations.
+
+3. Call the [**Create**](/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.genericoperations.ientitycreateoperations-2.createasync) method to create the customer.
 
 ### C\# example
 
@@ -80,7 +84,7 @@ var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 
 ### Request headers
 
-See [Partner Center REST headers](headers.md) for more information.
+For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
@@ -89,8 +93,12 @@ This table describes the required properties in the request body.
 | Name                                          | Type   | Required | Description                                                                                                                                                                                                                                                                                                                                           |
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [BillingProfile](#billing-profile)             | object | Yes      | The customer's billing profile information.                                                                                                                                                                                                                                                                                                           |
-| [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                                                                                                                                                                                                                                                                           |
-| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. Note that the indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value is not supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
+| [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                               
+| [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. The indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value isn't supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
+|Domain| String| Yes|The customer's domain name, such as contoso.onmicrosoft.com.|
+|organizationRegistrationNumber|	string|Yes| 	The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). For customer’s company/organization located in other countries this should not be specified.|
+
+
 
 #### Billing profile
 
@@ -100,7 +108,7 @@ This table describes the minimum required fields from the [CustomerBillingProfil
 |------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | email            | string                                   | Yes      | The customer's email address.                                                                                                                                                                                   |
 | culture          | string                                   | Yes      | Their preferred culture for communication and currency, such as "en-US". See [Partner Center supported languages and locales](partner-center-supported-languages-and-locales.md) for the supported cultures. |
-| language         | string                                   | Yes      | The default language. Two character language codes (e.g., en, fr) are supported.                                                                                                                                |
+| language         | string                                   | Yes      | The default language. Two character language codes (for example `en` or `fr`) are supported.                                                                                                                                |
 | company\_name    | string                                   | Yes      | The registered company/organization name.                                                                                                                                                                       |
 | default\_address | [Address](utility-resources.md#address) | Yes      | The registered address of the customer's company/organization. See the [Address](utility-resources.md#address) resource for information on any length limitations.                                             |
 
@@ -110,7 +118,8 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
-| domain | string | .Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
+| domain | string | Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
+| organizationRegistrationNumber | string | Depends on condition | The customer’s organization registration number (also referred to as the INN number in certain countries). <br/><br/>Completing this field is required only if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here.  |
 
 ### Request example
 
@@ -179,7 +188,7 @@ If successful, the response contains a [Customer](customer-resources.md#customer
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
+Responses come with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 ### Response example
 

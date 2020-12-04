@@ -1,16 +1,14 @@
 ---
 title: Device deployment
 description: Partner Center API device deployment features include configuration policies and devices.
-ms.assetid: 7403E326-5A33-4B39-9364-40D1E5CD2DE1
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Device deployment
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center for Microsoft Cloud Germany

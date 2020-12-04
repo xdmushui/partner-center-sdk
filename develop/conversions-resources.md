@@ -1,16 +1,14 @@
 ---
 title: Conversions resources
 description: Conversion resources support the conversion of a trial subscription to a paid subscription.
-ms.assetid: 4AE796E3-47D9-428B-8267-A5247B573E0C
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Conversions resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
 - Partner Center operated by 21Vianet

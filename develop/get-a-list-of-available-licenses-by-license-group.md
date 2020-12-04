@@ -1,15 +1,14 @@
 ---
 title: Get a list of available licenses by license group
 description: How to get a list of licenses for the specified license groups available to users of the specified customer.
-ms.assetid: 1677A68C-0298-49C7-BAE1-5E74D8449C3F
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: amitravat
+ms.author: amrava
 ---
 
 # Get a list of available licenses by license group
-
 
 **Applies To**
 
@@ -17,23 +16,23 @@ ms.localizationpriority: medium
 
 How to get a list of licenses for the specified license groups available to users of the specified customer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer identifier.
+
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer's Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
+
 - A list of one or more license group identifiers.
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To get a list of available licenses for the specified license groups, start by instantiating a [List](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) of type [**LicenseGroupId**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Next, use the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get the value of the [**SubscribedSkus**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscribedskus) property to retrieve an interface to customer subscribed SKU collection operations. Finally, pass the list of license groups to the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to retrieve the list of subscribed SKUs with details on available license units.
+To get a list of available licenses for the specified license groups, start by instantiating a [List](/dotnet/api/system.collections.generic.list-1) of type [**LicenseGroupId**](/dotnet/api/microsoft.store.partnercenter.models.licenses.licensegroupid), and then add the license groups to the list. Next, use the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Then, get the value of the [**SubscribedSkus**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscribedskus) property to retrieve an interface to customer subscribed SKU collection operations. Finally, pass the list of license groups to the [**Get**](/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscribedskus.icustomersubscribedskucollection.getasync) method to retrieve the list of subscribed SKUs with details on available license units.
 
 ``` csharp
 // string selectedCustomerId;
 // IAggregatePartner partnerOperations;
 
-// To get subscribed SKUs available for group1, the license group for Azure Active Directory (AAD). 
+// To get subscribed SKUs available for group1, the license group for Azure Active Directory (AAD).
 List<LicenseGroupId> licenseGroupIds = new List<LicenseGroupId>() { LicenseGroupId.Group1};
 var customerUserAadSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get(licenseGroupIds);
 
@@ -46,10 +45,9 @@ List<LicenseGroupId> licenseGroupIds = new List<LicenseGroupId>() { LicenseGroup
 var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(selectedCustomerId).SubscribedSkus.Get(licenseGroupIds);
 ```
 
-## <span id="_Request"/><span id="_request"/><span id="_REQUEST"/> REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                                                                  |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,9 +55,7 @@ var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(s
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group2 HTTP/1.1                        |
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following path and query parameters to identify the customer and the license groups.
 
@@ -68,17 +64,15 @@ Use the following path and query parameters to identify the customer and the lic
 | customer-id     | string | Yes      | A GUID formatted string that identifies the customer.                                                                                                                                                                                                                 |
 | licenseGroupIds | string | No       | An enum value that indicates the license group of the assigned licenses. Valid values: Group1, Group2 Group1 - This group has all products whose license can be managed in the Azure Active Directory (AAD). Group2 - This group has only Minecraft product licenses. |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/0c39d6d5-c70d-4c55-bc02-f620844f3fd1/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1
@@ -90,16 +84,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="_Response"/><span id="_response"/><span id="_RESPONSE"/> REST Response
-
+## REST response
 
 If successful, the response body contains a collection of [SubscribedSku](license-resources.md#subscribedsku) resources.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -233,7 +226,7 @@ Date: Sat, 10 Jun 2017 00:19:44 GMT
 }
 ```
 
-**Response example (no matching SKUs found)**
+### Response example (no matching SKUs found)
 
 If no matching subscribed SKUs can be found for the specified license groups, the response contains an empty collection with a totalCount element whose value is 0.
 
@@ -255,11 +248,3 @@ Date: Fri, 09 Jun 2017 22:50:11 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

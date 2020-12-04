@@ -4,17 +4,13 @@ description: A partner creates a transfer when a customer wants his subscription
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # TransferEntity resources
 
-Applies to:
+**Applies to:**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 A partner creates a transfer when a customer wants his subscription with the partner to be transferred to another partner.
 
@@ -77,7 +73,7 @@ Represents an error that occurs when a transfer is accepted.
 
 ## TransferErrorCode
 
-An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate a type of order error.
+An [Enum/dotnet/api/system.enum) with values that indicate a type of order error.
 
 | Value | Position | Description |
 | --- | --- | --- |

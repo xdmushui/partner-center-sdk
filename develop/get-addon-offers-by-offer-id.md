@@ -1,15 +1,14 @@
 ---
 title: Get add-ons for an offer ID
 description: How to get the add-ons for an offer ID.
-ms.assetid: 647EBB14-7ABF-47A4-A342-7A691D8B2BA4
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get add-ons for an offer ID
-
 
 **Applies To**
 
@@ -20,16 +19,15 @@ ms.localizationpriority: medium
 
 How to get the add-ons for an offer ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - An offer ID. If you don't have the offer ID, see [Get a list of offers for a market](get-a-list-of-offers-for-a-market.md).
 
-## <span id="C_"/><span id="c_"/>C#
+## C\#
 
-
-To get the add-ons for an offer by ID, first call the [**IAggregatePartner.Offers.ByCountry**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.genericoperations.icountryselector-1.bycountry) method with the country code to get an interface to offer operations based on the given country. Then call the [**ByID**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method with the offer ID to identify the offer whose add-ons you want to retrieve. Next, use the [**AddOns**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.ioffer.addons) property to get an interface to add-on operations for the current offer. Finally, call the [**Get**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.get) or [**GetAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.getasync) method to get a collection of all the add-ons for the specified offer.
+To get the add-ons for an offer by ID, first call the [**IAggregatePartner.Offers.ByCountry**](/dotnet/api/microsoft.store.partnercenter.genericoperations.icountryselector-1.bycountry) method with the country code to get an interface to offer operations based on the given country. Then call the [**ByID**](/dotnet/api/microsoft.store.partnercenter.offers.ioffercollection.byid) method with the offer ID to identify the offer whose add-ons you want to retrieve. Next, use the [**AddOns**](/dotnet/api/microsoft.store.partnercenter.offers.ioffer.addons) property to get an interface to add-on operations for the current offer. Finally, call the [**Get**](/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.offers.iofferaddons.getasync) method to get a collection of all the add-ons for the specified offer.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -41,37 +39,32 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetOffer.cs
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}/addons?country={country-code} HTTP/1.1 |
 
- 
-
-**URI parameters**
+### URI parameters
 
 Use the following parameters to provide the offer ID and country code.
 
 | Name         | Type       | Required | Description                       |
 |--------------|------------|----------|-----------------------------------|
 | **offer-id** | **guid**   | Y        | A GUID that identifies the offer. |
-| **country**  | **string** | Y        | The country code (e.g. US).       |
+| **country**  | **string** | Y        | The country code (for example `US`).       |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/offers/195416C1-3447-423A-B37B-EE59A99A19C4/addons?country=us HTTP/1.1
@@ -83,16 +76,15 @@ X-Locale: en-US
 Host: api.partnercenter.microsoft.com
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a collection of [Offer](offer-resources.md) objects in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -206,11 +198,3 @@ Date: Wed, 01 Feb 2017 22:37:58 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

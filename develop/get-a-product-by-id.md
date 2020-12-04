@@ -1,11 +1,11 @@
 ---
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
-ms.assetid: 5E4160AB-6B73-4CA1-903D-7257927CA754
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: rbars
+ms.author: rbars
 ---
 
 # Get a product by ID
@@ -16,16 +16,15 @@ ms.localizationpriority: medium
 
 Gets the specified product resource using a product ID.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
+
 - A product ID.
 
-## <span id="Examples"/><span id="examples"><span id="EXAMPLES"/>Examples
+## C\#
 
-### C#
-
-To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product. 
+To find a specific product by ID, use your **IAggregatePartner.Products** collection, select the country by using the **ByCountry()** method, then call the **ById()** method. Finally, call the **Get()** or **GetAsync()** method to return the product.
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -33,11 +32,11 @@ To find a specific product by ID, use your **IAggregatePartner.Products** collec
 Product productDetail = partnerOperations.Products.ByCountry("US").ById("DZH318Z0BQ3Q").Get();
 ```
 
-### Java
+## Java
 
-[!INCLUDE [<Partner Center Java SDK support details>](<../includes/java-sdk-support.md>)]
+[!INCLUDE [Partner Center Java SDK support details](<../includes/java-sdk-support.md>)]
 
-To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product. 
+To find a specific product by ID, use your **IAggregatePartner.getProducts** function, select the country by using the **byCountry()** function, then call the **byId()** function. Finally, call the **get()** function to return the product.
 
 ```java
 // IAggregatePartner partnerOperations;
@@ -45,25 +44,25 @@ To find a specific product by ID, use your **IAggregatePartner.getProducts** fun
 Product productDetail = partnerOperations.getProducts().byCountry("US").byId("DZH318Z0BQ3Q").get();
 ```
 
-### PowerShell
+## PowerShell
 
-[!INCLUDE [<Partner Center PowerShell module support details>](<../includes/powershell-module-support.md>)]
+[!INCLUDE [Partner Center PowerShell module support details](<../includes/powershell-module-support.md>)]
 
-To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** paramater. The **CountryCode** paramater is options, if it is not specified then the country associated with the reseller will be used.
+To find a specific product by ID, execute the [**Get-PartnerProduct**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Get-PartnerProduct.md) command and specify the **ProductId** parameter. The **CountryCode** parameter is options, if it isn't specified then the country associated with the reseller will be used.
 
 ```powershell
 Get-PartnerProduct -ProductId 'DZH318Z0BQ3Q'
 ```
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  | 
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}?country={country} HTTP/1.1  |
 
-**URI parameter**
+### URI parameter
 
 Use the following path parameters to get the specified product.
 
@@ -72,31 +71,29 @@ Use the following path parameters to get the specified product.
 | product-id             | string   | Yes      | A string that identifies the product.                           |
 | country                | string   | Yes      | A country/region ID.                                            |
 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products/{product-id}?country=US HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response body contains a [Product](product-resources.md#product) resource.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
@@ -106,7 +103,7 @@ This method returns the following error codes:
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                     |
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -124,8 +121,8 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
         "id": "Azure",
         "displayName": "Azure",
         "subType": {
-			"id": "VirtualMachines",
-			"displayName": "VirtualMachines"
+            "id": "VirtualMachines",
+            "displayName": "VirtualMachines"
         }
     },
     "isMicrosoftProduct": true,

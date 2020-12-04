@@ -4,40 +4,33 @@ description: How to get a collection of a customer's subscriptions that are elig
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: khpavan
+ms.author: sakhanda
 ---
 
 # Get a customer's subscriptions transfer eligibility
 
-
 **Applies To**
 
 - Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 How to get a collection of a customer's subscriptions that are eligible/ineligible for transfer.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
-- A customer identifier.
 
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/transferseligibility?transferType={transfer-type} HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 This table lists the required query parameter to get all the subscriptions.
 
@@ -46,17 +39,15 @@ This table lists the required query parameter to get all the subscriptions.
 | customer-tenant-id | string | Yes      | A GUID-formatted string that identifies the customer. |
 | transfer-type      | string | Yes      | The type of transfer that is intended.                |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET /v1/customers/823c6c3f-9259-4d51-bae2-5dd06743177f/transferseligibility?transferType=directtoindirect HTTP/1.1
@@ -67,16 +58,15 @@ MS-CorrelationId: cd589c16-dc94-49ad-e529-125c258573d6
 Connection: Keep-Alive
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, this method returns a collection of [TransferEligibility](transfer-eligibility-resources.md) resources in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -112,11 +102,3 @@ Date: Tue, 24 Mar 2020 23:43:25 GMT
   }
 ]
 ```
-
- 
-
- 
-
-
-
-

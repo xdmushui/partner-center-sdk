@@ -1,15 +1,14 @@
 ---
 title: Update the partner legal business profile
 description: How to update the partner legal business profile.
-ms.assetid: DEB60680-145D-47C5-BB19-374752D45236
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
+author: parthpandyaMSFT
+ms.author: parthp
 ---
 
 # Update the partner legal business profile
-
 
 **Applies To**
 
@@ -20,24 +19,22 @@ ms.localizationpriority: medium
 
 How to update the partner legal business profile.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
 
-## <span id="C_"/><span id="c_"/>C#
-
+## C\#
 
 To update the partner legal business profile, first instantiate a **LegalBusinessProfile** object and populate it with the existing profile. For more information, see [Get the partner legal business profile](get-legal-business-profile.md). Then, update the properties that you need to change. The following code example illustrates changing the address and primary contact phone numbers.
 
-Next, get an interface to the partner profile operations collection from the **IAggregatePartner.Profiles** property. Then, retrieve the value of the **LegalBusinessProfile** property to get an interface to legal business profile operations. Finally, call the [**Update**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.update) or [**UpdateAsync**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.updateasync) method with the changed object to update the profile.
+Next, get an interface to the partner profile operations collection from the **IAggregatePartner.Profiles** property. Then, retrieve the value of the **LegalBusinessProfile** property to get an interface to legal business profile operations. Finally, call the [**Update**](/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.update) or [**UpdateAsync**](/dotnet/api/microsoft.store.partnercenter.profiles.ilegalbusinessprofile.updateasync) method with the changed object to update the profile.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
 
 var legalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfile.Get();
 
-// Change the address and primary contact phone number. 
+// Change the address and primary contact phone number.
 legalBusinessProfile.Address.PhoneNumber = "4255550110";
 legalBusinessProfile.PrimaryContact.PhoneNumber = "4255550110";
 
@@ -45,26 +42,23 @@ legalBusinessProfile.PrimaryContact.PhoneNumber = "4255550110";
 var updatedLegalBusinessProfile = partnerOperations.Profiles.LegalBusinessProfile.Update(legalBusinessProfile);
 ```
 
-## <span id="Request"/><span id="request"/><span id="REQUEST"/>Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                                    |
 |---------|--------------------------------------------------------------------------------|
 | **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/legalbusiness HTTP/1.1 |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 The legal business profile resource.
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/legalbusiness HTTP/1.1
@@ -126,16 +120,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>Response
-
+## REST response
 
 If successful, the response body contains the updated **LegalBusinessProfile**
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -190,11 +183,3 @@ Date: Tue, 21 Mar 2017 22:03:15 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-

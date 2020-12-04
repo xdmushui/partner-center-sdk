@@ -1,15 +1,12 @@
 ---
 title: Set user roles for a customer
 description: Within a customer account, there's a set of directory roles. You can assign user accounts to those roles.
-ms.assetid: B7FA3599-9AE9-4494-90B4-F7C9A2EF2338
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-ms.localizationpriority: medium
 ---
 
 # Set user roles for a customer
-
 
 **Applies To**
 
@@ -17,16 +14,15 @@ ms.localizationpriority: medium
 
 Within a customer account, there's a set of directory roles. You can assign user accounts to those roles.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
-
+## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
-- A customer ID (customer-tenant-id). If you do not have a customer's ID, you can look up the ID in Partner Center by choosing the customer from the customers list, selecting Account, then saving their Microsoft ID.
 
-## <span id="C_"/><span id="c_"/>C#
+- A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+## C\#
 
-To assign a directory role to a customer user, create a new [**UserMember**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.models.roles.usermember) with the relevant user details. Then, call the [**IAggregatePartner.Customers.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the specified customer ID to identify the customer. From there, use the [**DirectoryRoles.ById**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.idirectoryrolecollection.byid) method with the directory role ID to specify the role. Then, access the **UserMembers** collection, and use the [**Create**](https://docs.microsoft.com/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermembercollection.create) method to add the new user member to the collection of user members assigned to that role.
+To assign a directory role to a customer user, create a new [**UserMember**](/dotnet/api/microsoft.store.partnercenter.models.roles.usermember) with the relevant user details. Then, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the specified customer ID to identify the customer. From there, use the [**DirectoryRoles.ById**](/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.idirectoryrolecollection.byid) method with the directory role ID to specify the role. Then, access the **UserMembers** collection, and use the [**Create**](/dotnet/api/microsoft.store.partnercenter.customerdirectoryroles.iusermembercollection.create) method to add the new user member to the collection of user members assigned to that role.
 
 ``` csharp
 // UserMember createdUser;
@@ -48,18 +44,15 @@ var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).Dire
 
 **Sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: AddUserMemberToDirectoryRole.cs
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST request
 
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                                 |
 |----------|-----------------------------------------------------------------------------------------------------------------------------|
 | **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directoryroles/{role-ID}/usermembers HTTP/1.1 |
 
- 
-
-**URI parameter**
+### URI parameter
 
 Use the following URI parameters to identify the correct customer and role. To identify the user to whom to assign the role, supply the identifying information in the request body.
 
@@ -68,13 +61,11 @@ Use the following URI parameters to identify the correct customer and role. To i
 | **customer-tenant-id** | **guid** | Y        | The value is a GUID formatted **customer-tenant-id** that allows the reseller to filter the results for a given customer that belongs to the reseller. |
 | **role-id**            | **guid** | Y        | The value is a GUID formatted **role-id** that identifies the role to assign to the user.                                                              |
 
- 
+### Request headers
 
-**Request headers**
+For more information, see [Partner Center REST headers](headers.md).
 
-- See [Partner Center REST headers](headers.md) for more information.
-
-**Request body**
+### Request body
 
 This table describes the required properties in the request body.
 
@@ -85,9 +76,7 @@ This table describes the required properties in the request body.
 | **UserPrincipalName** | **string** | Y        | The name of the user principal.        |
 | **Attributes**        | **object** | Y        | Contains "ObjectType":"UserMember"     |
 
- 
-
-**Request example**
+### Request example
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/4d3cf487-70f4-4e1e-9ff1-b2bfce8d9f04/directoryroles/f023fd81-a637-4b56-95fd-791ac0226033/usermembers HTTP/1.1
@@ -111,16 +100,15 @@ Expect: 100-continue
 }
 ```
 
-## <span id="REST_Response"/><span id="rest_response"/><span id="REST_RESPONSE"/>REST Response
-
+## REST response
 
 This method returns the user account with the role id attached when the user is successfully assigned the role.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ```http
 HTTP/1.1 201 Created
@@ -142,11 +130,3 @@ Date: Tue, 20 Dec 2016 23:36:55 GMT
     }
 }
 ```
-
- 
-
- 
-
-
-
-
