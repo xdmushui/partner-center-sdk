@@ -1,6 +1,6 @@
 ---
-title: Delete a self serve policy
-description: How to delete a self serve policy.
+title: Delete a self-serve policy
+description: How to delete a self-serve policy.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -12,7 +12,7 @@ ms.subservice:  partnercenter-sdk
 
 - Partner Center
 
-This topic explains how to update a self serve policy.
+This topic explains how to update a self-serve policy.
 
 ## Prerequisites
 
@@ -20,11 +20,11 @@ This topic explains how to update a self serve policy.
 
 ## C\#
 
-To delete a self serve policy:
+To delete a self-serve policy:
 
 1. Call the [**IAggregatePartner.SelfServePolicies.ById**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.byid) method with the entity identifier to retrieve an interface to operations on the policies.
 
-2. Call the [**Delete**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.delete) or [**DeleteAsync**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.deleteasync) method to delete the self serve policy.
+2. Call the [**Delete**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.delete) or [**DeleteAsync**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.deleteasync) method to delete the self-serve policy.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -33,7 +33,7 @@ string policyId;
 // All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// deletes the self serve policies
+// deletes the self-serve policies
 partnerOperations.SelfServePolicies.ById(policyId).Delete();
 ```
 
@@ -57,7 +57,7 @@ Use the following path parameters to get the specified product.
 
 | Name                       | Type         | Required | Description                                                     |
 |----------------------------|--------------|----------|-----------------------------------------------------------------|
-| **SelfServePolicy-id**     | **string**   | Yes      | A string that identifies the self serve policy.                 |
+| **SelfServePolicy-id**     | **string**   | Yes      | A string that identifies the self-serve policy.                 |
 
 ### Request headers
 

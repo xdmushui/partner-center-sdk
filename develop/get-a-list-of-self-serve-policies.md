@@ -22,7 +22,7 @@ This article describes how to get a collection of resources that represents self
 
 ## C\#
 
-To get a list of all self serve policies:
+To get a list of all self-serve policies:
 
 1. Call the [**IAggregatePartner.SelfServePolicies**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection) method with the entity identifier to retrieve an interface to operations on the policies.
 
@@ -32,7 +32,7 @@ To get a list of all self serve policies:
 // All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// gets the self serve policies
+// gets the self-serve policies
 var SelfServePolicies = scopedPartnerOperations.SelfServePolicies.Get(customerIdAsEntity);
 ```
 

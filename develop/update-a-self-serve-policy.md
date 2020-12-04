@@ -1,6 +1,6 @@
 ---
-title: Update a self serve policy
-description: How to update a self serve policy.
+title: Update a self-serve policy
+description: How to update a self-serve-policy.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -12,7 +12,7 @@ ms.subservice:  partnercenter-sdk
 
 - Partner Center
 
-This topic explains how to update a self serve policy.
+This topic explains how to update a self-serve policy.
 
 ## Prerequisites
 
@@ -20,11 +20,11 @@ This topic explains how to update a self serve policy.
 
 ## C\#
 
-To delete a self serve policy:
+To delete a self-serve policy:
 
 1. Call the [**IAggregatePartner.SelfServePolicies.ById**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.byid) method with the entity identifier to retrieve an interface to operations on the policies.
 
-2. Call the [**Put**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.put) or [**PutAsync**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.putasync) method to update the self serve policy.
+2. Call the [**Put**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.put) or [**PutAsync**](/dotnet/api/microsoft.store.partnercenter.SelfServePolicies.putasync) method to update the self-serve policy.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -33,7 +33,7 @@ SelfServePolicy policy;
 // All the operations executed on this partner operation instance will share the same correlation identifier but will differ in request identifier
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// updates the self serve policies
+// updates the self-serve policies
 partnerOperations.SelfServePolicies.ById(policy.id).Put(policy);
 ```
 
@@ -56,16 +56,16 @@ This table describes the required properties in the request body.
 
 | Name                              | Type   | Description                                 |
 |------------------------------------------------------------------|--------|---------------------------------------------|
-| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self serve policy information. |
+| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self-serve policy information. |
 
 #### SelfServePolicy
 
-This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self serve policy.
+This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self-serve policy.
 
 | Property              | Type             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
-| id                    | string           | A self serve policy identifier that is supplied upon successful creation of the self serve policy.     |
-| SelfServeEntity       | SelfServeEntity  | The self serve entity that is being granted access.                                                     |
+| id                    | string           | A self-serve policy identifier that is supplied upon successful creation of the self-serve policy.     |
+| SelfServeEntity       | SelfServeEntity  | The self-serve entity that is being granted access.                                                     |
 | Grantor               | Grantor          | The grantor that is granting access.                                                                    |
 | Permissions           | Array of Permission| An Array of [Permission](self-serve-policy-resources.md#permission) resources.                                                      |
 | Etag                  | string           | The Etag.                                                                                               |
@@ -105,7 +105,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the updated self serve policy.
+If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the updated self-serve policy.
 
 ### Response success and error codes
 
@@ -115,8 +115,8 @@ This method returns the following error codes:
 
 | HTTP Status Code     | Error code   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
-| 404                  | 600039       | Self serve policy was not found                                            |
-| 404                  | 600040       | Self serve policy identifier is incorrect                                  |
+| 404                  | 600039       | Self-serve policy was not found                                            |
+| 404                  | 600040       | Self-serve policy identifier is incorrect                                  |
 
 
 ### Response example

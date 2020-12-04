@@ -1,6 +1,6 @@
 ---
-title: Create a self serve policy
-description: How to create a new self serve policy.
+title: Create a self-serve policy
+description: How to create a new self-serve policy.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -12,7 +12,7 @@ ms.subservice:  partnercenter-sdk
 
 - Partner Center
 
-This topic explains how to create a new self serve policy.
+This topic explains how to create a new self-serve policy.
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ This topic explains how to create a new self serve policy.
 
 ## C\#
 
-Create a self serve policy:
+Create a self-serve policy:
 
-1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync) method with the self serve policy info.
+1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync) method with the self-serve policy info.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -53,7 +53,7 @@ var selfServePolicy = new SelfServePolicy
 // All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
-// creates the self serve policy
+// creates the self-serve policy
 SelfServePolicy createdSelfServePolicy = scopedPartnerOperations.selfServePolicies.Create(selfServePolicy);
 ```
 
@@ -83,15 +83,15 @@ This table describes the required properties in the request body.
 
 | Name                              | Type   | Description                                 |
 |------------------------------------------------------------------|--------|---------------------------------------------|
-| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self serve policy information. |
+| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self-serve policy information. |
 
 #### SelfServePolicy
 
-This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self serve policy.
+This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self-serve policy.
 
 | Property              | Type             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
-| SelfServeEntity       | SelfServeEntity  | The self serve entity that is being granted access.                                                     |
+| SelfServeEntity       | SelfServeEntity  | The self-serve entity that is being granted access.                                                     |
 | Grantor               | Grantor          | The grantor that is granting access.                                                                    |
 | Permissions           | Array of Permission| An Array of [Permission](self-serve-policy-resources.md#permission) resources.                                                                     |
 
@@ -129,7 +129,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new self serve policy.
+If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new self-serve policy.
 
 ### Response success and error codes
 
@@ -139,7 +139,7 @@ This method returns the following error codes:
 
 | HTTP Status Code     | Error code   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
-| 409                  | 600041       | Self serve policy already exists.                                                     |
+| 409                  | 600041       | Self-serve policy already exists.                                                     |
 
 
 ### Response example
