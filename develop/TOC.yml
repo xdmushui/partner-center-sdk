@@ -428,6 +428,8 @@
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Activate sandbox subscription 
       href: activate-sandbox-subscription-azure-marketplace-products.md
+    - name: Delete a customer account from the integration sandbox
+      href: delete-a-customer-account-from-the-integration-sandbox.md
 - name: Referrals
   href: /partner/develop/referrals
   items:
@@ -448,8 +450,7 @@
       href: get-market-specific-validation-data.md
     - name: Verify domain availability
       href: verify-domain-availability.md
-    - name: Delete a customer account from the integration sandbox
-      href: delete-a-customer-account-from-the-integration-sandbox.md
+    
 - name: Security
   href: partner-security-requirements.md
   items:
