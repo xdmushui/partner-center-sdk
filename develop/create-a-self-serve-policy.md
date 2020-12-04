@@ -18,6 +18,52 @@ This topic explains how to create a new self serve policy.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
+## C\#
+
+Create a self serve policy:
+
+1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync)  method with the self serve policy info.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+string customerIdAsEntity;
+
+var selfServePolicy = new SelfServePolicy
+{
+    SelfServeEntity = new SelfServeEntity
+    {
+        SelfServeEntityType = "customer",
+        TenantID = customerIdAsEntity,
+    },
+    Grantor = new Grantor
+    {
+        GrantorType = "billToPartner",
+        TenantID = partnerIdAsGrantor,
+    },
+    Permissions = new Permission[]
+    {
+        new Permission
+        {
+        Action = "Purchase",
+        Resource = "AzureReservedInstances",
+        },
+    },
+};
+
+// All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
+IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
+
+// creates the self serve policy
+SelfServePolicy createdSelfServePolicy = scopedPartnerOperations.selfServePolicies.Create(selfServePolicy);
+```
+
+For an example, see the following:
+
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSamples**
+- Class: **CreateSelfServePolicies.cs**
+
+
 ## REST request
 
 ### Request syntax
