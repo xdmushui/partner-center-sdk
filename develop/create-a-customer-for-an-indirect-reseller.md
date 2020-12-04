@@ -1,6 +1,6 @@
 ---
 title: Create a customer for an indirect reseller
-description: An indirect provider can create a customer for an indirect reseller.
+description: Learn how an indirect provider can use Partner Center APIs to create a customer for an indirect reseller. 
 ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: dineshvu
 ms.author: dineshvu
 ---
 
-# Create a customer for an indirect reseller
+# Create a customer for an indirect reseller using Partner Center APIs
 
 **Applies to:**
 

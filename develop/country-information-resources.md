@@ -1,12 +1,12 @@
 ---
 title: Country information resources
-description: Descriptive metadata for a country/region.
+description: Learn about using Partner Center APIs with Country information resources and descriptive metadata related to a specific country or region.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Country information resources
+# Country information resources available from Partner Center APIs
 
 **Applies to:**
 

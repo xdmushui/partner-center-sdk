@@ -1,6 +1,6 @@
 ---
 title: Create a cart with add-ons
-description: How to add an order with add-ons for a customer in a cart.
+description: Learn how to use Partner Center APIs to add a customer order with add-ons through a cart. Article shares prerequisites and steps to create a cart with add-ons.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: rbars
 ms.author: rbars
 ---
 
-# Create a cart with add-ons
+# Create a cart with add-ons to a customer order
 
 **Applies to:**
 
