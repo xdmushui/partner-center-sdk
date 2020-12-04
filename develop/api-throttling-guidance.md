@@ -52,6 +52,9 @@ To use the Retry-after delay, do the following:
 
 3. If the request fails again with a 429 error code, you are still being throttled. Retry with Exponential backoff, use the recommended Retry-After delay and retry the request until it succeeds.
 
+4. If you are using SDK you'll receive an exception with status code 429 when your request is being throttled. Use the RetryAfter property in the exception and retry the request after the time is elapsed.
+
+
 ## APIs currently impacted by throttling
 
 In the long run, every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the few APIs listed below. Partner Center will be collecting the telemetry on each of the APIs and will dynamically adjust the throttling limits. The following table lists the APIs where throttling is currently enforced.  
