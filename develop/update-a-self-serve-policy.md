@@ -30,7 +30,7 @@ To delete a self serve policy:
 // IAggregatePartner partnerOperations;
 SelfServePolicy policy;
 
-// All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
+// All the operations executed on this partner operation instance will share the same correlation identifier but will differ in request identifier
 IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
 
 // updates the self serve policies
@@ -47,7 +47,7 @@ partnerOperations.SelfServePolicies.ById(policy.id).Put(policy);
 
 ### Request headers
 
-- A request ID and correlation ID are required.
+- A request identifier and correlation identifier are required.
 - See [Partner Center REST headers](headers.md) for more information.
 
 ### Request body
