@@ -1,6 +1,6 @@
 ---
 title: Create a cart
-description: How to add an order for a customer in a cart.
+description: Learn how to use Partner Center APIs to add an order for a customer in a cart. Topic includes information on creating a cart and any prerequisites.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: rbars
 ms.author: rbars
 ---
 
-# Create a cart
+# Create a cart with a customer order
 
 **Applies to:**
 
