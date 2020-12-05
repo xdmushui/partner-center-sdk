@@ -4,7 +4,7 @@ description: Learn how to use asynchronous validation to get a customer's qualif
 ms.date: 12/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-author: jobiesel
+author: JoeyBytes
 ms.author: jobiesel
 # Relates to asynchronous screening or vetting.
 ---
