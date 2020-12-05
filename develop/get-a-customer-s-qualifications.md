@@ -6,6 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: jobiesel
 ms.author: jobiesel
+# Relates to asynchronous screening or vetting.
 ---
 
 # Get a customer's qualifications via asynchronous validation

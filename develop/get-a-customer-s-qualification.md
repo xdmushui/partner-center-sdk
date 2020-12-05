@@ -6,6 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
+# Relates to synchronous screening or vetting.
 ---
 
 # Get a customer's qualification via synchronous validation
