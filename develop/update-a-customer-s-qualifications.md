@@ -1,23 +1,23 @@
 ---
-title: Update a customer's qualification
-description: Learn how to update a customer's qualifications via synchronous screening or vetting, including the address associated with the profile.
+title: Update a customer's qualifications
+description: Learn how to update a customer's qualifications via asynchronous screening or vetting, including the address associated with the profile.
 ms.date: 12/04/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
-author: dineshvu
-ms.author: dineshvu
-# Relates to synchronous screening or vetting.
+author: jobiesel
+ms.author: jobiesel
+# Relates to asynchronous screening or vetting. 
 ---
 
-# Update a customer's qualification via synchronous validation
+# Update a customer's qualifications asynchronously
 
 **Applies To**
 
 - Partner Center
 
-Updates a customer's qualification.
+Updates a customer's qualifications asynchronously.
 
-A partner can update a customer's qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
+A partner can update a customer's qualifications asynchronously to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 
 ## Prerequisites
 
@@ -25,34 +25,13 @@ A partner can update a customer's qualification to be "Education" or "Government
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer's Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-## C\#
-
-To update a customer's qualification to "Education", call **[Update/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification.update)** on an existing  [**Customer**](/dotnet/api/microsoft.store.partnercenter.models.customers.customer).
-
-``` csharp
-// CustomerQualification is an enum
-
-var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.Education);
-```
-
-**Sample**: [Console test app](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
-
-To update a customer's qualification to **GovernmentCommunityCloud** on an existing customer without a qualification.  The partner is also are required to include the customer's [**ValidationCode**](utility-resources.md#validationcode).
-
-``` csharp
-// CustomerQualification is an enum
-// GCC validation is type ValidationCode
-
-var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.GovernmentCommunityCloud, gccValidation);
-```
-
 ## REST request
 
 ### Request syntax
 
 | Method  | Request URI                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| **PUT** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualification?code={validationCode} HTTP/1.1 |
+| **POST** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer_id}/qualifications?code={validationCode} HTTP/1.1 |
 
 ### URI parameter
 
@@ -74,7 +53,7 @@ The integer value from the [**CustomerQualification**](/dotnet/api/microsoft.sto
 ### Request example
 
 ```http
-PUT https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualification?code=<validation-code> HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/qualifications?code=<validation-code> HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
@@ -84,7 +63,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## REST response
 
-If successful, this method returns updated [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property in the response body.
+If successful, this method returns a qualifications object in the response body. Below is an example of the **POST** call on a customer (with a previous qualification of **None**) with the **Education** qualification.
 
 ### Response success and error codes
 
@@ -93,15 +72,19 @@ Each response comes with an HTTP status code that indicates success or failure a
 ### Response example
 
 ```http
-HTTP/1.1 200 OK
-Content-Length: 14
+HTTP/1.1 201 CREATED
+Content-Length: 29
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-"governmentcommunitycloud"
+{
+    "qualification": "Education",
+    "vettingStatus": "InReview",
+    "vettingCreateDate": "2020-12-04T20:54:24Z" // UTC
+}
 ```
 
 ## Related articles
 
-- [Get a customer's qualification](get-a-customer-s-qualification.md)
+- [Get a customer's qualifications](get-a-customer-s-qualifications.md)
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
