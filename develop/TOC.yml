@@ -246,9 +246,9 @@
       href: get-a-customer-s-company-profile.md
     - name: "Get a customer's qualification"
       items: 
-      - name: Use asynchronous screening
+      - name: Use asynchronous APIs
         href: get-a-customer-s-qualification-asynchronous.md
-      - name: Use synchronous screening
+      - name: Use synchronous APIs
         href: get-a-customer-s-qualification-synchronous.md
     - name: "Get all of a customer's orders"
       href: get-all-of-a-customer-s-orders.md
@@ -294,9 +294,9 @@
       href: update-a-customer-s-billing-profile.md
     - name: Update a customer's qualification
       items:
-      - name: Use asynchronous screening  
+      - name: Use asynchronous APIs  
         href: update-a-customer-s-qualification-asynchronous.md
-      - name: Use synchronous screening
+      - name: Use synchronous APIs
         href: update-a-customer-s-qualification-synchronous.md
     - name: Update the nickname for a subscription
       href: update-the-nickname-for-a-subscription.md
