@@ -1,6 +1,6 @@
 ---
 title: Create a customer
-description: How to create a new customer.
+description: Learn how a Cloud Solution Provider (CSP) partner can use Partner Center APIs to create a new customer. Article describes prerequisites and what else happens. 
 ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: dineshvu
 ms.author: dineshvu
 ---
 
-# Create a customer
+# Create a customer using Partner Center APIs
 
 **Applies to:**
 

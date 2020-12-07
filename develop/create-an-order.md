@@ -1,12 +1,12 @@
 ---
-title: Create an order
-description: How to create an order for a customer.
+title: Create a customer order
+description: Learn how to use Partner Center APIs to create an order for a customer. Article includes prerequisites, steps, and examples.
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Create an order
+# Create an order for a customer using Partner Center APIs
 
 **Applies to:**
 
