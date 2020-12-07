@@ -189,6 +189,26 @@
       "source_path": "develop/get-service-request-support-topics--pending-.md",
       "redirect_url": "/partner-center/develop/dotnet-release-notes#version-1162",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "develop/get-a-customer-s-qualification.md",
+      "redirect_url": "get-customer-qualification-synchronous",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "develop/update-a-customer-s-qualification.md",
+      "redirect_url": "update-customer-qualification-synchronous",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "develop/get-a-customer-s-qualifications.md",
+      "redirect_url": "get-customer-qualification-asynchronous",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "develop/update-a-customer-s-qualifications.md",
+      "redirect_url": "update-customer-qualification-asynchronous",
+      "redirect_document_id": true
     }
   ]
 }
