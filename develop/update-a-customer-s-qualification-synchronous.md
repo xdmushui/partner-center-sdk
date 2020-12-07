@@ -1,7 +1,7 @@
 ---
 title: Update a customer's qualification
 description: Learn how to update a customer's qualifications via synchronous screening or vetting, including the address associated with the profile.
-ms.date: 12/04/2020
+ms.date: 12/07/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
@@ -15,7 +15,7 @@ ms.author: dineshvu
 
 - Partner Center
 
-Updates a customer's qualification.
+Learn how to update a customer's qualifications synchronously via Partner Center APIs. To learn how to do this asynchronously, see [Update a customer's qualification via asynchronous validation](update-a-customer-s-qualification-asynchronous.md).
 
 A partner can update a customer's qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 

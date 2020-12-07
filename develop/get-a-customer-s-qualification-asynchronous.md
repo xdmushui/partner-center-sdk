@@ -1,7 +1,7 @@
 ---
 title: Get a customer's qualifications
 description: Learn how to use asynchronous validation to get a customer's qualification via Partner Center API. Partners might use this to validate Education customers.
-ms.date: 12/04/2020
+ms.date: 12/07/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: JoeyBytes
@@ -15,7 +15,7 @@ ms.author: jobiesel
 
 - Partner Center
 
-How to get a customer's qualifications asynchronously.
+Learn how to get a customer's qualifications asynchronously via Partner Center APIs. To learn how to do this synchronously, see [Get a customer's qualification via synchronous validation](get-a-customer-s-qualification-synchronous.md).
 
 ## Prerequisites
 
