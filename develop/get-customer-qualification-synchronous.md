@@ -15,7 +15,7 @@ ms.author: dineshvu
 
 - Partner Center
 
-Learn how to get a customer's qualification synchronously via Partner Center APIs. To learn how to do this asynchronously, see [Get a customer's qualification via asynchronous validation](get-a-customer-s-qualification-asynchronous.md).
+Learn how to get a customer's qualification synchronously via Partner Center APIs. To learn how to do this asynchronously, see [Get a customer's qualification via asynchronous validation](get-customer-qualification-asynchronous.md).
 
 ## Prerequisites
 

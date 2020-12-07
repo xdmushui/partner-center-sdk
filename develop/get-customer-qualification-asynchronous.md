@@ -15,7 +15,7 @@ ms.author: jobiesel
 
 - Partner Center
 
-Learn how to get a customer's qualifications asynchronously via Partner Center APIs. To learn how to do this synchronously, see [Get a customer's qualification via synchronous validation](get-a-customer-s-qualification-synchronous.md).
+Learn how to get a customer's qualifications asynchronously via Partner Center APIs. To learn how to do this synchronously, see [Get a customer's qualification via synchronous validation](get-customer-qualification-synchronous.md).
 
 ## Prerequisites
 
