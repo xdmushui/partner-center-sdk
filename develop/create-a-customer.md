@@ -61,7 +61,8 @@ var customerToCreate = new Customer()
         Domain = string.Format(CultureInfo.InvariantCulture,
             "SampleApplication{0}.{1}",
             new Random().Next(),
-            this.Context.Configuration.Scenario.CustomerDomainSuffix)
+            this.Context.Configuration.Scenario.CustomerDomainSuffix),
+        //// OrganizationRegistrationNumber = "123456" // Please add if in specific country that requires
     },
     BillingProfile = new CustomerBillingProfile()
     {
@@ -72,6 +73,7 @@ var customerToCreate = new Customer()
         DefaultAddress = new Address()
         {
             FirstName = "Tania",
+            MiddleName = "MiddleName",
             LastName = "Carr",
             AddressLine1 = "One Microsoft Way",
             City = "Redmond",
