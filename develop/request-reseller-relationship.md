@@ -82,7 +82,7 @@ MS-ServerId: 030020643
 Date: Fri, 19 May 2017 22:32:07 GMT
 
 {
-    "url": "https://portal.office.com/partner/partnersignup.aspx?type=ResellerRelationship&id=3b33e682-00c3-41ee-9dd2-a548adf56438&csp=1&msppid=0",
+    "url": "https://admin.microsoft.com/Adminportal/Home?invType=ResellerRelationship&partnerId=3b33e682-00c3-41ee-9dd2-a548adf56438&msppId=0&DAP=false#/BillingAccounts/partner-invitation",
     "attributes": {
         "objectType": "RelationshipRequest"
     }
