@@ -70,7 +70,7 @@ POST
 
     [
 
-        { 
+       ```
 
             "Qualification": "Education"
 
@@ -80,7 +80,7 @@ POST
 
 Response example:
 
-    [
+    ```
 
         {
 
