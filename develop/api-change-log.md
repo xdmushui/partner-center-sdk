@@ -32,6 +32,7 @@ Two new GET and POST Qualifications APIs will be introduced. Note that the new A
 
  ```
 - GET Qualifications
+GET
 
 {customer_id}/qualifications
 
