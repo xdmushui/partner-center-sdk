@@ -34,7 +34,7 @@ Two new GET and POST Qualifications APIs will be introduced. Note that the new A
 
 Response example:
 
-    [
+   ```
 
         {
 
