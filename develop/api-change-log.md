@@ -30,13 +30,14 @@ These APIs will be retired at the end of Feb 2021, to be replaced by new APIs as
 
 Two new GET and POST Qualifications APIs will be introduced. Note that the new APIs will be using **Qualifications**, not **Qualification**. The APIs will be available for testing in FY21 Q2.
 
+ ```
 - GET Qualifications
 
 {customer_id}/qualifications
 
 Response example:
 
-   ```
+  
 
         {
 
