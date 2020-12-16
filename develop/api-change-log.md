@@ -15,7 +15,7 @@ Check here monthly for changes to Partner Center APIs.
 
 ### What has changed?
 
-Currently, the Partner Center API has GET and PUT qualifications to veify Education customers’ eligibility. There will be no changes to the GET Qualification API. However, we’ve added a return case to the PUT Qualification API.
+Currently, the Partner Center API has GET and PUT qualifications to verify Education customers’ eligibility. There will be no changes to the GET Qualification API. However, we’ve added a return case to the PUT Qualification API.
 
 - GET - doesn't change. [Current API article](get-a-customer-s-qualification.md)
 - PUT - return case will be added. [Current API article](update-a-customer-s-qualification.md)
