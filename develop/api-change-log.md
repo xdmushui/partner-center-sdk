@@ -20,7 +20,7 @@ Currently, the Partner Center API has GET and PUT qualifications to veify Educat
 - GET - doesn't change. [Current API article](get-a-customer-s-qualification.md)
 - PUT - return case will be added. [Current API article](update-a-customer-s-qualification.md)
 
-These APIs will be retired at the end of Feb 2021, to be replaced by new APIs as described below.
+These APIs will be retired at the end of February 2021, to be replaced by new APIs as described below.
 
 ### Scenarios impacted:
 
@@ -28,7 +28,7 @@ Customer eligibility for education pricing on select SKUs
 
 ### Detail descriptions: Contract changes
 
-Two new GET and POST Qualifications APIs will be introduced. Note that the new APIs will be using **Qualifications**, not **Qualification**. The APIs will be available for testing in FY21 Q2.
+Two new GET and POST Qualifications APIs will be introduced. The new APIs will be using **Qualifications**, not **Qualification**. The APIs will be available for testing in FY21 Q2.
 
 #### GET Qualifications
 
@@ -37,6 +37,7 @@ GET {customer_id}/qualifications
 ```
 
 #### Response example:
+
 ```json
         {
             "Qualification": "Education",
