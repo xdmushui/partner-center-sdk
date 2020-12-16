@@ -39,12 +39,12 @@ GET {customer_id}/qualifications
 #### Response example:
 
 ```json
-        {
-            "Qualification": "Education",
-            "VettingStatus": "Denied",
-            "VettingReason": "Not an education customer",
-            "VettingCreatedDate": "07/09/2020: 00:00:00" //UTC
-        }
+{
+  "Qualification": "Education",
+  "VettingStatus": "Denied",
+  "VettingReason": "Not an education customer",
+  "VettingCreatedDate": "07/09/2020: 00:00:00" //UTC
+}
 ```
 
 #### Response fields: 
