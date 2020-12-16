@@ -1,17 +1,19 @@
 ---
-title: Partner Center API change log
-description: This page lists changes in the Partner Center APIs for December 2020
+title: Partner Center REST API change log
+description: This page lists changes in the Partner Center REST APIs 
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ms.topic: reference
 ms.date: 12/15/2020
 ---
 
-# December 2020 changes to Partner Center APIs
+# December 2020 changes to Partner Center REST APIs
+
+Check here for changes to Partner Center REST APIs.
 
 ## Enhancements to education pricing Eligibility APIs
 
-Check here monthly for changes to Partner Center APIs.
+
 
 ### What has changed?
 
@@ -26,7 +28,7 @@ These APIs will be retired at the end of February 2021, to be replaced by new AP
 
 Customer eligibility for education pricing on select SKUs
 
-### Detail descriptions: Contract changes
+### Detail descriptions
 
 Two new GET and POST Qualifications APIs will be introduced. The new APIs will be using **Qualifications**, not **Qualification**. The APIs will be available for testing in FY21 Q2.
 
