@@ -471,6 +471,8 @@
 - name: Partner Center REST API reference
   href: partner-center-rest-api-reference.md
   items:
+  - name: Partner Center REST API change log
+    href: api-change-log.md
   - name: Partner Center REST URLs
     href: partner-center-rest-urls.md
   - name: Partner Center REST headers
