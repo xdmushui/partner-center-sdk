@@ -19,7 +19,7 @@ Partner Center uses Azure Active Directory for authentication. When interacting 
 
 - Use multi-factor authentication when accessing the Partner Center API using app + user authentication. For more information regarding this change, see [Enable secure application model](enable-secure-app-model.md).
 
-- Not all of the operations the Partner Center API support app only authentication. There are certain scenarios where you'll be required to use app + user authentication. Under the *Prerequisites* heading on each [article](Scenario/partner-center/develop/scenarios), you'll find documentation that states whether app only authentication, app + user authentication, or both are supported.
+- Not all of the operations the Partner Center API support app only authentication. There are certain scenarios where you'll be required to use app + user authentication. Under the *Prerequisites* heading on each [article](scenarios.md), you'll find documentation that states whether app only authentication, app + user authentication, or both are supported.
 
 ## Initial setup
 
