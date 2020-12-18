@@ -117,7 +117,7 @@ MS-ServerId: 201021413
 Date: Wed, 01 Feb 2017 00:13:45 GMT
 
 {
-    "locale": "en-US",
+    "locale": "en",
     "currency": "USD",
     "isTaxIncluded": false,
     "meters": [{
