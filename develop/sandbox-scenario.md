@@ -21,7 +21,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 - Partner Center account credentials. The sandbox scenario supports authentication with both the standalone App and App+User credentials.
 - A customer ID (customer-tenant-id). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard/home). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID (customer-tenant-id).
-- All Azure Reserved Virtual Machine Instances and software purchase orders must be cancelled before deleting a customer from the Tip integration sandbox.
+- All Azure Reserved Virtual Machine Instances and software purchase orders must be canceled before deleting a customer from the Tip integration sandbox.
 
 ## Scenarios Supporting Reseller Relationship
 
@@ -38,7 +38,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 •	Cannot request relationships with new customers
 
-**Indirect providers** :
+**Indirect providers**:
 
 •	Can add existing customers
 
