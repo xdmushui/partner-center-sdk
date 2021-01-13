@@ -46,7 +46,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 •	Cannot have a relationship with an Indirect reseller
 
-**Indirect reseller**:
+**Indirect reseller**: (coming soon)
 
 •	Can have a relationships with existing customers
 
