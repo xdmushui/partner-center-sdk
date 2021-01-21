@@ -1,7 +1,7 @@
 ---
 title: Get a customer's qualifications
 description: Learn how to use asynchronous validation to get a customer's qualification via Partner Center API. Partners might use this to validate Education customers.
-ms.date: 12/07/2020
+ms.date: 01/21/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: JoeyBytes
@@ -9,13 +9,13 @@ ms.author: jobiesel
 # Relates to asynchronous screening or vetting.
 ---
 
-# Get a customer's qualifications via asynchronous validation
+# Get a customer's qualification asynchronously
 
 **Applies To**
 
 - Partner Center
 
-Learn how to get a customer's qualifications asynchronously via Partner Center APIs. To learn how to do this synchronously, see [Get a customer's qualification via synchronous validation](get-customer-qualification-synchronous.md).
+How to get a customer's qualifications asynchronously.
 
 ## Prerequisites
 
@@ -67,13 +67,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ### Response examples
 
-This section shows responses you might receive when a customer's `vettingStatus` is:
-
-- Approved
-- In Review
-- Denied
-
-**Approved** example:
+#### Approved
 
 ```http
 HTTP/1.1 200 OK
@@ -81,16 +75,18 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "Approved",
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "Approved",
+        }
+    ]
+}
 
 ```
 
-**In Review** example:
+#### In Review
 
 ```http
 HTTP/1.1 200 OK
@@ -98,17 +94,19 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "InReview",
-        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "InReview",
+            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+        }
+    ]
+}
 
 ```
 
-**Denied** example:
+#### Denied
 
 ```http
 HTTP/1.1 200 OK
@@ -116,14 +114,16 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "Denied",
-        "vettingReason": "Not an Education Customer", // example Vetting Reason
-        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "Denied",
+            "vettingReason": "Not an Education Customer", // example Vetting Reason
+            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+        }
+    ]
+}
 
 ```
 
