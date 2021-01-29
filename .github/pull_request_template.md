@@ -20,7 +20,7 @@ Thank you for contributing to Partner Center SDK documentation.
    **B. Provide a link to your Azure DevOps that tracks this task:**
    >
 
-   **C. Who is the primary contact that owns this document?**
+   **C. Who is the primary contact that owns this document? (set ms.author/author metadata)**
    >
 
 3. **Quality control** checks:
