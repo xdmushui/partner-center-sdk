@@ -1,0 +1,4962 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "CustomersService V3",
+    "description": "Partner Center customer service"
+  },
+  "host": "customers.pc.trafficmanager.net",
+  "basePath": "/customers/WebApiV3",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v{version}/customers/{customer_id}/agreements": {
+      "get": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "Gets the agreement confirmations provided by a partner on behalf of a customer.",
+        "operationId": "Get Agreements",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Customer ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agreementType",
+            "in": "query",
+            "description": "The agreement type to filter the agreement confirmations on. '*' will return agreements of all types. The default, if not specified, is Microsoft Cloud Agreement (MCA).",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The agreement is successfully retrieved.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Agreement"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "Creates an agreement on behalf of a customer and attests.",
+        "operationId": "Create Agreement",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Customer ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agreement",
+            "in": "body",
+            "description": "Agreement.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Agreement"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "The request was successful. The agreement is successfully created.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Agreement"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/directSignedMicrosoftCustomerAgreementStatus": {
+      "get": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "Gets the status of the direct acceptance of the Microsoft Customer Agreement by the customer.",
+        "operationId": "Get Direct Signed Microsoft Customer Agreement Status",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The agreement signature status is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.DirectSignedCustomerAgreementStatus"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/agreements": {
+      "get": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "Get the list of agreement meta data.",
+        "operationId": "Get Agreement Metadata List",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "agreementType",
+            "in": "query",
+            "description": "The agreement type to filter the agreement metadata on. '*' will return agreements of all types. The default, if not specified, is Microsoft Cloud Agreement (MCA).",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The agreements list is successfully retrieved.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.AgreementMetadata"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/agreementTemplates/{templateId}/document": {
+      "get": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "Gets an agreement template's document tailored to a given set of constraints.",
+        "operationId": "Get Agreement Document",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "path",
+            "description": "The ID of the agreement template whose document needs to be retrieved.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "The language and locale for the agreement document. Defaults to \"en-US\" if not specified.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "description": "The ISO country code to tailor the terms in the agreement document. Defaults to \"US\" if not specified.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The agreement template's document is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.AgreementDocument"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a segment of a partner's customers. Optional filtering of customers can also be applied.\r\nCustomers can only be filtered by a string which their company name or domain name starts with. Full search is not supported currently.\r\nCustomers can be filtered using a {Microsoft.Partner.Core.Query.Filters.FieldFilterOperation.StartsWith} filter operation and specifying either: DisplayName (Company name) or DefaultDomainName\r\nas the filter field.",
+        "operationId": "Get Customers",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "seekOperation",
+            "in": "query",
+            "description": "The seek operation.",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The maximum number of customers to return.",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter.operator",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "equals",
+              "not_equals",
+              "greater_than",
+              "greater_than_or_equals",
+              "less_than",
+              "less_than_or_equals",
+              "substring",
+              "and",
+              "or",
+              "starts_with",
+              "not_starts_with"
+            ]
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains a list of customers that match the filter.  A continuation token is included if the response is paged by the page size. This token can be passed to /customers?seek=<seek> to seek customer results.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.Customer]"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Create a new customer asynchronously.\r\nNote: We also take an additional header value of GenerateReadWriteConsistencyToken.",
+        "operationId": "Create Customer",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer",
+            "in": "body",
+            "description": "customer details.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. This method will authorize bearer token.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a single customer of a partner by their active directory tenant identifier.",
+        "operationId": "Retrieve a Single Customer by Customer ID",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer's active directory tenant identifier.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the requested customer information.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Deletes a customer tenant from a testing in production account.",
+        "operationId": "Delete Customer From Tip Account",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer AAD tenant ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "The customer was successfully deleted from the TIP account."
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Removes Partner - Customer relationship.",
+        "operationId": "Delete Partner Customer Relationship",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Id of the customer.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customer",
+            "in": "body",
+            "description": "Customer details.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful."
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/profiles/company": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a customer's company profile.",
+        "operationId": "Get Customer Company Profile",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer azure active directory tenant Id.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the company profile.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCompanyProfile"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/profiles/billing": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieves a customer's billing profile.",
+        "operationId": "Get Customer Billing Profile",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer azure active directory tenant Id.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the requested customer's billing profile.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Updates a customer's billing profile.",
+        "operationId": "Update Customer Billing Profile",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer azure active directory tenant Id.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customerBillingProfile",
+            "in": "body",
+            "description": "The new customer billing profile information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the updated billing profile.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/domains/{domain}": {
+      "head": {
+        "tags": [
+          "Domains"
+        ],
+        "summary": "Determine if the domain is available.",
+        "operationId": "Check Domain Availability",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "description": "Domain.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains true if the domain is available, otherwise false.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/verifieddomain": {
+      "post": {
+        "tags": [
+          "Domains"
+        ],
+        "summary": "Add verified domain.",
+        "operationId": "Add Verified Domain",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer's active directory tenant identifier.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "verifiedDomain",
+            "in": "body",
+            "description": "Domain.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.VerifiedDomain"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The verified domain is added.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Domain"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/all/validations": {
+      "get": {
+        "tags": [
+          "GccValidations"
+        ],
+        "summary": "Retrieve all validations for customers.",
+        "operationId": "Get GCC Validations",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. This method will authorize bearer token.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.GccValidation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/validations": {
+      "get": {
+        "tags": [
+          "GccValidations"
+        ],
+        "summary": "Gets validation used for specified customer.",
+        "operationId": "Get Customer GCC Validations",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Customer ID used to filter validations.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "The request was successful. This method will show the relationship between the partner, customer, and GCC validation",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.GccValidationRelationship"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/managedservices": {
+      "get": {
+        "tags": [
+          "ManagedServices"
+        ],
+        "summary": "Retrieves a customer's list of managed services.",
+        "operationId": "Get Managed Services",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer active directory tenant identifier.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the list of managed services.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ManagedService]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/relationships": {
+      "get": {
+        "tags": [
+          "Staged",
+          "PartnerRelationship"
+        ],
+        "summary": "Retrieves a segment of a partner's resellers. Optional filtering of partner relationships can also be applied.\r\nResellers can only be filtered by a string which their name. Full search is not supported currently.\r\nResellers can be filtered using a {Microsoft.Partner.Core.Query.Filters.FieldFilterOperation.StartsWith} filter operation and specifying: Name (Value added reseller name)\r\nas the filter field.",
+        "operationId": "Get Partner Relationships",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "relationship_type",
+            "in": "query",
+            "description": "Type of the relationship.",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "none",
+              "is_indirect_reseller_of",
+              "is_indirect_cloud_solution_provider_of"
+            ]
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter.operator",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "equals",
+              "not_equals",
+              "greater_than",
+              "greater_than_or_equals",
+              "less_than",
+              "less_than_or_equals",
+              "substring",
+              "and",
+              "or",
+              "starts_with",
+              "not_starts_with"
+            ]
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the list of partner relationships.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.PartnerRelationship]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/relationships": {
+      "get": {
+        "tags": [
+          "PartnerRelationship"
+        ],
+        "summary": "Retrieves a segment of a partner's resellers for a specific customer Id.",
+        "operationId": "Get Partner Relationships By Customer Id",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer Id.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains a list of partner relationships associated with the specified customer.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.PartnerRelationship]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/qualification": {
+      "get": {
+        "tags": [
+          "Qualifications"
+        ],
+        "summary": "Retrieve the customer's qualification.",
+        "operationId": "Get Customer Qualification",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Id of the customer.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. This method will return the customer's qualification.",
+            "schema": {
+              "format": "int32",
+              "enum": [
+                "none",
+                "education",
+                "nonprofit",
+                "government_community_cloud"
+              ],
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Qualifications"
+        ],
+        "summary": "Updates the Qualification of a customer.",
+        "operationId": "Set Customer Qualification",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "The customer active directory tenant identifier.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customerQualification",
+            "in": "body",
+            "description": "Customer Qualification.",
+            "required": true,
+            "schema": {
+              "format": "int32",
+              "enum": [
+                "none",
+                "education",
+                "nonprofit",
+                "government_community_cloud"
+              ],
+              "type": "integer"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "description": "Validation code required for GCC.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The requested customer's qualification assignment has been updated.",
+            "schema": {
+              "format": "int32",
+              "enum": [
+                "none",
+                "education",
+                "nonprofit",
+                "government_community_cloud"
+              ],
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/qualifications": {
+      "get": {
+        "tags": [
+          "Qualifications"
+        ],
+        "summary": "Retrieve the customer's qualifications.",
+        "operationId": "Get Customer Qualifications",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Id of the customer.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. This method will return the customer's qualifications.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualifications"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Qualifications"
+        ],
+        "summary": "Retrieve the customer's qualifications.",
+        "operationId": "Create Customer Qualifications",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Id of the customer.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customerQualification",
+            "in": "body",
+            "description": "Customer Qualification.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualification"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "description": "Validation code required for GCC.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. This method will return the customer's qualifications.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualifications"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/relationshiprequests": {
+      "get": {
+        "tags": [
+          "RelationshipRequest"
+        ],
+        "summary": "Returns the URL which establishes a relationship between a customer and a partner.",
+        "operationId": "Get Relationship Request Link",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "indirectCloudSolutionProviderId",
+            "in": "query",
+            "description": "Optional: Indirect provider tenant Id related to the indirect reseller and customer.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "indirectResellerId",
+            "in": "query",
+            "description": "Optional: Indirect reseller partner tenant Id.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "dualRoleIndirectRelationship",
+            "in": "query",
+            "description": "Optional: for transitioning partners (in both CSP and indirect reseller) explicitly indicate the type of the relationship.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the relationship request URL.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.RelationshipRequest"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/applicationmfaadoptionstatus": {
+      "get": {
+        "tags": [
+          "SecurityComplianceStatus"
+        ],
+        "summary": "Gets the application mfa adoption status details for a partner.",
+        "operationId": "Get Application Mfa Adoption Status",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "description": "Start date for application mfa adoption status.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "description": "End date for application mfa adoption status.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The application mfa adoption status is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ApplicationMfaAdoptionStatus"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/partnerRequests": {
+      "get": {
+        "tags": [
+          "SecurityComplianceStatus"
+        ],
+        "summary": "Gets the list of partner center requests made by the calling partner's users in the last 7 days.\r\nDue to time outs when calling the api using a tenant that has over 100,000 logs, the api will only return the first 10,000 most recent records.",
+        "operationId": "Get Partner Requests Metadata",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The all mfa and non mfa requests metadata is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.PartnerRequest]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/nonMfaCompliantPartnerPrincipals": {
+      "get": {
+        "tags": [
+          "SecurityComplianceStatus"
+        ],
+        "summary": "Gets the list of calling partner's users that are not MFA compliant\r\n(i.e.., that have signed into partner center without MFA or have made requests to partner center API using a non-MFA bearer token) in the last 7 days.\r\nDue to time outs when calling the api using a tenant that has over 100,000 logs, the api will only return the first 10,000 most recent records.",
+        "operationId": "Get Non Mfa Compliant Partner Principals Metadata",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The all non mfa requests metadata is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.NonMfaCompliantPartnerPrincipalDetails]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/SelfServePolicy": {
+      "get": {
+        "tags": [
+          "SelfServePolicy"
+        ],
+        "summary": "Gets the self serve policy for a customer.",
+        "operationId": "Get Self Serve Policies",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "entity_id",
+            "in": "query",
+            "description": "Entity ID.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The self serve policy is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy]"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SelfServePolicy"
+        ],
+        "summary": "Creates the self serve policies for a customer.",
+        "operationId": "Create Self Serve Policy",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "selfServePolicy",
+            "in": "body",
+            "description": "The self serve policy.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "The request was successful. The self serve policy is successfully created.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/SelfServePolicy/{id}": {
+      "get": {
+        "tags": [
+          "SelfServePolicy"
+        ],
+        "summary": "Gets the self serve policy by id.",
+        "operationId": "Get Self Serve Policy By Id",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The self serve policy is successfully retrieved.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy]"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SelfServePolicy"
+        ],
+        "summary": "Updates the self serve policies for a customer.",
+        "operationId": "Update Self Serve Policy",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "selfServePolicy",
+            "in": "body",
+            "description": "The self serve policy.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The self serve policy is successfully created.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SelfServePolicy"
+        ],
+        "summary": "Deletes the self serve policies for a customer.",
+        "operationId": "Delete Self Serve Policy",
+        "consumes": [],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "200": {
+            "description": "The request was successful. The self serve policy is successfully deleted.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/customers/{customer_id}/serviceincidents/office": {
+      "get": {
+        "tags": [
+          "ServiceIncident"
+        ],
+        "summary": "Retrieves all office service health incidents for a partner by their active directory tenant identifier.",
+        "operationId": "Get Customer Office Service Incidents",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "description": "Customer id.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter.operator",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "equals",
+              "not_equals",
+              "greater_than",
+              "greater_than_or_equals",
+              "less_than",
+              "less_than_or_equals",
+              "substring",
+              "and",
+              "or",
+              "starts_with",
+              "not_starts_with"
+            ]
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the office incidents information.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/serviceincidents/office/count": {
+      "get": {
+        "tags": [
+          "ServiceIncident"
+        ],
+        "summary": "Retrieves all office service health incidents count. return bogus count.",
+        "operationId": "Get a Count of Office Service Health Incidents",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter.operator",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "equals",
+              "not_equals",
+              "greater_than",
+              "greater_than_or_equals",
+              "less_than",
+              "less_than_or_equals",
+              "substring",
+              "and",
+              "or",
+              "starts_with",
+              "not_starts_with"
+            ]
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the number of office incidents.",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/serviceincidents/office": {
+      "get": {
+        "tags": [
+          "ServiceIncident"
+        ],
+        "summary": "Retrieves all office service health incidents for a partner by their active directory tenant identifier. return bogus result.",
+        "operationId": "Get All Office Service Health Incidents",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "filter.operator",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              "equals",
+              "not_equals",
+              "greater_than",
+              "greater_than_or_equals",
+              "less_than",
+              "less_than_or_equals",
+              "substring",
+              "and",
+              "or",
+              "starts_with",
+              "not_starts_with"
+            ]
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains the office incidents information.",
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail]"
+            }
+          }
+        }
+      }
+    },
+    "/v{version}/validations/address": {
+      "post": {
+        "tags": [
+          "Validation"
+        ],
+        "summary": "Determine if the address is valid.",
+        "operationId": "Validate Address",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "address",
+            "in": "body",
+            "description": "The address.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Address"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful.  returns success or error based on based on validity of the address."
+          }
+        }
+      }
+    },
+    "/v{version}/validations/checkdomainavailability/{domain_prefix}": {
+      "get": {
+        "tags": [
+          "Validation"
+        ],
+        "summary": "[Deprecated] Determine if the domain is available.",
+        "operationId": "Check Domain Availability",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "domain_prefix",
+            "in": "path",
+            "description": "Domain prefix.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Authorization Bearer token",
+            "required": true,
+            "type": "string",
+            "default": "Bearer "
+          },
+          {
+            "name": "ms-correlationid",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-cv",
+            "in": "header",
+            "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ms-requestid",
+            "in": "header",
+            "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The request was successful. The response body contains true if the domain is available, otherwise false.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Agreement": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "primaryContact": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Contact"
+        },
+        "templateId": {
+          "type": "string"
+        },
+        "dateAgreed": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "MicrosoftCloudAgreement",
+            "MicrosoftCustomerAgreement"
+          ],
+          "type": "string"
+        },
+        "agreementLink": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Contact": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.Agreement]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Agreement"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceLinks": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "next": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "previous": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceAttributes": {
+      "type": "object",
+      "properties": {
+        "etag": {
+          "type": "string"
+        },
+        "objectType": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.Link": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "type": "string",
+          "readOnly": true
+        },
+        "method": {
+          "type": "string",
+          "readOnly": true
+        },
+        "body": {
+          "type": "string",
+          "readOnly": true
+        },
+        "headers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/System.Collections.Generic.KeyValuePair[System.String,System.String]"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "System.Collections.Generic.KeyValuePair[System.String,System.String]": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "readOnly": true
+        },
+        "value": {
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.DirectSignedCustomerAgreementStatus": {
+      "type": "object",
+      "properties": {
+        "isSigned": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.AgreementMetadata]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.AgreementMetadata"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.AgreementMetadata": {
+      "type": "object",
+      "properties": {
+        "templateId": {
+          "type": "string"
+        },
+        "agreementType": {
+          "enum": [
+            "MicrosoftCloudAgreement",
+            "MicrosoftCustomerAgreement"
+          ],
+          "type": "string"
+        },
+        "agreementLink": {
+          "type": "string"
+        },
+        "versionRank": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.AgreementDocument": {
+      "type": "object",
+      "properties": {
+        "displayUri": {
+          "type": "string"
+        },
+        "downloadUri": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.BillingGroupSummary": {
+      "type": "object",
+      "properties": {
+        "commerceRootId": {
+          "type": "string"
+        },
+        "billingGroupDetails": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.UpdateBillingGroupRequest": {
+      "type": "object",
+      "properties": {
+        "defaultPurchaseOrderNumber": {
+          "type": "string"
+        },
+        "billToAddress": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.BillingAddress"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.BillingAddress": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "addressLine1": {
+          "type": "string"
+        },
+        "addressLine2": {
+          "type": "string"
+        },
+        "addressLine3": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.CustomerAttestationRequirement]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerAttestationRequirement"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerAttestationRequirement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "partnerId": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "value": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerConfiguration": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "partnerId": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCountryValidationRules.CustomerCountryValidationRules": {
+      "type": "object",
+      "properties": {
+        "iso2Code": {
+          "type": "string"
+        },
+        "defaultCulture": {
+          "type": "string"
+        },
+        "isStateRequired": {
+          "type": "boolean"
+        },
+        "supportedStatesList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supportedLanguagesList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supportedCulturesList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isPostalCodeRequired": {
+          "type": "boolean"
+        },
+        "postalCodeRegex": {
+          "type": "string"
+        },
+        "isCityRequired": {
+          "type": "boolean"
+        },
+        "isVatIdSupported": {
+          "type": "boolean"
+        },
+        "taxIdFormat": {
+          "type": "string"
+        },
+        "taxIdSample": {
+          "type": "string"
+        },
+        "vatIdRegex": {
+          "type": "string"
+        },
+        "phoneNumberRegex": {
+          "type": "string"
+        },
+        "isTaxIdSupported": {
+          "type": "boolean"
+        },
+        "isTaxIdOptional": {
+          "type": "boolean"
+        },
+        "customerOrganizationRegistrationNumberRegex": {
+          "type": "string"
+        },
+        "customerOrganizationRegistrationNumberSample": {
+          "type": "string"
+        },
+        "customerOrganizationRegistrationNumberRequired": {
+          "type": "boolean"
+        },
+        "customerOrganizationPhoneNumberRequired": {
+          "type": "boolean"
+        },
+        "countryCallingCodesList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Query.Filters.FieldFilter": {
+      "type": "object",
+      "properties": {
+        "operator": {
+          "format": "int32",
+          "enum": [
+            "equals",
+            "not_equals",
+            "greater_than",
+            "greater_than_or_equals",
+            "less_than",
+            "less_than_or_equals",
+            "substring",
+            "and",
+            "or",
+            "starts_with",
+            "not_starts_with"
+          ],
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.Customer]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Customer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "commerceId": {
+          "type": "string"
+        },
+        "companyProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCompanyProfile"
+        },
+        "billingProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+        },
+        "relationshipToPartner": {
+          "format": "int32",
+          "enum": [
+            "unknown",
+            "reseller",
+            "advisor",
+            "syndication",
+            "microsoft_support",
+            "none"
+          ],
+          "type": "integer"
+        },
+        "allowDelegatedAccess": {
+          "type": "boolean"
+        },
+        "userCredentials": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.UserCredentials"
+        },
+        "associatedPartnerId": {
+          "type": "string"
+        },
+        "customDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCompanyProfile": {
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Address"
+        },
+        "email": {
+          "type": "string"
+        },
+        "organizationRegistrationNumber": {
+          "type": "string"
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "culture": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "defaultAddress": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Address"
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.UserCredentials": {
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "$ref": "#/definitions/System.Security.SecureString"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Address": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "district": {
+          "type": "string"
+        },
+        "addressLine1": {
+          "type": "string"
+        },
+        "addressLine2": {
+          "type": "string"
+        },
+        "addressLine3": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "emailAddress": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        }
+      }
+    },
+    "System.Security.SecureString": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CommerceProfile": {
+      "type": "object",
+      "properties": {
+        "purchaseSystem": {
+          "format": "int32",
+          "enum": [
+            "Oms",
+            "Mcapi3",
+            "Mcapi4"
+          ],
+          "type": "integer",
+          "readOnly": true
+        },
+        "purchaseEligibility": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.PurchaseEligibility"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.PurchaseEligibility": {
+      "type": "object",
+      "properties": {
+        "isAllowed": {
+          "type": "boolean"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.PurchaseEligibilityReason"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.PurchaseEligibilityReason": {
+      "type": "object",
+      "properties": {
+        "reasonMessage": {
+          "type": "string"
+        },
+        "reasonCode": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.OrganizationProfile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "culture": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Address"
+        },
+        "organizationRegistrationNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.RelationshipExtensionRequest": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string"
+        },
+        "directPartnerId": {
+          "type": "string"
+        },
+        "indirectProviderId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V2.RemoveCustomerRelationshipData": {
+      "type": "object",
+      "properties": {
+        "workItem": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCreationScenario": {
+      "type": "object",
+      "properties": {
+        "customer": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Customer"
+        },
+        "customerQualification": {
+          "type": "string"
+        },
+        "indirectResellerName": {
+          "type": "string"
+        },
+        "validationCode": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerScenarioValidationResult": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerUserScenario": {
+      "type": "object",
+      "properties": {
+        "customerName": {
+          "type": "string"
+        },
+        "customerTenantId": {
+          "type": "string"
+        },
+        "customerUser": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerUser"
+        },
+        "operation": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licenseUpdate": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.LicenseUpdate"
+        },
+        "sessionId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerUser": {
+      "type": "object",
+      "properties": {
+        "usageLocation": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "userPrincipalName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "immutableId": {
+          "type": "string"
+        },
+        "passwordProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.PasswordProfile"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "lastDirectorySyncTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "userDomainType": {
+          "format": "int32",
+          "enum": [
+            "none",
+            "managed",
+            "federated"
+          ],
+          "type": "integer"
+        },
+        "state": {
+          "format": "int32",
+          "enum": [
+            "active",
+            "inactive"
+          ],
+          "type": "integer"
+        },
+        "softDeletionTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.LicenseUpdate": {
+      "type": "object",
+      "properties": {
+        "licensesToAssign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.LicenseAssignment"
+          }
+        },
+        "licensesToRemove": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licenseWarnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.LicenseWarning"
+          },
+          "readOnly": true
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.PasswordProfile": {
+      "type": "object",
+      "properties": {
+        "password": {
+          "$ref": "#/definitions/System.Security.SecureString"
+        },
+        "forceChangePassword": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.LicenseAssignment": {
+      "type": "object",
+      "properties": {
+        "excludedPlans": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skuId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.LicenseWarning": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "servicePlans": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerUserUploadScenario": {
+      "type": "object",
+      "properties": {
+        "customerName": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "customerTenantId": {
+          "type": "string"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "customerUsers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerUser"
+          }
+        },
+        "sessionId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.BillToUpdateScenario": {
+      "type": "object",
+      "properties": {
+        "customerTenantId": {
+          "type": "string"
+        },
+        "customerBillingProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+        },
+        "primaryContactEmailAddress": {
+          "type": "string"
+        },
+        "validationCode": {
+          "type": "string"
+        },
+        "sessionId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.CustomerConfiguration]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerConfiguration"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.CustomerNotificationDetails": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "companyProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCompanyProfile"
+        },
+        "billingProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerBillingProfile"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.VerifiedDomain": {
+      "type": "object",
+      "properties": {
+        "verifiedDomainName": {
+          "type": "string"
+        },
+        "domain": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Domain"
+        },
+        "domainFederationSettings": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.DomainFederationSettings"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Domain": {
+      "type": "object",
+      "properties": {
+        "authenticationType": {
+          "format": "int32",
+          "enum": [
+            "managed",
+            "federated"
+          ],
+          "type": "integer"
+        },
+        "capability": {
+          "format": "int32",
+          "enum": [
+            "none",
+            "email",
+            "sharepoint",
+            "office_communications_online",
+            "sharepoint_default",
+            "full_redelegation",
+            "share_point_public",
+            "org_id_authentication",
+            "yammer",
+            "intune",
+            "all"
+          ],
+          "type": "integer"
+        },
+        "isDefault": {
+          "type": "boolean"
+        },
+        "isInitial": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "rootDomain": {
+          "type": "string"
+        },
+        "status": {
+          "format": "int32",
+          "enum": [
+            "unverified",
+            "verified",
+            "pending_deletion"
+          ],
+          "type": "integer"
+        },
+        "verificationMethod": {
+          "format": "int32",
+          "enum": [
+            "none",
+            "dns_record",
+            "email"
+          ],
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.DomainFederationSettings": {
+      "type": "object",
+      "properties": {
+        "activeLogOnUri": {
+          "type": "string"
+        },
+        "defaultInteractiveAuthenticationMethod": {
+          "type": "string"
+        },
+        "federationBrandName": {
+          "type": "string"
+        },
+        "issuerUri": {
+          "type": "string"
+        },
+        "logOffUri": {
+          "type": "string"
+        },
+        "metadataExchangeUri": {
+          "type": "string"
+        },
+        "nextSigningCertificate": {
+          "type": "string"
+        },
+        "openIdConnectDiscoveryEndpoint": {
+          "type": "string"
+        },
+        "passiveLogOnUri": {
+          "type": "string"
+        },
+        "preferredAuthenticationProtocol": {
+          "format": "int32",
+          "enum": [
+            "ws_fed",
+            "samlp"
+          ],
+          "type": "integer"
+        },
+        "promptLoginBehavior": {
+          "format": "int32",
+          "enum": [
+            "translate_to_fresh_password_auth",
+            "native_support",
+            "disabled"
+          ],
+          "type": "integer"
+        },
+        "signingCertificate": {
+          "type": "string"
+        },
+        "signingCertificateUpdateStatus": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SigningCertificateUpdateStatus"
+        },
+        "supportsMfa": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SigningCertificateUpdateStatus": {
+      "type": "object",
+      "properties": {
+        "lastRunAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "result": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.GccValidation": {
+      "type": "object",
+      "properties": {
+        "partnerId": {
+          "type": "string"
+        },
+        "organizationName": {
+          "type": "string"
+        },
+        "validationId": {
+          "type": "string"
+        },
+        "maxCreates": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "remainingCreates": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "eTag": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.GccValidationRelationship": {
+      "type": "object",
+      "properties": {
+        "partnerId": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "validationId": {
+          "type": "string"
+        },
+        "organizationName": {
+          "type": "string"
+        },
+        "eTag": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.PagedResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ManagedCustomer]": {
+      "type": "object",
+      "properties": {
+        "continuationToken": {
+          "type": "string"
+        },
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ManagedCustomer"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ManagedCustomer": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string"
+        },
+        "companyProfile": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.CustomerCompanyProfile"
+        },
+        "isDelegatedAccessEnabled": {
+          "type": "boolean"
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ManagedCustomer]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ManagedCustomer"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ManagedService]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ManagedService"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ManagedService": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "groupName": {
+          "type": "string"
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ManagedServiceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ManagedServiceLinks": {
+      "type": "object",
+      "properties": {
+        "adminService": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "serviceHealth": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "serviceTicket": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "self": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "next": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        },
+        "previous": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.Link"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.RequestResponse": {
+      "type": "object",
+      "properties": {
+        "requestStatus": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.RequestStatus"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.RequestStatus": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "requestId": {
+          "type": "string"
+        },
+        "statusId": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.Metadata"
+          }
+        },
+        "stackServices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.OneVetResponseStackService"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.Metadata": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Providers.V2.OneVet.Models.OneVetResponseStackService": {
+      "type": "object",
+      "properties": {
+        "serviceId": {
+          "type": "string"
+        },
+        "statusId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "subStatusId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "subStatus": {
+          "type": "string"
+        },
+        "createdDateTime": {
+          "type": "string"
+        },
+        "completedDateTime": {
+          "type": "string"
+        },
+        "expirationDateTime": {
+          "type": "string"
+        },
+        "isDuplicate": {
+          "type": "boolean"
+        },
+        "originalRequestId": {
+          "type": "string"
+        },
+        "originalCompletedDatetime": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.PartnerRelationship]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.PartnerRelationship"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.PartnerRelationship": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "relationshipType": {
+          "format": "int32",
+          "enum": [
+            "none",
+            "is_indirect_reseller_of",
+            "is_indirect_cloud_solution_provider_of"
+          ],
+          "type": "integer"
+        },
+        "state": {
+          "type": "string"
+        },
+        "mpnId": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.RelationshipRequest": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V2.RemovePartnerRelationshipData": {
+      "type": "object",
+      "properties": {
+        "relatedPartnerId": {
+          "type": "string"
+        },
+        "workItem": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V2.PartnerRelationshipData": {
+      "type": "object",
+      "properties": {
+        "relationshipToPartner": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.PurchaseSettings": {
+      "type": "object",
+      "properties": {
+        "indirectResellerId": {
+          "type": "string"
+        },
+        "isPurchasedAllowed": {
+          "type": "boolean"
+        },
+        "dateEnabled": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "authorizedPurchaserRoles": {
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "enum": [
+              "customer",
+              "indirect_reseller"
+            ],
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualifications": {
+      "type": "object",
+      "properties": {
+        "qualifications": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualification"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V2.CustomerQualification": {
+      "type": "object",
+      "properties": {
+        "qualification": {
+          "type": "string"
+        },
+        "vettingStatus": {
+          "type": "string"
+        },
+        "vettingReason": {
+          "type": "string"
+        },
+        "vettingCreateDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Recipient": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "keys": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "useTestHeader": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.RelationshipRequestDetails": {
+      "type": "object",
+      "properties": {
+        "partnerId": {
+          "type": "string"
+        },
+        "addressLines": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SecurityComplianceStatusMetadata": {
+      "type": "object",
+      "properties": {
+        "loginDate": {
+          "type": "string"
+        },
+        "mfaCompliantRequestCount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "totalRequestCount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "requestClient": {
+          "type": "string"
+        },
+        "secureApplicationAdoptionStatus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SecureApplicationAdoptionStatus"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SecureApplicationAdoptionStatus": {
+      "type": "object",
+      "properties": {
+        "loginDate": {
+          "type": "string"
+        },
+        "applicationId": {
+          "type": "string"
+        },
+        "applicationName": {
+          "type": "string"
+        },
+        "adoptionStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.MfaEnablementStatusMetadata": {
+      "type": "object",
+      "properties": {
+        "enabledUsersCount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "enabledUsersCoveredByMfaCount": {
+          "format": "int64",
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ApplicationMfaAdoptionStatus": {
+      "type": "object",
+      "properties": {
+        "loginDate": {
+          "type": "string"
+        },
+        "mfaCompliantRequestCount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "totalRequestCount": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "applicationId": {
+          "type": "string"
+        },
+        "applicationName": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.PartnerRequest]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.PartnerRequest"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.PartnerRequest": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string"
+        },
+        "correlationId": {
+          "type": "string"
+        },
+        "operationName": {
+          "type": "string"
+        },
+        "requestDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "sourceIpAddress": {
+          "type": "string"
+        },
+        "objectId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "upn": {
+          "type": "string"
+        },
+        "applicationId": {
+          "type": "string"
+        },
+        "mfaCompliant": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.NonMfaCompliantPartnerPrincipalDetails]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.NonMfaCompliantPartnerPrincipalDetails"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.MfaCompliance.NonMfaCompliantPartnerPrincipalDetails": {
+      "type": "object",
+      "properties": {
+        "objectId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "upn": {
+          "type": "string"
+        },
+        "lastNonMfaCompliantRequestDateTime": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServePolicy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "selfServeEntity": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServeEntity"
+        },
+        "grantor": {
+          "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.Grantor"
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.Permission"
+          }
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.SelfServeEntity": {
+      "type": "object",
+      "properties": {
+        "selfServeEntityType": {
+          "type": "string"
+        },
+        "tenantID": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.Grantor": {
+      "type": "object",
+      "properties": {
+        "grantorType": {
+          "type": "string"
+        },
+        "tenantID": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.SelfServePolicy.Permission": {
+      "type": "object",
+      "properties": {
+        "resource": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidents]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidents"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidents": {
+      "type": "object",
+      "properties": {
+        "workload": {
+          "type": "string"
+        },
+        "incidents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail"
+          }
+        },
+        "status": {
+          "format": "int32",
+          "enum": [
+            "normal",
+            "information",
+            "warning",
+            "critical"
+          ],
+          "type": "integer"
+        },
+        "messageCenterMessages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail"
+          }
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "messageType": {
+          "format": "int32",
+          "enum": [
+            "none",
+            "incident",
+            "message_center",
+            "all"
+          ],
+          "type": "integer"
+        },
+        "startTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "format": "int32",
+          "enum": [
+            "normal",
+            "information",
+            "warning",
+            "critical"
+          ],
+          "type": "integer"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.Enums.ServiceIncidentHistory"
+          }
+        },
+        "workload": {
+          "type": "string"
+        },
+        "affectedWorkloadNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resolved": {
+          "type": "boolean"
+        },
+        "impactedArea": {
+          "type": "string"
+        },
+        "impactedCustomers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "requiredBy": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "actionType": {
+          "type": "string"
+        },
+        "severity": {
+          "format": "int32",
+          "enum": [
+            "normal",
+            "information",
+            "warning",
+            "critical"
+          ],
+          "type": "integer"
+        }
+      }
+    },
+    "Microsoft.Partner.Service.Customers.Contracts.V1.Enums.ServiceIncidentHistory": {
+      "type": "object",
+      "properties": {
+        "publishedTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "messageText": {
+          "type": "string"
+        }
+      }
+    },
+    "Microsoft.Partner.Core.Collections.ResourceCollection[Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail]": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "format": "int32",
+          "type": "integer",
+          "readOnly": true
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Microsoft.Partner.Service.Customers.Contracts.V1.ServiceIncidentDetail"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceLinks"
+        },
+        "attributes": {
+          "$ref": "#/definitions/Microsoft.Partner.Core.Collections.ResourceAttributes",
+          "readOnly": true
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "description": "Authorization Bearer token",
+      "name": "Authorization",
+      "in": "header"
+    },
+    "ms-correlationid": {
+      "type": "apiKey",
+      "description": "Used for tracking requests internally. If a ms-correlationid is not provided, the server will generate a new one for each request",
+      "name": "ms-correlationid",
+      "in": "header"
+    },
+    "ms-cv": {
+      "type": "apiKey",
+      "description": "Used for tracking requests internally. If a ms-cv is not provided, the server will generate a new one for each request",
+      "name": "ms-cv",
+      "in": "header"
+    },
+    "ms-requestid": {
+      "type": "apiKey",
+      "description": "Used for idempotency of requests. If a ms-requestid is not provided, the server will generate a new one for each request",
+      "name": "ms-requestid",
+      "in": "header"
+    }
+  }
+}

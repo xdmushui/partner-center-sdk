@@ -1,6 +1,6 @@
 ---
 title: Create a customer
-description: How to create a new customer.
+description: Learn how a Cloud Solution Provider (CSP) partner can use Partner Center APIs to create a new customer. Article describes prerequisites and what else happens. 
 ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: dineshvu
 ms.author: dineshvu
 ---
 
-# Create a customer
+# Create a customer using Partner Center APIs
 
 **Applies to:**
 
@@ -61,7 +61,8 @@ var customerToCreate = new Customer()
         Domain = string.Format(CultureInfo.InvariantCulture,
             "SampleApplication{0}.{1}",
             new Random().Next(),
-            this.Context.Configuration.Scenario.CustomerDomainSuffix)
+            this.Context.Configuration.Scenario.CustomerDomainSuffix),
+        //// OrganizationRegistrationNumber = "123456" // Please add if in specific country that requires
     },
     BillingProfile = new CustomerBillingProfile()
     {
@@ -72,6 +73,7 @@ var customerToCreate = new Customer()
         DefaultAddress = new Address()
         {
             FirstName = "Tania",
+            MiddleName = "MiddleName",
             LastName = "Carr",
             AddressLine1 = "One Microsoft Way",
             City = "Redmond",

@@ -1,6 +1,6 @@
 ---
-title: Create a new configuration policy for the specified customer
-description: How to create a new configuration policy for the specified customer.
+title: Create a new customer configuration policy
+description: Learn how to use Partner Center APIs to create a new configuration policy for a specified customer. Article includes prerequisites, steps, and examples.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk

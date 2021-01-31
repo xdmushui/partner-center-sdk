@@ -1,12 +1,12 @@
 ---
 title: Check inventory
-description: Check the inventory for a specific set of catalog items.
+description: Learn how to use Partner Center APIs to check the inventory for a specific set of catalog items. You might do this to identify a customer's products or SKUs.
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Check inventory
+# Check the inventory of catalog items using Partner Center APIs
 
 **Applies to:**
 

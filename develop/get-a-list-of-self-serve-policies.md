@@ -18,7 +18,29 @@ This article describes how to get a collection of resources that represents self
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with Application+User credentials.
+
+## C\#
+
+To get a list of all self-serve policies:
+
+1. Call the [**IAggregatePartner.SelfServePolicies**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection) method with the entity identifier to retrieve an interface to operations on the policies.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+
+// All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
+IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
+
+// gets the self-serve policies
+var SelfServePolicies = scopedPartnerOperations.SelfServePolicies.Get(customerIdAsEntity);
+```
+
+For an example, see the following:
+
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSamples**
+- Class: **GetSelfServePolicies.cs**
 
 ## REST request
 

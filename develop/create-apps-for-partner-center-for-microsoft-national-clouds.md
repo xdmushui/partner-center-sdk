@@ -1,6 +1,6 @@
 ---
 title: Register app details for Partner Center for Microsoft National Cloud
-description: Developers must register details about their app with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
+description: Learn how and why app developers for Partner Center for Microsoft National Cloud must register details about their app with Azure AD through the Azure portal. 
 MS-HAID:
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_cloud\_germany'
 - 'pc\_apiv2.create\_apps\_for\_partner\_center\_for\_microsoft\_national\_clouds'
@@ -9,7 +9,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Register app details for Partner Center for Microsoft National Cloud
+# Register app details for Partner Center for Microsoft National Cloud through the Azure portal
 
 **Applies to:**
 
