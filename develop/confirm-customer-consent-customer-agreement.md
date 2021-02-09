@@ -35,6 +35,25 @@ This article describes how to confirm or re-confirm customer acceptance of the M
   - Last name
   - Email address
   - Phone number (optional)
+- If the following values change for a customer, Partner Center  will allow for another agreement to be created for that customer:
+        First Name
+        Last Name
+        Email address
+        Phone number
+Otherwise partners will receive the following error code, due to a duplicate customer being created
+
+
+```
+{
+"code": 600061,
+"message": "A partner confirmed agreement already exists for the customer.",
+"description": "A partner confirmed agreement already exists for the customer.",
+"errorName": "PartnerConfirmedAgreementAlreadyExists",
+"isRetryable": false,
+"parameters": {},
+"errorMessageExtended": "InternalErrorCode=600061"
+}
+ ```
 
 ## .NET
 
