@@ -153,7 +153,7 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
-| billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime". In the legacy, we have separate data models for Office & Azure transactions. However, in the modern, we have one single data model across all products filtered through the "OneTime" value.            |
+| billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime". In the legacy, we have separate data models for Office & Azure transactions. However, the modern has one single data model across all transactions filtered through the "OneTime" value.            |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
 | size                   | number | No       | The maximum number of items to return. Default max size = 2000    |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
