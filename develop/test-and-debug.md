@@ -23,10 +23,6 @@ If you run automated build verification tests, conduct testing in production, or
 
 - The 25-licenses limit means you cannot acquire an offer in the sandbox that has a minimum license requirement that exceeds 25 licenses. This limitation includes trials.
 
-- Usage summary can't be obtained on sandbox accounts, as those accounts are for testing purposes.
-
-- APIs related to billing and invoice will not work in the sandbox, as no invoices are generated for the test account.
-
 
 ### Azure plan
 
