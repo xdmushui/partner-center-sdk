@@ -18,7 +18,7 @@ Creating an **order for Azure reserved VM instance products** applies *only* to:
 
 - Partner Center
 
-For information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
+For info about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
 ## Prerequisites
 
