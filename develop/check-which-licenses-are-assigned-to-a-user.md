@@ -1,12 +1,12 @@
 ---
 title: Get licenses assigned to a user
-description: Get a list of licenses assigned to a user within a customer account.
+description: Learn how to use Partner Center APIs to get a list of licenses assigned to a user within a customer account.
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Get licenses assigned to a user
+# Get licenses assigned to a user within a customer account
 
 **Applies to:**
 

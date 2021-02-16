@@ -1,12 +1,12 @@
 ---
-title: Conversions resources
-description: Conversion resources support the conversion of a trial subscription to a paid subscription.
+title: Conversion resources
+description: Learn about using Partner Center API Conversion resources to help you convert a trial subscription to a paid subscription.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Conversions resources
+# Conversion resources to convert trial subscriptions to paid
 
 **Applies to:**
 

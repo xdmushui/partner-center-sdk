@@ -8,6 +8,7 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
+  
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
@@ -24,9 +25,7 @@
   - name: Partner Center authentication
     href: partner-center-authentication.md
   - name: Enable secure application model
-    href: enable-secure-app-model.md
-  - name: Test and debug
-    href: test-and-debug.md
+    href: enable-secure-app-model.md  
   - name: Early Adopter Program
     href: early-adopter-program.md
 - name: Scenarios
@@ -246,7 +245,11 @@
     - name: "Get a customer's company profile"
       href: get-a-customer-s-company-profile.md
     - name: "Get a customer's qualification"
-      href: get-a-customer-s-qualification.md
+      items: 
+      - name: Use asynchronous APIs
+        href: get-customer-qualification-asynchronous.md
+      - name: Use synchronous APIs
+        href: get-customer-qualification-synchronous.md
     - name: "Get all of a customer's orders"
       href: get-all-of-a-customer-s-orders.md
     - name: "Get a customer's subscriptions"
@@ -287,10 +290,14 @@
       href: restore-a-user-for-a-customer.md
     - name: Set user roles for a customer
       href: set-user-roles-for-a-customer.md
-    - name: "Update a customer's billing profile"
+    - name: Update a customer's billing profile
       href: update-a-customer-s-billing-profile.md
-    - name: "Update a customer's qualification"
-      href: update-a-customer-s-qualification.md
+    - name: Update a customer's qualification
+      items:
+      - name: Use asynchronous APIs  
+        href: update-customer-qualification-asynchronous.md
+      - name: Use synchronous APIs
+        href: update-customer-qualification-synchronous.md
     - name: Update the nickname for a subscription
       href: update-the-nickname-for-a-subscription.md
     - name: "Withdraw a customer's transfer"
@@ -324,14 +331,10 @@
       href: purchase-azure-reservations.md
     - name: Purchase a subscription for commercial marketplace products
       href: create-subscription-azure-marketplace-products.md
-    - name: Activate a sandbox subscription for commercial marketplace products
-      href: activate-sandbox-subscription-azure-marketplace-products.md
     - name: Cancel a commercial marketplace subscription
       href: cancel-an-azure-marketplace-subscription.md
     - name: Cancel software purchases
       href: cancel-software-purchases.md
-    - name: Cancel an order from the integration sandbox
-      href: cancel-an-order-from-the-integration-sandbox.md
     - name: Change the quantity of a subscription
       href: change-the-quantity-of-a-subscription.md
     - name: Convert a trial subscription to paid
@@ -423,9 +426,21 @@
       href: update-a-service-request.md
     - name: "Update a subscription's support contact"
       href: update-a-subscription-s-support-contact.md
-  - name: Referrals
-    href: /partner/develop/referrals
-    items:
+-  name: Integration sandbox
+   items:
+    - name: Partner sandbox capabilities that support reseller relationship
+      href: sandbox-scenario.md
+    - name: Test and debug sandbox
+      href: test-and-debug.md
+    - name: Cancel an order from the integration sandbox
+      href: cancel-an-order-from-the-integration-sandbox.md
+    - name: Activate sandbox subscription 
+      href: activate-sandbox-subscription-azure-marketplace-products.md
+    - name: Delete a customer account from the integration sandbox
+      href: delete-a-customer-account-from-the-integration-sandbox.md
+- name: Referrals
+  href: /partner/develop/referrals
+  items:
     - name: Create a referral
       href: /partner/develop/create-a-referral
     - name: Get a list of referrals
@@ -434,20 +449,19 @@
       href: /partner/develop/get-a-referral-by-id
     - name: Update a referral
       href: /partner/develop/update-a-referral
-  - name: Utilities
-    href: utilities.md
-    items:
+- name: Utilities
+  href: utilities.md
+  items:
     - name: Validate an address
       href: validate-an-address.md
     - name: Get address formatting rules by market
       href: get-market-specific-validation-data.md
     - name: Verify domain availability
       href: verify-domain-availability.md
-    - name: Delete a customer account from the integration sandbox
-      href: delete-a-customer-account-from-the-integration-sandbox.md
-  - name: Security
-    href: partner-security-requirements.md
-    items:
+    
+- name: Security
+  href: partner-security-requirements.md
+  items:
     - name: Get portal requests without MFA
       href: get-portal-requests-without-mfa.md
     - name: Get API request summary
@@ -457,6 +471,8 @@
 - name: Partner Center REST API reference
   href: partner-center-rest-api-reference.md
   items:
+  - name: Partner Center REST API change log
+    href: api-change-log.md
   - name: Partner Center REST URLs
     href: partner-center-rest-urls.md
   - name: Partner Center REST headers

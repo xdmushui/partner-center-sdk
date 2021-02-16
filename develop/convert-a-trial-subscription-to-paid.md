@@ -1,12 +1,12 @@
 ---
 title: Convert a trial subscription to paid
-description: How to convert a trial subscription to a paid one.
+description: Learn how to use Partner Center APIs to convert a trial subscription to a paid one.
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Convert a trial subscription to paid
+# Convert a trial subscription to paid using Partner Center APIs
 
 **Applies to:**
 
