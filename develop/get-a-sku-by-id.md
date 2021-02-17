@@ -1,7 +1,7 @@
 ---
 title: Get a SKU by ID
-description: Gets a SKU for the specified product using the specified SKU ID.
-ms.date: 01/08/2019
+description: Get a SKU for the specified product using the specified SKU ID.
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: amitravat
@@ -93,7 +93,7 @@ This method returns the following error codes:
 | 404                  | 400013       | Product was not found.                                                                                    |
 | 404                  | 400018       | Sku was not found.                                                                                        |
 
-### Response example
+### Response example for Azure VM reservations (Azure plan)
 
 ```http
 HTTP/1.1 200 OK
