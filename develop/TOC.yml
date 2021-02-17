@@ -329,6 +329,8 @@
       href: create-azure-plan.md
     - name: Purchase Azure reservations
       href: purchase-azure-reservations.md
+    - name: Purchase new commerce license-based services
+      href: purchase-new-commerce-license-based.md
     - name: Purchase a subscription for commercial marketplace products
       href: create-subscription-azure-marketplace-products.md
     - name: Cancel a commercial marketplace subscription

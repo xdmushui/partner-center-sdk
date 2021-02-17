@@ -227,7 +227,7 @@ Connection: close
     "code": 2200,
     "description": "MPN Id 123456 is either invalid or not yet migrated to Partner Center. Please advise your reseller to migrate the reseller MPN ID to Partner Center to continue with this order.",
     "data": [
-        "https://partner.microsoft.com/en-us/resources/detail/migrate-pmc-pc-mpa-guide-pptx"
+        "https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx"
     ],
     "source": "PartnerFD"
 }
@@ -235,7 +235,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID (PGA/PLA) doesn't match with region of the Indirect Provider. [Learn more](/partner-center/regional-authorization-overview) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID (PGA/PLA) doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -251,7 +251,7 @@ Connection: close
     "code": 2201,
     "description": "The CSP region of the MPN ID 1234567 doesn’t match the CSP region from where you are placing the order. Provide the MPN ID for the CSP region where you are placing the order.",
     "data": [
-        "https://docs.microsoft.com/en-us/partner-center/regional-authorization-overview" 
+        "https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq" 
     ],
     "source": "PartnerFD"
 }
@@ -259,7 +259,7 @@ Connection: close
 
 #### CSP Indirect Reseller account exists in Partner Center but hasn't signed the MPA
 
-The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://partner.microsoft.com/resources/detail/verify-mpa-acceptance-status-pptx)
+The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -275,7 +275,7 @@ Connection: close
     "code": 2203,
     "description": "MPN Id 123456 has not signed Microsoft Partner Agreement (MPA) for the CSP region where the order is being placed. Please advise your reseller to sign MPA to continue with the order.",
     "data": [
-        "https://partner.microsoft.com/en-gb/resources/detail/verify-mpa-acceptance-status-pptx"
+        "https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq"
     ],
     "source": "PartnerFD"
 }
@@ -283,7 +283,7 @@ Connection: close
 
 #### No CSP Indirect Reseller account is associated with the given MPN ID
 
-The following example response is returned when Partner Center can recognize the MPN ID (PGA/PLA) passed in the request but there is no CSP enrollment associated to the given MPN ID (PGA/PLA). [Learn More](https://partner.microsoft.com/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx)
+The following example response is returned when Partner Center can recognize the MPN ID (PGA/PLA) passed in the request but there is no CSP enrollment associated to the given MPN ID (PGA/PLA). [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -299,7 +299,7 @@ Connection: close
     "code": 2204,
     "description": "MPN Id 123456 is not associated with a CSP Indirect Reseller account in Partner Center. Please advise your reseller to enroll into the CSP program as an indirect reseller in Partner Center.",
     "data": [
-        "https://partner.microsoft.com/en-us/resources/detail/onboard-pc-csp-mpn-mpa-guide-pptx"
+        "https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq"
     ],
     "source": "PartnerFD"
 }
@@ -329,7 +329,7 @@ Connection: close
 
 #### No MPA found with the given Tenant ID
 
-The following example response is returned when Partner Center can't find any MPA signature with the given Tenant ID.
+The following example response is returned when Partner Center can't find any MPA signature with the given Tenant ID. [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -344,7 +344,9 @@ Connection: close
 {
     "code": 2206,
     "description": "Parnter Center Account associated to Tenant Id 12345678-ACBD-1234-ABCD-123456789ABC hasn't signed the agreement",
-    "data": [],
+    "data": [
+        "https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq"
+    ],
     "source": "PartnerFD"
 }
 ```

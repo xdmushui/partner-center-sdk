@@ -21,11 +21,17 @@ To test your code, you should use your integration sandbox account in Partner Ce
 
 If you run automated build verification tests, conduct testing in production, or perform manual testing in the integration sandbox, you may reach the maximum limits for the integration sandbox. These limits are 75 customers, 5 subscriptions per customer, and 25 licenses per subscription.
 
-- The 25-licenses limit means you cannot acquire an offer in the sandbox that has a minimum license requirement that exceeds 25 licenses. This limitation includes trials.
+The 25-licenses limit means you cannot acquire an offer in the sandbox that has a minimum license requirement that exceeds 25 licenses. This limitation includes trials.
 
-- Usage summary can't be obtained on sandbox accounts, as those accounts are for testing purposes.
+There are various invoice and reconciliation files available in the Sandbox environments but, not all of them are available on legacy or modern platforms. Verify the table below to know more.
 
-- APIs related to billing and invoice will not work in the sandbox, as no invoices are generated for the test account.
+| **Files**                    | **Available  in Legacy** | **Available  in Modern** |
+| ---------------------------- | ------------------------ | ------------------------ |
+| Invoice PDF                  | No                       | Yes                      |
+| Invoice  Reconciliation File | No                       | Yes                      |
+| Invoice Estimate  File       | No                       | Yes                      |
+| Daily Billed  Usage File     | No                       | Yes                      |
+| Daily  Unbilled Usage File   | No                       | Yes                      |
 
 
 ### Azure plan
