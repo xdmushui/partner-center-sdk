@@ -1,7 +1,7 @@
 ---
 title: Get a list of availabilities for a SKU (by country)
 description: How to get a collection of availabilities for the specified product and SKU by customer country.
-ms.date: 11/01/2019
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: amitravat
@@ -141,7 +141,7 @@ This method returns the following error codes:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Access to the requested **targetSegment** is not allowed.                                                     |
 
-### Response example
+### Response example for Azure VM reservations (Azure plan)
 
 ```http
 HTTP/1.1 200 OK
@@ -195,6 +195,93 @@ Content-Length: 808
     },
     "attributes": {
         "objectType": "Collection"
+    }
+}
+```
+
+### Response example for new commerce license-based services
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/10.0
+MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58,83b644b5-e54a-4bdc-b354-f96c525b3c58
+MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02,70324727-62d8-4195-8f99-70ea25058d02
+X-Locale: en-US,en-US
+X-SourceFiles: =?UTF-8?B?QzpcVXNlcnNcbWFtZW5kZVxkZXZcZHBzLXJwZVxSUEUuUGFydG5lci5TZXJ2aWNlLkNhdGFsb2dcV2ViQXBpc1xDYXRhbG9nU2VydmljZS5WMi5XZWJcdjFccHJvZHVjdHNcRFpIMzE4WjBCUTNRXHNrdXNcMDAwMVxhdmFpbGFiaWxpdGllcw==?=
+X-Powered-By: ASP.NET
+Date: Wed, 14 Mar 2018 22:19:37 GMT
+Content-Length: 808
+
+{
+    "id": "CFQ7TTC0K971",
+    "productId": "CFQ7TTC0LH18",
+    "skuId": "0001",
+    "catalogItemId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "defaultCurrency": {
+        "code": "USD",
+        "symbol": "$"
+    },
+    "segment": "commercial",
+    "country": "US",
+    "isPurchasable": true,
+    "isRenewable": true, 
+    "renewalInstructions": [
+        {
+            "applicableTermIds": [
+                "5aeco6mffyxo"
+            ],
+            "renewalOptions": [
+                {
+                    "renewToId": "CFQ7TTC0LH18:0001",
+                    "isAutoRenewable": true
+                }
+            ]
+        },
+	 …
+    ],
+    "terms": [
+        {
+            "id": "5aeco6mffyxo",
+            "duration": "P1Y",
+            "description": "One-Year commitment for monthly/yearly billing",
+            "billingCycle": "Annual",
+            "cancellationPolicies": [
+                {
+                    "refundOptions": [
+                        {
+                            "sequenceId": 0,
+                            "type": "Full",
+                            "expiresAfter": "P1D"
+                        }
+                    ]
+                }
+            ]
+        },
+       …
+    ],
+    "links": {
+        "self": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
+            "method": "GET",
+            "headers": []
+        }
+    },
+        "links": {
+            "availabilities": {
+                "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities?country=US",
+                "method": "GET",
+                "headers": []
+            },
+            "self": {
+                "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
+                "method": "GET",
+                "headers": []
+            }
+        }
     }
 }
 ```
