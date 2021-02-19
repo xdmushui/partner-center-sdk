@@ -54,7 +54,7 @@ To submit your order for an Azure plan (including new commerce orders), follow t
 You can [retrieve the details of an individual order using the order ID](get-an-order-by-id.md). You can also [retrieve a list of all orders for a specific customer](get-all-of-a-customer-s-orders.md).
 
 >[!NOTE]
->After an order is submitted, there is a delay of up to 15 minutes before the order appears in that customer's order list. 
+>After you submit an order, there is a delay of up to 15 minutes before the order appears in that customer's order list. 
 >Currently, EU partners can only purchase new commerce offers for: 1. New customers 2. Existing customers who don’t have a pre-existing Azure plan, marketplace, software subscriptions or perpetual software in a currency other than the partner’s country currency.
 
 ## Manage new commerce subscriptions
