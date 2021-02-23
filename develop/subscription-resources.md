@@ -1,7 +1,7 @@
 ---
 title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
-ms.date: 11/01/2019
+ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -55,6 +55,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month), **P1Y** (1 year) and **P3Y** (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 | renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year).                                                        |
+| ProductType  | [ItemType](product-resources.md#itemtype)                             | Read-only. The type of product the subscription is for.     |
 
 ## SubscriptionLinks
 
