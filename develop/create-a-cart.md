@@ -457,7 +457,7 @@ Content-Length: 165
 			"CatalogItemId":"CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
 			"Quantity": 1,
 			"TermDuration": "P1M",
-            "BillingCycle": "Monthly"
+            		"BillingCycle": "Monthly"
 		}
 	]
 }
