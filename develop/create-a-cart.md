@@ -436,3 +436,77 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
   }
 }
 ```
+
+
+## Example for new commerce license-based services
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+### Request example
+
+```http
+POST /v1/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts HTTP/1.1
+Host: api.partnercenter.microsoft.com
+Content-Type: application/json
+Content-Length: 165
+
+{
+	"LineItems": [
+		{
+			"CatalogItemId":"CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+			"Quantity": 1,
+			"TermDuration": "P1M",
+            "BillingCycle": "Monthly"
+		}
+	]
+}
+
+```
+
+### REST response
+
+If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
+
+### Response success and error codes
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+
+### Response example
+
+```http
+
+{
+    "id": "6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+    "creationTimestamp": "2021-02-24T19:26:06.947164Z",
+    "lastModifiedTimestamp": "2021-02-24T19:26:06.9471649Z",
+    "expirationTimestamp": "2021-03-03T19:26:09.0035129Z",
+    "lastModifiedUser": "004ec05e-8999-4d02-9315-2b1b667c0deb",
+    "status": "Active",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+            "quantity": 1,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "provisioningContext": {},
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts/6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
+}
+
+
+
+```
