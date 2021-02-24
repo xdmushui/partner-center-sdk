@@ -407,6 +407,8 @@
       href: suspend-a-subscription.md
     - name: Transition a subscription
       href: transition-a-subscription.md
+    - name: Transition a new commerce subscription
+      href: transition-a-new-commerce-subscription.md
     - name: Update a cart
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
