@@ -1,12 +1,12 @@
 ---
 title: Confirm customer acceptance of Microsoft Customer Agreement
-description: Confirm customer acceptance of the Microsoft Customer Agreement.
-ms.date: 02/04/2020
+description: Learn how to confirm customer acceptance of the Microsoft Customer Agreement using Partner Center APIs.
+ms.date: 02/08/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Confirm customer acceptance of Microsoft Customer Agreement
+# Confirm customer acceptance of the Microsoft Customer Agreement using Partner Center APIs
 
 **Applies to:**
 
@@ -35,6 +35,25 @@ This article describes how to confirm or re-confirm customer acceptance of the M
   - Last name
   - Email address
   - Phone number (optional)
+- If the following values change for a customer, Partner Center  will allow for another agreement to be created for that customer:
+        First Name
+        Last Name
+        Email address
+        Phone number
+Otherwise partners will receive the following error code, due to a duplicate customer being created
+
+
+```
+{
+"code": 600061,
+"message": "A partner confirmed agreement already exists for the customer.",
+"description": "A partner confirmed agreement already exists for the customer.",
+"errorName": "PartnerConfirmedAgreementAlreadyExists",
+"isRetryable": false,
+"parameters": {},
+"errorMessageExtended": "InternalErrorCode=600061"
+}
+ ```
 
 ## .NET
 

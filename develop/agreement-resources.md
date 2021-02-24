@@ -1,6 +1,6 @@
 ---
 title: Agreement resources
-description: The Agreement resource represents a Microsoft cloud customer agreement.
+description: The Agreement resource represents a Microsoft cloud customer agreement with details of certification provided by the partner.  
 ms.date: 02/12/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: aarzh-AaronZhang
 ms.author: v-aarzh
 ---
 
-# Agreement resources
+# Agreement resources representing a Microsoft cloud customer agreement
 
 **Applies to:**
 

@@ -10,6 +10,23 @@ ms.subservice:  partnercenter-sdk
 
 The following release notes are available for new versions of [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter). You can find [.NET SDK samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) on GitHub. You can find the [Partner Center .NET API reference](/dotnet/api/?view=partnercenter-dotnet-latest&preserve-view=true) in the .NET API Browser.
 
+## Version 1.16.3
+
+[Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/1.16.3) v1.16.3 is now general availability. Updated [GitHub samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) are also available. The following changes are included in this version:
+
+* SelfServePolicies - new functionality added
+  * [GetSelfServePolicies](get-a-self-serve-policy-by-id.md)
+  * [GetListOfSelfServicePolicies](get-a-list-of-self-serve-policies.md)
+  * [CreateSelfServePolicies](create-a-self-serve-policy.md)
+  * [UpdateSelfServePolicies](update-a-self-serve-policy.md)
+  * [DeleteSelfServePolicies](delete-a-self-serve-policy.md)
+
+* Customers Company Profile
+  * Added [OrganizationRegistrationNumber](create-a-customer.md)
+
+* CustomerBillingProfile.DefaultAddress
+  * Added MiddleName
+
 ## Version 1.16.2
 
 [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/1.16.2) v1.16.2 is now general availability. Updated [GitHub samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) are also available. The following changes are included in this version:

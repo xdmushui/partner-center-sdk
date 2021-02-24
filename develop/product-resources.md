@@ -1,7 +1,7 @@
 ---
 title: Products resources
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
-ms.date: 04/01/2019
+ms.date: 02/16/2016
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -67,6 +67,21 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 
+## Dynamic SKU attributes
+
+Notable properties relevant to new commerce license-based products and services.
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
+|hasConstraints|boolean|Describes if the SKU contains assetContraints|
+|isAddon|boolean|Describes if the SKU is an add on|
+|prerequisiteSkus|array of strings|Describes prdoucts and skus the add on can work with|
+|upgradeTargetOffers|array of strings|A list of prducts and skus the item can upgrade to|
+|converstionInstructions|list of converstionInstructions|List of instructions applicable to conversat operations|
+
 ## Availability
 
 Represents a configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
@@ -82,10 +97,37 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
 | isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
 | isRenewable     | bool                                                | Indicates whether this availability is renewable. |
+| RenewalInstructions     | RenewalInstruction                                              | Represents renewal instructions for a given availability. |
 | product      | [Product](#product)               | The product this availability corresponds to. |
 | sku          | [Sku](#sku)            | The SKU this availability corresponds to. |
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
+
+## Renewal instruction
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+> 
+
+Represents renewal instructions for a given availability.
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| applicableTermIds       | array of strings                       | Term ids the instructions apply to |
+| RenewalOptions       | array of RenewalOption                     | Options which define renewals |
+
+## RenewalOption	
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+> 
+
+Represents renewal instructions for a given availability.
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| renewToId       | String       | Represents the product and sku to renew to |
+| isAutoRenewable       | Bool       | Whether or not the availability can be auto renewed |
 
 ## Term
 

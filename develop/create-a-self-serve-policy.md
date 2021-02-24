@@ -1,6 +1,6 @@
 ---
-title: Create a self serve policy
-description: How to create a new self serve policy.
+title: Create a self-serve policy
+description: How to create a new self-serve policy.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -12,11 +12,57 @@ ms.subservice:  partnercenter-sdk
 
 - Partner Center
 
-This topic explains how to create a new self serve policy.
+This topic explains how to create a new self-serve policy.
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with Application+User credentials.
+
+## C\#
+
+Create a self-serve policy:
+
+1. Call the [**IAggregatePartner.SelfServePolicies.Create**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.create) or [**IAggregatePartner.SelfServePolicies.CreateAsync**](/dotnet/api/microsoft.store.partnercenter.iselfservepoliciescollection.createasync) method with the self-serve policy info.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+string customerIdAsEntity;
+
+var selfServePolicy = new SelfServePolicy
+{
+    SelfServeEntity = new SelfServeEntity
+    {
+        SelfServeEntityType = "customer",
+        TenantID = customerIdAsEntity,
+    },
+    Grantor = new Grantor
+    {
+        GrantorType = "billToPartner",
+        TenantID = partnerIdAsGrantor,
+    },
+    Permissions = new Permission[]
+    {
+        new Permission
+        {
+        Action = "Purchase",
+        Resource = "AzureReservedInstances",
+        },
+    },
+};
+
+// All the operations executed on this partner operation instance will share the same correlation Id but will differ in request Id
+IPartner scopedPartnerOperations = partnerOperations.With(RequestContextFactory.Instance.Create(Guid.NewGuid()));
+
+// creates the self-serve policy
+SelfServePolicy createdSelfServePolicy = scopedPartnerOperations.selfServePolicies.Create(selfServePolicy);
+```
+
+For an example, see the following:
+
+- Sample: [Console test app](console-test-app.md)
+- Project: **PartnerSDK.FeatureSamples**
+- Class: **CreateSelfServePolicies.cs**
+
 
 ## REST request
 
@@ -37,15 +83,15 @@ This table describes the required properties in the request body.
 
 | Name                              | Type   | Description                                 |
 |------------------------------------------------------------------|--------|---------------------------------------------|
-| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self serve policy information. |
+| [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy)| object | The self-serve policy information. |
 
 #### SelfServePolicy
 
-This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self serve policy.
+This table describes the minimum required fields from the [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource needed to create a new self-serve policy.
 
 | Property              | Type             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
-| SelfServeEntity       | SelfServeEntity  | The self serve entity that is being granted access.                                                     |
+| SelfServeEntity       | SelfServeEntity  | The self-serve entity that is being granted access.                                                     |
 | Grantor               | Grantor          | The grantor that is granting access.                                                                    |
 | Permissions           | Array of Permission| An Array of [Permission](self-serve-policy-resources.md#permission) resources.                                                                     |
 
@@ -83,7 +129,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new seld serve policy.
+If successful, this API returns a [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) resource for the new self-serve policy.
 
 ### Response success and error codes
 
@@ -93,7 +139,7 @@ This method returns the following error codes:
 
 | HTTP Status Code     | Error code   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
-| 409                  | 600041       | Self serve policy already exists.                                                     |
+| 409                  | 600041       | Self-serve policy already exists.                                                     |
 
 
 ### Response example

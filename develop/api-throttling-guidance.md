@@ -1,6 +1,6 @@
 ---
-title: API Throttling guidance
-description: When throttling can occur
+title: API throttling guidance
+description: For partners calling Partner Center APIs, learn which APIs are impacted by Microsoft API throttling and best practices to avoid or better handle throttling. 
 ms.date: 09/09/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: vijvala
 ms.author: vijvala
 ---
 
-# API throttling guidance 
+# API throttling guidance for partners calling Partner Center APIs 
 
 **Applies to**
 
@@ -51,6 +51,9 @@ To use the Retry-after delay, do the following:
 2. Retry the request.  
 
 3. If the request fails again with a 429 error code, you are still being throttled. Retry with Exponential backoff, use the recommended Retry-After delay and retry the request until it succeeds.
+
+4. If you are using SDK you'll receive an exception with status code 429 when your request is being throttled. Use the RetryAfter property in the exception and retry the request after the time is elapsed.
+
 
 ## APIs currently impacted by throttling
 

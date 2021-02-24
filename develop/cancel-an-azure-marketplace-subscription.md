@@ -1,18 +1,18 @@
 ---
 title: Cancel a commercial marketplace subscription
-description: Cancel a commercial marketplace Subscription resource that matches a customer and subscription ID.
+description: Learn how to use Partner Center APIs to cancel a commercial marketplace Subscription resource that matches a customer and subscription ID.
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Cancel a commercial marketplace subscription
+# Cancel a commercial marketplace subscription using Partner Center APIs
 
 **Applies to:**
 
 - Partner Center
 
-You can cancel a commercial marketplace [subscription](subscription-resources.md) resource that matches the customer and subscription ID.
+This article describes how you can use Partner Center API to cancel a commercial marketplace [subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 ## Prerequisites
 

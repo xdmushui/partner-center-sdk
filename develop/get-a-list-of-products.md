@@ -1,7 +1,7 @@
 ---
 title: Get a list of products (by country)
 description: You can use the Product resource to get a collection of products by customer country.
-ms.date: 11/01/2019
+ms.date: 02/16/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: amitravat
@@ -109,7 +109,7 @@ Use the following path and query parameters to get a list of products.
 | Name                   | Type     | Required | Description                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | country                | string   | Yes      | The country/region ID.                                                  |
-| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are: <br/><br/>**Azure**, which includes all Azure items<br/><br/>**AzureReservations**, which includes all Azure reservation items<br/><br/>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items<br/><br/>**AzureReservationsSQL**, which includes all SQL reservation items<br/><br/>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items<br/><br/>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans<br/><br/>**OnlineServices**, which includes all online service items (including commercial marketplace products)<br/><br/>**Software**, which includes all software items<br/><br/>**SoftwareSUSELinux**, which includes all software SUSE Linux items<br/><br/>**SoftwarePerpetual**, which includes all perpetual software items<br/><br/>**SoftwareSubscriptions**, which includes all software subscription items    |
+| targetView             | string   | Yes      | Identifies the target view of the catalog. The supported values are: <br/><br/>**Azure**, which includes all Azure items<br/><br/>**AzureReservations**, which includes all Azure reservation items<br/><br/>**AzureReservationsVM**, which includes all virtual machine (VM) reservation items<br/><br/>**AzureReservationsSQL**, which includes all SQL reservation items<br/><br/>**AzureReservationsCosmosDb**, which includes all Cosmos database reservation items<br/><br/>**MicrosoftAzure**, which includes items for Microsoft Azure subscriptions (**MS-AZR-0145P**) and Azure plans<br/><br/>**OnlineServices**, which includes all online service items. This targetView includes commercial marketplace, tranditional license-based services and new commerce license-based services<br/><br/>**Software**, which includes all software items<br/><br/>**SoftwareSUSELinux**, which includes all software SUSE Linux items<br/><br/>**SoftwarePerpetual**, which includes all perpetual software items<br/><br/>**SoftwareSubscriptions**, which includes all software subscription items    |
 | targetSegment          | string   | No       | Identifies the target segment. The view for different target audiences. The supported values are: <br/><br/>**commercial**<br/>**education**<br/>**government**<br/>**nonprofit**  |
 | reservationScope | string   | No | When querying for a list of products for Azure Reservations, specify `reservationScope=AzurePlan` to get a list of products that are applicable to Azure plans. Exclude this parameter to get a list of products for Azure reservations, which are applicable to Microsoft Azure (**MS-AZR-0145P**) subscriptions.  |
 
@@ -159,6 +159,21 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
+#### New commerce license-based services
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+Follow this example to get a list of products by country for new commerce license-based services as part of the new commerce experience technical preview. New commerce license-based services will be identifed by id and displayNames values of **OnlineServicesNCE**. See response example below.
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=OnlineServices HTTP/1.1
+Authorization: Bearer
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
 ## REST response
 
 If successful, the response body contains a collection of [**Product**](product-resources.md#product) resources.
@@ -174,7 +189,7 @@ This method returns the following error codes:
 | 403                  | 400030       | Access to the requested targetSegment is not allowed.                                                     |
 | 403                  | 400036       | Access to the requested targetView is not allowed.                                                        |
 
-### Response example
+### Response example for Azure VM reservations (Azure plan)
 
 ```http
 {
@@ -221,3 +236,50 @@ This method returns the following error codes:
     }
 }
 ```
+
+### Response example for new commerce license-based services
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+```http
+{
+  "totalCount": 19,
+  "items": [{
+      "id": "CFQ7TTC0LH18",
+      "title": "Microsoft 365 Business Basic",
+      "description": "Best for businesses that need professional email, cloud file storage, and online meetings & chat. Desktop versions of Office apps like Excel, Word, and PowerPoint not included. For businesses with up to 300 employees.",
+      "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+      },
+      "isMicrosoftProduct": true,
+      "publisherName": "Microsoft Corporation",
+      "links": {
+        "skus": {
+          "uri": "/products/CFQ7TTC0LH18/skus?country=US",
+          "method": "GET",
+          "headers": []
+        },
+        "self": {
+          "uri": "/products/CFQ7TTC0LH18?country=US",
+          "method": "GET",
+          "headers": []
+        }
+      }
+    },
+    ...
+  ],
+  "links": {
+    "self": {
+      "uri": "/products?country=US&targetView=OnlineServices",
+      "method": "GET",
+      "headers": []
+    }
+  },
+  "attributes": {
+    "objectType": "Collection"
+  }
+}
+```
+

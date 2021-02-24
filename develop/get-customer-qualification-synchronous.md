@@ -1,20 +1,21 @@
 ---
 title: Get a customer's qualification
-description: How to get a customer's qualification.
-ms.date: 08/07/2019
+description: Learn how to use synchronous validation to get a customer's qualification via Partner Center API. Partners might use this to validate Education customers.
+ms.date: 12/07/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
+# Relates to synchronous screening or vetting.
 ---
 
-# Get a customer's qualification
+# Get a customer's qualification via synchronous validation
 
 **Applies To**
 
 - Partner Center
 
-How to get a customer's qualification.
+Learn how to get a customer's qualification synchronously via Partner Center APIs. To learn how to do this asynchronously, see [Get a customer's qualification via asynchronous validation](get-customer-qualification-asynchronous.md).
 
 ## Prerequisites
 

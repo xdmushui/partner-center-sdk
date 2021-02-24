@@ -1,6 +1,6 @@
 ---
 title: Change the billing cycle
-description: Update a subscription to monthly or annual billing.
+description: Learn how to update a customer subscription to monthly or annual billing using Partner Center APIs. You can also do this from the Partner Center dashboard.
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: sourishdeb
 ms.author: sodeb
 ---
 
-# Change the billing cycle
+# Change a customer subscription billing cycle
 
 **Applies to:**
 

@@ -1,7 +1,7 @@
 ---
 title: Get invoice line items
 description: You can get a collection of invoice line item (closed billing line item) details for a specified invoice using the Partner Center APIs.
-ms.date: 01/27/2020
+ms.date: 02/18/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -125,7 +125,7 @@ The following syntaxes apply when the billing provider has a Microsoft Azure (MS
 
 ##### OneTime
 
-The following syntaxes apply when the billing provider is **OneTime**. This includes charges for Azure reservations, software, Azure plans, and commercial marketplace products.
+The following syntaxes apply when the billing provider is **OneTime**. This includes charges for Azure reservations, software, Azure plans, commercial marketplace, and M365/D365 products.
 
 | Method  | Request URI                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -153,7 +153,7 @@ Use the following URI and query parameters when creating the request.
 | Name                   | Type   | Required | Description                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | invoice-id             | string | Yes      | A string that identifies the invoice.                             |
-| billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime".               |
+| billing-provider       | string | Yes      | The billing provider: "Office", "Azure", "OneTime". In the legacy, we have separate data models for Office & Azure transactions. However, in the modern, we have one single data model across all products filtered through the "OneTime" value.            |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems", "UsageLineItems". |
 | size                   | number | No       | The maximum number of items to return. Default max size = 2000    |
 | offset                 | number | No       | The zero-based index of the first line item to return.            |
@@ -592,7 +592,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 
  {
     "continuationToken": "d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7",
-    "totalCount": 2,
+    "totalCount": 3,
     "items": [
         {
             "partnerId": "6480d686-cfb4-424d-a945-6b9b9f000000",
@@ -686,7 +686,55 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
-        }
+        },
+        {
+           "partnerId": "6480d686-cfb4-424d-a945-6b9b9f4badc2",
+            "customerId": "org:9060d13d-c5ed-482e-b059-a15a38cbb28e",
+            "customerName": "recipientCustomerName",
+            "customerDomainName": "recipientCustomerDomain",
+            "customerCountry": "US",
+            "invoiceNumber": "1234000000",
+            "mpnId": "4870137",
+            "resellerMpnId": 0,
+            "orderId": "VdqkP11Bu4DlcjP5rLeQabcdefg-1234",
+            "orderDate": "2021-01-29T19:50:13.9869095Z",
+            "productId": "CFQ7TTC01234",
+            "skuId": "0001",
+            "availabilityId": "CFQ7TTC0ABCD",
+            "productName": "Office 365 E3",
+            "skuName": "Office 365 E3",
+            "chargeType": "new",
+            "unitPrice": 16,
+            "effectiveUnitPrice": 16,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 16,
+            "taxTotal": 1.61,
+            "totalForCustomer": 17.61,
+            "currency": "USD",
+            "publisherName": "Microsoft Corporation",
+            "publisherId": "",
+            "subscriptionDescription": "",
+            "subscriptionId": "2ae795eb-f76d-ce69-cba0-123456789000",
+            "chargeStartDate": "2021-01-29T00:00:00Z",
+            "chargeEndDate": "2021-02-27T00:00:00Z",
+            "termAndBillingCycle": "One-Year commitment for monthly/yearly billing",
+            "priceAdjustmentDescription": "[\"1 month billing\",\"You are getting a discount for being a partner.\",\"You are getting a price guarantee for your price.\",\"Yearly Duration\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "0001-01-01T00:00:00",
+            "billableQuantity": 1,
+            "meterDescription": "",
+            "billingFrequency": "Monthly",
+            "reservationOrderId": "e770c049-89c7-4ec1-b366-123456789000",
+            "invoiceLineItemType": "billing_line_items",
+            "billingProvider": "one_time" ,
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+      }  
+
     ],
     "links": {
         "self": {
@@ -746,7 +794,7 @@ MS-ServerId: 202010406
 Date: Thu, 07 Sep 2017 23:31:09 GMT
 
 {
-    "totalCount": 1,
+    "totalCount": 2,
     "items": [
         {
             "partnerId": "6480d686-cfb4-424d-a945-6b9b9f000000",
@@ -794,7 +842,54 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
-        }
+        },
+        {
+           "partnerId": "6480d686-cfb4-424d-a945-6b9b9f4badc2",
+            "customerId": "org:9060d13d-c5ed-482e-b059-a15a38cbb28e",
+            "customerName": "recipientCustomerName",
+            "customerDomainName": "recipientCustomerDomain",
+            "customerCountry": "US",
+            "invoiceNumber": "1234000000",
+            "mpnId": "4870137",
+            "resellerMpnId": 0,
+            "orderId": "VdqkP11Bu4DlcjP5rLeQabcdefg-1234",
+            "orderDate": "2021-01-29T19:50:13.9869095Z",
+            "productId": "CFQ7TTC01234",
+            "skuId": "0001",
+            "availabilityId": "CFQ7TTC0ABCD",
+            "productName": "Office 365 E3",
+            "skuName": "Office 365 E3",
+            "chargeType": "new",
+            "unitPrice": 16,
+            "effectiveUnitPrice": 16,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 16,
+            "taxTotal": 1.61,
+            "totalForCustomer": 17.61,
+            "currency": "USD",
+            "publisherName": "Microsoft Corporation",
+            "publisherId": "",
+            "subscriptionDescription": "",
+            "subscriptionId": "2ae795eb-f76d-ce69-cba0-123456789000",
+            "chargeStartDate": "2021-01-29T00:00:00Z",
+            "chargeEndDate": "2021-02-27T00:00:00Z",
+            "termAndBillingCycle": "One-Year commitment for monthly/yearly billing",
+            "priceAdjustmentDescription": "[\"1 month billing\",\"You are getting a discount for being a partner.\",\"You are getting a price guarantee for your price.\",\"Yearly Duration\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "0001-01-01T00:00:00",
+            "billableQuantity": 1,
+            "meterDescription": "",
+            "billingFrequency": "Monthly",
+            "reservationOrderId": "e770c049-89c7-4ec1-b366-123456789000",
+            "invoiceLineItemType": "billing_line_items",
+            "billingProvider": "one_time" ,
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+      }  
     ],
     "links": {
         "self": {

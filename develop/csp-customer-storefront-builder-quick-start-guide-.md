@@ -20,10 +20,10 @@ The CSP Customer Storefront Builder helps partners easily create an online marke
 
 This website is fully owned, supported, and maintained by partners, and Microsoft does not collect any data or telemetry from the website. The CSP Customer Storefront Builder creates a website for the partner that is fully compliant with the [Payment Card Industry Data Security Standard](https://www.pcisecuritystandards.org/) (PCI DSS).
 
-The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+The CSP Customer Storefront Builder code is subject to the license available in the [Partner Center SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 >[!NOTE]
->You are responsible for the storefront website management, maintenance, and any issues that might result from website creation. Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+>You are responsible for the storefront website management, maintenance, and any issues that might result from website creation. Read and understand the terms in the [Partner Center SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 For additional information, also see the following articles: [CSP customer web storefront](csp-customer-web-storefront.md) and [console test app](console-test-app.md).
 
@@ -47,7 +47,7 @@ The CSP Customer Storefront Builder is intended as a quick way to create a websi
 
 - PayU payment configuration will work only in India currently. PayU availability and support is solely controlled by PayU and may be discontinued at any time by PayU.
 
-- Read and understand the terms in the [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+- Read and understand the terms in the [Partner Center SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 ## Using the CSP Customer Storefront Builder
 
