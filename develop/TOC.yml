@@ -536,6 +536,8 @@
       href: subscription-resources.md
     - name: Subscription usage
       href: subscription-usage-resources.md
+    - name: Transition
+      href: transition-resources.md
     - name: Upgrade
       href: upgrade-resources.md
     - name: User
