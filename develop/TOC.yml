@@ -393,6 +393,8 @@
       href: get-subscription-provisioning-status.md
     - name: Get subscription registration status
       href: get-subscription-registration-status.md
+    - name: Get transitions
+      href: get-transitions.md
     - name: Make a one-time purchase
       href: make-a-one-time-purchase.md
     - name: Purchase an add-on to a subscription
