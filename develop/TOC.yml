@@ -395,6 +395,8 @@
       href: get-subscription-provisioning-status.md
     - name: Get subscription registration status
       href: get-subscription-registration-status.md
+    - name: Get transitions
+      href: get-transitions.md
     - name: Make a one-time purchase
       href: make-a-one-time-purchase.md
     - name: Purchase an add-on to a subscription
@@ -409,6 +411,8 @@
       href: suspend-a-subscription.md
     - name: Transition a subscription
       href: transition-a-subscription.md
+    - name: Transition a new commerce subscription
+      href: transition-a-new-commerce-subscription.md
     - name: Update a cart
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
@@ -538,6 +542,8 @@
       href: subscription-resources.md
     - name: Subscription usage
       href: subscription-usage-resources.md
+    - name: Transition
+      href: transition-resources.md
     - name: Upgrade
       href: upgrade-resources.md
     - name: User
