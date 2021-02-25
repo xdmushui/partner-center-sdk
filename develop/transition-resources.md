@@ -14,6 +14,11 @@ ms.author: brserbus
 
 - Partner Center
 
+**Appropriate roles**
+
+- Global admin
+- Admin agent
+
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
