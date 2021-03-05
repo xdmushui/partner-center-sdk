@@ -160,7 +160,7 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
 }
 ```
 
-# Post Transition
+## Post Transition
 
 Posts a transition request for a given customer and subscription. Returns the transition with intial status.
 
