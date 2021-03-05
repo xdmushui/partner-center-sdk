@@ -8,7 +8,7 @@ author: BrentSerbus
 ms.author: brserbus
 ---
 
-# Transition a subscription
+# Transition a new commerce subscription
 
 **Applies To**
 
@@ -24,7 +24,7 @@ ms.author: brserbus
 
 Used to upgrade a customer's new commmerce subscription to a target subscription. First get eligible transitions to get the SKUs available for upgrade. Then post transition to execute the transition. These methods support both traditional and new commerce source subscriptions.  
 
-# Get transition eligibilities
+## Get transition eligibilities
 
 Returns a list of eligible transitions for a given customer, subscription and requested type.
 
