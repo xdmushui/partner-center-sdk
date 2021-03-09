@@ -1,16 +1,10 @@
-Thank you for contributing to Partner Center SDK documentation.
+# Thank you for contributing to Partner Center SDK documentation.
 
-# Pull Request information:
-
-## For public contributors: 
-
-1. Use this repo for your changes https://github.com/MicrosoftDocs/partner-center-sdk/
-
-2. We will review your Pull Request as soon as we can. 
-
-## For Microsoft contributors:
+## Pull Request information for Microsoft contributors:
 
 1. Use the private repo at https://github.com/MicrosoftDocs/partner-center-sdk-pr/
+
+The public repo is for customer contributions. https://github.com/MicrosoftDocs/partner-center-sdk/
 
 2. Fill out these three items before submitting your pull request to help us track:
 
