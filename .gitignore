@@ -7,5 +7,4 @@ _repo.*/
 .vs/
 cut-content/
 .openpublishing.buildcore.ps1
-.github/pull_request_template.md
-/.github/pull_request_template.md
+.github/*
