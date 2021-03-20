@@ -3,7 +3,7 @@ title: Update a customer's qualifications
 description: Updates a customer's qualifications asynchronously, including the address associated with the profile.
 ms.date: 03/19/2021
 ms.service: partner-dashboard
-author: jobiesel
+author: JoeyBytes
 ms.author: jobiesel
 ---
 
