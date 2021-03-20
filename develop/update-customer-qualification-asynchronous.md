@@ -1,12 +1,10 @@
 ---
 title: Update a customer's qualifications
-description: Learn how to update a customer's qualifications via asynchronous screening or vetting, including the address associated with the profile.
-ms.date: 12/07/2020
+description: Updates a customer's qualifications asynchronously, including the address associated with the profile.
+ms.date: 03/19/2021
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-sdk
-author: JoeyBytes
+author: jobiesel
 ms.author: jobiesel
-# Relates to asynchronous screening or vetting. 
 ---
 
 # Update a customer's qualifications asynchronously
@@ -15,7 +13,7 @@ ms.author: jobiesel
 
 - Partner Center
 
-Learn how to update a customer's qualifications asynchronously via Partner Center APIs. To learn how to do this synchronously, see [Update a customer's qualification via synchronous validation](update-customer-qualification-synchronous.md).
+Updates a customer's qualifications asynchronously.
 
 A partner can update a customer's qualifications asynchronously to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
 
@@ -48,7 +46,12 @@ For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-The integer value from the [**CustomerQualification**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
+This table describes the qualification object in the request body.
+
+Property | Type | Required | Description
+-------- | ---- | -------- | -----------
+Qualification | string | Yes | The string value from the [**CustomerQualification**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) enum.
+---
 
 ### Request example
 
@@ -58,6 +61,10 @@ Accept: application/json
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
+
+{
+    "Qualification": "Education"
+}
 
 ```
 
@@ -86,5 +93,7 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## Related articles
 
-- [Get a customer's qualifications](./get-customer-qualification-asynchronous.md)
+- [Get a customer's qualifications](get-a-customer-s-qualifications.md)
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
+
+
