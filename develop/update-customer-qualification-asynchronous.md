@@ -1,17 +1,13 @@
 ---
 title: Update a customer's qualifications
 description: Updates a customer's qualifications asynchronously, including the address associated with the profile.
-ms.date: 03/19/2021
+ms.date: 03/22/2021
 ms.service: partner-dashboard
 author: JoeyBytes
 ms.author: jobiesel
 ---
 
 # Update a customer's qualifications asynchronously
-
-**Applies To**
-
-- Partner Center
 
 Updates a customer's qualifications asynchronously.
 
@@ -24,6 +20,8 @@ A partner can update a customer's qualifications asynchronously to be "Education
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer's Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
 ## REST request
+
+Refer to the syntax and parameters below.
 
 ### Request syntax
 
