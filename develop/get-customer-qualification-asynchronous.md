@@ -87,14 +87,12 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "Approved",
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "Approved",
+    }
+]
 
 ```
 
@@ -106,15 +104,13 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "InReview",
-            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "InReview",
+        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+    }
+]
 
 ```
 
@@ -126,16 +122,14 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "Denied",
-            "vettingReason": "Not an Education Customer", // example Vetting Reason
-            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "Denied",
+        "vettingReason": "Not an Education Customer", // example Vetting Reason
+        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+    }
+]
 
 ```
 
