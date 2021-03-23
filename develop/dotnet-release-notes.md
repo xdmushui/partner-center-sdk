@@ -15,12 +15,12 @@ The following release notes are available for new versions of [Microsoft Partner
 [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/1.17.0) v1.17.0 is now general availability. Updated [GitHub samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) are also available. The following changes are included in this version:
 
 * Audit Updated - Added new operation types for knowing when the customer approved and terminated DAP
-  * [DapAdminRelationshipApproved](https://docs.microsoft.com/en-us/partner-center/develop/auditing-resources)
-  * [DapAdminRelationshipTerminated](https://docs.microsoft.com/en-us/partner-center/develop/auditing-resources)
+  * [DapAdminRelationshipApproved](auditing-resources.md)
+  * [DapAdminRelationshipTerminated](auditing-resources.md)
 
 * Audit Updated – Added new resource and operation types for supporting the customer directory role scenario
-  * Resource type "[CustomerDirectoryRole](https://docs.microsoft.com/en-us/partner-center/develop/auditing-resources)"
-  * Operation types "[AddUserMember](https://docs.microsoft.com/en-us/partner-center/develop/auditing-resources)" and "[RemoveUserMember](https://docs.microsoft.com/en-us/partner-center/develop/auditing-resources)"
+  * Resource type "[CustomerDirectoryRole](auditing-resources.md)"
+  * Operation types "[AddUserMember](auditing-resources.md)" and "[RemoveUserMember](auditing-resources.md)"
 
 * SDK Updates to Customers Account - Support for following API's
   * GET /customers/{customer-tenant-id}/directSignedMicrosoftCustomerAgreementStatus
