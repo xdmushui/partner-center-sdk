@@ -91,4 +91,4 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## Related articles
 
-- [Update a customer's qualification](update-a-customer-s-qualification.md)
+- [Update a customer's qualification](./update-customer-qualification-synchronous.md)

@@ -141,4 +141,4 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## Related articles
 
-- [Update a customer's qualifications](update-a-customer-s-qualifications.md)
+- [Update a customer's qualifications](./update-customer-qualification-asynchronous.md)
