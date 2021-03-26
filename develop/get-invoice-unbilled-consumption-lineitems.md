@@ -239,7 +239,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
             "rateOfCredit": 0,
-            "creditType: "Credit Not Applied",
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -298,8 +298,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
             "rateOfCredit": 1,
-            "creditType: "Azure Credit Applied",
-            "invoiceLineItemType": "usage_line_items",
+            "creditType": "Azure Credit Applied",
+            "invoiceLineItemTypce": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
