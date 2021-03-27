@@ -412,7 +412,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "effectiveUnitPrice": 0.1835431430074643112595,
             "rateOfPartnerEarnedCredit": 0.15,
             "rateOfCredit": 0.15,
-            "creditType: "PEC Applied",
+            "creditType": "Partner Earned Credit Applied",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }
