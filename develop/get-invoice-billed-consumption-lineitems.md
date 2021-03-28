@@ -233,6 +233,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
