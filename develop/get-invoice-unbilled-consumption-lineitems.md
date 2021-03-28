@@ -238,6 +238,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
+            "rateOfCredit": 0,
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -295,7 +297,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
-            "invoiceLineItemType": "usage_line_items",
+            "rateOfCredit": 1,
+            "creditType": "Azure Credit Applied",
+            "invoiceLineItemTypce": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
@@ -413,7 +417,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
-            "rateOfPartnerEarnedCredit": 0,
+            "rateOfPartnerEarnedCredit": 0.15,
+            "rateOfCredit": 0.15,
+            "creditType": "Partner Earned Credit Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {

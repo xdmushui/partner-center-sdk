@@ -227,6 +227,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | TermAndBillingCycle | string | Gets or sets the term and billing cycle associated with this purchase. |
 | AlternateId | string | Gets or sets the Alternate ID (quote ID). |
 | PriceAdjustmentDescription | string | Gets or sets the price adjustment description. |
+| CreditReasonCode | string | Gets or sets the credit reason code. |
 | DiscountDetails | string |  **Deprecated**. Gets or sets the discount details associated with this purchase. |
 | PricingCurrency | string | Gets or sets the pricing currency code. |
 | PCToBCExchangeRate | decimal | Gets or sets the pricing currency to the billing currency exchange rate. |
@@ -294,6 +295,8 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 | PCToBCExchangeRateDate | DateTime | Gets or sets the pricing currency to the billing currency exchange rate date. |
 | EffectiveUnitPrice | decimal | Gets or sets the effective unit price. |
 | RateOfPartnerEarnedCredit | decimal | Gets or sets the rate of partner earned credit. |
-| hasPartnerEarnedCredit | bool | Gets or sets is partner earned credit applied. |
+| HasPartnerEarnedCredit | bool | Gets or sets is partner earned credit applied. |
+| RateOfCredit | decimal | Gets or sets the rate of credit for the given credit type. |
+| CreditType | string | Gets or sets the type of credit. |
 | InvoiceLineItemType | InvoiceLineItemType | Returns the type of invoice line item. |
 | BillingProvider | BillingProvider | Returns the billing provider. |
