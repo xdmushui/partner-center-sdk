@@ -112,24 +112,24 @@ For a similar example, see:
 
 You can use the following syntaxes for your REST request, depending on your use case. For more information, see the descriptions for each syntax.
 
- | Method  | Request URI         | Description of syntax use case |                                                                                                                                            |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Use this syntax for large invoices. Use this syntax with a specified size and 0-based offset to return a paged list of line items. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
+| Method  | Request URI                                                                                                                                                                                              | Description of syntax use case                                                                                                     |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                       | Use this syntax to return a full list of every line item for the given invoice.                                                    |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1           | Use this syntax for large invoices. Use this syntax with a specified size and 0-based offset to return a paged list of line items. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`.                                  |
 
 #### URI parameters
 
 Use the following URI and query parameters when creating the request.
 
-| Name                   | Type   | Required | Description                                                                     |
-|------------------------|--------|----------|---------------------------------------------------------------------------------|
-| provider               | string | Yes      | The provider: "**OneTime**".                                                |
-| invoice-line-item-type | string | Yes      | The type of invoice detail: "**UsageLineItems**", "**UsageLineItems**".               |
-| currencyCode           | string | Yes      | The currency code for the unbilled line items.                                  |
-| period                 | string | Yes      | The period for unbilled recon (for example: **current**, **previous**). Suppose you need to query your unbilled usage data of the billing cycle (01/01/2020 – 01/31/2020) in January, choose period as **“Current,”** else **“Previous.”** |
-| size                   | number | No       | The maximum number of items to return. The default size is 2000.                    |
-| seekOperation          | string | No       | Set `seekOperation=Next` to get the next page of reconciliation line items.                |
+| Name                   | Type   | Required | Description                                                                                                                                                                                                                                |
+|------------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| provider               | string | Yes      | The provider: "**OneTime**".                                                                                                                                                                                                               |
+| invoice-line-item-type | string | Yes      | The type of invoice detail: "**UsageLineItems**", "**UsageLineItems**".                                                                                                                                                                    |
+| currencyCode           | string | Yes      | The currency code for the unbilled line items.                                                                                                                                                                                             |
+| period                 | string | Yes      | The period for unbilled recon (for example: **current**, **previous**). Suppose you need to query your unbilled usage data of the billing cycle (01/01/2020 – 01/31/2020) in January, choose period as **"Current,"** else **"Previous."** |
+| size                   | number | No       | The maximum number of items to return. The default size is 2000.                                                                                                                                                                           |
+| seekOperation          | string | No       | Set `seekOperation=Next` to get the next page of reconciliation line items.                                                                                                                                                                |
 
 ### Request headers
 
