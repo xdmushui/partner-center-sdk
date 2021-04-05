@@ -1,6 +1,6 @@
 ---
 title: Get the partner legal business profile
-description: How to get a partner's legal business profile.
+description: Learn how to use APIs to get your legal business profile.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
