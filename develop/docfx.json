@@ -45,6 +45,7 @@
       "ms.topic": "article",
       "ms.service": "partner-dashboard",
       "ms.subservice": "partnercenter-sdk",
+      "recommendations": true,
       "searchScope": [ "Partner Center", "Partner Center developer resources" ],
       "_op_documentIdPathDepotMapping": {
         "./": {
