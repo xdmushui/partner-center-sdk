@@ -1,6 +1,6 @@
 ---
 title: CSP Indirect provider capabilities for creating Indirect reseller accounts in the Sandbox
-description: 
+description: Indirect providers can create indirect resellers in the Sandbox for test purposes.
 ms.date: 04/27/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
