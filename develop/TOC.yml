@@ -432,6 +432,8 @@
       href: sandbox-scenario.md
     - name: Test and debug sandbox
       href: test-and-debug.md
+    - name: CSP Indirect provider capabilities for creating Indirect reseller accounts in the Sandbox
+      href: indirect-provider-sandbox-capabilities.md
     - name: Cancel an order from the integration sandbox
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Activate sandbox subscription 
