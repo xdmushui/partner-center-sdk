@@ -428,7 +428,7 @@
       href: update-a-subscription-s-support-contact.md
 -  name: Integration sandbox
    items:
-    - name: Partner sandbox capabilities that support reseller relationship
+    - name: Sandbox capabilities for Reseller relationship
       href: sandbox-scenario.md
     - name: Test and debug sandbox
       href: test-and-debug.md
