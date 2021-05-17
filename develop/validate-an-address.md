@@ -41,34 +41,38 @@ Address address = new Address()
 };
 
 // Validate the address.
-bool result = partnerOperations.Validations.IsAddressValid(address);
+AddressValidationResponse result = partnerOperations.Validations.IsAddressValid(address);
 
-// If the address is valid, the result should equal true.
-Console.WriteLine("Result: " + result.ToString());
+// If the request completes successfully, you can inspect the response object.
 
-// The following is an example that causes address validation to fail.
-try
+// See the status of the validation.
+Console.WriteLine($"Status: {addressValidationResult.Status}");
+
+// See the validation message returned.
+Console.WriteLine($"Validation Message Returned: {addressValidationResult.ValidationMessage ?? "No message returned."}");
+
+// See the original address submitted for validation.
+Console.WriteLine($"Original Address:\n{this.DisplayAddress(addressValidationResult.OriginalAddress)}");
+
+// See the suggested addresses returned by the API, if any exist.
+Console.WriteLine($"Suggested Addresses Returned: {addressValidationResult.SuggestedAddresses?.Count ?? "None."}");
+
+if (addressValidationResult.SuggestedAddresses != null && addressValidationResult.SuggestedAddresses.Any())
 {
-    // Change to an invalid postal code for this address.
-    address.PostalCode = "98007";
-
-    // Validate the address.
-    result = partnerOperations.Validations.IsAddressValid(address);
-
-    Console.WriteLine("ERROR: The code should have thrown an exception - BadRequest(400).");
+    addressValidationResult.SuggestedAddresses.ForEach(a => Console.WriteLine(this.DisplayAddress(a)));
 }
-catch (PartnerException exception)
+
+// Helper method to pretty-print an Address object.
+private string DisplayAddress(Address address)
 {
-    if (exception.ErrorCategory == PartnerErrorCategory.BadInput)
+    StringBuilder sb = new StringBuilder();
+
+    foreach (var property in address.GetType().GetProperties())
     {
-        Console.WriteLine(exception.ErrorCategory.ToString());
-        Console.WriteLine("Exception:");
-        Console.WriteLine("Message: {0}", exception.Message);
+        sb.AppendLine($"{property.Name}: {property.GetValue(address) ?? "None to Display."}");
     }
-    else
-    {
-        throw;
-    }
+
+    return sb.ToString();
 }
 ```
 
@@ -111,7 +115,7 @@ Host: api.partnercenter.microsoft.com
 Content-Length: 129
 
 {
-    "AddressLine1": "One Microsoft Way",
+    "AddressLine1": "1 Microsoft Way",
     "City": "Redmond",
     "State": "WA",
     "PostalCode": "98052",
