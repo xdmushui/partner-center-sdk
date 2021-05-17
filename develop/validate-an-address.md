@@ -104,18 +104,40 @@ This table describes the required properties in the request body.
 ### Request example
 
 ```http
+# "VerifiedShippable" Request Example
+
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
+Accept: application/json
 Content-Type: application/json
 Authorization: Bearer <token>
-Accept: application/json
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-X-Locale: en-US
+MS-CorrelationId: 29624f3c-90cb-4d34-a7e9-bd2de6d35218
+MS-RequestId: eb55c2b8-6f4b-4b44-9557-f76df624b8c0
 Host: api.partnercenter.microsoft.com
-Content-Length: 129
+Content-Length: 137
+X-Locale: en-US
 
 {
     "AddressLine1": "1 Microsoft Way",
+    "City": "Redmond",
+    "State": "WA",
+    "PostalCode": "98052",
+    "Country": "US"
+}
+
+# "StreetPartial" Request Example
+
+POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <token>
+MS-CorrelationId: 2c95c9bc-fdfb-4c6a-84f4-57c9b0826b43
+MS-RequestId: ee6cf74c-3ab5-48d6-9269-4a4b75bd59dc
+Host: api.partnercenter.microsoft.com
+Content-Length: 135
+X-Locale: en-US
+
+{
+    "AddressLine1": "Microsoft Way",
     "City": "Redmond",
     "State": "WA",
     "PostalCode": "98052",
@@ -125,42 +147,71 @@ Content-Length: 129
 
 ## REST response
 
-If successful, the method returns a status code 200 as demonstrated in the Response - validation succeeded example shown below.
-
-If the request fails, the method returns a status code 400 as demonstrated in the Response - validation failed example shown below. The response body contains a JSON payload with additional information about the error.
+If successful, the method returns an **AddressValidationResponse** object in the response body, with a **HTTP 200** status code. An example is shown below.
 
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Response - validation succeeded example
+### Response example
 
 ```http
+# "VerifiedShippable" Response Example
+
 HTTP/1.1 200 OK
-Content-Length: 0
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CV: IqhjoWVyq0Kl81dO.0
-MS-ServerId: 030011719
-Date: Mon, 13 Mar 2017 23:56:12 GMT
-```
-
-### Response - validation failed example
-
-```http
-HTTP/1.1 400 Bad Request
-Content-Length: 418
+Date: Mon, 17 May 2021 23:19:19 GMT
 Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CV: pdlItMyvtkmGHDWt.0
-MS-ServerId: 101112012
-Date: Tue, 14 Mar 2017 01:57:55 GMT
-
+MS-CorrelationId: 29624f3c-90cb-4d34-a7e9-bd2de6d35218
+MS-RequestId: eb55c2b8-6f4b-4b44-9557-f76df624b8c0
+X-Locale: en-US
+ 
 {
-    "code": 2007,
-    "description": "{\"code\":\"60071\",\"reason\":\"ZipCityInvalid - Details: Field - &#39;City&#39; is corrected from OldValue: &#39;Redmond&#39; to NewValue: &#39;BELLEVUE&#39;.\",\"corrected_address\":{\"country\":\"US\",\"region\":\"WA\",\"city\":\"BELLEVUE\",\"address_line1\":\"One Microsoft Way\",\"postal_code\":\"98007\"},\"object_type\":\"AddressValidation\",\"resource_status\":\"Active\"}",
-    "data": [],
-    "source": "PartnerFD"
+    "originalAddress": {
+        "country": "US",
+        "city": "Redmond",
+        "state": "WA",
+        "addressLine1": "1 Microsoft Way",
+        "postalCode": "98052"
+    },
+    "suggestedAddresses": [
+        {
+            "country": "US",
+            "city": "Redmond",
+            "state": "WA",
+            "addressLine1": "1 Microsoft Way",
+            "postalCode": "98052-8300"
+        }
+    ],
+    "status": "VerifiedShippable"
+}
+
+# "StreetPartial" Response Example
+
+HTTP/1.1 200 OK
+Date: Mon, 17 May 2021 23:34:08 GMT
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 2c95c9bc-fdfb-4c6a-84f4-57c9b0826b43
+MS-RequestId: ee6cf74c-3ab5-48d6-9269-4a4b75bd59dc
+X-Locale: en-US
+ 
+{
+    "originalAddress": {
+        "country": "US",
+        "city": "Redmond",
+        "state": "WA",
+        "addressLine1": "Microsoft Way",
+        "postalCode": "98052"
+    },
+    "suggestedAddresses": [
+        {
+            "country": "US",
+            "city": "Redmond",
+            "state": "WA",
+            "addressLine1": "1 Microsoft Way",
+            "postalCode": "98052-6399"
+        }
+    ],
+    "status": "StreetPartial",
+    "validationMessage": "Address field invalid for property: 'Region', 'PostalCode', 'City'"
 }
 ```
