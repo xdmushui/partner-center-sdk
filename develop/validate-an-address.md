@@ -72,52 +72,6 @@ catch (PartnerException exception)
 }
 ```
 
-## Java
-
-To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.getValidations** function, and call the **isAddressValid** method with the address object.
-
-[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
-
-```java
-// IAggregatePartner partnerOperations;
-
-// Create an address to validate.
-Address address = new Address();
-
-address.setAddressLine1("One Microsoft Way");
-address.setCity("Redmond");
-address.setState("WA");
-address.setCountry("US");
-address.setPostalCode("98052");
-
-try
-{
-    // Validate the address
-    Boolean validationResult = partnerOperations.getValidations().isAddressValid(address);
-
-    System.out.println(validationResult ? "The address is valid." : "Invalid address");
-}
-catch (Exception exception)
-{
-    System.out.println("Address is invalid");
-
-    if (! StringHelper.isNullOrWhiteSpace(exception.getMessage()))
-    {
-        System.out.println(exception.getMessage());
-    }
-}
-```
-
-## PowerShell
-
-[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
-
-To validate an address, execute the [**Test-PartnerAddress**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Test-PartnerAddress.md) with the address parameters populated.
-
-```powershell
-Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Country 'US' -PostalCode '98004' -State 'WA'
-```
-
 ## REST request
 
 ### Request syntax
