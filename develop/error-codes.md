@@ -32,6 +32,7 @@ The following **4xx** and **5xx** status codes indicate an error:
 - 404: Not found
 - 405: Method not allowed
 - 406: Not acceptable
+- 408: Request timeout
 - 409: Conflict, error code
 - 412: Precondition failed
 - 429: Too many requests
