@@ -24,7 +24,8 @@ A partner can update a customer's qualifications asynchronously to be "Education
 To create a customer's qualification for "Education", first create an object representing the qualification type. Then, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer identifier. Then use the [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) property to retrieve a [**ICustomerQualification**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) interface. Finally, call `CreateQualifications()` or `CreateQualificationsAsync()` with the qualification type object as an input parameter.
 
 ``` csharp
-var qualificationType = { Qualification = "education" };
+var qualificationToCreate = "education";    // can also be "StateOwnedEntity", see GCC example below.
+var qualificationType = { Qualification = qualificationToCreate };
 var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.CreateQualifications(qualificationType);
 ```
 
