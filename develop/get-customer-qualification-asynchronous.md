@@ -1,7 +1,7 @@
 ---
 title: Get a customer's qualifications
 description: Learn how to use asynchronous validation to get a customer's qualification via Partner Center API. Partners might use this to validate Education customers.
-ms.date: 01/21/2021
+ms.date: 05/17/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: JoeyBytes
@@ -129,6 +129,71 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
         "vettingReason": "Not an Education Customer", // example Vetting Reason
         "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
     }
+]
+
+```
+
+#### State Owned Entity Samples
+
+**State Owned Entity via POST sample**
+
+```csharp
+
+//SOE
+POST {customer_id}/qualifications
+{
+“qualification”: “StateOwnedEntity”
+}
+
+//
+
+```
+
+**State Owned Entity via Get Qualifications sample**
+
+```csharp
+
+//SOE:
+GET {customer_id}/qualifications
+[
+	{
+		“qualification”: “StateOwnedEntity”
+	}
+]
+
+```
+
+**State Owned Entity via Get Qualifications with Education**
+
+```csharp
+
+GET {customer_id}/qualifications
+[
+	{
+		“qualification”: “Education”,
+		“vettingStatus”: “Approved”
+	},
+{
+		“qualification”: “StateOwnedEntity”
+	}
+]
+
+```
+
+**State Owned Entity via Get Qualifications with GCC**
+
+```csharp
+
+GET {customer_id}/qualifications
+[
+	{
+		“qualification”: “GovernmentCommunityCloud”,
+		“vettingStatus”: “Approved”,
+		“vettingCreateDate”: “2021-05-06T19:59:56.6832021+00:00”
+	},
+{
+		“qualification”: “StateOwnedEntity”
+	}
 ]
 
 ```
