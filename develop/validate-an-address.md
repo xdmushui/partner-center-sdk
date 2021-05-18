@@ -101,6 +101,21 @@ This table describes the required properties in the request body.
 | postalcode   | string | Y        | The postal code.                                           |
 | country      | string | Y        | The two-character ISO alpha-2 country code.                |
 
+### Response details
+
+The response will return one of the following status messages:
+
+| Status	 | Description |	Number of suggested addresses returned |
+|-------|---------------|-------------------|
+|Verified shippable | Address is verified and can be shipped to. | Single |
+|Verified | Address is verified. | Single |
+|Interaction required | Suggested address has been changed significantly and needs user confirmation. | Single |
+|Street partial | The given street in the address is partial and needs more info. | Multiple—maximum of three |
+|Premises partial | The given premises (building number, suite number, and others) are partial and need more info. | Multiple—maximum of three |
+|Multiple | There are multiple fields that are partial in the address (potentially also including street partial and premises partial). | Multiple—maximum of three |
+|None | Address is incorrect. | None |
+|Not validated | Address was not able to be sent through the validation process. | None |
+
 ### Request example
 
 ```http
