@@ -1,14 +1,14 @@
 ---
 title: CSP Indirect provider capabilities in the Sandbox
 description: Indirect providers can create indirect resellers in the Sandbox for test purposes.
-ms.date: 04/27/2021
+ms.date: 05/20/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: vinayks-ms
 ms.author: vinayks
 ---
 
-# CSP Indirect provider capabilities for creating Indirect reseller accounts in the Sandbox
+# CSP Indirect provider sandbox capabilities for creating Indirect reseller accounts 
 
 **Applies to**
 
@@ -18,14 +18,13 @@ ms.author: vinayks
 
 - Indirect provider
 
+CSP Indirect Providers can create a CSP Indirect Reseller Sandbox account via through their own Tier 2 Sandbox account in Partner Center portal.
+
+
 ## Prerequisites 
 
 Partner Center Indirect Provider (Tier 2) sandbox credentials. The sandbox scenario supports authentication with both the standalone App and App+User credentials. 
  
-
-## Scenarios supporting Indirect reseller sandbox creation using the Partner Center user interface 
-
-CSP Indirect Providers can create a CSP Indirect Reseller Sandbox account via through their own Tier 2 Sandbox account in Partner Center portal.
 
 ## Sandbox Indirect Provider – Create Sandbox Indirect Reseller using the Partner Center user interface 
 
@@ -60,7 +59,7 @@ The following scenarios are what Indirect providers can do for indirect reseller
 
 1. Limit of 5 Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. Once the Sandbox Indirect reseller is deleted, the quota will be reset.
 
-### Pre-requisites:
+### Pre-requisites
 
 - Limit of 5 Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. 
 
@@ -111,9 +110,10 @@ An existing CSP Indirect Reseller Sandbox account associated with your own CSP I
 
 3. Click on **Delete Reseller Sandbox** link next to the Indirect Reseller Sandbox account you want to delete. The Indirect Reseller Sandbox account will be permanently deleted and cannot be recovered. 
 
-## API References
-•	Create Indirect Reseller 
-•	Delete Indirect Reseller 
+## API references
+
+- Create Indirect Reseller 
+- Delete Indirect Reseller 
 
  
 

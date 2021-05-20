@@ -37,45 +37,45 @@ This article explains what is supported in the Sandbox for reseller relationship
 
     **Direct bill partners**:
 
-    •	Can add existing customers
+    - Can add existing customers
 
-    •	Cannot request relationships with new customers
+    - Cannot request relationships with new customers
 
     **Indirect providers**:
 
-    •	Can add existing customers
+    - Can add existing customers
 
-    •	Cannot request relationships with new customers
+    - Cannot request relationships with new customers
 
-    •	Cannot have a relationship with an Indirect reseller
+    - Cannot have a relationship with an Indirect reseller
 
-    **Indirect reseller**: (coming soon)
+    **Indirect reseller**: 
 
-    •	Can have a relationships with existing customers
+    - 	Can have a relationships with existing customers
 
-    •	Cannot request new relationships or add new customers
+    - 	Cannot request new relationships or add new customers
 
     ### In Partner Center
 
     **Direct bill partners**:
 
-    •	Can add new customers
+    - 	Can add new customers
 
-    •	Can request relationships with new customers
+    -	Can request relationships with new customers
 
     **Indirect providers**:
 
-    •	Can add new customers
+    -	Can add new customers
 
-    •	Can request relationships with new customers
+    -	Can request relationships with new customers
 
-    •	Can have relationships with indirect resellers
+    -	Can have relationships with indirect resellers
 
     **Indirect resellers**:
 
-    •	Can’t add new customers
+    -	Can’t add new customers
 
-    •	Can request relationships with new customers
+    -	Can request relationships with new customers
 
 
 Follow the [Remove Reseller Relationship](remove-a-reseller-relationship-with-a-customer.md) for the customer for details. However, there are some differences between the Product and Sandbox capabilities.
