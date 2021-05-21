@@ -16,7 +16,6 @@ ms.author: sakhanda
 
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
 
-This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145P) subscriptions. This means this API is a backward-compatible feature.
 
 ## Prerequisites
 
