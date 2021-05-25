@@ -9,7 +9,7 @@ ms.subservice: partnercenter-sdk
 
 # Create Indirect Reseller in Sandbox
 
-This document helps Sandbox Indirect Providers to enable end-to-end testing using APIs. 
+This document shows how to create Sandbox Indirect Providers and enable end-to-end testing using APIs.
 
 **Applies to:** Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany
 
