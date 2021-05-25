@@ -15,7 +15,7 @@ This document helps Sandbox Indirect Providers to enable end-to-end testing usin
 
 ## Prerequisites
 
-- Credentials as described in [Partner Center Authentication](https://docs.microsoft.com/partner-center/develop/partner-center-authentication). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner Center Authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
 ## CSP Indirect Provider
 
@@ -34,11 +34,11 @@ This document helps Sandbox Indirect Providers to enable end-to-end testing usin
 
 ## Sandbox Indirect Provider – Create Sandbox Indirect Reseller
 
-This is a Sandbox only feature that allows Sandbox Indirect Providers an ability to create Sandbox Indirect Resellers.
+This is a Sandbox-only feature that allows Sandbox Indirect Providers an ability to create Sandbox Indirect Resellers.
 
 1. Limit of five Sandbox Indirect Resellers allowed per Sandbox Indirect Provider
 2. Sandbox Indirect Providers can create customers with `associatedPartnerId` of Sandbox Indirect Reseller
-3. Enter the [MPN](https://docs.microsoft.com/partner-center/mpn-create-a-partner-center-account) ID of a specific region while creating a Sandbox Indirect Reseller. Multiple Sandbox Indirect Resellers can be created with the same Sandbox MPN ID.
+3. Enter the [MPN](/partner-center/mpn-create-a-partner-center-account) ID of a specific region while creating a Sandbox Indirect Reseller. Multiple Sandbox Indirect Resellers can be created with the same Sandbox MPN ID.
 4. Only 75 customers are allowed per Sandbox Indirect Provider
 
 ## Sandbox Indirect Provider – Delete Sandbox Indirect Reseller 
@@ -63,13 +63,13 @@ This is a Sandbox-only feature that allows Sandbox Indirect Providers an ability
 
 | **Method** | **Request URI**                                                                                                             |
 |------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **POST**   | [*{baseURL}*](https://docs.microsoft.com/partner-center/develop/partner-center-rest-urls)/v1//sandboxIndirectReseller |
+| **POST**   | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller |
 
 ### Request headers
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
 - A request ID and correlation ID are required.
-- For more information, see [Partner Center REST headers](https://docs.microsoft.com/en-us/partner-center/develop/headers).
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
