@@ -61,8 +61,8 @@ This is a Sandbox-only feature that allows Sandbox Indirect Providers an ability
 
 ### Request syntax
 
-| **Method** | **Request URI**                                                                                                             |
-|------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **Method** | **Request URI**                                                        |
+|------------|------------------------------------------------------------------------|
 | **POST**   | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller |
 
 ### Request headers
@@ -84,9 +84,8 @@ This table describes the required properties in the request body.
 
 This table describes the required properties in the **tenant** attribute.
 
-| Request Body       |                |                                     |
+| Property           | Type           | Description                         |
 |--------------------|----------------|-------------------------------------|
-| **Property**       | **Type**       | **Description**                     |
 | domainPrefix       | String; unique | Domain for the tenant account       |
 | name               | string         | Friendly name of the tenant         |
 | displayName        | string         | Display name for the account        |
@@ -100,9 +99,8 @@ This table describes the required properties in the **tenant** attribute.
 This table describes the required properties in the
 **legalBusinessProfile** attribute.
 
-| Request Body   |                                  |                                      |
+| Property       | Type                             | Description                          |
 |----------------|----------------------------------|--------------------------------------|
-| **Property**   | **Type**                         | **Description**                      |
 | companyName    | string                           | Company name for legal entity        |
 | address        | Dictionary&lt;string, string&gt; | Address of the legal entity location |
 | primaryContact | Dictionary&lt;string, string&gt; | Contact details of the company       |
