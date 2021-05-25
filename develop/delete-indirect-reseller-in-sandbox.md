@@ -59,7 +59,7 @@ Date: Wed, 16 Feb 2021 00:43:02 GMT
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure as well as additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and other debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
 This method returns the following status success and error codes:
 
