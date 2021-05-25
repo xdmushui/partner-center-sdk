@@ -32,10 +32,9 @@ This document shows how to delete Sandbox Indirect Providers and enable end-to-e
 
 ### Request headers
 
-- This API is idempotent (it will not yield a different result if you call it multiple times).
-- A request ID and correlation ID are required.
-- For more information, see [Partner Center REST
-> headers](https://docs.microsoft.com/en-us/partner-center/develop/headers).
+- This API is idempotent (it will not yield a different result if you call it multiple times)
+- A request ID and correlation ID are required
+- For more information, see [Partner Center REST headers](headers.md)
 
 ## Request Example
 
@@ -60,8 +59,7 @@ Date: Wed, 16 Feb 2021 00:43:02 GMT
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure as well as additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error
-codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure as well as additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
 This method returns the following status success and error codes:
 
