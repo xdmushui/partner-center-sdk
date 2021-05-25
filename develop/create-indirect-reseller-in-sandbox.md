@@ -1,3 +1,12 @@
+---
+title: Create Indirect Reseller in Sandbox
+description: Provides information for Sandbox Indirect Providers on enabling end-to-end testing using APIs.
+ms.date: 5/24/2021
+ms.author: vijvala
+ms.service: partner-dashboard
+ms.subservice: partnercenter-sdk
+---
+
 # Create Indirect Reseller in Sandbox
 
 This document helps Sandbox Indirect Providers to enable end-to-end testing using APIs. 
