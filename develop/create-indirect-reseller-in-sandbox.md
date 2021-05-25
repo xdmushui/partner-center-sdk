@@ -48,21 +48,21 @@ This feature is only available in the Sandbox and gives Sandbox Indirect Provide
 
 ## Create Sandbox Indirect Reseller through API
 
-## REST request
+### REST request
 
-### Request syntax
+#### Request syntax
 
 | **Method** | **Request URI**                                                        |
 |------------|------------------------------------------------------------------------|
 | **POST**   | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller |
 
-### Request headers
+#### Request headers
 
 - This API is idempotent (it will not yield a different result if you call it multiple times).
 - A request ID and correlation ID are required.
 - For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 This table describes the required properties in the request body.
 
@@ -134,7 +134,7 @@ This table describes the required properties in the **legalBusinessProfile** att
 }
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns the populated Sandbox IR resource in the response body.
 
