@@ -32,7 +32,7 @@ This document shows how to create Sandbox Indirect Providers and enable end-to-e
 | Sandbox MPN ID should be entered, the product MPN ID will not work | Not supported in production |
 | Not supported in production | Sandbox Indirect Provider can delete Sandbox Indirect Reseller |
 
-### Sandbox Indirect Provider – Create Sandbox Indirect Reseller
+## Sandbox Indirect Provider – Create Sandbox Indirect Reseller
 
 This feature is only available in the Sandbox and gives Sandbox Indirect Providers an ability to create Sandbox Indirect Resellers.
 
@@ -41,16 +41,7 @@ This feature is only available in the Sandbox and gives Sandbox Indirect Provide
 3. Enter the [MPN](/partner-center/mpn-create-a-partner-center-account) ID of a specific region while creating a Sandbox Indirect Reseller. Multiple Sandbox Indirect Resellers can be created with the same Sandbox MPN ID.
 4. Only 75 customers are allowed per Sandbox Indirect Provider
 
-### Sandbox Indirect Provider – Delete Sandbox Indirect Reseller 
-
-This feature is only available in the Sandbox and gives Sandbox Indirect Providers an ability to create Sandbox Indirect Resellers.
-
-1. Prerequisites for Deleting a Sandbox Indirect Reseller
-    1. Suspend the subscriptions for each customer of Sandbox Indirect Reseller
-    2. Delete all customers of Indirect Reseller
-2. Limit of five Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. Once the Sandbox Indirect reseller is deleted the quota will be reset.
-
-### Sandbox Indirect Resellers – View customers
+## Sandbox Indirect Resellers – View customers
 
 1. Sandbox Indirect Resellers can view the list of sandbox customers by Sandbox Indirect providers.
 2. Sandbox Indirect Resellers can manage the customer account by using delegated administrator permissions.
