@@ -36,7 +36,7 @@ This document shows how to delete Sandbox Indirect Providers and enable end-to-e
 - A request ID and correlation ID are required
 - For more information, see [Partner Center REST headers](headers.md)
 
-## Request Example
+### Request Example
 
 DELETE https://api.partnercenter.microsoft.com/v1/sandboxIndirectReseller/{resellerID}
 
