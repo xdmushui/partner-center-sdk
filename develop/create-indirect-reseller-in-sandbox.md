@@ -14,10 +14,10 @@ This document helps Sandbox Indirect Providers to enable end-to-end testing usin
 |-------------------------------------|-------------------------------------------------|
 | Sells through the indirect reseller to the end customer | Supported |
 | Owns all sales, billing, provisioning, and management/support | Supported |
-| Request a partnership with the resellers​ | Supported |
+| Request a partnership with the resellers | Supported |
 | View customers by Reseller | Supported |
 | Add new customers by resellers | Supported |
-| Invite customers​ | Customer relationship request is not supported in Sandbox |
+| Invite customers | Customer relationship request is not supported in Sandbox |
 | Sandbox Indirect Provider can select Sandbox IR (MPN ID) as the POR while placing the transaction | Supported |
 | Not supported in production | Sandbox Indirect Provider can create Sandbox Indirect Reseller (Only allowed in Sandbox) |
 | Sandbox MPN ID should be entered, the product MPN ID will not work. |
