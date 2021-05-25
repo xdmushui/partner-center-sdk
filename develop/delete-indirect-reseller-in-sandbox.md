@@ -31,15 +31,15 @@ This feature is only available in the Sandbox and gives Sandbox Indirect Provide
 
 ## Delete Sandbox Indirect Reseller through API
 
-## REST request
+### REST request
 
-### Request syntax
+#### Request syntax
 
 | Method | Request URI                                                                             |
 |------------|-------------------------------------------------------------------------------------|
 | **DELETE** | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller/{resellerId} |
 
-### Request headers
+#### Request headers
 
 - This API is idempotent (it will not yield a different result if you call it multiple times)
 - A request ID and correlation ID are required
@@ -56,7 +56,7 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-###  Response example
+####  Response example
 
 ```http
 HTTP/1.1 204 No Content
@@ -66,7 +66,7 @@ MS-RequestId: 655890ba-4d2b-4d09-a95f-4ea1348686a5
 Date: Wed, 16 Feb 2021 00:43:02 GMT
 ```
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and other debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
 
