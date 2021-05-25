@@ -1,6 +1,6 @@
 ---
 title: Delete Indirect Reseller in Sandbox
-description: Provides information for Sandbox Indirect Providers on enabling end-to-end testing using APIs.
+description: Provides information on deleting Sandbox Indirect Resellers and enabling end-to-end testing using APIs.
 ms.date: 5/24/2021
 ms.author: vijvala
 ms.service: partner-dashboard
@@ -9,7 +9,7 @@ ms.subservice: partnercenter-sdk
 
 # Delete Indirect Reseller in Sandbox
 
-## This document helps Sandbox Indirect Provider on how to enable end-end testing using APIs.
+This document shows how to delete Sandbox Indirect Providers and enable end-to-end testing using APIs.
 
 **Applies to:** Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany
 
