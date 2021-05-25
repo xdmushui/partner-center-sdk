@@ -8,7 +8,6 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
-  
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
@@ -438,8 +437,10 @@
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Activate sandbox subscription 
       href: activate-sandbox-subscription-azure-marketplace-products.md
-    - name: Delete a customer account from the integration sandbox
-      href: delete-a-customer-account-from-the-integration-sandbox.md
+    - name: Create Indirect Reseller in Sandbox
+      href: create-indirect-reseller-in-sandbox.md
+    - name: Delete Indirect Reseller in Sandbox
+      href: delete-indirect-reseller-in-sandbox.md
 - name: Referrals
   href: /partner/develop/referrals
   items:
