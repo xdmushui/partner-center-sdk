@@ -20,6 +20,15 @@ This document shows how to delete Sandbox Indirect Providers and enable end-to-e
 
 - Credentials as described in [Partner Center Authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
 
+## Sandbox Indirect Provider – Delete Sandbox Indirect Reseller 
+
+This feature is only available in the Sandbox and gives Sandbox Indirect Providers an ability to create Sandbox Indirect Resellers.
+
+1. Prerequisites for Deleting a Sandbox Indirect Reseller
+    1. Suspend the subscriptions for each customer of Sandbox Indirect Reseller
+    2. Delete all customers of Indirect Reseller
+2. Limit of five Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. Once the Sandbox Indirect reseller is deleted the quota will be reset.
+
 ## Delete Sandbox Indirect Reseller through API
 
 ## REST request
