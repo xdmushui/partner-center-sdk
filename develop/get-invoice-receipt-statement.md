@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get invoice receipt statement
 
-**Applies To**
-
-- Partner Center
-
 Retrieves an invoice receipt statement using invoice ID and the receipt ID.
 
 > [!IMPORTANT]

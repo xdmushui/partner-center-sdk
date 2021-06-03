@@ -10,10 +10,6 @@ ms.author: sakhanda
 
 # Get a customer's subscriptions transfer eligibility
 
-**Applies To**
-
-- Partner Center
-
 How to get a collection of a customer's subscriptions that are eligible/ineligible for transfer.
 
 ## Prerequisites

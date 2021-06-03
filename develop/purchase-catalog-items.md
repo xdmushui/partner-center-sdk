@@ -8,19 +8,15 @@ ms.subservice:  partnercenter-sdk
 
 # Purchase catalog items
 
-**Applies To**
-
-- Partner Center
-
 The following scenario demonstrates the generic process for purchasing items from the catalog by using the Partner Center API.
 
 ## Discovery
 
-Select products and SKUs and check their availability using the following Partner Center API models:
+Select products and Stock Keeping Units (SKUs) and check their availability using the following Partner Center API models:
 
 - [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself isn't a purchasable item.​​
-- [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
-- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
+- [SKU](product-resources.md#sku) - A purchasable SKU under a product. These represent the different shapes of the product.​​
+- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
 To purchase an item from the catalog, complete the following steps:
 

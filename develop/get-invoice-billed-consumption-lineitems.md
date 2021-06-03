@@ -10,10 +10,6 @@ ms.author: sakhanda
 
 # Get invoice billed commercial consumption line items
 
-**Applies to:**
-
-- Partner Center
-
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
 
 

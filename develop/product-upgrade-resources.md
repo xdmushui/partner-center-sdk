@@ -1,16 +1,12 @@
 ---
 title: Product upgrade resources
-description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails.
+description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct, and ErrorDetails.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
 # Product upgrade resources
-
-**Applies to:**
-
-- Partner Center
 
 You can use the following resources for information about Partner Center product upgrades from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan.
 
@@ -80,6 +76,6 @@ The **ErrorDetails** resource provides details about errors during the upgrade p
 
 | Property   | Type                                                          | Description                                       |
 |------------|---------------------------------------------------------------|---------------------------------------------------|
-| code       | string                                                        | A error code when the product upgrade fails.      |
+| code       | string                                                        | An error code when the product upgrade fails.      |
 | message    | string                                                        | The error message when the product upgrade fails. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                          |

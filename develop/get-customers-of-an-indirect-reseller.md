@@ -10,10 +10,6 @@ ms.author: dineshvu
 
 # Get customers of an indirect reseller
 
-**Applies To**
-
-- Partner Center
-
 How to get a list of the customers of an indirect reseller.
 
 ## Prerequisites

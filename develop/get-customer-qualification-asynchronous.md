@@ -11,10 +11,6 @@ ms.author: jobiesel
 
 # Get a customer's qualification asynchronously
 
-**Applies To**
-
-- Partner Center
-
 How to get a customer's qualifications asynchronously.
 
 ## Prerequisites

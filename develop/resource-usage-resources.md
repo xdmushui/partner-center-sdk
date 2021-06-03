@@ -9,10 +9,6 @@ ms.subservice:  partnercenter-sdk
 
 # Resource usage record resources
 
-**Applies to:**
-
-- Partner Center
-
 You can use the **ResourceUsageRecord** resource to describe the estimated monetary cost of a subscription's resource level usage in the current billing cycle.
 
 ## ResourceUsageRecord

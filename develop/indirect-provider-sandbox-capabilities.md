@@ -10,10 +10,6 @@ ms.author: vinayks
 
 # CSP Indirect provider sandbox capabilities for creating Indirect reseller accounts 
 
-**Applies to**
-
-- Partner Center
-
 **Appropriate roles**
 
 - Indirect provider
@@ -73,14 +69,14 @@ The following scenarios are what Indirect providers can do for indirect reseller
 
 2. Navigate to Indirect Resellers from the left menu. 
 
-3. Click on “Add Reseller Sandbox” button. 
+3. Select the **Add Reseller Sandbox** button. 
 
 4. Fill the account enrollment form. It's self-explanatory but remember you are creating a Sandbox account for an Indirect Reseller. 
 This account won't undergo vetting and will be activated as soon as you finish the account enrollment.  
 
 5. Once the account is created, you will get the Global Admin credentials for the Indirect Reseller sandbox account on the portal. Remember to save it immediately,  otherwise, you won't be able to sign in as an Indirect Reseller Sandbox. 
 
-6. Sign out and sign in again to Partner Center using the new credentials for Indirect Reseller Sandbox. Explore the capabilities you can do as an Indirect Reseller. Some things are :  
+6. Sign out and sign in again to Partner Center using the new credentials for Indirect Reseller Sandbox. Explore the capabilities you can do as an Indirect Reseller. Some things are:  
 
     - Manage profiles  
 
@@ -108,7 +104,7 @@ An existing CSP Indirect Reseller Sandbox account associated with your own CSP I
 
 2. Navigate to Indirect Resellers from the left menu. 
 
-3. Click on **Delete Reseller Sandbox** link next to the Indirect Reseller Sandbox account you want to delete. The Indirect Reseller Sandbox account will be permanently deleted and cannot be recovered. 
+3. Select the **Delete Reseller Sandbox** link next to the Indirect Reseller Sandbox account you want to delete. The Indirect Reseller Sandbox account will be permanently deleted and cannot be recovered. 
 
 ## API references
 

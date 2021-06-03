@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get invoice unbilled commercial consumption line items
 
-**Applies to:**
-
-- Partner Center
-
 How to get a collection of unbilled commercial consumption line item details.
 
 You can use the following methods to get a collection of details unbilled commercial consumption line items (also known as open usage line items) programmatically.
