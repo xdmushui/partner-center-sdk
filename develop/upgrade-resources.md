@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Upgrade resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Describes the resources used to upgrade a user from a source
 subscription to a target subscription.
@@ -27,7 +22,7 @@ Describes the behavior of an individual upgrade resource.
 | TargetOffer   | Offer                  | The offer of the target subscription.                                                        |
 | UpgradeType   | string                 | The type of upgrade: "none", "upgrade\_only", or "upgrade\_with\_license\_transfer".         |
 | IsEligible    | boolean                | Identifies if the upgrade can be performed.                                                  |
-| Quantity      | integer                | The quantify of the new offer to be purchased. Defaults to the source subscription quantity. |
+| Quantity      | integer                | The quantity of the new offer to be purchased. Defaults to the source subscription quantity. |
 | UpgradeErrors | array of UpgradeErrors | Reasons the upgrade cannot be performed, if applicable.                                      |
 | Attributes    | ResourceAttributes     | The metadata attributes corresponding to the upgrade.                                        |
 
@@ -44,14 +39,14 @@ Describes a reason why an upgrade cannot be performed.
 
 ## UpgradeResult
 
-Describes a the result of the subscription upgrade process.
+Describes the result of the subscription upgrade process.
 
 | Property             | Type                        | Description                                                                          |
 |----------------------|-----------------------------|--------------------------------------------------------------------------------------|
 | SourceSubscriptionId | string                      | The identifier of the source subscription.                                           |
 | TargetSubscriptionID | string                      | The identifier of the target subscription.                                           |
 | UpgradeType          | string                      | The type of upgrade: "none", "upgrade\_only", or "upgrade\_with\_license\_transfer". |
-| UpgradeErrors        | array of UpgradeErrors      | Errors encountered while attemption to perform the upgrade, if applicable.           |
+| UpgradeErrors        | array of UpgradeErrors      | Errors encountered while attempting to perform the upgrade, if applicable.           |
 | LicenseErrors        | array of UserLicenseErrrors | Errors encountered while attempted to migrate user licenses, if applicable.          |
 | Attributes           | ResourceAttributes          | The metadata attributes corresponding to the license.                                |
 

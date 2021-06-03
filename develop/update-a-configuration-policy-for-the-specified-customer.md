@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update a configuration policy for the specified customer
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to update the specified configuration policy for the specified customer.
 

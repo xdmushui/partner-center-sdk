@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Transition a subscription
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Upgrades a customer's subscription to a specified target subscription.
 
