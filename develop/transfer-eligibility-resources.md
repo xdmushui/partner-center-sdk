@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # TransferEligibility resources
 
-**Applies to:**
-
-- Partner Center
-
 A partner creates a transfer when a customer wants their subscription with the partner to be transferred to another partner.
 
 ## TransferEligibility

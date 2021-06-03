@@ -11,10 +11,6 @@ ms.author: dineshvu
 
 # Update a customer's qualification via synchronous validation
 
-**Applies To**
-
-- Partner Center
-
 Learn how to update a customer's qualifications synchronously via Partner Center APIs. To learn how to do this asynchronously, see [Update a customer's qualification via asynchronous validation](update-customer-qualification-asynchronous.md).
 
 A partner can update a customer's qualification to be "Education" or "GovernmentCommunityCloud". Other values, "None" and "Nonprofit", cannot be set.
