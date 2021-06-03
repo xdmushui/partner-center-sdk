@@ -10,10 +10,6 @@ ms.author: dineshvu
 
 # Get indirect resellers of a customer
 
-**Applies To**
-
-- Partner Center
-
 How to get a list of the indirect resellers that have a relationship with a specified customer.
 
 ## Prerequisites

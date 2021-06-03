@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Update a cart
 
-**Applies To**
-
-- Partner Center
-
 How to update an order for a customer in a cart.
 
 ## Prerequisites
@@ -24,7 +20,7 @@ How to update an order for a customer in a cart.
 
 ## C\#
 
-To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart ID's using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart ID's using the **ById()** method.
+To update an order for a customer, get the cart using the **Get()** method by passing the customer and cart IDs using the **ById()** function. Make the necessary changes to the cart. Now call the **Put** method by using customer and cart IDs using the **ById()** method.
 
 Finally, call the **Put()** or **PutAsync()** method to create the order.
 

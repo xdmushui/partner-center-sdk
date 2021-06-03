@@ -1,16 +1,12 @@
 ---
 title: Product upgrade resources
-description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct and ErrorDetails.
+description: You can use multiple resources related to Partner Center product upgrades to an Azure plan. These include ProductUpgradeRequest, ProductUpgradesEligibility, ProductUpgradesStatus, UpgradesLineItem, UpgradeProduct, and ErrorDetails.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
 # Product upgrade resources
-
-**Applies to:**
-
-- Partner Center
 
 You can use the following resources for information about Partner Center product upgrades from a Microsoft Azure (MS-AZR-0145P) subscription to an Azure plan.
 
@@ -21,7 +17,7 @@ The **ProductUpgradesRequest** resource provides information about the product u
 | Property      | Type                                                          | Description                                                |
 |---------------|---------------------------------------------------------------|------------------------------------------------------------|
 | customerId    | string                                                        | A GUID-formatted string that identifies the customer.      |
-| productFamily | string                                                        | The product family for which the upgrade is requested for. |
+| productFamily | string                                                        | The product family for which the upgrade is requested. |
 | attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                   |
 
 ## ProductUpgradesEligibility
@@ -31,11 +27,11 @@ The **ProductUpgradesEligibility** resource provides information about the custo
 | Property      | Type                                                          | Description                                                                      |
 |---------------|---------------------------------------------------------------|----------------------------------------------------------------------------------|
 | customerId    | string                                                        | A GUID-formatted string that identifies the customer.                            |
-| productFamily | string                                                        | The product family for which the upgrade is requested for.                       |
+| productFamily | string                                                        | The product family for which the upgrade is requested.                       |
 | isEligible    | bool                                                          | The bool value indicates whether the customer is eligible for requested upgrade. |
 | upgradeId     | string                                                        | The upgrade ID if a product upgrade for given family is already in place.        |
 | reason        | string                                                        | The reason for which customer isn't eligible for product upgrade.                |
-| productFamily | string                                                        | The product family for which the upgrade is requested for.                       |
+| productFamily | string                                                        | The product family for which the upgrade is requested.                       |
 | attributes    | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                                                         |
 
 ## ProductUpgradesStatus
@@ -45,7 +41,7 @@ The **ProductUpgradesStatus** resource provides information about the status of 
 | Property | Type   | Description                                          |
 |----------|--------|------------------------------------------------------|
 | Id       | string | A GUID-formatted string that identifies the upgrade. |
-| productFamily       | string                                                         | The product family for which the upgrade is requested for.
+| productFamily       | string                                                         | The product family for which the upgrade is requested.
 | status              | string                                                         | The status of the product upgrade.
 | lineItems           | array of [UpgradesLineItem](#upgradeslineitem) resources       | An array of objects that provides information of the upgrade details for each line item that was part of the request body.
 | errorDetails        | [ErrorDetails](#errordetails) resource                         | The error details for upgrade requested.
@@ -80,6 +76,6 @@ The **ErrorDetails** resource provides details about errors during the upgrade p
 
 | Property   | Type                                                          | Description                                       |
 |------------|---------------------------------------------------------------|---------------------------------------------------|
-| code       | string                                                        | A error code when the product upgrade fails.      |
+| code       | string                                                        | An error code when the product upgrade fails.      |
 | message    | string                                                        | The error message when the product upgrade fails. |
 | attributes | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes.                          |

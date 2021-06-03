@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Retrieve a list of indirect resellers
 
-**Applies To**
-
-- Partner Center
-
 How to retrieve a list of the signed-in partner's indirect resellers.
 
 ## Prerequisites

@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get user roles for a customer
 
-**Applies To**
-
-- Partner Center
-
 Get a list of all the roles/permissions attached to a user account. Variations include getting a list of all permissions across all user accounts for a customer, and getting a list of users that have a given role.
 
 ## Prerequisites
