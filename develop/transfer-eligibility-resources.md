@@ -8,7 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # TransferEligibility resources
 
-A partner creates a transfer when a customer wants their subscription with the partner to be transferred to another partner. Use TransferEligibility to check whether a subscription is eligible to be transferred.
+A partner can create a transfer when a customer requests their subscription with the partner to be transferred to another partner. Use TransferEligibility to check whether a subscription is eligible to be transferred.
 
 ## TransferEligibility
 
