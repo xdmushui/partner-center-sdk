@@ -1,6 +1,6 @@
 ---
 title: TransferEligibility resources
-description: A partner creates a transfer when a customer wants their subscription with the partner to be transferred to another partner.
+description: A partner can create a transfer when a customer requests their subscription with the partner to be transferred to another partner.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
