@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # License resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Describes resources related to licenses.
 
