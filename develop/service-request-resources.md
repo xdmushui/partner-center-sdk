@@ -81,6 +81,6 @@ ensure that they are processed quickly and effectively.
 |-------------|--------------------|---------------------------------------------------------------|
 | Name        | string             | The name of the support topic.                                |
 | Description | string             | The description of the support topic.                         |
-| Id          | string             | The unique id of the support topic.                           |
+| Id          | string             | The unique ID of the support topic.                           |
 | Attributes  | ResourceAttributes | The metadata attributes corresponding to the service request. |
 

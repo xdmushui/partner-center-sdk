@@ -70,7 +70,7 @@ Contains links for learning more information about the offer.
 | Property  | Type | Description                 |
 |-----------|------|-----------------------------|
 | learnMore | Link | The "learn more" link.      |
-| self      | Link | The self URI                |
+| self      | Link | The self-URI                |
 | next      | Link | The next page of items.     |
 | previous  | Link | The previous page of items. |
 

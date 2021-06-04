@@ -63,7 +63,7 @@ The **SubscriptionLinks** resource describes the collection of links attached to
 | sku                | [Link](utility-resources.md#link) | Gets the product sku associated with the subscription. |
 | availability       | [Link](utility-resources.md#link) | Gets the product sku availability associated with the subscription. |
 | activationLinks    | [Link](utility-resources.md#link) | Gets the list of activation links associated with the subscription. |
-| self               | [Link](utility-resources.md#link) | The self URI.                         |
+| self               | [Link](utility-resources.md#link) | The self-URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
 
@@ -86,7 +86,7 @@ The **SubscriptionRegistrationStatus** resource describes the collection of link
 | Property           | Type                               | Description                                                                           |
 |--------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | subscriptionId     | string                             | The subscription identifier.                                                          |
-| status             | string                             | Indicates the registration status: "registered", "registering" or "notregistered".    |
+| status             | string                             | Indicates the registration status: "registered", "registering", or "notregistered".    |
 
 ## SupportContact
 

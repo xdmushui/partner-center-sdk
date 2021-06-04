@@ -86,4 +86,4 @@ Describes resources related to services purchased by a customer.
 | Property             | Type                               | Description                         |
 |----------------------|------------------------------------|-------------------------------------|
 | serviceCostLineItems | [Link](utility-resources.md#link) | The URI to retrieve the line items. |
-| self                 | [Link](utility-resources.md#link) | The self URI.                       |
+| self                 | [Link](utility-resources.md#link) | The self-URI.                       |

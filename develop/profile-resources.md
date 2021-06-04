@@ -22,7 +22,7 @@ Describes a partner's billing profile.
 | address             | [Address](utility-resources.md#address)                       | The billing address of the company or organization. |
 | primaryContact      | [Contact](utility-resources.md#contact)                       | The primary contact for the company or organization.        |
 | purchaseOrderNumber | string                                                         | The company or organization's purchase order number.        |
-| taxId               | string                                                         | The company or organization's tax Id.                       |
+| taxId               | string                                                         | The company or organization's tax ID.                       |
 | billingCurrency     | string                                                         | The currency used by the company or organization.           |
 | profileType         | string                                                         | The partner profile type.                                   |
 | links               | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.            |
@@ -40,7 +40,7 @@ Describes a partner's legal business profile.
 | companyApproverAddress | [Address](utility-resources.md#address)                       | The company approver address.                                                                                                                                        |
 | companyApproverEmail   | string                                                         | The company approver email.                                                                                                                                          |
 | vettingStatus          | string                                                         | The vetting status. This value is the string representation of the one of the member names found in [**VettingStatus**](/dotnet/api/microsoft.store.partnercenter.models.partners.vettingstatus).           |
-| vettingSubStatus       | string                                                         | The vetting sub-status. This value is the string representation of the one of the member names found in [**VettingSubStatus**](/dotnet/api/microsoft.store.partnercenter.models.partners.vettingsubstatus). |
+| vettingSubStatus       | string                                                         | The vetting substatus. This value is the string representation of the one of the member names found in [**VettingSubStatus**](/dotnet/api/microsoft.store.partnercenter.models.partners.vettingsubstatus). |
 | profileType            | string                                                         | The partner profile type.                                                                                                                                            |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.                                                                                                                     |
 | attributes             | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                                                                                                                |

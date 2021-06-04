@@ -36,7 +36,7 @@ permissions to provide support for the service.
 | AdminService  | Link | The admin service URI.      |
 | ServiceHealth | Link | The service health URI.     |
 | ServiceTicket | Link | The service ticket URI.     |
-| Self          | Link | The self URI.               |
+| Self          | Link | The self-URI.               |
 | Next          | Link | The next page of items.     |
 | Previous      | Link | The previous page of items. |
 
