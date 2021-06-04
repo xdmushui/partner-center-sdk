@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Partner Center API scenarios that let you programmatically manage customer accounts
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Center for Microsoft Cloud for US Government
 
 This article describes some of the ways partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage areas like:
 

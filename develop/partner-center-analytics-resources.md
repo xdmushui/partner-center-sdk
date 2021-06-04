@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Partner Center Analytics - Resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The Analytics API allows you to programmatically access data that is being presented in the User Experience.
 
@@ -101,9 +96,9 @@ Represents all of the analytical data for a subscription.
 |            id             |             string             |                                                              The subscription identifier.                                                              |
 |          status           |             string             |                                          The subscription status: "ACTIVE", "SUSPENDED", or "DEPROVISIONED".                                           |
 |        productName        |             string             |                                                                The name of the product.                                                                |
-|     subscriptionType      |             string             |       The subscription type. **Note**: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".       |
+|     subscriptionType      |             string             |       The subscription type. **Note**: This field is case-sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".       |
 |     autoRenewEnabled      |            boolean             |                                         A value indicating whether the subscription is renewed automatically.                                          |
-|         partnerId         |             string             | The MPN ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
+|         partnerId         |             string             | The Microsoft Partner Network (MPN) ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
 |       friendlyName        |             string             |                                                             The name of the subscription.                                                              |
 |        partnerName        |             string             |                                              Name of the partner for whom the subscription was purchased                                               |
 |       providerName        |             string             |            When subscription transaction is for the indirect reseller, provider name is the indirect provider who bought the subscription.             |
@@ -115,7 +110,7 @@ Represents all of the analytical data for a subscription.
 |       trialEndDate        | string in UTC date time format |                                  The date that the trial period for the subscription ends. The default value is null.                                  |
 |       lastUsageDate       | string in UTC date time format |                                        The date that the subscription was last used. The default value is null.                                        |
 |     deprovisionedDate     | string in UTC date time format |                                      The date that the subscription was deprovisioned. The default value is null.                                      |
-|      lastRenewalDate      | string in UTC date time format |                                       The date that the subscription was last renewed The default value is null.                                       |
+|      lastRenewalDate      | string in UTC date time format |                                       The date that the subscription was last renewed. The default value is null.                                       |
 |       licenseCount        |             number             |                                                             The total number of licenses.                                                              |
 |     subscriptionCount     |             number             |                        The number of subscriptions. Note: This value will only appear in the response of an aggregation query.                         |
 

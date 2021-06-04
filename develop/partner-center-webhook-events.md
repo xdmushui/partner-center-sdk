@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Partner Center webhook events
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partner Center webhook events are resource change events delivered in the form of HTTP POSTs to a registered URL. To receive an event from Partner Center, you host a callback where Partner Center can POST the event. The event is digitally signed so you can validate that it was sent from Partner Center.
 
@@ -27,7 +22,7 @@ The following webhook events are supported by Partner Center.
 
 ### Test Event
 
-This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than 7 days will be purged.
+This event allows you to self-onboard and test your registration by requesting a test event and then tracking its progress. You will be able to see the failure messages that are being received from Microsoft while trying to deliver the event. This will only apply to "test-created" events and data older than seven days will be purged.
 
 >[!NOTE]
 >There is a throttle limit of 2 requests per minute when posting a test-created event.
@@ -56,7 +51,7 @@ This event allows you to self-onboard and test your registration by requesting a
 
 ### Subscription Updated Event
 
-This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API.  This event will be only be generated when there are commerce level changes, for example, when the number of licenses are modified and when the state of the subscription changes. It will not be generated when resources are created within the subscription.
+This event is raised when the specified subscription changes. A Subscription Updated event is generated when there is an internal change in addition to when changes are made through the Partner Center API.  This event will only be generated when there are commerce level changes, for example, when the number of licenses are modified and when the state of the subscription changes. It will not be generated when resources are created within the subscription.
 
 >[!NOTE]
 >There is a delay of up to 48 hours between the time a subscription changes and when the Subscription Updated event is triggered.

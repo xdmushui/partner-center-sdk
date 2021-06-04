@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Sandbox capabilities for Reseller relationship
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article explains what is supported in the Sandbox for reseller relationships between the partner and the customer. 
 
@@ -30,7 +25,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
 3. Sandbox Direct Bill Partner and Indirect Providers are able to remove reseller relationship from Partner Center UI and API.
 
-4. Sandbox Remove Reseller Relationship will call Delete customer AP. This will remove the relationship as well as delete the customer tenant. {baseURL}/v1/Customers/{customer-Tenant-id}
+4. Sandbox Remove Reseller Relationship will call Delete customer AP. This will remove the relationship and delete the customer tenant. {baseURL}/v1/Customers/{customer-Tenant-id}
 
 
     ### In the Sandbox
@@ -51,7 +46,7 @@ This article explains what is supported in the Sandbox for reseller relationship
 
     **Indirect reseller**: 
 
-    - 	Can have a relationships with existing customers
+    - 	Can have relationships with existing customers
 
     - 	Cannot request new relationships or add new customers
 
