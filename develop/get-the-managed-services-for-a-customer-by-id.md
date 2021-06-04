@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get the managed services for a customer by ID
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets the managed services for a customer. In other words, get links to all of the customer's subscriptions for which you have delegated admin privileges. You can use these links to provide support and file service requests with Microsoft.
 

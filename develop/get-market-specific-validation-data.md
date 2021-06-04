@@ -8,12 +8,8 @@ ms.subservice:  partnercenter-sdk
 
 # Get address formatting rules by market
 
-**Applies To**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 Get the expected address format based on the iso code for the market.
 

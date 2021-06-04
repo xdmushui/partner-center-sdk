@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get the partner's current account balance
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Retrieves the partner's current account balance. A summary of the balance and total charges of an invoice for both recurring and one-time charges.
 

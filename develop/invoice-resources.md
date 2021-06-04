@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Invoice resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The following invoice-related resources are available through the Partner Center APIs.
 
@@ -115,7 +110,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 | domainName               | string                                                         | Gets or sets domain name.                                             |
 | durableOfferId           | string                                                         | Gets or sets the durable offer unique identifier.                     |
 | invoiceLineItemType      | string                                                         | Gets the type of invoice line item.                                   |
-| mpnId                    | number                                                         | Gets or sets the MPN ID associated to this line item. For direct resellers, this is the MPN Id of the reseller. For indirect resellers, this is the MPN ID of the Value Added Reseller (VAR).                                   |
+| mpnId                    | number                                                         | Gets or sets the MPN ID associated to this line item. For direct resellers, this is the MPN ID of the reseller. For indirect resellers, this is the MPN ID of the Value Added Reseller (VAR).                                   |
 | offerId                  | string                                                         | Gets or sets the offer unique identifier.                             |
 | offerName                | string                                                         | Gets or sets the offer name.                                          |
 | orderId                  | string                                                         | Gets or sets the order unique identifier.                             |
@@ -136,7 +131,7 @@ Represents an invoice billing line item for licensed based subscriptions.
 
 ## UsageBasedLineItem
 
-Represents an invoice billing line item for usage based subscriptions.
+Represents an invoice billing line item for usage-based subscriptions.
 
 | Property                 | Type                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
@@ -277,7 +272,7 @@ Represents unbilled, billed reconciliation line items for daily rated usage.
 | Tags | string | Gets or sets the customer added tags. |
 | AdditionalInfo | string | Gets or sets the service-specific metadata. For example, an image type for a virtual machine. |
 | ServiceInfo1 | string | Gets or sets internal Azure Service Metadata. |
-| ServiceInfo2 | string | Gets or sets service information for example, an image type for a virtual machine and ISP name for ExpressRoute. |
+| ServiceInfo2 | string | Gets or sets service information, for example, an image type for a virtual machine and ISP name for ExpressRoute. |
 | CustomerCountry | string | Gets or sets the country of the customer. |
 | MpnId | string | Gets or sets the MPN ID associated to this line item. |
 | ResellerMpnId | string | Gets or sets the Reseller MPN ID of the Tier 2 partner associated to this line item. |

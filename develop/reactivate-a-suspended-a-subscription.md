@@ -1,6 +1,6 @@
 ---
 title: Reactivate a suspended subscription
-description: Reactivates a Subscription that was previously suspended for nonpayment.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
+description: Reactivates a Subscription that was previously suspended for nonpayment. In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Reactivate a suspended subscription
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Reactivates a [Subscription](subscription-resources.md) that was previously suspended for nonpayment.
 

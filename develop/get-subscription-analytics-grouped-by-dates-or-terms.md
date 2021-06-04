@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get subscription analytics grouped by dates or terms
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to get subscription analytics information for your customers grouped by dates or terms.
 
@@ -57,7 +52,7 @@ The following table shows a list of the supported fields for group by.
 | id | string | A GUID-formatted string that identifies the subscription. |
 | status | string | The subscription status. Supported values are: "ACTIVE", "SUSPENDED", or "DEPROVISIONED". |
 | productName | string | The name of the product. |
-| subscriptionType | string | The subscription type. Note: This field is case sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
+| subscriptionType | string | The subscription type. Note: This field is case-sensitive. Supported values are: "Office", "Azure", "Microsoft365", "Dynamics", "EMS". |
 | autoRenewEnabled | Boolean | A value indicating whether the subscription is renewed automatically. |
 | partnerId  | string | The MPN ID. For a direct reseller, this parameter will be the MPN ID of the partner. For an indirect reseller, this parameter will be the MPN ID of the indirect reseller. |
 | friendlyName | string | The name of the subscription. |
