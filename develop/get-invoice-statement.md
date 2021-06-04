@@ -10,14 +10,7 @@ ms.author: amrava
 
 # Get invoice statement
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-Retrieves an invoice statement using the invoice ID.
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 ## Prerequisites
 

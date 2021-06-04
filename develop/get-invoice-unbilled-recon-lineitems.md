@@ -10,12 +10,7 @@ ms.author: sodeb
 
 # Get invoice's unbilled reconciliation line items
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the following methods get a collection of details for unbilled invoice line items (also known as open billing line items).
 
