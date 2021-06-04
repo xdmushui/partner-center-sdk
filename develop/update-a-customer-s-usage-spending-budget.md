@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update a customer's usage spending budget
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Update the [spending budget](customer-usage-resources.md#customerusagesummary)
 allocated for a customer's usage.

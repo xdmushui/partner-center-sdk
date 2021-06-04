@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Utilities
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that partners can use Partner Center to programmatically manage utility functions.
 

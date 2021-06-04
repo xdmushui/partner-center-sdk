@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Upload a list of devices to an existing batch for the specified customer
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to upload a list of information about devices to an existing batch for the specified customer. This associates the devices with a device batch already created.
 

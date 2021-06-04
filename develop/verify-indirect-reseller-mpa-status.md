@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Verify an indirect reseller's Microsoft Partner Agreement signing status
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud for US Government
 
 You can verify whether an indirect reseller has signed the Microsoft Partner Agreement using their Microsoft Partner Network (MPN) ID (PGA/PLA) or Cloud Solution Provider (CSP) tenant ID (Microsoft ID). You can use one of these identifiers to check the Microsoft Partner Agreement signing status using the **AgreementStatus** API.
 
@@ -209,7 +206,7 @@ Connection: close
 }
 ```
 
-#### CSP Indirect Reseller MPN Id (PGA/PLA) is either invalid or not migrated from Partner Membership Center to Partner Center
+#### CSP Indirect Reseller MPN ID (PGA/PLA) is either invalid or not migrated from Partner Membership Center to Partner Center
 
 The following example response is returned when Indirect reseller MPN ID (PGA/PLA) passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 
