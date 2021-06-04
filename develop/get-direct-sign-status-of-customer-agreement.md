@@ -12,9 +12,9 @@ ms.author: sakhanda
 
 **Applies to**: Partner Center
 
-The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the Microsoft public cloud.
-
 **Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
+
+The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 This article explains how you can retrieve the status of a customer's direct acceptance of the Microsoft Customer Agreement.
 

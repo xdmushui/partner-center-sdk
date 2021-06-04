@@ -10,11 +10,11 @@ ms.author: alikhaki
 
 # Get confirmation of customer acceptance of Microsoft Cloud Agreement
 
-**Applies To**: Partner Center
+**Applies to**: Partner Center
 
- **Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only.
+The **Agreement** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 ## Prerequisites
 
