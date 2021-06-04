@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Set up API access in Partner Center
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud for US Government
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud for US Government | Partner Center for Microsoft Cloud Germany
 
 This article describes the accounts you need to develop against the Partner Center SDK. This article also explains how to create an [integration sandbox account](#integration-sandbox-account) and test in the integration sandbox.
 
@@ -59,7 +54,7 @@ This section describes how to set up a primary Partner account and an integratio
 
 5. After you see the confirmation message, sign out of Partner Dashboard.
 
-6. Sign back in with your new integration sandbox admin account. Be sure to use the format **username@domain** for your credentials along with the password that you just specified.
+6. Sign back in with your new integration sandbox admin account. Be sure to use the format **username@domain** for your credentials along with the password that you specified.
 
 7. Choose **Set Up Account** above **Current Tasks** to complete the sandbox account setup.
 
@@ -95,7 +90,7 @@ You can write code and test code in the integration sandbox. You'll need the fol
 
 To use your solution with real customer data, you must change from your integration sandbox credentials to your primary Partner account credentials.
 
-When you're ready to use your tested code in your primary Partner account, you must get an Azure AD security token. This security token is based on your Partner Center app, key and domain (instead of your integration sandbox app, key and domain).
+When you're ready to use your tested code in your primary Partner account, you must get an Azure AD security token. This security token is based on your Partner Center app, key, and domain (instead of your integration sandbox app, key, and domain).
 
 1. Follow the steps in [Partner Center authentication](partner-center-authentication.md) to get an Azure AD security token using your primary Partner Center credentials. (You previously followed these steps to get an Azure AD security token for your integration sandbox.)
 

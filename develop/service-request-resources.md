@@ -8,35 +8,28 @@ ms.subservice:  partnercenter-sdk
 
 # Service request resources
 
-**Applies To**
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-Partners can file service requests on behalf of their partners to report
-disruptions services provided by Microsoft or to request other technical
-support that they are incapable of providing.
+Partners can file service requests on behalf of their partners to report disruptions services provided by Microsoft or to request other technical support that they are incapable of providing.
 
 ## ServiceRequest
 
-Describes a service request filed by a partner, including how that
-request is progressing.
+Describes a service request filed by a partner, including how that request is progressing.
 
 | Property         | Type                                                          | Description                                                                          |
 |------------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | Title            | string                                                        | The service request title.                                                           |
 | Description      | string                                                        | The description.                                                                     |
 | Severity         | string                                                        | The severity: "unknown", "critical", "moderate", or "minimal".                       |
-| SupportTopicId   | string                                                        | The id of the support topic.                                                         |
+| SupportTopicId   | string                                                        | The ID of the support topic.                                                         |
 | SupportTopicName | string                                                        | The name of the support topic.                                                       |
-| Id               | string                                                        | The id of the service request.                                                       |
+| Id               | string                                                        | The ID of the service request.                                                       |
 | Status           | string                                                        | The status of the service request: "none", "open", "closed", or "attention\_needed". |
 | Organization     | [ServiceRequestOrganization](#servicerequestorganization)     | Organization for which the service request is created.                               |
 | PrimaryContact   | [ServiceRequestContact](#servicerequestcontact)               | Primary Contact on the service request.                                              |
 | LastUpdatedBy    | [ServiceRequestContact](#servicerequestcontact)               | "Last Updated By" contact for changes to the service request.                        |
 | ProductName      | string                                                        | The name of the product that corresponds to the service request.                     |
-| ProductId        | string                                                        | The id of the product.                                                               |
+| ProductId        | string                                                        | The ID of the product.                                                               |
 | CreatedDate      | date                                                          | The date of the service request's creation.                                          |
 | LastModifiedDate | date                                                          | The date that the service request was last modified.                                 |
 | LastClosedDate   | date                                                          | The date that the service request was last closed.                                   |
@@ -53,7 +46,7 @@ Describes a contact that creates or modifies a service request.
 | Property     | Type                                                      | Description                                            |
 |--------------|-----------------------------------------------------------|--------------------------------------------------------|
 | Organization | [ServiceRequestOrganization](#servicerequestorganization) | Organization for which the service request is created. |
-| ContactId    | string                                                    | The contact's unique id.                               |
+| ContactId    | string                                                    | The contact's unique ID.                               |
 | LastName     | string                                                    | The last name of the contact.                          |
 | FirstName    | string                                                    | The first name of the contact.                         |
 | Email        | string                                                    | The email of the contact.                              |
@@ -75,7 +68,7 @@ Describes the organization for which the service request is created.
 
 | Property    | Type   | Description                           |
 |-------------|--------|---------------------------------------|
-| Id          | string | The unique id of the organization.    |
+| Id          | string | The unique ID of the organization.    |
 | Name        | string | The name of the organization.         |
 | PhoneNumber | string | The phone number of the organization. |
 

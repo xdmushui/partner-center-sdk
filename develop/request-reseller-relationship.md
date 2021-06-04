@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Retrieve a relationship request URL
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany
 
 How to retrieve a relationship request URL to send to a customer.
 

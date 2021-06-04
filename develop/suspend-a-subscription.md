@@ -1,6 +1,6 @@
 ---
 title: Suspend a subscription
-description: Suspends a Subscription resource that matches the customer and subscription ID due to fraud or non-payment.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
+description: Suspends a Subscription resource that matches the customer and subscription ID due to fraud or non-payment. In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Suspend a subscription
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Suspends a [Subscription](subscription-resources.md) resource that matches the customer and subscription ID due to fraud or non-payment.
 

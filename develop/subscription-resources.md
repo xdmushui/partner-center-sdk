@@ -8,14 +8,9 @@ ms.subservice:  partnercenter-sdk
 
 # Subscription resources
 
-**Applies to:**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions. Many fields only apply at certain points in the life cycle, such as if a subscription is suspended or cancelled.
+A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions. Many fields only apply at certain points in the life cycle, such as if a subscription is suspended or canceled.
 
 ## Subscription
 
@@ -36,7 +31,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | parentSubscriptionId | string                                                        | Gets or sets the parent subscription identifier.                                                                                                                              |
 | creationDate         | string                                                        | Gets or sets the creation date, in date-time format.                                                                                                                          |
 | effectiveStartDate   | string in UTC date time format                                | Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.                |
-| commitmentEndDate    | string in UTC date time format                                | The commitment end date for this subscription, in date-time format. For subscriptions which are not auto-renewable, this represents a date far, far away in the future.       |
+| commitmentEndDate    | string in UTC date time format                                | The commitment end date for this subscription, in date-time format. For subscriptions that are not auto-renewable, this represents a date far away in the future.       |
 | status               | string                                                        | The subscription status: "none", "active", "pending", "suspended", or "deleted".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Gets a value indicating whether the subscription is renewed automatically.                                                                                                    |
 | billingType          | string                                                        | Specifies how the subscription is billed: "none", "usage", or "license".                                                                                                      |
