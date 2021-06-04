@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Different Partner Center REST URL end points for use in certain countries or regions
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+***Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partner Center is available in different countries and regions around
 the world. Some versions of Partner Center might require different end

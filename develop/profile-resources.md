@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Profile resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Describes the behavior of a Cloud Solution Provider's profiles.
 
@@ -24,7 +19,7 @@ Describes a partner's billing profile.
 | Property            | Type                                                           | Description                                                 |
 |---------------------|----------------------------------------------------------------|-------------------------------------------------------------|
 | companyName         | string                                                         | The billing company name.                                   |
-| address             | [Address](utility-resources.md#address)                       | The billing address address of the company or organization. |
+| address             | [Address](utility-resources.md#address)                       | The billing address of the company or organization. |
 | primaryContact      | [Contact](utility-resources.md#contact)                       | The primary contact for the company or organization.        |
 | purchaseOrderNumber | string                                                         | The company or organization's purchase order number.        |
 | taxId               | string                                                         | The company or organization's tax Id.                       |
@@ -57,7 +52,7 @@ Describes a partner's Microsoft Partner Network profile.
 | Property    | Type                                                           | Description                                           |
 |-------------|----------------------------------------------------------------|-------------------------------------------------------|
 | partnerName | string                                                         | The company or organization name.                     |
-| mpnId       | string                                                         | The Microsoft Partner Network Id.                     |
+| mpnId       | string                                                         | The Microsoft Partner Network (MPN) ID.                     |
 | profileType | string                                                         | The partner profile type.                             |
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links corresponding to the profile.      |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile. |
@@ -68,7 +63,7 @@ Describes a partner's organization profile.
 
 | Property       | Type                                                           | Description                                                            |
 |----------------|----------------------------------------------------------------|------------------------------------------------------------------------|
-| id             | string                                                         | The organization's Id.                                                 |
+| id             | string                                                         | The organization's ID.                                                 |
 | companyName    | string                                                         | The name of the company or organization.                               |
 | defaultAddress | [Address](utility-resources.md#address)                       | The default address of the company or organization.                    |
 | tenantId       | string                                                         | The tenant identifier.                                                 |

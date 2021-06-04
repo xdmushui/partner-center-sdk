@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Managed service resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Managed services are services to which a partner has delegated admin
 privileges. Partners can provide support for and file service requests
@@ -25,7 +20,7 @@ Describes a managed service.
 
 | Property   | Type                | Description                                              |
 |------------|---------------------|----------------------------------------------------------|
-| Id         | string              | The managed service id.                                  |
+| Id         | string              | The managed service ID.                                  |
 | Name       | string              | The name of the managed service.                         |
 | GroupName  | string              | The name of the group to which the service belongs.      |
 | Links      | ManagedServiceLinks | The resource links corresponding to the managed service. |

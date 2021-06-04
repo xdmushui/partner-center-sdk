@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Partner Center REST resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This section provides definitions for the JSON elements needed to create
 requests and parse responses using the Partner Center REST API. For more

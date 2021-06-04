@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Partner Center REST API reference to REST URLs, REST headers, REST resources, and REST events
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 ## Partner Center REST API
 

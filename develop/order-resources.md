@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Order resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
@@ -104,7 +99,7 @@ Represents the provisioning status of an [OrderLineItem](#orderlineitem).
 | Property                        | Type                                | Description                                                                                |
 |------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------|
 | lineItemNumber                  | int                                 | The unique line number of the order line item. Values range from 0 to count-1.             |
-| status                          | string                              | The provisioning status of the order line item. Values include:</br>"Fulfilled": Fulfillment of the order is successfully completed and the user will be able to use the reservations</br>"Unfulfilled": Not fulfilled due to cancellation</br>"PrefulfillmentPending": Your request is still processing, fulfillment is not yet complete |
+| status                          | string                              | The provisioning status of the order line item. Values include:</br>**Fulfilled**: Fulfillment of the order is successfully completed and the user will be able to use the reservations</br>**Unfulfilled**: Not fulfilled due to cancellation</br>**PrefulfillmentPending**: Your request is still processing, fulfillment is not yet complete |
 | quantityProvisioningInformation | List<[QuantityProvisioningStatus](#quantityprovisioningstatus)> | A list of quantity provisioning status information for the order line item. |
 
 ## QuantityProvisioningStatus
