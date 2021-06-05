@@ -472,8 +472,9 @@
     - name: Get API request details
       href: get-api-request-details.md
 - name: Partner Center REST API reference
-  href: partner-center-rest-api-reference.md
   items:
+  - name: Partner Center REST API introduction
+    href: partner-center-rest-api-reference.md
   - name: Partner Center REST API change log
     href: api-change-log.md
   - name: Partner Center REST URLs
