@@ -480,6 +480,8 @@
     href: partner-center-rest-urls.md
   - name: Partner Center REST headers
     href: headers.md
+  - name: Partner Center REST API reference
+    href: /rest/api/partner-center-rest/
   - name: Partner Center REST resources
     href: partner-center-rest-resources.md
     items:
