@@ -8,14 +8,9 @@ ms.subservice:  partnercenter-sdk
 
 # Get invoice line items
 
-**Applies to:**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-You can use the following methods to get a collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
+You can use the following methods to get collection details for of invoice line items (also known as closed billing line items) for a specified invoice.
 
 *Except for bug fixes, this API is no longer being updated.* You should update your applications to call the **onetime** API instead of **marketplace**. The **onetime** API provides additional functionality, and will continue to be updated.
 
