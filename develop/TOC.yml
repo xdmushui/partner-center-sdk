@@ -472,14 +472,17 @@
     - name: Get API request details
       href: get-api-request-details.md
 - name: Partner Center REST API reference
-  href: partner-center-rest-api-reference.md
   items:
+  - name: Partner Center REST API introduction
+    href: partner-center-rest-api-reference.md
   - name: Partner Center REST API change log
     href: api-change-log.md
   - name: Partner Center REST URLs
     href: partner-center-rest-urls.md
   - name: Partner Center REST headers
     href: headers.md
+  - name: Partner Center REST API reference
+    href: /rest/api/partner-center-rest/
   - name: Partner Center REST resources
     href: partner-center-rest-resources.md
     items:
@@ -554,7 +557,7 @@
   - name: Partner Center webhooks
     href: partner-center-webhooks.md
 - name: Partner Center Managed .NET API reference
-  href: /dotnet/api/
+  href: /dotnet/api/microsoft.store.partnercenter
   items:
   - name: Partner Center .NET API version release notes
     href: dotnet-release-notes.md
