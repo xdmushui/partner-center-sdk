@@ -10,10 +10,6 @@ ms.author: rbars
 
 # Get a product by ID
 
-**Applies To**
-
-- Partner Center
-
 Gets the specified product resource using a product ID.
 
 ## Prerequisites
