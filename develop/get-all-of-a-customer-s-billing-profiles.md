@@ -1,6 +1,6 @@
 ---
 title: Get a customer's billing profile
-description: Gets the billing profile of a customer.In the Partner Center dashboard, this operation can be performed by first selecting a customer.
+description: Gets the billing profile of a customer. In the Partner Center dashboard, this operation can be performed by first selecting a customer.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -10,12 +10,7 @@ ms.author: dineshvu
 
 # Get a customer's billing profile
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets the billing profile of a customer.
 
