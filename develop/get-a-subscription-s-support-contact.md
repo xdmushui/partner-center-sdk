@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get a subscription's support contact
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to get a subscription's support contact.
 
