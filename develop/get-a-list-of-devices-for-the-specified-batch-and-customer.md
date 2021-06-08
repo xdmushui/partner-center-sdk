@@ -10,10 +10,7 @@ ms.author: amrava
 
 # Get a list of devices for the specified batch and customer
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 This article describes how to retrieve a collection of devices in a specified device batch for a specified customer. Each device resource contains details about the device.
 

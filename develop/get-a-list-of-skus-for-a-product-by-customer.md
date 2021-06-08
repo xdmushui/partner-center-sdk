@@ -11,12 +11,7 @@ ms.author: amrava
 
 # Get a list of SKUs for a product (by customer)
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets a collection of SKUs for a particular product that is available to an existing customer.
 
