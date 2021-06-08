@@ -10,11 +10,7 @@ ms.author: amrava
 
 # Get all service requests for a customer
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets all of a customer's service requests.
 
@@ -53,7 +49,7 @@ Use the following query parameter to get all service requests for the customer.
 
 | Name                   | Type     | Required | Description                            |
 |------------------------|----------|----------|----------------------------------------|
-| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer.. |
+| **customer-tenant-id** | **guid** | Y        | A GUID corresponding to the customer. |
 
 ### Request headers
 
