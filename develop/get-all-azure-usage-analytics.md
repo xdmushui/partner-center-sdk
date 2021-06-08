@@ -10,7 +10,7 @@ ms.author: sakhanda
 
 # Get all Azure usage analytics information
 
-**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to get all the Azure usage analytics information for your customers.
 
