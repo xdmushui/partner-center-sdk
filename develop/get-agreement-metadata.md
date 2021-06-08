@@ -10,15 +10,11 @@ ms.author: sakhanda
 
 # Get agreement metadata for Microsoft Cloud Agreement
 
-**Applies To**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-> [!NOTE]
-> The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
-> - Partner Center operated by 21Vianet
-> - Partner Center for Microsoft Cloud Germany
-> - Partner Center for Microsoft Cloud for US Government
+The **AgreementMetaData** resource is currently supported by Partner Center in the Microsoft public cloud only.
 
 ## Prerequisites
 
@@ -26,7 +22,7 @@ ms.author: sakhanda
 
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
 
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication..
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports app + user authentication.
 
 ## .NET (version 1.14 or newer)
 
@@ -102,7 +98,7 @@ Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudA
 
 ## REST request
 
-To retrieve agreement metadata for Microsoft Cloud Agreement, first create a REST Request to retrieve the **AgreementMetaData** collection. Then search for the item in the collection which corresponds to the Microsoft Cloud Agreement.
+To retrieve agreement metadata for Microsoft Cloud Agreement, first create a REST Request to retrieve the **AgreementMetaData** collection. Then search for the item in the collection that corresponds to the Microsoft Cloud Agreement.
 
 ### Request syntax
 
@@ -167,4 +163,4 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 }
 ```
 
-To identify the resource in the response which corresponds to the Microsoft Cloud Agreement, look for the resource whose **agreementType** property has value "MicrosoftCloudAgreement".
+To identify the resource in the response that corresponds to the Microsoft Cloud Agreement, look for the resource whose **agreementType** property has value "MicrosoftCloudAgreement".
