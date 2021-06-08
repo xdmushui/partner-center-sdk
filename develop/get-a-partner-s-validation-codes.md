@@ -12,7 +12,7 @@ ms.author: alikhaki
 
 How to get a collection of a partner's Government Community Cloud validation codes. A validation code is required to create a customer in the government community cloud.
 
-If you are interested in having your organization or your customer's organization approved for Office 365 Government GCC for CSP, see [Office 365 Government GCC for CSP Partner and Customer eligibility criteria](/partner-center/csp-gcc-validate.md).
+If you are interested in having your organization or your customer's organization approved for Office 365 Government GCC for CSP, see [Office 365 Government GCC for CSP Partner and Customer eligibility criteria](../partner-center/csp-gcc-validate.md).
 
 ## Prerequisites
 
