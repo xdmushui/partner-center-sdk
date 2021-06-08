@@ -10,9 +10,7 @@ ms.author: amrava
 
 # Get MFA adoption status
 
-Applies to:
-
-- Partner Center API
+**Applies to**: Partner Center API
 
 This article explains how to get the multi-factor authentication (MFA) adoption status for each partner within a tenant.
 
@@ -30,7 +28,7 @@ This article explains how to get the multi-factor authentication (MFA) adoption 
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
