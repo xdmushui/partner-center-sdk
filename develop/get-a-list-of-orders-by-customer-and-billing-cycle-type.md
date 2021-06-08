@@ -10,12 +10,7 @@ ms.author: rbars
 
 # Get a list of orders by customer and billing cycle type
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets a collection of Order resources that correspond to a given customer and billing cycle type. There is a delay of up to 15 minutes between the time an order is submitted and when it will appear in a collection of a customer's orders.​
 
