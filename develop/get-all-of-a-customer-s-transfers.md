@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get a customer's transfers
 
-**Applies To**
-
-- Partner Center
-
 How to get a list of a customer's transfers.
 
 ## Prerequisites

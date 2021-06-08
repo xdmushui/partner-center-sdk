@@ -10,10 +10,6 @@ ms.author: rbars
 
 # Get a user account by ID
 
-**Applies To**
-
-- Partner Center
-
 Get a specific user account for a customer.
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials only.
