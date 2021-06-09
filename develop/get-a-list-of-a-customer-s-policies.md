@@ -10,10 +10,7 @@ ms.author: dineshvu
 
 # Get a list of a customer's policies
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 This article describes how to retrieve a collection of the specified customer's configuration policies.
 

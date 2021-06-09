@@ -10,10 +10,6 @@ ms.author: amrava
 
 # Get a list of self-serve policies
 
-**Applies to:**
-
-- Partner Center
-
 This article describes how to get a collection of resources that represents self-serve policies for an entity.
 
 ## Prerequisites
