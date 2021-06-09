@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get a customer's utilization records for Azure
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can get the utilization records of a customer's Azure subscription for a specified time period using the Azure utilization API.
 
@@ -24,7 +20,7 @@ You can get the utilization records of a customer's Azure subscription for a spe
 
 - A subscription identifier.
 
-This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API isn't supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice un-billed consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at a daily level per meter per resource. This rate consumption is equivalent to the daily grain data provided by the Azure utilization API. You'll need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get un-billed usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
+This API returns daily and hourly unrated consumption for an arbitrary time span. However, *this API isn't supported for Azure plans*. If you have an Azure plan, see the articles [Get invoice unbilled consumption line items](get-invoice-unbilled-consumption-lineitems.md) and [Get invoice billed consumption line items](get-invoice-billed-consumption-lineitems.md) instead. These articles describe how to get rated consumption at a daily level per meter per resource. This rate consumption is equivalent to the daily grain data provided by the Azure utilization API. You'll need to use the invoice identifier to retrieve billed usage data. Or, you can use current and previous periods to get unbilled usage estimates. *Hourly grain data and arbitrary date range filters aren't currently supported for Azure plan subscription resources*.
 
 ## Azure utilization API
 
@@ -34,7 +30,7 @@ For example, the billing system takes the same utilization data and applies late
 
 This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
 
-### Scenario : Partner A has transferred billing ownership of Azure Legacy Subscription (145P) to Partner B
+### Scenario: Partner A has transferred billing ownership of Azure Legacy Subscription (145P) to Partner B
 
 If a partner transfers billing ownership of an Azure legacy subscription to another partner, when new the new partner calls Utilization API for transferred subscription they have to use Commerce Subscription ID (which shows up in their Partner Center account) rather than the Azure Entitlement ID. Azure Entitlement ID appears for Partner B only when they are Admin on behalf of (AOBO) to Customer's Azure portal. 
 

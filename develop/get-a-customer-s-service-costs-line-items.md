@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get a customer's service costs line items
 
-**Applies to:**
-
-- Partner Center
-
 Gets a customer's service cost line items for the specified billing period.
 
 ## Prerequisites

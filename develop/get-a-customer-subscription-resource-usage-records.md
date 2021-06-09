@@ -9,11 +9,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get usage data for subscription by resource
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article describes how to get the **ResourceUsageRecord** resource. This resource represents an aggregated total for the month for individual resources provisioned in your Azure plan. You can use this resource to get a customer's resource usage records for specific Azure services or resources during the current billing period. This API returns data that was not available previously through Azure spending APIs.
 
@@ -33,7 +29,7 @@ To get resource usage records of a customer for a specific Azure service or reso
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
 
-2. Call the Subscriptions property, as well as **UsageRecords**, then the **Resources** property. Finish by calling the Get() or GetAsync() methods.
+2. Call the Subscriptions property and **UsageRecords**, and then the **Resources** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
     // IAggregatePartner partnerOperations;
