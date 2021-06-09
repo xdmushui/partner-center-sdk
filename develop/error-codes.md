@@ -9,12 +9,7 @@ ms.subservice:  partnercenter-sdk
 
 # Partner Center REST error codes
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The Partner Center REST APIs return a JSON object that contains a status code. This code that indicates whether your request was successful or why it failed.
 
@@ -43,7 +38,7 @@ The following **4xx** and **5xx** status codes indicate an error:
 
 ## Error responses
 
-Any response with a **4xx** or **5xx** status code includes an error message with additional details about the error condition(s) encountered.
+Any response with a **4xx** or **5xx** status code includes an error message with additional details about the error condition(s) for that code.
 
 The following table and code sample describes the schema of an error response:
 

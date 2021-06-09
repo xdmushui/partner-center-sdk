@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Join the Partner Center API and SDK Early Adopter Program
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partners can collaborate with Microsoft on the development of Partner Center API and SDK features and capabilities.
 
