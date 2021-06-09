@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get a collection of entitlements
 
-**Applies To**
-
-- Partner Center
-
 How to get a collection of entitlements.
 
 ## Prerequisites
@@ -53,7 +49,7 @@ Use the following path and query parameters when creating the request.
 |------|------|----------|-------------|
 | customerId | string | Yes | A GUID formatted customerId that identifies the customer. |
 | entitlementType | string | No | Can be used to specify the type of entitlements to be retrieved (**software** or **reservedInstance** ). If not set, all types will be retrieved |
-| showExpiry | boolean | No | Optional flag which indicates if entitlements expiry dates are required. |
+| showExpiry | boolean | No | Optional flag that indicates if entitlements expiry dates are required. |
 
 ### Request headers
 
@@ -302,7 +298,7 @@ The following examples show you how to retrieve information about products and r
 
 ### C\# example
 
-To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance .
+To retrieve more details related to the virtual machine reservations from an entitlement, invoke the URI exposed under entitledArtifacts.link with artifactType = virtual_machine_reserved_instance.
 
 ``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("VirtualMachineReservedInstance").Get();
@@ -404,4 +400,4 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 
 ### API Consumers
 
-Partners who are using the API to query virtual machine reserved instance entitlements - Update the request URI from **/customers/{customerId}/entitlements to /customers/{customerId}/entitlements?entitlementType=virtualmachinereservedinstance** to maintain backward compatibility. In order to consume virtual machine or Azure SQL with enhanced contract, update the request URI to **/customers/{customerId}/entitlements?entitlementType=reservedinstance**.
+Partners who are using the API to query virtual machine reserved instance entitlements - Update the request URI from **/customers/{customerId}/entitlements to /customers/{customerId}/entitlements?entitlementType=virtualmachinereservedinstance** to maintain backward compatibility. To consume virtual machine or Azure SQL with enhanced contract, update the request URI to **/customers/{customerId}/entitlements?entitlementType=reservedinstance**.
