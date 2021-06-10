@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Cancel an order from the integration sandbox using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article describes how to use Partner Center APIs to cancel different types of subscription orders from integration sandbox accounts. Such orders can include reserved instances, software, and commercial marketplace Software as a Service (SaaS) subscription orders.
 

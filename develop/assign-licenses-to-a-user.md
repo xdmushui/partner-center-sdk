@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Assign licenses to a user via Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-
 How to assign licenses to a customer user.
 
 ## Prerequisites
