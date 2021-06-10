@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Customer usage resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Customers with usage-based subscriptions may have a monthly use budget. This budget sets a limit on the customer's maximum usage and allows the partner to track their usage over time.
 
@@ -44,7 +40,7 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | Property         | Type               | Description                                                                                                      |
 |------------------|--------------------|------------------------------------------------------------------------------------------------------------------|
 | Budget           | SpendingBudget     | The spending budget allocated for the customer.                                                                  |
-| ResourceId       | string             | The unique identifier of the resource. In the context of CustomerMonthlyUsageRecord, this id is the customer id. |
+| ResourceId       | string             | The unique identifier of the resource. In the context of CustomerMonthlyUsageRecord, this ID is the customer ID. |
 | ResourceName     | string             | The name of the resource. In the context of CustomerMonthlyUsageRecord, this is the customer name.               |
 | BillingStartDate | date               | The start date of the current billing period.                                                                    |
 | BillingEndDate   | date               | The end date of the current billing period.                                                                      |
@@ -66,7 +62,7 @@ Customers with usage-based subscriptions may have a monthly use budget. This bud
 | CustomerOverBudget | integer          | The number of customers that are over budget.                                                                    |
 | CustomersTrendingOver | integer       | The number of customers that are close to going over budget.                                                     |
 | CustomersWithUsageBasedSubscriptions  | integer | The number of customers with a usage-based subscription.                                               |
-| ResourceId       | string             | The unique identifier of the resource. In the context of CustomerMonthlyUsageRecord, this id is the customer id. |
+| ResourceId       | string             | The unique identifier of the resource. In the context of CustomerMonthlyUsageRecord, this ID is the customer ID. |
 | ResourceName     | string             | The name of the resource. In the context of CustomerMonthlyUsageRecord, this is the customer name.               |
 | BillingStartDate | date               | The start date of the current billing period.                                                                    |
 | BillingEndDate   | date               | The end date of the current billing period.                                                                      |

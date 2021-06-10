@@ -10,10 +10,6 @@ ms.author: mowrim
 
 # Create an Azure plan
 
-**Applies to:**
-
-* Partner Center
-
 You can purchase, create, and manage an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure (MS-AZR-0145P) subscription. You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-azure-plan), then [create and submit an order](#create-and-submit-an-order).
 
 ## Prerequisites
@@ -60,7 +56,7 @@ After the order is successfully processed, a Partner Center **Subscription** res
 * [Get a customer's subscriptions](get-all-of-a-customer-s-subscriptions.md)
 * [Get a list of subscriptions by order](get-a-list-of-subscriptions-by-order.md)
 
-When an Azure plan is created in Partner Center, a corresponding Azure usage subscription is also created in Azure. You can also create additional Azure usage subscriptions under the same Azure plan using Azure Portal and Azure APIs. You can obtain the identifiers of all the Azure usage subscriptions associated with an Azure plan by following the steps in [Get a list of Azure entitlements for Partner Center subscription](get-a-list-of-azure-entitlements-for-subscription.md)
+When an Azure plan is created in Partner Center, a corresponding Azure usage subscription is also created in Azure. You can also create additional Azure usage subscriptions under the same Azure plan using Azure portal and Azure APIs. You can obtain the identifiers of all the Azure usage subscriptions associated with an Azure plan by following the steps in [Get a list of Azure entitlements for Partner Center subscription](get-a-list-of-azure-entitlements-for-subscription.md)
 
 ## Lifecycle management
 

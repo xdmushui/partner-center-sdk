@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Create a transfer
 
-**Applies to:**
-
-- Partner Center
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
@@ -67,10 +63,10 @@ This table describes the [TransferLineItem](transfer-entity-resources.md#transfe
 | quantity             | int                        | No       | The number of licenses or instances.                                                                 |
 | billingCycle         | Object                     | No       | The type of billing cycle set for the current period.                                                |
 | friendlyName         | string                     | No       | Optional. The friendly name for the item defined by the partner to help disambiguate.                |
-| partnerIdOnRecord    | string                     | No       | PartnerId on Record (MPNID) on the purchase that happens when the transfer is accepted.              |
+| partnerIdOnRecord    | string                     | No       | PartnerId on Record (MPN ID) on the purchase that happens when the transfer is accepted.              |
 | offerId              | string                     | No       | The offer identifier.                                                                                |
 | addonItems           | List of **TransferLineItem** objects | No | A collection of transferEntity line items for addons that will be transferred along with the base subscription that is being transferred. Applied upon successful creation of the transferEntity.|
-| transferError        | string                     | No       | Applied after transferEntity is accepted in case of an error.                                        |
+| transferError        | string                     | No       | Applied after transferEntity is accepted if there is an error.                                        |
 | status               | string                     | No       | The status of the lineitem in the transferEntity.                                                    |
 
 ### Request example

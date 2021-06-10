@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Create an order for a customer using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud for US Government
 
 Creating an **order for Azure reserved VM instance products** applies *only* to:
 
