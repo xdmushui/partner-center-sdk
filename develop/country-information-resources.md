@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Country information resources available from Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The following resources are descriptive metadata for a country/region.
 
@@ -30,7 +25,7 @@ The following resources are descriptive metadata for a country/region.
 | SupportedLanguagesList        | array of strings   | A list of supported languages.                                                                     |
 | SupportedCulturesList         | array of strings   | A list of supported cultures.                                                                      |
 | IsPostalCodeRequired          | boolean            | Indicates whether a ZIP code or postal code is required or not.                                    |
-| PostalCodeRegex               | string             | The regular expression that defines the ZIP/postal code .                                          |
+| PostalCodeRegex               | string             | The regular expression that defines the ZIP/postal code.                                          |
 | IsCityRequired                | boolean            | Indicates whether a city is required or not.                                                       |
 | IsVatIdSupported              | boolean            | Indicates whether a VAT ID is required or not.                                                     |
 | TaxIdFormat                   | string             | The tax ID format.                                                                                 |
@@ -57,7 +52,7 @@ Describes the address formatting rules for a country/region.
 | SupportedLanguagesList  | array of strings   | A list of supported languages.                                                                     |
 | SupportedCulturesList   | array of strings   | A list of supported cultures.                                                                      |
 | IsPostalCodeRequired    | boolean            | Indicates whether a ZIP code or postal code is required or not.                                    |
-| PostalCodeRegex         | string             | The regular expression that defines the ZIP/postal code .                                          |
+| PostalCodeRegex         | string             | The regular expression that defines the ZIP/postal code.                                          |
 | IsCityRequired          | boolean            | Indicates whether a city is required or not.                                                       |
 | IsVatIdSupported        | boolean            | Indicates whether a VAT ID is required or not.                                                     |
 | TaxIdFormat             | string             | The tax ID format.                                                                                 |

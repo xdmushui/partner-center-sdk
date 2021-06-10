@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Conversion resources to convert trial subscriptions to paid
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Conversion resources support the conversion of a trial subscription to a paid subscription.
 
@@ -47,4 +42,4 @@ Represents the result of performing a subscription conversion.
 | subscriptionId | string                              | The subscription identifier.                                           |
 | offerId        | string                              | The original offer identifier.                                         |
 | targetOfferId  | string                              | The offer identifier for the target offer.                             |
-| error          | [ConversionError](#conversionerror) | The error encountered while attempting the conversion, if applicable.. |
+| error          | [ConversionError](#conversionerror) | The error encountered while attempting the conversion, if applicable. |
