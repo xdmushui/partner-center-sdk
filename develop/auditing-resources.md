@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Auditing resources that help you get a record of Partner Center activity
 
-**Applies to:**
-
-- Partner Center
-
 You can use the following resources with audit operations.
 
 ## AuditRecord
