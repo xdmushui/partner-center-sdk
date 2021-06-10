@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Delete a device for the specified customer
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 This article explains how to delete a device that belongs to a specified customer.
 

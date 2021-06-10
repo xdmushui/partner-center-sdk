@@ -10,10 +10,6 @@ ms.author: dineshvu
 
 # Create user accounts for a customer
 
-**Applies to:**
-
-- Partner Center
-
 Create a new user account for your customer.
 
 ## Prerequisites

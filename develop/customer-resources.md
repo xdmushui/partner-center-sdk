@@ -10,12 +10,7 @@ ms.author: dineshvu
 
 # Customer resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 ## Customer
 
@@ -31,7 +26,7 @@ The **Customer** resource represents a customer or reseller. Most broadly, a cus
 | companyProfile        | [CustomerCompanyProfile](#customercompanyprofile)                | Additional information about the company or organization.                                                                                    |
 | billingProfile        | [CustomerBillingProfile](#customerbillingprofile)                | Additional information used for billing.                                                                                                     |
 | relationshipToPartner | string                                                           | Defines the licensing program that the partner uses for this customer: "none", "reseller", "advisor", "syndication" or "microsoft\_support". |
-| allowDelegatedAccess  | boolean                                                          | Whether the partner has been granted delegated admin privileges by this customer. This property is only available when getting a customer by ID, not by list.                                                         |
+| allowDelegatedAccess  | boolean                                                          | Indicates whether the partner has been granted delegated admin privileges by this customer. This property is only available when getting a customer by ID, not by list.                                                         |
 | userCredentials       | [UserCredentials](user-resources.md#usercredentials) | The user credentials.                                                                                                                        |
 | customDomains         | array of strings                                                 | List of custom domains of a customer.                                                                                                        |
 | associatedPartnerId   | string                                                           | The indirect reseller associated to this customer account. This value can be set only by indirect CSP partners.                              |
@@ -49,7 +44,7 @@ The **CustomerCompanyProfile** resource is additional information about the comp
 | companyName | string                                                         | The name of the company or organization.                                          |
 | links       | [ResourceLinks](utility-resources.md#resourcelinks)           | The resource links contained within the profile.                                  |
 | attributes  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the profile.                             |
-|organizationRegistrationNumber|String|The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries: Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA), India, Brazil, South Africa, Poland, United Arab Emirates, Saudi Arabia, Turkey, Thailand, Vietnam, Myanmar, Iraq, South Sudan and Venezuela. For customer’s company/organization located in other countries this should not be specified.|
+|organizationRegistrationNumber|String|The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries: Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA), India, Brazil, South Africa, Poland, United Arab Emirates, Saudi Arabia, Turkey, Thailand, Vietnam, Myanmar, Iraq, South Sudan, and Venezuela. For customer’s company/organization located in other countries, this should not be specified.|
 
 
 ## CustomerBillingProfile
