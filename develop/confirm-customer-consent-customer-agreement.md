@@ -8,17 +8,13 @@ ms.subservice:  partnercenter-sdk
 
 # Confirm customer acceptance of the Microsoft Customer Agreement using Partner Center APIs
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-Partner Center currently supports confirmation of customer acceptance of the Microsoft Customer Agreement only in the *Microsoft public cloud*. This functionality doesn't currently apply to:
+Partner Center currently supports confirmation of customer acceptance of the Microsoft Customer Agreement only in the Microsoft public cloud.
 
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-This article describes how to confirm or re-confirm customer acceptance of the Microsoft Customer Agreement.
+This article describes how to confirm or reconfirm customer acceptance of the Microsoft Customer Agreement.
 
 ## Prerequisites
 
@@ -57,9 +53,9 @@ Otherwise partners will receive the following error code, due to a duplicate cus
 
 ## .NET
 
-To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
+To confirm or reconfirm customer acceptance of the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
 
    ```csharp
    // IAggregatePartner partnerOperations;
@@ -98,9 +94,9 @@ A complete sample can be found in the [CreateCustomerAgreement](https://github.c
 
 ## REST request
 
-To confirm or re-confirm customer acceptance of the Microsoft Customer Agreement:
+To confirm or reconfirm customer acceptance of the Microsoft Customer Agreement:
 
-1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more details, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
+1. Retrieve the agreement metadata for the Microsoft Customer Agreement. You must obtain the **templateId** of the Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](get-customer-agreement-metadata.md).
 
 2. Create a new [**Agreement** resource](agreement-resources.md) to confirm that a customer has accepted the Microsoft Customer Agreement. Use the following [REST request syntax](#request-syntax).
 
@@ -136,7 +132,7 @@ This table describes the minimum required fields to create an [**Agreement** res
 
 | Property       | Type   | Description                              |
 |----------------|--------|------------------------------------------|
-| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:  **firstName**, **lastName**, **email** and **phoneNumber** (optional) |
+| primaryContact | [Contact](./utility-resources.md#contact) | Information about the user from the customer organization who accepted the Microsoft Customer Agreement, including:  **firstName**, **lastName**, **email**, and **phoneNumber** (optional) |
 | dateAgreed     | string in UTC date time format |The date when the customer accepted the agreement. |
 | templateId     | string | Unique identifier of the agreement type accepted by the customer. You can obtain the **templateId** for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. See [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md) for details. |
 | type           | string | Agreement type accepted by the customer. Use "MicrosoftCustomerAgreement" if customer accepted the Microsoft Customer Agreement. |

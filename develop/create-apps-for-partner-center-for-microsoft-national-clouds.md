@@ -11,10 +11,7 @@ ms.subservice:  partnercenter-sdk
 
 # Register app details for Partner Center for Microsoft National Cloud through the Azure portal
 
-**Applies to:**
-
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Developers must register details about their app with Azure AD through the Azure portal. This helps ensure that only specified apps are able to connect to partner and customer data.
 
@@ -65,7 +62,7 @@ You should have the following details from the web app configuration:
 
 ### Register the Web app in Partner Center
 
-1. Log in to [https://partnercenter.microsoft.com](https://partnercenter.microsoft.com).
+1. Sign in to [https://partnercenter.microsoft.com](https://partnercenter.microsoft.com).
 
 2. Choose **Dashboard**, then choose **Account Settings**, then choose **App Management**.
 
@@ -122,4 +119,4 @@ Native apps do not need to be registered to Partner Center. But these apps need 
 >[!IMPORTANT]
 > Note the application ID in the Properties of your app.
 
-You do not need to register native apps in Partner Center, however the native app must be admin consented . Note the application ID of your native app.
+You do not need to register native apps in Partner Center, however the native app must be admin consented. Note the application ID of your native app.

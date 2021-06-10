@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Check the inventory of catalog items using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-
 How to check the inventory for a specific set of catalog items.
 
 ## Prerequisites

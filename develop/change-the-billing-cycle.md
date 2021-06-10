@@ -10,12 +10,7 @@ ms.author: sodeb
 
 # Change a customer subscription billing cycle
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Updates an [Order](order-resources.md) from monthly to annual billing or from annual to monthly billing.
 
@@ -24,7 +19,7 @@ In the Partner Center dashboard, this operation can be performed by navigating t
 **Out of scope** for this article:
 
 - Changing the billing cycle for trials
-- Changing the billing cycles for any non-annual term offers (monthly, 6-year) & Azure subscriptions
+- Changing the billing cycles for any non-annual term offers (monthly, six-year) & Azure subscriptions
 - Changing the billing cycles for inactive subscriptions
 - Changing billing cycles for Microsoft online services license-based subscriptions
 

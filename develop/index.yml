@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: jasonwhowell
   ms.author: jasonh
-  ms.date: 01/08/2020
+  ms.date: 06/10/2021
 
 landingContent:
   - title: Develop with Partner Center
@@ -45,7 +45,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Managed .NET API reference
-            url: /dotnet/api/
+            url: /dotnet/api/microsoft.store.partnercenter
           - text: Release notes for .NET SDK versions
             url: dotnet-release-notes.md
 

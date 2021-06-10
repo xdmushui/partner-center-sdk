@@ -9,9 +9,9 @@ ms.subservice: partnercenter-sdk
 
 # Delete Indirect Reseller in Sandbox
 
-This document shows how to delete Sandbox Indirect Providers and enable end-to-end testing using APIs.
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany
 
-**Applies to:** Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany
+This document shows how to delete Sandbox Indirect Providers and enable end-to-end testing using APIs.
 
 > [!Important]
 > This document describes features that are only allowed in the Sandbox environment for Indirect Model experiences.
@@ -27,7 +27,7 @@ This feature is only available in the Sandbox and gives Sandbox Indirect Provide
 1. Prerequisites for Deleting a Sandbox Indirect Reseller
     1. Suspend the subscriptions for each customer of Sandbox Indirect Reseller
     2. Delete all customers of Indirect Reseller
-2. Limit of five Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. Once the Sandbox Indirect reseller is deleted the quota will be reset.
+2. Limit of five Sandbox Indirect Resellers allowed per Sandbox Indirect Provider. Once the Sandbox Indirect reseller is deleted, the quota will be reset.
 
 ## Delete Sandbox Indirect Reseller through API
 
