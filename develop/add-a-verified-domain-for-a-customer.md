@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Add a verified domain to the list of approved domains for an existing customer 
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to add a verified domain to the list of approved domains for an existing customer.
 

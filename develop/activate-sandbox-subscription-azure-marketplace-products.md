@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Activate a sandbox subscription for commercial marketplace SaaS products to enable billing
 
-**Applies to:**
-
-- Partner Center
-
 How to activate a subscription for commercial marketplace Software as a Service (SaaS) products from integration sandbox accounts to enable billing.
 
 > [!NOTE]
