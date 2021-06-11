@@ -67,7 +67,7 @@ In the end, every single Partner Center API that calls the endpoint “api.partn
 |{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](register-a-subscription.md)|
 |{baseURL}/v1/productupgrades|[create product upgrade entity](create-product-upgrade-entity.md)|
 |{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)|
-|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](get-a-customer-by-id.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by ID](get-a-customer-by-id.md)|
 |{baseURL}/v1/productUpgrades/eligibility|[get eligibility for product upgrade](get-eligibility-for-product-upgrade.md)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[manage subscription](manage-orders.md#manage-a-subscription)|
 |{baseURL}/v1/customers/{customer_id}/subscriptions |[get-all-of-a-customer-s-subscriptions](get-all-of-a-customer-s-subscriptions.md)|
