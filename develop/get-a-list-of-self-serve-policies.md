@@ -10,7 +10,7 @@ ms.author: amrava
 
 # Get a list of self-serve policies
 
-This article describes how to get a collection of resources that represents self-serve policies for an entity.
+Gets a collection of resources that represents self-serve policies for an entity.
 
 ## Prerequisites
 

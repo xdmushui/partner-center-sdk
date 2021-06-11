@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Accept a transfer of subscriptions for a customer using Partner Center REST APIs
 
-**Applies to:**
-
-- Partner Center
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
