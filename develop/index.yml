@@ -87,4 +87,4 @@ landingContent:
       - linkListType: reference
         links:
           - text: Swagger API reference for Partner Center services (for CSP partners)
-            url: https://apidocs.microsoft.com/services/partnercenter
+            url: /rest/api/partner-center-rest
