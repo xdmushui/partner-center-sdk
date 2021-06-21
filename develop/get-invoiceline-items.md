@@ -589,7 +589,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
     "continuationToken": "d19617b8-fbe5-4684-a5d8-0230972fb0cf,0705c4a9-39f7-4261-ba6d-53e24a9ce47d_a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=,0d81c700-98b4-4b13-9129-ffd5620f72e7",
     {
     {
-    "totalCount": 2,
+    "totalCount": 3,
     "items": [
         {
             "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
@@ -636,7 +636,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": "1",
             "pcToBCExchangeRateDate": "2021-05-01T00:00:00",
-            "billableQuantity": "31",
+            "billableQuantity": "25",
             "meterDescription": "",
             "billingFrequency": "",
             "reservationOrderId": "99f246cf-ed96-41b4-b0cd-0aa43eb1fe91",
@@ -690,7 +690,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": "1",
             "pcToBCExchangeRateDate": "2021-05-01T00:00:00",
-            "billableQuantity": "31",
+            "billableQuantity": "50",
             "meterDescription": "",
             "billingFrequency": "Monthly",
             "reservationOrderId": "8fdebb4a-7110-496e-9570-623e4c992797",
@@ -698,6 +698,53 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "billingProvider": "one_time",
             "promotionId": "78bcf906-b945-4210-8818-cfb93caf12a1",
             "attributes/objectType": "OneTimeInvoiceLineItem",
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+        },
+        {
+            "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
+            "customerId": "c139c4bf-2e8b-4ab5-8bed-d9f50dcca7a2",
+            "customerName": "Test_Test_Office R2 Reduce Seats Validation",
+            "customerDomainName": "testcustomerr2t2reduce.onmicrosoft.com",
+            "customerCountry": "US",
+            "invoiceNumber": "T000773581",
+            "mpnId": "1234567",
+            "resellerMpnId": 0,
+            "orderId": "HJVtMZMkgQ2miuCiNv0RSr51zQDans0m1",
+            "orderDate": "2019-02-04T17:59:52.9460102Z",
+            "productId": "DZH318Z0BXWC",
+            "skuId": "0002",
+            "availabilityId": "DZH318Z0BP8B",
+            "productName": "Test WAF-as-a-Service",
+            "skuName": "Test WaaS - Medium Plan",
+            "chargeType": "New",
+            "unitPrice": 820,
+            "effectiveUnitPrice": 820,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 820,
+            "taxTotal": 0,
+            "totalForCustomer": 0,
+            "currency": "USD",
+            "publisherName": "Test Networks, Inc.",
+            "publisherId": "21223810",
+            "subscriptionDescription": "",
+            "subscriptionId": "12345678-9cf0-4a1f-9514-7fcc7fe9d1fe",
+            "subscriptionStartDate": "2019-02-01T00:00:00Z",
+            "subscriptionEndDate": "2020-01-31T00:00:00Z",
+            "chargeStartDate": "2019-02-04T09:22:40.1767993-08:00",
+            "chargeEndDate": "2019-03-03T09:22:40.1767993-08:00",
+            "termAndBillingCycle": "1 Year Subscription",
+            "alternateId": "123456ad566",
+            "priceAdjustmentDescription": "[\"15.0% Partner earned credit for services managed\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "billableQuantity": 3.1618,
+            "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
+            "reservationOrderId": "883d475b-0000-1234-0000-8818752f1234",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
@@ -765,7 +812,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
 {
     {
     {
-    "totalCount": 2,
+    "totalCount": 3,
     "items": [
         {
             "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
@@ -812,7 +859,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": "1",
             "pcToBCExchangeRateDate": "2021-05-01T00:00:00",
-            "billableQuantity": "31",
+            "billableQuantity": "25",
             "meterDescription": "",
             "billingFrequency": "",
             "reservationOrderId": "99f246cf-ed96-41b4-b0cd-0aa43eb1fe91",
@@ -866,7 +913,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": "1",
             "pcToBCExchangeRateDate": "2021-05-01T00:00:00",
-            "billableQuantity": "31",
+            "billableQuantity": "50",
             "meterDescription": "",
             "billingFrequency": "Monthly",
             "reservationOrderId": "8fdebb4a-7110-496e-9570-623e4c992797",
@@ -874,6 +921,53 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "billingProvider": "one_time",
             "promotionId": "78bcf906-b945-4210-8818-cfb93caf12a1",
             "attributes/objectType": "OneTimeInvoiceLineItem",
+            "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+        },
+        {
+            "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
+            "customerId": "c139c4bf-2e8b-4ab5-8bed-d9f50dcca7a2",
+            "customerName": "Test_Test_Office R2 Reduce Seats Validation",
+            "customerDomainName": "testcustomerr2t2reduce.onmicrosoft.com",
+            "customerCountry": "US",
+            "invoiceNumber": "T000773581",
+            "mpnId": "1234567",
+            "resellerMpnId": 0,
+            "orderId": "HJVtMZMkgQ2miuCiNv0RSr51zQDans0m1",
+            "orderDate": "2019-02-04T17:59:52.9460102Z",
+            "productId": "DZH318Z0BXWC",
+            "skuId": "0002",
+            "availabilityId": "DZH318Z0BP8B",
+            "productName": "Test WAF-as-a-Service",
+            "skuName": "Test WaaS - Medium Plan",
+            "chargeType": "New",
+            "unitPrice": 820,
+            "effectiveUnitPrice": 820,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 820,
+            "taxTotal": 0,
+            "totalForCustomer": 0,
+            "currency": "USD",
+            "publisherName": "Test Networks, Inc.",
+            "publisherId": "21223810",
+            "subscriptionDescription": "",
+            "subscriptionId": "12345678-9cf0-4a1f-9514-7fcc7fe9d1fe",
+            "subscriptionStartDate": "2019-02-01T00:00:00Z",
+            "subscriptionEndDate": "2020-01-31T00:00:00Z",
+            "chargeStartDate": "2019-02-04T09:22:40.1767993-08:00",
+            "chargeEndDate": "2019-03-03T09:22:40.1767993-08:00",
+            "termAndBillingCycle": "1 Year Subscription",
+            "alternateId": "123456ad566",
+            "priceAdjustmentDescription": "[\"15.0% Partner earned credit for services managed\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
+            "billableQuantity": 3.1618,
+            "meterDescription": "Bandwidth - Data Transfer In (GB) - Zone 2",
+            "reservationOrderId": "883d475b-0000-1234-0000-8818752f1234",
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
@@ -892,4 +986,5 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
         "objectType": "Collection"
     }
 }
+
 ```
