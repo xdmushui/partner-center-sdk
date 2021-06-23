@@ -43,12 +43,12 @@ The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) h
 
 2. In the left navigation pane, select the Azure Active Directory service, then **App registrations**, then **New registration**. The **Register an application** page appears.
 
-:::image type="content" source="./images/manage-payouts/new-app-registration.png" alt-text="Screenshot showing the Register an app screen in the Azure portal.":::
+   :::image type="content" source="./images/manage-payouts/new-app-registration.png" alt-text="Screenshot showing the Register an app screen in the Azure portal.":::
 
 3. Enter your application's registration information:
 
    - Name: Enter a meaningful application name that will be displayed to users of the app.
-   - Supported account types - Select which accounts your application will support.
+   - Supported account types: Select which accounts your application will support.
 
     | **Supported account types**                             | **Description**                                                                                            |
     |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
@@ -56,12 +56,12 @@ The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) h
     | Accounts in any organizational directory                | Select this option if you would like to target all business and educational customers.  This option maps to an Azure AD only multi-tenant. If you registered the app as Azure AD only single-tenant, you can update it to be Azure AD multi-tenant and back to single-tenant through the Authentication blade.                                                                                                                                                  |
     | Accounts in any organizational directory and personal Microsoft accounts | Select this option to target the widest set of customers. This option maps to Azure AD multi-tenant and personal Microsoft accounts.  If you registered the app as Azure AD multi-tenant and personal Microsoft accounts, you cannot change this in the UI. Instead, you must use the application manifest editor to change the supported account types.                                                                          |
 
-   - *(optional)* Redirect URI: Select the type of app you're building, Web or Public client (mobile & desktop), and then enter the redirect URI (or reply URL) for your application. (The redirect URL is where the authentication response will be sent after the user authenticates.)
+   - *(optional)* Redirect URI: Select the type of app you're building, Web or Public client (mobile & desktop), and then enter the redirect URI (or reply URL) for your application. (The redirect URL is where the authentication response will be sent after the user authenticates.) 
 
-    - For web applications, provide the base URL of your app. For example, `http://localhost:31544` might be the URL for a web app running on your local machine. Users would use this URL to sign in to a web client application.
-    - For public client applications, provide the URI used by Azure AD to return token responses. Enter a value specific to your application, such as `myapp://auth`.
+      For web applications, provide the base URL of your app. For example, `http://localhost:31544` might be the URL for a web app running on your local machine. Users would use this URL to sign in to a web client application.
+      For public client applications, provide the URI used by Azure AD to return token responses. Enter a value specific to your application, such as `myapp://auth`.
 
-4. Select **Register**. Azure AD assigns a unique application (client) ID to your application, and the app's overview page loads.
+4. Select **Register**. Azure AD assigns a unique application (client) ID to your application, and the application's overview page loads.
 
 :::image type="content" source="./images/manage-payouts/register-an-application.png" alt-text="<alt text>":::
 
