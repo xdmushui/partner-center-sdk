@@ -35,7 +35,7 @@ You can view all available APIs at [Partner Payouts](https://apidocs.microsoft.c
 
 ## Register an application with the Microsoft identity platform
 
-Microsoft Identity platform allows all developers to build applications that can sign in on all Microsoft identities. An organizational account (also called an Azure AD account) as well as personal Microsoft accounts, and also lets them get tokens to let them call Microsoft APIs like Microsoft Graph.
+The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) helps you build applications your users and customers can sign in to using their Microsoft identities or social accounts, and provide authorized access to your own APIs or Microsoft APIs like Microsoft Graph.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) using either a work or school account or a personal Microsoft account.
 
