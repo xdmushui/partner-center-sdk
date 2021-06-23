@@ -52,7 +52,7 @@ The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) h
 
     | **Supported account types**                             | **Description**                                                                                            |
     |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-    | Only accounts in this organizational directory          | Select this option if you're building a line-of-business (LOB) application. This option is not available if you're not registering the application in a directory. This option maps to Azure AD only single-tenant.  This is the default option unless you're registering the app outside of a directory. In cases where the app is registered outside of a directory, the default is Azure AD multi-tenant and personal Microsoft accounts.             |
+    | Only accounts in this organizational directory          | Select this option if you're building a line-of-business (LOB) application. This option is not available if you're not registering the application in a directory. This option maps to Azure AD only single-tenant.  This option is the default unless you're registering the app outside of a directory. In cases where the app is registered outside of a directory, the default is Azure AD multi-tenant and personal Microsoft accounts.             |
     | Accounts in any organizational directory                | Select this option if you would like to target all business and educational customers.  This option maps to an Azure AD only multi-tenant. If you registered the app as Azure AD only single-tenant, you can update it to be Azure AD multi-tenant and back to single-tenant through the Authentication blade.                                                                                                                                                  |
     | Accounts in any organizational directory and personal Microsoft accounts | Select this option to target the widest set of customers. This option maps to Azure AD multi-tenant and personal Microsoft accounts.  If you registered the app as Azure AD multi-tenant and personal Microsoft accounts, you cannot change this in the UI. Instead, you must use the application manifest editor to change the supported account types.                                                                          |
 
@@ -65,7 +65,7 @@ The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) h
 
    :::image type="content" source="./images/manage-payouts/register-an-application.png" alt-text="<alt text>":::
 
-5. If you want to add additional capabilities to your application, you can select other configuration options including branding, certificates and secrets, API permissions, and more.
+5. If you want to add capabilities to your application, you can select other configuration options including branding, certificates and secrets, API permissions, and more.
 
 ## Platform-specific properties
 
@@ -101,7 +101,7 @@ To access resources in your subscription, you must assign a role to the applicat
 
 4. Select the role you wish to assign to the application. For example, to allow the application to execute actions like reboot, start and stop instances, select the Contributor role. Read more about [available roles](/azure/role-based-access-control/built-in-roles).
 
-   By default, Azure AD applications aren't displayed in the available options. To find your application, search on the name and select it from the results. In the below screenshot, `example-app` is the AAD app which you registered.
+   By default, Azure AD applications aren't displayed in the available options. To find your application, search on the name and select it from the results. In the below screenshot, `example-app` is the AAD app you registered.
 
    :::image type="content" source="./images/manage-payouts/add-role-assignment.png" alt-text="Screenshot showing the user interface for adding a role assignment for a test application.":::
 
@@ -111,7 +111,7 @@ To access resources in your subscription, you must assign a role to the applicat
 
 ## Set up API permissions
 
-This section provides instruction on how to set up the required API permissions. For additional information about setting up Partner Center API permissions, see [Partner API authentication](/partner/develop/api-authentication).
+This section provides instruction on how to set up the required API permissions. For more information about setting up Partner Center API permissions, see [Partner API authentication](/partner/develop/api-authentication).
 
 **Grant permission to Graph API**
 
