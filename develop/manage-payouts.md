@@ -12,7 +12,7 @@ ms.author: sabaja
 
 This article explains how a partner can access their Payout data directly through the available APIs instead of Partner center.
 
-Partners can download their payout statement by logging in to Partner Center. Additionally, they can directly access their payout statement without logging onto Partner center using the Partner payout service API. This provides a programmatic way to provide the capability of the [Export data](https://partner.microsoft.com/dashboard/payouts/reports/incentiveexport) feature in Partner Center.
+Partners can download their payout statement by logging in to Partner Center. Additionally, they can directly access their payout statement without logging onto Partner center using the Partner payout service API. These APIs provide a programmatic way to provide the capability of the [Export data](https://partner.microsoft.com/dashboard/payouts/reports/incentiveexport) feature in Partner Center.
 
 ## Available APIs
 
