@@ -1,3 +1,13 @@
+---
+title: Manage payouts using the Payout Service API
+description: Learn how to use Partner Center Payout Service API to access payout data
+ms.date: 06/23/2021
+ms.service: partner-dashboard
+ms.subservice:  partnercenter-sdk
+author: jasongroce
+ms.author: sabaja
+---
+
 # Manage payouts using the Payout Service API
 
 This article explains how a partner can access their Payout data directly through the available APIs instead of Partner center.
