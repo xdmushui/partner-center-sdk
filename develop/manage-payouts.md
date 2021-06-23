@@ -150,7 +150,6 @@ You can verify that Admin consent is enabled in the Admin consent status screen.
 9. In the **Authentication** section, make sure the **Allow public client flows** option is set to **Yes**.
 
 :::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
-![Graphical user interface, text, application, email Description automatically generated](media/58360e2e3893b0018933484ca2d65534.png)
 
 ## Run the sample code in Visual Studio
 
@@ -166,4 +165,4 @@ Sample code showing how the API can be used for payment and transaction history 
 
 - [Use the portal to create an Azure AD application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal)
 - [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2)
-- [Configure a client application to access a web API](azure/active-directory/develop/quickstart-configure-app-access-web-apis)
+- [Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis)
