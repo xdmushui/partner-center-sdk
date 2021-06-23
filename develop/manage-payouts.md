@@ -63,7 +63,7 @@ The [Microsoft identity platform](/azure/active-directory/develop/v2-overview) h
 
 4. Select **Register**. Azure AD assigns a unique application (client) ID to your application, and the application's overview page loads.
 
-:::image type="content" source="./images/manage-payouts/register-an-application.png" alt-text="<alt text>":::
+   :::image type="content" source="./images/manage-payouts/register-an-application.png" alt-text="<alt text>":::
 
 5. If you want to add additional capabilities to your application, you can select other configuration options including branding, certificates and secrets, API permissions, and more.
 
