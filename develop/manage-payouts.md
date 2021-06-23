@@ -88,11 +88,11 @@ To access resources in your subscription, you must assign a role to the applicat
 
 1. In the Azure portal, select the level of scope to assign the application to. For example, to assign a role at the subscription scope, search for and select **Subscriptions**, or select **Subscriptions** on the home page.
 
-:::image type="content" source="./images/manage-payouts/search-for-subscriptions.png" alt-text="Screenshot showing the Subscriptions screen search.":::
+   :::image type="content" source="./images/manage-payouts/search-for-subscriptions.png" alt-text="Screenshot showing the Subscriptions screen search.":::
 
 2. Select the subscription to assign the application to.
 
-:::image type="content" source="./images/manage-payouts/internal-testing-subscription.png" alt-text="Screenshot showing the Subscriptions screen with Internal Testing flag set to true.":::
+   :::image type="content" source="./images/manage-payouts/internal-testing-subscription.png" alt-text="Screenshot showing the Subscriptions screen with Internal Testing flag set to true.":::
 
 > [!NOTE]
 > If you don't see the subscription you're looking for, select the global subscriptions filter and ensure the subscription you want is selected for the portal.
@@ -103,7 +103,7 @@ To access resources in your subscription, you must assign a role to the applicat
 
    By default, Azure AD applications aren't displayed in the available options. To find your application, search on the name and select it from the results. In the below screenshot, `example-app` is the AAD app which you registered.
 
-:::image type="content" source="./images/manage-payouts/add-role-assignment.png" alt-text="Screenshot showing the user interface for adding a role assignment for a test application.":::
+   :::image type="content" source="./images/manage-payouts/add-role-assignment.png" alt-text="Screenshot showing the user interface for adding a role assignment for a test application.":::
 
 5. Select **Save**. You can then see your application in the list of users with a role for that scope.
 
@@ -125,7 +125,7 @@ This section provides instruction on how to set up the required API permissions.
 
 5. Select **Delegated permissions** and add required permissions. For more information, see [Configure app access](/azure/active-directory/develop/quickstart-configure-app-access-web-apis).
 
-:::image type="content" source="./images/manage-payouts/graph-request-api-permissions.png" alt-text="Screenshot showing the request permissions screen in the Azure portal with Microsoft Graph selected.":::
+   :::image type="content" source="./images/manage-payouts/graph-request-api-permissions.png" alt-text="Screenshot showing the request permissions screen in the Azure portal with Microsoft Graph selected.":::
 
 **Consent to API access to Partner Center API via AAD app**
 
@@ -133,23 +133,23 @@ This section provides instruction on how to set up the required API permissions.
 
 7. Search for **Microsoft Partner (Microsoft Dev Center) API (4990cffe-04e8-4e8b-808a-1175604b879f)**.
 
-:::image type="content" source="./images/manage-payouts/partner-api-request-permissions.png" alt-text="Screenshot showing the API permissions screen with Microsoft Partner selected.":::
+   :::image type="content" source="./images/manage-payouts/partner-api-request-permissions.png" alt-text="Screenshot showing the API permissions screen with Microsoft Partner selected.":::
 
 8. Set the Delegated Permissions to **Partner Center**.
 
-:::image type="content" source="./images/manage-payouts/partner-api-request-permissions.png" alt-text="Screenshot showing the Delegated Permissions selected for Partner Center in the Request API permissions screen.":::
+   :::image type="content" source="./images/manage-payouts/partner-api-request-permissions.png" alt-text="Screenshot showing the Delegated Permissions selected for Partner Center in the Request API permissions screen.":::
 
 9. Grant **Admin consent** for the APIs.
 
-:::image type="content" source="./images/manage-payouts/api-permissions.png" alt-text="Screenshot showing the toggle for Admin Consent on the API permissions screen.":::
+   :::image type="content" source="./images/manage-payouts/api-permissions.png" alt-text="Screenshot showing the toggle for Admin Consent on the API permissions screen.":::
 
 You can verify that Admin consent is enabled in the Admin consent status screen.
 
-:::image type="content" source="./images/manage-payouts/admin-consent-verification.png" alt-text="Screenshot showing the Admin consent status screen":::
+   :::image type="content" source="./images/manage-payouts/admin-consent-verification.png" alt-text="Screenshot showing the Admin consent status screen":::
 
 9. In the **Authentication** section, make sure the **Allow public client flows** option is set to **Yes**.
 
-:::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
+   :::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
 
 ## Run the sample code in Visual Studio
 
