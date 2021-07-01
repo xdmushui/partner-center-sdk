@@ -10,16 +10,11 @@ ms.author: alikhaki
 
 # Get confirmation of customer acceptance of Microsoft Cloud Agreement
 
-**Applies To**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-> [!NOTE]
-> The **Agreement** resource is currently supported by Partner Center in the Microsoft public cloud only. It isn't applicable to:
->
-> - Partner Center operated by 21Vianet
-> - Partner Center for Microsoft Cloud Germany
-> - Partner Center for Microsoft Cloud for US Government
+The **Agreement** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 ## Prerequisites
 
@@ -27,7 +22,7 @@ ms.author: alikhaki
 
 - If you are using the Partner Center Java SDK, version 1.8 or newer is required.
 
-- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario supports only supports app + user authentication.
+- Credentials as described in [Partner Center authentication](./partner-center-authentication.md). This scenario only supports app + user authentication.
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 

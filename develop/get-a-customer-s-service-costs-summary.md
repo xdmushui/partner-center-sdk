@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get a customer's service costs summary
 
-**Applies to:**
-
-- Partner Center
-
 Gets a customer's service costs for the specified billing period.
 
 ## Prerequisites

@@ -10,17 +10,11 @@ ms.author: sakhanda
 
 # Get the status of a customer's direct signing (direct acceptance) of Microsoft Customer Agreement
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the Microsoft public cloud.
-
-This resource is *not applicable* to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 This article explains how you can retrieve the status of a customer's direct acceptance of the Microsoft Customer Agreement.
 

@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Analytics
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the Partner Center SDK and APIs to programmatically retrieve analytic information. For more information, see the articles listed here:
 

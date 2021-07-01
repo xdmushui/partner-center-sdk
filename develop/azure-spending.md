@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Azure spending API resources to manage partner or customer spending and usage against a budget 
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Cloud Solution Provider (CSP) partners can view and manage their Azure spending through Partner Center APIs. They can also programmatically view their customers' spending against an Azure spending budget.
 

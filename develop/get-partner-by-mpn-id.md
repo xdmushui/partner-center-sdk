@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Verify a partner MPN ID via C\# or the Partner Center REST API
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to verify a partner's Microsoft Partner Network identifier (MPN ID).
 

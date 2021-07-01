@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get licenses usage information
 
-**Applies To**
-
-- Partner Center
-
 How to get licenses usage information at the workload level for Office and Dynamics.
 
 ## Prerequisites
@@ -37,7 +33,7 @@ For more information, see [Partner Center REST headers](headers.md).
 | top               | string   | The number of rows of data to return in the request. The maximum value and the default value if not specified is 10000. If there are more rows in the query, the response body includes a next link that you can use to request the next page of data. | No |
 | skip              | int      | The number of rows to skip in the query. Use this parameter to page through large data sets. For example, top=10000 and skip=0 retrieves the first 10000 rows of data, top=10000 and skip=10000 retrieves the next 10000 rows of data, and so on. | No |
 | filter            | string   | The *filter* parameter of the request contains one or more statements that filter the rows in the response. Each statement contains a field and value that are associated with the **`eq`** or **`ne`** operators, and statements can be combined using **`and`** or **`or`**. Here are some example *filter* parameters:<br/><br/>*filter=workloadCode eq 'SFB'*<br/><br/>*filter=workloadCode eq 'SFB'* or (*channel eq 'Reseller'*)<br/><br/>You can specify the following fields:<br/><br/>**workloadCode**<br/>**workloadName**<br/>**serviceCode**<br/>**serviceName**<br/>**channel**<br/>**customerTenantId**<br/>**customerName**<br/>**productId**<br/>**productName** | No |
-| groupby           | string   | A statement that applies data aggregation only to the specified fields. You can specify the following fields:<br/><br/>**workloadCode**<br/>**workloadName**<br/>**serviceCode**<br/>**serviceName**<br/>**channelcustomerTenantId**<br/>**customerName**<br/>**productId**<br/>**productName**<br/><br/>The returned data rows will contain the fields specified in the *groupby* parameter as well as the following:<br/><br/>**licensesActive**<br/>**licensesQualified** | No |
+| groupby           | string   | A statement that applies data aggregation only to the specified fields. You can specify the following fields:<br/><br/>**workloadCode**<br/>**workloadName**<br/>**serviceCode**<br/>**serviceName**<br/>**channelcustomerTenantId**<br/>**customerName**<br/>**productId**<br/>**productName**<br/><br/>The returned data rows will contain the fields specified in the *groupby* parameter and the following:<br/><br/>**licensesActive**<br/>**licensesQualified** | No |
 | processedDateTime | DateTime | One can specify the date from which usage data was processed. Defaults to the latest date when the data was processed | No |
 
 ### Request example

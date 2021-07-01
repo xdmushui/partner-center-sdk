@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Purchase Azure reservations
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud for US Government
 
 To purchase an Azure reservation for a customer using the Partner Center API, you must have an existing Microsoft Azure (**MS-AZR-0145P**) subscription or Azure plan for them.
 
@@ -73,7 +70,7 @@ Once you have identified the active CSP Azure subscription that you want to add 
 
 1. [Enablement](#enablement) - Register an active CSP Azure subscription to enable it for purchasing Azure reservations.
 
-2. [Discovery](#discovery) - Find and select the Azure reservation products and SKUs you want to purchase and check their availability.
+2. [Discovery](#discovery) - Find and select the Azure reservation products and Stock Keeping Units (SKUs) you want to purchase and check their availability.
 
 3. [Order submission](#order-submission) - Create a shopping cart with the items in your order and submit it.
 
@@ -88,7 +85,7 @@ After you have purchased Azure reservations, the following scenarios show you ho
 
 Enablement means associating an existing Microsoft Azure (**MS-AZR-0145P**) subscription to an Azure Reserved VM Instance by registering the subscription so that it is enabled for Azure reservations. Registration is a prerequisite to purchase Azure Reserved VM Instances.
 
-A subscription is required due to the following:
+A subscription is required to support the following tasks:
 
 1. To check if the customer is eligible to deploy resources and hence purchase Azure Reserved VM Instances in a region or not.
 
@@ -107,9 +104,9 @@ Once the subscription is enabled for purchasing Azure reservations, you're ready
 
 - [Product](product-resources.md#product) - A grouping construct for purchasable goods or services. A product by itself isn't a purchasable item.​​
 
-- [SKU](product-resources.md#sku) - A purchasable Stock Keeping Unit (SKU) under a product. These represent the different shapes of the product.​​
+- [SKU](product-resources.md#sku) - A purchasable SKU under a product. These represent the different shapes of the product.​​
 
-- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency and industry segment).
+- [Availability](product-resources.md#availability) - A configuration in which a SKU is available for purchase (such as country, currency, and industry segment).
 
 Before purchasing an Azure reservation, complete the following steps:
 
@@ -134,7 +131,7 @@ Before purchasing an Azure reservation, complete the following steps:
 
 ## Order submission
 
-To submit your Azure reservation order, do the following:
+To submit your Azure reservation order, do the following tasks:
 
 1. Create a cart to hold the collection of catalog items that you intend to buy. When you create a [Cart](cart-resources.md), the [cart line items](cart-resources.md#cartlineitem) are automatically grouped based on what can be purchased together in the same [Order](order-resources.md).
 

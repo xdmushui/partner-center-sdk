@@ -9,10 +9,6 @@ ms.subservice:  partnercenter-sdk
 
 # Update autorenew for a commercial marketplace subscription
 
-**Applies To**
-
-- Partner Center
-
 Update the autorenew property for a commercial marketplace [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 In the Partner Center dashboard, this operation is performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription that you wish to update. Finally, toggle the **Auto-renew** option, then select **Submit**.

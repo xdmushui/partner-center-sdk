@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Subscription usage resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the following subscription usage resources to get usage information for a specific subscription with usage-based billing. These subscriptions have daily and monthly usage records, along with a usage summary for each pay period.
 
@@ -40,8 +36,8 @@ The **SubscriptionMonthlyUsageRecord** resource describes how much a subscriptio
 |------------------|--------------------|-----------------------------------------------------------------------------------------------|
 | Status           | string             | The status of the subscription: "none", "active", "suspended", or "deleted".                  |
 | PartnerOnRecord  | string             | "The MPN ID of the partner on record."                                                        |
-| OfferId          | string             | GUID. The id of the offer related to this subscription.                                       |
-| Id               | string             | GUID. The id of the subscription or resource.                                                 |
+| OfferId          | string             | GUID. The ID of the offer related to this subscription.                                       |
+| Id               | string             | GUID. The ID of the subscription or resource.                                                 |
 | Name             | string             | The name of the subscription or resource.                                                     |
 | TotalCost        | decimal             | The estimated total cost of using the resources in the subscription in the specified month.   |
 | CurrencyLocale   | string             | The locale in which the subscription was used, determines the currency to use on the invoice. Available for Microsoft Azure (MS-AZR-0145P) subscriptions. |
@@ -56,8 +52,8 @@ The **SubscriptionUsageSummary** resource describes how much a specific subscrip
 
 | Property         | Type               | Description                                                                                                            |
 |------------------|--------------------|------------------------------------------------------------------------------------------------------------------------|
-| ResourceId       | string             | GUID. The id of the subscription or resource. In the context of CustomerMonthlyUsageRecord this id is the customer id. |
-| ResourceName     | string             | The name of the subscription or resource. In the context of CustomerMonthlyUsageRecord this name is the customer name. |
+| ResourceId       | string             | GUID. The ID of the subscription or resource. In the context of CustomerMonthlyUsageRecord, this ID is the customer ID. |
+| ResourceName     | string             | The name of the subscription or resource. In the context of CustomerMonthlyUsageRecord, this name is the customer name. |
 | BillingStartDate | date               | The start date of the current billing period, in date-time format.                                                     |
 | BillingEndDate   | date               | The end date of the current billing period, in date-time format.                                                       |
 | TotalCost        | double             | The estimated total cost of using the resources in the subscription during the specified billing period.               |

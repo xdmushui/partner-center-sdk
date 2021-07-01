@@ -8,12 +8,7 @@ ms.subservice: partnercenter-csp
 
 # Partner Center authentication
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partner Center uses Azure Active Directory for authentication. When interacting with the Partner Center API, SDK, or PowerShell module you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app only or app + user authentication can be used with the Partner Center. However, there are two important items that need to be considered
 
@@ -31,7 +26,7 @@ Partner Center uses Azure Active Directory for authentication. When interacting 
 
 ## App-only authentication
 
-If you would like to use app-only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by leveraging the following instructions.
+If you would like to use app-only authentication to access the Partner Center REST API, .NET API, Java API, or PowerShell module then you can do so by using the following instructions.
 
 ## .NET (app-only authentication)
 
@@ -97,7 +92,7 @@ Content-Length: 1406
 
 ## App + User authentication
 
-Historically the [resource owner password credentials grant](https://tools.ietf.org/html/rfc6749#section-4.3) has been used to request an access token for use with the Partner Center REST API, .NET API, Java API, or PowerShell module. That method was used to request an access token from Azure Active Directory using a client identifier and user credentials. However, this approach will no longer work because Partner Center requires multi-factor authentication, when using app + user authentication. To comply with this requirement Microsoft has introduced a secure, scalable framework for authenticating Cloud Solution Provider (CSP) partners and control panel vendors (CPV) using multi-factor authentication. This framework is known as the Secure Application Model, and it is composed of a consent process and a request for an access token using a refresh token.
+Historically, the [resource owner password credentials grant](https://tools.ietf.org/html/rfc6749#section-4.3) has been used to request an access token for use with the Partner Center REST API, .NET API, Java API, or PowerShell module. That method was used to request an access token from Azure Active Directory using a client identifier and user credentials. However, this approach will no longer work because Partner Center requires multi-factor authentication, when using app + user authentication. To comply with this requirement Microsoft has introduced a secure, scalable framework for authenticating Cloud Solution Provider (CSP) partners and control panel vendors (CPV) using multi-factor authentication. This framework is known as the Secure Application Model, and it is composed of a consent process and a request for an access token using a refresh token.
 
 ### Partner consent
 
@@ -154,7 +149,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-DotNet-Samples
 4. Create an Azure AD application that is configured for Partner Center. Perform the following actions to complete this step.
 
     - Browse to the [App management](https://partner.microsoft.com/pcv/apiintegration/appmanagement) feature of the Partner Center Dashboard
-    - Click *Add new web app* to create a new Azure AD application.
+    - Select *Add new web app* to create a new Azure AD application.
 
     Be sure to document the *App ID*, *Account ID**, and *Key* values because they'll be used in the steps below.
 
@@ -243,7 +238,7 @@ The [partner consent](https://github.com/Microsoft/Partner-Center-Java-Samples/t
 4. Create an Azure AD application that is configured for Partner Center. Perform the following to complete this step.
 
     - Browse to the [App management](https://partner.microsoft.com/pcv/apiintegration/appmanagement) feature of the Partner Center Dashboard
-    - Click *Add new web app* to create a new Azure AD application.
+    - Select *Add new web app* to create a new Azure AD application.
 
     Be sure to document the *App ID*, *Account ID**, and *Key* values because they'll be used in the steps below.
 

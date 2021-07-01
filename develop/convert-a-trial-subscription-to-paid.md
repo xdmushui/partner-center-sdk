@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Convert a trial subscription to paid using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-
 You can convert a trial subscription to paid.
 
 ## Prerequisites
@@ -24,7 +20,7 @@ You can convert a trial subscription to paid.
 
 - An available conversion offer.
 
-## Convert a trial subscription to paid through code
+## Convert a trial subscription to a paid subscription through code
 
 To convert a trial subscription to a paid one, you must first obtain a collection of the trial conversions available. Then, you must choose the conversion offer that you want to purchase.
 

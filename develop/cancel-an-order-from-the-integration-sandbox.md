@@ -8,17 +8,12 @@ ms.subservice:  partnercenter-sdk
 
 # Cancel an order from the integration sandbox using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article describes how to use Partner Center APIs to cancel different types of subscription orders from integration sandbox accounts. Such orders can include reserved instances, software, and commercial marketplace Software as a Service (SaaS) subscription orders.
 
->[!NOTE] 
->Please be aware that the cancellations of reserved instance, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts. Any sandbox orders which are older than 60 days cannot be cancelled from Partner Center. If you need assistance, reach out to Partner Center Support. 
+> [!NOTE] 
+> Please be aware that the cancellations of reserved instance, or commercial marketplace SaaS subscription orders are only possible from integration sandbox accounts. Any sandbox orders which are older than 60 days cannot be cancelled from Partner Center.
 
 To cancel production orders of software through API, use [cancel-software-purchases](cancel-software-purchases.md).
 You can also cancel production orders of software through dashboard using [cancel a purchase](/partner-center/csp-software-subscriptions).

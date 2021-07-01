@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get a list of trial conversion offers
 
-**Applies To**
-
-- Partner Center
-
 How to retrieve a list of trial conversion offers.
 
 ## Prerequisites

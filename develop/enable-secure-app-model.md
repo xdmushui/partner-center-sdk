@@ -10,11 +10,7 @@ ms.author: v-aarzh
 
 # Enabling the Secure Application Model framework
 
-**Applies to:**
-
-- Partner Center
-
-Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure multi-factor authentication (MFA) architecture.
+Microsoft is introducing a secure, scalable framework for authenticating cloud solution provider (CSP) partners and control panel vendors (CPV) through the Microsoft Azure Active Directory Multi-Factor Authentication (MFA) architecture.
 
 You can use the new model to elevate security for Partner Center API integration calls. This will help all parties (including Microsoft, CSP partners, and CPVs) to protect their infrastructure and customer data from security risks.
 
@@ -172,7 +168,7 @@ Response body:
 
 ### Get access token
 
-You must obtain an access token before you can make calls to the Partner Center APIs. You must use a refresh token to obtain an access token because access token generally have a very limited lifetime (for example, less than an hour).
+You must obtain an access token before you can make calls to the Partner Center APIs. You must use a refresh token to obtain an access token because access tokens generally have a very limited lifetime (for example, less than an hour).
 
 Placeholder request:
 

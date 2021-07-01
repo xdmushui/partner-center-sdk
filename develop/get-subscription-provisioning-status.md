@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get subscription provisioning status
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to get the subscription provisioning status for a customer subscription.
 
@@ -112,4 +107,4 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 
 - During a license change assignment, the status field in [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) is set to "pending".
 
-- The status field is updated every fifteen minutes.
+- The status field is updated every 15 minutes.

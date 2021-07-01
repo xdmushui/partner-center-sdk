@@ -10,13 +10,9 @@ ms.author: amrava
 
 # Azure rate card resources to get real-time, current Azure prices on Azure offers in your region
 
-**Applies to:**
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-The Azure Rate Card provides real-time prices for Azure offers. Azure pricing is quite dynamic and changes frequently. Microsoft publishes updates on Partner Center, but the REST API provides the fastest way for Cloud Solution Provider partners to get current prices.
+The Azure Rate Card provides real-time prices for Azure offers. Azure pricing is dynamic and changes frequently. Microsoft publishes updates on Partner Center, but the REST API provides the fastest way for Cloud Solution Provider partners to get current prices.
 
 To track usage and help predict your monthly bill and the bills for individual customers, you can combine a Rate Card query to [Get prices for Microsoft Azure](get-prices-for-microsoft-azure.md) with a request to [Get a customer's utilization records for Azure](get-a-customer-s-utilization-record-for-azure.md).
 
@@ -49,7 +45,7 @@ Describes the properties of an Azure Rate Card resource.
 | tags             | array of strings | Optional meter tags. This array can be empty.                                                 |
 | category         | string           | Category of the resource.                                                                     |
 | subcategory      | string           | Subcategory of the resource.                                                                 |
-| region           | string           | Region of the id.                                                                             |
+| region           | string           | Region of the ID.                                                                             |
 | unit             | string           | The type of quantity (hours, bytes, etc.)                                                     |
 | includedQuantity | number           | Meter quantity that is included free of charge.                                               |
 | effectiveDate    | string           | The date this meter is in effect.                                                             |

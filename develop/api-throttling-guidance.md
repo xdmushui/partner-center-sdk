@@ -10,10 +10,6 @@ ms.author: vijvala
 
 # API throttling guidance for partners calling Partner Center APIs 
 
-**Applies to**
-
-- Partner Center
-
 Microsoft is implementing API throttling to allow more consistent performance within a time span for partners calling the Partner Center APIs. Throttling limits the number of requests to a service in a time span to prevent overuse of resources. While Partner Center is designed to handle a high volume of requests, if an overwhelming number of requests occur by few partners, throttling helps maintain optimal performance and reliability for all partners.  
 
 Throttling limits vary based on the scenario. For example, if you are performing a large volume of writes, the possibility for throttling is higher than if you are only performing reads.
@@ -32,7 +28,7 @@ The most common causes of throttling of clients include:
 
 ## Best practices to avoid throttling 
  
-Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time, which will also cause requests to be throttled. You should instead leverage change tracking and change notifications. Additionally, you should be able to leverage activity logs for detecting changes, see [Partner Center activity logs](get-a-record-of-partner-center-activity-by-user.md) for more information.  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
+Programming practices such as continuously polling a resource to check for updates and regularly scanning resource collections to check for new or deleted resources are more likely to lead to throttling and will degrade overall performance. Concurrent API calls may lead to high number of requests per unit time, which will also cause requests to be throttled. You should instead use change tracking and change notifications. Additionally, you should be able to use activity logs for detecting changes. For more information, see [Partner Center activity logs](get-a-record-of-partner-center-activity-by-user.md).  We highly recommend partners to consider using the activity log API for more efficiency and to avoid throttling. See also the example of using activity logs, below.
 
 ## Best practices to handle throttling
 
@@ -52,12 +48,12 @@ To use the Retry-after delay, do the following:
 
 3. If the request fails again with a 429 error code, you are still being throttled. Retry with Exponential backoff, use the recommended Retry-After delay and retry the request until it succeeds.
 
-4. If you are using SDK you'll receive an exception with status code 429 when your request is being throttled. Use the RetryAfter property in the exception and retry the request after the time is elapsed.
+4. If you are using the SDK, you'll receive an exception with status code 429 when your request is being throttled. Use the RetryAfter property in the exception and retry the request after the time is elapsed.
 
 
 ## APIs currently impacted by throttling
 
-In the long run, every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the APIs listed below. Partner Center will be collecting the telemetry on each of the APIs and will dynamically adjust the throttling limits. The following table lists the APIs where throttling is currently enforced.  
+In the end, every single Partner Center API that calls the endpoint “api.partnercenter.microsoft.com/” will be throttled. Currently, the throttling limits are only enforced on the APIs listed below. Partner Center will be collecting the telemetry on each of the APIs and will dynamically adjust the throttling limits. The following table lists the APIs where throttling is currently enforced.  
 
 
 |**Operation**|	**Partner Center documentation**|
@@ -71,7 +67,7 @@ In the long run, every single Partner Center API that calls the endpoint “api.
 |{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/registrations|[register a subscription](register-a-subscription.md)|
 |{baseURL}/v1/productupgrades|[create product upgrade entity](create-product-upgrade-entity.md)|
 |{baseURL}/v1/customers/{customer-id}/subscriptions/{subscription-id}/conversions |[convert a trial subscription to paid](convert-a-trial-subscription-to-paid.md)|
-|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by id](get-a-customer-by-id.md)|
+|{baseURL}/v1/customers/{customer-tenant-id}|[get a customer by ID](get-a-customer-by-id.md)|
 |{baseURL}/v1/productUpgrades/eligibility|[get eligibility for product upgrade](get-eligibility-for-product-upgrade.md)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} |[manage subscription](manage-orders.md#manage-a-subscription)|
 |{baseURL}/v1/customers/{customer_id}/subscriptions |[get-all-of-a-customer-s-subscriptions](get-all-of-a-customer-s-subscriptions.md)|

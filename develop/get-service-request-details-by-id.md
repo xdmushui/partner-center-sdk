@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get service request details by ID
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to retrieve the details of an existing customer service request using the service request identifier.
 

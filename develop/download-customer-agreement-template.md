@@ -10,15 +10,11 @@ ms.author: cychua
 
 # Get a download link for the Microsoft Customer Agreement template
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-The **AgreementDocument** resource is currently supported by Partner Center only in the *Microsoft public cloud*. This resource doesn't apply to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+The **AgreementDocument** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 This article describes how to get a link to download the Microsoft Customer Agreement template, based on the customer's country and language.
 
@@ -34,9 +30,9 @@ This article describes how to get a link to download the Microsoft Customer Agre
 
 > [!IMPORTANT]
 >
-> - The Microsoft Customer Agreement is country-specific. When requesting for a link to download the Microsoft Customer Agreement template, Be sure to specify the correct country based on customer's location. or list of supported countries, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+> - The Microsoft Customer Agreement is country-specific. When requesting for a link to download the Microsoft Customer Agreement template, Be sure to specify the correct country based on customer's location. or list of supported countries, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
 >
-> - For some countries, the Microsoft Customer Agreement is available in multiple languages. For best customer experience, pick the language that best match the customer's needs. For list of supported languages, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+> - For some countries, the Microsoft Customer Agreement is available in multiple languages. For best customer experience, pick the language that best match the customer's needs. For list of supported languages, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
 > - This method is only supported with the Microsoft Customer Agreement.
 
 ## .NET
@@ -59,9 +55,9 @@ To retrieve a link to download the Microsoft Customer Agreement template:
 
 4. Fetch the **Document** property.
 
-5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies. The query defaults to *US* if the method isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages). This method is **case-sensitive**.
+5. Call the **ByCountry** method and specify the customer's country to which the agreement template applies. The query defaults to *US* if the method isn't specified. For a list of supported country codes, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages). This method is **case-sensitive**.
 
-6. Call the **ByLanguage** method and specify the language which the agreement template should be localized in. The query defaults to *en-US* if the method isn't specified or the country code specified isn't supported for the country specified. For list of supported language codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
+6. Call the **ByLanguage** method and specify the language that the agreement template should be localized in. The query defaults to *en-US* if the method isn't specified or the country code specified isn't supported for the country specified. For list of supported language codes, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).
 
 7. Call the **Get** or **GetAsync** method.
 
@@ -104,8 +100,8 @@ You can use the following URI parameters with your request:
 | Name                   | Type   | Required | Description                                 |
 |------------------------|--------|----------|---------------------------------------------|
 | agreement-template-id  | string | Yes      | Unique identifier of the agreement type. You can obtain the templateId for Microsoft Customer Agreement by retrieving the agreement metadata for Microsoft Customer Agreement. For more information, see [Get agreement metadata for Microsoft Customer Agreement](./get-customer-agreement-metadata.md). This parameter is **case-sensitive**.|
-| country                | string | No       | Indicates the country to which the agreement template applies. The query defaults to *US* if the parameter isn't specified. For a list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
-| language               | string | No       | Indicates the language in which the agreement template should be localized. The query defaults to *en-US* if the parameter isn't specified or the country code specified in't supported for the country specified. For list of supported country codes, please refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
+| country                | string | No       | Indicates the country to which the agreement template applies. The query defaults to *US* if the parameter isn't specified. For a list of supported country codes, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
+| language               | string | No       | Indicates the language in which the agreement template should be localized. The query defaults to *en-US* if the parameter isn't specified or the country code specified in't supported for the country specified. For list of supported country codes, refer to [List of supported countries and languages](#list-of-supported-countries-and-languages).|
 
 ### Request headers
 

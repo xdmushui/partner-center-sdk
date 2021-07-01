@@ -11,11 +11,7 @@ ms.subservice:  partnercenter-sdk
 
 # Developing for Partner Center for Microsoft National Clouds
 
-**Applies to:**
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partner Center has one set of SDK documentation. However, some functionality might not be available in the versions of Partner Center for Microsoft National Clouds.
 

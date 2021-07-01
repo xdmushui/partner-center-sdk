@@ -1,6 +1,6 @@
 ---
 title: Utility resources
-description: The Partner Center REST API contains many resources which describe general-purpose data models used throughout the SDK.
+description: The Partner Center REST API contains many resources that describe general-purpose data models used throughout the SDK.
 ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,14 +8,9 @@ ms.subservice:  partnercenter-sdk
 
 # Utility resources
 
-**Applies To**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-The Partner Center REST API contains many resources which describe
+The Partner Center REST API contains many resources that describe
 general-purpose data models used throughout the SDK.
 
 ## Address
@@ -38,7 +33,7 @@ market](get-market-specific-validation-data.md).
 | MiddleName   | string | (1, 50)           | The middle name of a contact at the customer's company/organization. This property is optional.  |
 | LastName     | string | (1, 50)           | The last name of a contact at the customer's company/organization.                               |
 | PhoneNumber  | string | n/a               | The phone number of a contact at the customer's company/organization. This property is optional.|
-|PhoneNumber|string|n/a|The phone number of a contact at the customer's company/organization. In customer profile, this property is mandatory for customer’s company/organization located in the following countries: Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA)), India, Brazil, South Africa, Poland, United Arab Emirates, Saudi Arabia, Turkey, Thailand, Vietnam, Myanmar, Iraq, South Sudan and Venezuela. Otherwise this is optional..|
+|PhoneNumber|string|n/a|The phone number of a contact at the customer's company/organization. In customer profile, this property is mandatory for customer’s company/organization located in the following countries: Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA)), India, Brazil, South Africa, Poland, United Arab Emirates, Saudi Arabia, Turkey, Thailand, Vietnam, Myanmar, Iraq, South Sudan, and Venezuela. Otherwise this is optional.|
 
 
 ## Contact
@@ -92,7 +87,7 @@ Describes a specific password and if that password needs to be changed.
 | Property            | Type                          | Description                                                            |
 |---------------------|-------------------------------|------------------------------------------------------------------------|
 | Password            | [SecureString](#securestring) | The password.                                                          |
-| ForceChangePassword | boolean                       | Determines if the password needs to be forcibly changed on next login. |
+| ForceChangePassword | boolean                       | Determines if the password needs to be forcibly changed on next sign-in. |
 
 ## ResourceLinks
 

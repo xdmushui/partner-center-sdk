@@ -1,6 +1,6 @@
 ---
-title: Get a self serve policy by ID
-description: Gets the specified self serve policy using its ID.
+title: Get a self-serve policy by ID
+description: Gets the specified self-serve policy using its ID.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,18 +8,14 @@ author: amitravat
 ms.author: amrava
 ---
 
-# Get a self serve policy by ID
+# Get a self-serve policy by ID
 
-**Applies To**
-
-- Partner Center
-
-Gets the specified self serve policy using its ID.
+Gets the specified self-serve policy using its ID.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
-- A self serve policy ID.
+- A self-serve policy ID.
 
 ## Examples
 
@@ -38,11 +34,11 @@ Use the following path parameters to get the specified product.
 
 | Name                       | Type         | Required | Description                                                     |
 |----------------------------|--------------|----------|-----------------------------------------------------------------|
-| **SelfServePolicy-id**     | **string**   | Yes      | A string that identifies the self serve policy.                 |
+| **SelfServePolicy-id**     | **string**   | Yes      | A string that identifies the self-serve policy.                 |
 
 **Request headers**
 
-- See [Headers](headers.md) for more information.
+- For more information, see [Headers](headers.md).
 
 **Request body**
 
@@ -70,7 +66,7 @@ This method returns the following error codes:
 
 | HTTP Status Code     | Error code   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
-| 404                  | 600039       | Self serve policy not found.                                                     |
+| 404                  | 600039       | Self-serve policy not found.                                                     |
 
 **Response example**
 

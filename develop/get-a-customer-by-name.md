@@ -10,12 +10,7 @@ ms.author: dineshvu
 
 # Get a list of customers filtered by a search field
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets a collection of [Customer](customer-resources.md#customer) resources that match a filter. You can optionally set a page size. You can filter by company name, domain, indirect reseller, or indirect cloud solution provider (CSP).
 

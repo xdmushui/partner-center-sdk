@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Service costs resources
 
-**Applies to:**
-
-- Partner Center
-
 Describes resources related to services purchased by a customer.
 
 ## ServiceCostsSummary
@@ -63,7 +59,7 @@ Describes resources related to services purchased by a customer.
 | orderId                  | string                         | The order identifier.                                                |
 | offerId                  | string                         | The offer identifier.                                                |
 | offerName                | string                         | The offer name.                                                      |
-| resellerMPNId            | string                         | Only used in 2-tier partner scenarios. Refers to the MPN identifier. |
+| resellerMPNId            | string                         | Only used in two-tier partner scenarios. Refers to the MPN identifier. |
 | chargeType               | string                         | The associated charge type.                                          |
 | quantity                 | number                         | The quantity of units used or purchased.                             |
 | unitPrice                | number                         | The price per unit.                                                  |
@@ -90,4 +86,4 @@ Describes resources related to services purchased by a customer.
 | Property             | Type                               | Description                         |
 |----------------------|------------------------------------|-------------------------------------|
 | serviceCostLineItems | [Link](utility-resources.md#link) | The URI to retrieve the line items. |
-| self                 | [Link](utility-resources.md#link) | The self URI.                       |
+| self                 | [Link](utility-resources.md#link) | The self-URI.                       |

@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get started
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The Partner Center SDK includes a managed API and a REST API for partners to use to manage customer, subscription, and order data.
 

@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get a usage summary for all of a customer's subscriptions
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the **CustomerUsageSummary** resource to get a customer's usage of a specific Azure service or resource during the current billing period.
 

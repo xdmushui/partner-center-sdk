@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update a SelfServePolicy
 
-**Applies to:**
-
-- Partner Center
-
-This topic explains how to update a self-serve policy.
+This article explains how to update a self-serve policy.
 
 ## Prerequisites
 
@@ -48,7 +44,7 @@ partnerOperations.SelfServePolicies.ById(policy.id).Put(policy);
 ### Request headers
 
 - A request identifier and correlation identifier are required.
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

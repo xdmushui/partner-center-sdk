@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get a record of Partner Center activity
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article describes how to retrieve a record of operations that was performed by a partner user or application over a period of time.
 
@@ -115,7 +111,7 @@ The following table describes the required key-value pairs:
 
 ### Request headers
 
-- See [Parter Center REST headers](headers.md) for more information.
+- For more information, see [Parter Center REST headers](headers.md).
 
 ### Request body
 

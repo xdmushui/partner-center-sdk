@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get licenses assigned to a user within a customer account
 
-**Applies to:**
-
-- Partner Center
-
 How to get a list of licenses assigned to a user within a customer account. The examples shown here return licenses assigned from group1, the default license group that represents licenses managed by Azure Active Directory. To get licenses assigned from specified license groups, see [Get licenses assigned to a user by license group](get-licenses-assigned-to-a-user-by-license-group.md).
 
 ## Prerequisites
