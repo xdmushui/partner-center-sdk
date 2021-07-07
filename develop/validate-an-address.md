@@ -23,7 +23,7 @@ Credentials as described in [Partner Center authentication](partner-center-authe
 To validate an address, first instantiate a new **Address** object and populate it with the address to validate. Then, retrieve an interface to **Validations** operations from the **IAggregatePartner.Validations** property, and call the **IsAddressValid** method with the address object.
 
 ```csharp
-// IAggregatePartner partnerOperations;
+IAggregatePartner partnerOperations;
 
 // Create an address to validate.
 Address address = new Address()
