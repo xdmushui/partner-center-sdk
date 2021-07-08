@@ -34,8 +34,9 @@ The following release notes are available for new versions of [Microsoft Partner
 ### Billing
 
 * [Invoice line-items](get-invoiceline-items.md) - new attributes added to following APIs:
-  GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems
-  GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems
+
+  * GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems
+  * GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems
 
   New attributes: 
   * productQualifiers
@@ -47,7 +48,10 @@ The following release notes are available for new versions of [Microsoft Partner
 
 
 * [Daily rated usage Line-items](get-invoice-billed-consumption-lineitems.md) – new attributes added to following API: 
-  GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems
+  
+  * GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems
+  
+  New attributes: 
   * hasPartnerEarnedCredit (Only applicable to NCE)
   * creditType (Only applicable to NCE)
   * rateOfCredit (Only applicable to NCE)
@@ -62,8 +66,9 @@ The following release notes are available for new versions of [Microsoft Partner
   * FromSubscriptionId
 
 ### Customer 
-* [Validate an address](validate-an-address.md) – Response is changed from a Boolean to a new model for API: 
-  POST /validations/address
+* [Validate an address](validate-an-address.md) – Response is changed from a Boolean to a new model for API:
+  
+  * POST /validations/address
   
   New response model: 
   * AddressValidationResponse
