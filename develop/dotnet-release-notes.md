@@ -20,22 +20,22 @@ The following release notes are available for new versions of [Microsoft Partner
 ### Common
 * Change on the reference to authentication library – The reference is changed from Azure Active Directory Authentication Library ([ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)) to Microsoft Authentication Library ([MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet))
 
-  Following changes should be made to ensure MSAL runs correctly on your application or .Net sample:
+  Following changes should be made to ensure MSAL runs correctly on your application or .NET sample:
 
-  * Add ‘https://login.microsoftonline.com/common/oauth2/nativeclient’ as RedirectUrl for Mobile and desktop applications
+  * Add `https://login.microsoftonline.com/common/oauth2/nativeclient` as RedirectUrl for Mobile and desktop applications
   * Add **Domain** into UserAuthentication section in your application configuration file. 
 
     Domain is the Azure Active Directory domain or tenant Id where the Azure AD application was created
 
-* [Erro codes](error-codes.md) – New error code added 
+* [Error codes](error-codes.md) – New error code added 
   * 408: Request timeout
   * 504: Gateway timeout 
 
 ### Manage billing
 
 * [Invoice line-items](get-invoiceline-items.md) - new attributes added to following APIs:
-  * GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems
-  * GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems
+  * `GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems`
+  * `GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems`
 
   New attributes: 
   * productQualifiers
@@ -47,7 +47,7 @@ The following release notes are available for new versions of [Microsoft Partner
 
 
 * [Daily rated usage Line-items](get-invoice-billed-consumption-lineitems.md) – new attributes added to following API: 
-  * GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems
+  * `GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems`
   
   New attributes: 
   * hasPartnerEarnedCredit (Only applicable to NCE)
@@ -66,7 +66,7 @@ The following release notes are available for new versions of [Microsoft Partner
 ### Manage customer accounts
 
 * [Validate an address](validate-an-address.md) – Response is changed from a Boolean to a new model for API:
-  * POST /validations/address
+  * `POST /validations/address`
   
   New response model: 
   * AddressValidationResponse
