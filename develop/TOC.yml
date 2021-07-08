@@ -247,8 +247,6 @@
       items: 
       - name: Use asynchronous APIs
         href: get-customer-qualification-asynchronous.md
-      - name: Use synchronous APIs
-        href: get-customer-qualification-synchronous.md
     - name: "Get all of a customer's orders"
       href: get-all-of-a-customer-s-orders.md
     - name: "Get a customer's subscriptions"
@@ -295,8 +293,6 @@
       items:
       - name: Use asynchronous APIs  
         href: update-customer-qualification-asynchronous.md
-      - name: Use synchronous APIs
-        href: update-customer-qualification-synchronous.md
     - name: Update the nickname for a subscription
       href: update-the-nickname-for-a-subscription.md
     - name: "Withdraw a customer's transfer"
