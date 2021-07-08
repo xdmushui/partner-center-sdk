@@ -10,12 +10,7 @@ ms.author: amrava
 
 # Get a list of subscriptions by order
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets a collection of [Subscription](subscription-resources.md) resources that correspond to a given order.
 

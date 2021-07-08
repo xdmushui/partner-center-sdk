@@ -8,10 +8,6 @@ ms.date: 05/29/2020
 
 # Partner security requirements resources
 
-**Applies to:**
-
-- Partner Center
-
 This article helps you understand multi-factor authentication (MFA) adoption details, to help your organization meet partner security requirement status. 
 
 ## Portal request without MFA
@@ -28,7 +24,7 @@ Indicate a user who accesses Partner Center portal without MFA authentication.
 
 ## API request summarized by Application
 
-A summary of API request made by APP + User credential, aggregated by request date and Application Id.
+A summary of API request made by APP + User credential, aggregated by request date and Application ID.
 
 | Property                            | Type            | Description               |
 |-------------------------------------|-----------------|---------------------------|

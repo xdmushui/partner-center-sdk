@@ -1,16 +1,12 @@
 ---
 title: CSP Customer Storefront Builder Quick Start Guide
-description: Create an online marketplace to sell cloud solution provider (CSP) offers using the CSP Customer Storefront Builder.
+description: Create an online marketplace to sell cloud solution provider (CSP) offers by using the CSP Customer Storefront Builder.
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ---
 
 # CSP Customer Storefront Builder Quick Start Guide
-
-**Applies to:**
-
-- Partner Center
 
 Create an online marketplace to sell cloud solution provider (CSP) offers by using the CSP Customer Storefront Builder.
 
@@ -41,7 +37,7 @@ The CSP Customer Storefront Builder is intended as a quick way to create a websi
 
 - This CSP Customer Storefront Builder currently provides the ability to configure payment to a PayPal Pro/PayU Money (for India) account. If partners need to change the payment processor, they will need to change the code to support their preferred payment method.
 
-- Any payment related information added in the CSP Customer Storefront Builder isn't stored or maintained in Partner Center.
+- Any payment-related information added in the CSP Customer Storefront Builder isn't stored or maintained in Partner Center.
 
 - PayPal payment configuration will work in any geographies where PayPal is available. PayPal availability and support is solely controlled by PayPal, and may be discontinued at any time by PayPal.
 
@@ -73,7 +69,7 @@ Deployment options:
 
 No development skills are required to customize a storefront.
 
-Log in with your Partner Center admin credentials to configure:
+Sign in with your Partner Center admin credentials to configure:
 
 - **Branding**: company name, logo, contacts, and more.
 

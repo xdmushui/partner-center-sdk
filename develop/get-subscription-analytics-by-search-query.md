@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get subscription analytics information filtered by a search query
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to get subscription analytics information for your customers filtered by a search query.
 

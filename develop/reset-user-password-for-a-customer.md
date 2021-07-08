@@ -1,6 +1,6 @@
 ---
 title: Reset user password for a customer
-description: Resetting a password is very similar to updating other details in an existing user account for your customer.
+description: Resetting a password is similar to updating other details in an existing user account for your customer.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -10,11 +10,7 @@ ms.author: dineshvu
 
 # Reset user password for a customer
 
-**Applies To**
-
-- Partner Center
-
-Resetting a password is very similar to updating other details in an existing user account for your customer.
+Resetting a password is similar to updating other details in an existing user account for your customer.
 
 ## Prerequisites
 

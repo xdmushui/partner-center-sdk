@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Relationships resources
 
-**Applies To**
-
-- Partner Center
-
 Describes resources related to relationships.
 
 ## PartnerRelationship

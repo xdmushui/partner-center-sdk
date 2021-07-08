@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update a list of devices with a policy
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to update a list of devices with a configuration policy for the specified customer.
 

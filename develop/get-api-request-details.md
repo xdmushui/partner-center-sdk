@@ -10,9 +10,7 @@ ms.author: cychua
 
 # Get App and User API requests
 
-Applies to:
-
-- Partner Center API
+**Applies to**: Partner Center API
 
 This article explains how to obtain a list of all partner user requests within a tenant using REST APIs.
 
@@ -33,7 +31,7 @@ This article explains how to obtain a list of all partner user requests within a
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

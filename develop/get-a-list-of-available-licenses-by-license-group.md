@@ -10,10 +10,6 @@ ms.author: amrava
 
 # Get a list of available licenses by license group
 
-**Applies To**
-
-- Partner Center
-
 How to get a list of licenses for the specified license groups available to users of the specified customer.
 
 ## Prerequisites

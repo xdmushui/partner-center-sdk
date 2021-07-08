@@ -11,12 +11,7 @@ ms.author: amrava
 
 # Get a list of availabilities for a SKU (by customer)
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the following methods to get a collection of availabilities for a specified product and SKU available to a particular customer.
 

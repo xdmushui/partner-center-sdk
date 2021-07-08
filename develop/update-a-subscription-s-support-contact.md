@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update a subscription's support contact
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to update a subscription's support contact to one of the partner's value added resellers.
 

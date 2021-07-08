@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Get licenses assigned to a user by license group
 
-**Applies To**
-
-- Partner Center
-
 How to get a list of user assigned licenses for the specified license groups.
 
 ## Prerequisites
@@ -58,7 +54,7 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 
 ### URI parameter
 
-Use the following path and query parameters to identify the customer, user and license groups.
+Use the following path and query parameters to identify the customer, user, and license groups.
 
 | Name            | Type   | Required | Description                                                                                                                                                                                                                                                           |
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

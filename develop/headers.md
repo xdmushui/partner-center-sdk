@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Partner Center REST and response headers supported by the Partner Center REST API 
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The following HTTP request and response headers are supported by the Partner Center REST API. Not all API calls accept all headers.
 

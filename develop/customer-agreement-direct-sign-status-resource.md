@@ -10,17 +10,11 @@ ms.author: v-aarzh
 
 # Direct signing (direct acceptance) status of a customer agreement
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 The **DirectSignedCustomerAgreementStatus** resource is currently supported by Partner Center only in the Microsoft public cloud.
-
-This resource is *not applicable* to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
 
 The **DirectSignedCustomerAgreementStatus** resource represents the status of the direct acceptance of a customer agreement.
 

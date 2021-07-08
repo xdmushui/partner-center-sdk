@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Cancel software purchases
 
-**Applies to:**
-
-- Partner Center
-
 You can use the Partner Center APIs to cancel software subscriptions and perpetual software purchases (as long as those purchases were made within the cancellation window from the purchase date). You don't need to create a support ticket to make such cancellations, and can use the following self-service methods instead.
 
 ## Prerequisites
@@ -111,7 +107,7 @@ MS-CorrelationId: 1438ea3d-b515-45c7-9ec1-27ee0cc8e6bd
 
 If successful, this method returns the order with canceled line items.
 
-The order status will be marked as either **cancelled** if all the line items in the order are cancelled, or **completed** if not all line items in the order are canceled.
+The order status will be marked as either **cancelled** if all the line items in the order are canceled, or **completed** if not all line items in the order are canceled.
 
 ### Response success and error codes
 

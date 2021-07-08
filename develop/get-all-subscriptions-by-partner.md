@@ -10,14 +10,9 @@ ms.author: rbars
 
 # Get a customer's subscriptions by partner MPN ID
 
-**Applies To**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-How to get a list of subscriptions provided by a given partner to a specified customer.
+How to get a list of subscriptions provided by a given Microsoft Partner Network (MPN) partner to a specified customer.
 
 ## Prerequisites
 
@@ -25,7 +20,7 @@ How to get a list of subscriptions provided by a given partner to a specified cu
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-- A partner Microsoft Partner Network (MPN) identifier.
+- A partner MPN identifier.
 
 ## C\#
 

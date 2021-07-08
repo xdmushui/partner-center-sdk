@@ -8,9 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Accept a transfer of subscriptions for a customer using Partner Center REST APIs
 
-**Applies to:**
-
-- Partner Center
+This article covers how to use the REST API in Partner Center to accept the transfer of subscriptions for a customer. The example includes REST syntax, headers, and REST responses.
 
 ## Prerequisites
 

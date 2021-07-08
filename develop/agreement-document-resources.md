@@ -10,15 +10,11 @@ ms.author: v-aarzh
 
 # Agreement document resources supported by Partner Center in the Microsoft public cloud
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-The **AgreementDocument** resource is currently supported by Partner Center only in the *Microsoft public cloud*. This resource not applicable to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+The **AgreementDocument** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 The **AgreementDocument** resource represents a Microsoft agreement document that is available for preview and download.
 

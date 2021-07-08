@@ -10,10 +10,6 @@ ms.author: dineshvu
 
 # Remove a reseller relationship with a customer
 
-**Applies To**
-
-- Partner Center
-
 Remove a reseller relationship with a customer that you no longer have transactions with.
 
 ## Prerequisites

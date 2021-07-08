@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # License resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Describes resources related to licenses.
 
@@ -68,7 +64,7 @@ Describes product details.
 |----------------|------------------|-----------------------------------------------------|
 | id             | string           | The product identifier.                             |
 | name           | string           | The user principal identifier.                      |
-| skuPartNumber  | string           | The SKU part number name for the product. For example, for Office 365 Plan E3, this value is `EnterprisePack`. This property can be used in place of id if the id isn't available.                |
+| skuPartNumber  | string           | The SKU part number name for the product. For example, for Office 365 Plan E3, this value is `EnterprisePack`. This property can be used in place of ID if the ID isn't available.                |
 | targetType     | string           | The target type of the product. This property identifies whether the product is applicable to a `User` or a `Tenant`.                                                                    |
 | licenseGroupId | string           | Identifies via a group identifier the authority or service that manages the productSku license. Products are segregated under license groups for better manageability.<br/><br/>                                                                                     `group1` - All products whose licenses can be managed by Azure Active Directory (AAD).<br/><br/>                                            `group2` - Minecraft product licenses.                                         |
 

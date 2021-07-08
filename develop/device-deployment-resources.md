@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Device deployment resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 The following resources are related to device deployment.
 

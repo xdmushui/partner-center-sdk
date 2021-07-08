@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get usage data for subscription by meter
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the **MeterUsageRecord** resource collection to get meter usage records of a customer for specific Azure services or resources during the current billing period. This resource collection represents an aggregated total for each meter for the current billing cycle, across your entire Azure plan.
 

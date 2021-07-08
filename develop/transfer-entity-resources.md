@@ -1,6 +1,6 @@
 ---
 title: TransferEntity resources
-description: A partner creates a transfer when a customer wants his subscription with the partner to be transferred to another partner.
+description: A partner creates a transfer when a customer wants their subscription with the partner to be transferred to another partner.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # TransferEntity resources
 
-**Applies to:**
-
-- Partner Center
-
-A partner creates a transfer when a customer wants his subscription with the partner to be transferred to another partner.
+A partner creates a transfer when a customer wants their subscription with the partner to be transferred to another partner.
 
 ## TransferEntity
 
@@ -82,8 +78,8 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of order error
 | ServiceException | 800003 | Unexpected service error. |
 | InvalidOfferId | 800004 | Invalid offer ID. |
 | CreateOrderError | 800005 | Create order is not successful. |
-| MpnIdNotFound | 800015 | MPN Id is not found. |
-| NotValidIndirectResellerMpnId | 800016 | MPN Id is not a valid Indirect Reseller. |
+| MpnIdNotFound | 800015 | MPN ID is not found. |
+| NotValidIndirectResellerMpnId | 800016 | MPN ID is not a valid Indirect Reseller. |
 | TransferIdNotFound | 900100   | Transfer request not found.   |
 | TransferNotAllowedIfStatusIsInProgress | 900101 | The transfer request is already in progress.|
 | TransferNotAllowedIfStatusIsCompleted | 900102 | The transfer request is already complete.|

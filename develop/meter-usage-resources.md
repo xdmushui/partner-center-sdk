@@ -9,17 +9,13 @@ ms.subservice:  partnercenter-sdk
 
 # Meter usage record resource
 
-**Applies to:**
-
-- Partner Center
-
 You can use the **MeterUsageRecord** resource to describe the estimated monetary cost of a subscription's meter level usage in the current billing cycle.
 
 ## MeterUsageRecord
 
 | Property         | Type               | Description                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SubscriptionId   | string             | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. For Microsoft Azure (MS-AZR-0145P) subscriptions,, this value is the commerce subscription identifier. For Azure plan subscription resources, this value is the Azure plan identifier. |
+| SubscriptionId   | string             | A GUID corresponding to the identifier of a Partner Center [subscription resource](subscription-resources.md#subscription), which represents a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan. For Microsoft Azure (MS-AZR-0145P) subscriptions, this value is the commerce subscription identifier. For Azure plan subscription resources, this value is the Azure plan identifier. |
 | MeterId          | string             | Gets or sets the meter identifier.                                                                                                                                                                                                                                                                                                                                                                  |
 | MeterName        | string             | Gets or sets the meter name.                                                                                                                                                                                                                                                                                                                                                                        |
 | Category         | string             | Gets or sets the Azure resource category.                                                                                                                                                                                                                                                                                                                                                           |

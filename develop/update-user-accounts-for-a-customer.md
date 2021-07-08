@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Update user accounts for a customer
 
-**Applies To**
-
-- Partner Center
-
 Update details in an existing user account for your customer.
 
 ## Prerequisites

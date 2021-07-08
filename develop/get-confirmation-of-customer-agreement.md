@@ -10,15 +10,11 @@ ms.author: amrava
 
 # Get confirmation of customer acceptance of Microsoft Customer Agreement
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-The **Agreement** resource is currently supported by Partner Center only in the *Microsoft public cloud*. This resource doesn't apply to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+The **Agreement** resource is currently supported by Partner Center only in the Microsoft public cloud.
 
 This article explains how you can retrieve confirmation(s) of a customer's acceptance of the Microsoft Customer Agreement.
 
