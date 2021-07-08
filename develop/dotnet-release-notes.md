@@ -31,10 +31,9 @@ The following release notes are available for new versions of [Microsoft Partner
   * 408: Request timeout
   * 504: Gateway timeout 
 
-### Billing
+### Manage billing
 
 * [Invoice line-items](get-invoiceline-items.md) - new attributes added to following APIs:
-
   * GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems
   * GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems
 
@@ -48,7 +47,6 @@ The following release notes are available for new versions of [Microsoft Partner
 
 
 * [Daily rated usage Line-items](get-invoice-billed-consumption-lineitems.md) – new attributes added to following API: 
-  
   * GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems
   
   New attributes: 
@@ -57,7 +55,7 @@ The following release notes are available for new versions of [Microsoft Partner
   * rateOfCredit (Only applicable to NCE)
 
 
-### Subscription Manage 
+### Manage orders
 
 * [Subscription Resources](subscription-resources.md) – New property added. 
   * CancellationAllowedUntilDate  - (Only applicable to NCE)
@@ -65,9 +63,9 @@ The following release notes are available for new versions of [Microsoft Partner
 * Transition Resources (Only applicable to NCE) – New property added 
   * FromSubscriptionId
 
-### Customer 
+### Manage customer accounts
+
 * [Validate an address](validate-an-address.md) – Response is changed from a Boolean to a new model for API:
-  
   * POST /validations/address
   
   New response model: 
