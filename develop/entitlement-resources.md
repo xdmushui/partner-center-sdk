@@ -93,7 +93,7 @@ Represents the entity returned upon invocation of the Azure Reserved Instance ar
 |   Property   |           Type           |                          Description                          |
 |--------------|--------------------------|---------------------------------------------------------------|
 |     type     |          string          |                     The type of artifact.                     |
-| reservations | IEnumerable<Reservation> | Indicates the Azure resource or reservation order identifier. |
+| reservations | `IEnumerable<Reservation>` | Indicates the Azure resource or reservation order identifier. |
 
 ## Reservation
 
@@ -146,7 +146,7 @@ Represents an individual virtual machine reservation.
 |   reservationId   |             string             |                                         The ID of the reservation.                                         |
 |     scopeType     |             string             |                     The type of scope associated with the virtual machine reservation.                     |
 |    displayName    |             string             |                                    The display name of the reservation.                                    |
-|   appliedScopes   |      IEnumerable<string>       | The list of applied scopes associated with the reservation. (Only available when scopeType isn't shared.) |
+|   appliedScopes   |      `IEnumerable<string>`       | The list of applied scopes associated with the reservation. (Only available when scopeType isn't shared.) |
 |     quantity      |              int               |                             The number of virtual machines in the reservation.                             |
 |  expiryDateTime   | string in UTC date-time format |                                    The expiry date of the reservation.                                     |
 | effectiveDateTime | string in UTC date-time format |                                   The effective date of the reservation.                                   |
