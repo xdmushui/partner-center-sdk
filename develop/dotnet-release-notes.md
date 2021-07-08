@@ -25,7 +25,7 @@ The following release notes are available for new versions of [Microsoft Partner
   * Add `https://login.microsoftonline.com/common/oauth2/nativeclient` as RedirectUrl for Mobile and desktop applications
   * Add **Domain** into UserAuthentication section in your application configuration file. 
 
-    Domain is the Azure Active Directory domain or tenant Id where the Azure AD application was created
+    Domain is the Azure Active Directory domain or tenant ID where the Azure AD application was created
 
 * [Error codes](error-codes.md) – New error code added 
   * 408: Request timeout
