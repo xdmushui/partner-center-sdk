@@ -10,6 +10,67 @@ ms.subservice:  partnercenter-sdk
 
 The following release notes are available for new versions of [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter). You can find [.NET SDK samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) on GitHub. You can find the [Partner Center .NET API reference](/dotnet/api/?view=partnercenter-dotnet-latest&preserve-view=true) in the .NET API Browser.
 
+## Version 2.0.1
+
+[Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/2.0.1) v2.0.1 is now general availability. Updated [GitHub samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) are also available. The following changes are included in this version:
+
+> [!NOTE]
+> Some of changes introduced as part of New Commerce Experiences (“NCE”) which are currently available based on invitation only to partners who are part of the M365/D365 new commerce experience technical preview. Partners who are not part of New commerce private preview should not notice impacts and should be backward compatible.
+
+### Common
+* Change on the reference to authentication library – The reference is changed from Azure Active Directory Authentication Library ([ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)) to Microsoft Authentication Library ([MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet))
+
+  Following changes should be made to ensure MSAL runs correctly on your application or .Net sample:
+
+  * Add ‘https://login.microsoftonline.com/common/oauth2/nativeclient’ as RedirectUrl for Mobile and desktop applications
+  * Add **Domain** into UserAuthentication section in your application configuration file. 
+
+    Domain is the Azure Active Directory domain or tenant Id where the Azure AD application was created
+
+* [Erro codes](error-codes.md) – New error code added 
+  * 408: Request timeout
+  * 504: Gateway timeout 
+
+### Billing
+
+* [Invoice line-items](get-invoiceline-items.md) - new attributes added to following APIs:
+  GET /invoices/{invoice-id}/lineitems?provider={provider}&invoicelineitemtype=billinglineitems
+  GET /invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems
+
+  New attributes: 
+  * productQualifiers
+  * subscriptionStartDate
+  * subscriptionEndDate
+  * referenceId
+  * creditReasonCode  (Only applicable to NCE)
+  * promotionId 
+
+
+* [Daily rated usage Line-items](get-invoice-billed-consumption-lineitems.md) – new attributes added to following API: 
+  GET /invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=usagelineitems
+  * hasPartnerEarnedCredit (Only applicable to NCE)
+  * creditType (Only applicable to NCE)
+  * rateOfCredit (Only applicable to NCE)
+
+
+### Subscription Manage 
+
+* [Subscription Resources](subscription-resources.md) – New property added. 
+  * CancellationAllowedUntilDate  - (Only applicable to NCE)
+
+* Transition Resources (Only applicable to NCE) – New property added 
+  * FromSubscriptionId
+
+### Customer 
+* [Validate an address](validate-an-address.md) – Response is changed from a Boolean to a new model for API: 
+  POST /validations/address
+  
+  New response model: 
+  * AddressValidationResponse
+
+* Customer’s qualification synchronous API is deprecated.  
+
+
 ## Version 1.17.0
 
 [Microsoft Partner Center .NET SDK](https://www.nuget.org/packages/Microsoft.Store.PartnerCenter/1.17.0) v1.17.0 is now general availability. Updated [GitHub samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) are also available. The following changes are included in this version:
