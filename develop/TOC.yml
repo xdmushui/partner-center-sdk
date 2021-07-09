@@ -406,6 +406,8 @@
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
       href: update-autorenew-for-an-azure-marketplace-subscription.md
+  - name: Manage payouts
+    href: manage-payouts.md
   - name: Provide support
     href: provide-support.md
     items:
