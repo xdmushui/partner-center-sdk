@@ -146,7 +146,7 @@ Sample code showing how the API can be used for payment and transaction history 
 ### Sample code notes
 
 - Configuration of Client secrets and Certificates as discussed in the Authentication: Two options section of [How to create a service principal in the Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal) is not required.
-- Accounts with multi-factor authentication (MFA) are not currently supported and will cause an error.
+- Accounts with multifactor authentication (MFA) are not currently supported and will cause an error.
 - Payout API only supports user/password-based credentials.
 
 ## Next steps
