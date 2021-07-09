@@ -14,17 +14,7 @@ This article explains how you can access payout data through the Payout Service 
 
 ## Available APIs
 
-You can view all available APIs at [Partner Payouts](/rest/api/partner-center/partner-payouts) section of Microsoft's Partner API Docs site. The following actions are available.
-
-- Transaction history export actions:
-  - [Post](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/transactionhistory) a new request
-  - [Get](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/transactionhistoryAll) an existing request
-  - [Delete](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/transactionhistory2) an existing request
-
-- Payments export actions:
-  - [Post](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/payments) a new request
-  - [Get](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/paymentsAll) an existing request
-  - [Delete](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/payments2) an existing request
+See all available APIs at [Partner Payouts](/rest/api/partner-center/partner-payouts).
 
 ## Prerequisites
 
@@ -156,7 +146,7 @@ Sample code showing how the API can be used for payment and transaction history 
 ### Sample code notes
 
 - Configuration of Client secrets and Certificates as discussed in the Authentication: Two options section of [How to create a service principal in the Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal) is not required.
-- Accounts with multi-factor authentication (MFA) are not currently supported and will cause an error.
+- Accounts with multifactor authentication (MFA) are not currently supported and will cause an error.
 - Payout API only supports user/password-based credentials.
 
 ## Next steps
