@@ -147,7 +147,7 @@ This section provides instruction on how to set up the required API permissions.
 
 10. In the **Authentication** section, make sure the **Allow public client flows** option is set to **Yes**.
 
-   :::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
+    :::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
 
 ## Run the sample code in Visual Studio
 
