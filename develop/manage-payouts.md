@@ -14,7 +14,7 @@ This article explains how you can access payout data through the Payout Service 
 
 ## Available APIs
 
-You can view all available APIs at [Partner Payouts](https://apidocs.microsoft.com/services/partnerpayouts) section of Microsoft's Partner API Docs site. The following actions are available.
+You can view all available APIs at [Partner Payouts](/rest/api/partner-center/partner-payouts) section of Microsoft's Partner API Docs site. The following actions are available.
 
 - Transaction history export actions:
   - [Post](https://apidocs.microsoft.com/services/partnerpayouts#/ExportRequests/transactionhistory) a new request
@@ -141,11 +141,11 @@ This section provides instruction on how to set up the required API permissions.
 
    :::image type="content" source="./images/manage-payouts/api-permissions.png" alt-text="Screenshot showing the toggle for Admin Consent on the API permissions screen.":::
 
-You can verify that Admin consent is enabled in the Admin consent status screen.
+   Verify that Admin consent is enabled in the Admin consent status screen.
 
    :::image type="content" source="./images/manage-payouts/admin-consent-verification.png" alt-text="Screenshot showing the Admin consent status screen":::
 
-9. In the **Authentication** section, make sure the **Allow public client flows** option is set to **Yes**.
+10. In the **Authentication** section, make sure the **Allow public client flows** option is set to **Yes**.
 
    :::image type="content" source="./images/manage-payouts/allow-public-client-flows.png" alt-text="Screenshot showing the Authentication screen with Allow public client flows set to Yes.":::
 
