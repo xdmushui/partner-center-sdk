@@ -1,7 +1,7 @@
 ---
 title: Validate an address
 description: How to validate an address using the address validation API.
-ms.date: 09/17/2019
+ms.date: 05/17/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
