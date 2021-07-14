@@ -19,8 +19,6 @@ You can use the following methods to get a collection of details unbilled commer
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-- An invoice identifier. This identifies the invoice for which to retrieve the line items.
-
 ## C\#
 
 To get the line items for the specified invoice:
