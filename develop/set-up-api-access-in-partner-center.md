@@ -43,7 +43,7 @@ This section describes how to set up a primary Partner account and an integratio
 
 1. Sign in to Partner Dashboard with a global admin account (your primary Partner account.)
 
-2. From the **Settings** menu (gear icon), choose **Partner settings**.
+2. From the **Settings** menu (gear icon), choose **Account settings**.
 
 3. Choose **Integration sandbox** tab.
 
@@ -64,7 +64,7 @@ After your account is set up, you must enable API access before you can use the 
 
 1. Sign into Partner Dashboard using a global admin account.
 
-2. From the **Settings** menu (gear icon), select **Partner settings**.
+2. From the **Settings** menu (gear icon), select **Account settings**.
 
 3. On the **Account settings** page, choose **App management**.
 
@@ -82,7 +82,7 @@ You can write code and test code in the integration sandbox. You'll need the fol
 
 | Item name | Item location |
 | --------- | ------------- |
-| App ID / Client ID | From the **Settings** menu (gear icon), select **Partner settings**. On the **Account settings** page, select **App Management**. The App ID/Client ID is listed as the **Registered application App ID**. |
+| App ID / Client ID | From the **Settings** menu (gear icon), select **Account settings**. On the **Account settings** page, select **App Management**. The App ID/Client ID is listed as the **Registered application App ID**. |
 | Key | If you created a web app in the section [Enable API access](#enable-api-access), this is the key that you saved in step 5. |
 | Domain | The domain for the integration sandbox. |
 
