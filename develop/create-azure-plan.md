@@ -1,7 +1,7 @@
 ---
 title: Create an Azure plan
 description: Developers can purchase, create, and manage Azure plans programmatically using Partner Center APIs.
-ms.date: 01/02/2020
+ms.date: 07/21/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: mowrim
@@ -10,7 +10,7 @@ ms.author: mowrim
 
 # Create an Azure plan
 
-You can purchase, create, and manage an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure (MS-AZR-0145P) subscription. You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-azure-plan), then [create and submit an order](#create-and-submit-an-order).
+You can purchase, create, and manage an Azure plan using the Partner Center APIs. The process is similar to creating a Microsoft Azure ([MS-AZR-0145P](https://go.microsoft.com/fwlink/p/?linkid=2164140)) subscription. You must [get the catalog item for the Azure plan](#get-the-catalog-item-for-azure-plan), then [create and submit an order](#create-and-submit-an-order).
 
 ## Prerequisites
 
