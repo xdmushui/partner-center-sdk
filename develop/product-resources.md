@@ -139,7 +139,6 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 ## AttestationProperties
 
 Represents an attestation type and if it is required for purchase.
-Represents an attestation type and if it is required for purchase.
 
 | Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
