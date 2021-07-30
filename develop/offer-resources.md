@@ -87,7 +87,7 @@ A product or service that may have more than one offer associated with it, each 
 
 ## AttestationProperties
 
-Represents a term for which the availability can be purchased.
+Represents an attestation type and if it is required for purchase.
 
 | Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
