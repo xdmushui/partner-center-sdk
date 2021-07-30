@@ -240,6 +240,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 |     orderGroup      |           string            |    No    |                                                                   A group to indicate which items can be placed together.                                                                   |
 |        error        |           Object            |    No    |                                                                     Applied after cart is created if there is an error.                                                                      |
 |     renewsTo        | Array of objects            |    No    |                                                    An array of [RenewsTo](cart-resources.md#renewsto) resources.                                                                            |
+|     AttestationAccepted        | Boolean            |    No    |                                                   Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                             |
 
 This table describes the [RenewsTo](cart-resources.md#renewsto) properties in the request body.
 
