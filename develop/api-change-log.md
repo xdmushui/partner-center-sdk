@@ -19,8 +19,8 @@ Check here for changes to Partner Center REST APIs.
 
 Currently, the Partner Center API has GET and PUT qualifications to verify Education customers’ eligibility. There will be no changes to the GET Qualification API. However, we’ve added a return case to the PUT Qualification API.
 
-- GET - doesn't change. [Current API article](get-a-customer-s-qualification.md)
-- PUT - return case will be added. [Current API article](update-a-customer-s-qualification.md)
+- GET - doesn't change.
+- PUT - return case will be added.
 
 These APIs will be retired at the end of February 2021, to be replaced by new APIs as described below.
 

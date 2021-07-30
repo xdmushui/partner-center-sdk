@@ -10,13 +10,8 @@ ms.author: sakhanda
 
 # Get invoice billed commercial consumption line items
 
-**Applies to:**
-
-- Partner Center
-
 You can use the following methods to get a collection of details for commercial consumption invoice line items (also known as closed daily rated usage line items) for a specified invoice.
 
-This API also supports **azure** provider types for Microsoft Azure (MS-AZR-0145P) subscriptions. This means this API is a backward-compatible feature.
 
 ## Prerequisites
 
@@ -233,6 +228,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -290,6 +286,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0.1999968000511991808131,
             "rateOfPartnerEarnedCredit": 0,
+            "rateOfCredit": 1,
+            "creditType": "Azure Credit Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -409,7 +407,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0.1835431430074643112595,
             "rateOfPartnerEarnedCredit": 0.15,
-
+            "rateOfCredit": 0.15,
+            "creditType": "Partner Earned Credit Applied",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }

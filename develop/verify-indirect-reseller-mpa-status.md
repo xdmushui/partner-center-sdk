@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Verify an indirect reseller's Microsoft Partner Agreement signing status
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud for US Government
 
 You can verify whether an indirect reseller has signed the Microsoft Partner Agreement using their Microsoft Partner Network (MPN) ID (PGA/PLA) or Cloud Solution Provider (CSP) tenant ID (Microsoft ID). You can use one of these identifiers to check the Microsoft Partner Agreement signing status using the **AgreementStatus** API.
 
@@ -209,7 +206,7 @@ Connection: close
 }
 ```
 
-#### CSP Indirect Reseller MPN Id (PGA/PLA) is either invalid or not migrated from Partner Membership Center to Partner Center
+#### CSP Indirect Reseller MPN ID (PGA/PLA) is either invalid or not migrated from Partner Membership Center to Partner Center
 
 The following example response is returned when Indirect reseller MPN ID (PGA/PLA) passed is either invalid or it is not migrated from Partner Membership Center to Partner Center. [Learn More](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 
@@ -235,7 +232,7 @@ Connection: close
 
 #### CSP Indirect Provider region and CSP Indirect Reseller region does not match
 
-The following example response is returned when region of Indirect reseller MPN ID (PGA/PLA) doesn't match with region of the Indirect Provider. [Learn more](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq) about CSP Regions.
+The following example response is returned when region of Indirect reseller MPN ID (PGA/PLA) doesn't match with region of the Indirect Provider. [Learn more](/partner-center/mpa-indirect-provider-faq) about CSP Regions.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -259,7 +256,7 @@ Connection: close
 
 #### CSP Indirect Reseller account exists in Partner Center but hasn't signed the MPA
 
-The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+The following example response is returned when CSP Indirect Reseller account in Partner Center hasn't signed the MPA. [Learn More](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -283,7 +280,7 @@ Connection: close
 
 #### No CSP Indirect Reseller account is associated with the given MPN ID
 
-The following example response is returned when Partner Center can recognize the MPN ID (PGA/PLA) passed in the request but there is no CSP enrollment associated to the given MPN ID (PGA/PLA). [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+The following example response is returned when Partner Center can recognize the MPN ID (PGA/PLA) passed in the request but there is no CSP enrollment associated to the given MPN ID (PGA/PLA). [Learn More](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -329,7 +326,7 @@ Connection: close
 
 #### No MPA found with the given Tenant ID
 
-The following example response is returned when Partner Center can't find any MPA signature with the given Tenant ID. [Learn More](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+The following example response is returned when Partner Center can't find any MPA signature with the given Tenant ID. [Learn More](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request

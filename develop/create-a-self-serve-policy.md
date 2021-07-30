@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Create a SelfServePolicy
 
-**Applies to:**
-
-- Partner Center
-
-This topic explains how to create a new self-serve policy.
+This article explains how to create a new self-serve policy.
 
 ## Prerequisites
 
@@ -75,7 +71,7 @@ For an example, see the following:
 ### Request headers
 
 - A request ID and correlation ID are required.
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

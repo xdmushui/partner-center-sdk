@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Partner Center REST API reference to REST URLs, REST headers, REST resources, and REST events
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 ## Partner Center REST API
 
@@ -25,10 +20,13 @@ For more information about what the API can do, including sample code, see the [
 
 Before you begin coding, read the [Get started](get-started.md) topic. This article contains information about setting up your test and production accounts, getting authentication working, and finding the sample code.
 
+For a reference guide explaining each API, see [Partner Center REST API](/rest/api/partner-center-rest/).
+
 ## Topics
 
 | Topic | Description |
 | ----- | ----------- |
+| [Partner Center REST API](/rest/api/partner-center-rest/) | Reference of each REST API available for Partner Center. |
 | [Partner Center REST URLs](partner-center-rest-urls.md) | Defines the REST API endpoints for different versions of Partner Center. |
 | [Partner Center REST headers](headers.md) | Defines the request and response headers used by the REST API. |
 | [Partner Center REST resources](partner-center-rest-resources.md) | Defines the JSON constructs that represent the objects needed to use the REST API. |

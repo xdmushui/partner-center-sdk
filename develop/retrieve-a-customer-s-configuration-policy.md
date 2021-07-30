@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Retrieve a customer's configuration policy
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to retrieve the specified configuration policy for the specified customer.
 

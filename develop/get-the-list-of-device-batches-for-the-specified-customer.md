@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get a list of device batches for the specified customer
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to retrieve a collection of device batches for the specified customer.
 

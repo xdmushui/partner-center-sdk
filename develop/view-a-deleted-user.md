@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # View deleted users for a customer
 
-**Applies To**
-
-- Partner Center
-
 Gets a list of deleted CustomerUser resources for a customer by customer ID. You can optionally set a page size. You must supply a filter.
 
 ## Prerequisites
@@ -22,7 +18,7 @@ Gets a list of deleted CustomerUser resources for a customer by customer ID. You
 
 ## What happens when you delete a user account?
 
-The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. If you want to restore a deleted user account within the thirty day window, see [Restore a deleted user for a customer](restore-a-user-for-a-customer.md). Once deleted and marked "inactive", the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)). To get a list of deleted users that have not yet been purged, you must query for user accounts that have been set to inactive.
+The user state is set to "inactive" when you delete a user account. It remains that way for 30 days, after which the user account and its associated data are purged and made unrecoverable. If you want to restore a deleted user account within the 30-day window, see [Restore a deleted user for a customer](restore-a-user-for-a-customer.md). Once deleted and marked "inactive", the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)). To get a list of deleted users that have not yet been purged, you must query for user accounts that have been set to inactive.
 
 ## C\#
 

@@ -1,16 +1,12 @@
 ---
-title: Get transfer details by id
+title: Get transfer details by ID
 description: How to get details of a transfer of subscriptions for a customer.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Get transfer details by id
-
-**Applies to:**
-
-- Partner Center
+# Get transfer details by ID
 
 ## Prerequisites
 

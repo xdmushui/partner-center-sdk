@@ -8,16 +8,13 @@ ms.subservice:  partnercenter-sdk
 
 # Device deployment
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 The Partner Center APIs provide access to zero-touch deployment features so you can simplify secure device setup for your customers.
 
 ## Configuration policies
 
-Topics about how to add, delete, update and retrieve device configuration policies:
+Topics about how to add, delete, update, and retrieve device configuration policies:
 
 - [Create a new configuration policy for the specified customer](create-a-new-configuration-policy-for-the-specified-customer.md)
 - [Delete a configuration policy for the specified customer](delete-a-configuration-policy-for-the-specified-customer.md)

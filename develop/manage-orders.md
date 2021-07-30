@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Manage orders
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud for US Government
 
 This section describes the ways that Cloud Solution Provider partners can use Partner Center to programmatically manage customer orders and subscriptions.
 

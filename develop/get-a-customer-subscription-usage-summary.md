@@ -9,11 +9,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get usage summary for customer's subscription
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the **SubscriptionUsageSummary** resource to get a subscription usage summary for a customer. This resource represents the subscription usage summary of a specific Azure service or resource during the current billing period.
 
@@ -31,7 +27,7 @@ To get a subscription usage summary for a customer's subscription:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
 
-2. Then call the Subscriptions property, as well as **UsageSummary** property. Finish by calling the Get() or GetAsync() methods.
+2. Then call the Subscriptions property and the **UsageSummary** property. Finish by calling the Get() or GetAsync() methods.
 
     ``` csharp
     // IAggregatePartner partnerOperations;

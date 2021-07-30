@@ -1,6 +1,6 @@
 ---
 title: Get an offer by ID
-description: Gets a Offer resource that matches the offer ID.
+description: Gets an Offer resource that matches the offer ID.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -10,12 +10,7 @@ ms.author: brserbus
 
 # Get an offer by ID
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets an **Offer** resource that matches the offer ID.
 

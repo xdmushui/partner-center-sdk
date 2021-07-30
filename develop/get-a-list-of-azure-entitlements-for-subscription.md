@@ -10,10 +10,6 @@ ms.author: amrava
 
 # Get a list of Azure entitlements for a subscription
 
-**Applies to:**
-
-- Partner Center
-
 You can use the [Azure entitlement resource](subscription-resources.md#azureentitlement) (**AzureEntitlement**) to get a collection of resources that belong to a subscription.
 
 ## Prerequisites

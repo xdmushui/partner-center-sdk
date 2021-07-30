@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get usage records for all customers
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Partners can use the **CustomerMonthlyUsageRecord** resource collection to get usage records for all their customers. This resource represents usage records for all customers. That includes those customers with a Microsoft Azure (MS-AZR-0145P) subscription or an Azure plan.
 

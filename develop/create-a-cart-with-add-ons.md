@@ -10,10 +10,6 @@ ms.author: rbars
 
 # Create a cart with add-ons to a customer order
 
-**Applies to:**
-
-- Partner Center
-
 You can purchase add-ons through a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
 ## Prerequisites
@@ -28,7 +24,7 @@ A cart enables the purchase of a base offer and its corresponding add-ons. Follo
 
 1. Instantiate a [**Cart**](/dotnet/api/microsoft.store.partnercenter.models.carts.cart) object.
 
-2. Create a list of [**CartLineItem**](/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects which represent the base offer(s), and assign the list to the cart's [**LineItems**](/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property.
+2. Create a list of [**CartLineItem**](/dotnet/api/microsoft.store.partnercenter.models.carts.cartlineitem) objects that represent the base offer(s), and assign the list to the cart's [**LineItems**](/dotnet/api/microsoft.store.partnercenter.models.carts.cart.lineitems) property.
 
 3. Under each base offer's cart line item, populate the list of **AddOnItems** with other **CartLineItem** objects that each represent an add-on that will be purchased against that base offer.
 
@@ -77,7 +73,7 @@ var cart = new Cart()
 var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
-Follow these steps to create a cart which will enable the purchase of add-on(s) against existing base subscription(s):
+Follow these steps to create a cart that will enable the purchase of add-on(s) against existing base subscription(s):
 
 1. Create a **Cart** with a new **CartLineItem** containing the subscription ID in the **ProvisioningContext** property with key "ParentSubscriptionId".
 
@@ -153,11 +149,11 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | quantity             | int                              | The number of licenses or instances.                                                                                                                  |
 | currencyCode         | string                           | The currency code.                                                                                                                                    |
 | billingCycle         | Object                           | The type of billing cycle set for the current period.                                                                                                 |
-| participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
+| participants         | List of Object String pairs      | A collection of PartnerId on Record (MPN ID) on the purchase.                                                                                          |
 | provisioningContext  | Dictionary<string, string>       | A context used for provisioning of offer.                                                                                                             |
 | orderGroup           | string                           | A group to indicate which items can be placed together.                                                                                               |
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for add-ons that will be purchased towards the base subscription that results from the parent cart line item's purchase. |
-| error                | Object                           | Applied after cart is created in case of an error.                                                                                                    |
+| error                | Object                           | Applied after cart is created if there is an error.                                                                                                    |
 
 ### Request example (new base subscription)
 
@@ -199,7 +195,7 @@ MS-CorrelationId: f73baf70-bbc3-43d0-8b29-dffa08ff9511
 
 #### Request example (existing base subscription)
 
-The following REST example show how to append add-ons to an existing base subscription.
+The following REST example shows how to append add-ons to an existing base subscription.
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/customers/18ac2950-8ea9-4dfc-92a4-ff4d4cd57796/carts HTTP/1.1

@@ -9,10 +9,6 @@ ms.subservice:  partnercenter-sdk
 
 # Create a subscription for commercial marketplace products
 
-**Applies to:**
-
-* Partner Center
-
 You can create a subscription for commercial marketplace products using Partner Center APIs. You must [get a list of offers for a market](#get-a-list-of-offers-for-a-market), [create and submit an order](#create-and-submit-an-order) for a commercial marketplace subscription, then [retrieve an activation link](#get-activation-link).
 
 You can also [perform lifecycle management](#lifecycle-management) and [manage invoices](#invoice-and-reconciliation) for these subscriptions.

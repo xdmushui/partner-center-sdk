@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Delete a user account for a customer
 
-**Applies to:**
-
-- Partner Center
-
 This article explains how to delete an existing user account for a customer.
 
 ## Prerequisites
@@ -24,9 +20,9 @@ This article explains how to delete an existing user account for a customer.
 
 ## Deleting a user account
 
-When you delete a user account, the user state is set to **inactive** for thirty days. After thirty days, the user account and its associated data are purged and made unrecoverable.
+When you delete a user account, the user state is set to **inactive** for 30 days. After thirty 30 days, the user account and its associated data are purged and made unrecoverable.
 
-You can [restore a deleted user account for a customer](restore-a-user-for-a-customer.md) if the inactive account is within the thirty day window. However, when you restore an account that was deleted and marked as inactive, the account is no longer returned as a member of the user collection (for example, when you [get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
+You can [restore a deleted user account for a customer](restore-a-user-for-a-customer.md) if the inactive account is within the 30-day window. However, when you restore an account that was deleted and marked as inactive, the account is no longer returned as a member of the user collection (for example, when you [get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
 
 ## C\#
 

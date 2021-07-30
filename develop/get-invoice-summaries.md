@@ -10,14 +10,9 @@ ms.author: amrava
 
 # Get invoice summaries
 
-**Applies to:**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-You can use the **InvoiceSummaries** to retrieve an invoice summary which shows the balance and total charges of both recurring and one-time charges. The **InvoiceSummaries** resource contains an invoice summary for each currency type.
+You can use the **InvoiceSummaries** to retrieve an invoice summary that shows the balance and total charges of both recurring and one-time charges. The **InvoiceSummaries** resource contains an invoice summary for each currency type.
 
 ## Prerequisites
 

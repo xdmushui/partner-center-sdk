@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Set user roles for a customer
 
-**Applies To**
-
-- Partner Center
-
 Within a customer account, there's a set of directory roles. You can assign user accounts to those roles.
 
 ## Prerequisites
@@ -71,7 +67,7 @@ This table describes the required properties in the request body.
 
 | Name                  | Type       | Required | Description                            |
 |-----------------------|------------|----------|----------------------------------------|
-| **Id**                | **string** | Y        | The Id of the user to add to the role. |
+| **Id**                | **string** | Y        | The ID of the user to add to the role. |
 | **DisplayName**       | **string** | Y        | The friendly display name of the user. |
 | **UserPrincipalName** | **string** | Y        | The name of the user principal.        |
 | **Attributes**        | **object** | Y        | Contains "ObjectType":"UserMember"     |
@@ -102,7 +98,7 @@ Expect: 100-continue
 
 ## REST response
 
-This method returns the user account with the role id attached when the user is successfully assigned the role.
+This method returns the user account with the role ID attached when the user is successfully assigned the role.
 
 ### Response success and error codes
 

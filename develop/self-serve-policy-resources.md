@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # SelfServePolicy resource
 
-**Applies to:**
-
-- Partner Center
-
 A partner sets self serve policies for a customer.
 
 ## SelfServePolicy
@@ -20,7 +16,7 @@ Describes a cart.
 
 | Property              | Type             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
-| id                    | string           | A self serve policy identifier that is supplied upon successful creation of the self serve policy.     |
+| id                    | string           | A self-serve policy identifier that is supplied upon successful creation of the self serve policy.     |
 | SelfServeEntity       | SelfServeEntity  | The self serve entity that is being granted access.                                                     |
 | Grantor               | Grantor          | The grantor that is granting access.                                                                    |
 | Permissions           | Array of Permission| An Array of [Permission](#permission) resources.                                                                     |

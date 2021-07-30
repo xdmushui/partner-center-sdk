@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Delete a SelfServePolicy
 
-**Applies to:**
-
-- Partner Center
-
-This topic explains how to update a self-serve policy.
+This article explains how to update a self-serve policy.
 
 ## Prerequisites
 
@@ -62,7 +58,7 @@ Use the following path parameters to get the specified product.
 ### Request headers
 
 - A request ID and correlation ID are required.
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

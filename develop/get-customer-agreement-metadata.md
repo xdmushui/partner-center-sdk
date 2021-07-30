@@ -10,15 +10,11 @@ ms.author: alikhaki
 
 # Get agreement metadata for the Microsoft Customer Agreement
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-Agreement metadata for Microsoft Customer Agreement is currently supported by Partner Center only in the *Microsoft public cloud*. It doesn't apply to:
-
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+Agreement metadata for Microsoft Customer Agreement is currently supported by Partner Center only in the Microsoft public cloud.
 
 You must retrieve the agreement metadata for the Microsoft Customer Agreement before you can:
 

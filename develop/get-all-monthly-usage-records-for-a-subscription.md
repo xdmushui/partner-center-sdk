@@ -1,5 +1,5 @@
 ---
-title: Get all monthly usage records for a subscription.
+title: Get all monthly usage records for a subscription
 description: You can use the AzureResourceMonthlyUsageRecord resource collection to get a list of services within a customer's subscription and their associated rated usage information.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
@@ -8,13 +8,9 @@ author: khpavan
 ms.author: sakhanda
 ---
 
-# Get all monthly usage records for a subscription.
+# Get all monthly usage records for a subscription
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can use the [**AzureResourceMonthlyUsageRecord**](/dotnet/api/microsoft.store.partnercenter.models.usage.azureresourcemonthlyusagerecord) resource collection to get a list of services within a customer's subscription and their associated rated usage information.
 
@@ -34,7 +30,7 @@ To get a subscription's resource usage information:
 
 1. Use your **IAggregatePartner.Customers** collection to call the **ById()** method.
 
-2. Call the **Subscriptions** property, as well as **UsageRecords**, then the **Resources** property.
+2. Call the **Subscriptions** property, and **UsageRecords**, then the **Resources** property.
 3. Call the **Get()** or **GetAsync()** methods.
 
 ``` csharp

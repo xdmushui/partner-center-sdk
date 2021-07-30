@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Remove a customer user from a role
 
-**Applies To**
-
-- Partner Center
-
 How to remove a user from a directory role within a customer account.
 
 ## Prerequisites
@@ -45,7 +41,7 @@ partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selecte
 
 ### URI parameter
 
-Use the following URI parameters to identify the correct customer, role and user.
+Use the following URI parameters to identify the correct customer, role, and user.
 
 | Name                   | Type     | Required | Description                                                                        |
 |------------------------|----------|----------|------------------------------------------------------------------------------------|

@@ -6,5 +6,5 @@ _themes*/
 _repo.*/
 .vs/
 cut-content/
-
 .openpublishing.buildcore.ps1
+.github/*

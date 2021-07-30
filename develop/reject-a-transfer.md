@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Reject a transfer
 
-**Applies to:**
-
-- Partner Center
-
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.

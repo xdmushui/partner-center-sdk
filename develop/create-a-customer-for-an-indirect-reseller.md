@@ -1,7 +1,7 @@
 ---
 title: Create a customer for an indirect reseller
 description: Learn how an indirect provider can use Partner Center APIs to create a customer for an indirect reseller. 
-ms.date: 11/13/2020
+ms.date: 04/01/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: dineshvu
@@ -9,10 +9,6 @@ ms.author: dineshvu
 ---
 
 # Create a customer for an indirect reseller using Partner Center APIs
-
-**Applies to:**
-
-- Partner Center
 
 An indirect provider can create a customer for an indirect reseller.
 
@@ -96,7 +92,7 @@ This table describes the required properties in the request body.
 | [CompanyProfile](#company-profile)             | object | Yes      | The customer's company profile information.                                                               
 | [AssociatedPartnerId](customer-resources.md#customer) | string | Yes      | The indirect reseller ID. The indirect reseller as indicated by the ID supplied here must have a partnership with the indirect provider or the request will fail. Also note that if the AssociatedPartnerId value isn't supplied, the customer is created as a direct customer of the indirect provider rather than the indirect reseller. |
 |Domain| String| Yes|The customer's domain name, such as contoso.onmicrosoft.com.|
-|organizationRegistrationNumber|	string|Yes| 	The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries. Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA). For customer’s company/organization located in other countries this should not be specified.|
+|organizationRegistrationNumber|	string|Yes| 	The customer’s organization registration number (also referred to as INN number in certain countries). Only required for customer’s company/organization located in the following countries: Armenia(AM), Azerbaijan(AZ), Belarus(BY), Hungary(HU), Kazakhstan(KZ), Kyrgyzstan(KG), Moldova(MD), Russia(RU), Tajikistan(TJ), Uzbekistan(UZ), Ukraine(UA), India, Brazil, South Africa, Poland, United Arab Emirates, Saudi Arabia, Turkey, Thailand, Vietnam, Myanmar, Iraq, South Sudan, and Venezuela. For customer’s company/organization located in other countries this is an optional field.|
 
 
 
@@ -119,7 +115,7 @@ This table describes the minimum required fields from the [CustomerCompanyProfil
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
 | domain | string | Yes     | The customer's domain name, such as contoso.onmicrosoft.com. |
-| organizationRegistrationNumber | string | Depends on condition | The customer’s organization registration number (also referred to as the INN number in certain countries). <br/><br/>Completing this field is required only if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/><br/>This field is not required if the customer’s company/organization is located in other countries beyond those shown here.  |
+| organizationRegistrationNumber | string | Depends on condition | The customer’s organization registration number (also referred to as the INN number in certain countries). <br/><br/>Completing this field is required only if a customer’s company/organization is located in the following countries: <br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)<br/>- India <br/>- Brazil <br/>- South Africa <br/>- Poland <br/>- United Arab Emirates <br/>- Saudi Arabia <br/>- Turkey <br/>- Thailand <br/>- Vietnam <br/>- Myanmar <br/>- Iraq <br/>- South Sudan <br/>- Venezuela<br/> <br/>For customer’s company/organization located in other countries, this is an optional field.  |
 
 ### Request example
 
