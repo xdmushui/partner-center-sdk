@@ -138,7 +138,7 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 
 ## AttestationProperties
 
-Represents a term for which the availability can be purchased.
+Represents an attestation type and if it is required for purchase.
 
 | Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
