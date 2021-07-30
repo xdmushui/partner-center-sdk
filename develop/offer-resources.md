@@ -46,6 +46,7 @@ to their customers.
 | unitType                    | string                    | The type of the unit.                                                                                      |
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
+| AttestationProperties       | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
 
 ## OfferCategory
 
@@ -83,3 +84,13 @@ A product or service that may have more than one offer associated with it, each 
 | Id       | string | The category identifier. |
 | Name     | string | The category name.       |
 | Unit     | string | The product unit.        |
+
+## AttestationProperties
+
+Represents a term for which the availability can be purchased.
+
+| Property              | Type                                        | Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. |
+| enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |
+
