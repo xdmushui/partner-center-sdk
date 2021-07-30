@@ -45,6 +45,7 @@ Represents one item contained in a cart.
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons. These items will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created if an error occurred.                                                                                                    |
 | renewsTo             | Array of objects                 | An array of [RenewsTo](#renewsto) resources.                                                                            |
+| AttestationAccepted             | bool                 | Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                            |
 
 ## RenewsTo
 
