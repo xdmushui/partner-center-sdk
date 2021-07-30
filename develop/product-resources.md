@@ -62,6 +62,7 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure reservation purchase: "Single", "Shared".<br/> "SubscriptionId" - The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" - The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. The properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+| AttestationProperties                  | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
 
 ## Availability
 
@@ -134,3 +135,12 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
+
+## AttestationProperties
+
+Represents an attestation type and if it is required for purchase.
+
+| Property              | Type                                        | Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. Windows 365 attestation text is "I understand that each person using Windows 365 Business with Windows Hybrid Benefit also needs to have a valid copy of Windows 10/11 Pro installed on their primary work device." |
+| enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |
