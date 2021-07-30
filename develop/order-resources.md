@@ -52,6 +52,7 @@ An order contains an itemized list of offers, and each item is represented as an
 | provisioningContext  | Dictionary<string, string>            | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog.                                                                                                                                               |
 | links                | [OrderLineItemLinks](#orderlineitemlinks) | Read-only. The resource links corresponding to the order line item.                                                                                                                                                                                |
 | renewsTo             | [RenewsTo](#renewsto)                         |Renewal term duration details.                                                                           |
+| AttestationAccepted             | bool                 | Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                            |
 
 ## RenewsTo
 
