@@ -139,8 +139,9 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 ## AttestationProperties
 
 Represents an attestation type and if it is required for purchase.
+Represents an attestation type and if it is required for purchase.
 
 | Property              | Type                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. |
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. Windows 365 attestation text is "I understand that each person using Windows 365 Business with Windows Hybrid Benefit also needs to have a valid copy of Windows 10/11 Pro installed on their primary work device." |
 | enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |
