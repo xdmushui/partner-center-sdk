@@ -12,7 +12,7 @@ ms.subservice:  partnercenter-sdk
 
 How to verify a partner's Microsoft Partner Network identifier (MPN ID).
 
-The technique shown here verifies the partner's Microsoft Partner Network identifier by requesting the partner's MPN profile from partner center. The identifier is considered valid if the request succeeds.
+The technique shown here verifies the partner's Microsoft Partner Network identifier by requesting the partner's MPN profile from Partner Center. The identifier is considered valid if the request succeeds.
 
 ## Prerequisites
 
