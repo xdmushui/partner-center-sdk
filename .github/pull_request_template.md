@@ -10,7 +10,7 @@
 
 1. Use the private repo at https://github.com/MicrosoftDocs/partner-center-sdk-pr/
 
-The public repo is for customer contributions. https://github.com/MicrosoftDocs/partner-center-sdk/
+   The public repo is for customer contributions. https://github.com/MicrosoftDocs/partner-center-sdk/
 
 2. Fill out these three items before submitting your pull request to help us track:
 
@@ -26,7 +26,7 @@ The public repo is for customer contributions. https://github.com/MicrosoftDocs/
    **D. Who on the documentation team is the primary contact?** \@mention them individually or the team `@PartnerDocs` so they can get a notification and review. 
    > 
 
-## Quality control checklist (for Microsoft contributors)
+## Quality control checklist for Microsoft contributors:
 
 - [ ] 1. **Acrolinx:** Make sure your Acrolinx score is **above 80 minimum**, but higher is better, and **0 spelling issues**. Acrolinx helps us in English, but also helps our system ensure translation to localized languages is possible.
 
@@ -37,7 +37,7 @@ The public repo is for customer contributions. https://github.com/MicrosoftDocs/
 - [ ] 4. **#Sign-off**: Once the pull request is finalized and ready to be merged, indicate so by typing `#sign-off` in a new comment in the Pull Request. If you need to cancel that sign off, type `#hold-off` instead. Signing off means the document is ready for review, and can be published at any time. 
 
 
-## Merge and publish
+## Merge and publish for Microsoft contributors:
 - After you sign off, there is a separate PR Review team that will review the PR and describe any necessary feedback before merging. 
 - They use the comments in the PR on the GitHub site to provide feedback if changes are needed. Make any adjustments and sign off again to request another review.
 - Once all feedback is resolved, the PR Review team will merge the pull request into master branch. 
