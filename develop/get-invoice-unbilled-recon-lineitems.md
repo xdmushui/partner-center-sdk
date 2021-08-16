@@ -114,9 +114,9 @@ You can use the following syntaxes for your REST request, depending on your use 
 
  | Method  | Request URI            | Description of syntax use case                                                                                |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
 #### URI parameters
 
@@ -124,7 +124,6 @@ Use the following URI and query parameters when creating the request.
 
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| invoice-id             | string | Yes      | A string that identifies the invoice. Use 'unbilled' to get unbilled estimates. |
 | provider               | string | Yes      | The provider: "OneTime".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems".               |
 | hasPartnerEarnedCredit | bool   | No       | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when provider type is OneTime and InvoiceLineItemType is UsageLineItems.
