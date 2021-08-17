@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Cart resources
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 A partner places an order when a customer wants to buy a subscription from a list of offers.
 
@@ -44,12 +39,13 @@ Represents one item contained in a cart.
 | currencyCode         | string                           | The currency code.                                                                                                                                    |
 | billingCycle         | Object                           | The type of billing cycle set for the current period.                                                                                                 |
 | termDuration         | string                           | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).                                |
-| participants         | List of Object String pairs      | A collection of PartnerId on Record (MPNID) on the purchase.                                                                                          |
+| participants         | List of Object String pairs      | A collection of PartnerId on Record (MPN ID) on the purchase.                                                                                          |
 | provisioningContext  | Dictionary<string, string>       | Additional context used when provisioning the purchased item. To determine which values are needed for a particular item, refer to the SKU's provisioningVariables property. |
 | orderGroup           | string                           | A group to indicate which items can be submitted together in the same order.                                                                          |
 | addonItems           | List of **CartLineItem** objects | A collection of cart line items for addons. These items will be purchased towards the base subscription that results from the root cart line item's purchase. |
 | error                | Object                           | Applied after cart is created if an error occurred.                                                                                                    |
 | renewsTo             | Array of objects                 | An array of [RenewsTo](#renewsto) resources.                                                                            |
+| AttestationAccepted             | bool                 | Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                            |
 
 ## RenewsTo
 
@@ -69,8 +65,29 @@ Represents an error that occurs after a cart is created.
 
 | Property         | Type                                   | Description                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
-| errorCode        | [Partner Center error codes](error-codes.md) | The type of cart error.                                                                       |
+| errorCode        | [CareErrorCode](#carterrorcode) | The type of cart error.                                                                       |
 | errorDescription | string                                 | The error description, including any notes about supported values, default values, or limits. |
+
+
+## CartErrorCode
+
+Types of cart errors.
+
+| Name                             | ErrorCode   | Description
+|----------------------------------|-------------|-----------------------------------------------------------------------------------------------|
+| CurrencyIsNotSupported           | 10000   | Currency is not supported for given market  |
+| CatalogItemIdIsNotValid          | 10001   | Catalog item id is not valid  |
+| QuotaNotAvailable                | 10002   | Not enough quota available  |
+| InventoryNotAvailable            | 10003   | Inventory is not available for selected offer  |
+| ParticipantsIsNotSupportedForPartner  | 10004   | Setting participants is not supported for Partner  |
+| UnableToProcessCartLineItem      | 10006   | Unable to process cart line item.  |
+| SubscriptionIsNotValid           | 10007   | Subscription is not valid.  |
+| SubscriptionIsNotEnabledForRI    | 10008   | Subscription is not enabled for RI purchase.  |
+| SandboxLimitExceeded             | 10009   | The sandbox limit has been exceeded.  |
+| InvalidInput                     | 10010   | Generic input is not valid.  |
+| SubscriptionNotRegistered        | 10011   | Subscription is not valid.  |
+| AttestationNotAccepted           | 10012   | Attestation has not been accepted.  |
+| Unknown                          | 0   | Default value   |
 
 ## CartCheckoutResult
 

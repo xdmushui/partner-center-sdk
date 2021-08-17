@@ -10,12 +10,7 @@ ms.author: rbars
 
 # Create a cart with a customer order
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can add an order for a customer in a cart. For more information about what is currently available to sell, see [Partner offers in the Cloud Solution Provider program](/partner-center/csp-offers).
 
@@ -234,7 +229,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 
 |      Property       |            Type             | Required |                                                                                         Description                                                                                         |
 |---------------------|-----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         id          |           string            |    No    |                                                     A Unique identifier for a cart line item. Applied upon successful creation of cart.                                                     |
+|         id          |           string            |    No    |                                                     A unique identifier for a cart line item. Applied upon successful creation of cart.                                                     |
 |      catalogId      |           string            |   Yes    |                                                                                The catalog item identifier.                                                                                 |
 |    friendlyName     |           string            |    No    |                                                    Optional. The friendly name for the item defined by the partner to help disambiguate.                                                    |
 |      quantity       |             int             |   Yes    |                                                                            The number of licenses or instances.                                                                             |
@@ -243,8 +238,9 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 |    participants     | List of Object String pairs |    No    |                                                                A collection of PartnerId on Record (MPNID) on the purchase.                                                                 |
 | provisioningContext | Dictionary<string, string>  |    No    | Information required for provisioning for some items in the catalog. The provisioningVariables property in a SKU indicates which properties are required for specific items in the catalog. |
 |     orderGroup      |           string            |    No    |                                                                   A group to indicate which items can be placed together.                                                                   |
-|        error        |           Object            |    No    |                                                                     Applied after cart is created in case of an error.                                                                      |
+|        error        |           Object            |    No    |                                                                     Applied after cart is created if there is an error.                                                                      |
 |     renewsTo        | Array of objects            |    No    |                                                    An array of [RenewsTo](cart-resources.md#renewsto) resources.                                                                            |
+|     AttestationAccepted        | Boolean            |    No    |                                                   Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                             |
 
 This table describes the [RenewsTo](cart-resources.md#renewsto) properties in the request body.
 

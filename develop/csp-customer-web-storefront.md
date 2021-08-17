@@ -8,14 +8,13 @@ ms.subservice:  partnercenter-sdk
 
 # CSP customer web storefront
 
-**Applies to:**
+**Applies to**: Partner Center
 
-- Partner Center
+**Does not apply to**: Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-> [!NOTE]
-> This sample app applies only to the global instance of Partner Center. It does not apply to Partner Center for Microsoft Cloud Germany or to Partner Center for Microsoft Cloud for US Government.
+This sample app applies only to the global instance of Partner Center.
 
-The [Partner Center storefront](https://github.com/Microsoft/Partner-Center-Storefront) is a **sample website** for an online store that customers can use to buy subscriptions to Microsoft products. You can modify this **sample code** for your own use to [configure the offers](#configure-offers), [add branding](#configure-branding) and [add a payment method](#configure-payment-types).
+The [Partner Center storefront](https://github.com/Microsoft/Partner-Center-Storefront) is a **sample website** for an online store that customers can use to buy subscriptions to Microsoft products. You can modify this **sample code** for your own use to [configure the offers](#configure-offers), [add branding](#configure-branding), and [add a payment method](#configure-payment-types).
 
 ## Sample code
 

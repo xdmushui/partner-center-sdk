@@ -8,10 +8,6 @@ ms.date: 05/29/2020
 
 # Get portal requests without MFA
 
-Applies to:
-
-- Partner Center API
-
 This article explains how to obtain a list of the most recent requests from users who access Partner Center portal without completing multi-factor authentication (MFA).
 
 ## Prerequisites
@@ -28,7 +24,7 @@ This article explains how to obtain a list of the most recent requests from user
 
 ### Request headers
 
-- See [Partner Center REST headers](headers.md) for more information.
+- For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 

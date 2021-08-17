@@ -1,6 +1,6 @@
 ---
 title: Get an order by ID
-description: Gets a Order resource that matches the customer and order ID.
+description: Gets an Order resource that matches the customer and order ID.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Get an order by ID
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets an [Order](order-resources.md) resource that matches the customer and order ID.
 

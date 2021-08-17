@@ -1,6 +1,6 @@
 ---
 title: Get a list of offer categories by market
-description: How to get a collection that contains all the offer categories in a given country/region and locale.
+description: Learn how to get a collection that contains all the offer categories in a given country/region and locale for all the Microsoft Clouds.
 ms.date: 07/25/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -10,12 +10,7 @@ ms.author: amrava
 
 # Get a list of offer categories by market
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 This article describes how to get a collection that contains all the offer categories in a given country/region and locale.
 

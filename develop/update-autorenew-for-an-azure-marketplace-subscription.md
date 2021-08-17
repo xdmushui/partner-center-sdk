@@ -9,9 +9,7 @@ ms.subservice:  partnercenter-sdk
 
 # Update autorenew for a commercial marketplace subscription or new commerce subscriptions
 
-**Applies To**
-
-- Partner Center
+**Applies To**: Partner Center
 
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.

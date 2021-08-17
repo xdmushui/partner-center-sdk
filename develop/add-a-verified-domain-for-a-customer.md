@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Add a verified domain to the list of approved domains for an existing customer 
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 How to add a verified domain to the list of approved domains for an existing customer.
 
@@ -84,7 +79,7 @@ This table describes the required and optional **DomainFederationSettings** prop
 
 | Name   | Type   | Required | Description                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
-| ActiveLogOnUri                         | string           | No      | The logon URI used by rich clients. This property is the partner's STS Auth URL. |
+| ActiveLogOnUri                         | string           | No      | The logon URI used by rich clients. This property is the Partner's STS Auth URL. |
 | DefaultInteractiveAuthenticationMethod | string           | No      | Indicates the default authentication method that should be used when an application requires the user to have interactive login. |
 | FederationBrandName                    | string           | No      | The federation brand name.        |
 | IssuerUri                              | string           | Yes     | The name of the issuer of the certificates.                        |

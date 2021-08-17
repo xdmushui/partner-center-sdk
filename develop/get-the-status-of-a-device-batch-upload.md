@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get the status of a device batch upload
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to get the status of a device batch upload for a specified customer.
 

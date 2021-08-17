@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Change the quantity of licenses in a customer subscription
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Updates a [subscription](subscription-resources.md) to increase or decrease the quantity of licenses.
 

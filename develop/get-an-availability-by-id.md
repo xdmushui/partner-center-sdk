@@ -10,10 +10,6 @@ ms.author: rbars
 
 # Get the availability by ID
 
-**Applies To**
-
-- Partner Center
-
 Gets the availability for the specified product and SKU using an availability ID.
 
 ## Prerequisites
@@ -121,7 +117,7 @@ This method returns the following error codes:
 | HTTP Status Code     | Error code   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                                                    |
-| 404                  | 400018       | Sku was not found.                                                                                        |
+| 404                  | 400018       | SKU was not found.                                                                                        |
 | 404                  | 400019       | Availability not found.                                                                                   |
 
 ### Response example for Azure VM reservations (Azure plan)

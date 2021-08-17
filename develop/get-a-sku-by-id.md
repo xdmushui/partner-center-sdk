@@ -10,10 +10,6 @@ ms.author: amrava
 
 # Get a SKU by ID
 
-**Applies To**
-
-- Partner Center
-
 Gets a SKU for the specified product using the specified SKU ID.
 
 ## Prerequisites

@@ -10,10 +10,6 @@ ms.author: sakhanda
 
 # Check a customer's eligibility for upgrading to an Azure plan
 
-**Applies to:**
-
-- Partner Center
-
 You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to check if a customer is eligible to upgrade to an Azure plan from a Microsoft Azure (MS-AZR-0145P) subscription This method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource with the customer's product upgrade eligibility.
 
 ## Prerequisites

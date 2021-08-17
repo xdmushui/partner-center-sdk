@@ -1,18 +1,14 @@
 ---
 title: Get a customer's utilization records for Azure
 description: You can use the Azure utilization API to get the utilization records of a customer's Azure subscription for a specified time period.
-ms.date: 11/01/2019
+ms.date: 04/19/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
 # Get a customer's utilization records for Azure
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 You can get the utilization records of a customer's Azure subscription for a specified time period using the Azure utilization API.
 
@@ -33,6 +29,12 @@ This Azure utilization API provides access to utilization records for a time per
 For example, the billing system takes the same utilization data and applies lateness rules to determine what is accounted for in a reconciliation file. When a billing period closes, all usage until the end of the day that the billing period ends is included in the reconciliation file. Any late usage within the billing period that is reported within 24 hours after the billing period ends is accounted for in the next reconciliation file. For the lateness rules of how the partner is billed, see [Get consumption data for an Azure subscription](/previous-versions/azure/reference/mt219001(v=azure.100)).
 
 This REST API is paged. If the response payload is larger than a single page, you must follow the next link to get the next page of utilization records.
+
+### Scenario: Partner A has transferred billing ownership of Azure Legacy Subscription (145P) to Partner B
+
+If a partner transfers billing ownership of an Azure legacy subscription to another partner, when new the new partner calls Utilization API for transferred subscription they have to use Commerce Subscription ID (which shows up in their Partner Center account) rather than the Azure Entitlement ID. Azure Entitlement ID appears for Partner B only when they are Admin on behalf of (AOBO) to Customer's Azure portal. 
+
+To successfully call the Utilization API for the transferred subscription, the new partner needs to use the Commerce Subscription ID.
 
 ## C\#
 

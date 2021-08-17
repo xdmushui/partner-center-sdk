@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get support profile
 
-**Applies To**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets an object representing a user's support profile.
 

@@ -3,19 +3,14 @@ title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
 ms.date: 02/23/2021
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-sdk
+ms.subservice: partnercenter-sdk
 ---
 
 # Subscription resources
 
-**Applies to:**
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
-
-A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions. Many fields only apply at certain points in the life cycle, such as if a subscription is suspended or cancelled.
+A subscription lets a customer use a service for a certain period of time. Not all fields will apply to all subscriptions. Many fields only apply at certain points in the life cycle, such as if a subscription is suspended or canceled.
 
 ## Subscription
 
@@ -69,7 +64,7 @@ The **SubscriptionLinks** resource describes the collection of links attached to
 | sku                | [Link](utility-resources.md#link) | Gets the product sku associated with the subscription. |
 | availability       | [Link](utility-resources.md#link) | Gets the product sku availability associated with the subscription. |
 | activationLinks    | [Link](utility-resources.md#link) | Gets the list of activation links associated with the subscription. |
-| self               | [Link](utility-resources.md#link) | The self URI.                         |
+| self               | [Link](utility-resources.md#link) | The self-URI.                         |
 | next               | [Link](utility-resources.md#link) | The next page of items.               |
 | previous           | [Link](utility-resources.md#link) | The previous page of items.           |
 
@@ -92,7 +87,7 @@ The **SubscriptionRegistrationStatus** resource describes the collection of link
 | Property           | Type                               | Description                                                                           |
 |--------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | subscriptionId     | string                             | The subscription identifier.                                                          |
-| status             | string                             | Indicates the registration status: "registered", "registering" or "notregistered".    |
+| status             | string                             | Indicates the registration status: "registered", "registering", or "notregistered".    |
 
 ## SupportContact
 

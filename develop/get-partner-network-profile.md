@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Get Microsoft Partner Network profile
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Gets an object representing the partner's MPN profile.
 

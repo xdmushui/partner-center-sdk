@@ -8,7 +8,6 @@
     items:
     - name: Register app details for Partner Center
       href: create-apps-for-partner-center-for-microsoft-national-clouds.md
-  
   - name: Partner Center samples
     href: partner-center-samples.md
     items:
@@ -248,8 +247,6 @@
       items: 
       - name: Use asynchronous APIs
         href: get-customer-qualification-asynchronous.md
-      - name: Use synchronous APIs
-        href: get-customer-qualification-synchronous.md
     - name: "Get all of a customer's orders"
       href: get-all-of-a-customer-s-orders.md
     - name: "Get a customer's subscriptions"
@@ -296,8 +293,6 @@
       items:
       - name: Use asynchronous APIs  
         href: update-customer-qualification-asynchronous.md
-      - name: Use synchronous APIs
-        href: update-customer-qualification-synchronous.md
     - name: Update the nickname for a subscription
       href: update-the-nickname-for-a-subscription.md
     - name: "Withdraw a customer's transfer"
@@ -417,6 +412,8 @@
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
       href: update-autorenew-for-an-azure-marketplace-subscription.md
+  - name: Manage payouts
+    href: manage-payouts.md
   - name: Provide support
     href: provide-support.md
     items:
@@ -434,16 +431,20 @@
       href: update-a-subscription-s-support-contact.md
 -  name: Integration sandbox
    items:
-    - name: Partner sandbox capabilities that support reseller relationship
+    - name: Sandbox capabilities for Reseller relationship
       href: sandbox-scenario.md
     - name: Test and debug sandbox
       href: test-and-debug.md
+    - name: CSP Indirect provider capabilities in Sandbox
+      href: indirect-provider-sandbox-capabilities.md
     - name: Cancel an order from the integration sandbox
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Activate sandbox subscription 
       href: activate-sandbox-subscription-azure-marketplace-products.md
-    - name: Delete a customer account from the integration sandbox
-      href: delete-a-customer-account-from-the-integration-sandbox.md
+    - name: Create Indirect Reseller in Sandbox
+      href: create-indirect-reseller-in-sandbox.md
+    - name: Delete Indirect Reseller in Sandbox
+      href: delete-indirect-reseller-in-sandbox.md
 - name: Referrals
   href: /partner/develop/referrals
   items:
@@ -475,14 +476,17 @@
     - name: Get API request details
       href: get-api-request-details.md
 - name: Partner Center REST API reference
-  href: partner-center-rest-api-reference.md
   items:
+  - name: Partner Center REST API introduction
+    href: partner-center-rest-api-reference.md
   - name: Partner Center REST API change log
     href: api-change-log.md
   - name: Partner Center REST URLs
     href: partner-center-rest-urls.md
   - name: Partner Center REST headers
     href: headers.md
+  - name: Partner Center REST API reference
+    href: /rest/api/partner-center-rest/
   - name: Partner Center REST resources
     href: partner-center-rest-resources.md
     items:
@@ -559,7 +563,7 @@
   - name: Partner Center webhooks
     href: partner-center-webhooks.md
 - name: Partner Center Managed .NET API reference
-  href: /dotnet/api/
+  href: /dotnet/api/microsoft.store.partnercenter
   items:
   - name: Partner Center .NET API version release notes
     href: dotnet-release-notes.md

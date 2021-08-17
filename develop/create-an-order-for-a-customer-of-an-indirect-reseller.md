@@ -1,16 +1,12 @@
 ---
 title: Create customer order for indirect reseller
-description: Learn how to use Partner Center APIs to create an order for a customer of an indirect reseller. Article includes prerequisites, steps, and exmaples.
+description: Learn how to use Partner Center APIs to create an order for a customer of an indirect reseller. Article includes prerequisites, steps, and examples.
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
 # Create an order for a customer of an indirect reseller
-
-**Applies to:**
-
-- Partner Center
 
 How to create an order for a customer of an indirect reseller.
 

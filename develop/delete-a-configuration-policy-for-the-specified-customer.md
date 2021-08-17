@@ -8,10 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Delete a configuration policy for the specified customer
 
-**Applies to:**
-
-- Partner Center
-- Partner Center for Microsoft Cloud Germany
+**Applies to**: Partner Center | Partner Center for Microsoft Cloud Germany
 
 How to delete a configuration policy for a specified customer and policy identifier.
 

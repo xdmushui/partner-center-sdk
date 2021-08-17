@@ -10,10 +10,6 @@ ms.author: amrava
 
 # Get a list of availabilities for a SKU (by country)
 
-**Applies to:**
-
-- Partner Center
-
 This article describes how to get a collection of availabilities in a particular country for a specified product and SKU.
 
 ## Prerequisites
@@ -79,7 +75,7 @@ Use the following path and query parameters to get a list of availabilities for 
 | sku-id                 | string   | Yes      | A string that identifies the SKU.                               |
 | country-code           | string   | Yes      | A country/region ID.                                            |
 | target-segment         | string   | No       | A string that identifies the target segment used for filtering. |
-| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify `reservationScope=AzurePlan` to get a list of availabilities which are applicable to AzurePlan. Exclude this parameter to get a list of availabilities which are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
+| reservationScope | string   | No | When querying for a list of availabilities for an Azure Reservation SKU, specify `reservationScope=AzurePlan` to get a list of availabilities that are applicable to AzurePlan. Exclude this parameter to get a list of availabilities that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.  |
 
 ### Request headers
 
@@ -120,7 +116,7 @@ MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 Follow this example to get a list of availabilities by country for Azure VM reservations that are applicable to Microsoft Azure (MS-AZR-0145P) subscriptions.
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/productsDZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d

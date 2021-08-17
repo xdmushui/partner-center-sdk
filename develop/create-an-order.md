@@ -8,11 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Create an order for a customer using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud for US Government
 
 Creating an **order for Azure reserved VM instance products** applies *only* to:
 
@@ -128,6 +124,7 @@ This table describes the [OrderLineItem](order-resources.md#orderlineitem) prope
 | links                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Read-only. The resource links corresponding to the Order line item.  |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. |
 | renewsTo             | Array of objects                          | No    |An array of [RenewsTo](order-resources.md#renewsto) resources.                                                                            |
+| AttestationAccepted             | bool                 | No   |  Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.          |
 
 ##### RenewsTo
 

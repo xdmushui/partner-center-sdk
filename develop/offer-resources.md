@@ -8,12 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Offer resources
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Describes a product listed in the reseller catalog that they can offer
 to their customers.
@@ -33,7 +28,7 @@ to their customers.
 | country                     | string                    | The country/region  where the offer applies.                                                                    |
 | category                    | [OfferCategory](#offercategory)           | The category of the offer.                                                                   |
 | limitUnitOfMeasure          | string                    | A value that indicates the type of purchase limitation. Possible values include:<br/> "None" - There are no restrictions on the number of subscriptions based on the offer purchased.<br/> "Concurrent" - The number of subscriptions that can exist on the customer tenant at a given time, this includes subscriptions that are active or canceled. This value applies mostly to small business offers where license counts are less than 300. De-provisionioned subscriptions don't count.<br/> "LifeTime" - The number of subscriptions that can exist for the lifetime of the customer tenant. This value is most applicable to Trials. De-provisionioned subscriptions don't count.      |
-| limit                       | int                       | The amount of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
+| limit                       | int                       | The number of subscriptions that can be purchased of this offer based on the limitUnitOfMeasure.                |
 | prerequisiteOffers          | string                    | The prerequisite offers.                                                                                        |
 | isAddOn                     | boolean                   | A value indicating whether this instance is an addon.                                                           |
 | hasAddOns                   | boolean                   | A value indicating whether this offer has any addons.                                                           |
@@ -51,6 +46,7 @@ to their customers.
 | unitType                    | string                    | The type of the unit.                                                                                      |
 | links                       | [OfferLinks](#offerlinks)               | The offer's "learn more" link.                                                                    |
 | attributes                  | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the offer.                         |
+| AttestationProperties       | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
 
 ## OfferCategory
 
@@ -75,16 +71,26 @@ Contains links for learning more information about the offer.
 | Property  | Type | Description                 |
 |-----------|------|-----------------------------|
 | learnMore | Link | The "learn more" link.      |
-| self      | Link | The self URI                |
+| self      | Link | The self-URI                |
 | next      | Link | The next page of items.     |
 | previous  | Link | The previous page of items. |
 
 ## OfferProduct
 
-A product or service which may have more than one offer associated with it, each with different sets of features and targeted at different customer needs.
+A product or service that may have more than one offer associated with it, each with different sets of features and targeted at different customer needs.
 
 | Property | Type   | Description              |
 |----------|--------|--------------------------|
 | Id       | string | The category identifier. |
 | Name     | string | The category name.       |
 | Unit     | string | The product unit.        |
+
+## AttestationProperties
+
+Represents an attestation type and if it is required for purchase.
+
+| Property              | Type                                        | Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. Windows 365 attestation text is "I understand that each person using Windows 365 Business with Windows Hybrid Benefit also needs to have a valid copy of Windows 10/11 Pro installed on their primary work device." |
+| enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |
+

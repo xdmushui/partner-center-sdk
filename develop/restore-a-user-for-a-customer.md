@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Restore a deleted user for a customer
 
-**Applies To**
-
-- Partner Center
-
 How to restore a deleted **User** by customer ID and user ID.
 
 ## Prerequisites
@@ -24,7 +20,7 @@ How to restore a deleted **User** by customer ID and user ID.
 
 ## When can you restore a deleted user account?
 
-The user state is set to "inactive" when you delete a user account. It remains that way for thirty days, after which the user account and its associated data are purged and made unrecoverable. You can only restore a deleted user account during this thirty-day window. Once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
+The user state is set to "inactive" when you delete a user account. It remains that way for 30 days, after which the user account and its associated data are purged and made unrecoverable. You can only restore a deleted user account during this 30-day window. Once deleted and marked "inactive" the user account is no longer returned as a member of the user collection (for example, using [Get a list of all user accounts for a customer](get-a-list-of-all-user-accounts-for-a-customer.md)).
 
 ## C\#
 
@@ -61,7 +57,7 @@ var restoredCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 ### URI parameter
 
-Use the following query parameters to specify the customer id and user id.
+Use the following query parameters to specify the customer ID and user ID.
 
 | Name                   | Type     | Required | Description                                                                                                              |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------|

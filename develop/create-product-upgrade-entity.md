@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Create a product upgrade entity for a customer
 
-**Applies to:**
-
-- Partner Center
-
 You can create a product upgrade entity to upgrade a customer to a given product family (for example, Azure plan) using the **ProductUpgradeRequest** resource.
 
 ## Prerequisites
@@ -32,7 +28,7 @@ To upgrade a customer to Azure plan:
 
 3. Call the **Create** method and pass in the **ProductUpgradesRequest** object, which will return a **location header** string.
 
-4. Extract the **upgrade-id** from the location header string which can be used to [query the upgrade status](get-product-upgrade-status.md).
+4. Extract the **upgrade-id** from the location header string that can be used to [query the upgrade status](get-product-upgrade-status.md).
 
 ```csharp
 // IAggregatePartner partnerOperations;

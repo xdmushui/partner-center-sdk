@@ -10,12 +10,7 @@ ms.author: cychua
 
 # Partner Center supported languages and locales
 
-**Applies To**
-
-- Partner Center
-- Partner Center operated by 21Vianet
-- Partner Center for Microsoft Cloud Germany
-- Partner Center for Microsoft Cloud for US Government
+**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 Some Partner Center APIs require a value indicating a locale, country or region. For example, the [Partner Center REST header](headers.md) X-Locale requires a value often in the format "language-country" ("en-US" indicates "English - United States").
 
@@ -176,7 +171,7 @@ The following table lists the cultures and International Standards Organization 
 | Montenegro                               | ME                       | MNE                      | sr-Latn-ME / en-US                    |
 | Montserrat                               | MS                       | MSR                      | en-US                                 |
 | Morocco                                  | MA                       | MAR                      | ar-MA / en-US                         |
-| Mozambique                               | MZ                       | MOZ                      | pt-PT / en-US                         |
+| Mozambique                               | MZ                       | MOZ                      | pt-PT                                 |
 | Myanmar                                  | MM                       | MMR                      | en-US                                 |
 | Namibia                                  | NA                       | NAM                      | en-GB / en-US                         |
 | Nauru                                    | NR                       | NRU                      | en-US                                 |

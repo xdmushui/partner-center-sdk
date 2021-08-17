@@ -10,10 +10,6 @@ ms.author: v-sumukh
 
 # Analytics API resources that help you report on license usage, deployment, and consumption
 
-**Applies to:**
-
-- Partner Center
-
 The resources defined here contain data used to report on usage, deployment, and consumption.
 
 ## PartnerLicensesDeploymentInsights

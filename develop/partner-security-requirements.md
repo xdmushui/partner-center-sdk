@@ -8,10 +8,6 @@ ms.date: 05/29/2020
 
 # Partner security requirements status
 
-Applies to:
-
-- Partner Center
-
 This article describes lists the REST APIs related to multi-factor authentication (MFA) in Partner Center. These APIs help you enforce MFA for each user account in your partner tenant. 
 
 ## Partner security requirements overview

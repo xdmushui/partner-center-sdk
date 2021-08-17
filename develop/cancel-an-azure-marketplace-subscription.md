@@ -8,9 +8,7 @@ ms.subservice:  partnercenter-sdk
 
 # Cancel a commercial marketplace or new commerce subscription using Partner Center APIs
 
-**Applies to:**
-
-- Partner Center
+**Applies To**: Partner Center
 
 This article describes how you can use Partner Center API to cancel a commercial marketplace or new commerce [subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 

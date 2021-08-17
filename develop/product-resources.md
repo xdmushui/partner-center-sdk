@@ -8,10 +8,6 @@ ms.subservice:  partnercenter-sdk
 
 # Products resources
 
-**Applies To**
-
-- Partner Center
-
 Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
 
 ## Product
@@ -36,7 +32,7 @@ Represents the type of a product.
 |-----------------|-------------------------------|--------------------------------------------------------------------------------------|
 | id              | string                        | The type identifier.                                                                 |
 | displayName     | string                        | The display name for this type.                                                      |
-| subType         | [ItemType](#itemtype)         | Optional. An object that describes a sub-type categorization for this item type.     |
+| subType         | [ItemType](#itemtype)         | Optional. An object that describes a subtype categorization for this item type.     |
 
 ## ProductLinks
 
@@ -64,8 +60,9 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | purchasePrerequisites  | array of strings | The list of prerequisite steps or actions that are needed prior to purchasing this item. The supported values are:<br/>  "InventoryCheck" - Indicates that the item's inventory should be evaluated before attempting to purchase this item.<br/> "AzureSubscriptionRegistration" - Indicates that an Azure subscription is needed and must be registered before attempting to purchase this item.  |
 | inventoryVariables     | array of strings | The list of variables needed to execute an inventory check on this item. The supported values are:<br/> "CustomerId" - The ID of the customer that the purchase would be for.<br/> "AzureSubscriptionId" - The ID of the Azure subscription that would be used for an Azure reservation purchase.</br> "ArmRegionName" - The region for which to verify inventory. This value must match the "ArmRegionName" from the SKU's DynamicAttributes. |
 | provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure reservation purchase: "Single", "Shared".<br/> "SubscriptionId" - The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" - The duration of the Azure reservation: "1Year", "3Year".  |
-| dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. Please note that the properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
+| dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. The properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+| AttestationProperties                  | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
 
 ## Dynamic SKU attributes
 
@@ -180,3 +177,12 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
+
+## AttestationProperties
+
+Represents an attestation type and if it is required for purchase.
+
+| Property              | Type                                        | Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. Windows 365 attestation text is "I understand that each person using Windows 365 Business with Windows Hybrid Benefit also needs to have a valid copy of Windows 10/11 Pro installed on their primary work device." |
+| enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |
