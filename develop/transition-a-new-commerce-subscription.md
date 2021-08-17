@@ -10,9 +10,7 @@ ms.author: brserbus
 
 # Transition a new commerce subscription
 
-**Applies To**
-
-- Partner Center
+**Applies To**: Partner Center
 
 **Appropriate roles**
 
@@ -28,7 +26,7 @@ Used to upgrade a customer's new commmerce subscription to a target subscription
 
 Returns a list of eligible transitions for a given customer, subscription and requested type.
 
-## Prerequisites
+### Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
@@ -36,15 +34,15 @@ Returns a list of eligible transitions for a given customer, subscription and re
 
 - One subscription ID for the initial subscription.
 
-## REST request
+### REST request
 
-### Request syntax
+#### Request syntax
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitionEligibilities?eligibilityType={immediate, scheduled} HTTP/1.1 |
 
-### URI parameter
+#### URI parameter
 
 Use the following query parameters to return eligible transitions.
 
@@ -54,15 +52,15 @@ Use the following query parameters to return eligible transitions.
 | **subscriptoin-Id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 | **eligibilityType**       | **string** | Y        | Describes when the transtion is to be executed, can be immediate or scheduled.  |
 
-### Request headers
+#### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 None
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitionEligibilities?eligibilityType=immediate HTTP/1.1
@@ -73,15 +71,15 @@ MS-CorrelationId: 81b08ffe-4cf8-49cd-82db-5c2fb0a8e132
 X-Locale: en-US
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a list of eligible transitions in the response body.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-### Eligibility errors
+#### Eligibility errors
 
 Error descriptions and meaning.
 
@@ -92,7 +90,7 @@ Error descriptions and meaning.
 |Transition type is not compatible - AzureAD subscription mapping is required. | LegacyCannotConvertSubscriptionId error when calling GetSubscriptionUpgradeConflicts |
 |Transition type is not compatible - conflicting subscriptions for license transfer exist. | If any AAD service has subscription ids from a different subscription, add it to the conflict list (includes purchases made with either legacy or modern purchase flow) |
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
@@ -164,7 +162,7 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
 
 Posts a transition request for a given customer and subscription. Returns the transition with intial status.
 
-## Prerequisites
+### Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
@@ -172,16 +170,16 @@ Posts a transition request for a given customer and subscription. Returns the tr
 
 - One subscription ID for the initial subscription.
 
-## REST request
+### REST request
 
-### Request syntax
+#### Request syntax
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
 | **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscriptoin-Id}/transitions HTTP/1.1 |
 
 
-### URI parameter
+#### URI parameter
 
 Use the following query parameters to execute a transition.
 
@@ -190,15 +188,15 @@ Use the following query parameters to execute a transition.
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer's tenant.             |
 | **subscriptoin-Id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 
-### Request headers
+#### Request headers
 
 For more information, see [Partner Center REST headers](headers.md).
 
-### Request body
+#### Request body
 
 A full **Transition** resource is required in the request body.
 
-### Request example
+#### Request example
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/{customerId}/subscriptions/{subscriptionId}/transitions HTTP/1.1
@@ -216,15 +214,15 @@ X-Locale: en-US
 }
 ```
 
-## REST response
+### REST response
 
 If successful, this method returns a Transition resource with the initial events.
 
-### Response success and error codes
+#### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-### Response example
+#### Response example
 
 ```http
 HTTP/1.1 200 OK
