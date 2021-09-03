@@ -1,7 +1,7 @@
 ---
 title: Get a subscription by ID
 description: Gets a Subscription resource that matches the customer ID and the subscription ID.
-ms.date: 12/15/2017
+ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: amitravat
@@ -81,7 +81,7 @@ If successful, this method returns a [Subscription](subscription-resources.md) r
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Response example for a standard subscription
+### Response example for a Microsoft Azure subscription
 
 ```http
 HTTP/1.1 200 OK
@@ -177,6 +177,83 @@ Date: Fri, 27 Jan 2017 00:12:53 GMT
     "orderId": "CF3B0E37-BE0B-4CDD-B584-D1A97D98A922",
     "attributes": {
         "etag": "eyJpZCI6Ijk2OGJhMWNmLWMxNDYtNGFkZi1hMzAwLTMwOGRjZjcxOGVlZSIsInZlcnNpb24iOjF9",
+        "objectType": "Subscription"
+    }
+}
+```
+### Response example for a new commerce subscription
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1132
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 4ercec93-852d-4167-9d96-c57809bea7ed
+MS-RequestId: 54sfd0fb-d1e6-4a8f-aa1a-124b7c820d80
+MS-CV: cmde2DtbuUWi8JLq.0
+MS-ServerId: 201022015
+Date: Fri, 19 Feb 2021 00:14:53 GMT
+
+{
+    "id": "a4c1340d-6911-4758-bba3-0c4c6007d161",
+    "offerId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "offerName": "Microsoft 365 Business Basic",
+    "friendlyName": "Microsoft 365 Business Basic",
+    "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+    },
+    "quantity": 1, 
+    "unitType": "Licenses",
+    "hasPurchasableAddons": false,
+    "creationDate": "2021-01-14T16:57:15.0966728Z",
+    "effectiveStartDate": "2021-01-14T16:57:14.498252Z",
+    "commitmentEndDate": "2022-01-13T00:00:00Z",
+    "status": "expired", 
+    "autoRenewEnabled": false, 
+    "isTrial": false,
+    "billingType": "license",
+    "billingCycle": "monthly",
+    "termDuration": "P1Y",
+    "renewalTermDuration": "",
+    "refundOptions": [
+        {
+            "type": "Full",
+            "expiresAt": "2021-01-15T00:00:00Z"
+        }
+    ],
+    "isMicrosoftProduct": true,
+    "partnerId": "",
+    "attentionNeeded": false,
+    "actionTaken": false,
+    "contractType": "subscription",
+    "links": {
+        "product": {
+            "uri": "/products/CFQ7TTC0LH18?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "sku": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "availability": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/customers/d8202a51-69f9-4228-b900-d0e081af17d7/subscriptions/a4c1340d-6911-4758-bba3-0c4c6007d161",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "publisherName": "Microsoft Corporation",
+    "orderId": "34b37d7340cc",
+    "attributes": {
         "objectType": "Subscription"
     }
 }
