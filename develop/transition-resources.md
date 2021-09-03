@@ -57,7 +57,7 @@ Describes the behavior of an individual subscription transition resource.
 | ToSubscriptionId  | string                  | The To subscription id. This is only populated if the subscription changes. Currently only Legacy Upgrade needs this, but modern partial transition will also. |
 | Quantity          | integer                 | The quantity being transitioned to the target catalog item. |
 | TransitionType    | string 		      | The transition type. Possible values - transition_only, transition_with_license_transfer.   |
-| Events            | list of TransitionEvents | The events of the transtion. |
+| Events            | list of TransitionEvents | The events of the transition. |
 
 ## TransitionEvent
 
@@ -72,7 +72,7 @@ Describes a reason why an upgrade cannot be performed.
 
 ## TransitionError
 
-Represents an error for subscription transfer eligibility. Provides a reason why an transition cannot be performed.
+Represents an error for subscription transfer eligibility. Provides a reason why a transition cannot be performed.
 
 | Property          | Type               | Description                                                                                                                                                                                                                                                                                                                                                                                     |
 |-------------------|--------------------|--------------------------------------------------------------|
