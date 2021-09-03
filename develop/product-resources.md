@@ -75,8 +75,8 @@ Notable properties relevant to new commerce license-based products and services.
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
 |hasConstraints|boolean|Describes if the SKU contains assetContraints|
 |isAddon|boolean|Describes if the SKU is an add on|
-|prerequisiteSkus|array of strings|Describes prdoucts and skus the add on can work with|
-|upgradeTargetOffers|array of strings|A list of prducts and skus the item can upgrade to|
+|prerequisiteSkus|array of strings|Describes products and skus the add on can work with|
+|upgradeTargetOffers|array of strings|A list of products and skus the item can upgrade to|
 |converstionInstructions|list of converstionInstructions|List of instructions applicable to conversat operations|
 
 ## Availability
@@ -110,7 +110,7 @@ Represents renewal instructions for a given availability.
 
 | Property        | Type                        | Description                                                                         |
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------|
-| applicableTermIds       | array of strings                       | Term ids the instructions apply to |
+| applicableTermIds       | array of strings                       | Term IDs the instructions apply to |
 | RenewalOptions       | array of RenewalOption                     | Options which define renewals |
 
 ## RenewalOption	
