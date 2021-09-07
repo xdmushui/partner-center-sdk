@@ -1,7 +1,7 @@
 ---
 title: Update a cart
 description: How to update an order for a customer in a cart.
-ms.date: 10/11/2019
+ms.date: 09/06/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -34,6 +34,113 @@ var cart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Get();
 cart.LineItems.ToArray()[0].Quantity++;
 
 var updatedCart = partnerOperations.Customers.ById(customerId).Cart.ById(cartId).Put(cart);
+```
+
+To complete attestation and include additional resellers, see the following sample.
+
+### API Sample - Check out cart
+
+``` csharp
+{
+    "orders": [
+        {
+            "id": "f76c6b7f449d",
+            "alternateId": "f76c6b7f449d",
+            "referenceCustomerId": "f81d98dd-c2f4-499e-a194-5619e260344e",
+            "billingCycle": "monthly",
+            "currencyCode": "USD",
+            "currencySymbol": "$",
+            "lineItems": [
+                {
+                    "lineItemNumber": 0,
+                    "offerId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+                    "subscriptionId": "ebc0beef-7ffb-4044-c074-16f324432139",
+                    "termDuration": "P1M",
+                    "transactionType": "New",
+                    "friendlyName": "AI Builder Capacity add-on",
+                    "quantity": 1,
+                    "links": {
+                        "product": {
+                            "uri": "/products/CFQ7TTC0LH0Z?country=US",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "sku": {
+                            "uri": "/products/CFQ7TTC0LH0Z/skus/0001?country=US",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "availability": {
+                            "uri": "/products/CFQ7TTC0LH0Z/skus/0001/availabilities/CFQ7TTC0K18P?country=US",
+                            "method": "GET",
+                            "headers": []
+                        }
+                    }
+                },
+                {
+                    "lineItemNumber": 1,
+                    "offerId": "CFQ7TTC0LFLS:0002:CFQ7TTC0KDLJ",
+                    "subscriptionId": "261bac40-7d88-4327-dfa3-dacd09222d62",
+                    "termDuration": "P1Y",
+                    "transactionType": "New",
+                    "friendlyName": "Azure Active Directory Premium P1",
+                    "quantity": 2,
+                    "partnerIdOnRecord": "517285",
+                    "additionalPartnerIdsOnRecord": 
+                        "5357564",
+                        "5357563"
+                    ],
+                 
+   "links": {
+                        "product": {
+                            "uri": "/products/CFQ7TTC0LFLS?country=US",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "sku": {
+                            "uri": "/products/CFQ7TTC0LFLS/skus/0002?country=US",
+                            "method": "GET",
+                            "headers": []
+                        },
+                        "availability": {
+                            "uri": "/products/CFQ7TTC0LFLS/skus/0002/availabilities/CFQ7TTC0KDLJ?country=US",
+                            "method": "GET",
+                            "headers": []
+                        }
+                    }
+                }
+            ],
+            "creationDate": "2021-08-18T07:52:23.1921872Z",
+            "status": "pending",
+            "transactionType": "UserPurchase",
+            "links": {
+                "self": {
+                    "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/f76c6b7f449d",
+                    "method": "GET",
+                    "headers": []
+                },
+                "provisioningStatus": {
+                    "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/f76c6b7f449d/provisioningstatus",
+                    "method": "GET",
+                    "headers": []
+                },
+                "patchOperation": {
+                    "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/f76c6b7f449d",
+                    "method": "PATCH",
+                    "headers": []
+                }
+            },
+            "client": {},
+            "attributes": {
+                "objectType": "Order"
+            }
+        }
+    ],
+    "attributes": {
+        "objectType": "CartCheckoutResult"
+    }
+}
+
 ```
 
 ## REST request
@@ -84,6 +191,7 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 | provisioningContext  | Dictionary<string, string>  | No           | A context used for provisioning of offer.                                                          |
 | orderGroup           | string                      | No           | A group to indicate which items can be placed together.                                            |
 | error                | Object                      | No           | Applied after cart is created in case of an error.                                                 |
+| AdditionalPartnerIdsOnRecord | String | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **Additional indirect reseller only** (never the ID of the indirect provider). Incentives are not applicable for these additional resellers. Only a maximum of 5 Indirect Resellers can be entered. This is only applicable partners transacting within EU / EFTA countries.  |
 
 ### Request example
 

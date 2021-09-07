@@ -1,7 +1,7 @@
 ---
 title: Create a customer order
 description: Learn how to use Partner Center APIs to create an order for a customer. Article includes prerequisites, steps, and examples.
-ms.date: 07/12/2019
+ms.date: 09/06/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -35,6 +35,97 @@ To create an order for a customer:
 3. Obtain an interface to order operations. First, call the [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method with the customer ID to identify the customer. Next, retrieve the interface from the [**Orders**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders) property.
 
 4. Call the [**Create**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) or [**CreateAsync**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) method and pass in the [**Order**](order-resources.md) object.
+
+5. To complete attestation and include additional resellers, see the following sample Request and Response Samples:
+
+### Request example
+
+``` csharp
+{
+    "PartnerOnRecordAttestationAccepted":true, 
+    "lineItems": [
+        {
+            "offerId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "lineItemNumber": 0,
+            "PartnerIdOnRecord": "873452",
+            "AdditionalPartnerIdsOnRecord":["4847383","873452"]
+        }
+    ],
+    "billingCycle": "monthly"
+}
+```
+
+### Response example
+
+``` csharp
+{
+    "id": "5cf72f146967",
+    "alternateId": "5cf72f146967",
+    "referenceCustomerId": "f81d98dd-c2f4-499e-a194-5619e260344e",
+    "billingCycle": "monthly",
+    "currencyCode": "USD",
+    "currencySymbol": "$",
+    "lineItems": [
+        {
+            "lineItemNumber": 0,
+            "offerId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "subscriptionId": "fcddfa52-1da8-4529-d347-50ea51e1e7be",
+            "termDuration": "P1M",
+            "transactionType": "New",
+            "friendlyName": "AI Builder Capacity add-on",
+            "quantity": 1,
+            "partnerIdOnRecord": "873452",
+            "additionalPartnerIdsOnRecord": [
+                "4847383",
+                "873452"
+            ],
+            "links": {
+                "product": {
+                    "uri": "/products/CFQ7TTC0LH0Z?country=US",
+                    "method": "GET",
+                    "headers": []
+                },
+                "sku": {
+                    "uri": "/products/CFQ7TTC0LH0Z/skus/0001?country=US",
+                    "method": "GET",
+                    "headers": []
+                },
+                "availability": {
+                    "uri": "/products/CFQ7TTC0LH0Z/skus/0001/availabilities/CFQ7TTC0K18P?country=US",
+                    "method": "GET",
+                    "headers": []
+                }
+            }
+        }
+    ],
+    "creationDate": "2021-08-17T18:13:11.3122226Z",
+    "status": "pending",
+    "transactionType": "UserPurchase",
+    "links": {
+        "self": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967",
+            "method": "GET",
+            "headers": []
+        },
+        "provisioningStatus": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967/provisioningstatus",
+            "method": "GET",
+            "headers": []
+        },
+        "patchOperation": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967",
+            "method": "PATCH",
+            "headers": []
+        }
+    },
+    "client": {},
+    "attributes": {
+        "objectType": "Order"
+    }
+}
+
+
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -103,6 +194,8 @@ This table describes the [Order](order-resources.md) properties in the request b
 | status               | string                      | No                              | Read-only. The status of the order.  Supported values are the member names found in [OrderStatus](order-resources.md#orderstatus).        |
 | links                | [OrderLinks](utility-resources.md#resourcelinks)              | No                              | The resource links corresponding to the Order. |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No                              | The metadata attributes corresponding to the Order. |
+| PartnerOnRecordAttestationAccepted | Boolean | Yes | Confirms Attestation completion |
+
 
 #### OrderLineItem
 
@@ -125,6 +218,7 @@ This table describes the [OrderLineItem](order-resources.md#orderlineitem) prope
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | No       | The metadata attributes corresponding to the OrderLineItem. |
 | renewsTo             | Array of objects                          | No    |An array of [RenewsTo](order-resources.md#renewsto) resources.                                                                            |
 | AttestationAccepted             | bool                 | No   |  Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.          |
+| AdditionalPartnerIdsOnRecord | String | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **Additional indirect reseller only** (never the ID of the indirect provider). Incentives are not applicable for these additional resellers. Only a maximum of 5 Indirect Resellers can be entered. This is only applicable partners transacting within EU / EFTA countries. |
 
 ##### RenewsTo
 
