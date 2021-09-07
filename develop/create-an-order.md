@@ -125,7 +125,7 @@ To create an order for a customer:
     }
 }
 
-
+```
 
 ``` csharp
 IAggregatePartner partnerOperations;
