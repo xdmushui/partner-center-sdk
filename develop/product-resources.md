@@ -1,7 +1,7 @@
 ---
 title: Products resources
 description: Resources that represent purchasable goods or services. Includes resources for describing the product type and shape (SKU), and for checking the availability of the product in an inventory.
-ms.date: 04/01/2019
+ms.date: 02/16/2016
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
@@ -62,6 +62,22 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | provisioningVariables  | array of strings | The list of variables that must be provided into the provisioning context of a [cart line item](cart-resources.md#cartlineitem) when purchasing this item. The supported values are:<br/> Scope - The scope for an Azure reservation purchase: "Single", "Shared".<br/> "SubscriptionId" - The ID of the Azure subscription that would be used for an Azure reservation purchase.<br/> "Duration" - The duration of the Azure reservation: "1Year", "3Year".  |
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. The properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
+| AttestationProperties                  | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
+
+## Dynamic SKU attributes
+
+Notable properties relevant to new commerce license-based products and services.
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
+|hasConstraints|boolean|Describes if the SKU contains assetContraints|
+|isAddon|boolean|Describes if the SKU is an add on|
+|prerequisiteSkus|array of strings|Describes products and skus the add on can work with|
+|upgradeTargetOffers|array of strings|A list of products and skus the item can upgrade to|
+|converstionInstructions|list of converstionInstructions|List of instructions applicable to conversat operations|
 
 ## Availability
 
@@ -78,10 +94,37 @@ Represents a configuration in which a SKU is available for purchase (such as cou
 | country         | string                                              | The country or region (in ISO country code format) where this availability applies. |
 | isPurchasable   | bool                                                | Indicates whether this availability is purchasable. |
 | isRenewable     | bool                                                | Indicates whether this availability is renewable. |
+| RenewalInstructions     | RenewalInstruction                                              | Represents renewal instructions for a given availability. |
 | product      | [Product](#product)               | The product this availability corresponds to. |
 | sku          | [Sku](#sku)            | The SKU this availability corresponds to. |
 | terms           | array of [Term](#term) resources  | The collection of terms that are applicable to this availability. |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the availability. |
+
+## Renewal instruction
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+> 
+
+Represents renewal instructions for a given availability.
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| applicableTermIds       | array of strings                       | Term IDs the instructions apply to |
+| RenewalOptions       | array of RenewalOption                     | Options which define renewals |
+
+## RenewalOption	
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+> 
+
+Represents renewal instructions for a given availability.
+
+| Property        | Type                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| renewToId       | String       | Represents the product and sku to renew to |
+| isAutoRenewable       | Bool       | Whether or not the availability can be auto renewed |
 
 ## Term
 
@@ -134,3 +177,12 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
+
+## AttestationProperties
+
+Represents an attestation type and if it is required for purchase.
+
+| Property              | Type                                        | Description                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indicates the attestation type. For Windows 365 the value is Windows365. Windows 365 attestation text is "I understand that each person using Windows 365 Business with Windows Hybrid Benefit also needs to have a valid copy of Windows 10/11 Pro installed on their primary work device." |
+| enforceAttestation           | boolean                                      | Indicates whether attestation is required for purchase.           |

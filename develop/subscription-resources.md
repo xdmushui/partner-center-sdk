@@ -1,9 +1,9 @@
 ---
 title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
-ms.date: 11/01/2019
+ms.date: 02/23/2021
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-sdk
+ms.subservice: partnercenter-sdk
 ---
 
 # Subscription resources
@@ -31,8 +31,8 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | parentSubscriptionId | string                                                        | Gets or sets the parent subscription identifier.                                                                                                                              |
 | creationDate         | string                                                        | Gets or sets the creation date, in date-time format.                                                                                                                          |
 | effectiveStartDate   | string in UTC date time format                                | Gets or sets the effective start date for this subscription, in date-time format. It is used to back date a migrated subscription or to align it with another.                |
-| commitmentEndDate    | string in UTC date time format                                | The commitment end date for this subscription, in date-time format. For subscriptions that are not auto-renewable, this represents a date far away in the future.       |
-| status               | string                                                        | The subscription status: "none", "active", "pending", "suspended", or "deleted".                                                                                                         |
+| commitmentEndDate    | string in UTC date time format                                | The commitment end date for this subscription, in date-time format. For subscriptions which are not auto-renewable, this represents a date far, far away in the future.       |
+| status               | string                                                        | The subscription status: "none", "active", "pending", "suspended", "expired" or "deleted".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Gets a value indicating whether the subscription is renewed automatically.                                                                                                    |
 | billingType          | string                                                        | Specifies how the subscription is billed: "none", "usage", or "license".                                                                                                      |
 | billingCycle         | string                                                        | Indicates the frequency with which the partner is billed for this order. Supported values are the member names found in [**BillingCycleType**](product-resources.md#billingcycletype). |
@@ -50,6 +50,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | termDuration         | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month), **P1Y** (1 year) and **P3Y** (3 years).                                                        |
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 | renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year).                                                        |
+| ProductType  | [ItemType](product-resources.md#itemtype)                             | Read-only. The type of product the subscription is for.     |
 
 ## SubscriptionLinks
 

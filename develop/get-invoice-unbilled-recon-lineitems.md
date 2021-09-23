@@ -1,7 +1,7 @@
 ---
 title: Get invoice's unbilled reconciliation line items
 description: You can get a collection of unbilled reconciliation line item details for specified period using the Partner Center APIs.
-ms.date: 01/27/2020
+ms.date: 02/18/2020
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: sourishdeb
@@ -114,9 +114,9 @@ You can use the following syntaxes for your REST request, depending on your use 
 
  | Method  | Request URI            | Description of syntax use case                                                                                |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/{invoice-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Use this syntax to return a full list of every line item for the given invoice. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | For large invoices, use this syntax with a specified size and 0-based offset to return a paged list of line items. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/invoices/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Use this syntax to get the next page of reconciliation line items using `seekOperation = "Next"`. |
 
 #### URI parameters
 
@@ -124,7 +124,6 @@ Use the following URI and query parameters when creating the request.
 
 | Name                   | Type   | Required | Description                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| invoice-id             | string | Yes      | A string that identifies the invoice. Use 'unbilled' to get unbilled estimates. |
 | provider               | string | Yes      | The provider: "OneTime".                                                |
 | invoice-line-item-type | string | Yes      | The type of invoice detail: "BillingLineItems".               |
 | hasPartnerEarnedCredit | bool   | No       | The value indicating if to return the line items with partner earned credit applied. Note: this parameter will be only applied when provider type is OneTime and InvoiceLineItemType is UsageLineItems.
@@ -409,7 +408,7 @@ MS-ServerId: 202010406
 Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 {
-   "totalCount": 3,
+    "totalCount": 2,
     "items": [
         {
             "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
@@ -568,9 +567,54 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
-        }
-    ]
-}
+        },
+        {
+           "partnerId": "0c924e8d-4852-4692-a4d7-7dd0dc09ad80",
+            "customerId": "org:d7f565f5-5367-492f-a465-9e2057c5e3c3",
+            "customerName": "TEST_TEST_GTM1",
+            "customerDomainName": "TESTTESTGTM1.ccsctp.net",
+            "customerCountry": "US",
+            "invoiceNumber": "",
+            "mpnId": "123456",
+            "resellerMpnId": 0,
+            "orderId": "VdqkP11Bu4DlcjP5rLeQabcdefg-1234",
+            "orderDate": "2021-01-29T19:50:13.9869095Z",
+            "productId": "CFQ7TTC01234",
+            "skuId": "0001",
+            "availabilityId": "CFQ7TTC0ABCD",
+            "productName": "Office 365 E3",
+            "skuName": "Office 365 E3",
+            "chargeType": "new",
+            "unitPrice": 16,
+            "effectiveUnitPrice": 16,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 16,
+            "taxTotal": 1.61,
+            "totalForCustomer": 17.61,
+            "currency": "USD",
+            "publisherName": "Microsoft Corporation",
+            "publisherId": "",
+            "subscriptionDescription": "",
+            "subscriptionId": "2ae795eb-f76d-ce69-cba0-123456789000",
+            "chargeStartDate": "2021-01-29T00:00:00Z",
+            "chargeEndDate": "2021-02-27T00:00:00Z",
+            "termAndBillingCycle": "One-Year commitment for monthly/yearly billing",
+            "priceAdjustmentDescription": "[\"1 month billing\",\"You are getting a discount for being a partner.\",\"You are getting a price guarantee for your price.\",\"Yearly Duration\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "0001-01-01T00:00:00",
+            "billableQuantity": 1,
+            "meterDescription": "",
+            "billingFrequency": "Monthly",
+            "reservationOrderId": "e770c049-89c7-4ec1-b366-123456789000",
+            "invoiceLineItemType": "billing_line_items",
+            "billingProvider": "one_time",
+             "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+       } 
     ],
     "links": {
         "self": {
@@ -612,7 +656,7 @@ MS-ServerId: 202010406
 Date: Wed, 20 Feb 2019 19:59:27 GMT
 
 {
-    "totalCount": 3,
+    "totalCount": 2,
     "items": [
         {
             "partnerId": "934f3416-bc2f-47f3-b492-77e517d4e572",
@@ -771,9 +815,54 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "attributes": {
                 "objectType": "OneTimeInvoiceLineItem"
             }
-        }
-    ]
-}
+        },
+        {
+           "partnerId": "0c924e8d-4852-4692-a4d7-7dd0dc09ad80",
+            "customerId": "org:d7f565f5-5367-492f-a465-9e2057c5e3c3",
+            "customerName": "TEST_TEST_GTM1",
+            "customerDomainName": "TESTTESTGTM1.ccsctp.net",
+            "customerCountry": "US",
+            "invoiceNumber": "",
+            "mpnId": "123456",
+            "resellerMpnId": 0,
+            "orderId": "VdqkP11Bu4DlcjP5rLeQabcdefg-1234",
+            "orderDate": "2021-01-29T19:50:13.9869095Z",
+            "productId": "CFQ7TTC01234",
+            "skuId": "0001",
+            "availabilityId": "CFQ7TTC0ABCD",
+            "productName": "Office 365 E3",
+            "skuName": "Office 365 E3",
+            "chargeType": "new",
+            "unitPrice": 16,
+            "effectiveUnitPrice": 16,
+            "unitType": "",
+            "quantity": 1,
+            "subtotal": 16,
+            "taxTotal": 1.61,
+            "totalForCustomer": 17.61,
+            "currency": "USD",
+            "publisherName": "Microsoft Corporation",
+            "publisherId": "",
+            "subscriptionDescription": "",
+            "subscriptionId": "2ae795eb-f76d-ce69-cba0-123456789000",
+            "chargeStartDate": "2021-01-29T00:00:00Z",
+            "chargeEndDate": "2021-02-27T00:00:00Z",
+            "termAndBillingCycle": "One-Year commitment for monthly/yearly billing",
+            "priceAdjustmentDescription": "[\"1 month billing\",\"You are getting a discount for being a partner.\",\"You are getting a price guarantee for your price.\",\"Yearly Duration\"]",
+            "discountDetails": "",
+            "pricingCurrency": "USD",
+            "pcToBCExchangeRate": 1,
+            "pcToBCExchangeRateDate": "0001-01-01T00:00:00",
+            "billableQuantity": 1,
+            "meterDescription": "",
+            "billingFrequency": "Monthly",
+            "reservationOrderId": "e770c049-89c7-4ec1-b366-123456789000",
+            "invoiceLineItemType": "billing_line_items",
+            "billingProvider": "one_time",
+             "attributes": {
+                "objectType": "OneTimeInvoiceLineItem"
+            }
+       } 
     ],
     "links": {
         "self": {

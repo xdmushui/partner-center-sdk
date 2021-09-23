@@ -1,7 +1,7 @@
 ---
 title: Create a cart
 description: Learn how to use Partner Center APIs to add an order for a customer in a cart. Topic includes information on creating a cart and any prerequisites.
-ms.date: 09/17/2019
+ms.date: 09/06/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: rbars
@@ -31,6 +31,114 @@ To create an order for a customer:
 3. Obtain an interface to cart operations by calling the **IAggregatePartner.Customers.ById** method with the customer ID to identify the customer, and then retrieving the interface from the **Cart** property.
 
 4. Call the **Create** or **CreateAsync** method to create the cart.
+
+5. To complete attestation and include additional resellers please see the following sample Request and Response Samples:
+
+### Request sample
+
+```csharp
+
+{
+    "PartnerOnRecordAttestationAccepted":true,     "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "renewsTo": null,
+            "provisioningContext": {},
+            "coterminousSubscriptionId": null
+        },
+        {
+            "id": 1,
+            "catalogItemId": "CFQ7TTC0LFLS:0002:CFQ7TTC0KDLJ",
+            "quantity": 2,
+            "billingCycle": "monthly",
+            "termDuration": "P1Y",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "5357564"
+                },
+                 {
+                    "key": "additional_transaction_reseller",                     
+                    "value": "517285"
+                },
+                 {
+                    "key": "additional_transaction_reseller", 
+                    "value": "5357563"
+                }
+            ]
+        }
+    ]
+}
+
+
+```
+
+### Response sample
+
+```csharp
+
+{
+    "id": "3e22b548-647d-4223-9675-1fcb6cb57665",
+    "creationTimestamp": "2021-08-18T17:29:52.3517492Z",
+    "lastModifiedTimestamp": "2021-08-18T17:29:52.3517553Z",
+    "expirationTimestamp": "2021-08-25T17:30:11.2406416Z",
+    "lastModifiedUser": "da62a0dc-35e9-4601-b48e-a047bd3ec7c1",
+    "status": "Active",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "provisioningContext": {},
+            "orderGroup": "0"
+        },
+        {
+            "id": 1,
+            "catalogItemId": "CFQ7TTC0LFLS:0002:CFQ7TTC0KDLJ",
+            "quantity": 2,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1Y",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "5357564"
+                },
+                {
+                    "key": "additional_transaction_reseller", 
+                    "value": "517285"
+                },
+                {
+                    "key": "additional_transaction_reseller", 
+                    "value": "5357563"
+                }
+            ],
+            "provisioningContext": {},
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/carts/3e22b548-647d-4223-9675-1fcb6cb57665",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
+}
+
+
+```
+
 
 ### C\# example
 
@@ -224,6 +332,7 @@ This table describes the [Cart](cart-resources.md) properties in the request bod
 | expirationTimeStamp   | DateTime         | No              | The date the cart will expire, in date-time format.  Applied upon successful creation of cart.            |
 | lastModifiedUser      | string           | No              | The user who last updated the cart. Applied upon successful creation of cart.                             |
 | lineItems             | Array of objects | Yes             | An Array of [CartLineItem](cart-resources.md#cartlineitem) resources.                                     |
+| PartnerOnRecordAttestationAccepted | Boolean | Yes | Confirms Attestation completion |
 
 This table describes the [CartLineItem](cart-resources.md#cartlineitem) properties in the request body.
 
@@ -240,6 +349,9 @@ This table describes the [CartLineItem](cart-resources.md#cartlineitem) properti
 |     orderGroup      |           string            |    No    |                                                                   A group to indicate which items can be placed together.                                                                   |
 |        error        |           Object            |    No    |                                                                     Applied after cart is created if there is an error.                                                                      |
 |     renewsTo        | Array of objects            |    No    |                                                    An array of [RenewsTo](cart-resources.md#renewsto) resources.                                                                            |
+|     AttestationAccepted        | Boolean            |    No    |                                                   Indicates agreement to offer or sku conditions. Required only for offers or skus where SkuAttestationProperties or OfferAttestationProperties enforceAttestation is True.                                                                             |
+|  transaction_reseller | String | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **indirect reseller only** (never the ID of the indirect provider). This ensures proper accounting for incentives. |
+| additional_transaction_reseller | String | No | When an indirect provider places an order on behalf of an indirect reseller, populate this field with the MPN ID of the **Additional indirect reseller only** (never the ID of the indirect provider). Incentives are not applicable for these additional resellers. Only a maximum of 5 Indirect Resellers can be entered. This is only applicable partners transacting within EU / EFTA countries. |
 
 This table describes the [RenewsTo](cart-resources.md#renewsto) properties in the request body.
 
@@ -430,4 +542,78 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     "objectType": "Cart"
   }
 }
+```
+
+
+## Example for new commerce license-based services
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+### Request example
+
+```http
+POST /v1/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts HTTP/1.1
+Host: api.partnercenter.microsoft.com
+Content-Type: application/json
+Content-Length: 165
+
+{
+	"LineItems": [
+		{
+			"CatalogItemId":"CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+			"Quantity": 1,
+			"TermDuration": "P1M",
+            		"BillingCycle": "Monthly"
+		}
+	]
+}
+
+```
+
+### REST response
+
+If successful, this method returns the populated [Cart](cart-resources.md) resource in the response body.
+
+### Response success and error codes
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+
+### Response example
+
+```http
+
+{
+    "id": "6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+    "creationTimestamp": "2021-02-24T19:26:06.947164Z",
+    "lastModifiedTimestamp": "2021-02-24T19:26:06.9471649Z",
+    "expirationTimestamp": "2021-03-03T19:26:09.0035129Z",
+    "lastModifiedUser": "004ec05e-8999-4d02-9315-2b1b667c0deb",
+    "status": "Active",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+            "quantity": 1,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "provisioningContext": {},
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts/6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
+}
+
+
+
 ```

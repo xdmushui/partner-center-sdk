@@ -1,7 +1,7 @@
 ---
 title: Get a product by ID
 description: Gets the specified product resource using a product ID.
-ms.date: 09/17/2019
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: rbars
@@ -99,7 +99,7 @@ This method returns the following error codes:
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | Product was not found.                                                     |
 
-### Response example
+### Response example for Azure VM reservation (Azure plan)
 
 ```http
 HTTP/1.1 200 OK
@@ -131,6 +131,36 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
         },
         "self": {
             "uri": "/products/DZH318Z0BQ3Q?country=US",
+            "method": "GET",
+            "headers": []
+        }
+    }
+}
+```
+### Response example for new commerce license-based product
+
+> [!Note] 
+> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview
+
+```http
+{
+    "id": "CFQ7TTC0LH18",
+    "title": "Microsoft 365 Business Basic",
+    "description": "Best for businesses that need professional email, cloud file storage, and online meetings & chat. Desktop versions of Office apps like Excel, Word, and PowerPoint not included. For businesses with up to 300 employees.",
+    "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+    },
+    "isMicrosoftProduct": true,
+    "publisherName": "Microsoft Corporation",
+    "links": {
+        "skus": {
+            "uri": "/products/CFQ7TTC0LH18/skus?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+        "uri": "/products/CFQ7TTC0LH18?country=US",
             "method": "GET",
             "headers": []
         }
