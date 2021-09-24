@@ -33,9 +33,10 @@ Discount applied when purchasing a product SKU if eligibility criteria is met.
 | id | string                  | The promotion identifier. |
 | name | string                  | The friendly name of the promotion. |
 | description | string                  | A description of the promotion. |
-| segment | string | The segment the promotion can be applied in. |
-| requiredProducts | list of rerquiredProducts | Product, SKU details, and pricing policies the promotion is applicable for. | 
-| properties | list of properties | Properties for the promotion including the start date, end dates, and tag information. | 
+| startDate | string | The start date for when the promotion is applicable. |
+| endDate | string  | The end date for when the promotion is applicable. |
+| requiredProducts | list of requiredProducts | Product, SKU details, and pricing policies the promotion is applicable for. | 
+| properties | list of properties | Properties for the promotion including whether the promotion is auto-applicable. | 
 
 ## RequiredProducts
 
@@ -45,7 +46,7 @@ Product, SKU details, and pricing policies the promotion is applicable for.
 |-------------------|-------------------------|----------------------------------------------------------------------------------------------|
 | productId| string | An identifier of the product the promotion is available for. |
 | skuId | string | An identifier of the SKU the promotion is available for. |
-| term | List of Terms | A list that includes durations and billing cycles the promotion is available for. |
+| term | Term | A term including term duration and billing cycle the promotion is available for. |
 | pricingPolicies| List of pricingPolicies | A list of policies that define the promotion discount types and values. |
 
 ## Term
@@ -57,7 +58,7 @@ Represents a term for which the promotion can be purchased.
 | duration          | string                  | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). 
 | billingCycle      | string | Describes how often the promotion will be applied to the billing. Values can include Monthly, Annual, OneTime, or Unknown. | 
 
-## PricingPolcies
+## PricingPolicies
 
 Describe the promotion discount types and values.
 
@@ -68,13 +69,11 @@ Describe the promotion discount types and values.
 
 ## Properties
 
-Properties for the promotion including the start date, end dates, and tag information.
+Properties for the promotion.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| startDate | string | The start date for when the promotion is applicable. |
-| endDate | string  | The end date for when the promotion is applicable. |
-| tag | string  | Includes extra information about the promotion, often used for internal execution paths. |
+| isAutoApplicable  | bool  | Indicates whether the promotion is applied automatically or whether it needs to be passed by the partner. |
 
 
 ## PromotionEligibilitiesRequestItem
