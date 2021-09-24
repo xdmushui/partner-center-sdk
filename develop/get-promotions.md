@@ -22,15 +22,15 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the Microsoft 365 and Dynamics 365 new commerce experience technical preview.
 
-Parters can get a list of active new commerce promotions for a given market (country) and segement. This method returns available current promotions based on the promotions available start and end dates.
+Partners can get a list of active new commerce promotions for a given market (country) and segment. This method returns available current promotions based on the promotions available start and end dates.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-- Segement respresents the type of customer the promotions are enabled for. Currently supports only commercial.
+- Segment represents the type of customer the promotions are enabled for. Currently supports only commercial.
 
-- Country represents the customer country promotions are available for. This is represented by a two character country code.
+- Country represents the customer country promotions are available for. Country is represented by a two character country code.
 
 ## REST request
 [GET] /v1/productpromotions?country={country-code};segment={segment}
@@ -46,7 +46,7 @@ Use the following query parameters to return available promotions.
 
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
-| **segment**  | **string** | Y        | A string which determins which promotions are available for a given segement.             |
+| **segment**  | **string** | Y        | A string that determines which promotions are available for a given segment.             |
 | **country** | **guid** | Y        | A two letter country code determining which customer country promotions are available for. |
 
 ### Request headers
@@ -74,7 +74,7 @@ If successful, this method returns a list of promotions.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and more debugging information. Use a network trace tool to read this code, error type, and more parameters. For the full list, see [Error Codes](error-codes.md).
 
 ### Response example
 
