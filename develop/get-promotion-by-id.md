@@ -22,7 +22,8 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the Microsoft 365 and Dynamics 365 new commerce experience technical preview.
 
-Parters can get a single promotion for a given promotion ID and country. This method returns the promotion data, ingoring the promotion start and end dates. This method is used primarily for reconciliation purposes to retrieve promotion details even after the promotion has expired.
+Parnters can get a single promotion for a given promotion ID and country. This method returns the promotion data, ignoring the promotion start and end dates. This method is used primarily for reconciliation purposes to retrieve promotion details even after the promotion has expired.
+
 
 ## Prerequisites
 

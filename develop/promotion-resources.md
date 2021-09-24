@@ -154,7 +154,8 @@ Includes details about why the seat count limit was exceeded.
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
 | billingCycle | string | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual, OneTime or Unknown. |
-| duration | string | Duration of the term being purcahsed. |
+| duration | string | Duration of the term being purchased. |
+
 
 
 
