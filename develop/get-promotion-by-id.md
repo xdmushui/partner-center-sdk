@@ -1,7 +1,7 @@
 ---
 title: Gets a single promotion
 description: Gets a single promotion for a given promotion ID and country.
-ms.date: 02/23/2021
+ms.date: 09/23/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: BrentSerbus
@@ -46,7 +46,7 @@ Use the following query parameters to return available promotions.
 
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
-| **promotion-id**  | **string** | Y        | A colon delimited string defining the promotion to retrieve.           |
+| **promotion-id**  | **string** | Y        | A string defining the promotion to retrieve.           |
 | **country** | **guid** | Y        | A two letter country code determining which customer country promotions are available for. |
 
 ### Request headers
@@ -84,38 +84,40 @@ Content-Length: 138
 Content-Type: application/json
 MS-CorrelationId: 81b08ffe-4cf8-49cd-82db-5c2fb0a8e132
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
-Date: Fri, 26 Feb 2021 20:42:26 GMT
+Date: Fri, 24 Sep 2021 20:42:26 GMT
 
-[
-   {
-    "totalCount": 1,
-    "items": [
-        {
-            "id": "CFQ7TTC0HL8W;0001;CFQ7TTC0K59M",
-            "name": "Promotion discount at 25% E5 1Y term",
-            "description": "Promotion discount for E5.",
-            "segment": "commercial",
-            "requiredProducts": [
-                {
-                    "productId": "CFQ7TTC0LHQZ",
-                    "skuId":"0001",
-                    "term": {
-                       "duration": "P3Y",
-                       "billingCycle": "Annual"
-                    },
-                    "pricingPolicies": [
-                        {
-                            "type": "PercentDiscount",
-                            "value": "0.25"
-                        }]
-                }
-            ],
-            "properties": {
-                    "startDate": "2021-06-05T00:00:00Z",
-                    "endDate": "2021-06-12T23:59:59Z",
-                    "tag": "HashOfProductSku"
-            }
-        }
+{
+    "totalCount": 1,
+    "items": [
+        {
+            "id": "39NFJQT1PJQB:0001:39NFJQT1Q5KN",
+            "name": "Visio Plan 1",
+            "description": "Visio Plan 1",
+            "startDate": "2021-09-23T00:00:00+00:00",
+            "endDate": "2021-10-14T23:59:59+00:00",
+            "properties": {
+                "isAutoApplicable": true
+            },
+            "requiredProducts": [
+                {
+                    "productId": "CFQ7TTC0HD33",
+                    "skuId": "0003",
+                    "term": {
+                        "duration": "P1Y",
+                        "billingCycle": "Annual"
+                    },
+                    "pricingPolicies": [
+                        {
+                            "policyType": "PercentDiscount",
+                            "value": "0.05"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "attributes": {
+        "objectType": "Collection"
+    }
 }
-]
 ```
