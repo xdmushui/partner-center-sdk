@@ -47,7 +47,7 @@ Use the following query parameters to return available promotions.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **promotion-id**  | **string** | Y        | A string defining the promotion to retrieve.           |
-| **country** | **guid** | Y        | A two letter country code determining which customer country promotions are available for. |
+| **country** | **string** | Y        | A two letter country code determining which customer country promotions are available for. |
 
 ### Request headers
 
@@ -60,7 +60,7 @@ None
 ### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/productpromotions/CFQ7TTC0HL8W:0001:CFQ7TTC0K59M?country=UK HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/productpromotions/CFQ7TTC0HD33:0003:CFQ7TTC0K59M?country=US HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
