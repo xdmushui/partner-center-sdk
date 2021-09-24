@@ -37,7 +37,7 @@ Discount applied when purchasing a product SKU if eligibility criteria is met.
 | requiredProducts | list of rerquiredProducts | Product, SKU details, and pricing policies the promotion is applicable for. | 
 | properties | list of properties | Properties for the promotion including the start date, end dates, and tag information. | 
 
-## requiredProducts
+## RequiredProducts
 
 Product, SKU details, and pricing policies the promotion is applicable for.
 
@@ -48,16 +48,16 @@ Product, SKU details, and pricing policies the promotion is applicable for.
 | term | List of Terms | A list that includes durations and billing cycles the promotion is available for. |
 | pricingPolicies| List of pricingPolicies | A list of policies that define the promotion discount types and values. |
 
-## term
+## Term
 
 Represents a term for which the promotion can be purchased.
 
 | Property          | Type                    | Description                                                                                  |
 |-------------------|-------------------------|----------------------------------------------------------------------------------------------|
-| duration          | string                  | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). |
-| billingCycle      | BillingCycleType | Describes how often the promotion will be applied to the billing. Values can include Monthly, Annual, or OneTime | 
+| duration          | string                  | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). 
+| billingCycle      | string | Describes how often the promotion will be applied to the billing. Values can include Monthly, Annual, OneTime, or Unknown. | 
 
-## pricingPolcies
+## PricingPolcies
 
 Describe the promotion discount types and values.
 
@@ -66,7 +66,7 @@ Describe the promotion discount types and values.
 | type | string | Describe whether the discount is based on percentages or flat rate discounts. |
 | value | string  | Defines the amount of the discount applied. |
 
-## properties
+## Properties
 
 Properties for the promotion including the start date, end dates, and tag information.
 
@@ -83,24 +83,12 @@ Properties representing a transaction and a promotion's eligibility.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| ID | int| The promotions eligibilities item identifier. |
-| CatalogItemId | string | The catalog item identifier the promotion will be applied to. Includes product ID, SKU ID, and availability ID. |
-| Quantity | int | The number of licenses or instances. |
-| TermDuration | string | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). |
-| BillingCycle | billingCycleType | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual, or OneTime | 
-| PromotionID | string | The promotion identifier. |
-
-## BillingCycleType
-
-A value that indicates a type of billing cycle.
-
-| Value              | Position     | Description                                                                                |
-|--------------------|--------------|--------------------------------------------------------------------------------------------|
-| Unknown            | 0            | Enum initializer.                                                                          |
-| Monthly            | 1            | Indicates that the partner will be charged monthly.                                        |
-| Annual             | 2            | Indicates that the partner will be charged annually.                                       |
-| None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
-| OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
+| id | int| The promotions eligibilities item identifier. |
+| catalogItemId | string | The catalog item identifier the promotion will be applied to. Includes product ID, SKU ID, and availability ID. |
+| quantity | int | The number of licenses or instances. |
+| termDuration | string | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). |
+| billingCycle | string | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual, OneTime, or Unknown. | 
+| promotionID | string | The promotion identifier. |
 
 ## PromotionEligibilities
 
@@ -108,12 +96,12 @@ A list of products, SKUs, and their promotion eligibilities.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| ID | int| The promotions eligibilities item identifier. |
-| CatalogItemId | string | The catalog item identifier the promotion will be applied to. Includes product ID, SKU ID and availability ID. |
-| Quantity | int | The number of licenses or instances. |
-| TermDuration | string | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). |
-| BillingCycle | billingCycleType | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual or OneTime | 
-| Eligibilities | List of PromotionEligibilities | Represents a list of promotion eligibility results. |
+| id | int| The promotions eligibilities item identifier. |
+| catalogItemId | string | The catalog item identifier the promotion will be applied to. Includes product ID, SKU ID and availability ID. |
+| quantity | int | The number of licenses or instances. |
+| termDuration | string | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years). |
+| billingCycle | string | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual, OneTime or Unknown. | 
+| eligibilities | List of PromotionEligibilities | Represents a list of promotion eligibility results. |
 
 ## PromotionEligibility
 
@@ -121,18 +109,18 @@ A list of products, SKUs, and their promotion eligibilities.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| PromotionId | string | The promotion identifier. |
-| IsEligible | bool | Describes if the promotion is eligible for the given eligibility request item. |
-| Errors | List of PromotionEligibilityErrors | Errors describing why a promotion eligibilities request item wasn't eligible. | 
+| promotionId | string | The promotion identifier. |
+| isEligible | bool | Describes if the promotion is eligible for the given eligibility request item. |
+| errors | List of PromotionEligibilityErrors | Errors describing why a promotion eligibilities request item wasn't eligible. | 
 
 ## PromotionEligibilityError
 
-Explains why a promotion eligibility request item wasn't eligible.
+Explains why a promotion eligibility request item wasn't eligible. 
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| Type | string | The promotion identifier. |
-| Description | bool | Describes if the promotion is eligible for the given eligibility request item. |
+| type | string | The promotion eligibility error types can include InvalidCatalogItemId, InvalidPromotion, PrerequisiteProductOwnership, RedemptionLimit, SeatCount, OfferPurchasedPreviously or Term. |
+| description | string | Describes if the promotion is eligible for the given eligibility request item. |
 
 ## RedemptionLimitPromotionEligibilityError
 
@@ -140,25 +128,25 @@ Includes details about why the redemption limit was exceeded.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| MaxPromotionRedemptionCount | int | The maximum number of times a promotion can be acquired. |
-| RemainingPromotionRedemptionCount| int | The remaining number of times a promotion can be acquired. |
+| maxPromotionRedemptionCount | int | The maximum number of times a promotion can be acquired. |
+| remainingPromotionRedemptionCount| int | The remaining number of times a promotion can be acquired. |
 
 ## SeatCountPromotionEligibilityError
 
-Includes details about why the seat count limit was exceeded.
+Includes details about why the seat count limit was exceeded. Both values are nullable.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| MinimumRequiredSeats | int | The minimum licenses a promotion will support. |
-| MaximumRequiredSeats | int | The maximum licenses a promotion will support. |
+| minimumRequiredSeats | int? | The minimum licenses a promotion will support. |
+| maximumRequiredSeats | int? | The maximum licenses a promotion will support. |
 
-TermPromotionEligibilityError
+## TermPromotionEligibilityError
 
 Includes details about why the promotion term wasn't accepted.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| EligibleTerms | PromotionTerm | The minimum licenses a promotion will support. |
+| eligibleTerms | PromotionTerm | The eligible terms a promotion will support. |
 
 ## PromotionTerm
 
@@ -166,8 +154,8 @@ Includes details about why the seat count limit was exceeded.
 
 | Property          | Type               | Description                                        |
 |-------------------|--------------------|----------------------------------------------------|
-| BillingCycle | BillingCycleType | Defined how often billing will occur. |
-| Duration | string | How long the promotion will be available for. |
+| billingCycle | string | Describes how often the promotion will be applied to the billing. Values can include  Monthly, Annual, OneTime or Unknown. |
+| duration | string | Duration of the term being purcahsed. |
 
 
 
