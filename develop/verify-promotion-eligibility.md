@@ -36,7 +36,7 @@ Parters can verify whether a customer transaction is eligible for a given promot
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/promotions {Eligibilities} HTTP/1.1 |
+| **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customerId}/promotionEligibilities HTTP/1.1 |
 
 ### URI parameter
 
@@ -45,7 +45,6 @@ Use the following query parameters to return available promotions.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customerId**  | **string** | Y        | The value is a GUID-formatted customer-tenant-id, which is an identifier that allows you to specify a customer.          |
-| **Eligibility** | **guid** | Y        | An eligibility object including the product sku availability being purchased, the promotion ID being evaluated, the quantity, term duration, and billing cycle of the transaction.  |
 
 ### Request headers
 
@@ -53,7 +52,7 @@ For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-This table describes the [Eligibility](promotion-resources.md) properties in the request body.
+Body includes a collection of PromotionEligibilitiesRequestItems. This table describes the properties for a [PromotionEligibilitiesRequestItem](promotion-resources.md#promotioneligibilitiesrequestitem).
 
 | Property        | Type             | Required        | Description                                                                                               |
 |-----------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
@@ -66,7 +65,7 @@ This table describes the [Eligibility](promotion-resources.md) properties in the
 ### Request example
 
 ```http
-POST https://api.partnercenter.microsoft.com/v1/customers/46632f71-f052-4384-8f84-4cdb6c12c2a1/promotions HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/customers/46632f71-f052-4384-8f84-4cdb6c12c2a1/promotionEligibilities HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
@@ -139,7 +138,7 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
                 }
             ],
             "attributes": {
-                "objectType": "PromotionEligibility"
+                "objectType": "PromotionEligibilities"
             }
         }
     ],
