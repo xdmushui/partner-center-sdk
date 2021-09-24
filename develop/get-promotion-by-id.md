@@ -1,6 +1,6 @@
 ---
 title: Gets a single promotion
-description: Gets a single promotion for a given promotion id and country.
+description: Gets a single promotion for a given promotion ID and country.
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -8,7 +8,7 @@ author: BrentSerbus
 ms.author: brserbus
 ---
 
-# Get promotion by id
+# Get promotion by ID
 
 **Applies To**
 
@@ -22,15 +22,15 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the Microsoft 365 and Dynamics 365 new commerce experience technical preview.
 
-Parters can get a single promotion for a given promotion id and country. This method returns the promotion data regardless of the promotion start and end dates. This is used primarily for reconcilliation purposed to retrieve promotion details even after the promotion has expired.
+Parters can get a single promotion for a given promotion ID and country. This method returns the promotion data, ingoring the promotion start and end dates. This method is used primarily for reconciliation purposes to retrieve promotion details even after the promotion has expired.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-- Promotion id is delimited set of strings that represent a specific promotion.
+- Promotion ID is delimited set of strings that represent a specific promotion.
 
-- Country represents the customer country promotions are available for. This is represented by a two character country code.
+- Country represents the customer country promotions are available for. Country is represented by a two character country code.
 
 ## REST request
 
@@ -46,7 +46,7 @@ Use the following query parameters to return available promotions.
 
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
-| **promotion-id**  | **string** | Y        | A colon delimitted string defining the promotion to retreive.           |
+| **promotion-id**  | **string** | Y        | A colon delimited string defining the promotion to retrieve.           |
 | **country** | **guid** | Y        | A two letter country code determining which customer country promotions are available for. |
 
 ### Request headers
@@ -74,7 +74,7 @@ If successful, this method returns a single promotion.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and more debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
 ### Response example
 
