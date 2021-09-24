@@ -22,13 +22,13 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the Microsoft 365 and Dynamics 365 new commerce experience technical preview.
 
-Parters can verify whether a customer transaction is eligibile for a given promotion. This method returns *True* if the customer transaction is eligible for a given promotion. Partners can use this prior to submitting a transaction to ensure the promotion will be applied.
+Parters can verify whether a customer transaction is eligible for a given promotion. This method returns *True* if the customer transaction is eligible for a given promotion. Partners can verify eligibility before submitting a transaction to ensure the promotion will be applied.
 
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
 
-- Eligibility includes the product sku availablity being purchased, the promotion id being evaluated, the quantity, term duration and billing cycle of the transaction.
+- Eligibility includes the product sku availability being purchased, the promotion ID being evaluated, the quantity, term duration, and billing cycle of the transaction.
 
 ## REST request
 
@@ -45,7 +45,7 @@ Use the following query parameters to return available promotions.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customerId**  | **string** | Y        | The value is a GUID-formatted customer-tenant-id, which is an identifier that allows you to specify a customer.          |
-| **Eligibility** | **guid** | Y        | An eligibility object including the product sku availablity being purchased, the promotion id being evaluated, the quantity, term duration and billing cycle of the transaction.  |
+| **Eligibility** | **guid** | Y        | An eligibility object including the product sku availability being purchased, the promotion ID being evaluated, the quantity, term duration, and billing cycle of the transaction.  |
 
 ### Request headers
 
@@ -59,8 +59,8 @@ This table describes the [Eligibility](promotion-resources.md) properties in the
 |-----------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | catalogItemId   | string           | Yes             | The catalog item identifier.                         |
 | quantity        | int | Yes        | The number of licenses or instances.                 |
-| termDuration    | DateTime         | Yes             | An ISO 8601 representation of the term's duration. The current supported values are P1M (1 month), P1Y (1 year) and P3Y (3 years).   |
-| billingCycle    | string | Yes     | The value that indicats the type of billing cycle.   |
+| termDuration    | DateTime         | Yes             | An ISO 8601 representation of the term's duration. The current supported values are P1M (one month), P1Y (one year) and P3Y (three years).   |
+| billingCycle    | string | Yes     | The value that indicates the type of billing cycle.   |
 | promotionId     | string           | Yes             | The promotion item identifier.                       | 
 
 ### Request example
@@ -93,7 +93,7 @@ If successful, this method returns a collection of eligibility results.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an HTTP status code that indicates success or failure and more debugging information. Use a network trace tool to read this code, error type, and more parameters. For the full list, see [Error Codes](error-codes.md).
 
 ### Response example
 
