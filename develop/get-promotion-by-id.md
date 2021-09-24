@@ -86,9 +86,7 @@ MS-CorrelationId: 81b08ffe-4cf8-49cd-82db-5c2fb0a8e132
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
 Date: Fri, 24 Sep 2021 20:42:26 GMT
 
-{
-    "totalCount": 1,
-    "items": [
+ 
         {
             "id": "39NFJQT1PJQB:0001:39NFJQT1Q5KN",
             "name": "Visio Plan 1",
@@ -115,9 +113,4 @@ Date: Fri, 24 Sep 2021 20:42:26 GMT
                 }
             ]
         }
-    ],
-    "attributes": {
-        "objectType": "Collection"
-    }
-}
 ```
