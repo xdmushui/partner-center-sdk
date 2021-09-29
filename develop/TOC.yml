@@ -362,6 +362,8 @@
       href: get-a-list-of-products.md
     - name: Get a list of products (by customer)
       href: get-a-list-of-products-by-customer.md
+    - name: Get a list of promotions
+      href: get-promotions.md
     - name: Get a list of SKUs for a product (by country)
       href: get-a-list-of-skus-for-a-product.md
     - name: Get a list of SKUS for a product (by customer)
@@ -372,6 +374,8 @@
       href: get-a-list-of-trial-conversion-offers.md
     - name: Get a product by ID
       href: get-a-product-by-id.md
+    - name: Get a promotion by ID
+      href: get-promotion-by-id.md
     - name: Get a SKU by ID
       href: get-a-sku-by-id.md
     - name: Get a subscription by ID
@@ -412,6 +416,8 @@
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
       href: update-autorenew-for-an-azure-marketplace-subscription.md
+    - name: Verify promotion eligibility
+      href: verify-promotion-eligibility.md
   - name: Manage payouts
     href: manage-payouts.md
   - name: Provide support
@@ -534,6 +540,8 @@
       href: profile-resources.md
     - name: Products
       href: product-resources.md
+    - name: Promotions
+      href: promotion-resources.md
     - name: Relationships
       href: relationships-resources.md
     - name: Self serve policy
