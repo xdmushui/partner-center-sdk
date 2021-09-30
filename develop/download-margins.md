@@ -8,7 +8,7 @@ author: BrentSerbus
 ms.author: brserbus
 ---
 
-# Get margins
+# Download margins
 
 **Applies To**
 
