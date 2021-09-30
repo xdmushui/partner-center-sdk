@@ -37,7 +37,7 @@ The response to the get margins requests. This includes how many items are in th
 
 | Name            | Type            | Description                               |
 |-----------------|-----------------|-------------------------------------------|				
-| Results         | Margin[]        | A list of margins.                        |
+| Results         | Margin          | A list of margins.                        |
 | pageSize        | integer         | The current page of results. Will always be "1". |
 | totalSize       | integer         | The number of items in the page.          |
 
