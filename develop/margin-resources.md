@@ -31,7 +31,9 @@ Represents an avalable margin for a given CSP.
 | status          | string          | Status indicting whether the margin is available. |
 | statusDate      | string          | The date the status was last updated. |
 						
-## MarginSearchResponse					
+## MarginSearchResponse
+
+The response to the get margins requests. This includes how many items are in the list and the contents of the list.
 						
 | Name            | Type            | Description                               |
 |-----------------|-----------------|-------------------------------------------|				
