@@ -30,7 +30,7 @@ Represents an avalable margin for a given CSP.
 | endDate         | string          | The end date the margin in is available. |
 | status          | string          | Status indicting whether the margin is available. |
 | statusDate      | string          | The date the status was last updated. |
-						
+
 ## MarginSearchResponse
 
 The response to the get margins requests. This includes how many items are in the list and the contents of the list.
