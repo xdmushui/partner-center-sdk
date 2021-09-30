@@ -10,14 +10,10 @@ ms.author: brserbus
 
 # Download margins
 
-**Applies To**
 
-- Partner Center
+**Applies to**: Partner Center 
 
-**Appropriate roles**
-
-- Global admin
-- Admin agent
+**Appropriate roles**: Global admin | Admin agent
 
 Partners can get a list of active margins for a given partner. This method returns margins based on the partner and available start and end dates. Download margins returns the data in a comma delimited format.
 
