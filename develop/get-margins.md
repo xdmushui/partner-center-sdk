@@ -10,14 +10,9 @@ ms.author: brserbus
 
 # Get margins
 
-**Applies To**
+**Applies to**: Partner Center 
 
-- Partner Center
-
-**Appropriate roles**
-
-- Global admin
-- Admin agent
+**Appropriate roles**: Global admin | Admin agent
 
 Partners can get a list of active margins for a given partner. This method returns margins based on the partner and available start and end dates. 
 
