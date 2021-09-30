@@ -31,16 +31,6 @@ Represents an avalable margin for a given CSP.
 | status          | string          | Status indicting whether the margin is available. |
 | statusDate      | string          | The date the status was last updated. |
 
-## MarginSearchResponse
-
-The response to the get margins requests. This includes how many items are in the list and the contents of the list.
-
-| Name            | Type            | Description                               |
-|-----------------|-----------------|-------------------------------------------|				
-| Results         | Margin          | A list of margins.                        |
-| pageSize        | integer         | The current page of results. Will always be "1". |
-| totalSize       | integer         | The number of items in the page.          |
-
 ## Definitions
 
 Different types of artifacts describing margins.					
