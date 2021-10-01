@@ -73,7 +73,7 @@ The following are error codes returned by the APIs:
 | Unauthorized        | 401       | 400        | Access denied         |
 | NotFound      | 404       | 1000       | Not found       |
 | Forbidden     | 403       | 2006       | Partner is not valid for offer          |
-| BadRequest          | 400       | 2012       | Unable to convert between Commerce and Azure Active Directory subscription ids.          |
+| BadRequest          | 400       | 2012       | Unable to convert between Commerce and Azure Active Directory subscription IDs.          |
 | Forbidden     | 403       | 2030       | Partner is not onboarded to sell in country          |
 | Forbidden     | 403       | 2032       | Access denied         |
 | Forbidden     | 403       | 2091       | The offer is no longer available for purchase        |
@@ -99,7 +99,7 @@ The following are error codes returned by the APIs:
 | BadRequest          | 400       | 6001       | The billing cycle could not be changed because one of the order's Offer IDs does not support the billing term     |
 | Forbidden     | 403       | 13605      | Either a partner confirmation of the customer acceptance of the Microsoft Customer Agreement must be provided or the customer must accept the Microsoft Customer Agreement in the Microsoft Admin Center before you can complete this purchase           |
 | NotFound      | 404       | 20000      | Order ID not found          |
-| BadRequest          | 400       | 27006      | Use limit is exceeded for Offer id      |
+| BadRequest          | 400       | 27006      | Use limit is exceeded for Offer ID      |
 | Conflict      | 409       | 27009      | Cannot enable a child subscription, when the parent subscription is not Active     |
 | BadRequest          | 400       | 600002     | Organization registration ID value is not supported  <br/><br/>This error occurs if the customer's company/organization is **not** located in one of the following countries, but they tried to specify organizationRegistrationNumber. Countries affected:<br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA) |
 | BadRequest          | 400       | 600049     | Organization registration ID information is missing <br/><br/>This error occurs if the customer's company/organization is located in one of the following countries and the organizationRegistrationNumber has not been provided. Countries affected:<br/><br/>- Armenia (AM) <br/>- Azerbaijan (AZ)<br/>- Belarus (BY)<br/>- Hungary (HU)<br/>- Kazakhstan (KZ)<br/>- Kyrgyzstan (KG)<br/>- Moldova (MD)<br/>- Russia (RU)<br/>- Tajikistan (TJ)<br/>- Uzbekistan (UZ)<br/>- Ukraine (UA)       |
@@ -108,10 +108,10 @@ The following are error codes returned by the APIs:
 | Unauthorized        | 401       | 800001     | Partner Token missing in request context             |
 | BadRequest          | 400       | 800002     | Invalid request input       |
 | InternalServerError | 500       | 800003     | Unexpected service error          |
-| BadRequest          | 400       | 800004     | Invalid offer Id      |
+| BadRequest          | 400       | 800004     | Invalid offer ID      |
 | InternalServerError | 500       | 800005     | Create order is not successful          |
 | NotFound      | 404       | 800007     | Unable to retrieve provisioning information          |
-| NotFound      | 404       | 800008     | Unable to retrieve cart Id        |
+| NotFound      | 404       | 800008     | Unable to retrieve cart ID        |
 | BadRequest          | 400       | 800009     | Error in Cart item(s)       |
 | BadRequest          | 400       | 800010     | Inventory is not available for this catalog item     |
 | BadRequest          | 400       | 800011     | This subscription is not a valid Azure subscription        |
@@ -146,7 +146,7 @@ The following are error codes returned by the APIs:
 | Conflict      | 409       | 800060     | Your order is in progress. Check your order history for recent orders in few minutes           |
 | BadRequest          | 400       | 800061     | Order cannot be canceled         |
 | BadRequest          | 400       | 800062     | You are not eligible for this transaction            |
-| BadRequest          | 400       | 800063     | This order {0} cannot be cancelled. Use PATCH /customers/{1}/subscriptions/\<subscriptionId\> to suspend subscriptions          |
+| BadRequest          | 400       | 800063     | This order {0} cannot be canceled. Use PATCH /customers/{1}/subscriptions/\<subscriptionId\> to suspend subscriptions          |
 | Conflict      | 409       | 800064     | Cart {0} is being processed by another request       |
 | BadRequest          | 400       | 800065     | Cannot check out an already submitted cart {0}.      |
 | Forbidden     | 403       | 800066     | The desired number of subscriptions exceeded the maximum number of subscriptions allowed per customer       |
@@ -182,7 +182,7 @@ The following are error codes returned by the APIs:
 | BadRequest          | 400       | 800096     | Cannot update the status for this subscription       |
 | BadRequest          | 400       | 800097     | Cannot update the billing cycle for this subscription      |
 | BadRequest          | 400       | 800098     | Cannot update the partner on record for this subscription        |
-| NotFound      | 404       | 800111     | Azure subscription with the given entitlement id is not found.       |
+| NotFound      | 404       | 800111     | Azure subscription with the given entitlement ID is not found.       |
 | Forbidden     | 403       | 800115     | Overage is already assigned to another tenant. Contact your customer to resolve ownership questions.       |
 | Forbidden     | 403       | 800114     | You are not eligible to manage overage for this customer.       |
 | Forbidden     | 403       | 800112     | Overage cannot be set as the customer has legacy Azure subscriptions.       |
@@ -197,14 +197,14 @@ The following are error codes returned by the APIs:
 | Forbidden     | 403       | 900108     | Cannot process Azure upgrade since customer has no Azure subscriptions.      |
 | Conflict      | 409       | 900109     | This upgrade is not allowed as original upgrade {0} is in progress     |
 | BadRequest          | 400       | 900110     | Cannot process the upgrade request for completed upgrade {0}     |
-| BadRequest          | 400       | 900111     | The upgrade ID provided does not belong to customer {0}. The customer is mapped to upgrade Id {1}     |
+| BadRequest          | 400       | 900111     | The upgrade ID provided does not belong to customer {0}. The customer is mapped to upgrade ID {1}     |
 | Conflict      | 409       | 900112     | This purchase is not allowed as the upgrade request {0} is in pending state        |
 | Conflict      | 409       | 900113     | This purchase is not allowed as the upgrade request {0} is in progress       |
 | Conflict      | 409       | 900114     | This purchase is not allowed as the upgrade request {0} failed         |
 | Forbidden     | 403       | 900115     | Azure plan cannot be moved to suspended state since you have one or more Azure Subscriptions in the active state        |
 | BadRequest          | 400       | 900116     | Unable to create order. There is a limit to how many Azure plans can be created under sandbox accounts      |
 | BadRequest          | 400       | 900117     | You have passed your {0}-day cancellation window. We are unable to cancel your purchase               |
-| BadRequest          | 400       | 900118     | Invalid Customer Id         |
+| BadRequest          | 400       | 900118     | Invalid Customer ID         |
 | Forbidden     | 403       | 900119     | Cannot process Azure upgrade for Azure Partner Shared Services         |
 | Forbidden     | 403       | 900120     | Cannot process Azure upgrade      |
 | Forbidden     | 403       | 900121     | Unable to process order due to insufficient credit limit, please contact ucmwrcsp@microsoft.com for further assistance        |
@@ -226,7 +226,7 @@ The following are error codes returned by the APIs:
 | Forbidden     | 403       | 900137     | Transfer cannot be created as partner: {0} not enabled for this feature      |
 | Forbidden     | 403       | 900138     | Transfer cannot be created as partner's: {0} national cloud {1} is not supported         |
 | Forbidden     | 403       | 900139     | Transfer request cannot be accepted. Please request the partner to create transfer without Azure subscription(s)        |
-| NotFound      | 404       | 900140     | Unable to get Azure Active Directory subscriptions for a customer with tenant ID {0} and source provisioning id {1}     |
+| NotFound      | 404       | 900140     | Unable to get Azure Active Directory subscriptions for a customer with tenant ID {0} and source provisioning ID {1}     |
 | BadRequest          | 400       | 900141     | This operation is not supported         |
 | BadRequest          | 400       | 900142     | The catalog item ID is not present      |
 | BadRequest          | 400       | 900143     | The request failed to retrieve all availabilities with productId: {0}, skuId: {1} for a customer with ID: {3}     |

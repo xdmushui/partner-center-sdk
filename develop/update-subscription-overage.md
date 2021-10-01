@@ -58,7 +58,8 @@ For more information, see [Partner Center REST headers](headers.md).
 | Name                    | Type     | Description                                       |
 |-------------------------|----------|---------------------------------------------------|
 | **azureEntitlementId**  | **guid** | A GUID defining the consumption subscription for overage.             |
-| **partnerId**  | **guid** | The MPN id of an Indirect Reseller. Only applicable for a two tier model (Indirect Provider).            |
+| **partnerId**  | **guid** | The MPN ID of an Indirect Reseller. Only applicable for a two tier model (Indirect Provider).            |
+
 | **overageEnabled**  | **bool** | Defines whether overage is enabled for a given consumption subscription.             |
 
 
