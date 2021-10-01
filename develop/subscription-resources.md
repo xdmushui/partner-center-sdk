@@ -51,6 +51,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | attributes           | [ResourceAttributes](utility-resources.md#resourceattributes) | The metadata attributes corresponding to the subscription.                                                                                                                    |
 | renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year).                                                        |
 | ProductType  | [ItemType](product-resources.md#itemtype)                             | Read-only. The type of product the subscription is for.     |
+| consumptionType  | array of [overage](subscription-resources.md#overage) resources   | Gets or sets overage for a given customer.     |
 
 ## SubscriptionLinks
 
@@ -100,6 +101,21 @@ The **SupportContact** resource represents a support contact for a customer's su
 | name            | string                                                         | The name of the support contact.                                                |
 | links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                                              |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": " SupportContact".              |
+
+## Overage
+
+The **overage** resource represents the consumption subscription overage may be assigned to, whether it is assigned and the Reseller assigned.
+
+| Property        | Type               | Description                                                                     |
+|-----------------|--------------------|---------------------------------------------------------------------------------|
+| azureEntitlementId | string       | A GUID formatted string that indicates consumption subscription identifier. |
+| partnerId    | string            | The Microsoft Partner Network (MPN) identifier of the reseller associated with the subscription.        |
+| type    | string       | The type of overage, can be “PhoneServices”       |
+| overage            | boolean      | A value indicating whether this is a trial subscription.       |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                          |
+| attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": "Overage".  |
+
+
 
 ## RegisterSubscription
 
