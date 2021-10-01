@@ -1,9 +1,11 @@
 ---
 title: Subscription resources
 description: Subscription resources can provide further information about subscriptions throughout the life cycle, such as support, refunds, Azure entitlements.
-ms.date: 02/23/2021
+ms.date: 10/01/2021
 ms.service: partner-dashboard
-ms.subservice: partnercenter-sdk
+ms.subservice:  partnercenter-sdk
+author: BrentSerbus
+ms.author: brserbus
 ---
 
 # Subscription resources
