@@ -1,14 +1,14 @@
 ---
 title: Updates overage for a given customer
 description: Updates overage for a given customer.
-ms.date: 010/01/2021
+ms.date: 10/01/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 author: BrentSerbus
 ms.author: brserbus
 ---
 
-# Get overage
+# Update overage
 
 **Applies To**
 
@@ -20,9 +20,9 @@ ms.author: brserbus
 - Admin agent
 
 > [!Note] 
-> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
+> New Commerce changes are currently available only to partners who are part of the Microsoft 365/Dynamics 365 new commerce experience technical preview.
 
-Used to set overage for a given customer to a consumption subscription. Can also be used to remove overage by setting it to false. Overage enables a customer to continue using services if they use the service beyond the stated limits. Overage defines the consumption subscription overage pay-as-you-go wll accrue to.
+Used to set overage for a given customer to a consumption subscription. Can also be used to remove overage by setting it to false. Overage enables a customer to continue using services if they use the service beyond the stated limits. Overage defines the consumption subscription overage pay-as-you-go will accrue to.
 
 ## Prerequisites
 
