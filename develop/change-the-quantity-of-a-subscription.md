@@ -108,7 +108,7 @@ Connection: Keep-Alive
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-License quantity can only be reduced within 72 hours of purchase or renewal of a subscription. Licenses added at midterm can also only be reduced within 72 hours, through customer support only. More information on license reduction for new commerce subscriptions can be found [here](https://docs.microsoft.com/en-us/partner-center/create-a-new-subscription?tabs=workspaces-view).
+License quantity can only be reduced within 72 hours of purchase or renewal of a subscription. Licenses added at midterm can also only be reduced within 72 hours, through customer support only.
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1

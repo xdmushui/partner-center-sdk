@@ -131,7 +131,7 @@ Connection: Keep-Alive
 
 ### Request example for a new commerce subscription
 
-New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be cancelled and the API will throw an error. More information on new commerce cancellation  policies can be found [here](https://docs.microsoft.com/en-us/partner-center/create-a-new-subscription?tabs=workspaces-view).
+New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be cancelled and the API will throw an error.
 
 
 > [!Note] 
