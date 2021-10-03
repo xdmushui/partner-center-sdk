@@ -1,6 +1,6 @@
 ---
 title: Transition a new commerce subscription
-description: Upgrades a customer's new commmerce subscription to a specified target subscription.
+description: Upgrades a customer's new commerce subscription to a specified target subscription.
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -20,7 +20,7 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-Used to upgrade a customer's new commmerce subscription to a target subscription. In order to transition a subscriptions, two API requests need to be made. First **GET eligible transitions** to get the SKUs available for upgrade. Then **POST transition** to execute the transition. These methods support both traditional and new commerce source subscriptions.  
+Used to upgrade a customer's new commerce subscription to a target subscription. In order to transition a subscriptions, two API requests need to be made. First **GET eligible transitions** to get the SKUs available for upgrade. Then **POST transition** to execute the transition. These methods support both traditional and new commerce source subscriptions.  
 
 ## Get transition eligibilities
 
@@ -50,7 +50,7 @@ Use the following query parameters to return eligible transitions.
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer's tenant.             |
 | **subscription-id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
-| **eligibilityType**       | **string** | N        | Describes when the transtion is to be executed; can be immediate or scheduled. Default is `Immediate`.  |
+| **eligibilityType**       | **string** | N        | Describes when the transition is to be executed; can be immediate or scheduled. Default is `Immediate`.  |
 
 #### Request headers
 
@@ -160,7 +160,7 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
 
 ## Post Transition
 
-Posts a transition request for a given customer and subscription. Returns the transition with its intial status.
+Posts a transition request for a given customer and subscription. Returns the transition with its initial status.
 
 ### Prerequisites
 
