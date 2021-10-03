@@ -33,12 +33,12 @@ Used to get the history of transitions for a given customer and subscription. Hi
 - One subscription ID for the transitioned subscription.
 
 ## REST request
-[GET] customers/{customerId}/subscriptions/{subscriptionId}/transitions
+[GET] customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitions
 ### Request syntax
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscriptoin-Id}/transitions HTTP/1.1 |
+| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitions HTTP/1.1 |
 
 ### URI parameter
 
@@ -47,7 +47,7 @@ Use the following query parameters to return eligible transitions.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer's tenant.             |
-| **subscriptoin-Id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 
 ### Request headers
 
@@ -60,7 +60,7 @@ None
 ### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitions HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
@@ -70,7 +70,7 @@ X-Locale: en-US
 
 ## REST response
 
-If successful, this method history of transitions.
+If successful, this returns a history of transitions for the provided subscription.
 
 ### Response success and error codes
 
