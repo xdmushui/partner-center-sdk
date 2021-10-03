@@ -49,7 +49,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 | Method    | Request URI                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id} HTTP/1.1 |
 
 ### URI parameter
 
@@ -58,7 +58,7 @@ This table lists the required query parameter to change the quantity of the subs
 | Name                    | Type     | Required | Description                               |
 |-------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
-| **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the subscription. |
 
 ### Request headers
 
@@ -108,8 +108,10 @@ Connection: Keep-Alive
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
+License quantity can only be reduced within 72 hours of purchase or renewal of a subscription. Licenses added at midterm can also only be reduced within 72 hours, through customer support only. More information on license reduction for new commerce subscriptions can be found [here](https://docs.microsoft.com/en-us/partner-center/create-a-new-subscription?tabs=workspaces-view).
+
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -194,7 +196,7 @@ When the patch operation takes longer than the expected time, the Partner Center
 
 ### Response examples
 
-#### Response example 1
+#### Response example #1
 
 Successful request with an **HTTP status 200** status code:
 
@@ -249,7 +251,7 @@ Connection: Keep-Alive
 }
 ```
 
-#### Response example 2
+#### Response example #2
 
 Successful request with an **HTTP status 202** status code:
 
@@ -265,12 +267,12 @@ Connection: Keep-Alive
 Location: /customers/<customer-tenant-id>/subscriptions/<subscriptionID>
 ```
 
-#### Response example for new commerce reduce seat counts
+#### Response example for new commerce license reduction
 
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-Response when attempting to reduce quantities for new commerce subscriptions.
+Sample API response when attempting to reduce license quantities for new commerce subscriptions outside of the 72 hour cancellation window.
 
 ```http
 {
