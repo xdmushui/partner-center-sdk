@@ -66,7 +66,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 | Method    | Request URI                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{id-for-subscription} HTTP/1.1 |
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id} HTTP/1.1 |
 
 ### URI parameter
 
@@ -75,7 +75,7 @@ This table lists the required query parameter to suspend the subscription.
 | Name                    | Type     | Required | Description                               |
 |-------------------------|----------|----------|-------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer.     |
-| **id-for-subscription** | **guid** | Y        | A GUID corresponding to the subscription. |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the subscription. |
 
 ### Request headers
 
@@ -88,7 +88,7 @@ A full **Subscription** resource is required in the request body. Ensure that th
 ### Request example for a commercial marketplace subscription
 
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -131,11 +131,14 @@ Connection: Keep-Alive
 
 ### Request example for a new commerce subscription
 
+New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be cancelled and the API will throw an error. More information on new commerce cancellation  policies can be found [here](https://docs.microsoft.com/en-us/partner-center/create-a-new-subscription?tabs=workspaces-view).
+
+
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -211,7 +214,7 @@ Connection: Keep-Alive
 
 ## REST response
 
-If successful, this method returns deleted [Subscription](subscription-resources.md) resource properties in the response body.
+If the request is successful, this method returns deleted [Subscription](subscription-resources.md) resource properties in the response body.
 
 ### Response success and error codes
 
