@@ -20,7 +20,7 @@ ms.author: brserbus
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-Used to upgrade a customer's new commmerce subscription to a target subscription. First get eligible transitions to get the SKUs available for upgrade. Then post transition to execute the transition. These methods support both traditional and new commerce source subscriptions.  
+Used to upgrade a customer's new commmerce subscription to a target subscription. In order to transition a subscriptions, two API requests need to be made. First **GET eligible transitions** to get the SKUs available for upgrade. Then **POST transition** to execute the transition. These methods support both traditional and new commerce source subscriptions.  
 
 ## Get transition eligibilities
 
@@ -40,7 +40,7 @@ Returns a list of eligible transitions for a given customer, subscription and re
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitionEligibilities?eligibilityType={immediate, scheduled} HTTP/1.1 |
+| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitionEligibilities?eligibilityType={immediate, scheduled} HTTP/1.1 |
 
 #### URI parameter
 
@@ -49,8 +49,8 @@ Use the following query parameters to return eligible transitions.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer's tenant.             |
-| **subscriptoin-Id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
-| **eligibilityType**       | **string** | Y        | Describes when the transtion is to be executed, can be immediate or scheduled.  |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
+| **eligibilityType**       | **string** | N        | Describes when the transtion is to be executed; can be immediate or scheduled. Default is `Immediate`.  |
 
 #### Request headers
 
@@ -63,7 +63,7 @@ None
 #### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitionEligibilities?eligibilityType=immediate HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitionEligibilities?eligibilityType=immediate HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
@@ -73,7 +73,7 @@ X-Locale: en-US
 
 ### REST response
 
-If successful, this method returns a list of eligible transitions in the response body.
+If successful, this method returns a list of the eligible transitions for the given subscription in the response body.
 
 #### Response success and error codes
 
@@ -160,7 +160,7 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
 
 ## Post Transition
 
-Posts a transition request for a given customer and subscription. Returns the transition with intial status.
+Posts a transition request for a given customer and subscription. Returns the transition with its intial status.
 
 ### Prerequisites
 
@@ -176,7 +176,7 @@ Posts a transition request for a given customer and subscription. Returns the tr
 
 | Method   | Request URI                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscriptoin-Id}/transitions HTTP/1.1 |
+| **POST**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitions HTTP/1.1 |
 
 
 #### URI parameter
@@ -186,7 +186,7 @@ Use the following query parameters to execute a transition.
 | Name                    | Type     | Required | Description                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **customer-tenant-id**  | **guid** | Y        | A GUID corresponding to the customer's tenant.             |
-| **subscriptoin-Id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
+| **subscription-id** | **guid** | Y        | A GUID corresponding to the initial subscription. |
 
 #### Request headers
 
@@ -216,7 +216,7 @@ X-Locale: en-US
 
 ### REST response
 
-If successful, this method returns a Transition resource with the initial events.
+If successful, this method returns a Transition resource with its initial status.
 
 #### Response success and error codes
 
