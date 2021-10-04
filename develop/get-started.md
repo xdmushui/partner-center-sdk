@@ -3,7 +3,8 @@ title: Get started
 description: The Partner Center SDK includes a managed API and a REST API for partners to use to manage customer, subscription, and order data.
 ms.date: 09/29/2018
 ms.service: partner-dashboard
-ms.subservice:  partnercenter-sdk
+ms.subservice: partnercenter-sdk
+ms.custom: intro-get-started
 ---
 
 # Get started

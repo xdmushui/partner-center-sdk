@@ -113,8 +113,8 @@ The **overage** resource represents the consumption subscription overage may be 
 | azureEntitlementId | string       | A GUID formatted string that indicates consumption subscription identifier. |
 | partnerId    | string            | The Microsoft Partner Network (MPN) identifier of the reseller associated with the subscription.        |
 | type    | string       | The type of overage, can be “PhoneServices”       |
-| overage            | boolean      | A value indicating whether this is a trial subscription.       |
-| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The support contact related links.                          |
+| overage            | boolean      | A value indicating whether overage is enabled.       |
+| links           | [ResourceLinks](utility-resources.md#resourcelinks)            | The overage related links.                          |
 | attributes      | [ResourceAttributes](utility-resources.md#resourceattributes)  | The metadata attributes. Contains "objectType": "Overage".  |
 
 
