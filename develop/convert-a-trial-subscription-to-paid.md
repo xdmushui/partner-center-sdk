@@ -8,6 +8,9 @@ ms.subservice:  partnercenter-sdk
 
 # Convert a trial subscription to paid using Partner Center APIs
 
+> [!NOTE]
+> These steps are not applicable for New Commerce Products. Refer to **Transition a new commerce subscription** documentation for converting New Commerce trials to paid subscriptions
+
 You can convert a trial subscription to paid.
 
 ## Prerequisites
