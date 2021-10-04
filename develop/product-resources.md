@@ -63,6 +63,7 @@ Represents a purchasable Stock Keeping Unit (SKU) under a product. These represe
 | dynamicAttributes      | key/value pairs  | The dictionary of dynamic properties that apply to this item. The properties in this dictionary are dynamic and can change without notice. You should not create strong dependencies on particular keys existing in the value of this property.    |
 | links                  | [ResourceLinks](utility-resources.md#resourcelinks) | The resource links contained within the SKU.                   |
 | AttestationProperties                  | [AttestationProperties](#attestationproperties) | The attestation properties for a SKU.                   |
+| consumptionType                  | string | Is available only if the sku supports consumption such as *overage*.               |
 
 ## Dynamic SKU attributes
 
