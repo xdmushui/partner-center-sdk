@@ -414,7 +414,7 @@
       href: transition-a-subscription.md
     - name: Transition a new commerce subscription
       href: transition-a-new-commerce-subscription.md
-    - name: Vaidate a subscription for migration
+    - name: Validate a subscription for migration
       href: validate-subscription-for-migration.md
     - name: Create a new commerce migration
       href: create-migration.md
