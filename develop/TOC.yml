@@ -414,6 +414,12 @@
       href: transition-a-subscription.md
     - name: Transition a new commerce subscription
       href: transition-a-new-commerce-subscription.md
+    - name: Vaidate a subscription for migration
+      href: validate-subscription-for-migration.md
+    - name: Create a new commerce migration
+      href: create-migration.md
+    - name: Get a new commerce migration
+      href: get-new-commerce-migration.md
     - name: Update a cart
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
