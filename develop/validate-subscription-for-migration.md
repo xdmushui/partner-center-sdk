@@ -76,7 +76,9 @@ Each response comes with an HTTP status code that indicates success or failure a
             }
         ]
     }
+```
 
+```http
 2. 
     {
         "currentSubscriptionId": "9beb6319-6889-4d28-a155-68ca9c783842",
