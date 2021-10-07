@@ -424,6 +424,8 @@
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
       href: update-autorenew-for-an-azure-marketplace-subscription.md
+    - name: Update billing frequency for a software subscription
+      href: manage-billing-frequency-software-subs.md
     - name: Update subscription overage
       href: update-subscription-overage.md
     - name: Verify promotion eligibility
