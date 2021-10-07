@@ -1,5 +1,5 @@
 ---
-title: Update autorenew for a commercial marketplace and new commerce subscriptions
+title: Update autorenew for commercial marketplace and software subscriptions
 description: Update the autorenew property for a Subscription resource that matches the customer and subscription ID.
 
 ms.date: 02/23/2021
@@ -7,14 +7,14 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Update autorenew for a commercial marketplace subscription or new commerce subscriptions
+# Update autorenew for a commercial marketplace subscription or new commerce subscriptions and software subscriptions
 
 **Applies To**: Partner Center
 
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-Update the autorenew property for a commercial marketplace or new commerce [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
+Update the autorenew property for a commercial marketplace, new commerce, or software [Subscription](subscription-resources.md) resource that matches the customer and subscription ID.
 
 In the Partner Center dashboard, this operation is performed by first [selecting a customer](get-a-customer-by-name.md). Then, select the subscription that you wish to update. Finally, toggle the **Auto-renew** option, then select **Submit**.
 
@@ -65,7 +65,7 @@ For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-A full commercial marketplace **Subscription** resource is required in the request body. Ensure that the **AutoRenewEnabled** property has been updated.
+A full **Subscription** resource is required in the request body. Ensure that the **AutoRenewEnabled** property has been updated.
 
 ### Request example for commercial marketplace subscription
 
