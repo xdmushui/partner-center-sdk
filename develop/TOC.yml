@@ -424,6 +424,8 @@
       href: update-a-cart.md
     - name: Update autorenew for a commercial marketplace subscription
       href: update-autorenew-for-an-azure-marketplace-subscription.md
+    - name: Update billing frequency for a software subscription
+      href: manage-billing-frequency-software-subs.md
     - name: Update subscription overage
       href: update-subscription-overage.md
     - name: Verify promotion eligibility
@@ -445,6 +447,15 @@
       href: update-a-service-request.md
     - name: "Update a subscription's support contact"
       href: update-a-subscription-s-support-contact.md
+  - name: View margins
+    href: view-margins.md
+    items:
+    - name: Get margins
+      href: get-margins.md
+    - name: Download margins
+      href: download-margins.md
+    - name: Margin resources
+      href: margin-resources.md
 -  name: Integration sandbox
    items:
     - name: Sandbox capabilities for Reseller relationship

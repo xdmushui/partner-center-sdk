@@ -51,7 +51,9 @@ This table describes the [Subscription](subscription-resources.md) properties in
 ### Request example
 
 ```http
-"currentSubscriptionId" : "9beb6319-6889-4d28-a155-68ca9c783842"
+{
+    "currentSubscriptionId" : "9beb6319-6889-4d28-a155-68ca9c783842"
+}
 ```
 
 ## REST response
@@ -70,7 +72,6 @@ Each response comes with an HTTP status code that indicates success or failure a
     "currentSubscriptionId": "9beb6319-6889-4d28-a155-68ca9c783842",
     "status": "Processing",
     "customerTenantId": "a836f6d8-1b17-44af-aaf1-1e5511c5d4e1",
-    "partnerTenantId": "7828d7ba-f17b-45c3-a1ce-8b6c3e3a26c0",
     "catalogItemId": "CFQ7TTC0LF8S:0002:CFQ7TTC0KSVV",
     "subscriptionEndDate": "2022-09-06T00:00:00Z",
     "quantity": 1,
