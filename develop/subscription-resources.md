@@ -54,6 +54,7 @@ The **Subscription** resource represents the life cycle of a subscription and in
 | renewalTermDuration  | string                                                        | An ISO 8601 representation of the term's duration. The current supported values are **P1M** (1 month) and **P1Y** (1 year).                                                        |
 | ProductType  | [ItemType](product-resources.md#itemtype)                             | Read-only. The type of product the subscription is for.     |
 | consumptionType  | array of [overage](subscription-resources.md#overage) resources   | Gets or sets overage for a given customer.     |
+| promotionId          | string                                                        | The promotion identifier if applied to the subscription. Format example: "39NFJQT1PJQB:0001:39NFJQT1Q5KN" |
 
 ## SubscriptionLinks
 
