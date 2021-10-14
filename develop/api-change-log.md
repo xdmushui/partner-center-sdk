@@ -55,7 +55,7 @@ Changes for July were to support [Windows 365 attestation](/partner-center/devel
 
 |Feature area             |Change type|API/objects|
 |:------------------------|:------------------------------|:---------------------------------------------------------------------------------------------------------|
-|Windows 365 Attestation  |New field in public contract   |[Sku resoruce](/partner-center/develop/product-resources#sku)|
+|Windows 365 Attestation  |New field in public contract   |[Sku resource](/partner-center/develop/product-resources#sku)|
 |Windows 365 Attestation  |New field in public contract   |[Offer resource](/partner-center/develop/offer-resources)|
 |Windows 365 Attestation  |New field in public contract   |[Cart line item resource](/partner-center/develop/cart-resources#cartlineitem)|
 |Windows 365 Attestation  |New field in public contract   |[GET {baseURL}/v1/products/{product-id}/skus?country={country-code}&targetSegment={target-segment}](/partner-center/develop/get-a-list-of-skus-for-a-product)|
