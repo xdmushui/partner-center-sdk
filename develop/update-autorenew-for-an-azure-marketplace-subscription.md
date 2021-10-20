@@ -1,5 +1,5 @@
 ---
-title: Update autorenew for commercial marketplace and software subscriptions
+title: Update autorenew for commercial marketplace or software subscriptions
 description: Update the autorenew property for a Subscription resource that matches the customer and subscription ID.
 
 ms.date: 02/23/2021
@@ -7,7 +7,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-# Update autorenew for a commercial marketplace subscription or new commerce subscriptions and software subscriptions
+# Update autorenew for a commercial marketplace subscription or new commerce subscriptions or software subscriptions
 
 **Applies To**: Partner Center
 
