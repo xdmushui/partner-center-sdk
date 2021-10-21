@@ -24,7 +24,7 @@ Gets a **Customer** resource that corresponds to a customer ID.
 > The Get Customer ID API call will not return the following attributes back in the response if the partner doesn't have DAP access on the customer tenant. Otherwise, it will return all the attributes listed in the response sample. 
 > - CompanyProfileAddress
 > - CompanyProfileEmail
-> - Custom domains
+> - CustomDomain
 
 ## C\#
 
