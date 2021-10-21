@@ -20,6 +20,12 @@ Gets a **Customer** resource that corresponds to a customer ID.
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
+> [!IMPORTANT]
+> The Get Customer ID API call will not return the following attributes back in the response if the partner doesn't have DAP access on the customer tenant. Otherwise, it will return all the attributes listed in the response sample. 
+> - CompanyProfileAddress
+> - CompanyProfileEmail
+> - Custom domains
+
 ## C\#
 
 To get a customer by ID, use your [**IAggregatePartner.Customers**](/dotnet/api/microsoft.store.partnercenter.ipartner.customers) collection, call the [**ById()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) method, then call the [**Get()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.get) or [**GetAsync()**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.getasync) methods.
