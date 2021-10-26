@@ -260,6 +260,8 @@ Content-Type: application/json
 
 If successful, the method returns an [Order](order-resources.md) resource in the response body.
 
+If the order contains one or more subscriptions, respective subscription ID values will only appear in the REST response if the corresponding subscriptions have been provisioned at the time of the API call. Provisioning subscriptions occurs asynchronously, and therefore, subscription ID values may not always be visible in the REST response of the Create Order call. However, once the respective subscriptions have been provisioned, their subscription ID values can be accessed through Get Orders and Get Order by ID API calls.
+
 ### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center error codes](error-codes.md).
