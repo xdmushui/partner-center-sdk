@@ -346,6 +346,8 @@
       href: create-a-cart-with-add-ons.md
     - name: Create an order
       href: create-an-order.md
+    - name: Get order provisioning status
+      href: get-order-provisioning-status.md
     - name: Create an order for a customer of an indirect reseller
       href: create-an-order-for-a-customer-of-an-indirect-reseller.md
     - name: Get a list of add-ons for a subscription
