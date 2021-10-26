@@ -10,7 +10,7 @@ ms.author: brserbus
 
 # Transition a new commerce subscription
 
-**Applies To**: Partner Center
+**Applies To**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
 **Appropriate roles**
 
@@ -32,7 +32,7 @@ Returns a list of eligible transitions for a given customer, subscription and re
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-- One subscription ID for the initial subscription.
+- A subscription ID for the initial subscription.
 
 ### REST request
 
@@ -168,7 +168,7 @@ Posts a transition request for a given customer and subscription. Returns the tr
 
 - A customer ID (`customer-tenant-id`). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).
 
-- One subscription ID for the initial subscription.
+- A subscription ID for the initial subscription.
 
 ### REST request
 
@@ -194,12 +194,23 @@ For more information, see [Partner Center REST headers](headers.md).
 
 #### Request body
 
-A full **Transition** resource is required in the request body.
+This table describes the [Transition](transition-resources.md#transition) properties in the request body.
+
+| Property              | Type             | Required        | Description                                                                                               |
+|-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
+| fromCatalogItemId     | string           | No              | The catalog item you are transitioning from.                                                              |
+| fromSubscriptionId    | string           | No              | The the subscription id you are transitioning from.                                                       |
+| toCatalogItemId       | string           | Yes             | The catalog item you are transitioning to.                                                                |
+| toSubscriptionId      | string           | No              | The the subscription id  you are transitioning to.                                                        |
+| quantity              | integer          | No              | The number of licenses to transition over.                                                                |
+| termDuration          | string           | No              | Specifiying the term duration of the subscription.                                                        |
+| billingCycle          | string           | No              | Specifiying the billing cycle of the subscription.                                                        |
+| transitionType        | string           | No              | The transition type. Possible values - `transition_only`, `transition_with_license_transfer`.             |
 
 #### Request example
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/{customerId}/subscriptions/{subscriptionId}/transitions HTTP/1.1
+POST https://api.partnercenter.microsoft.com/v1/customers/{customerId}/subscriptions/{subscriptionId}/transitions HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
@@ -207,16 +218,20 @@ MS-CorrelationId: 81b08ffe-4cf8-49cd-82db-5c2fb0a8e132
 X-Locale: en-US
 
 {
-    "toCatalogItemId": "CFQ7TTC0KZ59:0001:CFQ7TTC0KZ59",
-    "quantity": 5,
-    "transitionType": "transition_with_license_transfer",
-    "events": []
+    "fromCatalogItemId": "CFQ7TTC0LF8Q:0001:CFQ7TTC0K39X",
+    "fromSubscriptionId": "e487e8dc-421e-4275-cb42-3c1c8daccf70",
+    "toCatalogItemId": "CFQ7TTC0LF8R:0001:CFQ7TTC0KCSV",
+    "toSubscriptionId": "0af52192-4a2a-4364-d25b-c8ecab3a5697",
+    "quantity": 2,
+    "termDuration": "P1M",
+    "billingCycle": "Monthly",
+    "transitionType": "transition_only"
 }
 ```
 
 ### REST response
 
-If successful, this method returns a Transition resource with its initial status.
+If successful, this method returns a [Transition](transition-resources.md#transition) resource with its initial status.
 
 #### Response success and error codes
 
@@ -233,10 +248,14 @@ MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
 Date: Fri, 26 Feb 2021 20:42:26 GMT
 
 {
-    "FromCatalogItemId": "CFQ7TTC0LDPB:0001:CFQ7TTC0LGNT",
-    "ToCatalogItemId": "CFQ7TTC0LF8S:0001:CFQ7TTC0K9G9",
-    "quantity": 1,
-    "transitionType": "transition_with_license_transfer",
+    "fromCatalogItemId": "CFQ7TTC0LF8Q:0001:CFQ7TTC0K39X",
+    "fromSubscriptionId": "e487e8dc-421e-4275-cb42-3c1c8daccf70",
+    "toCatalogItemId": "CFQ7TTC0LF8R:0001:CFQ7TTC0KCSV",
+    "toSubscriptionId": "0af52192-4a2a-4364-d25b-c8ecab3a5697",
+    "quantity": 2,
+    "termDuration": "P1M",
+    "billingCycle": "Monthly",
+    "transitionType": "transition_only"
     "Events": [
         {
             "name": "Conversion",
