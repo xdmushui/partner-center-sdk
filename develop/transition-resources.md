@@ -24,7 +24,7 @@ ms.author: brserbus
 
 Describes the resources used to transition from one new commerce subscription to another.
 
-## TransitionEliblity
+## TransitionEligibility
 
 Describes the behavior of an individual subscription transition resource.
 
@@ -53,10 +53,13 @@ Describes the behavior of an individual subscription transition resource.
 | Property          | Type                    | Description                                                                                  |
 |-------------------|-------------------------|----------------------------------------------------------------------------------------------|
 | FromCatalogItemId | string                  | The From catalog item id. |
+| FromSubscriptionId | string                 | The From subscription id. |
 | ToCatalogItemId   | string                  | The To catalog item id. |
 | ToSubscriptionId  | string                  | The To subscription id. This is only populated if the subscription changes. Currently only Legacy Upgrade needs this, but modern partial transition will also. |
 | Quantity          | integer                 | The quantity being transitioned to the target catalog item. |
-| TransitionType    | string 		      | The transition type. Possible values - transition_only, transition_with_license_transfer.   |
+| TermDuration          | string                 | The term duration for the subscription. |
+| BillingCycle          | string                 | The billing cycle for the subscription. |
+| TransitionType    | string 		      | The transition type. Possible values - `transition_only`, `transition_with_license_transfer`.   |
 | Events            | list of TransitionEvents | The events of the transition. |
 
 ## TransitionEvent
