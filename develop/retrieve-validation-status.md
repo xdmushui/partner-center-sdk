@@ -2,6 +2,7 @@
 title: Retrieve validation status of a customer
 description: How to retrieve the validation status of a customer.
 ms.author: alikhaki
+author: khakiali
 ms.date: 10/27/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
