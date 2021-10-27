@@ -74,7 +74,7 @@ If successful, this method returns a collection of [Subscription](subscription-r
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
-### Response example
+### Response examples
 
 ```http
 HTTP/1.1 200 OK
@@ -121,4 +121,77 @@ Date: Wed, 25 Nov 2015 05:43:06 GMT
         "objectType": "Collection"
     }
 }
+```
+```
+{ 
+    "totalCount": 1, 
+    "items": [ 
+        { 
+            "id": "924671ba-eab9-45d7-95ed-dbd9477f182b", 
+            "offerId": "DG7GMGF0FKZV:0003:DG7GMGF0DQLM", 
+            "offerName": "SQL Server Enterprise - 2 Core License Pack - 3 year", 
+            "friendlyName": "SQL Server Enterprise - 2 Core License Pack - 3 year", 
+            "productType": { 
+                "id": "Software", 
+                "displayName": "Software" 
+            }, 
+            "quantity": 1, 
+            "unitType": "Licenses", 
+            "hasPurchasableAddons": false, 
+            "creationDate": "2021-10-15T21:28:19.3058617Z", 
+            "effectiveStartDate": "2021-10-15T21:28:18.4786844Z", 
+            "commitmentEndDate": "2024-10-14T00:00:00Z", 
+            "cancellationAllowedUntilDate": "2021-11-14T23:59:00Z", 
+            "status": "active", 
+            "autoRenewEnabled": true, 
+            "isTrial": false, 
+            "billingType": "license", 
+            "billingCycle": "triennial", 
+            "termDuration": "P3Y", 
+            "renewalTermDuration": "", 
+            "isMicrosoftProduct": true, 
+            "partnerId": "", 
+            "attentionNeeded": false, 
+            "actionTaken": false, 
+            "contractType": "subscription", 
+            "links": { 
+                "product": { 
+                    "uri": "/products/DG7GMGF0FKZV?country=US", 
+                    "method": "GET", 
+                    "headers": [] 
+                }, 
+                "sku": { 
+                    "uri": "/products/DG7GMGF0FKZV/skus/0003?country=US", 
+                    "method": "GET", 
+                    "headers": [] 
+                }, 
+                "availability": { 
+                    "uri": "/products/DG7GMGF0FKZV/skus/0003/availabilities/DG7GMGF0DQLM?country=US", 
+                    "method": "GET", 
+                    "headers": [] 
+                }, 
+                "self": { 
+                    "uri": "/customers/954ca09a-1132-4088-bb58-30438dea2756/subscriptions/924671ba-eab9-45d7-95ed-dbd9477f182b", 
+                    "method": "GET", 
+                    "headers": [] 
+                } 
+            }, 
+            "publisherName": "Microsoft", 
+            "orderId": "12345678901", 
+            "attributes": { 
+                "objectType": "Subscription" 
+            } 
+        } 
+    ], 
+    "links": { 
+        "self": { 
+            "uri": "/customers/954ca09a-1132-4088-bb58-30438dea2756/subscriptions", 
+            "method": "GET", 
+            "headers": [] 
+        } 
+    }, 
+    "attributes": { 
+        "objectType": "Collection" 
+    } 
+} 
 ```

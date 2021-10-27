@@ -178,6 +178,7 @@ An [Enum/dotnet/api/system.enum) with values that indicate a type of billing cyc
 | Annual             | 2            | Indicates that the partner will be charged annually.                                       |
 | None               | 3            | Indicates that the partner will not be charged. This value may be used for trial items.    |
 | OneTime            | 4            | Indicates that the partner will be charged one time.                                       |
+| Triennial          | 5            | Indicates that the partner will be charged every three years.                              |
 
 ## AttestationProperties
 
