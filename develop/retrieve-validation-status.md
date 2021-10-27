@@ -25,7 +25,7 @@ A customer ID (customer-tenant-id). If you don't know the customer's ID, you can
 |       |   Value: {Customer Tenant ID} |
 | Validation Type | 	Please find the available validation type: <br/><br/>  Account: Account Status |
 | Response |	<table>  <thead>  <tr>  <th>Field</th>  <th>Type</th>  <th>Description</th>  <th>Notes</th> </tr>  </thead>  <tbody>  <tr>  <td>Type</td>  <td>Enum</td>  <td>Validation information type</td> <td>Same data as *validation-type*</td>  </tr>  <tr>  <td>Status</td>  <td>Enum</td>  <td>Validation Status</td> <td>Available status: Unknown, UnderReview, Allowed, NotAllowed</td> </tr> <tr> <td> Latest Update Time </td> <td>DateTime</td> <td>last status update time in UTC</td> </tbody>  </table> |	
-<table>
+|<table> <thead>
 <tr>
 <td> Sample response </td> <td> </td>
 <td> </td>
@@ -91,5 +91,5 @@ Customer's transactions won't be blocked with the following conditions:<br/><br/
 * Allowed status<br/><br/>
 * Customer doesn't have account status<br/><br/>
 </td>
-</tr>
+</tbody>
 </table>|
