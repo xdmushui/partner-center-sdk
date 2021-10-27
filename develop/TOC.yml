@@ -281,6 +281,8 @@
       href: remove-a-reseller-relationship-with-a-customer.md
     - name: Retrieve a relationship request URL
       href: request-reseller-relationship.md
+    - name: Retrieve validation status
+      href: retrieve-validation-status.md
     - name: Reset user password for a customer
       href: reset-user-password-for-a-customer.md
     - name: Restore a deleted user for a customer

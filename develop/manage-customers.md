@@ -45,6 +45,7 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get a partner's validation codes](get-a-partner-s-validation-codes.md)
 - [Get a customer's qualifications](./get-customer-qualification-asynchronous.md)
 - [Update a customer's qualifications](./update-customer-qualification-asynchronous.md)
+- [Get Customer Validation Status](./retrieve-validation-status.md)
 
 ## Manage user accounts and assign licenses
 
@@ -70,3 +71,4 @@ This section describes the ways that Cloud Solution Provider partners can use Pa
 - [Get a self serve policy by ID](get-a-self-serve-policy-by-id.md)
 
 For more information, see [Scenarios](scenarios.md).
+
