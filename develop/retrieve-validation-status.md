@@ -6,7 +6,7 @@ ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
 ---
 
-## Retrieve the validation status of a customer
+# Retrieve the validation status of a customer
 
 A partner can retrieve the status of a customer validation upon demand.
 
