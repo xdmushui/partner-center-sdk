@@ -1,7 +1,7 @@
 ---
 title: Retrieve validation status of a customer
 description: How to retrieve the validation status of a customer.
-ms.author: ali.khaki
+ms.author: alikhaki
 ms.date: 10/27/2021
 ms.service: partner-dashboard
 ms.subservice:  partnercenter-sdk
@@ -35,7 +35,7 @@ Use the following query parameter to specify the customer you are retrieving val
 For more information, see [Partner Center REST headers](headers.md).
 
 ## REST response
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes).
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Partner Center REST error codes](error-codes.md).
 
 
 ### Response fields
