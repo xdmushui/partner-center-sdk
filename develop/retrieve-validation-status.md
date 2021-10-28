@@ -92,4 +92,13 @@ Each response comes with an HTTP status code that indicates success or failure a
     "isRetryable": false,
     "errorMessageExtended": "InternalErrorCode=600074"
 ```
+#### Purchase Eligibility
+Customer's transactions will be blocked when their account has any of the statuses below:
+* UnderReview
+* NotAllowed
+* Unknown
+
+Customer's transactions won't be blocked with the following conditions:
+* An Allowed status
+* Customer doesn't have account status
 
