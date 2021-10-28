@@ -98,7 +98,7 @@ Customer's transactions will be blocked when their account has any of the status
 * NotAllowed
 * Unknown
 
-Customer's transactions won't be blocked with the following conditions:
-* An Allowed status
+Customer's transactions won't be blocked when they meet the following conditions:
+* Customer has an Allowed status
 * Customer doesn't have account status
 
