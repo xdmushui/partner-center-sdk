@@ -15,7 +15,7 @@ This article describes how you can use Partner Center API to cancel a commercial
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be cancelled and the API will throw an error.
+New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be canceled and the API will throw an error.
 
 ## Prerequisites
 
