@@ -18,7 +18,7 @@ A partner can retrieve the status of a customer validation upon demand.
 
 - A customer ID (customer-tenant-id). If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select **CSP** from the Partner Center menu, followed by **Customers**. Select the customer from the customer list, then select **Account**. On the customer's Account page, look for the **Microsoft ID** in the **Customer Account Info** section. The Microsoft ID is the same as the customer ID (customer-tenant-id).
 
-## API Details
+## API details
 
 ### Request syntax 
 |    Method    |  URI         |
@@ -92,7 +92,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     "isRetryable": false,
     "errorMessageExtended": "InternalErrorCode=600074"
 ```
-#### Purchase Eligibility
+#### Purchase eligibility
 Customer's transactions will be blocked when their account has any of the statuses below:
 * UnderReview
 * NotAllowed
