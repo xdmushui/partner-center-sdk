@@ -15,6 +15,8 @@ This article describes how you can use Partner Center API to cancel a commercial
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
+New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be canceled and the API will throw an error.
+
 ## Prerequisites
 
 - Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with both standalone App and App+User credentials.
@@ -83,9 +85,13 @@ For more information, see [Partner Center REST headers](headers.md).
 
 ### Request body
 
-A full **Subscription** resource is required in the request body. Ensure that the **Status** property has been updated.
+A full **Subscription** resource is required in the request body. To cancel your subscription, ensure that the **Status** property has been updated to the value of `deleted`.
 
-### Request example for a commercial marketplace subscription
+| Field                    | Type     | Required | Description                               |
+|-------------------------|----------|----------|-------------------------------------------|
+| **status**  | **string** | Y        | Status of the subscriptions. Options can be - `active`, `suspended`, `deleted`|
+
+### Request example
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
@@ -129,92 +135,9 @@ Connection: Keep-Alive
 }
 ```
 
-### Request example for a new commerce subscription
-
-New commerce subscriptions can be canceled within 72 hours of purchase or renewal. After 72 hours, subscriptions can no longer be cancelled and the API will throw an error.
-
-
-> [!Note] 
-> New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
-
-```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
-Authorization: Bearer <token>
-Accept: application/json
-MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
-MS-CorrelationId: ec8f62e5-1d92-47e9-8d5d-1924af105f2c
-If-Match: <etag>
-Content-Type: application/json
-Content-Length: 1029
-Expect: 100-continue
-Connection: Keep-Alive
-
-{
-    "id": "a4c1340d-6911-4758-bba3-0c4c6007d161",
-    "offerId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
-    "offerName": "Microsoft 365 Business Basic",
-    "friendlyName": "Microsoft 365 Business Basic",
-    "productType": {
-        "id": "OnlineServicesNCE",
-        "displayName": "OnlineServicesNCE"
-    },
-    "quantity": 1, 
-    "unitType": "Licenses",
-    "hasPurchasableAddons": false,
-    "creationDate": "2021-01-14T16:57:15.0966728Z",
-    "effectiveStartDate": "2021-01-14T16:57:14.498252Z",
-    "commitmentEndDate": "2022-01-13T00:00:00Z",
-    "status": "deleted", // original value = “active”
-    "autoRenewEnabled": true, 
-    "isTrial": false,
-    "billingType": "license",
-    "billingCycle": "monthly",
-    "termDuration": "P1Y",
-    "renewalTermDuration": "",
-    "refundOptions": [
-        {
-            "type": "Full",
-            "expiresAt": "2021-01-15T00:00:00Z"
-        }
-    ],
-    "isMicrosoftProduct": true,
-    "partnerId": "",
-    "attentionNeeded": false,
-    "actionTaken": false,
-    "contractType": "subscription",
-    "links": {
-        "product": {
-            "uri": "/products/CFQ7TTC0LH18?country=US",
-            "method": "GET",
-            "headers": []
-        },
-        "sku": {
-            "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
-            "method": "GET",
-            "headers": []
-        },
-        "availability": {
-            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
-            "method": "GET",
-            "headers": []
-        },
-        "self": {
-            "uri": "/customers/d8202a51-69f9-4228-b900-d0e081af17d7/subscriptions/a4c1340d-6911-4758-bba3-0c4c6007d161",
-            "method": "GET",
-            "headers": []
-        }
-    },
-    "publisherName": "Microsoft Corporation",
-    "orderId": "34b37d7340cc",
-    "attributes": {
-        "objectType": "Subscription"
-    }
-}
-```
-
 ## REST response
 
-If the request is successful, this method returns deleted [Subscription](subscription-resources.md) resource properties in the response body.
+If the request is successful, this method returns the deleted [Subscription](subscription-resources.md) resource properties in the response body.
 
 ### Response success and error codes
 
@@ -278,7 +201,7 @@ X-Locale: en-US
             "headers": []
         }
     },
-    "publisherName": "publishe rName",
+    "publisherName": "publisher Name",
     "orderId": "ImxjLNL4_fOc-2KoyOxGTZcrlIquzls11",
     "attributes": {
         "etag": "",
