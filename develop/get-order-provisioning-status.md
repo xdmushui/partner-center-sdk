@@ -10,6 +10,8 @@ ms.subservice:  partnercenter-sdk
 
 **Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government
 
+**Appropriate roles**: Global admin | Admin agent
+
 Gets a collection of order line item provisioning status for an order.
 
 ## Prerequisites
