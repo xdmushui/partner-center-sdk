@@ -15,7 +15,7 @@ This article summarizes changes made to the Partner Center REST APIs.
 
 ## October 2021
 
-Changes for October are to support [New commerce licnese-based](/partner-center/develop/purchase-new-commerce-license-based) features and the new [ISV margin discounts for CSPs](/partner-center/csp-commercial-marketplace-margins).
+Changes for October are to support [New commerce license-based](/partner-center/develop/purchase-new-commerce-license-based) features and the new [ISV margin discounts for CSPs](/partner-center/csp-commercial-marketplace-margins).
 
 |Feature area|Change type|API/objects|
 |:--------------------------------|:------------------------------|:-----------------------------------------------------------------|
