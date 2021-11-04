@@ -84,7 +84,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 }
 ```
 #### Not Ready status
-```http
+```HTTP
 {
     "type": "account",
     "status": "Not Ready",
