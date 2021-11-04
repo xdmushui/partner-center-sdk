@@ -43,7 +43,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 |    Field    |  Type         | Description | Notes      |
 |:------|:-------------------|:---------|:-----------|
 | Type | Enum       |  Validation information type      | Same data as *validation-type*. Validation type returns *account* as the response type. |
-| Status  |  	Enum |	Validation status  |Available statuses: Unknown, UnderReview, Allowed, NotAllowed |
+| Status  |  	Enum |	Validation status  |Available statuses: Unknown, UnderReview, Allowed, NotAllowed, Not Ready |
 |Latest Update Time	|DateTime|	last status update time in UTC | |
 
 ### Response examples
