@@ -74,6 +74,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     "lastUpdateDateTime": "2021-07-14T18:02:00"
 }
 ```
+
 #### Unknown status
 ``` HTTP
 {
@@ -82,6 +83,15 @@ Each response comes with an HTTP status code that indicates success or failure a
     "lastUpdateDateTime": "2021-07-14T18:02:00"
 }
 ```
+#### Not Ready status
+```http
+{
+    "type": "account",
+    "status": "Not Ready",
+    "lastUpdateDateTime": "2021-07-14T18:02:00"
+}
+```
+
 #### 404 not found error
 ``` HTTP
 {
@@ -101,4 +111,3 @@ Customer's transactions will be blocked when their account has any of the status
 Customer's transactions won't be blocked when they meet the following conditions:
 * Customer has an Allowed status
 * Customer doesn't have account status
-
