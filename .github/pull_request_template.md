@@ -2,7 +2,7 @@
 
 ## Pull Request information for public contributors: 
 
-1. Use this repo for your changes: https://github.com/MicrosoftDocs/partner-center-sdk/
+1. Use this repo for your changes: https://github.com/MicrosoftDocs/partner-center-sdk/. For additional information, see our [contributor guide](/contribute/).
 
 2. We will review your Pull Request as soon as we can. 
 
