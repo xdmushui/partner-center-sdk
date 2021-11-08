@@ -336,6 +336,8 @@
       href: cancel-software-purchases.md
     - name: Change the quantity of a subscription
       href: change-the-quantity-of-a-subscription.md
+    - name: Manage scheduled changes
+      href: create-scheduled-changes.md
     - name: Convert a trial subscription to paid
       href: convert-a-trial-subscription-to-paid.md
     - name: Check Inventory
