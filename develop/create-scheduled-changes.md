@@ -15,7 +15,7 @@ This article describes how you can use Partner Center API to schedule changes fo
 > [!Note] 
 > New Commerce changes are currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
-Creating scheduled changes allows you to modify your subscription upon it's next renewal. By scheduling changes, you can choose to increase or decrease the number of licenses, modify the billing term and frequency, and even choose to upgrade the SKU. Scheduled changes allows you to make modifications to your subscription on renewal, rather than immediately.
+Creating scheduled changes allows you to modify your subscription, automatically, when the next renewal occurs. By scheduling changes, you can choose to increase or decrease the number of licenses, modify the billing term and frequency, and even choose to upgrade the SKU. Scheduling changes allows you to make modifications to your subscription on renewal, rather than immediately during the current term.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ To schedules changes for a customer's subscription:
 
 2. Create a **ScheduledNextTermInstructions** object and set it to the subscription's property.
 
-3. Call the **Patch()** method to update the susbcription with the scheduled changes.
+3. Call the **Patch()** method to update the subscription with the scheduled changes.
 
 ``` csharp
 var selectedSubscription = subscriptionOperations.Get();
