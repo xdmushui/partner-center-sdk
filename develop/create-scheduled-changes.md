@@ -1,5 +1,5 @@
 ---
-title: Create scheduled changes for new commerce subscriptions
+title: Manage scheduled changes for new commerce subscriptions
 description: Learn how to use Partner Center APIs to schedule changes for new commerce subscription resource that only take place on renewal.
 ms.date: 11/17/2021
 ms.service: partner-dashboard
@@ -82,7 +82,7 @@ var updatedSubscription = subscriptionOperations.Patch(selectedSubscription);
 
 ### URI parameter
 
-This table lists the required query parameter to suspend the subscription.
+This table lists the required query parameters to call the API.
 
 | Name                    | Type     | Required | Description                               |
 |-------------------------|----------|----------|-------------------------------------------|
