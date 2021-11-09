@@ -43,7 +43,7 @@ Each response comes with an HTTP status code that indicates success or failure a
 |    Field    |  Type         | Description | Notes      |
 |:------|:-------------------|:---------|:-----------|
 | Type | Enum       |  Validation information type      | Same data as *validation-type*. Validation type returns *account* as the response type. |
-| Status  |  	Enum |	Validation status  |Available statuses: Unknown, UnderReview, Allowed, NotAllowed |
+| Status  |  	Enum |	Validation status  |Available statuses: Unknown, UnderReview, Allowed, NotAllowed, Not Ready |
 |Latest Update Time	|DateTime|	last status update time in UTC | |
 
 ### Response examples
@@ -74,6 +74,7 @@ Each response comes with an HTTP status code that indicates success or failure a
     "lastUpdateDateTime": "2021-07-14T18:02:00"
 }
 ```
+
 #### Unknown status
 ``` HTTP
 {
@@ -82,6 +83,15 @@ Each response comes with an HTTP status code that indicates success or failure a
     "lastUpdateDateTime": "2021-07-14T18:02:00"
 }
 ```
+#### Not Ready status
+```HTTP
+{
+    "type": "account",
+    "status": "Not Ready",
+    "lastUpdateDateTime": "2021-07-14T18:02:00"
+}
+```
+
 #### 404 not found error
 ``` HTTP
 {
@@ -101,4 +111,3 @@ Customer's transactions will be blocked when their account has any of the status
 Customer's transactions won't be blocked when they meet the following conditions:
 * Customer has an Allowed status
 * Customer doesn't have account status
-
