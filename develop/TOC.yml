@@ -441,6 +441,8 @@
   - name: Provide support
     href: provide-support.md
     items:
+    - name: "Get automated service notifications with our apis"
+      href: get-automated-service-notifications-with-our-apis.md
     - name: "Get a subscription's support contact"
       href: get-a-subscription-s-support-contact.md
     - name: Get all service requests for a customer
