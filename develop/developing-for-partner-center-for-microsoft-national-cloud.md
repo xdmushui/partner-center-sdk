@@ -49,7 +49,7 @@ The differences for partners between *Partner Center* and *Partner Center for Mi
   - Partners must manually create or update their customers' users in the Office 365 admin center or through the Azure portal. See [Azure Active Directory Documentation](/azure/active-directory/).
 
 - You can't manage the licenses for your customer's users using the Partner Center for Microsoft Cloud Germany portal or APIs. Instead, you must use the Office 365 admin center or Azure Active Directly Group license management (coming soon) to manage their licenses.
-  - (Optional) you can use the Microsoft Graph API. See [Assign Licenses to a user](/graph/api/user-assignlicense). For Partner Center for Microsoft Cloud Germany, be sure to use the Graph endpoint `https://graph.cloudapi.de` instead of `https://graph.windows.net`.
+  - (Optional) you can use the Microsoft Graph API. See [Assign Licenses to a user](/graph/api/user-assignlicense). For Partner Center for Microsoft Cloud Germany, use the Graph endpoint `https://graph.microsoft.de`.
 
 - You can't programmatically reset a password for a customer user or full partner user. Use the Office 365 admin center or Azure portal. See [Reset the password for a user in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-reset-password-azure-portal). For step 1, you must sign in to the Azure portal for Microsoft Cloud Germany.
 
