@@ -177,9 +177,9 @@ To deploy an enhanced or customized CSP Customer Storefront:
   - Partners can find this information on [https://developer.paypal.com/](https://developer.paypal.com/) in **my apps & credentials**. You can also get this information from a current app or by creating a new app in PayPal.
   - Create a new PayPal account if you don't already have one. This account will be used for PayPal to credit the payments made by customers.
 
-    - To open a PayPal business account, see [https://developer.paypal.com/docs/classic/lifecycle/goingLive/#register](https://developer.paypal.com/docs/classic/lifecycle/goingLive/#register).
+    - To open a PayPal business account, see [https://developer.paypal.com/docs/api-basics/goingLive/](https://developer.paypal.com/docs/api-basics/goingLive/).
 
-    - To create a PayPal sandbox account see [https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/](https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/).
+    - To create a PayPal sandbox account see [https://developer.paypal.com/docs/api-basics/sandbox/accounts/#create-a-personal-sandbox-account](https://developer.paypal.com/docs/api-basics/sandbox/accounts/#create-a-personal-sandbox-account).
 
 - (For India) a CSP partner can input their PayU Money account information such as PayU Client ID and password. Partners can find more information on [https://developer.payumoney.com/](https://developer.payumoney.com/).
 

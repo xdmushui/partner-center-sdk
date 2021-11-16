@@ -51,7 +51,7 @@ Changes for October are to support [New commerce license-based](/partner-center/
 
 ## July 2021
 
-Changes for July were to support [Windows 365 attestation](/partner-center/develop//partner-center/pricing-and-offers#offer-attestation) required for some Windows 365 SKUs only.
+Changes for July were to support [Windows 365 attestation](/partner-center/develop/partner-center/pricing-and-offers#offer-attestation) required for some Windows 365 SKUs only.
 
 |Feature area             |Change type|API/objects|
 |:------------------------|:------------------------------|:---------------------------------------------------------------------------------------------------------|
