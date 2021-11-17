@@ -2,9 +2,12 @@ log/
 obj/
 _site/
 .optemp/
-_themes*/
-_repo.*/
 .vs/
-cut-content/
+_themes/
+_themes.MSDN.Modern/
+_themes.VS.Modern/
+
 .openpublishing.buildcore.ps1
-.github/*
+
+.vscode/*
+**/.vscode/settings.json
