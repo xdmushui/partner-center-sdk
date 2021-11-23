@@ -197,7 +197,7 @@ Represents an invoice billing line item for licensed-based subscriptions.
 | CustomerCountry | string | Gets or sets the customer country. |
 | InvoiceNumber | string | Gets or sets the invoice number. |
 | MpnId | string | Gets or sets the MPN ID associated to this line item. |
-| ResellerMpnId | int | Gets or sets the order unique identifier. |
+| ResellerMpnId | int | Gets or sets the MPN ID of the Tier 2 partner associated to this line item. |
 | OrderDate | DateTime | Gets or sets the date when order created. |
 | ProductId | string | Gets or sets the product unique identifier. |
 | SkuId | string | Gets or sets the SKU unique identifier. |
